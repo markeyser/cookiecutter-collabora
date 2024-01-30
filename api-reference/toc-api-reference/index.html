@@ -5,12 +5,11 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="https://llmslab.github.io/cookiecutter-ai-flock/tutorials/hydra-config/" rel="canonical"/>
-<link href="../mkdocs-docs/" rel="prev"/>
-<link href="../gitignore/" rel="next"/>
+<link href="https://llmslab.github.io/cookiecutter-ai-flock/api-reference/toc-api-reference/" rel="canonical"/>
+<link href="../../explanation/naming-conventions/" rel="prev"/>
 <link href="../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.5.3, mkdocs-material-9.5.4" name="generator"/>
-<title>Hydra Configuration - Cookiecutter Ai Flock</title>
+<title>TOC - Cookiecutter Ai Flock</title>
 <link href="../../assets/stylesheets/main.50c56a3b.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -35,7 +34,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#manage-configuration-files-with-hydra">
+<a class="md-skip" href="#api-reference">
           Skip to content
         </a>
 </div>
@@ -59,7 +58,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Hydra Configuration
+              TOC
             
           </span>
 </div>
@@ -119,217 +118,120 @@
   </span>
 </a>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
 <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
 <span class="md-ellipsis">
     Tutorials
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="true" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<nav aria-expanded="false" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_2">
 <span class="md-nav__icon md-icon"></span>
             Tutorials
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../toc-tutorials/">
+<a class="md-nav__link" href="../../tutorials/toc-tutorials/">
 <span class="md-ellipsis">
     TOC
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../black-formatter/">
+<a class="md-nav__link" href="../../tutorials/black-formatter/">
 <span class="md-ellipsis">
     Black Formatter
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../ruff-linter/">
+<a class="md-nav__link" href="../../tutorials/ruff-linter/">
 <span class="md-ellipsis">
     Ruff Linter
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../poetry/">
+<a class="md-nav__link" href="../../tutorials/poetry/">
 <span class="md-ellipsis">
     Poetry Package Management
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../mkdocs-docs/">
+<a class="md-nav__link" href="../../tutorials/mkdocs-docs/">
 <span class="md-ellipsis">
     MkDocs Documentation
   </span>
 </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-<span class="md-ellipsis">
-    Hydra Configuration
-  </span>
-<span class="md-nav__icon md-icon"></span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="./">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tutorials/hydra-config/">
 <span class="md-ellipsis">
     Hydra Configuration
   </span>
 </a>
-<nav aria-label="On this page" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      On this page
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#introduction-and-motivation">
-<span class="md-ellipsis">
-      Introduction and Motivation
-    </span>
-</a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#using-hydra-in-a-python-script">
-<span class="md-ellipsis">
-      Using Hydra in a Python Script
-    </span>
-</a>
-<nav aria-label="Using Hydra in a Python Script" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#example-configuration-file">
-<span class="md-ellipsis">
-      Example Configuration File
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#example-python-script">
-<span class="md-ellipsis">
-      Example Python Script
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#example-output">
-<span class="md-ellipsis">
-      Example Output
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#using-hydra-in-a-jupyter-notebook">
-<span class="md-ellipsis">
-      Using Hydra in a Jupyter Notebook
-    </span>
-</a>
-<nav aria-label="Using Hydra in a Jupyter Notebook" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#example-jupyter-notebook">
-<span class="md-ellipsis">
-      Example Jupyter Notebook
-    </span>
-</a>
-<nav aria-label="Example Jupyter Notebook" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#output">
-<span class="md-ellipsis">
-      Output:
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#output_1">
-<span class="md-ellipsis">
-      Output:
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#further-reading">
-<span class="md-ellipsis">
-      Further Reading
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../gitignore/">
+<a class="md-nav__link" href="../../tutorials/gitignore/">
 <span class="md-ellipsis">
     Gitignore File Creation
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../data/">
+<a class="md-nav__link" href="../../tutorials/data/">
 <span class="md-ellipsis">
     Managing Data
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../data-version-control/">
+<a class="md-nav__link" href="../../tutorials/data-version-control/">
 <span class="md-ellipsis">
     Data Version Control
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../dvc-local/">
+<a class="md-nav__link" href="../../tutorials/dvc-local/">
 <span class="md-ellipsis">
     DVC Local Workflow
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../dvc-cloud/">
+<a class="md-nav__link" href="../../tutorials/dvc-cloud/">
 <span class="md-ellipsis">
     DVC Cloud Storage
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../dvc-collaboration/">
+<a class="md-nav__link" href="../../tutorials/dvc-collaboration/">
 <span class="md-ellipsis">
     DVC for Collaboration
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../naming-conventions/">
+<a class="md-nav__link" href="../../tutorials/naming-conventions/">
 <span class="md-ellipsis">
     Naming Conventions Tutorial
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../windows-os-setup/">
+<a class="md-nav__link" href="../../tutorials/windows-os-setup/">
 <span class="md-ellipsis">
     Windows OS Setup
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../markdown-ml-model-documentation/">
+<a class="md-nav__link" href="../../tutorials/markdown-ml-model-documentation/">
 <span class="md-ellipsis">
     Markdown Documentation for ML Models
   </span>
@@ -512,26 +414,55 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_5" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_5" type="checkbox"/>
 <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
 <span class="md-ellipsis">
     API Reference
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="false" aria-labelledby="__nav_5_label" class="md-nav" data-md-level="1">
+<nav aria-expanded="true" aria-labelledby="__nav_5_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_5">
 <span class="md-nav__icon md-icon"></span>
             API Reference
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../api-reference/toc-api-reference/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    TOC
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
 <span class="md-ellipsis">
     TOC
   </span>
 </a>
+<nav aria-label="On this page" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#purpose">
+<span class="md-ellipsis">
+      Purpose
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#table-of-contents">
+<span class="md-ellipsis">
+      Table of Contents
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -551,84 +482,16 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#introduction-and-motivation">
+<a class="md-nav__link" href="#purpose">
 <span class="md-ellipsis">
-      Introduction and Motivation
+      Purpose
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#using-hydra-in-a-python-script">
+<a class="md-nav__link" href="#table-of-contents">
 <span class="md-ellipsis">
-      Using Hydra in a Python Script
-    </span>
-</a>
-<nav aria-label="Using Hydra in a Python Script" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#example-configuration-file">
-<span class="md-ellipsis">
-      Example Configuration File
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#example-python-script">
-<span class="md-ellipsis">
-      Example Python Script
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#example-output">
-<span class="md-ellipsis">
-      Example Output
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#using-hydra-in-a-jupyter-notebook">
-<span class="md-ellipsis">
-      Using Hydra in a Jupyter Notebook
-    </span>
-</a>
-<nav aria-label="Using Hydra in a Jupyter Notebook" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#example-jupyter-notebook">
-<span class="md-ellipsis">
-      Example Jupyter Notebook
-    </span>
-</a>
-<nav aria-label="Example Jupyter Notebook" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#output">
-<span class="md-ellipsis">
-      Output:
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#output_1">
-<span class="md-ellipsis">
-      Output:
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#further-reading">
-<span class="md-ellipsis">
-      Further Reading
+      Table of Contents
     </span>
 </a>
 </li>
@@ -639,124 +502,57 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="manage-configuration-files-with-hydra">Manage Configuration Files with Hydra<a class="headerlink" href="#manage-configuration-files-with-hydra" title="Permanent link">¶</a></h1>
-<h2 id="introduction-and-motivation">Introduction and Motivation<a class="headerlink" href="#introduction-and-motivation" title="Permanent link">¶</a></h2>
-<p>Welcome to this tutorial on Hydra, a Python framework designed for
-elegantly configuring complex applications. If you've ever found
-yourself in a situation where you have a Python script filled with both
-code and configuration parameters, you know how messy it can get.
-Changing a single value often means digging into the source code, making
-it difficult to manage and maintain your application.</p>
-<p>Hydra offers a solution to this problem by separating the code and
-configuration parameters into different files. This separation makes it
-easier to manage complex applications, especially in data science
-projects where configurations can get complicated quickly. With Hydra,
-your Python scripts become cleaner, more modular, and easier to
-understand.</p>
-<p>In this guide, we'll walk you through how to use Hydra in both Python
-scripts and Jupyter notebooks to manage your application's configuration
-elegantly.</p>
-<h2 id="using-hydra-in-a-python-script">Using Hydra in a Python Script<a class="headerlink" href="#using-hydra-in-a-python-script" title="Permanent link">¶</a></h2>
-<p>To use Hydra in a Python script, you need to import the <code>hydra</code> package
-and use the <code>@hydra.main()</code> decorator. This decorator will automatically
-load and validate the configuration file specified.</p>
-<h3 id="example-configuration-file">Example Configuration File<a class="headerlink" href="#example-configuration-file" title="Permanent link">¶</a></h3>
-<p>Create a YAML configuration file named <code>main.yaml</code> inside a folder named
-<code>config</code>:</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1"># config/main.yaml</span>
-<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a>
-<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="nt">db</span><span class="p">:</span>
-<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">  </span><span class="nt">driver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mysql</span>
-<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">  </span><span class="nt">user</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">omry</span>
-<a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">  </span><span class="nt">password</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">secret</span>
-</code></pre></div>
-<h3 id="example-python-script">Example Python Script<a class="headerlink" href="#example-python-script" title="Permanent link">¶</a></h3>
-<p>Here's an example Python script that uses Hydra to read the
-configuration file and perform some actions based on it:</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="kn">from</span> <span class="nn">omegaconf</span> <span class="kn">import</span> <span class="n">DictConfig</span><span class="p">,</span> <span class="n">OmegaConf</span>
-<a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="kn">import</span> <span class="nn">hydra</span>
-<a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a>
-<a href="#__codelineno-1-4" id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="k">def</span> <span class="nf">display_config</span><span class="p">(</span><span class="n">cfg</span><span class="p">:</span> <span class="n">DictConfig</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-<a href="#__codelineno-1-5" id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="w">    </span><span class="sd">"""Display the entire configuration."""</span>
-<a href="#__codelineno-1-6" id="__codelineno-1-6" name="__codelineno-1-6"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">OmegaConf</span><span class="o">.</span><span class="n">to_yaml</span><span class="p">(</span><span class="n">cfg</span><span class="p">))</span>
-<a href="#__codelineno-1-7" id="__codelineno-1-7" name="__codelineno-1-7"></a>
-<a href="#__codelineno-1-8" id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="k">def</span> <span class="nf">display_driver</span><span class="p">(</span><span class="n">cfg</span><span class="p">:</span> <span class="n">DictConfig</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-<a href="#__codelineno-1-9" id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="w">    </span><span class="sd">"""Display the database driver."""</span>
-<a href="#__codelineno-1-10" id="__codelineno-1-10" name="__codelineno-1-10"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Database driver is: </span><span class="si">{</span><span class="n">cfg</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">driver</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
-<a href="#__codelineno-1-11" id="__codelineno-1-11" name="__codelineno-1-11"></a>
-<a href="#__codelineno-1-12" id="__codelineno-1-12" name="__codelineno-1-12"></a><span class="nd">@hydra</span><span class="o">.</span><span class="n">main</span><span class="p">(</span><span class="n">version_base</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">config_path</span><span class="o">=</span><span class="s2">"../../config"</span><span class="p">,</span> <span class="n">config_name</span><span class="o">=</span><span class="s2">"main"</span><span class="p">)</span>
-<a href="#__codelineno-1-13" id="__codelineno-1-13" name="__codelineno-1-13"></a><span class="k">def</span> <span class="nf">my_app</span><span class="p">(</span><span class="n">cfg</span><span class="p">:</span> <span class="n">DictConfig</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-<a href="#__codelineno-1-14" id="__codelineno-1-14" name="__codelineno-1-14"></a>    <span class="n">display_config</span><span class="p">(</span><span class="n">cfg</span><span class="p">)</span>
-<a href="#__codelineno-1-15" id="__codelineno-1-15" name="__codelineno-1-15"></a>    <span class="n">display_driver</span><span class="p">(</span><span class="n">cfg</span><span class="p">)</span>
-<a href="#__codelineno-1-16" id="__codelineno-1-16" name="__codelineno-1-16"></a>
-<a href="#__codelineno-1-17" id="__codelineno-1-17" name="__codelineno-1-17"></a>    <span class="c1"># Get the SQL driver from the config</span>
-<a href="#__codelineno-1-18" id="__codelineno-1-18" name="__codelineno-1-18"></a>    <span class="n">sql_driver</span> <span class="o">=</span> <span class="n">cfg</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">driver</span>
-<a href="#__codelineno-1-19" id="__codelineno-1-19" name="__codelineno-1-19"></a>
-<a href="#__codelineno-1-20" id="__codelineno-1-20" name="__codelineno-1-20"></a>    <span class="c1"># Now you can use sql_driver in your code</span>
-<a href="#__codelineno-1-21" id="__codelineno-1-21" name="__codelineno-1-21"></a>    <span class="c1"># For example, you might pass it to a function that initializes a</span>
-<a href="#__codelineno-1-22" id="__codelineno-1-22" name="__codelineno-1-22"></a>    <span class="c1"># database connection</span>
-<a href="#__codelineno-1-23" id="__codelineno-1-23" name="__codelineno-1-23"></a>    <span class="n">initialize_database</span><span class="p">(</span><span class="n">sql_driver</span><span class="p">)</span>
-<a href="#__codelineno-1-24" id="__codelineno-1-24" name="__codelineno-1-24"></a>
-<a href="#__codelineno-1-25" id="__codelineno-1-25" name="__codelineno-1-25"></a><span class="k">def</span> <span class="nf">initialize_database</span><span class="p">(</span><span class="n">driver</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-<a href="#__codelineno-1-26" id="__codelineno-1-26" name="__codelineno-1-26"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Initializing database with driver: </span><span class="si">{</span><span class="n">driver</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
-<a href="#__codelineno-1-27" id="__codelineno-1-27" name="__codelineno-1-27"></a>    <span class="c1"># Your database initialization code here</span>
-<a href="#__codelineno-1-28" id="__codelineno-1-28" name="__codelineno-1-28"></a>
-<a href="#__codelineno-1-29" id="__codelineno-1-29" name="__codelineno-1-29"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">"__main__"</span><span class="p">:</span>
-<a href="#__codelineno-1-30" id="__codelineno-1-30" name="__codelineno-1-30"></a>    <span class="n">my_app</span><span class="p">()</span>
-</code></pre></div>
-<h3 id="example-output">Example Output<a class="headerlink" href="#example-output" title="Permanent link">¶</a></h3>
-<p>When you run the script, you should see output similar to the following:</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a>db:
-<a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a>  driver: mysql
-<a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a>  user: omry
-<a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a>  password: secret
-<a href="#__codelineno-2-5" id="__codelineno-2-5" name="__codelineno-2-5"></a>
-<a href="#__codelineno-2-6" id="__codelineno-2-6" name="__codelineno-2-6"></a>Database driver is: mysql
-<a href="#__codelineno-2-7" id="__codelineno-2-7" name="__codelineno-2-7"></a>Initializing database with driver: mysql
-</code></pre></div>
-<h2 id="using-hydra-in-a-jupyter-notebook">Using Hydra in a Jupyter Notebook<a class="headerlink" href="#using-hydra-in-a-jupyter-notebook" title="Permanent link">¶</a></h2>
-<p>To use Hydra in a Jupyter notebook, you can import the <code>omegaconf</code>
-package and manually load the configuration file using the
-<code>OmegaConf.load()</code> function.</p>
-<h3 id="example-jupyter-notebook">Example Jupyter Notebook<a class="headerlink" href="#example-jupyter-notebook" title="Permanent link">¶</a></h3>
-<p>Here's how you can read the same configuration file in a Jupyter
-notebook:</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="c1"># notebooks/app.ipynb</span>
-<a href="#__codelineno-3-2" id="__codelineno-3-2" name="__codelineno-3-2"></a>
-<a href="#__codelineno-3-3" id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="kn">import</span> <span class="nn">omegaconf</span>
-<a href="#__codelineno-3-4" id="__codelineno-3-4" name="__codelineno-3-4"></a>
-<a href="#__codelineno-3-5" id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="c1"># Load the config file</span>
-<a href="#__codelineno-3-6" id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="n">config</span> <span class="o">=</span> <span class="n">omegaconf</span><span class="o">.</span><span class="n">OmegaConf</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s2">"../config/main.yaml"</span><span class="p">)</span>
-<a href="#__codelineno-3-7" id="__codelineno-3-7" name="__codelineno-3-7"></a>
-<a href="#__codelineno-3-8" id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="c1"># Print the config</span>
-<a href="#__codelineno-3-9" id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="nb">print</span><span class="p">(</span><span class="n">config</span><span class="p">)</span>
-</code></pre></div>
-<h4 id="output">Output:<a class="headerlink" href="#output" title="Permanent link">¶</a></h4>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a>{'db': {'driver': 'mysql', 'user': 'omry', 'password': 'secret'}}
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="n">driver</span> <span class="o">=</span> <span class="n">config</span><span class="p">[</span><span class="s1">'db'</span><span class="p">][</span><span class="s1">'driver'</span><span class="p">]</span>
-<a href="#__codelineno-5-2" id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="nb">print</span><span class="p">(</span><span class="n">driver</span><span class="p">)</span>
-</code></pre></div>
-<h4 id="output_1">Output:<a class="headerlink" href="#output_1" title="Permanent link">¶</a></h4>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a>mysql
-</code></pre></div>
-<p>This guide should give you a good starting point for managing complex
-configurations in Python using Hydra. Whether you're working in a Python
-script or a Jupyter notebook, Hydra and OmegaConf offer powerful tools
-for this task.</p>
-<h2 id="further-reading">Further Reading<a class="headerlink" href="#further-reading" title="Permanent link">¶</a></h2>
-<p>For more information on Hydra and its capabilities, you can refer to the
-following resources:</p>
+<h1 id="api-reference">API Reference<a class="headerlink" href="#api-reference" title="Permanent link">¶</a></h1>
+<div class="admonition info">
+<p class="admonition-title">About This Section</p>
+<p>The API Reference section provides detailed information and documentation for various components and functionalities of the Cookiecutter AI Flock project. This reference is a valuable resource for developers and contributors who want in-depth insights into the project's APIs and modules.</p>
+</div>
+<h2 id="purpose">Purpose<a class="headerlink" href="#purpose" title="Permanent link">¶</a></h2>
 <ul>
-<li><a href="https://hydra.cc/docs/intro">Hydra Official Documentation</a></li>
-<li><a href="https://omegaconf.readthedocs.io/en/latest/">OmegaConf Documentation</a></li>
+<li><span class="twemoji"><svg viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M0 1.75A.75.75 0 0 1 .75 1h4.253c1.227 0 2.317.59 3 1.501A3.743 3.743 0 0 1 11.006 1h4.245a.75.75 0 0 1 .75.75v10.5a.75.75 0 0 1-.75.75h-4.507a2.25 2.25 0 0 0-1.591.659l-.622.621a.75.75 0 0 1-1.06 0l-.622-.621A2.25 2.25 0 0 0 5.258 13H.75a.75.75 0 0 1-.75-.75Zm7.251 10.324.004-5.073-.002-2.253A2.25 2.25 0 0 0 5.003 2.5H1.5v9h3.757a3.75 3.75 0 0 1 1.994.574ZM8.755 4.75l-.004 7.322a3.752 3.752 0 0 1 1.992-.572H14.5v-9h-3.495a2.25 2.25 0 0 0-2.25 2.25Z"></path></svg></span> <strong>Comprehensive Documentation:</strong> The API Reference offers extensive documentation for the project's APIs, modules, and components.</li>
+<li><span class="twemoji"><svg viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M5.433 2.304A4.492 4.492 0 0 0 3.5 6c0 1.598.832 3.002 2.09 3.802.518.328.929.923.902 1.64v.008l-.164 3.337a.75.75 0 1 1-1.498-.073l.163-3.33c.002-.085-.05-.216-.207-.316A5.996 5.996 0 0 1 2 6a5.993 5.993 0 0 1 2.567-4.92 1.482 1.482 0 0 1 1.673-.04c.462.296.76.827.76 1.423v2.82c0 .082.041.16.11.206l.75.51a.25.25 0 0 0 .28 0l.75-.51A.249.249 0 0 0 9 5.282V2.463c0-.596.298-1.127.76-1.423a1.482 1.482 0 0 1 1.673.04A5.993 5.993 0 0 1 14 6a5.996 5.996 0 0 1-2.786 5.068c-.157.1-.209.23-.207.315l.163 3.33a.752.752 0 0 1-1.094.714.75.75 0 0 1-.404-.64l-.164-3.345c-.027-.717.384-1.312.902-1.64A4.495 4.495 0 0 0 12.5 6a4.492 4.492 0 0 0-1.933-3.696c-.024.017-.067.067-.067.16v2.818a1.75 1.75 0 0 1-.767 1.448l-.75.51a1.75 1.75 0 0 1-1.966 0l-.75-.51A1.75 1.75 0 0 1 5.5 5.282V2.463c0-.092-.043-.142-.067-.159Z"></path></svg></span> <strong>Developer-Friendly:</strong> It is designed to be developer-friendly, with clear explanations and examples.</li>
+<li><span class="twemoji"><svg viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M1 2.5A2.5 2.5 0 0 1 3.5 0h8.75a.75.75 0 0 1 .75.75v3.5a.75.75 0 0 1-1.5 0V1.5h-8a1 1 0 0 0-1 1v6.708A2.493 2.493 0 0 1 3.5 9h3.25a.75.75 0 0 1 0 1.5H3.5a1 1 0 0 0 0 2h5.75a.75.75 0 0 1 0 1.5H3.5A2.5 2.5 0 0 1 1 11.5Zm13.23 7.79h-.001l-1.224-1.224v6.184a.75.75 0 0 1-1.5 0V9.066L10.28 10.29a.75.75 0 0 1-1.06-1.061l2.505-2.504a.75.75 0 0 1 1.06 0L15.29 9.23a.751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018Z"></path></svg></span> <strong>Reference for Contributions:</strong> Developers and contributors can use this section as a reference while working on the project.</li>
 </ul>
+<h2 id="table-of-contents">Table of Contents<a class="headerlink" href="#table-of-contents" title="Permanent link">¶</a></h2>
+<ul>
+<li><a href="./api-reference/module-a.md">Module A</a></li>
+<li><a href="./api-reference/module-b.md">Module B</a></li>
+<li><a href="./api-reference/module-c.md">Module C</a></li>
+<li><a href="./api-reference/module-d.md">Module D</a></li>
+<li><a href="./api-reference/module-e.md">Module E</a></li>
+<li><a href="./api-reference/module-f.md">Module F</a></li>
+<li><a href="./api-reference/module-g.md">Module G</a></li>
+<li><a href="./api-reference/module-h.md">Module H</a></li>
+<li><a href="./api-reference/module-i.md">Module I</a></li>
+<li><a href="./api-reference/module-j.md">Module J</a></li>
+<li><a href="./api-reference/module-k.md">Module K</a></li>
+<li><a href="./api-reference/module-l.md">Module L</a></li>
+<li><a href="./api-reference/module-m.md">Module M</a></li>
+<li><a href="./api-reference/module-n.md">Module N</a></li>
+<li><a href="./api-reference/module-o.md">Module O</a></li>
+<li><a href="./api-reference/module-p.md">Module P</a></li>
+<li><a href="./api-reference/module-q.md">Module Q</a></li>
+<li><a href="./api-reference/module-r.md">Module R</a></li>
+<li><a href="./api-reference/module-s.md">Module S</a></li>
+<li><a href="./api-reference/module-t.md">Module T</a></li>
+<li><a href="./api-reference/module-u.md">Module U</a></li>
+<li><a href="./api-reference/module-v.md">Module V</a></li>
+<li><a href="./api-reference/module-w.md">Module W</a></li>
+<li><a href="./api-reference/module-x.md">Module X</a></li>
+<li><a href="./api-reference/module-y.md">Module Y</a></li>
+<li><a href="./api-reference/module-z.md">Module Z</a></li>
+<li>[More API documentation coming soon...]</li>
+</ul>
+<div class="admonition check">
+<p class="admonition-title">Navigating the API Reference</p>
+<p>The API Reference is organized alphabetically by modules and components, making it easy to find the information you need. Each module provides detailed explanations, usage examples, and reference material for the associated component.</p>
+</div>
 <aside class="md-source-file">
 <span class="md-source-file__fact">
 <span class="md-icon" title="Last update">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 23, 2023</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 29, 2024</span>
 </span>
 </aside>
 </article>

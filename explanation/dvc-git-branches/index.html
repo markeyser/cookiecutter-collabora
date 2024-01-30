@@ -5,12 +5,12 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="https://llmslab.github.io/cookiecutter-ai-flock/tutorials/hydra-config/" rel="canonical"/>
-<link href="../mkdocs-docs/" rel="prev"/>
-<link href="../gitignore/" rel="next"/>
+<link href="https://llmslab.github.io/cookiecutter-ai-flock/explanation/dvc-git-branches/" rel="canonical"/>
+<link href="../dvc-understanding-dvs/" rel="prev"/>
+<link href="../github-naming-conventions/" rel="next"/>
 <link href="../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.5.3, mkdocs-material-9.5.4" name="generator"/>
-<title>Hydra Configuration - Cookiecutter Ai Flock</title>
+<title>Git Branches in DVC - Cookiecutter Ai Flock</title>
 <link href="../../assets/stylesheets/main.50c56a3b.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -35,7 +35,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#manage-configuration-files-with-hydra">
+<a class="md-skip" href="#explanation-managing-data-versions-with-git-branches-and-integrating-dvc-with-collaborative-tools">
           Skip to content
         </a>
 </div>
@@ -59,7 +59,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Hydra Configuration
+              Git Branches in DVC
             
           </span>
 </div>
@@ -119,217 +119,120 @@
   </span>
 </a>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
 <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
 <span class="md-ellipsis">
     Tutorials
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="true" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<nav aria-expanded="false" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_2">
 <span class="md-nav__icon md-icon"></span>
             Tutorials
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../toc-tutorials/">
+<a class="md-nav__link" href="../../tutorials/toc-tutorials/">
 <span class="md-ellipsis">
     TOC
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../black-formatter/">
+<a class="md-nav__link" href="../../tutorials/black-formatter/">
 <span class="md-ellipsis">
     Black Formatter
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../ruff-linter/">
+<a class="md-nav__link" href="../../tutorials/ruff-linter/">
 <span class="md-ellipsis">
     Ruff Linter
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../poetry/">
+<a class="md-nav__link" href="../../tutorials/poetry/">
 <span class="md-ellipsis">
     Poetry Package Management
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../mkdocs-docs/">
+<a class="md-nav__link" href="../../tutorials/mkdocs-docs/">
 <span class="md-ellipsis">
     MkDocs Documentation
   </span>
 </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-<span class="md-ellipsis">
-    Hydra Configuration
-  </span>
-<span class="md-nav__icon md-icon"></span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="./">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tutorials/hydra-config/">
 <span class="md-ellipsis">
     Hydra Configuration
   </span>
 </a>
-<nav aria-label="On this page" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      On this page
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#introduction-and-motivation">
-<span class="md-ellipsis">
-      Introduction and Motivation
-    </span>
-</a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#using-hydra-in-a-python-script">
-<span class="md-ellipsis">
-      Using Hydra in a Python Script
-    </span>
-</a>
-<nav aria-label="Using Hydra in a Python Script" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#example-configuration-file">
-<span class="md-ellipsis">
-      Example Configuration File
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#example-python-script">
-<span class="md-ellipsis">
-      Example Python Script
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#example-output">
-<span class="md-ellipsis">
-      Example Output
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#using-hydra-in-a-jupyter-notebook">
-<span class="md-ellipsis">
-      Using Hydra in a Jupyter Notebook
-    </span>
-</a>
-<nav aria-label="Using Hydra in a Jupyter Notebook" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#example-jupyter-notebook">
-<span class="md-ellipsis">
-      Example Jupyter Notebook
-    </span>
-</a>
-<nav aria-label="Example Jupyter Notebook" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#output">
-<span class="md-ellipsis">
-      Output:
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#output_1">
-<span class="md-ellipsis">
-      Output:
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#further-reading">
-<span class="md-ellipsis">
-      Further Reading
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../gitignore/">
+<a class="md-nav__link" href="../../tutorials/gitignore/">
 <span class="md-ellipsis">
     Gitignore File Creation
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../data/">
+<a class="md-nav__link" href="../../tutorials/data/">
 <span class="md-ellipsis">
     Managing Data
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../data-version-control/">
+<a class="md-nav__link" href="../../tutorials/data-version-control/">
 <span class="md-ellipsis">
     Data Version Control
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../dvc-local/">
+<a class="md-nav__link" href="../../tutorials/dvc-local/">
 <span class="md-ellipsis">
     DVC Local Workflow
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../dvc-cloud/">
+<a class="md-nav__link" href="../../tutorials/dvc-cloud/">
 <span class="md-ellipsis">
     DVC Cloud Storage
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../dvc-collaboration/">
+<a class="md-nav__link" href="../../tutorials/dvc-collaboration/">
 <span class="md-ellipsis">
     DVC for Collaboration
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../naming-conventions/">
+<a class="md-nav__link" href="../../tutorials/naming-conventions/">
 <span class="md-ellipsis">
     Naming Conventions Tutorial
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../windows-os-setup/">
+<a class="md-nav__link" href="../../tutorials/windows-os-setup/">
 <span class="md-ellipsis">
     Windows OS Setup
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../markdown-ml-model-documentation/">
+<a class="md-nav__link" href="../../tutorials/markdown-ml-model-documentation/">
 <span class="md-ellipsis">
     Markdown Documentation for ML Models
   </span>
@@ -446,64 +349,150 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
 <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
 <span class="md-ellipsis">
     Explanation
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="false" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
+<nav aria-expanded="true" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_4">
 <span class="md-nav__icon md-icon"></span>
             Explanation
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../explanation/toc-explanation/">
+<a class="md-nav__link" href="../toc-explanation/">
 <span class="md-ellipsis">
     TOC
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../explanation/dvc-understanding-dvs/">
+<a class="md-nav__link" href="../dvc-understanding-dvs/">
 <span class="md-ellipsis">
     Understanding DVC
   </span>
 </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../explanation/dvc-git-branches/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    Git Branches in DVC
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
 <span class="md-ellipsis">
     Git Branches in DVC
   </span>
 </a>
+<nav aria-label="On this page" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#introduction">
+<span class="md-ellipsis">
+      Introduction
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../explanation/github-naming-conventions/">
+<a class="md-nav__link" href="#using-git-branches-to-manage-data-versions">
+<span class="md-ellipsis">
+      Using Git Branches to Manage Data Versions
+    </span>
+</a>
+<nav aria-label="Using Git Branches to Manage Data Versions" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-concept-of-branching-in-git">
+<span class="md-ellipsis">
+      The Concept of Branching in Git
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#managing-data-versions-with-branches">
+<span class="md-ellipsis">
+      Managing Data Versions with Branches
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#integrating-dvc-with-collaborative-tools">
+<span class="md-ellipsis">
+      Integrating DVC with Collaborative Tools
+    </span>
+</a>
+<nav aria-label="Integrating DVC with Collaborative Tools" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#enhancing-team-collaboration">
+<span class="md-ellipsis">
+      Enhancing Team Collaboration
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#communication-and-transparency">
+<span class="md-ellipsis">
+      Communication and Transparency
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-importance-of-this-integration">
+<span class="md-ellipsis">
+      The Importance of this Integration
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#conclusion">
+<span class="md-ellipsis">
+      Conclusion
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../github-naming-conventions/">
 <span class="md-ellipsis">
     Effective GitHub Naming Conventions
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../explanation/ml-naming-conventions/">
+<a class="md-nav__link" href="../ml-naming-conventions/">
 <span class="md-ellipsis">
     Notebook and Script Naming Conventions in ML Projects
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../explanation/model-persistence-naming-conventions/">
+<a class="md-nav__link" href="../model-persistence-naming-conventions/">
 <span class="md-ellipsis">
     Model Persistence File Naming Conventions
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../explanation/naming-conventions/">
+<a class="md-nav__link" href="../naming-conventions/">
 <span class="md-ellipsis">
     Introduction to Naming Conventions for AI Project Assets
   </span>
@@ -551,38 +540,31 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#introduction-and-motivation">
+<a class="md-nav__link" href="#introduction">
 <span class="md-ellipsis">
-      Introduction and Motivation
+      Introduction
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#using-hydra-in-a-python-script">
+<a class="md-nav__link" href="#using-git-branches-to-manage-data-versions">
 <span class="md-ellipsis">
-      Using Hydra in a Python Script
+      Using Git Branches to Manage Data Versions
     </span>
 </a>
-<nav aria-label="Using Hydra in a Python Script" class="md-nav">
+<nav aria-label="Using Git Branches to Manage Data Versions" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#example-configuration-file">
+<a class="md-nav__link" href="#the-concept-of-branching-in-git">
 <span class="md-ellipsis">
-      Example Configuration File
+      The Concept of Branching in Git
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#example-python-script">
+<a class="md-nav__link" href="#managing-data-versions-with-branches">
 <span class="md-ellipsis">
-      Example Python Script
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#example-output">
-<span class="md-ellipsis">
-      Example Output
+      Managing Data Versions with Branches
     </span>
 </a>
 </li>
@@ -590,45 +572,41 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#using-hydra-in-a-jupyter-notebook">
+<a class="md-nav__link" href="#integrating-dvc-with-collaborative-tools">
 <span class="md-ellipsis">
-      Using Hydra in a Jupyter Notebook
+      Integrating DVC with Collaborative Tools
     </span>
 </a>
-<nav aria-label="Using Hydra in a Jupyter Notebook" class="md-nav">
+<nav aria-label="Integrating DVC with Collaborative Tools" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#example-jupyter-notebook">
+<a class="md-nav__link" href="#enhancing-team-collaboration">
 <span class="md-ellipsis">
-      Example Jupyter Notebook
-    </span>
-</a>
-<nav aria-label="Example Jupyter Notebook" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#output">
-<span class="md-ellipsis">
-      Output:
+      Enhancing Team Collaboration
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#output_1">
+<a class="md-nav__link" href="#communication-and-transparency">
 <span class="md-ellipsis">
-      Output:
+      Communication and Transparency
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-importance-of-this-integration">
+<span class="md-ellipsis">
+      The Importance of this Integration
     </span>
 </a>
 </li>
 </ul>
 </nav>
 </li>
-</ul>
-</nav>
-</li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#further-reading">
+<a class="md-nav__link" href="#conclusion">
 <span class="md-ellipsis">
-      Further Reading
+      Conclusion
     </span>
 </a>
 </li>
@@ -639,124 +617,56 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="manage-configuration-files-with-hydra">Manage Configuration Files with Hydra<a class="headerlink" href="#manage-configuration-files-with-hydra" title="Permanent link">¶</a></h1>
-<h2 id="introduction-and-motivation">Introduction and Motivation<a class="headerlink" href="#introduction-and-motivation" title="Permanent link">¶</a></h2>
-<p>Welcome to this tutorial on Hydra, a Python framework designed for
-elegantly configuring complex applications. If you've ever found
-yourself in a situation where you have a Python script filled with both
-code and configuration parameters, you know how messy it can get.
-Changing a single value often means digging into the source code, making
-it difficult to manage and maintain your application.</p>
-<p>Hydra offers a solution to this problem by separating the code and
-configuration parameters into different files. This separation makes it
-easier to manage complex applications, especially in data science
-projects where configurations can get complicated quickly. With Hydra,
-your Python scripts become cleaner, more modular, and easier to
-understand.</p>
-<p>In this guide, we'll walk you through how to use Hydra in both Python
-scripts and Jupyter notebooks to manage your application's configuration
-elegantly.</p>
-<h2 id="using-hydra-in-a-python-script">Using Hydra in a Python Script<a class="headerlink" href="#using-hydra-in-a-python-script" title="Permanent link">¶</a></h2>
-<p>To use Hydra in a Python script, you need to import the <code>hydra</code> package
-and use the <code>@hydra.main()</code> decorator. This decorator will automatically
-load and validate the configuration file specified.</p>
-<h3 id="example-configuration-file">Example Configuration File<a class="headerlink" href="#example-configuration-file" title="Permanent link">¶</a></h3>
-<p>Create a YAML configuration file named <code>main.yaml</code> inside a folder named
-<code>config</code>:</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1"># config/main.yaml</span>
-<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a>
-<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="nt">db</span><span class="p">:</span>
-<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">  </span><span class="nt">driver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mysql</span>
-<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">  </span><span class="nt">user</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">omry</span>
-<a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">  </span><span class="nt">password</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">secret</span>
-</code></pre></div>
-<h3 id="example-python-script">Example Python Script<a class="headerlink" href="#example-python-script" title="Permanent link">¶</a></h3>
-<p>Here's an example Python script that uses Hydra to read the
-configuration file and perform some actions based on it:</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="kn">from</span> <span class="nn">omegaconf</span> <span class="kn">import</span> <span class="n">DictConfig</span><span class="p">,</span> <span class="n">OmegaConf</span>
-<a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="kn">import</span> <span class="nn">hydra</span>
-<a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a>
-<a href="#__codelineno-1-4" id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="k">def</span> <span class="nf">display_config</span><span class="p">(</span><span class="n">cfg</span><span class="p">:</span> <span class="n">DictConfig</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-<a href="#__codelineno-1-5" id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="w">    </span><span class="sd">"""Display the entire configuration."""</span>
-<a href="#__codelineno-1-6" id="__codelineno-1-6" name="__codelineno-1-6"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">OmegaConf</span><span class="o">.</span><span class="n">to_yaml</span><span class="p">(</span><span class="n">cfg</span><span class="p">))</span>
-<a href="#__codelineno-1-7" id="__codelineno-1-7" name="__codelineno-1-7"></a>
-<a href="#__codelineno-1-8" id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="k">def</span> <span class="nf">display_driver</span><span class="p">(</span><span class="n">cfg</span><span class="p">:</span> <span class="n">DictConfig</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-<a href="#__codelineno-1-9" id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="w">    </span><span class="sd">"""Display the database driver."""</span>
-<a href="#__codelineno-1-10" id="__codelineno-1-10" name="__codelineno-1-10"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Database driver is: </span><span class="si">{</span><span class="n">cfg</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">driver</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
-<a href="#__codelineno-1-11" id="__codelineno-1-11" name="__codelineno-1-11"></a>
-<a href="#__codelineno-1-12" id="__codelineno-1-12" name="__codelineno-1-12"></a><span class="nd">@hydra</span><span class="o">.</span><span class="n">main</span><span class="p">(</span><span class="n">version_base</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">config_path</span><span class="o">=</span><span class="s2">"../../config"</span><span class="p">,</span> <span class="n">config_name</span><span class="o">=</span><span class="s2">"main"</span><span class="p">)</span>
-<a href="#__codelineno-1-13" id="__codelineno-1-13" name="__codelineno-1-13"></a><span class="k">def</span> <span class="nf">my_app</span><span class="p">(</span><span class="n">cfg</span><span class="p">:</span> <span class="n">DictConfig</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-<a href="#__codelineno-1-14" id="__codelineno-1-14" name="__codelineno-1-14"></a>    <span class="n">display_config</span><span class="p">(</span><span class="n">cfg</span><span class="p">)</span>
-<a href="#__codelineno-1-15" id="__codelineno-1-15" name="__codelineno-1-15"></a>    <span class="n">display_driver</span><span class="p">(</span><span class="n">cfg</span><span class="p">)</span>
-<a href="#__codelineno-1-16" id="__codelineno-1-16" name="__codelineno-1-16"></a>
-<a href="#__codelineno-1-17" id="__codelineno-1-17" name="__codelineno-1-17"></a>    <span class="c1"># Get the SQL driver from the config</span>
-<a href="#__codelineno-1-18" id="__codelineno-1-18" name="__codelineno-1-18"></a>    <span class="n">sql_driver</span> <span class="o">=</span> <span class="n">cfg</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">driver</span>
-<a href="#__codelineno-1-19" id="__codelineno-1-19" name="__codelineno-1-19"></a>
-<a href="#__codelineno-1-20" id="__codelineno-1-20" name="__codelineno-1-20"></a>    <span class="c1"># Now you can use sql_driver in your code</span>
-<a href="#__codelineno-1-21" id="__codelineno-1-21" name="__codelineno-1-21"></a>    <span class="c1"># For example, you might pass it to a function that initializes a</span>
-<a href="#__codelineno-1-22" id="__codelineno-1-22" name="__codelineno-1-22"></a>    <span class="c1"># database connection</span>
-<a href="#__codelineno-1-23" id="__codelineno-1-23" name="__codelineno-1-23"></a>    <span class="n">initialize_database</span><span class="p">(</span><span class="n">sql_driver</span><span class="p">)</span>
-<a href="#__codelineno-1-24" id="__codelineno-1-24" name="__codelineno-1-24"></a>
-<a href="#__codelineno-1-25" id="__codelineno-1-25" name="__codelineno-1-25"></a><span class="k">def</span> <span class="nf">initialize_database</span><span class="p">(</span><span class="n">driver</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-<a href="#__codelineno-1-26" id="__codelineno-1-26" name="__codelineno-1-26"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Initializing database with driver: </span><span class="si">{</span><span class="n">driver</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
-<a href="#__codelineno-1-27" id="__codelineno-1-27" name="__codelineno-1-27"></a>    <span class="c1"># Your database initialization code here</span>
-<a href="#__codelineno-1-28" id="__codelineno-1-28" name="__codelineno-1-28"></a>
-<a href="#__codelineno-1-29" id="__codelineno-1-29" name="__codelineno-1-29"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">"__main__"</span><span class="p">:</span>
-<a href="#__codelineno-1-30" id="__codelineno-1-30" name="__codelineno-1-30"></a>    <span class="n">my_app</span><span class="p">()</span>
-</code></pre></div>
-<h3 id="example-output">Example Output<a class="headerlink" href="#example-output" title="Permanent link">¶</a></h3>
-<p>When you run the script, you should see output similar to the following:</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a>db:
-<a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a>  driver: mysql
-<a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a>  user: omry
-<a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a>  password: secret
-<a href="#__codelineno-2-5" id="__codelineno-2-5" name="__codelineno-2-5"></a>
-<a href="#__codelineno-2-6" id="__codelineno-2-6" name="__codelineno-2-6"></a>Database driver is: mysql
-<a href="#__codelineno-2-7" id="__codelineno-2-7" name="__codelineno-2-7"></a>Initializing database with driver: mysql
-</code></pre></div>
-<h2 id="using-hydra-in-a-jupyter-notebook">Using Hydra in a Jupyter Notebook<a class="headerlink" href="#using-hydra-in-a-jupyter-notebook" title="Permanent link">¶</a></h2>
-<p>To use Hydra in a Jupyter notebook, you can import the <code>omegaconf</code>
-package and manually load the configuration file using the
-<code>OmegaConf.load()</code> function.</p>
-<h3 id="example-jupyter-notebook">Example Jupyter Notebook<a class="headerlink" href="#example-jupyter-notebook" title="Permanent link">¶</a></h3>
-<p>Here's how you can read the same configuration file in a Jupyter
-notebook:</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="c1"># notebooks/app.ipynb</span>
-<a href="#__codelineno-3-2" id="__codelineno-3-2" name="__codelineno-3-2"></a>
-<a href="#__codelineno-3-3" id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="kn">import</span> <span class="nn">omegaconf</span>
-<a href="#__codelineno-3-4" id="__codelineno-3-4" name="__codelineno-3-4"></a>
-<a href="#__codelineno-3-5" id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="c1"># Load the config file</span>
-<a href="#__codelineno-3-6" id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="n">config</span> <span class="o">=</span> <span class="n">omegaconf</span><span class="o">.</span><span class="n">OmegaConf</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s2">"../config/main.yaml"</span><span class="p">)</span>
-<a href="#__codelineno-3-7" id="__codelineno-3-7" name="__codelineno-3-7"></a>
-<a href="#__codelineno-3-8" id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="c1"># Print the config</span>
-<a href="#__codelineno-3-9" id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="nb">print</span><span class="p">(</span><span class="n">config</span><span class="p">)</span>
-</code></pre></div>
-<h4 id="output">Output:<a class="headerlink" href="#output" title="Permanent link">¶</a></h4>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a>{'db': {'driver': 'mysql', 'user': 'omry', 'password': 'secret'}}
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="n">driver</span> <span class="o">=</span> <span class="n">config</span><span class="p">[</span><span class="s1">'db'</span><span class="p">][</span><span class="s1">'driver'</span><span class="p">]</span>
-<a href="#__codelineno-5-2" id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="nb">print</span><span class="p">(</span><span class="n">driver</span><span class="p">)</span>
-</code></pre></div>
-<h4 id="output_1">Output:<a class="headerlink" href="#output_1" title="Permanent link">¶</a></h4>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a>mysql
-</code></pre></div>
-<p>This guide should give you a good starting point for managing complex
-configurations in Python using Hydra. Whether you're working in a Python
-script or a Jupyter notebook, Hydra and OmegaConf offer powerful tools
-for this task.</p>
-<h2 id="further-reading">Further Reading<a class="headerlink" href="#further-reading" title="Permanent link">¶</a></h2>
-<p>For more information on Hydra and its capabilities, you can refer to the
-following resources:</p>
+<h1 id="explanation-managing-data-versions-with-git-branches-and-integrating-dvc-with-collaborative-tools">Explanation: Managing Data Versions with Git Branches and Integrating DVC with Collaborative Tools<a class="headerlink" href="#explanation-managing-data-versions-with-git-branches-and-integrating-dvc-with-collaborative-tools" title="Permanent link">¶</a></h1>
+<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">¶</a></h2>
+<div class="admonition info">
+<p class="admonition-title">Overview</p>
+<p>This guide focuses on understanding the use of Git branches for data versioning and the integration of DVC with collaborative tools like Slack or GitHub. It's crucial for enhancing team collaboration and efficiency in data-centric projects.</p>
+</div>
+<h2 id="using-git-branches-to-manage-data-versions">Using Git Branches to Manage Data Versions<a class="headerlink" href="#using-git-branches-to-manage-data-versions" title="Permanent link">¶</a></h2>
+<h3 id="the-concept-of-branching-in-git">The Concept of Branching in Git<a class="headerlink" href="#the-concept-of-branching-in-git" title="Permanent link">¶</a></h3>
 <ul>
-<li><a href="https://hydra.cc/docs/intro">Hydra Official Documentation</a></li>
-<li><a href="https://omegaconf.readthedocs.io/en/latest/">OmegaConf Documentation</a></li>
+<li><span class="twemoji"><svg viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3.25a2.25 2.25 0 1 1 3 2.122V6A2.5 2.5 0 0 1 10 8.5H6a1 1 0 0 0-1 1v1.128a2.251 2.251 0 1 1-1.5 0V5.372a2.25 2.25 0 1 1 1.5 0v1.836A2.493 2.493 0 0 1 6 7h4a1 1 0 0 0 1-1v-.628A2.25 2.25 0 0 1 9.5 3.25Zm-6 0a.75.75 0 1 0 1.5 0 .75.75 0 0 0-1.5 0Zm8.25-.75a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5ZM4.25 12a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5Z"></path></svg></span> <strong>Branching in Git</strong> is about creating separate lines of development. Each branch acts as an isolated environment for specific features or versions.</li>
+<li><span class="twemoji"><svg viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="m8.533.133 5.25 1.68A1.75 1.75 0 0 1 15 3.48V7c0 1.566-.32 3.182-1.303 4.682-.983 1.498-2.585 2.813-5.032 3.855a1.697 1.697 0 0 1-1.33 0c-2.447-1.042-4.049-2.357-5.032-3.855C1.32 10.182 1 8.566 1 7V3.48a1.75 1.75 0 0 1 1.217-1.667l5.25-1.68a1.748 1.748 0 0 1 1.066 0Zm-.61 1.429.001.001-5.25 1.68a.251.251 0 0 0-.174.237V7c0 1.36.275 2.666 1.057 3.859.784 1.194 2.121 2.342 4.366 3.298a.196.196 0 0 0 .154 0c2.245-.957 3.582-2.103 4.366-3.297C13.225 9.666 13.5 8.358 13.5 7V3.48a.25.25 0 0 0-.174-.238l-5.25-1.68a.25.25 0 0 0-.153 0ZM9.5 6.5c0 .536-.286 1.032-.75 1.3v2.45a.75.75 0 0 1-1.5 0V7.8A1.5 1.5 0 1 1 9.5 6.5Z"></path></svg></span> <strong>Isolation</strong> provided by branches allows for simultaneous and independent development streams.</li>
 </ul>
+<h3 id="managing-data-versions-with-branches">Managing Data Versions with Branches<a class="headerlink" href="#managing-data-versions-with-branches" title="Permanent link">¶</a></h3>
+<div class="admonition success">
+<p class="admonition-title">Branch-Specific Workflows</p>
+<ul>
+<li><strong>Version Control</strong>: Using branches for different data versions facilitates controlled experimentation and changes.</li>
+<li><strong>Naming Conventions</strong>: Descriptive branch names like <code>feature/new-data-set-2.1</code> aid in identifying and managing various data versions.</li>
+</ul>
+</div>
+<h2 id="integrating-dvc-with-collaborative-tools">Integrating DVC with Collaborative Tools<a class="headerlink" href="#integrating-dvc-with-collaborative-tools" title="Permanent link">¶</a></h2>
+<h3 id="enhancing-team-collaboration">Enhancing Team Collaboration<a class="headerlink" href="#enhancing-team-collaboration" title="Permanent link">¶</a></h3>
+<ul>
+<li><span class="twemoji"><svg viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M5.433 2.304A4.492 4.492 0 0 0 3.5 6c0 1.598.832 3.002 2.09 3.802.518.328.929.923.902 1.64v.008l-.164 3.337a.75.75 0 1 1-1.498-.073l.163-3.33c.002-.085-.05-.216-.207-.316A5.996 5.996 0 0 1 2 6a5.993 5.993 0 0 1 2.567-4.92 1.482 1.482 0 0 1 1.673-.04c.462.296.76.827.76 1.423v2.82c0 .082.041.16.11.206l.75.51a.25.25 0 0 0 .28 0l.75-.51A.249.249 0 0 0 9 5.282V2.463c0-.596.298-1.127.76-1.423a1.482 1.482 0 0 1 1.673.04A5.993 5.993 0 0 1 14 6a5.996 5.996 0 0 1-2.786 5.068c-.157.1-.209.23-.207.315l.163 3.33a.752.752 0 0 1-1.094.714.75.75 0 0 1-.404-.64l-.164-3.345c-.027-.717.384-1.312.902-1.64A4.495 4.495 0 0 0 12.5 6a4.492 4.492 0 0 0-1.933-3.696c-.024.017-.067.067-.067.16v2.818a1.75 1.75 0 0 1-.767 1.448l-.75.51a1.75 1.75 0 0 1-1.966 0l-.75-.51A1.75 1.75 0 0 1 5.5 5.282V2.463c0-.092-.043-.142-.067-.159Z"></path></svg></span> <strong>DVC's Role</strong>: DVC extends Git's capabilities for handling large datasets, crucial in data-heavy projects.</li>
+<li><span class="twemoji"><svg viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M1.75 1h8.5c.966 0 1.75.784 1.75 1.75v5.5A1.75 1.75 0 0 1 10.25 10H7.061l-2.574 2.573A1.458 1.458 0 0 1 2 11.543V10h-.25A1.75 1.75 0 0 1 0 8.25v-5.5C0 1.784.784 1 1.75 1ZM1.5 2.75v5.5c0 .138.112.25.25.25h1a.75.75 0 0 1 .75.75v2.19l2.72-2.72a.749.749 0 0 1 .53-.22h3.5a.25.25 0 0 0 .25-.25v-5.5a.25.25 0 0 0-.25-.25h-8.5a.25.25 0 0 0-.25.25Zm13 2a.25.25 0 0 0-.25-.25h-.5a.75.75 0 0 1 0-1.5h.5c.966 0 1.75.784 1.75 1.75v5.5A1.75 1.75 0 0 1 14.25 12H14v1.543a1.458 1.458 0 0 1-2.487 1.03L9.22 12.28a.749.749 0 0 1 .326-1.275.749.749 0 0 1 .734.215l2.22 2.22v-2.19a.75.75 0 0 1 .75-.75h1a.25.25 0 0 0 .25-.25Z"></path></svg></span> <strong>Collaborative Tools</strong>: Integrations with tools like Slack or GitHub provide automated updates and notifications, increasing transparency and team communication.</li>
+</ul>
+<h3 id="communication-and-transparency">Communication and Transparency<a class="headerlink" href="#communication-and-transparency" title="Permanent link">¶</a></h3>
+<div class="admonition tip">
+<p class="admonition-title">Effective Communication</p>
+<ul>
+<li><strong>Automated Notifications</strong>: Receive alerts about data updates through collaborative tool integrations.</li>
+<li><strong>Code Reviews and Pull Requests</strong>: These should include scrutiny of <code>.dvc</code> files, ensuring data changes are reviewed along with code.</li>
+</ul>
+</div>
+<h3 id="the-importance-of-this-integration">The Importance of this Integration<a class="headerlink" href="#the-importance-of-this-integration" title="Permanent link">¶</a></h3>
+<ul>
+<li><span class="twemoji"><svg viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M14.064 0h.186C15.216 0 16 .784 16 1.75v.186a8.752 8.752 0 0 1-2.564 6.186l-.458.459c-.314.314-.641.616-.979.904v3.207c0 .608-.315 1.172-.833 1.49l-2.774 1.707a.749.749 0 0 1-1.11-.418l-.954-3.102a1.214 1.214 0 0 1-.145-.125L3.754 9.816a1.218 1.218 0 0 1-.124-.145L.528 8.717a.749.749 0 0 1-.418-1.11l1.71-2.774A1.748 1.748 0 0 1 3.31 4h3.204c.288-.338.59-.665.904-.979l.459-.458A8.749 8.749 0 0 1 14.064 0ZM8.938 3.623h-.002l-.458.458c-.76.76-1.437 1.598-2.02 2.5l-1.5 2.317 2.143 2.143 2.317-1.5c.902-.583 1.74-1.26 2.499-2.02l.459-.458a7.25 7.25 0 0 0 2.123-5.127V1.75a.25.25 0 0 0-.25-.25h-.186a7.249 7.249 0 0 0-5.125 2.123ZM3.56 14.56c-.732.732-2.334 1.045-3.005 1.148a.234.234 0 0 1-.201-.064.234.234 0 0 1-.064-.201c.103-.671.416-2.273 1.15-3.003a1.502 1.502 0 1 1 2.12 2.12Zm6.94-3.935c-.088.06-.177.118-.266.175l-2.35 1.521.548 1.783 1.949-1.2a.25.25 0 0 0 .119-.213ZM3.678 8.116 5.2 5.766c.058-.09.117-.178.176-.266H3.309a.25.25 0 0 0-.213.119l-1.2 1.95ZM12 5a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path></svg></span> <strong>Efficient Workflows</strong>: Streamlined and transparent workflows are achieved through integration, improving project efficiency.</li>
+<li><span class="twemoji"><svg viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M1.705 8.005a.75.75 0 0 1 .834.656 5.5 5.5 0 0 0 9.592 2.97l-1.204-1.204a.25.25 0 0 1 .177-.427h3.646a.25.25 0 0 1 .25.25v3.646a.25.25 0 0 1-.427.177l-1.38-1.38A7.002 7.002 0 0 1 1.05 8.84a.75.75 0 0 1 .656-.834ZM8 2.5a5.487 5.487 0 0 0-4.131 1.869l1.204 1.204A.25.25 0 0 1 4.896 6H1.25A.25.25 0 0 1 1 5.75V2.104a.25.25 0 0 1 .427-.177l1.38 1.38A7.002 7.002 0 0 1 14.95 7.16a.75.75 0 0 1-1.49.178A5.5 5.5 0 0 0 8 2.5Z"></path></svg></span> <strong>Reproducibility and Consistency</strong>: Ensures all team members are aligned with the same data version, crucial for consistent results in data projects.</li>
+</ul>
+<h2 id="conclusion">Conclusion<a class="headerlink" href="#conclusion" title="Permanent link">¶</a></h2>
+<div class="admonition check-circle">
+<p class="admonition-title">Key Takeaways</p>
+<p>Understanding the management of data versions with Git branches and the integration of DVC with collaborative tools is essential in modern data management. These practices bolster teamwork, enhance clarity, and are indispensable in data science and machine learning environments.</p>
+</div>
 <aside class="md-source-file">
 <span class="md-source-file__fact">
 <span class="md-icon" title="Last update">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 23, 2023</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 29, 2024</span>
 </span>
 </aside>
 </article>

@@ -5,26 +5,37 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="https://llmslab.github.io/cookiecutter-ai-flock/explanation/" rel="canonical"/>
-<link href="../api-reference/" rel="prev"/>
-<link href="../assets/images/favicon.png" rel="icon"/>
+<link href="https://llmslab.github.io/cookiecutter-ai-flock/explanation/github-naming-conventions/" rel="canonical"/>
+<link href="../dvc-git-branches/" rel="prev"/>
+<link href="../ml-naming-conventions/" rel="next"/>
+<link href="../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.5.3, mkdocs-material-9.5.4" name="generator"/>
-<title>Explanation - Cookiecutter Ai Flock</title>
-<link href="../assets/stylesheets/main.50c56a3b.min.css" rel="stylesheet"/>
-<link href="../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
+<title>Effective GitHub Naming Conventions - Cookiecutter Ai Flock</title>
+<link href="../../assets/stylesheets/main.50c56a3b.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
 <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
-<link href="../assets/_mkdocstrings.css" rel="stylesheet"/>
-<link href="../stylesheets/extra.css" rel="stylesheet"/>
-<script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
-</head>
+<link href="../../assets/_mkdocstrings.css" rel="stylesheet"/>
+<link href="../../stylesheets/extra.css" rel="stylesheet"/>
+<link href="../../assets/css/custom.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+ <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
 <body data-md-color-accent="indigo" data-md-color-primary="indigo" data-md-color-scheme="slate" dir="ltr">
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#explanation">
+<a class="md-skip" href="#github-repository-naming-conventions-for-data-science-projects">
           Skip to content
         </a>
 </div>
@@ -32,8 +43,8 @@
 </div>
 <header class="md-header md-header--shadow" data-md-component="header">
 <nav aria-label="Header" class="md-header__inner md-grid">
-<a aria-label="Cookiecutter Ai Flock" class="md-header__button md-logo" data-md-component="logo" href=".." title="Cookiecutter Ai Flock">
-<img alt="logo" src="../assets/logo.png"/>
+<a aria-label="Cookiecutter Ai Flock" class="md-header__button md-logo" data-md-component="logo" href="../.." title="Cookiecutter Ai Flock">
+<img alt="logo" src="../../assets/logo.png"/>
 </a>
 <label class="md-header__button md-icon" for="__drawer">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
@@ -48,7 +59,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Explanation
+              Effective GitHub Naming Conventions
             
           </span>
 </div>
@@ -85,8 +96,8 @@
 <div class="md-sidebar__inner">
 <nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
-<a aria-label="Cookiecutter Ai Flock" class="md-nav__button md-logo" data-md-component="logo" href=".." title="Cookiecutter Ai Flock">
-<img alt="logo" src="../assets/logo.png"/>
+<a aria-label="Cookiecutter Ai Flock" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="Cookiecutter Ai Flock">
+<img alt="logo" src="../../assets/logo.png"/>
 </a>
     Cookiecutter Ai Flock
   </label>
@@ -102,7 +113,7 @@
 </div>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="..">
+<a class="md-nav__link" href="../..">
 <span class="md-ellipsis">
     Home
   </span>
@@ -123,79 +134,107 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../tutorials/turorials-intro/">
+<a class="md-nav__link" href="../../tutorials/toc-tutorials/">
 <span class="md-ellipsis">
     TOC
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../tutorials/black-formatter/">
+<a class="md-nav__link" href="../../tutorials/black-formatter/">
 <span class="md-ellipsis">
-    Black
+    Black Formatter
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../tutorials/ruff-linter/">
+<a class="md-nav__link" href="../../tutorials/ruff-linter/">
 <span class="md-ellipsis">
-    Ruff
+    Ruff Linter
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../tutorials/poetry/">
+<a class="md-nav__link" href="../../tutorials/poetry/">
 <span class="md-ellipsis">
-    Poetry
+    Poetry Package Management
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../tutorials/mkdocs-docs/">
+<a class="md-nav__link" href="../../tutorials/mkdocs-docs/">
 <span class="md-ellipsis">
-    MkDocs
+    MkDocs Documentation
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../tutorials/hydra-config/">
+<a class="md-nav__link" href="../../tutorials/hydra-config/">
 <span class="md-ellipsis">
-    Hydra
+    Hydra Configuration
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../tutorials/gitignore.md">
+<a class="md-nav__link" href="../../tutorials/gitignore/">
 <span class="md-ellipsis">
-    Gitignore
+    Gitignore File Creation
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../tutorials/data/">
+<a class="md-nav__link" href="../../tutorials/data/">
 <span class="md-ellipsis">
-    Data
+    Managing Data
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../tutorials/data-version-control/">
+<a class="md-nav__link" href="../../tutorials/data-version-control/">
 <span class="md-ellipsis">
-    DVC
+    Data Version Control
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../tutorials/naming-conventions/">
+<a class="md-nav__link" href="../../tutorials/dvc-local/">
 <span class="md-ellipsis">
-    Naming Convetions
+    DVC Local Workflow
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../tutorials/windows-os-setup/">
+<a class="md-nav__link" href="../../tutorials/dvc-cloud/">
 <span class="md-ellipsis">
-    Windows OS
+    DVC Cloud Storage
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tutorials/dvc-collaboration/">
+<span class="md-ellipsis">
+    DVC for Collaboration
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tutorials/naming-conventions/">
+<span class="md-ellipsis">
+    Naming Conventions Tutorial
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tutorials/windows-os-setup/">
+<span class="md-ellipsis">
+    Windows OS Setup
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tutorials/markdown-ml-model-documentation/">
+<span class="md-ellipsis">
+    Markdown Documentation for ML Models
   </span>
 </a>
 </li>
@@ -217,122 +256,186 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../how-to-guides/how-to-guides-intro/">
+<a class="md-nav__link" href="../../how-to-guides/toc-how-to-guides/">
 <span class="md-ellipsis">
     TOC
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../how-to-guides/offline-cookiecutter-setup/">
+<a class="md-nav__link" href="../../how-to-guides/dvc-set-up/">
+<span class="md-ellipsis">
+    DVC Setup
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../how-to-guides/dvc-communication/">
+<span class="md-ellipsis">
+    DVC Communication
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../how-to-guides/dvc-vscode-extension/">
+<span class="md-ellipsis">
+    DVC VS Code Extension
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../how-to-guides/offline-cookiecutter-setup/">
 <span class="md-ellipsis">
     Offline Cookiecutter Setup
   </span>
 </a>
 </li>
-</ul>
-</nav>
-</li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../api-reference/">
+<a class="md-nav__link" href="../../how-to-guides/git-branch-naming-standards/">
 <span class="md-ellipsis">
-    API Reference
+    Git Branch Naming Standards
   </span>
 </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../how-to-guides/commit-message-standards-ml/">
+<span class="md-ellipsis">
+    Commit Message Standards in ML Projects
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../how-to-guides/ml-data-folder-naming/">
+<span class="md-ellipsis">
+    ML Data Folder Naming Guide
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../how-to-guides/ml-data-naming-conventions/">
+<span class="md-ellipsis">
+    Data Files Naming Conventions
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../how-to-guides/machine-learning-metadata-automation/">
+<span class="md-ellipsis">
+    Automating Metadata Creation
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../how-to-guides/github-actions-naming-convention/">
+<span class="md-ellipsis">
+    Enforcing Naming Conventions with GitHub Actions
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../how-to-guides/wandb-experiment-tracking-rag/">
+<span class="md-ellipsis">
+    Best Practices for Experiment Tracking in RAG Projects Using Weights &amp; Biases
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../how-to-guides/wandb-experiment-tracking-rag-advanced/">
+<span class="md-ellipsis">
+    Advanced Practices for Experiment Tracking in RAG Projects With Weights &amp; Biases
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
 <span class="md-ellipsis">
     Explanation
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
-<a class="md-nav__link md-nav__link--active" href="./">
+<nav aria-expanded="true" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+            Explanation
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../toc-explanation/">
 <span class="md-ellipsis">
-    Explanation
+    TOC
   </span>
 </a>
-<nav aria-label="On this page" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../dvc-understanding-dvs/">
+<span class="md-ellipsis">
+    Understanding DVC
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../dvc-git-branches/">
+<span class="md-ellipsis">
+    Git Branches in DVC
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    Effective GitHub Naming Conventions
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ml-naming-conventions/">
+<span class="md-ellipsis">
+    Notebook and Script Naming Conventions in ML Projects
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../model-persistence-naming-conventions/">
+<span class="md-ellipsis">
+    Model Persistence File Naming Conventions
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../naming-conventions/">
+<span class="md-ellipsis">
+    Introduction to Naming Conventions for AI Project Assets
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+<span class="md-ellipsis">
+    API Reference
+  </span>
 <span class="md-nav__icon md-icon"></span>
-      On this page
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_5_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+            API Reference
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#python-code-formatting-guide-for-vs-code-with-jupyter-integration">
+<a class="md-nav__link" href="../../api-reference/toc-api-reference/">
 <span class="md-ellipsis">
-      Python Code Formatting Guide for VS Code with Jupyter Integration
-    </span>
+    TOC
+  </span>
 </a>
-<nav aria-label="Python Code Formatting Guide for VS Code with Jupyter Integration" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#why-a-dedicated-formatting-strategy-matters">
-<span class="md-ellipsis">
-      Why a Dedicated Formatting Strategy Matters
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#1-foundations-of-our-code-formatting-strategy">
-<span class="md-ellipsis">
-      1. Foundations of Our Code Formatting Strategy
-    </span>
-</a>
-<nav aria-label="1. Foundations of Our Code Formatting Strategy" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#local-remote-server-code-formatting">
-<span class="md-ellipsis">
-      Local (Remote Server) Code Formatting:
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#unified-code-standard-enforcement">
-<span class="md-ellipsis">
-      Unified Code Standard Enforcement:
-    </span>
-</a>
-<nav aria-label="Unified Code Standard Enforcement:" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#configuration-specifics">
-<span class="md-ellipsis">
-      Configuration Specifics:
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#scalability-and-onboarding">
-<span class="md-ellipsis">
-      Scalability and Onboarding:
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#2-a-glimpse-at-black">
-<span class="md-ellipsis">
-      2. A Glimpse at Black
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#the-way-forward">
-<span class="md-ellipsis">
-      The Way Forward
-    </span>
-</a>
-</li>
-</ul>
-</nav>
 </li>
 </ul>
 </nav>
@@ -346,130 +449,78 @@
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="On this page" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      On this page
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#python-code-formatting-guide-for-vs-code-with-jupyter-integration">
-<span class="md-ellipsis">
-      Python Code Formatting Guide for VS Code with Jupyter Integration
-    </span>
-</a>
-<nav aria-label="Python Code Formatting Guide for VS Code with Jupyter Integration" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#why-a-dedicated-formatting-strategy-matters">
-<span class="md-ellipsis">
-      Why a Dedicated Formatting Strategy Matters
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#1-foundations-of-our-code-formatting-strategy">
-<span class="md-ellipsis">
-      1. Foundations of Our Code Formatting Strategy
-    </span>
-</a>
-<nav aria-label="1. Foundations of Our Code Formatting Strategy" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#local-remote-server-code-formatting">
-<span class="md-ellipsis">
-      Local (Remote Server) Code Formatting:
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#unified-code-standard-enforcement">
-<span class="md-ellipsis">
-      Unified Code Standard Enforcement:
-    </span>
-</a>
-<nav aria-label="Unified Code Standard Enforcement:" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#configuration-specifics">
-<span class="md-ellipsis">
-      Configuration Specifics:
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#scalability-and-onboarding">
-<span class="md-ellipsis">
-      Scalability and Onboarding:
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#2-a-glimpse-at-black">
-<span class="md-ellipsis">
-      2. A Glimpse at Black
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#the-way-forward">
-<span class="md-ellipsis">
-      The Way Forward
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-</ul>
 </nav>
 </div>
 </div>
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="explanation"><strong>Explanation</strong><a class="headerlink" href="#explanation" title="Permanent link">¶</a></h1>
-<h2 id="python-code-formatting-guide-for-vs-code-with-jupyter-integration">Python Code Formatting Guide for VS Code with Jupyter Integration<a class="headerlink" href="#python-code-formatting-guide-for-vs-code-with-jupyter-integration" title="Permanent link">¶</a></h2>
-<p>Welcome to the deep dive into our Python Code Formatting strategy. This guide delves into our rationale, the considerations we made, and the broader context that prompted us to tailor a formatting environment suitable for VS Code with Jupyter notebooks.</p>
-<h3 id="why-a-dedicated-formatting-strategy-matters"><strong>Why a Dedicated Formatting Strategy Matters</strong><a class="headerlink" href="#why-a-dedicated-formatting-strategy-matters" title="Permanent link">¶</a></h3>
-<p>In today's fast-paced development landscape, the importance of code readability and maintainability can't be overstated. Well-structured code not only enhances the development experience but also makes collaborative efforts more straightforward. As we traverse through this guide, you'll understand our commitment to these principles and how we have materialized them through our chosen tools and practices.</p>
-<h3 id="1-foundations-of-our-code-formatting-strategy">1. <strong>Foundations of Our Code Formatting Strategy</strong><a class="headerlink" href="#1-foundations-of-our-code-formatting-strategy" title="Permanent link">¶</a></h3>
-<p>At the heart of our strategy lies the ambition to maintain high-quality software development practices. A significant portion of this commitment revolves around the clarity of code. Here's a deeper dive into our approach:</p>
-<h4 id="local-remote-server-code-formatting"><strong>Local (Remote Server) Code Formatting</strong>:<a class="headerlink" href="#local-remote-server-code-formatting" title="Permanent link">¶</a></h4>
-<p>Manual intervention offers precision. By giving developers the tools to manually format using Black in VS Code, especially within Jupyter notebooks, we recognize the significance of context and narrative flow. The dedicated keyboard shortcut for the "Format Document" command in VS Code becomes more than just a tool—it embodies this philosophy of control and precision.</p>
-<h3 id="unified-code-standard-enforcement"><strong>Unified Code Standard Enforcement</strong>:<a class="headerlink" href="#unified-code-standard-enforcement" title="Permanent link">¶</a></h3>
-<p>We believe in reinforcing our standards at multiple levels. Pre-commit hooks are the first checkpoint, providing immediate feedback to developers. GitHub Actions, on the other hand, act as custodians of our repository's sanctity. By leveraging both, we not only streamline the development process but also ensure that our codebase remains pristine.</p>
-<h4 id="configuration-specifics"><strong>Configuration Specifics</strong>:<a class="headerlink" href="#configuration-specifics" title="Permanent link">¶</a></h4>
-<p>These configurations are not mere technical details but decisions that reflect our understanding of the development environment:</p>
+<h1 id="github-repository-naming-conventions-for-data-science-projects">GitHub Repository Naming Conventions for Data Science Projects<a class="headerlink" href="#github-repository-naming-conventions-for-data-science-projects" title="Permanent link">¶</a></h1>
+<div class="admonition info">
+<p class="admonition-title">Overview</p>
+<p>Choosing the right naming convention for GitHub repositories in data science projects is crucial for clarity, organization, and ease of navigation. A well-defined naming convention helps team members and stakeholders to quickly understand the scope and purpose of a repository at a glance. This section outlines the guidelines for naming GitHub repositories related to data science projects.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Naming Convention Structure</p>
+<p>Repositories should be named following this format:</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>&lt;prefix&gt;-&lt;descriptive-name&gt;[-&lt;optional-version&gt;]
+</code></pre></div>
+<details class="note" open="open">
+<summary>Components</summary>
 <ul>
-<li>
-<p><strong>Python Version Consistency</strong>: Uniformity is key. By synchronizing our Python versions, we eliminate discrepancies that might arise due to version differences.</p>
-</li>
-<li>
-<p><strong>Jupyter Notebook Formatting</strong>: Jupyter notebooks are unique, and so is our approach towards them. By configuring Black in a way that respects their structure, we show our commitment to readability without compromising on consistency.</p>
-</li>
-<li>
-<p><strong>Folder Specific Formatting</strong>: A clear focus on specific paths like <code>src/</code> and <code>notebooks/</code> indicates our emphasis on precision and our profound understanding of our repository's anatomy.</p>
-</li>
+<li><strong>Prefix</strong>: A concise identifier related to the project's domain or main technology.</li>
+<li><strong>Descriptive Name</strong>: A clear and specific description of the repository's content or purpose.</li>
+<li><strong>Optional Version</strong>: A version number, if applicable, to distinguish between different iterations or stages of the project.</li>
 </ul>
-<h4 id="scalability-and-onboarding"><strong>Scalability and Onboarding</strong>:<a class="headerlink" href="#scalability-and-onboarding" title="Permanent link">¶</a></h4>
-<p>A growth-oriented strategy is future-proof. By considering the influx of new developers and potential scalability challenges, our comprehensive documentation serves as a beacon, ensuring uniformity in the development experience.</p>
-<h3 id="2-a-glimpse-at-black"><strong>2. A Glimpse at Black</strong><a class="headerlink" href="#2-a-glimpse-at-black" title="Permanent link">¶</a></h3>
-<p>The <a href="https://github.com/psf/black">Black formatter</a> is a testament to our belief in uniformity. By conforming to the PEP 8 style guide automatically, Black becomes an ally in our quest for code consistency, helping us keep stylistic debates at bay and maintain focus on core functionalities.</p>
-<h3 id="the-way-forward"><strong>The Way Forward</strong><a class="headerlink" href="#the-way-forward" title="Permanent link">¶</a></h3>
-<p>We believe that our strategy's success lies in its adaptability and foresight. Uniform code formatting, when coupled with automated checks within VS Code, sets the stage for an intuitive development experience. The harmony achieved through consistent code styling paves the way for more focused collaborative undertakings and ensures that our code reviews remain substantive rather than stylistic.</p>
-<p>Embrace clarity. Prioritize consistency. And above all, cherish the joy of coding!</p>
+</details>
+</div>
+<div class="admonition check">
+<p class="admonition-title">Guidelines</p>
+<ol>
+<li><strong>Choose an Appropriate Prefix</strong></li>
+<li>The prefix should represent the key area or technology of the project, like <code>ml</code> for machine learning, <code>nlp</code> for natural language processing, <code>cv</code> for computer vision, etc.</li>
+<li>
+<p>This helps in categorizing and quickly identifying the project's domain.</p>
+</li>
+<li>
+<p><strong>Be Clear and Specific</strong></p>
+</li>
+<li>Use descriptive and meaningful terms that accurately reflect the primary focus or functionality of the repository.</li>
+<li>
+<p>Avoid vague or overly broad terms that do not convey the specific purpose of the repository.</p>
+</li>
+<li>
+<p><strong>Include Versioning Where Necessary</strong></p>
+</li>
+<li>For projects that have multiple versions or stages, include a version number at the end of the repository name.</li>
+<li>
+<p>This is useful for tracking development progress and differentiating between major project phases.</p>
+</li>
+<li>
+<p><strong>Maintain Consistency</strong></p>
+</li>
+<li>Keep all repository names in lowercase and use hyphens (<code>-</code>) to separate words. This enhances readability and avoids issues with URL encoding.</li>
+</ol>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Examples</p>
+<ul>
+<li><code>ml-predictive-modeling</code></li>
+<li><code>nlp-chatbot-interface</code></li>
+<li><code>cv-facial-recognition-v1</code></li>
+<li><code>ds-data-cleaning-tools</code></li>
+</ul>
+</div>
+<div class="admonition summary">
+<p class="admonition-title">Conclusion</p>
+<p>Adopting these naming conventions for GitHub repositories in data science projects promotes a structured and systematic approach to repository management. It ensures that the repository names are informative, organized, and aligned with the project's objectives and technical domain.</p>
+</div>
 <aside class="md-source-file">
 <span class="md-source-file__fact">
 <span class="md-icon" title="Last update">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 19, 2023</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 29, 2024</span>
 </span>
 </aside>
 </article>
@@ -500,11 +551,12 @@
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": "..", "features": ["content.code.annotate"], "search": "../assets/javascripts/workers/search.c011b7c0.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
-<script src="../assets/javascripts/bundle.7389ff0e.min.js"></script>
+<script id="__config" type="application/json">{"base": "../..", "features": ["content.code.annotate"], "search": "../../assets/javascripts/workers/search.c011b7c0.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+<script src="../../assets/javascripts/bundle.7389ff0e.min.js"></script>
+<script src="https://fonts.googleapis.com/icon?family=Material+Icons"></script>
 <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
-<script src="../javascripts/mathjax.js"></script>
+<script src="../../javascripts/mathjax.js"></script>
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-</body>
+<script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

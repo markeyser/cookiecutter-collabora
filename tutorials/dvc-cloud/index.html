@@ -5,12 +5,12 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="https://llmslab.github.io/cookiecutter-ai-flock/tutorials/hydra-config/" rel="canonical"/>
-<link href="../mkdocs-docs/" rel="prev"/>
-<link href="../gitignore/" rel="next"/>
+<link href="https://llmslab.github.io/cookiecutter-ai-flock/tutorials/dvc-cloud/" rel="canonical"/>
+<link href="../dvc-local/" rel="prev"/>
+<link href="../dvc-collaboration/" rel="next"/>
 <link href="../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.5.3, mkdocs-material-9.5.4" name="generator"/>
-<title>Hydra Configuration - Cookiecutter Ai Flock</title>
+<title>DVC Cloud Storage - Cookiecutter Ai Flock</title>
 <link href="../../assets/stylesheets/main.50c56a3b.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -35,7 +35,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#manage-configuration-files-with-hydra">
+<a class="md-skip" href="#tutorial-managing-cloud-data-updates-with-dvc">
           Skip to content
         </a>
 </div>
@@ -59,7 +59,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Hydra Configuration
+              DVC Cloud Storage
             
           </span>
 </div>
@@ -168,109 +168,12 @@
   </span>
 </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-<span class="md-ellipsis">
-    Hydra Configuration
-  </span>
-<span class="md-nav__icon md-icon"></span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="./">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../hydra-config/">
 <span class="md-ellipsis">
     Hydra Configuration
   </span>
 </a>
-<nav aria-label="On this page" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      On this page
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#introduction-and-motivation">
-<span class="md-ellipsis">
-      Introduction and Motivation
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#using-hydra-in-a-python-script">
-<span class="md-ellipsis">
-      Using Hydra in a Python Script
-    </span>
-</a>
-<nav aria-label="Using Hydra in a Python Script" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#example-configuration-file">
-<span class="md-ellipsis">
-      Example Configuration File
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#example-python-script">
-<span class="md-ellipsis">
-      Example Python Script
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#example-output">
-<span class="md-ellipsis">
-      Example Output
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#using-hydra-in-a-jupyter-notebook">
-<span class="md-ellipsis">
-      Using Hydra in a Jupyter Notebook
-    </span>
-</a>
-<nav aria-label="Using Hydra in a Jupyter Notebook" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#example-jupyter-notebook">
-<span class="md-ellipsis">
-      Example Jupyter Notebook
-    </span>
-</a>
-<nav aria-label="Example Jupyter Notebook" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#output">
-<span class="md-ellipsis">
-      Output:
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#output_1">
-<span class="md-ellipsis">
-      Output:
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#further-reading">
-<span class="md-ellipsis">
-      Further Reading
-    </span>
-</a>
-</li>
-</ul>
-</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../gitignore/">
@@ -300,12 +203,109 @@
   </span>
 </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../dvc-cloud/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    DVC Cloud Storage
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
 <span class="md-ellipsis">
     DVC Cloud Storage
   </span>
 </a>
+<nav aria-label="On this page" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#introduction">
+<span class="md-ellipsis">
+      Introduction
+    </span>
+</a>
+<nav aria-label="Introduction" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#prerequisites">
+<span class="md-ellipsis">
+      Prerequisites
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#scenario-updates-in-cloud-storage">
+<span class="md-ellipsis">
+      Scenario: Updates in Cloud Storage
+    </span>
+</a>
+<nav aria-label="Scenario: Updates in Cloud Storage" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-challenge-of-cloud-data-updates">
+<span class="md-ellipsis">
+      The Challenge of Cloud Data Updates
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#step-by-step-guide-to-syncing-cloud-data">
+<span class="md-ellipsis">
+      Step-by-Step Guide to Syncing Cloud Data
+    </span>
+</a>
+<nav aria-label="Step-by-Step Guide to Syncing Cloud Data" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1-synchronizing-local-and-cloud-states">
+<span class="md-ellipsis">
+      1. Synchronizing Local and Cloud States
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2-local-tracking-of-cloud-updates">
+<span class="md-ellipsis">
+      2. Local Tracking of Cloud Updates
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#understanding-the-process">
+<span class="md-ellipsis">
+      Understanding the Process
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#comparing-with-local-data-handling">
+<span class="md-ellipsis">
+      Comparing with Local Data Handling
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#conclusion">
+<span class="md-ellipsis">
+      Conclusion
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../dvc-collaboration/">
@@ -551,38 +551,17 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#introduction-and-motivation">
+<a class="md-nav__link" href="#introduction">
 <span class="md-ellipsis">
-      Introduction and Motivation
+      Introduction
     </span>
 </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#using-hydra-in-a-python-script">
-<span class="md-ellipsis">
-      Using Hydra in a Python Script
-    </span>
-</a>
-<nav aria-label="Using Hydra in a Python Script" class="md-nav">
+<nav aria-label="Introduction" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#example-configuration-file">
+<a class="md-nav__link" href="#prerequisites">
 <span class="md-ellipsis">
-      Example Configuration File
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#example-python-script">
-<span class="md-ellipsis">
-      Example Python Script
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#example-output">
-<span class="md-ellipsis">
-      Example Output
+      Prerequisites
     </span>
 </a>
 </li>
@@ -590,45 +569,66 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#using-hydra-in-a-jupyter-notebook">
+<a class="md-nav__link" href="#scenario-updates-in-cloud-storage">
 <span class="md-ellipsis">
-      Using Hydra in a Jupyter Notebook
+      Scenario: Updates in Cloud Storage
     </span>
 </a>
-<nav aria-label="Using Hydra in a Jupyter Notebook" class="md-nav">
+<nav aria-label="Scenario: Updates in Cloud Storage" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#example-jupyter-notebook">
+<a class="md-nav__link" href="#the-challenge-of-cloud-data-updates">
 <span class="md-ellipsis">
-      Example Jupyter Notebook
-    </span>
-</a>
-<nav aria-label="Example Jupyter Notebook" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#output">
-<span class="md-ellipsis">
-      Output:
+      The Challenge of Cloud Data Updates
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#output_1">
+<a class="md-nav__link" href="#step-by-step-guide-to-syncing-cloud-data">
 <span class="md-ellipsis">
-      Output:
+      Step-by-Step Guide to Syncing Cloud Data
+    </span>
+</a>
+<nav aria-label="Step-by-Step Guide to Syncing Cloud Data" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1-synchronizing-local-and-cloud-states">
+<span class="md-ellipsis">
+      1. Synchronizing Local and Cloud States
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2-local-tracking-of-cloud-updates">
+<span class="md-ellipsis">
+      2. Local Tracking of Cloud Updates
     </span>
 </a>
 </li>
 </ul>
 </nav>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#understanding-the-process">
+<span class="md-ellipsis">
+      Understanding the Process
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#comparing-with-local-data-handling">
+<span class="md-ellipsis">
+      Comparing with Local Data Handling
+    </span>
+</a>
+</li>
 </ul>
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#further-reading">
+<a class="md-nav__link" href="#conclusion">
 <span class="md-ellipsis">
-      Further Reading
+      Conclusion
     </span>
 </a>
 </li>
@@ -639,124 +639,88 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="manage-configuration-files-with-hydra">Manage Configuration Files with Hydra<a class="headerlink" href="#manage-configuration-files-with-hydra" title="Permanent link">¶</a></h1>
-<h2 id="introduction-and-motivation">Introduction and Motivation<a class="headerlink" href="#introduction-and-motivation" title="Permanent link">¶</a></h2>
-<p>Welcome to this tutorial on Hydra, a Python framework designed for
-elegantly configuring complex applications. If you've ever found
-yourself in a situation where you have a Python script filled with both
-code and configuration parameters, you know how messy it can get.
-Changing a single value often means digging into the source code, making
-it difficult to manage and maintain your application.</p>
-<p>Hydra offers a solution to this problem by separating the code and
-configuration parameters into different files. This separation makes it
-easier to manage complex applications, especially in data science
-projects where configurations can get complicated quickly. With Hydra,
-your Python scripts become cleaner, more modular, and easier to
-understand.</p>
-<p>In this guide, we'll walk you through how to use Hydra in both Python
-scripts and Jupyter notebooks to manage your application's configuration
-elegantly.</p>
-<h2 id="using-hydra-in-a-python-script">Using Hydra in a Python Script<a class="headerlink" href="#using-hydra-in-a-python-script" title="Permanent link">¶</a></h2>
-<p>To use Hydra in a Python script, you need to import the <code>hydra</code> package
-and use the <code>@hydra.main()</code> decorator. This decorator will automatically
-load and validate the configuration file specified.</p>
-<h3 id="example-configuration-file">Example Configuration File<a class="headerlink" href="#example-configuration-file" title="Permanent link">¶</a></h3>
-<p>Create a YAML configuration file named <code>main.yaml</code> inside a folder named
-<code>config</code>:</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1"># config/main.yaml</span>
-<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a>
-<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="nt">db</span><span class="p">:</span>
-<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">  </span><span class="nt">driver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mysql</span>
-<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">  </span><span class="nt">user</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">omry</span>
-<a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">  </span><span class="nt">password</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">secret</span>
-</code></pre></div>
-<h3 id="example-python-script">Example Python Script<a class="headerlink" href="#example-python-script" title="Permanent link">¶</a></h3>
-<p>Here's an example Python script that uses Hydra to read the
-configuration file and perform some actions based on it:</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="kn">from</span> <span class="nn">omegaconf</span> <span class="kn">import</span> <span class="n">DictConfig</span><span class="p">,</span> <span class="n">OmegaConf</span>
-<a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="kn">import</span> <span class="nn">hydra</span>
-<a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a>
-<a href="#__codelineno-1-4" id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="k">def</span> <span class="nf">display_config</span><span class="p">(</span><span class="n">cfg</span><span class="p">:</span> <span class="n">DictConfig</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-<a href="#__codelineno-1-5" id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="w">    </span><span class="sd">"""Display the entire configuration."""</span>
-<a href="#__codelineno-1-6" id="__codelineno-1-6" name="__codelineno-1-6"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">OmegaConf</span><span class="o">.</span><span class="n">to_yaml</span><span class="p">(</span><span class="n">cfg</span><span class="p">))</span>
-<a href="#__codelineno-1-7" id="__codelineno-1-7" name="__codelineno-1-7"></a>
-<a href="#__codelineno-1-8" id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="k">def</span> <span class="nf">display_driver</span><span class="p">(</span><span class="n">cfg</span><span class="p">:</span> <span class="n">DictConfig</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-<a href="#__codelineno-1-9" id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="w">    </span><span class="sd">"""Display the database driver."""</span>
-<a href="#__codelineno-1-10" id="__codelineno-1-10" name="__codelineno-1-10"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Database driver is: </span><span class="si">{</span><span class="n">cfg</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">driver</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
-<a href="#__codelineno-1-11" id="__codelineno-1-11" name="__codelineno-1-11"></a>
-<a href="#__codelineno-1-12" id="__codelineno-1-12" name="__codelineno-1-12"></a><span class="nd">@hydra</span><span class="o">.</span><span class="n">main</span><span class="p">(</span><span class="n">version_base</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">config_path</span><span class="o">=</span><span class="s2">"../../config"</span><span class="p">,</span> <span class="n">config_name</span><span class="o">=</span><span class="s2">"main"</span><span class="p">)</span>
-<a href="#__codelineno-1-13" id="__codelineno-1-13" name="__codelineno-1-13"></a><span class="k">def</span> <span class="nf">my_app</span><span class="p">(</span><span class="n">cfg</span><span class="p">:</span> <span class="n">DictConfig</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-<a href="#__codelineno-1-14" id="__codelineno-1-14" name="__codelineno-1-14"></a>    <span class="n">display_config</span><span class="p">(</span><span class="n">cfg</span><span class="p">)</span>
-<a href="#__codelineno-1-15" id="__codelineno-1-15" name="__codelineno-1-15"></a>    <span class="n">display_driver</span><span class="p">(</span><span class="n">cfg</span><span class="p">)</span>
-<a href="#__codelineno-1-16" id="__codelineno-1-16" name="__codelineno-1-16"></a>
-<a href="#__codelineno-1-17" id="__codelineno-1-17" name="__codelineno-1-17"></a>    <span class="c1"># Get the SQL driver from the config</span>
-<a href="#__codelineno-1-18" id="__codelineno-1-18" name="__codelineno-1-18"></a>    <span class="n">sql_driver</span> <span class="o">=</span> <span class="n">cfg</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">driver</span>
-<a href="#__codelineno-1-19" id="__codelineno-1-19" name="__codelineno-1-19"></a>
-<a href="#__codelineno-1-20" id="__codelineno-1-20" name="__codelineno-1-20"></a>    <span class="c1"># Now you can use sql_driver in your code</span>
-<a href="#__codelineno-1-21" id="__codelineno-1-21" name="__codelineno-1-21"></a>    <span class="c1"># For example, you might pass it to a function that initializes a</span>
-<a href="#__codelineno-1-22" id="__codelineno-1-22" name="__codelineno-1-22"></a>    <span class="c1"># database connection</span>
-<a href="#__codelineno-1-23" id="__codelineno-1-23" name="__codelineno-1-23"></a>    <span class="n">initialize_database</span><span class="p">(</span><span class="n">sql_driver</span><span class="p">)</span>
-<a href="#__codelineno-1-24" id="__codelineno-1-24" name="__codelineno-1-24"></a>
-<a href="#__codelineno-1-25" id="__codelineno-1-25" name="__codelineno-1-25"></a><span class="k">def</span> <span class="nf">initialize_database</span><span class="p">(</span><span class="n">driver</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-<a href="#__codelineno-1-26" id="__codelineno-1-26" name="__codelineno-1-26"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Initializing database with driver: </span><span class="si">{</span><span class="n">driver</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
-<a href="#__codelineno-1-27" id="__codelineno-1-27" name="__codelineno-1-27"></a>    <span class="c1"># Your database initialization code here</span>
-<a href="#__codelineno-1-28" id="__codelineno-1-28" name="__codelineno-1-28"></a>
-<a href="#__codelineno-1-29" id="__codelineno-1-29" name="__codelineno-1-29"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">"__main__"</span><span class="p">:</span>
-<a href="#__codelineno-1-30" id="__codelineno-1-30" name="__codelineno-1-30"></a>    <span class="n">my_app</span><span class="p">()</span>
-</code></pre></div>
-<h3 id="example-output">Example Output<a class="headerlink" href="#example-output" title="Permanent link">¶</a></h3>
-<p>When you run the script, you should see output similar to the following:</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a>db:
-<a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a>  driver: mysql
-<a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a>  user: omry
-<a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a>  password: secret
-<a href="#__codelineno-2-5" id="__codelineno-2-5" name="__codelineno-2-5"></a>
-<a href="#__codelineno-2-6" id="__codelineno-2-6" name="__codelineno-2-6"></a>Database driver is: mysql
-<a href="#__codelineno-2-7" id="__codelineno-2-7" name="__codelineno-2-7"></a>Initializing database with driver: mysql
-</code></pre></div>
-<h2 id="using-hydra-in-a-jupyter-notebook">Using Hydra in a Jupyter Notebook<a class="headerlink" href="#using-hydra-in-a-jupyter-notebook" title="Permanent link">¶</a></h2>
-<p>To use Hydra in a Jupyter notebook, you can import the <code>omegaconf</code>
-package and manually load the configuration file using the
-<code>OmegaConf.load()</code> function.</p>
-<h3 id="example-jupyter-notebook">Example Jupyter Notebook<a class="headerlink" href="#example-jupyter-notebook" title="Permanent link">¶</a></h3>
-<p>Here's how you can read the same configuration file in a Jupyter
-notebook:</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="c1"># notebooks/app.ipynb</span>
-<a href="#__codelineno-3-2" id="__codelineno-3-2" name="__codelineno-3-2"></a>
-<a href="#__codelineno-3-3" id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="kn">import</span> <span class="nn">omegaconf</span>
-<a href="#__codelineno-3-4" id="__codelineno-3-4" name="__codelineno-3-4"></a>
-<a href="#__codelineno-3-5" id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="c1"># Load the config file</span>
-<a href="#__codelineno-3-6" id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="n">config</span> <span class="o">=</span> <span class="n">omegaconf</span><span class="o">.</span><span class="n">OmegaConf</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s2">"../config/main.yaml"</span><span class="p">)</span>
-<a href="#__codelineno-3-7" id="__codelineno-3-7" name="__codelineno-3-7"></a>
-<a href="#__codelineno-3-8" id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="c1"># Print the config</span>
-<a href="#__codelineno-3-9" id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="nb">print</span><span class="p">(</span><span class="n">config</span><span class="p">)</span>
-</code></pre></div>
-<h4 id="output">Output:<a class="headerlink" href="#output" title="Permanent link">¶</a></h4>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a>{'db': {'driver': 'mysql', 'user': 'omry', 'password': 'secret'}}
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="n">driver</span> <span class="o">=</span> <span class="n">config</span><span class="p">[</span><span class="s1">'db'</span><span class="p">][</span><span class="s1">'driver'</span><span class="p">]</span>
-<a href="#__codelineno-5-2" id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="nb">print</span><span class="p">(</span><span class="n">driver</span><span class="p">)</span>
-</code></pre></div>
-<h4 id="output_1">Output:<a class="headerlink" href="#output_1" title="Permanent link">¶</a></h4>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a>mysql
-</code></pre></div>
-<p>This guide should give you a good starting point for managing complex
-configurations in Python using Hydra. Whether you're working in a Python
-script or a Jupyter notebook, Hydra and OmegaConf offer powerful tools
-for this task.</p>
-<h2 id="further-reading">Further Reading<a class="headerlink" href="#further-reading" title="Permanent link">¶</a></h2>
-<p>For more information on Hydra and its capabilities, you can refer to the
-following resources:</p>
+<h1 id="tutorial-managing-cloud-data-updates-with-dvc">Tutorial: Managing Cloud Data Updates with DVC<a class="headerlink" href="#tutorial-managing-cloud-data-updates-with-dvc" title="Permanent link">¶</a></h1>
+<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">¶</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Learning Objectives</p>
+<p>Learn to manage and sync data updates in the cloud using Data Version Control (DVC). This tutorial is ideal for scenarios involving direct data updates in cloud storage services like AWS S3 or Azure Blob Storage.</p>
+</div>
+<h3 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">¶</a></h3>
 <ul>
-<li><a href="https://hydra.cc/docs/intro">Hydra Official Documentation</a></li>
-<li><a href="https://omegaconf.readthedocs.io/en/latest/">OmegaConf Documentation</a></li>
+<li><span class="twemoji"><svg viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 1.75v11.5c0 .138.112.25.25.25h3.17a.75.75 0 0 1 0 1.5H2.75A1.75 1.75 0 0 1 1 13.25V1.75C1 .784 1.784 0 2.75 0h8.5C12.216 0 13 .784 13 1.75v7.736a.75.75 0 0 1-1.5 0V1.75a.25.25 0 0 0-.25-.25h-8.5a.25.25 0 0 0-.25.25Zm13.274 9.537v-.001l-4.557 4.45a.75.75 0 0 1-1.055-.008l-1.943-1.95a.75.75 0 0 1 1.062-1.058l1.419 1.425 4.026-3.932a.75.75 0 1 1 1.048 1.074ZM4.75 4h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1 0-1.5ZM4 7.75A.75.75 0 0 1 4.75 7h2a.75.75 0 0 1 0 1.5h-2A.75.75 0 0 1 4 7.75Z"></path></svg></span> Familiarity with DVC and cloud storage.</li>
+<li><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12.876.64V.639l8.25 4.763c.541.313.875.89.875 1.515v9.525a1.75 1.75 0 0 1-.875 1.516l-8.25 4.762a1.748 1.748 0 0 1-1.75 0l-8.25-4.763a1.75 1.75 0 0 1-.875-1.515V6.917c0-.625.334-1.202.875-1.515L11.126.64a1.748 1.748 0 0 1 1.75 0Zm-1 1.298L4.251 6.34l7.75 4.474 7.75-4.474-7.625-4.402a.248.248 0 0 0-.25 0Zm.875 19.123 7.625-4.402a.25.25 0 0 0 .125-.216V7.639l-7.75 4.474ZM3.501 7.64v8.803c0 .09.048.172.125.216l7.625 4.402v-8.947Z"></path></svg></span> DVC setup for your cloud storage service.</li>
 </ul>
+<h2 id="scenario-updates-in-cloud-storage">Scenario: Updates in Cloud Storage<a class="headerlink" href="#scenario-updates-in-cloud-storage" title="Permanent link">¶</a></h2>
+<p>Consider a situation where your dataset in a cloud storage service is
+updated directly in the cloud, without involving your local machine.</p>
+<h3 id="the-challenge-of-cloud-data-updates">The Challenge of Cloud Data Updates<a class="headerlink" href="#the-challenge-of-cloud-data-updates" title="Permanent link">¶</a></h3>
+<ol>
+<li><strong>Local vs. Cloud State</strong>:</li>
+<li>DVC's limitation in automatically detecting cloud changes.</li>
+<li>The need for manual synchronization between local and cloud states.</li>
+</ol>
+<h3 id="step-by-step-guide-to-syncing-cloud-data">Step-by-Step Guide to Syncing Cloud Data<a class="headerlink" href="#step-by-step-guide-to-syncing-cloud-data" title="Permanent link">¶</a></h3>
+<h4 id="1-synchronizing-local-and-cloud-states">1. Synchronizing Local and Cloud States<a class="headerlink" href="#1-synchronizing-local-and-cloud-states" title="Permanent link">¶</a></h4>
+<div class="admonition tip">
+<p class="admonition-title">Syncing with DVC Pull</p>
+<p>Run <code>dvc pull</code> to fetch and update your local workspace with the latest file versions from the cloud storage.</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>dvc<span class="w"> </span>pull
+</code></pre></div>
+<p>DVC will compare and download any updated files based on checksum differences.</p>
+</div>
+<h4 id="2-local-tracking-of-cloud-updates">2. Local Tracking of Cloud Updates<a class="headerlink" href="#2-local-tracking-of-cloud-updates" title="Permanent link">¶</a></h4>
+<ol>
+<li><strong>Pull Updated Data</strong>:</li>
+<li>
+<p>Ensure your local workspace reflects the latest cloud version.</p>
+</li>
+<li>
+<p><strong>Track and Commit Changes Locally</strong>:</p>
+</li>
+<li>
+<p>Version the cloud updates using DVC and Git.</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a>dvc<span class="w"> </span>add<span class="w"> </span>dataset.csv
+<a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a>git<span class="w"> </span>add<span class="w"> </span>dataset.csv.dvc
+<a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">"Update dataset.csv with cloud changes"</span>
+</code></pre></div>
+</li>
+<li>
+<p><strong>Push Local Changes to Remote Storage</strong>:</p>
+</li>
+<li>
+<p>Sync any additional local changes or <code>.dvc</code> files to the cloud.</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a>dvc<span class="w"> </span>push
+</code></pre></div>
+</li>
+</ol>
+<h3 id="understanding-the-process">Understanding the Process<a class="headerlink" href="#understanding-the-process" title="Permanent link">¶</a></h3>
+<div class="admonition check-circle">
+<p class="admonition-title">Purpose of Cloud Data Syncing</p>
+<ul>
+<li><strong>Consistency and Reproducibility</strong>: Tracks and versions changes even in cloud storage.</li>
+<li><strong>Collaborative Work</strong>: Ensures all team members have the latest data version.</li>
+<li><strong>Version Control Integration</strong>: Combines DVC with cloud storage for effective data management.</li>
+</ul>
+</div>
+<h3 id="comparing-with-local-data-handling">Comparing with Local Data Handling<a class="headerlink" href="#comparing-with-local-data-handling" title="Permanent link">¶</a></h3>
+<div class="admonition warning">
+<p class="admonition-title">Key Differences from Local Data</p>
+<ul>
+<li><strong>Manual Synchronization</strong>: Active steps are required to align cloud and local data states.</li>
+<li><strong>Local Tracking of Cloud Changes</strong>: Crucial for comprehensive version control and historical tracking.</li>
+</ul>
+</div>
+<h2 id="conclusion">Conclusion<a class="headerlink" href="#conclusion" title="Permanent link">¶</a></h2>
+<div class="admonition success">
+<p class="admonition-title">Key Takeaways</p>
+<p>Cloud data updates with DVC introduce a necessary step of manual synchronization. This tutorial equips you with the knowledge to ensure your data management practices are consistent, transparent, and collaborative, irrespective of where the data is stored or updated.</p>
+</div>
 <aside class="md-source-file">
 <span class="md-source-file__fact">
 <span class="md-icon" title="Last update">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 23, 2023</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 29, 2024</span>
 </span>
 </aside>
 </article>

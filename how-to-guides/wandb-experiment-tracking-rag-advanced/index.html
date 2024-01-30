@@ -5,12 +5,12 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="https://llmslab.github.io/cookiecutter-ai-flock/how-to-guides/offline-cookiecutter-setup/" rel="canonical"/>
-<link href="../dvc-vscode-extension/" rel="prev"/>
-<link href="../git-branch-naming-standards/" rel="next"/>
+<link href="https://llmslab.github.io/cookiecutter-ai-flock/how-to-guides/wandb-experiment-tracking-rag-advanced/" rel="canonical"/>
+<link href="../wandb-experiment-tracking-rag/" rel="prev"/>
+<link href="../../explanation/toc-explanation/" rel="next"/>
 <link href="../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.5.3, mkdocs-material-9.5.4" name="generator"/>
-<title>Offline Cookiecutter Setup - Cookiecutter Ai Flock</title>
+<title>Advanced Practices for Experiment Tracking in RAG Projects With Weights &amp; Biases - Cookiecutter Ai Flock</title>
 <link href="../../assets/stylesheets/main.50c56a3b.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -35,7 +35,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#using-cookiecutter-without-direct-github-command">
+<a class="md-skip" href="#advanced-practices-for-experiment-tracking-and-integration-in-rag-projects-using-weights-biases">
           Skip to content
         </a>
 </div>
@@ -59,7 +59,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Offline Cookiecutter Setup
+              Advanced Practices for Experiment Tracking in RAG Projects With Weights &amp; Biases
             
           </span>
 </div>
@@ -283,73 +283,12 @@
   </span>
 </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-<span class="md-ellipsis">
-    Offline Cookiecutter Setup
-  </span>
-<span class="md-nav__icon md-icon"></span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="./">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../offline-cookiecutter-setup/">
 <span class="md-ellipsis">
     Offline Cookiecutter Setup
   </span>
 </a>
-<nav aria-label="On this page" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      On this page
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#prerequisites">
-<span class="md-ellipsis">
-      Prerequisites
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#steps">
-<span class="md-ellipsis">
-      Steps
-    </span>
-</a>
-<nav aria-label="Steps" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#1-downloading-the-cookiecutter-template">
-<span class="md-ellipsis">
-      1. Downloading the Cookiecutter Template
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#2-setting-up-your-environment">
-<span class="md-ellipsis">
-      2. Setting Up Your Environment
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#3-creating-your-project">
-<span class="md-ellipsis">
-      3. Creating Your Project
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#4-finalizing-the-project">
-<span class="md-ellipsis">
-      4. Finalizing the Project
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-</ul>
-</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../git-branch-naming-standards/">
@@ -400,12 +339,83 @@
   </span>
 </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../wandb-experiment-tracking-rag-advanced/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    Advanced Practices for Experiment Tracking in RAG Projects With Weights &amp; Biases
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
 <span class="md-ellipsis">
     Advanced Practices for Experiment Tracking in RAG Projects With Weights &amp; Biases
   </span>
 </a>
+<nav aria-label="On this page" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#advanced-branch-management-and-transition">
+<span class="md-ellipsis">
+      Advanced Branch Management and Transition
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#implementing-automated-and-consistent-experiment-tracking">
+<span class="md-ellipsis">
+      Implementing Automated and Consistent Experiment Tracking
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#detailed-experiment-tagging-and-parameter-logging">
+<span class="md-ellipsis">
+      Detailed Experiment Tagging and Parameter Logging
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#leveraging-wbs-advanced-tools-for-analysis-and-collaboration">
+<span class="md-ellipsis">
+      Leveraging W&amp;B’s Advanced Tools for Analysis and Collaboration
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#code-repository-and-version-control-best-practices">
+<span class="md-ellipsis">
+      Code Repository and Version Control Best Practices
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#merging-and-integrating-into-production">
+<span class="md-ellipsis">
+      Merging and Integrating into Production
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#post-merge-validation-and-monitoring">
+<span class="md-ellipsis">
+      Post-Merge Validation and Monitoring
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#conclusion">
+<span class="md-ellipsis">
+      Conclusion
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -515,50 +525,60 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#prerequisites">
+<a class="md-nav__link" href="#advanced-branch-management-and-transition">
 <span class="md-ellipsis">
-      Prerequisites
+      Advanced Branch Management and Transition
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#steps">
+<a class="md-nav__link" href="#implementing-automated-and-consistent-experiment-tracking">
 <span class="md-ellipsis">
-      Steps
-    </span>
-</a>
-<nav aria-label="Steps" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#1-downloading-the-cookiecutter-template">
-<span class="md-ellipsis">
-      1. Downloading the Cookiecutter Template
+      Implementing Automated and Consistent Experiment Tracking
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#2-setting-up-your-environment">
+<a class="md-nav__link" href="#detailed-experiment-tagging-and-parameter-logging">
 <span class="md-ellipsis">
-      2. Setting Up Your Environment
+      Detailed Experiment Tagging and Parameter Logging
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#3-creating-your-project">
+<a class="md-nav__link" href="#leveraging-wbs-advanced-tools-for-analysis-and-collaboration">
 <span class="md-ellipsis">
-      3. Creating Your Project
+      Leveraging W&amp;B’s Advanced Tools for Analysis and Collaboration
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#4-finalizing-the-project">
+<a class="md-nav__link" href="#code-repository-and-version-control-best-practices">
 <span class="md-ellipsis">
-      4. Finalizing the Project
+      Code Repository and Version Control Best Practices
     </span>
 </a>
 </li>
-</ul>
-</nav>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#merging-and-integrating-into-production">
+<span class="md-ellipsis">
+      Merging and Integrating into Production
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#post-merge-validation-and-monitoring">
+<span class="md-ellipsis">
+      Post-Merge Validation and Monitoring
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#conclusion">
+<span class="md-ellipsis">
+      Conclusion
+    </span>
+</a>
 </li>
 </ul>
 </nav>
@@ -567,59 +587,80 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="using-cookiecutter-without-direct-github-command">Using Cookiecutter Without Direct GitHub Command<a class="headerlink" href="#using-cookiecutter-without-direct-github-command" title="Permanent link">¶</a></h1>
+<h1 id="advanced-practices-for-experiment-tracking-and-integration-in-rag-projects-using-weights-biases">Advanced Practices for Experiment Tracking and Integration in RAG Projects Using Weights &amp; Biases<a class="headerlink" href="#advanced-practices-for-experiment-tracking-and-integration-in-rag-projects-using-weights-biases" title="Permanent link">¶</a></h1>
+<div class="admonition note">
+<p class="admonition-title">Introduction</p>
+<p>This guide focuses on advanced practices for tracking, analyzing, and integrating experiments in RAG projects using Weights &amp; Biases (W&amp;B).</p>
+</div>
+<h2 id="advanced-branch-management-and-transition">Advanced Branch Management and Transition<a class="headerlink" href="#advanced-branch-management-and-transition" title="Permanent link">¶</a></h2>
 <div class="admonition tip">
-<p class="admonition-title">Goal</p>
-<p>Learn how to manually download and use a Cookiecutter template from GitHub when direct command line access to GitHub (<code>cookiecutter gh:...</code>) is not available.</p>
+<p class="admonition-title">Efficient Branch Transition</p>
+<p>Before moving to a new branch, ensure all experimental data is logged in W&amp;B and all changes are committed to Git.</p>
 </div>
-<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">¶</a></h2>
-<ul>
-<li>Basic understanding of command line operations.</li>
-<li>Python and pip installed on your system.</li>
-<li>Access to GitHub through a web browser.</li>
-</ul>
-<h2 id="steps">Steps<a class="headerlink" href="#steps" title="Permanent link">¶</a></h2>
-<h3 id="1-downloading-the-cookiecutter-template">1. Downloading the Cookiecutter Template<a class="headerlink" href="#1-downloading-the-cookiecutter-template" title="Permanent link">¶</a></h3>
-<details class="note" open="open">
-<summary>Find and Download the Repository</summary>
-<ul>
-<li><strong>Find the Repository:</strong> Visit the GitHub page of the desired Cookiecutter template, e.g., <code>LLMsLab/cookiecutter-ai-flock</code>.</li>
-<li><strong>Download the Repository:</strong> Click on the 'Code' button, select 'Download ZIP', save, and extract it to a known location on your computer.</li>
-</ul>
-</details>
-<h3 id="2-setting-up-your-environment">2. Setting Up Your Environment<a class="headerlink" href="#2-setting-up-your-environment" title="Permanent link">¶</a></h3>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1"># Install Cookiecutter if not already installed</span>
-<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a>pip<span class="w"> </span>install<span class="w"> </span>cookiecutter
-<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a>
-<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="c1"># Navigate to your desired project directory</span>
-<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="nb">cd</span><span class="w"> </span>path/to/your/Projects
-</code></pre></div>
+<ol>
+<li><strong>Review and Sync</strong>: Commit and push any changes to the Git repository before switching branches.</li>
+<li><strong>Clear Transition Protocols</strong>: Define standard procedures for transitioning between branches.</li>
+</ol>
+<h2 id="implementing-automated-and-consistent-experiment-tracking">Implementing Automated and Consistent Experiment Tracking<a class="headerlink" href="#implementing-automated-and-consistent-experiment-tracking" title="Permanent link">¶</a></h2>
+<ol>
+<li><strong>Automated Logging</strong>:
+   Set up automated logging for experiment metrics and parameters.
+   <div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1"># Example of automated logging</span>
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="n">wandb</span><span class="o">.</span><span class="n">log</span><span class="p">({</span><span class="s2">"accuracy"</span><span class="p">:</span> <span class="n">accuracy_score</span><span class="p">,</span> <span class="s2">"loss"</span><span class="p">:</span> <span class="n">loss_value</span><span class="p">})</span>
+</code></pre></div></li>
+<li><strong>Unified Data Visualization</strong>:
+   Use W&amp;B dashboards for visualizing and comparing experiment data.</li>
+</ol>
+<h2 id="detailed-experiment-tagging-and-parameter-logging">Detailed Experiment Tagging and Parameter Logging<a class="headerlink" href="#detailed-experiment-tagging-and-parameter-logging" title="Permanent link">¶</a></h2>
+<ol>
+<li><strong>Detailed Tagging</strong>:
+   Utilize specific tags for each run in W&amp;B, including retriever type and experiment parameters.</li>
+<li><strong>Comprehensive Parameter Logging</strong>:
+   Record both primary and secondary experiment settings.</li>
+</ol>
+<h2 id="leveraging-wbs-advanced-tools-for-analysis-and-collaboration">Leveraging W&amp;B’s Advanced Tools for Analysis and Collaboration<a class="headerlink" href="#leveraging-wbs-advanced-tools-for-analysis-and-collaboration" title="Permanent link">¶</a></h2>
+<div class="admonition success">
+<p class="admonition-title">Enhanced Collaboration and Analysis</p>
+<p>Use W&amp;B’s advanced comparison and collaboration features to analyze experiment performance and share insights.</p>
+</div>
+<ol>
+<li><strong>Advanced Comparison Tools</strong>:
+   Employ W&amp;B’s tools to compare different models and configurations.</li>
+<li><strong>Result Sharing</strong>:
+   Share experiment results with team members using W&amp;B’s features.</li>
+</ol>
+<h2 id="code-repository-and-version-control-best-practices">Code Repository and Version Control Best Practices<a class="headerlink" href="#code-repository-and-version-control-best-practices" title="Permanent link">¶</a></h2>
+<ol>
+<li><strong>Branch Documentation</strong>:
+   Maintain clear documentation for each branch.</li>
+<li><strong>Version Control Practices</strong>:
+   Commit frequently with descriptive messages and keep branches updated.</li>
+</ol>
+<h2 id="merging-and-integrating-into-production">Merging and Integrating into Production<a class="headerlink" href="#merging-and-integrating-into-production" title="Permanent link">¶</a></h2>
 <div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Replace <code>path/to/your/Projects</code> with the actual path where you want to create your project.</p>
+<p class="admonition-title">Selective Merging Protocol</p>
+<p>Establish criteria for merging the best experiment versions into production.</p>
 </div>
-<h3 id="3-creating-your-project">3. Creating Your Project<a class="headerlink" href="#3-creating-your-project" title="Permanent link">¶</a></h3>
-<details class="success" open="open">
-<summary>Run Cookiecutter and Input Project Details</summary>
-<p>Run Cookiecutter and provide the path to the unzipped template folder:</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a>cookiecutter<span class="w"> </span>path/to/unzipped/cookiecutter-ai-flock
-</code></pre></div>
-<p>Replace <code>path/to/unzipped/cookiecutter-ai-flock</code> with the actual path to the unzipped template. Follow the prompts to input details for your new project.</p>
-</details>
-<h3 id="4-finalizing-the-project">4. Finalizing the Project<a class="headerlink" href="#4-finalizing-the-project" title="Permanent link">¶</a></h3>
-<p>After running the command, a new directory with your project name will
-be created. Navigate to this directory to perform any additional setup
-required by the template.</p>
-<div class="admonition check">
-<p class="admonition-title">Conclusion</p>
-<p>You've successfully used a Cookiecutter template without direct GitHub command line integration. This approach is useful in environments with restricted internet access or limitations in using GitHub tools directly.</p>
-</div>
+<ol>
+<li><strong>Rigorous Code Reviews</strong>: Ensure code quality before merging.</li>
+<li><strong>CI/CD Integration</strong>:
+   Use CI/CD pipelines for testing and deployment.</li>
+</ol>
+<h2 id="post-merge-validation-and-monitoring">Post-Merge Validation and Monitoring<a class="headerlink" href="#post-merge-validation-and-monitoring" title="Permanent link">¶</a></h2>
+<ol>
+<li><strong>Validation After Merging</strong>:
+   Conduct thorough testing in a staging environment.</li>
+<li><strong>Performance Monitoring</strong>:
+   Continuously monitor performance in the production environment.</li>
+</ol>
+<h2 id="conclusion">Conclusion<a class="headerlink" href="#conclusion" title="Permanent link">¶</a></h2>
+<p>By implementing these advanced practices, teams can enhance the efficiency and effectiveness of their ML experiments in RAG projects. These steps ensure precision in tracking and smooth integration of successful models into production.</p>
 <aside class="md-source-file">
 <span class="md-source-file__fact">
 <span class="md-icon" title="Last update">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 26, 2024</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 30, 2024</span>
 </span>
 </aside>
 </article>

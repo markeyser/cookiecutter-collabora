@@ -6,11 +6,11 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <link href="https://llmslab.github.io/cookiecutter-ai-flock/tutorials/naming-conventions/" rel="canonical"/>
-<link href="../data-version-control/" rel="prev"/>
+<link href="../dvc-collaboration/" rel="prev"/>
 <link href="../windows-os-setup/" rel="next"/>
 <link href="../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.5.3, mkdocs-material-9.5.4" name="generator"/>
-<title>Naming Convetions - Cookiecutter Ai Flock</title>
+<title>Naming Conventions Tutorial - Cookiecutter Ai Flock</title>
 <link href="../../assets/stylesheets/main.50c56a3b.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -18,8 +18,18 @@
 <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
 <link href="../../assets/_mkdocstrings.css" rel="stylesheet"/>
 <link href="../../stylesheets/extra.css" rel="stylesheet"/>
+<link href="../../assets/css/custom.css" rel="stylesheet"/>
 <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
-</head>
+ <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
 <body data-md-color-accent="indigo" data-md-color-primary="indigo" data-md-color-scheme="slate" dir="ltr">
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
@@ -49,7 +59,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Naming Convetions
+              Naming Conventions Tutorial
             
           </span>
 </div>
@@ -124,7 +134,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../turorials-intro/">
+<a class="md-nav__link" href="../toc-tutorials/">
 <span class="md-ellipsis">
     TOC
   </span>
@@ -133,56 +143,77 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../black-formatter/">
 <span class="md-ellipsis">
-    Black
+    Black Formatter
   </span>
 </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../ruff-linter/">
 <span class="md-ellipsis">
-    Ruff
+    Ruff Linter
   </span>
 </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../poetry/">
 <span class="md-ellipsis">
-    Poetry
+    Poetry Package Management
   </span>
 </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../mkdocs-docs/">
 <span class="md-ellipsis">
-    MkDocs
+    MkDocs Documentation
   </span>
 </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../hydra-config/">
 <span class="md-ellipsis">
-    Hydra
+    Hydra Configuration
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../gitignore.md">
+<a class="md-nav__link" href="../gitignore/">
 <span class="md-ellipsis">
-    Gitignore
+    Gitignore File Creation
   </span>
 </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../data/">
 <span class="md-ellipsis">
-    Data
+    Managing Data
   </span>
 </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../data-version-control/">
 <span class="md-ellipsis">
-    DVC
+    Data Version Control
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../dvc-local/">
+<span class="md-ellipsis">
+    DVC Local Workflow
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../dvc-cloud/">
+<span class="md-ellipsis">
+    DVC Cloud Storage
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../dvc-collaboration/">
+<span class="md-ellipsis">
+    DVC for Collaboration
   </span>
 </a>
 </li>
@@ -190,13 +221,13 @@
 <input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
 <label class="md-nav__link md-nav__link--active" for="__toc">
 <span class="md-ellipsis">
-    Naming Convetions
+    Naming Conventions Tutorial
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
 <a class="md-nav__link md-nav__link--active" href="./">
 <span class="md-ellipsis">
-    Naming Convetions
+    Naming Conventions Tutorial
   </span>
 </a>
 <nav aria-label="On this page" class="md-nav md-nav--secondary">
@@ -680,7 +711,14 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../windows-os-setup/">
 <span class="md-ellipsis">
-    Windows OS
+    Windows OS Setup
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../markdown-ml-model-documentation/">
+<span class="md-ellipsis">
+    Markdown Documentation for ML Models
   </span>
 </a>
 </li>
@@ -702,9 +740,30 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../how-to-guides/how-to-guides-intro/">
+<a class="md-nav__link" href="../../how-to-guides/toc-how-to-guides/">
 <span class="md-ellipsis">
     TOC
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../how-to-guides/dvc-set-up/">
+<span class="md-ellipsis">
+    DVC Setup
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../how-to-guides/dvc-communication/">
+<span class="md-ellipsis">
+    DVC Communication
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../how-to-guides/dvc-vscode-extension/">
+<span class="md-ellipsis">
+    DVC VS Code Extension
   </span>
 </a>
 </li>
@@ -715,22 +774,154 @@
   </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../how-to-guides/git-branch-naming-standards/">
+<span class="md-ellipsis">
+    Git Branch Naming Standards
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../how-to-guides/commit-message-standards-ml/">
+<span class="md-ellipsis">
+    Commit Message Standards in ML Projects
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../how-to-guides/ml-data-folder-naming/">
+<span class="md-ellipsis">
+    ML Data Folder Naming Guide
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../how-to-guides/ml-data-naming-conventions/">
+<span class="md-ellipsis">
+    Data Files Naming Conventions
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../how-to-guides/machine-learning-metadata-automation/">
+<span class="md-ellipsis">
+    Automating Metadata Creation
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../how-to-guides/github-actions-naming-convention/">
+<span class="md-ellipsis">
+    Enforcing Naming Conventions with GitHub Actions
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../how-to-guides/wandb-experiment-tracking-rag/">
+<span class="md-ellipsis">
+    Best Practices for Experiment Tracking in RAG Projects Using Weights &amp; Biases
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../how-to-guides/wandb-experiment-tracking-rag-advanced/">
+<span class="md-ellipsis">
+    Advanced Practices for Experiment Tracking in RAG Projects With Weights &amp; Biases
+  </span>
+</a>
+</li>
 </ul>
 </nav>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../api-reference/">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
 <span class="md-ellipsis">
-    API Reference
+    Explanation
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+            Explanation
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../explanation/toc-explanation/">
+<span class="md-ellipsis">
+    TOC
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../explanation/">
+<a class="md-nav__link" href="../../explanation/dvc-understanding-dvs/">
 <span class="md-ellipsis">
-    Explanation
+    Understanding DVC
   </span>
 </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../explanation/dvc-git-branches/">
+<span class="md-ellipsis">
+    Git Branches in DVC
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../explanation/github-naming-conventions/">
+<span class="md-ellipsis">
+    Effective GitHub Naming Conventions
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../explanation/ml-naming-conventions/">
+<span class="md-ellipsis">
+    Notebook and Script Naming Conventions in ML Projects
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../explanation/model-persistence-naming-conventions/">
+<span class="md-ellipsis">
+    Model Persistence File Naming Conventions
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../explanation/naming-conventions/">
+<span class="md-ellipsis">
+    Introduction to Naming Conventions for AI Project Assets
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+<span class="md-ellipsis">
+    API Reference
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_5_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+            API Reference
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../api-reference/toc-api-reference/">
+<span class="md-ellipsis">
+    TOC
+  </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -2494,9 +2685,10 @@ Do not use `/` or `-`
 </div>
 <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.annotate"], "search": "../../assets/javascripts/workers/search.c011b7c0.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
 <script src="../../assets/javascripts/bundle.7389ff0e.min.js"></script>
+<script src="https://fonts.googleapis.com/icon?family=Material+Icons"></script>
 <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
 <script src="../../javascripts/mathjax.js"></script>
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-</body>
+<script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>
