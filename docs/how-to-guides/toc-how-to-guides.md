@@ -21,6 +21,8 @@
 - [Automating the Creation of Metadata for Machine Learning Models](./machine-learning-metadata-automation.md)
 - [Implementing GitHub Actions to Enforce Naming Conventions](./github-actions-naming-convention.md)
 - [Using Cookiecutter for Project Setup Without Internet Access](./offline-cookiecutter-setup.md)
+- [Best Practices for Experiment Tracking in RAG Projects Using Weights & Biases](./wandb-experiment-tracking-rag.md)
+- [Advanced Practices for Experiment Tracking in RAG Projects Using Weights & Biases](./wandb-experiment-tracking-rag-advanced.md)
 
 !!! check "Optimizing Your Workflow"
     These guides are intentionally designed to function independently, providing the flexibility to directly engage with topics pertinent to your immediate challenges. As a compendium of efficient, practical solutions, they are an excellent resource for enhancing productivity and mastering various development tasks.

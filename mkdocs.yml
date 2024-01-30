@@ -114,6 +114,8 @@ nav:
       - Data Files Naming Conventions: how-to-guides/ml-data-naming-conventions.md
       - Automating Metadata Creation: how-to-guides/machine-learning-metadata-automation.md
       - Enforcing Naming Conventions with GitHub Actions: how-to-guides/github-actions-naming-convention.md
+      - Best Practices for Experiment Tracking in RAG Projects Using Weights & Biases: how-to-guides/wandb-experiment-tracking-rag.md
+      - Advanced Practices for Experiment Tracking in RAG Projects With Weights & Biases: how-to-guides/wandb-experiment-tracking-rag-advanced.md
   - Explanation:
       - TOC: explanation/toc-explanation.md
       - Understanding DVC: explanation/dvc-understanding-dvs.md

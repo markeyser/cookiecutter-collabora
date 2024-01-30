@@ -76,6 +76,9 @@ framework](https://diataxis.fr/).
     - :octicons-tools-16: [Metadata Integration in Data Analysis](how-to-guides/metadata-integration-data-analysis.md) - A practical guide on integrating metadata with data analysis tools, detailing steps, strategies, and an example Python script for effective collaboration.
     - :octicons-sync-16: [Creating and Managing Metadata and Documentation](tutorials/creating-managing-metadata-documentation.md) - An in-depth tutorial on crafting effective metadata and maintaining thorough data documentation, complete with steps, examples, and best practices.
 
+??? custom "Weights & Biases Experiment Tracking"
+    - :octicons-tools-16: [Best Practices for Experiment Tracking in RAG Projects](how-to-guides/wandb-experiment-tracking-rag.md) - A comprehensive guide split into two parts, detailing the steps and best practices for managing and tracking machine learning experiments in Retrieval-Augmented Generation projects using Weights & Biases, covering everything from setting up branches for each retriever family to advanced practices for experiment tracking and integration.
+    - :octicons-tools-16: [Advanced Practices for Experiment Tracking in RAG projects](how-to-guides/wandb-experiment-tracking-rag-advanced.md) - Delving into advanced practices for tracking and integrating experiments in RAG projects using W&B. This guide focuses on effective experiment transition, utilization of W&B's advanced features, and best practices for merging successful experiments into production.
 <!--
 ## Data Version Control (DVC) Documentation Index
 
