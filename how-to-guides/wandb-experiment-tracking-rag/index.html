@@ -541,6 +541,31 @@
 </nav>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#committing-code-changes-before-running-ml-experiments">
+<span class="md-ellipsis">
+      Committing Code Changes Before Running ML Experiments
+    </span>
+</a>
+<nav aria-label="Committing Code Changes Before Running ML Experiments" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#importance-of-pre-experiment-commits">
+<span class="md-ellipsis">
+      Importance of Pre-Experiment Commits
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#steps-for-committing-code-changes">
+<span class="md-ellipsis">
+      Steps for Committing Code Changes
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#how-to-run-experiments-and-manage-outcomes-with-weights-biases">
 <span class="md-ellipsis">
       How to Run Experiments and Manage Outcomes with Weights &amp; Biases
@@ -933,6 +958,31 @@
 </nav>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#committing-code-changes-before-running-ml-experiments">
+<span class="md-ellipsis">
+      Committing Code Changes Before Running ML Experiments
+    </span>
+</a>
+<nav aria-label="Committing Code Changes Before Running ML Experiments" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#importance-of-pre-experiment-commits">
+<span class="md-ellipsis">
+      Importance of Pre-Experiment Commits
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#steps-for-committing-code-changes">
+<span class="md-ellipsis">
+      Steps for Committing Code Changes
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#how-to-run-experiments-and-manage-outcomes-with-weights-biases">
 <span class="md-ellipsis">
       How to Run Experiments and Manage Outcomes with Weights &amp; Biases
@@ -1299,6 +1349,56 @@ experiment results through W&amp;B.</p>
 optimization, and collaboration. By following this guide, you'll
 establish a solid foundation for managing your experiments, leading to
 more efficient and impactful research outcomes.</p>
+<p>To reformat the section on committing code changes before running experiments using the MkDocs Material theme, you would use Markdown enhanced with Material theme's features such as admonitions, code blocks, and tips. Here's how the reformatted section could look:</p>
+<h2 id="committing-code-changes-before-running-ml-experiments">Committing Code Changes Before Running ML Experiments<a class="headerlink" href="#committing-code-changes-before-running-ml-experiments" title="Permanent link">¶</a></h2>
+<p>Ensuring that your code changes are committed before running machine
+learning experiments is critical for maintaining reproducibility and
+facilitating collaboration.</p>
+<div class="admonition warning">
+<p class="admonition-title">Reproducibility &amp; Collaboration</p>
+<p>Committing changes before experiments tie W&amp;B runs to a specific
+code version, crucial for tracing experiment conditions and results.</p>
+</div>
+<h3 id="importance-of-pre-experiment-commits">Importance of Pre-Experiment Commits<a class="headerlink" href="#importance-of-pre-experiment-commits" title="Permanent link">¶</a></h3>
+<ul>
+<li><strong>Reproducibility</strong>: Committing changes before running experiments
+  allows you to associate each W&amp;B experiment run with the exact version
+  of the code used. This is crucial for reproducibility, as it enables
+  you and others to revisit and understand the conditions under which an
+  experiment was conducted.</li>
+<li><strong>Tracking and Collaboration</strong>: By committing before experiments, you
+  ensure that the git SHA (a unique identifier for each commit) is
+  captured by W&amp;B. This allows team members to easily track which code
+  changes correspond to which experiment results, facilitating
+  collaboration and review.</li>
+</ul>
+<h3 id="steps-for-committing-code-changes">Steps for Committing Code Changes<a class="headerlink" href="#steps-for-committing-code-changes" title="Permanent link">¶</a></h3>
+<ol>
+<li><strong>Review Your Changes</strong>: Before committing, review your changes to
+   ensure that they are complete and aligned with the experiment's
+   objectives. This includes new code, modifications, configuration
+   files, and any documentation updates.</li>
+<li><strong>Stage Your Changes</strong>: Use <code>git add</code> to stage the files you intend
+   to commit. This step allows you to select exactly which changes you
+   want to include in your commit.</li>
+<li><strong>Commit with a Meaningful Message</strong>: Commit your staged changes
+   using <code>git commit</code>, providing a descriptive message that clearly
+   summarizes the changes made and their purpose. This message is
+   invaluable for historical context and understanding the evolution of
+   your project.</li>
+<li><strong>Push to Remote Repository</strong>: Push your commit to the remote
+   repository to ensure it is shared with your team and integrated into
+   the project's shared history. This step is critical for remote
+   collaboration and backup.</li>
+</ol>
+<p>Committing code changes before running experiments is a critical
+practice that underpins the reliability and integrity of your machine
+learning projects. It ensures that every experiment conducted with W&amp;B
+is traceable to a specific code state, thereby enhancing
+reproducibility, facilitating collaboration, and supporting rigorous
+scientific inquiry. By embedding this practice into your workflow, you
+establish a robust foundation for conducting and sharing machine
+learning experiments.</p>
 <h2 id="how-to-run-experiments-and-manage-outcomes-with-weights-biases">How to Run Experiments and Manage Outcomes with Weights &amp; Biases<a class="headerlink" href="#how-to-run-experiments-and-manage-outcomes-with-weights-biases" title="Permanent link">¶</a></h2>
 <p>Running experiments with Weights &amp; Biases (W&amp;B) and managing the outcomes efficiently is crucial for the success of machine learning projects. This guide provides a structured approach to executing experiments and handling the results, whether integrating successful outcomes into production or documenting learnings from unsuccessful attempts.</p>
 <h3 id="initiating-experiments-with-wb">Initiating Experiments with W&amp;B<a class="headerlink" href="#initiating-experiments-with-wb" title="Permanent link">¶</a></h3>
