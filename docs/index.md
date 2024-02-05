@@ -48,7 +48,7 @@ framework](https://diataxis.fr/).
 
 ## Resource Compendium
 
-??? custom "Naming Conventions"
+??? custom "Conventions"
     - :octicons-file-code-16: [Introduction to Naming Conventions for AI Project Assets](explanation/naming-conventions.md) - An essential guide that underscores the significance of systematic naming conventions in fostering clear communication, efficient project management, and reproducibility in AI and ML collaborations.
     - :octicons-book-16: [Effective GitHub Naming Conventions](explanation/github-naming-conventions.md) - Essential guidelines for naming GitHub repositories in data science, enhancing clarity and organization.
     - :octicons-tools-16: [Git Branch Naming Standards](how-to-guides/git-branch-naming-standards.md) - A comprehensive guide on standardized branch naming for ML projects, enhancing repository clarity and collaboration.
@@ -60,25 +60,32 @@ framework](https://diataxis.fr/).
     - :octicons-sync-16: [Markdown Documentation for ML Models](tutorials/markdown-ml-model-documentation.md) - Step-by-step tutorial on documenting machine learning models using Markdown, covering the training process, parameters, performance metrics, and metadata.
     - :octicons-book-16: [Notebook and Script Naming Conventions in ML Projects](explanation/ml-naming-conventions.md) - Essential guidelines for naming Jupyter notebooks and scripts in ML projects, emphasizing clarity, consistency, and efficient file management.
     - :octicons-tools-16: [Enforcing Naming Conventions with GitHub Actions](how-to-guides/github-actions-naming-convention.md) - A practical guide to set up GitHub Actions for enforcing naming conventions in machine learning projects, ensuring consistency and organization.
+    - :octicons-tools-16: [Templates for pull requests, issues/stories, feature and readme files](how-to-guides/templates.md)
+    - :octicons-tools-16: [Branching
+    Strategies](how-to-guides/branching-strategy.md) - Branching
+    strategies for AI-based projects.
 
 ??? custom "Data Version Control with DVC"
-    - :octicons-book-16: [Understanding DVC](explanation/dvc-understanding-dvs.md) - Essentials of DVC for large datasets management in ML, covering integration, versioning, and reproducibility.
-    - :octicons-tools-16: [Setting Up DVC](how-to-guides/dvc-set-up.md) - Comprehensive setup guide for DVC, from initialization to managing data in the cloud.
-    - :octicons-sync-16: [Local Data Updates](tutorials/dvc-local.md) - Step-by-step tutorial on managing and tracking local dataset updates with DVC.
-    - :octicons-cloud-16: [Cloud Data Updates](tutorials/dvc-cloud.md) - Tutorial on syncing cloud data updates in services like AWS S3 or Azure Blob Storage using DVC.
-    - :octicons-comment-discussion-16: [Data Version Communication](how-to-guides/dvc-communication.md) - Guidelines for effective communication of data versions in collaborative settings using DVC and GitHub.
-    - :octicons-repo-push-16: [Collaborative Data Workflow](tutorials/dvc-collaboration.md) - Workflow for collaborative data updates, tracking changes, and team syncing with DVC and GitHub.
-    - :octicons-git-branch-16: [Branches for Data Versions](explanation/dvc-git-branches.md) - Understanding the use of Git branches for data version management and DVC integration with collaboration tools.
+    - :octicons-book-16: [Understanding DVC](explanation/dvc-understanding-dvs.md) - Essentials of DVC for large datasets management in ML, covering integration, versioning, and reproducibility.:construction:
+    - :octicons-tools-16: [Setting Up DVC](how-to-guides/dvc-set-up.md) - Comprehensive setup guide for DVC, from initialization to managing data in the cloud.:construction:
+    - :octicons-sync-16: [Local Data Updates](tutorials/dvc-local.md) - Step-by-step tutorial on managing and tracking local dataset updates with DVC.:construction:
+    - :octicons-cloud-16: [Cloud Data Updates](tutorials/dvc-cloud.md) - Tutorial on syncing cloud data updates in services like AWS S3 or Azure Blob Storage using DVC.:construction:
+    - :octicons-comment-discussion-16: [Data Version Communication](how-to-guides/dvc-communication.md) - Guidelines for effective communication of data versions in collaborative settings using DVC and GitHub.:construction:
+    - :octicons-repo-push-16: [Collaborative Data Workflow](tutorials/dvc-collaboration.md) - Workflow for collaborative data updates, tracking changes, and team syncing with DVC and GitHub.:construction:
+    - :octicons-git-branch-16: [Branches for Data Versions](explanation/dvc-git-branches.md) - Understanding the use of Git branches for data version management and DVC integration with collaboration tools.:construction:
     - :octicons-code-16: [DVC in VS Code](how-to-guides/dvc-vscode-extension.md) - How to use the DVC extension in Visual Studio Code for efficient data version control and management.
 
 ??? custom "Data Management"
-    - :octicons-book-16: [Effective Data Documentation](explanation/effective-data-documentation.md) - A comprehensive guide on creating and managing metadata and documentation for data science projects, emphasizing importance, standard practices, and automation.
-    - :octicons-tools-16: [Metadata Integration in Data Analysis](how-to-guides/metadata-integration-data-analysis.md) - A practical guide on integrating metadata with data analysis tools, detailing steps, strategies, and an example Python script for effective collaboration.
-    - :octicons-sync-16: [Creating and Managing Metadata and Documentation](tutorials/creating-managing-metadata-documentation.md) - An in-depth tutorial on crafting effective metadata and maintaining thorough data documentation, complete with steps, examples, and best practices.
+    - :octicons-book-16: [Effective Data Documentation](explanation/effective-data-documentation.md) - A comprehensive guide on creating and managing metadata and documentation for data science projects, emphasizing importance, standard practices, and automation.:construction:
+    - :octicons-tools-16: [Metadata Integration in Data
+    Analysis](how-to-guides/metadata-integration-data-analysis.md) - A
+    practical guide on integrating metadata with data analysis tools,
+    detailing steps, strategies, and an example Python script for
+    effective collaboration. :construction:
+    - :octicons-sync-16: [Creating and Managing Metadata and Documentation](tutorials/creating-managing-metadata-documentation.md) - An in-depth tutorial on crafting effective metadata and maintaining thorough data documentation, complete with steps, examples, and best practices.:construction:
 
 ??? custom "Weights & Biases Experiment Tracking"
-    - :octicons-tools-16: [Best Practices for Experiment Tracking in RAG Projects](how-to-guides/wandb-experiment-tracking-rag.md) - A comprehensive guide split into two parts, detailing the steps and best practices for managing and tracking machine learning experiments in Retrieval-Augmented Generation projects using Weights & Biases, covering everything from setting up branches for each retriever family to advanced practices for experiment tracking and integration.
-    - :octicons-tools-16: [Advanced Practices for Experiment Tracking in RAG projects](how-to-guides/wandb-experiment-tracking-rag-advanced.md) - Delving into advanced practices for tracking and integrating experiments in RAG projects using W&B. This guide focuses on effective experiment transition, utilization of W&B's advanced features, and best practices for merging successful experiments into production.
+    - :octicons-tools-16: [ML Experiments Life-Cycle with Weights & Biases](how-to-guides/wandb-experiment-tracking-rag.md) - This guide provides a comprehensive overview of managing the life-cycle of machine learning (ML) experiments using Weights & Biases (W&B). It offers a structured approach for documenting experiments, establishing coding practices, configuring and tracking experiments with W&B, and efficiently managing outcomes.
 <!--
 ## Data Version Control (DVC) Documentation Index
 
