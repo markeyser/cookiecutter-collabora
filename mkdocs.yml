@@ -110,7 +110,7 @@ nav:
       - Enforcing Naming Conventions with GitHub Actions: how-to-guides/github-actions-naming-convention.md
       - Best Practices for Experiment Tracking in RAG Projects Using Weights & Biases: how-to-guides/wandb-experiment-tracking-rag.md
       - Templates for Issues/Stories and PRs: how-to-guides/templates.md
-      - Branching Strategies: /how-to-guides/branching-strategy.md
+      - Branching Strategies: how-to-guides/branching-strategy.md
   - Explanation:
       - TOC: explanation/toc-explanation.md
       - Understanding DVC: explanation/dvc-understanding-dvs.md
