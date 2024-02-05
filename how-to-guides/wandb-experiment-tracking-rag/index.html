@@ -7,7 +7,7 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <link href="https://llmslab.github.io/cookiecutter-ai-flock/how-to-guides/wandb-experiment-tracking-rag/" rel="canonical"/>
 <link href="../github-actions-naming-convention/" rel="prev"/>
-<link href="../wandb-experiment-tracking-rag-advanced/" rel="next"/>
+<link href="../templates/" rel="next"/>
 <link href="../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.5.3, mkdocs-material-9.5.4" name="generator"/>
 <title>Best Practices for Experiment Tracking in RAG Projects Using Weights &amp; Biases - Cookiecutter Ai Flock</title>
@@ -35,7 +35,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#managing-and-tracking-ml-experiments-in-rag-projects-using-weights-biases">
+<a class="md-skip" href="#ml-experiments-life-cycle-with-weights-biases">
           Skip to content
         </a>
 </div>
@@ -348,58 +348,24 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#what-you-will-need">
+<a class="md-nav__link" href="#how-to-create-a-github-issue-or-a-jira-story-for-your-experiment">
 <span class="md-ellipsis">
-      What You Will Need
+      How to Create a GitHub Issue or a Jira Story for Your Experiment
+    </span>
+</a>
+<nav aria-label="How to Create a GitHub Issue or a Jira Story for Your Experiment" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#preparation">
+<span class="md-ellipsis">
+      Preparation
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#step-1-setting-up-branches-for-each-retriever-family">
+<a class="md-nav__link" href="#documentation-steps">
 <span class="md-ellipsis">
-      Step 1: Setting Up Branches for Each Retriever Family
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#step-2-integrating-weights-biases">
-<span class="md-ellipsis">
-      Step 2: Integrating Weights &amp; Biases
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#step-3-running-experiments-and-logging-data">
-<span class="md-ellipsis">
-      Step 3: Running Experiments and Logging Data
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#step-4-documenting-your-experiments">
-<span class="md-ellipsis">
-      Step 4: Documenting Your Experiments
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#step-5-reviewing-and-comparing-experiments">
-<span class="md-ellipsis">
-      Step 5: Reviewing and Comparing Experiments
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#step-6-preparing-for-branch-transition">
-<span class="md-ellipsis">
-      Step 6: Preparing for Branch Transition
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#step-7-merging-successful-experiments">
-<span class="md-ellipsis">
-      Step 7: Merging Successful Experiments
+      Documentation Steps
     </span>
 </a>
 </li>
@@ -407,9 +373,262 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../wandb-experiment-tracking-rag-advanced/">
+<a class="md-nav__link" href="#how-to-create-a-new-experiment-branch">
 <span class="md-ellipsis">
-    Advanced Practices for Experiment Tracking in RAG Projects With Weights &amp; Biases
+      How to Create a New Experiment Branch
+    </span>
+</a>
+<nav aria-label="How to Create a New Experiment Branch" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#create-a-naming-convention">
+<span class="md-ellipsis">
+      Create a Naming Convention
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#how-to-develop-python-code-for-ml-experiments">
+<span class="md-ellipsis">
+      How to Develop Python Code for ML Experiments
+    </span>
+</a>
+<nav aria-label="How to Develop Python Code for ML Experiments" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#preparing-for-development">
+<span class="md-ellipsis">
+      Preparing for Development
+    </span>
+</a>
+<nav aria-label="Preparing for Development" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#review-experiment-documentation">
+<span class="md-ellipsis">
+      Review Experiment Documentation
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#conduct-technical-research">
+<span class="md-ellipsis">
+      Conduct Technical Research
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#implementing-your-experiment">
+<span class="md-ellipsis">
+      Implementing Your Experiment
+    </span>
+</a>
+<nav aria-label="Implementing Your Experiment" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#data-preparation">
+<span class="md-ellipsis">
+      Data Preparation
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#model-integration">
+<span class="md-ellipsis">
+      Model Integration
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#configuration-and-parameters">
+<span class="md-ellipsis">
+      Configuration and Parameters
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#logging-and-monitoring">
+<span class="md-ellipsis">
+      Logging and Monitoring
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ensuring-code-quality-and-reliability">
+<span class="md-ellipsis">
+      Ensuring Code Quality and Reliability
+    </span>
+</a>
+<nav aria-label="Ensuring Code Quality and Reliability" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#write-unit-tests">
+<span class="md-ellipsis">
+      Write Unit Tests
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#conduct-integration-testing">
+<span class="md-ellipsis">
+      Conduct Integration Testing
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#perform-experiment-runs">
+<span class="md-ellipsis">
+      Perform Experiment Runs
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#how-to-configure-and-track-ml-experiments-with-weights-biases">
+<span class="md-ellipsis">
+      How to Configure and Track ML Experiments with Weights &amp; Biases
+    </span>
+</a>
+<nav aria-label="How to Configure and Track ML Experiments with Weights &amp; Biases" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#setting-up-wb-for-your-experiments">
+<span class="md-ellipsis">
+      Setting Up W&amp;B for Your Experiments
+    </span>
+</a>
+<nav aria-label="Setting Up W&amp;B for Your Experiments" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#create-a-sweep-configuration">
+<span class="md-ellipsis">
+      Create a Sweep Configuration
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#adapt-your-code-for-wb-integration">
+<span class="md-ellipsis">
+      Adapt Your Code for W&amp;B Integration
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#experiment-tracking-best-practices">
+<span class="md-ellipsis">
+      Experiment Tracking Best Practices
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#how-to-run-experiments-and-manage-outcomes-with-weights-biases">
+<span class="md-ellipsis">
+      How to Run Experiments and Manage Outcomes with Weights &amp; Biases
+    </span>
+</a>
+<nav aria-label="How to Run Experiments and Manage Outcomes with Weights &amp; Biases" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#initiating-experiments-with-wb">
+<span class="md-ellipsis">
+      Initiating Experiments with W&amp;B
+    </span>
+</a>
+<nav aria-label="Initiating Experiments with W&amp;B" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#start-your-wb-runs">
+<span class="md-ellipsis">
+      Start Your W&amp;B Runs
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#automate-with-wb-sweeps">
+<span class="md-ellipsis">
+      Automate with W&amp;B Sweeps
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#monitor-and-analyze-results">
+<span class="md-ellipsis">
+      Monitor and Analyze Results
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#experiment-branch-strategy">
+<span class="md-ellipsis">
+      Experiment Branch Strategy
+    </span>
+</a>
+<nav aria-label="Experiment Branch Strategy" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#for-successful-experiments">
+<span class="md-ellipsis">
+      For Successful Experiments
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#for-unsuccessful-experiments">
+<span class="md-ellipsis">
+      For Unsuccessful Experiments
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#best-practices">
+<span class="md-ellipsis">
+      Best Practices
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../templates/">
+<span class="md-ellipsis">
+    Templates for Issues/Stories and PRs
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="/how-to-guides/branching-strategy.md">
+<span class="md-ellipsis">
+    Branching Strategies
   </span>
 </a>
 </li>
@@ -521,60 +740,272 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#what-you-will-need">
+<a class="md-nav__link" href="#how-to-create-a-github-issue-or-a-jira-story-for-your-experiment">
 <span class="md-ellipsis">
-      What You Will Need
+      How to Create a GitHub Issue or a Jira Story for Your Experiment
+    </span>
+</a>
+<nav aria-label="How to Create a GitHub Issue or a Jira Story for Your Experiment" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#preparation">
+<span class="md-ellipsis">
+      Preparation
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#step-1-setting-up-branches-for-each-retriever-family">
+<a class="md-nav__link" href="#documentation-steps">
 <span class="md-ellipsis">
-      Step 1: Setting Up Branches for Each Retriever Family
+      Documentation Steps
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#how-to-create-a-new-experiment-branch">
+<span class="md-ellipsis">
+      How to Create a New Experiment Branch
+    </span>
+</a>
+<nav aria-label="How to Create a New Experiment Branch" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#create-a-naming-convention">
+<span class="md-ellipsis">
+      Create a Naming Convention
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#how-to-develop-python-code-for-ml-experiments">
+<span class="md-ellipsis">
+      How to Develop Python Code for ML Experiments
+    </span>
+</a>
+<nav aria-label="How to Develop Python Code for ML Experiments" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#preparing-for-development">
+<span class="md-ellipsis">
+      Preparing for Development
+    </span>
+</a>
+<nav aria-label="Preparing for Development" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#review-experiment-documentation">
+<span class="md-ellipsis">
+      Review Experiment Documentation
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#step-2-integrating-weights-biases">
+<a class="md-nav__link" href="#conduct-technical-research">
 <span class="md-ellipsis">
-      Step 2: Integrating Weights &amp; Biases
+      Conduct Technical Research
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#implementing-your-experiment">
+<span class="md-ellipsis">
+      Implementing Your Experiment
+    </span>
+</a>
+<nav aria-label="Implementing Your Experiment" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#data-preparation">
+<span class="md-ellipsis">
+      Data Preparation
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#step-3-running-experiments-and-logging-data">
+<a class="md-nav__link" href="#model-integration">
 <span class="md-ellipsis">
-      Step 3: Running Experiments and Logging Data
+      Model Integration
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#step-4-documenting-your-experiments">
+<a class="md-nav__link" href="#configuration-and-parameters">
 <span class="md-ellipsis">
-      Step 4: Documenting Your Experiments
+      Configuration and Parameters
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#step-5-reviewing-and-comparing-experiments">
+<a class="md-nav__link" href="#logging-and-monitoring">
 <span class="md-ellipsis">
-      Step 5: Reviewing and Comparing Experiments
+      Logging and Monitoring
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ensuring-code-quality-and-reliability">
+<span class="md-ellipsis">
+      Ensuring Code Quality and Reliability
+    </span>
+</a>
+<nav aria-label="Ensuring Code Quality and Reliability" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#write-unit-tests">
+<span class="md-ellipsis">
+      Write Unit Tests
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#step-6-preparing-for-branch-transition">
+<a class="md-nav__link" href="#conduct-integration-testing">
 <span class="md-ellipsis">
-      Step 6: Preparing for Branch Transition
+      Conduct Integration Testing
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#step-7-merging-successful-experiments">
+<a class="md-nav__link" href="#perform-experiment-runs">
 <span class="md-ellipsis">
-      Step 7: Merging Successful Experiments
+      Perform Experiment Runs
     </span>
 </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#how-to-configure-and-track-ml-experiments-with-weights-biases">
+<span class="md-ellipsis">
+      How to Configure and Track ML Experiments with Weights &amp; Biases
+    </span>
+</a>
+<nav aria-label="How to Configure and Track ML Experiments with Weights &amp; Biases" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#setting-up-wb-for-your-experiments">
+<span class="md-ellipsis">
+      Setting Up W&amp;B for Your Experiments
+    </span>
+</a>
+<nav aria-label="Setting Up W&amp;B for Your Experiments" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#create-a-sweep-configuration">
+<span class="md-ellipsis">
+      Create a Sweep Configuration
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#adapt-your-code-for-wb-integration">
+<span class="md-ellipsis">
+      Adapt Your Code for W&amp;B Integration
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#experiment-tracking-best-practices">
+<span class="md-ellipsis">
+      Experiment Tracking Best Practices
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#how-to-run-experiments-and-manage-outcomes-with-weights-biases">
+<span class="md-ellipsis">
+      How to Run Experiments and Manage Outcomes with Weights &amp; Biases
+    </span>
+</a>
+<nav aria-label="How to Run Experiments and Manage Outcomes with Weights &amp; Biases" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#initiating-experiments-with-wb">
+<span class="md-ellipsis">
+      Initiating Experiments with W&amp;B
+    </span>
+</a>
+<nav aria-label="Initiating Experiments with W&amp;B" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#start-your-wb-runs">
+<span class="md-ellipsis">
+      Start Your W&amp;B Runs
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#automate-with-wb-sweeps">
+<span class="md-ellipsis">
+      Automate with W&amp;B Sweeps
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#monitor-and-analyze-results">
+<span class="md-ellipsis">
+      Monitor and Analyze Results
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#experiment-branch-strategy">
+<span class="md-ellipsis">
+      Experiment Branch Strategy
+    </span>
+</a>
+<nav aria-label="Experiment Branch Strategy" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#for-successful-experiments">
+<span class="md-ellipsis">
+      For Successful Experiments
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#for-unsuccessful-experiments">
+<span class="md-ellipsis">
+      For Unsuccessful Experiments
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#best-practices">
+<span class="md-ellipsis">
+      Best Practices
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -583,81 +1014,347 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="managing-and-tracking-ml-experiments-in-rag-projects-using-weights-biases">Managing and Tracking ML Experiments in RAG Projects Using Weights &amp; Biases<a class="headerlink" href="#managing-and-tracking-ml-experiments-in-rag-projects-using-weights-biases" title="Permanent link">¶</a></h1>
+<h1 id="ml-experiments-life-cycle-with-weights-biases">ML Experiments Life-Cycle with Weights &amp; Biases<a class="headerlink" href="#ml-experiments-life-cycle-with-weights-biases" title="Permanent link">¶</a></h1>
+<p>Manage the life-cycle of your AI experiments effectively using Weights &amp;
+Biases by following this structured guide. Ensure reproducibility,
+scalability, and collaboration through each phase of your experiment.</p>
 <div class="admonition note">
-<p class="admonition-title">Introduction</p>
-<p>This guide provides instructions on managing and tracking machine
-learning experiments in Retrieval-Augmented Generation (RAG)
-projects using Weights &amp; Biases (W&amp;B), focusing on multiple
-LangChain and LlamaIndex retrievers.</p>
+<p class="admonition-title">Getting Started</p>
+<p>Before you begin documenting your experiment, familiarize yourself with the goals and hypotheses of your experiment. This will enable you to create clear and effective documentation.</p>
 </div>
-<h2 id="what-you-will-need">What You Will Need<a class="headerlink" href="#what-you-will-need" title="Permanent link">¶</a></h2>
+<h2 id="how-to-create-a-github-issue-or-a-jira-story-for-your-experiment">How to Create a GitHub Issue or a Jira Story for Your Experiment<a class="headerlink" href="#how-to-create-a-github-issue-or-a-jira-story-for-your-experiment" title="Permanent link">¶</a></h2>
+<p>Documenting your experiment's intent by opening a GitHub issue or Jira
+story is the first crucial step in the experiment life-cycle.</p>
+<div class="admonition warning">
+<p class="admonition-title">Create an Issue/Story for Each Family of Experiments</p>
+<p>This ensures consistency and traceability within your 
+project.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Use a Template</p>
+<p>Select the following a pre-defined template that fits experiment
+documentation: <a href="../templates/">Experiment Issue/Story Template</a></p>
+</div>
+<h3 id="preparation">Preparation<a class="headerlink" href="#preparation" title="Permanent link">¶</a></h3>
+<ol>
+<li><strong>Understand the Experiment</strong>:
+   Before you start documenting, ensure you have a clear understanding
+   of the experiment's goals and the methods you'll use.</li>
+</ol>
+<h3 id="documentation-steps">Documentation Steps<a class="headerlink" href="#documentation-steps" title="Permanent link">¶</a></h3>
+<ol>
+<li>
+<p><strong>Create a New Issue/Story</strong>: Navigate to your project's GitHub
+   repository or Jira board and initiate a new issue or story.</p>
+</li>
+<li>
+<p><strong>Use a Template</strong>: If available use a pre-defined template that
+   fits experiment documentation.</p>
+</li>
+<li>
+<p><strong>Title Your Issue/Story</strong>: Start with a succinct and descriptive
+   title, prefixed with 'experiment/' followed by a brief identifier and
+   issue number or Jira key.</p>
+</li>
+<li>
+<p><strong>Describe Your Experiment</strong>: Provide a detailed description of the
+   experiment's background, objectives, and hypothesis.</p>
+</li>
+<li>
+<p><strong>List Your Goals</strong>: Clearly outline the specific goals or questions
+   your experiment aims to address.</p>
+</li>
+<li>
+<p><strong>Link to Resources</strong>: Include links to any relevant documents, code
+   repositories, or previous experiments.</p>
+</li>
+<li>
+<p><strong>Ensure Visibility</strong>: Make sure all potential stakeholders have
+   visibility and encourage team members to comment.</p>
+</li>
+<li>
+<p><strong>Submit the Documentation</strong>: Once all details are filled in, submit
+   your issue or story.</p>
+</li>
+</ol>
+<p>To reformat the guide for branch naming and management using the MkDocs Material theme, you would utilize a variety of the theme's features to enhance the presentation and usability of the document. Here's how you could write the markdown with Material for MkDocs features:</p>
+<h2 id="how-to-create-a-new-experiment-branch">How to Create a New Experiment Branch<a class="headerlink" href="#how-to-create-a-new-experiment-branch" title="Permanent link">¶</a></h2>
+<p>This guide will provide a structured approach to creating a consistent
+branch naming convention for your experiment.</p>
+<div class="admonition warning">
+<p class="admonition-title">Create a New Branch for Each Family of Experiments.</p>
+<p>This ensures consistency and traceability within your project.</p>
+</div>
+<h3 id="create-a-naming-convention">Create a Naming Convention<a class="headerlink" href="#create-a-naming-convention" title="Permanent link">¶</a></h3>
+<p>Structure your branch names to include the category, description, and
+issue or Jira key.</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>experiment/&lt;description&gt;-&lt;issue_number_or_jira_key&gt;
+</code></pre></div>
+<p>For example:</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a>experiment/rag-fusion-GH15
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Naming Convention</p>
+<p>Choose names that are short yet descriptive to convey the branch's
+purpose at a glance and provide context for the work being 
+done.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Best Practices for Experiment Branch Naming Conventions</p>
+<p>For detailed insights and guidelines on establishing effective naming conventions for your experiment branches, please refer to the following resource: <a href="../github-actions-naming-convention/">Experiment Branch Naming Convention</a>.</p>
+</div>
+<h2 id="how-to-develop-python-code-for-ml-experiments">How to Develop Python Code for ML Experiments<a class="headerlink" href="#how-to-develop-python-code-for-ml-experiments" title="Permanent link">¶</a></h2>
+<p>Developing Python code for machine learning (ML) experiments is a
+critical phase where your experimental concepts are transformed into
+executable models and analyses. This how-to guide outlines a structured
+approach to code development, focusing on integrating advanced ML
+components like LangChain RAG Fusion into your projects.</p>
+<h3 id="preparing-for-development">Preparing for Development<a class="headerlink" href="#preparing-for-development" title="Permanent link">¶</a></h3>
+<p>Before diving into coding, it's essential to align your development work
+with the experiment's goals and requirements.</p>
+<h4 id="review-experiment-documentation">Review Experiment Documentation<a class="headerlink" href="#review-experiment-documentation" title="Permanent link">¶</a></h4>
 <ul>
-<li>A working knowledge of Git for version control.</li>
-<li>Access to a W&amp;B account and familiarity with its basic features.</li>
-<li>A RAG project setup with multiple LangChain and/or LlamaIndex retrievers.</li>
+<li><strong>Objective</strong>: Ensure your development efforts are guided by the
+  experiment's defined goals and success criteria.</li>
+<li><strong>Action</strong>: Revisit the experiment's description, goals, and success
+  criteria detailed in the GitHub issue or Jira story.</li>
 </ul>
-<h2 id="step-1-setting-up-branches-for-each-retriever-family">Step 1: Setting Up Branches for Each Retriever Family<a class="headerlink" href="#step-1-setting-up-branches-for-each-retriever-family" title="Permanent link">¶</a></h2>
+<h4 id="conduct-technical-research">Conduct Technical Research<a class="headerlink" href="#conduct-technical-research" title="Permanent link">¶</a></h4>
+<ul>
+<li><strong>Objective</strong>: Gain a deep understanding of the technologies and
+  components you plan to integrate, such as LangChain RAG Fusion.</li>
+<li><strong>Action</strong>: Review technical documentation, research papers, and
+  source code related to the technologies in use.</li>
+</ul>
+<h3 id="implementing-your-experiment">Implementing Your Experiment<a class="headerlink" href="#implementing-your-experiment" title="Permanent link">¶</a></h3>
+<p>Follow these steps to implement your experiment within your Python
+codebase.</p>
+<h4 id="data-preparation">Data Preparation<a class="headerlink" href="#data-preparation" title="Permanent link">¶</a></h4>
+<ul>
+<li><strong>Objective</strong>: Prepare your data to meet the input requirements of
+  your ML components.</li>
+<li><strong>Action</strong>:</li>
+<li>Write scripts for data preprocessing.</li>
+<li>Ensure data formats are compatible with LangChain RAG Fusion.</li>
+</ul>
+<h4 id="model-integration">Model Integration<a class="headerlink" href="#model-integration" title="Permanent link">¶</a></h4>
+<ul>
+<li><strong>Objective</strong>: Seamlessly integrate the LangChain RAG Fusion component
+  into your ML pipeline.</li>
+<li><strong>Action</strong>:</li>
+<li>Adapt existing code to accommodate the new component.</li>
+<li>Define new interfaces or integrate third-party libraries as
+     necessary.</li>
+</ul>
+<h4 id="configuration-and-parameters">Configuration and Parameters<a class="headerlink" href="#configuration-and-parameters" title="Permanent link">¶</a></h4>
+<p>At this stage, identify your experiment's hyperparameters and hardcode
+them into your Python code. This decision is crucial for the
+experiment's setup.</p>
+<div class="admonition warning">
+<p class="admonition-title">Identify Hyperparameters</p>
+<p>Determine your experiment's hyperparameters now. We'll introduce
+dynamic parameter configuration with Weights &amp; Biases (W&amp;B) in the
+next section.</p>
+</div>
+<h4 id="logging-and-monitoring">Logging and Monitoring<a class="headerlink" href="#logging-and-monitoring" title="Permanent link">¶</a></h4>
+<p>Understanding what metrics and outputs to log is essential. The detailed
+setup for logging and monitoring will be covered next, using W&amp;B.</p>
+<div class="admonition warning">
+<p class="admonition-title">Logging Setup Ahead</p>
+<p>Prepare for logging by identifying key metrics. Dynamic logging
+and monitoring with W&amp;B will be detailed in the following section.</p>
+</div>
+<h3 id="ensuring-code-quality-and-reliability">Ensuring Code Quality and Reliability<a class="headerlink" href="#ensuring-code-quality-and-reliability" title="Permanent link">¶</a></h3>
+<p>Maintain high standards of code quality and reliability throughout the
+development process.</p>
+<h4 id="write-unit-tests">Write Unit Tests<a class="headerlink" href="#write-unit-tests" title="Permanent link">¶</a></h4>
+<ul>
+<li><strong>Objective</strong>: Verify that individual components of your code operate
+  correctly.</li>
+<li><strong>Action</strong>:</li>
+<li>Create unit tests for critical functions and modules.</li>
+<li>Use a testing framework like pytest to automate testing.</li>
+</ul>
+<h4 id="conduct-integration-testing">Conduct Integration Testing<a class="headerlink" href="#conduct-integration-testing" title="Permanent link">¶</a></h4>
+<ul>
+<li><strong>Objective</strong>: Ensure that different components of your system work
+  together as intended.</li>
+<li><strong>Action</strong>:</li>
+<li>Design and run integration tests after integrating new components.</li>
+<li>Pay special attention to the interaction between LangChain RAG
+     Fusion and other parts of your system.</li>
+</ul>
+<h4 id="perform-experiment-runs">Perform Experiment Runs<a class="headerlink" href="#perform-experiment-runs" title="Permanent link">¶</a></h4>
+<ul>
+<li><strong>Objective</strong>: Validate the overall setup and functionality of your
+  experiment.</li>
+<li><strong>Action</strong>:</li>
+<li>Conduct initial small-scale runs to test the experimental setup.</li>
+<li>Adjust code and configurations based on initial outcomes.</li>
+</ul>
 <div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p><strong>Create a Git Branch</strong>: For each retriever, create a new branch in your Git repository. Name the branch clearly to reflect the retriever it represents.</p>
+<p class="admonition-title">Continuous Improvement</p>
+<p>Treat the development process as iterative. Use insights from
+testing and initial experiment runs to continuously refine and
+improve your code.</p>
 </div>
+<p>By following this guide, you'll develop Python code for your ML
+experiments that is not only aligned with your scientific goals but also
+adheres to best practices in software engineering and ML research.</p>
+<h2 id="how-to-configure-and-track-ml-experiments-with-weights-biases">How to Configure and Track ML Experiments with Weights &amp; Biases<a class="headerlink" href="#how-to-configure-and-track-ml-experiments-with-weights-biases" title="Permanent link">¶</a></h2>
+<p>Configuring your machine learning experiments with Weights &amp; Biases
+(W&amp;B) is crucial for effective tracking, logging, and optimization.
+Follow this guide to set up W&amp;B for managing and automating your
+experiments.</p>
+<h3 id="setting-up-wb-for-your-experiments">Setting Up W&amp;B for Your Experiments<a class="headerlink" href="#setting-up-wb-for-your-experiments" title="Permanent link">¶</a></h3>
+<h4 id="create-a-sweep-configuration">Create a Sweep Configuration<a class="headerlink" href="#create-a-sweep-configuration" title="Permanent link">¶</a></h4>
 <ol>
-<li><strong>Initialize the Branch</strong>: Set up your ML environment in this branch, ensuring all necessary dependencies are installed.</li>
+<li><strong>Objective</strong>: Define the experiment's hyperparameters and their
+   search space.</li>
+<li><strong>Action</strong>: Write a <code>sweep_config.yaml</code> file detailing parameters and
+   search strategies (grid, random, Bayesian).</li>
+<li><strong>Version Control</strong>: Ensure this file and other configuration files
+   are under version control for reproducibility.</li>
 </ol>
-<h2 id="step-2-integrating-weights-biases">Step 2: Integrating Weights &amp; Biases<a class="headerlink" href="#step-2-integrating-weights-biases" title="Permanent link">¶</a></h2>
+<h4 id="adapt-your-code-for-wb-integration">Adapt Your Code for W&amp;B Integration<a class="headerlink" href="#adapt-your-code-for-wb-integration" title="Permanent link">¶</a></h4>
+<p>Integrating W&amp;B into your Python code allows dynamic parameter
+adjustment and comprehensive metric logging.</p>
 <ol>
-<li><strong>Initialize W&amp;B</strong>: In your project code, add the W&amp;B initialization script at the beginning. This includes setting your W&amp;B project name.</li>
-<li><strong>Configure W&amp;B Settings</strong>: Assign specific tags or groups in W&amp;B for each branch, corresponding to the retriever family.</li>
+<li><strong>Dynamic Parameters</strong>:</li>
+<li>Modify code to fetch and use parameters from W&amp;B dynamically.</li>
+<li>
+<p>Utilize the W&amp;B API to implement this functionality.</p>
+</li>
+<li>
+<p><strong>Logging Metrics</strong>:</p>
+</li>
+<li>Enhance your code to log training and evaluation metrics to W&amp;B.</li>
+<li>
+<p>Ensure both outcome metrics and intermediate metrics are logged for
+     in-depth analysis.</p>
+</li>
+<li>
+<p><strong>Automate Hyperparameter Search with Sweeps</strong>:</p>
+</li>
+<li>Set up W&amp;B Sweeps in your code for automated hyperparameter
+     optimization.</li>
+<li>Handle sweep initialization, metric reporting, and parameter
+     updates within your code.</li>
 </ol>
-<h2 id="step-3-running-experiments-and-logging-data">Step 3: Running Experiments and Logging Data<a class="headerlink" href="#step-3-running-experiments-and-logging-data" title="Permanent link">¶</a></h2>
-<ol>
-<li><strong>Start an Experiment</strong>: Begin your experiments using the specific retriever in the branch.</li>
-<li><strong>Log Parameters and Metrics</strong>: Use W&amp;B's logging functions to record key parameters, metrics, and outcomes from your experiments.</li>
-</ol>
-<h2 id="step-4-documenting-your-experiments">Step 4: Documenting Your Experiments<a class="headerlink" href="#step-4-documenting-your-experiments" title="Permanent link">¶</a></h2>
-<ol>
-<li><strong>Update README</strong>: In each branch, maintain a README file detailing the purpose of the experiments, the parameters used, and any unique configurations.</li>
-<li><strong>Code Comments</strong>: Ensure your code is well-commented to explain the rationale behind specific experimental setups.</li>
-</ol>
-<h2 id="step-5-reviewing-and-comparing-experiments">Step 5: Reviewing and Comparing Experiments<a class="headerlink" href="#step-5-reviewing-and-comparing-experiments" title="Permanent link">¶</a></h2>
-<ol>
-<li><strong>Use W&amp;B Dashboards</strong>: Regularly review your experiment results using W&amp;B dashboards to compare different runs.</li>
-<li><strong>Analyze Experiment Data</strong>: Analyze logged data to identify the best-performing setups and areas for improvement.</li>
-</ol>
-<h2 id="step-6-preparing-for-branch-transition">Step 6: Preparing for Branch Transition<a class="headerlink" href="#step-6-preparing-for-branch-transition" title="Permanent link">¶</a></h2>
-<ol>
-<li><strong>Finalize Current Experiments</strong>: Ensure all experiments in the current branch are completed and all data is logged in W&amp;B.</li>
-<li><strong>Sync with Git</strong>: Commit and push all changes to your Git repository before switching branches.</li>
-</ol>
-<h2 id="step-7-merging-successful-experiments">Step 7: Merging Successful Experiments<a class="headerlink" href="#step-7-merging-successful-experiments" title="Permanent link">¶</a></h2>
 <div class="admonition warning">
-<p class="admonition-title">Selective Merging</p>
+<p class="admonition-title">Double-Check Experiment Reproducibility</p>
+<p>Ensure you're logging <strong>all</strong> necessary components to guarantee
+experiment reproducibility. This includes:</p>
 <ul>
-<li><strong>Select the Best Version</strong>: Use W&amp;B to determine which version of
-the retriever was most successful.</li>
-<li><strong>Code Review</strong>: Perform a
-thorough code review of the selected version to ensure it meets
-quality standards.</li>
-<li><strong>Merge into Production</strong>: Merge the successful version into the production branch in your Gitrepository.</li>
+<li><strong>All Metrics</strong>: Verify that every relevant metric is being captured.</li>
+<li><strong>Modified Python Scripts</strong>: Keep track of any changes in your Python scripts.</li>
+<li><strong>Configuration Files</strong>: Ensure all configuration files are logged and version-controlled.</li>
+<li><strong>Notes and Labels</strong>: Add descriptive notes and labels to your logged data for clarity.</li>
 </ul>
+<p>Reproducibility is key to validating and sharing your ML experiments. Missing data can lead to incomplete insights and challenges in replicating results. Always review your logging setup to ensure comprehensive coverage of your experiment's artifacts.</p>
 </div>
-<div class="admonition warning">
-<p class="admonition-title"><strong>Handling Unsuccessful Experiments</strong></p>
+<div class="admonition tip">
+<p class="admonition-title">Best Practice: Use W&amp;B's API Documentation</p>
+<p>Refer to W&amp;B's API documentation for detailed instructions on
+implementing these features in your code.</p>
+</div>
+<h3 id="experiment-tracking-best-practices">Experiment Tracking Best Practices<a class="headerlink" href="#experiment-tracking-best-practices" title="Permanent link">¶</a></h3>
+<p>Maximize the benefits of W&amp;B for your ML experiments with these tracking
+best practices.</p>
+<ol>
+<li><strong>Comprehensive Logging</strong>:</li>
+<li>
+<p>Log every relevant piece of experiment data, including
+     configurations, results, and binaries.</p>
+</li>
+<li>
+<p><strong>Iterative Improvement</strong>:</p>
+</li>
+<li>
+<p>Use logged data to iteratively refine your experiments, aiming for
+     continuous improvement.</p>
+</li>
+<li>
+<p><strong>Collaboration</strong>:</p>
+</li>
+<li>Share experiment results on W&amp;B's platform for collaborative
+     analysis and discussion.</li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Collaboration is Key</p>
+<p>Encourage team engagement by sharing insights and discussing
+experiment results through W&amp;B.</p>
+</div>
+<p>Integrating W&amp;B into your ML experiment workflow enhances tracking,
+optimization, and collaboration. By following this guide, you'll
+establish a solid foundation for managing your experiments, leading to
+more efficient and impactful research outcomes.</p>
+<h2 id="how-to-run-experiments-and-manage-outcomes-with-weights-biases">How to Run Experiments and Manage Outcomes with Weights &amp; Biases<a class="headerlink" href="#how-to-run-experiments-and-manage-outcomes-with-weights-biases" title="Permanent link">¶</a></h2>
+<p>Running experiments with Weights &amp; Biases (W&amp;B) and managing the outcomes efficiently is crucial for the success of machine learning projects. This guide provides a structured approach to executing experiments and handling the results, whether integrating successful outcomes into production or documenting learnings from unsuccessful attempts.</p>
+<h3 id="initiating-experiments-with-wb">Initiating Experiments with W&amp;B<a class="headerlink" href="#initiating-experiments-with-wb" title="Permanent link">¶</a></h3>
+<h4 id="start-your-wb-runs">Start Your W&amp;B Runs<a class="headerlink" href="#start-your-wb-runs" title="Permanent link">¶</a></h4>
+<ol>
+<li><strong>Objective</strong>: Log parameters, metrics, and outcomes of your experiment.</li>
+<li><strong>Action</strong>: Ensure your code initializes a W&amp;B run at the start of your experiment script.</li>
+</ol>
+<h4 id="automate-with-wb-sweeps">Automate with W&amp;B Sweeps<a class="headerlink" href="#automate-with-wb-sweeps" title="Permanent link">¶</a></h4>
+<ol>
+<li><strong>Objective</strong>: Optimize hyperparameters and manage multiple configurations efficiently.</li>
+<li><strong>Action</strong>: Set up W&amp;B Sweeps in your <code>sweep_config.yaml</code> and initiate them for automated parameter exploration.</li>
+</ol>
+<h4 id="monitor-and-analyze-results">Monitor and Analyze Results<a class="headerlink" href="#monitor-and-analyze-results" title="Permanent link">¶</a></h4>
+<ol>
+<li><strong>Objective</strong>: Keep track of experiment progress and analyze data for insights.</li>
+<li><strong>Action</strong>: Use the W&amp;B dashboard for real-time monitoring and result analysis.</li>
+</ol>
+<h3 id="experiment-branch-strategy">Experiment Branch Strategy<a class="headerlink" href="#experiment-branch-strategy" title="Permanent link">¶</a></h3>
+<h4 id="for-successful-experiments">For Successful Experiments<a class="headerlink" href="#for-successful-experiments" title="Permanent link">¶</a></h4>
+<pre class="mermaid"><code>%%{init: { 'logLevel': 'debug', 'theme': 'base', 'gitGraph': {'rotateCommitLabel': true} } }%%
+gitGraph TB:
+    commit tag: "Initial commit"
+    branch experiment
+    checkout experiment
+    commit tag: "Experiment changes"
+    commit tag: "Interate Experiment"
+    commit tag: "Successful approach found"
+    checkout main
+    commit tag: "Changes on master"
+    merge experiment tag: "Merge successful experiment into master"
+    commit tag: "Changes on master"</code></pre>
+<ol>
+<li><strong>Opening Pull Requests</strong>: Prepare and open a PR for successful experiment branches, clearly documenting the experiment and its findings.</li>
+<li><strong>Peer Review</strong>: Undergo a review process, providing links to W&amp;B pages for detailed metrics.</li>
+<li><strong>Documentation</strong>: Record the experiment's methodology and findings in the project's main documentation.</li>
+</ol>
+<h4 id="for-unsuccessful-experiments">For Unsuccessful Experiments<a class="headerlink" href="#for-unsuccessful-experiments" title="Permanent link">¶</a></h4>
+<pre class="mermaid"><code>%%{init: { 'logLevel': 'debug', 'theme': 'base' } }%%
+gitGraph TB:
+  commit tag: "Initial commit"
+  branch experiment
+  checkout experiment
+  commit tag: "First Commit on experiment"
+  commit tag: "Iterate Experiment"
+  commit tag: "Failed Experiment"</code></pre>
+<ol>
+<li><strong>Keep Branches Open</strong>: Retain the experimental branch open for documentation and to avoid repeating unsuccessful experiments.</li>
+<li><strong>Analysis and Documentation</strong>: Document the approach, results, and learnings from the experiment in the repository.</li>
+</ol>
+<div class="admonition info">
+<p class="admonition-title">Comprehensive Guide to Branch Strategy</p>
+<p>For an in-depth exploration of best practices and strategies for managing branches within your projects, consult our dedicated guide: <a href="../branching-strategy/">Branch Strategy</a>.</p>
+</div>
+<h3 id="best-practices">Best Practices<a class="headerlink" href="#best-practices" title="Permanent link">¶</a></h3>
 <ul>
-<li>If experiments in a branch do not improve the solution, <strong>do not
-merge</strong> this branch into production.</li>
-<li>Keep these branches for
-reporting purposes to document the experimentation process and
-justify decisions.</li>
+<li><strong>Batch Running and Automation</strong>: Use scripts or CI/CD pipelines for automating experiments, especially when leveraging W&amp;B Sweeps.</li>
+<li><strong>Iterative Improvement</strong>: Apply insights from all experiments to refine future experimental designs.</li>
+<li><strong>Collaboration and Sharing</strong>: Promote a collaborative environment by sharing results and insights within the team and using W&amp;B for discussions.</li>
 </ul>
-</div>
 <aside class="md-source-file">
 <span class="md-source-file__fact">
 <span class="md-icon" title="Last update">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 30, 2024</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 5, 2024</span>
 </span>
 </aside>
 </article>
