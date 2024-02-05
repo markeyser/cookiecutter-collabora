@@ -23,3 +23,10 @@
     -webkit-mask-image: var(--md-admonition-icon--custom);
     mask-image: var(--md-admonition-icon--custom);
   }
+  
+  /* Style to center Mermaid graphs*/
+  .mermaid {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
