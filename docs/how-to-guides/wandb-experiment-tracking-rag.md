@@ -291,6 +291,59 @@ optimization, and collaboration. By following this guide, you'll
 establish a solid foundation for managing your experiments, leading to
 more efficient and impactful research outcomes.
 
+To reformat the section on committing code changes before running experiments using the MkDocs Material theme, you would use Markdown enhanced with Material theme's features such as admonitions, code blocks, and tips. Here's how the reformatted section could look:
+
+## Committing Code Changes Before Running ML Experiments
+
+Ensuring that your code changes are committed before running machine
+learning experiments is critical for maintaining reproducibility and
+facilitating collaboration.
+
+!!! warning "Reproducibility & Collaboration"
+    Committing changes before experiments tie W&B runs to a specific
+    code version, crucial for tracing experiment conditions and results.
+
+### Importance of Pre-Experiment Commits
+
+- **Reproducibility**: Committing changes before running experiments
+  allows you to associate each W&B experiment run with the exact version
+  of the code used. This is crucial for reproducibility, as it enables
+  you and others to revisit and understand the conditions under which an
+  experiment was conducted.
+- **Tracking and Collaboration**: By committing before experiments, you
+  ensure that the git SHA (a unique identifier for each commit) is
+  captured by W&B. This allows team members to easily track which code
+  changes correspond to which experiment results, facilitating
+  collaboration and review.
+
+### Steps for Committing Code Changes
+
+1. **Review Your Changes**: Before committing, review your changes to
+   ensure that they are complete and aligned with the experiment's
+   objectives. This includes new code, modifications, configuration
+   files, and any documentation updates.
+2. **Stage Your Changes**: Use `git add` to stage the files you intend
+   to commit. This step allows you to select exactly which changes you
+   want to include in your commit.
+3. **Commit with a Meaningful Message**: Commit your staged changes
+   using `git commit`, providing a descriptive message that clearly
+   summarizes the changes made and their purpose. This message is
+   invaluable for historical context and understanding the evolution of
+   your project.
+4. **Push to Remote Repository**: Push your commit to the remote
+   repository to ensure it is shared with your team and integrated into
+   the project's shared history. This step is critical for remote
+   collaboration and backup.
+
+Committing code changes before running experiments is a critical
+practice that underpins the reliability and integrity of your machine
+learning projects. It ensures that every experiment conducted with W&B
+is traceable to a specific code state, thereby enhancing
+reproducibility, facilitating collaboration, and supporting rigorous
+scientific inquiry. By embedding this practice into your workflow, you
+establish a robust foundation for conducting and sharing machine
+learning experiments.
+
 ## How to Run Experiments and Manage Outcomes with Weights & Biases
 
 Running experiments with Weights & Biases (W&B) and managing the outcomes efficiently is crucial for the success of machine learning projects. This guide provides a structured approach to executing experiments and handling the results, whether integrating successful outcomes into production or documenting learnings from unsuccessful attempts.
