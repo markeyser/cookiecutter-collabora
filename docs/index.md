@@ -62,7 +62,7 @@ framework](https://diataxis.fr/).
     - :octicons-tools-16: [Enforcing Naming Conventions with GitHub Actions](how-to-guides/github-actions-naming-convention.md) - A practical guide to set up GitHub Actions for enforcing naming conventions in machine learning projects, ensuring consistency and organization.
     - :octicons-tools-16: [Templates for pull requests, issues/stories, feature and readme files](how-to-guides/templates.md)
     - :octicons-tools-16: [Branching
-    Strategies](how-to-guides/branching-strategy.md) - Branching
+    Strategies for ML Projects](how-to-guides/branching-strategy.md) - Branching
     strategies for AI-based projects.
 
 ??? custom "Data Version Control with DVC"
