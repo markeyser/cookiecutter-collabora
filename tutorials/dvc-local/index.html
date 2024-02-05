@@ -5,12 +5,12 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="https://llmslab.github.io/cookiecutter-ai-flock/how-to-guides/offline-cookiecutter-setup/" rel="canonical"/>
-<link href="../dvc-vscode-extension/" rel="prev"/>
-<link href="../git-branch-naming-standards/" rel="next"/>
+<link href="https://llmslab.github.io/cookiecutter-ai-flock/tutorials/dvc-local/" rel="canonical"/>
+<link href="../data-version-control/" rel="prev"/>
+<link href="../dvc-cloud/" rel="next"/>
 <link href="../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.5.3, mkdocs-material-9.5.4" name="generator"/>
-<title>Offline Cookiecutter Setup - Cookiecutter Ai Flock</title>
+<title>DVC Local Workflow - Cookiecutter Ai Flock</title>
 <link href="../../assets/stylesheets/main.50c56a3b.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -35,7 +35,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#using-cookiecutter-without-direct-github-command">
+<a class="md-skip" href="#tutorial-managing-local-data-updates-with-dvc">
           Skip to content
         </a>
 </div>
@@ -59,7 +59,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Offline Cookiecutter Setup
+              DVC Local Workflow
             
           </span>
 </div>
@@ -115,167 +115,80 @@
   </span>
 </a>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
 <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
 <span class="md-ellipsis">
     Tutorials
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="false" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<nav aria-expanded="true" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_2">
 <span class="md-nav__icon md-icon"></span>
             Tutorials
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../tutorials/toc-tutorials/">
+<a class="md-nav__link" href="../toc-tutorials/">
 <span class="md-ellipsis">
     TOC
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../tutorials/black-formatter/">
+<a class="md-nav__link" href="../black-formatter/">
 <span class="md-ellipsis">
     Black Formatter
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../tutorials/ruff-linter/">
+<a class="md-nav__link" href="../ruff-linter/">
 <span class="md-ellipsis">
     Ruff Linter
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../tutorials/poetry/">
+<a class="md-nav__link" href="../poetry/">
 <span class="md-ellipsis">
     Poetry Package Management
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../tutorials/mkdocs-docs/">
+<a class="md-nav__link" href="../mkdocs-docs/">
 <span class="md-ellipsis">
     MkDocs Documentation
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../tutorials/hydra-config/">
+<a class="md-nav__link" href="../hydra-config/">
 <span class="md-ellipsis">
     Hydra Configuration
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../tutorials/gitignore/">
+<a class="md-nav__link" href="../gitignore/">
 <span class="md-ellipsis">
     Gitignore File Creation
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../tutorials/data/">
+<a class="md-nav__link" href="../data/">
 <span class="md-ellipsis">
     Managing Data
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../tutorials/data-version-control/">
+<a class="md-nav__link" href="../data-version-control/">
 <span class="md-ellipsis">
     Data Version Control
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../tutorials/dvc-local/">
-<span class="md-ellipsis">
-    DVC Local Workflow
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../tutorials/dvc-cloud/">
-<span class="md-ellipsis">
-    DVC Cloud Storage
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../tutorials/dvc-collaboration/">
-<span class="md-ellipsis">
-    DVC for Collaboration
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../tutorials/naming-conventions/">
-<span class="md-ellipsis">
-    Naming Conventions Tutorial
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../tutorials/windows-os-setup/">
-<span class="md-ellipsis">
-    Windows OS Setup
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../tutorials/markdown-ml-model-documentation/">
-<span class="md-ellipsis">
-    Markdown Documentation for ML Models
-  </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
-<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
-<span class="md-ellipsis">
-    How-To Guides
-  </span>
-<span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-expanded="true" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_3">
-<span class="md-nav__icon md-icon"></span>
-            How-To Guides
-          </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../toc-how-to-guides/">
-<span class="md-ellipsis">
-    TOC
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../dvc-set-up/">
-<span class="md-ellipsis">
-    DVC Setup
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../dvc-communication/">
-<span class="md-ellipsis">
-    DVC Communication
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../dvc-vscode-extension/">
-<span class="md-ellipsis">
-    DVC VS Code Extension
   </span>
 </a>
 </li>
@@ -283,13 +196,13 @@
 <input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
 <label class="md-nav__link md-nav__link--active" for="__toc">
 <span class="md-ellipsis">
-    Offline Cookiecutter Setup
+    DVC Local Workflow
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
 <a class="md-nav__link md-nav__link--active" href="./">
 <span class="md-ellipsis">
-    Offline Cookiecutter Setup
+    DVC Local Workflow
   </span>
 </a>
 <nav aria-label="On this page" class="md-nav md-nav--secondary">
@@ -299,45 +212,58 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
+<a class="md-nav__link" href="#introduction">
+<span class="md-ellipsis">
+      Introduction
+    </span>
+</a>
+<nav aria-label="Introduction" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
 <a class="md-nav__link" href="#prerequisites">
 <span class="md-ellipsis">
       Prerequisites
     </span>
 </a>
 </li>
+</ul>
+</nav>
+</li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#steps">
+<a class="md-nav__link" href="#scenario-updating-your-dataset">
 <span class="md-ellipsis">
-      Steps
+      Scenario: Updating Your Dataset
     </span>
 </a>
-<nav aria-label="Steps" class="md-nav">
+<nav aria-label="Scenario: Updating Your Dataset" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#1-downloading-the-cookiecutter-template">
+<a class="md-nav__link" href="#step-by-step-guide-to-manage-local-data-updates">
 <span class="md-ellipsis">
-      1. Downloading the Cookiecutter Template
+      Step-by-Step Guide to Manage Local Data Updates
+    </span>
+</a>
+<nav aria-label="Step-by-Step Guide to Manage Local Data Updates" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1-detecting-changes-with-dvc">
+<span class="md-ellipsis">
+      1. Detecting Changes with DVC
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#2-setting-up-your-environment">
+<a class="md-nav__link" href="#2-updating-the-data-version">
 <span class="md-ellipsis">
-      2. Setting Up Your Environment
+      2. Updating the Data Version
     </span>
 </a>
-</li>
+<nav aria-label="2. Updating the Data Version" class="md-nav">
+<ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#3-creating-your-project">
+<a class="md-nav__link" href="#tracking-the-updated-file">
 <span class="md-ellipsis">
-      3. Creating Your Project
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#4-finalizing-the-project">
-<span class="md-ellipsis">
-      4. Finalizing the Project
+      Tracking the Updated File
     </span>
 </a>
 </li>
@@ -348,63 +274,170 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../git-branch-naming-standards/">
+<a class="md-nav__link" href="#understanding-the-purpose-of-this-process">
+<span class="md-ellipsis">
+      Understanding the Purpose of This Process
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#conclusion">
+<span class="md-ellipsis">
+      Conclusion
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../dvc-cloud/">
+<span class="md-ellipsis">
+    DVC Cloud Storage
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../dvc-collaboration/">
+<span class="md-ellipsis">
+    DVC for Collaboration
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../naming-conventions/">
+<span class="md-ellipsis">
+    Naming Conventions Tutorial
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../windows-os-setup/">
+<span class="md-ellipsis">
+    Windows OS Setup
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../markdown-ml-model-documentation/">
+<span class="md-ellipsis">
+    Markdown Documentation for ML Models
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+<span class="md-ellipsis">
+    How-To Guides
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+            How-To Guides
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../how-to-guides/toc-how-to-guides/">
+<span class="md-ellipsis">
+    TOC
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../how-to-guides/dvc-set-up/">
+<span class="md-ellipsis">
+    DVC Setup
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../how-to-guides/dvc-communication/">
+<span class="md-ellipsis">
+    DVC Communication
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../how-to-guides/dvc-vscode-extension/">
+<span class="md-ellipsis">
+    DVC VS Code Extension
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../how-to-guides/offline-cookiecutter-setup/">
+<span class="md-ellipsis">
+    Offline Cookiecutter Setup
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../how-to-guides/git-branch-naming-standards/">
 <span class="md-ellipsis">
     Git Branch Naming Standards
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../commit-message-standards-ml/">
+<a class="md-nav__link" href="../../how-to-guides/commit-message-standards-ml/">
 <span class="md-ellipsis">
     Commit Message Standards in ML Projects
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../ml-data-folder-naming/">
+<a class="md-nav__link" href="../../how-to-guides/ml-data-folder-naming/">
 <span class="md-ellipsis">
     ML Data Folder Naming Guide
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../ml-data-naming-conventions/">
+<a class="md-nav__link" href="../../how-to-guides/ml-data-naming-conventions/">
 <span class="md-ellipsis">
     Data Files Naming Conventions
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../machine-learning-metadata-automation/">
+<a class="md-nav__link" href="../../how-to-guides/machine-learning-metadata-automation/">
 <span class="md-ellipsis">
     Automating Metadata Creation
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../github-actions-naming-convention/">
+<a class="md-nav__link" href="../../how-to-guides/github-actions-naming-convention/">
 <span class="md-ellipsis">
     Enforcing Naming Conventions with GitHub Actions
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../wandb-experiment-tracking-rag/">
+<a class="md-nav__link" href="../../how-to-guides/wandb-experiment-tracking-rag/">
 <span class="md-ellipsis">
     Best Practices for Experiment Tracking in RAG Projects Using Weights &amp; Biases
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../templates/">
+<a class="md-nav__link" href="../../how-to-guides/templates/">
 <span class="md-ellipsis">
     Templates for Issues/Stories and PRs
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../branching-strategy/">
+<a class="md-nav__link" href="../../how-to-guides/branching-strategy/">
 <span class="md-ellipsis">
     Branching Strategies
   </span>
@@ -518,50 +551,83 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
+<a class="md-nav__link" href="#introduction">
+<span class="md-ellipsis">
+      Introduction
+    </span>
+</a>
+<nav aria-label="Introduction" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
 <a class="md-nav__link" href="#prerequisites">
 <span class="md-ellipsis">
       Prerequisites
     </span>
 </a>
 </li>
+</ul>
+</nav>
+</li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#steps">
+<a class="md-nav__link" href="#scenario-updating-your-dataset">
 <span class="md-ellipsis">
-      Steps
+      Scenario: Updating Your Dataset
     </span>
 </a>
-<nav aria-label="Steps" class="md-nav">
+<nav aria-label="Scenario: Updating Your Dataset" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#1-downloading-the-cookiecutter-template">
+<a class="md-nav__link" href="#step-by-step-guide-to-manage-local-data-updates">
 <span class="md-ellipsis">
-      1. Downloading the Cookiecutter Template
+      Step-by-Step Guide to Manage Local Data Updates
+    </span>
+</a>
+<nav aria-label="Step-by-Step Guide to Manage Local Data Updates" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1-detecting-changes-with-dvc">
+<span class="md-ellipsis">
+      1. Detecting Changes with DVC
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#2-setting-up-your-environment">
+<a class="md-nav__link" href="#2-updating-the-data-version">
 <span class="md-ellipsis">
-      2. Setting Up Your Environment
+      2. Updating the Data Version
     </span>
 </a>
-</li>
+<nav aria-label="2. Updating the Data Version" class="md-nav">
+<ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#3-creating-your-project">
+<a class="md-nav__link" href="#tracking-the-updated-file">
 <span class="md-ellipsis">
-      3. Creating Your Project
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#4-finalizing-the-project">
-<span class="md-ellipsis">
-      4. Finalizing the Project
+      Tracking the Updated File
     </span>
 </a>
 </li>
 </ul>
 </nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#understanding-the-purpose-of-this-process">
+<span class="md-ellipsis">
+      Understanding the Purpose of This Process
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#conclusion">
+<span class="md-ellipsis">
+      Conclusion
+    </span>
+</a>
 </li>
 </ul>
 </nav>
@@ -570,59 +636,71 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="using-cookiecutter-without-direct-github-command">Using Cookiecutter Without Direct GitHub Command<a class="headerlink" href="#using-cookiecutter-without-direct-github-command" title="Permanent link">¶</a></h1>
+<h1 id="tutorial-managing-local-data-updates-with-dvc">Tutorial: Managing Local Data Updates with DVC<a class="headerlink" href="#tutorial-managing-local-data-updates-with-dvc" title="Permanent link">¶</a></h1>
+<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">¶</a></h2>
+<div class="admonition note">
+<p class="admonition-title">About this Tutorial</p>
+<p>In this tutorial, you'll learn the practical steps to manage and track changes to datasets locally using Data Version Control (DVC). We'll cover a real-world scenario of updating a dataset and tracking these changes with DVC.</p>
+</div>
+<h3 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">¶</a></h3>
+<ul>
+<li><span class="twemoji"><svg viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 1.75v11.5c0 .138.112.25.25.25h3.17a.75.75 0 0 1 0 1.5H2.75A1.75 1.75 0 0 1 1 13.25V1.75C1 .784 1.784 0 2.75 0h8.5C12.216 0 13 .784 13 1.75v7.736a.75.75 0 0 1-1.5 0V1.75a.25.25 0 0 0-.25-.25h-8.5a.25.25 0 0 0-.25.25Zm13.274 9.537v-.001l-4.557 4.45a.75.75 0 0 1-1.055-.008l-1.943-1.95a.75.75 0 0 1 1.062-1.058l1.419 1.425 4.026-3.932a.75.75 0 1 1 1.048 1.074ZM4.75 4h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1 0-1.5ZM4 7.75A.75.75 0 0 1 4.75 7h2a.75.75 0 0 1 0 1.5h-2A.75.75 0 0 1 4 7.75Z"></path></svg></span> Basic understanding of version control with Git.</li>
+<li><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12.876.64V.639l8.25 4.763c.541.313.875.89.875 1.515v9.525a1.75 1.75 0 0 1-.875 1.516l-8.25 4.762a1.748 1.748 0 0 1-1.75 0l-8.25-4.763a1.75 1.75 0 0 1-.875-1.515V6.917c0-.625.334-1.202.875-1.515L11.126.64a1.748 1.748 0 0 1 1.75 0Zm-1 1.298L4.251 6.34l7.75 4.474 7.75-4.474-7.625-4.402a.248.248 0 0 0-.25 0Zm.875 19.123 7.625-4.402a.25.25 0 0 0 .125-.216V7.639l-7.75 4.474ZM3.501 7.64v8.803c0 .09.048.172.125.216l7.625 4.402v-8.947Z"></path></svg></span> DVC installed and initialized in your project.</li>
+</ul>
+<h2 id="scenario-updating-your-dataset">Scenario: Updating Your Dataset<a class="headerlink" href="#scenario-updating-your-dataset" title="Permanent link">¶</a></h2>
+<p>Imagine you've made updates to a dataset file named <code>dataset.csv</code> that's
+already being tracked by DVC. Your task now is to manage these updates
+efficiently.</p>
+<h3 id="step-by-step-guide-to-manage-local-data-updates">Step-by-Step Guide to Manage Local Data Updates<a class="headerlink" href="#step-by-step-guide-to-manage-local-data-updates" title="Permanent link">¶</a></h3>
+<h4 id="1-detecting-changes-with-dvc">1. Detecting Changes with DVC<a class="headerlink" href="#1-detecting-changes-with-dvc" title="Permanent link">¶</a></h4>
 <div class="admonition tip">
-<p class="admonition-title">Goal</p>
-<p>Learn how to manually download and use a Cookiecutter template from GitHub when direct command line access to GitHub (<code>cookiecutter gh:...</code>) is not available.</p>
-</div>
-<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">¶</a></h2>
+<p class="admonition-title">How DVC Detects Changes</p>
 <ul>
-<li>Basic understanding of command line operations.</li>
-<li>Python and pip installed on your system.</li>
-<li>Access to GitHub through a web browser.</li>
+<li><strong>Checksum Mechanism</strong>: DVC uses checksums (hash values) to track file versions. A change in the file leads to a change in its checksum, signaling an update.</li>
 </ul>
-<h2 id="steps">Steps<a class="headerlink" href="#steps" title="Permanent link">¶</a></h2>
-<h3 id="1-downloading-the-cookiecutter-template">1. Downloading the Cookiecutter Template<a class="headerlink" href="#1-downloading-the-cookiecutter-template" title="Permanent link">¶</a></h3>
-<details class="note" open="open">
-<summary>Find and Download the Repository</summary>
-<ul>
-<li><strong>Find the Repository:</strong> Visit the GitHub page of the desired Cookiecutter template, e.g., <code>LLMsLab/cookiecutter-ai-flock</code>.</li>
-<li><strong>Download the Repository:</strong> Click on the 'Code' button, select 'Download ZIP', save, and extract it to a known location on your computer.</li>
-</ul>
-</details>
-<h3 id="2-setting-up-your-environment">2. Setting Up Your Environment<a class="headerlink" href="#2-setting-up-your-environment" title="Permanent link">¶</a></h3>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1"># Install Cookiecutter if not already installed</span>
-<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a>pip<span class="w"> </span>install<span class="w"> </span>cookiecutter
-<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a>
-<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="c1"># Navigate to your desired project directory</span>
-<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="nb">cd</span><span class="w"> </span>path/to/your/Projects
-</code></pre></div>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Replace <code>path/to/your/Projects</code> with the actual path where you want to create your project.</p>
 </div>
-<h3 id="3-creating-your-project">3. Creating Your Project<a class="headerlink" href="#3-creating-your-project" title="Permanent link">¶</a></h3>
-<details class="success" open="open">
-<summary>Run Cookiecutter and Input Project Details</summary>
-<p>Run Cookiecutter and provide the path to the unzipped template folder:</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a>cookiecutter<span class="w"> </span>path/to/unzipped/cookiecutter-ai-flock
+<h4 id="2-updating-the-data-version">2. Updating the Data Version<a class="headerlink" href="#2-updating-the-data-version" title="Permanent link">¶</a></h4>
+<h5 id="tracking-the-updated-file">Tracking the Updated File<a class="headerlink" href="#tracking-the-updated-file" title="Permanent link">¶</a></h5>
+<ol>
+<li>
+<p><strong>Run the DVC Add Command</strong>:
+   <div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>dvc<span class="w"> </span>add<span class="w"> </span>dataset.csv
 </code></pre></div>
-<p>Replace <code>path/to/unzipped/cookiecutter-ai-flock</code> with the actual path to the unzipped template. Follow the prompts to input details for your new project.</p>
-</details>
-<h3 id="4-finalizing-the-project">4. Finalizing the Project<a class="headerlink" href="#4-finalizing-the-project" title="Permanent link">¶</a></h3>
-<p>After running the command, a new directory with your project name will
-be created. Navigate to this directory to perform any additional setup
-required by the template.</p>
-<div class="admonition check">
-<p class="admonition-title">Conclusion</p>
-<p>You've successfully used a Cookiecutter template without direct GitHub command line integration. This approach is useful in environments with restricted internet access or limitations in using GitHub tools directly.</p>
+   This command updates the <code>.dvc</code> file with the new checksum for <code>dataset.csv</code>.</p>
+</li>
+<li>
+<p><strong>Commit the Changes in Git</strong>:
+   <div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a>git<span class="w"> </span>add<span class="w"> </span>dataset.csv.dvc
+<a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">"Update dataset.csv with new data"</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Push the Updated Data</strong>:
+   <div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a>dvc<span class="w"> </span>push
+</code></pre></div>
+   This step uploads the new version to your remote DVC storage.</p>
+</li>
+</ol>
+<h3 id="understanding-the-purpose-of-this-process">Understanding the Purpose of This Process<a class="headerlink" href="#understanding-the-purpose-of-this-process" title="Permanent link">¶</a></h3>
+<div class="admonition success">
+<p class="admonition-title">Key Benefits</p>
+<ul>
+<li><strong>Reproducibility</strong>: Ensures stages of your project can be reproduced with the exact data versions.</li>
+<li><strong>Collaboration</strong>: Maintains consistency in data across team environments.</li>
+<li><strong>Traceability</strong>: Allows tracking of data changes throughout the project's history.</li>
+</ul>
+</div>
+<h2 id="conclusion">Conclusion<a class="headerlink" href="#conclusion" title="Permanent link">¶</a></h2>
+<div class="admonition check-circle">
+<p class="admonition-title">Wrapping Up</p>
+<p>You've learned how DVC's integration with Git facilitates effective data versioning, ensuring consistent dataset management and traceable changes across your team. While focused on local data updates, remember that cloud-based updates might follow a slightly different process.</p>
 </div>
 <aside class="md-source-file">
 <span class="md-source-file__fact">
 <span class="md-icon" title="Last update">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 26, 2024</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 29, 2024</span>
 </span>
 </aside>
 </article>

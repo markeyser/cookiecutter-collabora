@@ -1,0 +1,1396 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="https://llmslab.github.io/cookiecutter-ai-flock/how-to-guides/wandb-experiment-tracking-rag/" rel="canonical"/>
+<link href="../github-actions-naming-convention/" rel="prev"/>
+<link href="../templates/" rel="next"/>
+<link href="../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.5.3, mkdocs-material-9.5.4" name="generator"/>
+<title>Best Practices for Experiment Tracking in RAG Projects Using Weights &amp; Biases - Cookiecutter Ai Flock</title>
+<link href="../../assets/stylesheets/main.50c56a3b.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<link href="../../assets/_mkdocstrings.css" rel="stylesheet"/>
+<link href="../../stylesheets/extra.css" rel="stylesheet"/>
+<link href="../../assets/css/custom.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+ <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+<body data-md-color-accent="indigo" data-md-color-primary="indigo" data-md-color-scheme="slate" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#ml-experiments-life-cycle-with-weights-biases">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="Cookiecutter Ai Flock" class="md-header__button md-logo" data-md-component="logo" href="../.." title="Cookiecutter Ai Flock">
+<img alt="logo" src="../../assets/logo.png"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Cookiecutter Ai Flock
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Best Practices for Experiment Tracking in RAG Projects Using Weights &amp; Biases
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Switch to light mode" class="md-option" data-md-color-accent="indigo" data-md-color-media="" data-md-color-primary="indigo" data-md-color-scheme="slate" id="__palette_0" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_0" hidden="" title="Switch to light mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"></path></svg>
+</label>
+</form>
+<script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<div class="md-header__source">
+<a class="md-source" data-md-component="source" href="https://github.com/LLMsLab/cookiecutter-ai-flock" title="Go to repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path></svg>
+</div>
+<div class="md-source__repository">
+    llmslab.github.io/ccookiecutter-genai-ml-ai/
+  </div>
+</a>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Cookiecutter Ai Flock" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="Cookiecutter Ai Flock">
+<img alt="logo" src="../../assets/logo.png"/>
+</a>
+    Cookiecutter Ai Flock
+  </label>
+<div class="md-nav__source">
+<a class="md-source" data-md-component="source" href="https://github.com/LLMsLab/cookiecutter-ai-flock" title="Go to repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path></svg>
+</div>
+<div class="md-source__repository">
+    llmslab.github.io/ccookiecutter-genai-ml-ai/
+  </div>
+</a>
+</div>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../..">
+<span class="md-ellipsis">
+    Home
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+<span class="md-ellipsis">
+    Tutorials
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+            Tutorials
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tutorials/toc-tutorials/">
+<span class="md-ellipsis">
+    TOC
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tutorials/black-formatter/">
+<span class="md-ellipsis">
+    Black Formatter
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tutorials/ruff-linter/">
+<span class="md-ellipsis">
+    Ruff Linter
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tutorials/poetry/">
+<span class="md-ellipsis">
+    Poetry Package Management
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tutorials/mkdocs-docs/">
+<span class="md-ellipsis">
+    MkDocs Documentation
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tutorials/hydra-config/">
+<span class="md-ellipsis">
+    Hydra Configuration
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tutorials/gitignore/">
+<span class="md-ellipsis">
+    Gitignore File Creation
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tutorials/data/">
+<span class="md-ellipsis">
+    Managing Data
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tutorials/data-version-control/">
+<span class="md-ellipsis">
+    Data Version Control
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tutorials/dvc-local/">
+<span class="md-ellipsis">
+    DVC Local Workflow
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tutorials/dvc-cloud/">
+<span class="md-ellipsis">
+    DVC Cloud Storage
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tutorials/dvc-collaboration/">
+<span class="md-ellipsis">
+    DVC for Collaboration
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tutorials/naming-conventions/">
+<span class="md-ellipsis">
+    Naming Conventions Tutorial
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tutorials/windows-os-setup/">
+<span class="md-ellipsis">
+    Windows OS Setup
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tutorials/markdown-ml-model-documentation/">
+<span class="md-ellipsis">
+    Markdown Documentation for ML Models
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+<span class="md-ellipsis">
+    How-To Guides
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+            How-To Guides
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../toc-how-to-guides/">
+<span class="md-ellipsis">
+    TOC
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../dvc-set-up/">
+<span class="md-ellipsis">
+    DVC Setup
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../dvc-communication/">
+<span class="md-ellipsis">
+    DVC Communication
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../dvc-vscode-extension/">
+<span class="md-ellipsis">
+    DVC VS Code Extension
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../offline-cookiecutter-setup/">
+<span class="md-ellipsis">
+    Offline Cookiecutter Setup
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../git-branch-naming-standards/">
+<span class="md-ellipsis">
+    Git Branch Naming Standards
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../commit-message-standards-ml/">
+<span class="md-ellipsis">
+    Commit Message Standards in ML Projects
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ml-data-folder-naming/">
+<span class="md-ellipsis">
+    ML Data Folder Naming Guide
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ml-data-naming-conventions/">
+<span class="md-ellipsis">
+    Data Files Naming Conventions
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../machine-learning-metadata-automation/">
+<span class="md-ellipsis">
+    Automating Metadata Creation
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../github-actions-naming-convention/">
+<span class="md-ellipsis">
+    Enforcing Naming Conventions with GitHub Actions
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    Best Practices for Experiment Tracking in RAG Projects Using Weights &amp; Biases
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    Best Practices for Experiment Tracking in RAG Projects Using Weights &amp; Biases
+  </span>
+</a>
+<nav aria-label="On this page" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#how-to-create-a-github-issue-or-a-jira-story-for-your-experiment">
+<span class="md-ellipsis">
+      How to Create a GitHub Issue or a Jira Story for Your Experiment
+    </span>
+</a>
+<nav aria-label="How to Create a GitHub Issue or a Jira Story for Your Experiment" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#preparation">
+<span class="md-ellipsis">
+      Preparation
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#documentation-steps">
+<span class="md-ellipsis">
+      Documentation Steps
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#how-to-create-a-new-experiment-branch">
+<span class="md-ellipsis">
+      How to Create a New Experiment Branch
+    </span>
+</a>
+<nav aria-label="How to Create a New Experiment Branch" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#create-a-naming-convention">
+<span class="md-ellipsis">
+      Create a Naming Convention
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#how-to-develop-python-code-for-ml-experiments">
+<span class="md-ellipsis">
+      How to Develop Python Code for ML Experiments
+    </span>
+</a>
+<nav aria-label="How to Develop Python Code for ML Experiments" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#preparing-for-development">
+<span class="md-ellipsis">
+      Preparing for Development
+    </span>
+</a>
+<nav aria-label="Preparing for Development" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#review-experiment-documentation">
+<span class="md-ellipsis">
+      Review Experiment Documentation
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#conduct-technical-research">
+<span class="md-ellipsis">
+      Conduct Technical Research
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#implementing-your-experiment">
+<span class="md-ellipsis">
+      Implementing Your Experiment
+    </span>
+</a>
+<nav aria-label="Implementing Your Experiment" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#data-preparation">
+<span class="md-ellipsis">
+      Data Preparation
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#model-integration">
+<span class="md-ellipsis">
+      Model Integration
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#configuration-and-parameters">
+<span class="md-ellipsis">
+      Configuration and Parameters
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#logging-and-monitoring">
+<span class="md-ellipsis">
+      Logging and Monitoring
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ensuring-code-quality-and-reliability">
+<span class="md-ellipsis">
+      Ensuring Code Quality and Reliability
+    </span>
+</a>
+<nav aria-label="Ensuring Code Quality and Reliability" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#write-unit-tests">
+<span class="md-ellipsis">
+      Write Unit Tests
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#conduct-integration-testing">
+<span class="md-ellipsis">
+      Conduct Integration Testing
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#perform-experiment-runs">
+<span class="md-ellipsis">
+      Perform Experiment Runs
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#how-to-configure-and-track-ml-experiments-with-weights-biases">
+<span class="md-ellipsis">
+      How to Configure and Track ML Experiments with Weights &amp; Biases
+    </span>
+</a>
+<nav aria-label="How to Configure and Track ML Experiments with Weights &amp; Biases" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#setting-up-wb-for-your-experiments">
+<span class="md-ellipsis">
+      Setting Up W&amp;B for Your Experiments
+    </span>
+</a>
+<nav aria-label="Setting Up W&amp;B for Your Experiments" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#create-a-sweep-configuration">
+<span class="md-ellipsis">
+      Create a Sweep Configuration
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#adapt-your-code-for-wb-integration">
+<span class="md-ellipsis">
+      Adapt Your Code for W&amp;B Integration
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#experiment-tracking-best-practices">
+<span class="md-ellipsis">
+      Experiment Tracking Best Practices
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#how-to-run-experiments-and-manage-outcomes-with-weights-biases">
+<span class="md-ellipsis">
+      How to Run Experiments and Manage Outcomes with Weights &amp; Biases
+    </span>
+</a>
+<nav aria-label="How to Run Experiments and Manage Outcomes with Weights &amp; Biases" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#initiating-experiments-with-wb">
+<span class="md-ellipsis">
+      Initiating Experiments with W&amp;B
+    </span>
+</a>
+<nav aria-label="Initiating Experiments with W&amp;B" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#start-your-wb-runs">
+<span class="md-ellipsis">
+      Start Your W&amp;B Runs
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#automate-with-wb-sweeps">
+<span class="md-ellipsis">
+      Automate with W&amp;B Sweeps
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#monitor-and-analyze-results">
+<span class="md-ellipsis">
+      Monitor and Analyze Results
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#experiment-branch-strategy">
+<span class="md-ellipsis">
+      Experiment Branch Strategy
+    </span>
+</a>
+<nav aria-label="Experiment Branch Strategy" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#for-successful-experiments">
+<span class="md-ellipsis">
+      For Successful Experiments
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#for-unsuccessful-experiments">
+<span class="md-ellipsis">
+      For Unsuccessful Experiments
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#best-practices">
+<span class="md-ellipsis">
+      Best Practices
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../templates/">
+<span class="md-ellipsis">
+    Templates for Issues/Stories and PRs
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../branching-strategy/">
+<span class="md-ellipsis">
+    Branching Strategies
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+<span class="md-ellipsis">
+    Explanation
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+            Explanation
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../explanation/toc-explanation/">
+<span class="md-ellipsis">
+    TOC
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../explanation/dvc-understanding-dvs/">
+<span class="md-ellipsis">
+    Understanding DVC
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../explanation/dvc-git-branches/">
+<span class="md-ellipsis">
+    Git Branches in DVC
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../explanation/github-naming-conventions/">
+<span class="md-ellipsis">
+    Effective GitHub Naming Conventions
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../explanation/ml-naming-conventions/">
+<span class="md-ellipsis">
+    Notebook and Script Naming Conventions in ML Projects
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../explanation/model-persistence-naming-conventions/">
+<span class="md-ellipsis">
+    Model Persistence File Naming Conventions
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../explanation/naming-conventions/">
+<span class="md-ellipsis">
+    Introduction to Naming Conventions for AI Project Assets
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+<span class="md-ellipsis">
+    API Reference
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_5_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+            API Reference
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../api-reference/toc-api-reference/">
+<span class="md-ellipsis">
+    TOC
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="On this page" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#how-to-create-a-github-issue-or-a-jira-story-for-your-experiment">
+<span class="md-ellipsis">
+      How to Create a GitHub Issue or a Jira Story for Your Experiment
+    </span>
+</a>
+<nav aria-label="How to Create a GitHub Issue or a Jira Story for Your Experiment" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#preparation">
+<span class="md-ellipsis">
+      Preparation
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#documentation-steps">
+<span class="md-ellipsis">
+      Documentation Steps
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#how-to-create-a-new-experiment-branch">
+<span class="md-ellipsis">
+      How to Create a New Experiment Branch
+    </span>
+</a>
+<nav aria-label="How to Create a New Experiment Branch" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#create-a-naming-convention">
+<span class="md-ellipsis">
+      Create a Naming Convention
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#how-to-develop-python-code-for-ml-experiments">
+<span class="md-ellipsis">
+      How to Develop Python Code for ML Experiments
+    </span>
+</a>
+<nav aria-label="How to Develop Python Code for ML Experiments" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#preparing-for-development">
+<span class="md-ellipsis">
+      Preparing for Development
+    </span>
+</a>
+<nav aria-label="Preparing for Development" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#review-experiment-documentation">
+<span class="md-ellipsis">
+      Review Experiment Documentation
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#conduct-technical-research">
+<span class="md-ellipsis">
+      Conduct Technical Research
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#implementing-your-experiment">
+<span class="md-ellipsis">
+      Implementing Your Experiment
+    </span>
+</a>
+<nav aria-label="Implementing Your Experiment" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#data-preparation">
+<span class="md-ellipsis">
+      Data Preparation
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#model-integration">
+<span class="md-ellipsis">
+      Model Integration
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#configuration-and-parameters">
+<span class="md-ellipsis">
+      Configuration and Parameters
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#logging-and-monitoring">
+<span class="md-ellipsis">
+      Logging and Monitoring
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ensuring-code-quality-and-reliability">
+<span class="md-ellipsis">
+      Ensuring Code Quality and Reliability
+    </span>
+</a>
+<nav aria-label="Ensuring Code Quality and Reliability" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#write-unit-tests">
+<span class="md-ellipsis">
+      Write Unit Tests
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#conduct-integration-testing">
+<span class="md-ellipsis">
+      Conduct Integration Testing
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#perform-experiment-runs">
+<span class="md-ellipsis">
+      Perform Experiment Runs
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#how-to-configure-and-track-ml-experiments-with-weights-biases">
+<span class="md-ellipsis">
+      How to Configure and Track ML Experiments with Weights &amp; Biases
+    </span>
+</a>
+<nav aria-label="How to Configure and Track ML Experiments with Weights &amp; Biases" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#setting-up-wb-for-your-experiments">
+<span class="md-ellipsis">
+      Setting Up W&amp;B for Your Experiments
+    </span>
+</a>
+<nav aria-label="Setting Up W&amp;B for Your Experiments" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#create-a-sweep-configuration">
+<span class="md-ellipsis">
+      Create a Sweep Configuration
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#adapt-your-code-for-wb-integration">
+<span class="md-ellipsis">
+      Adapt Your Code for W&amp;B Integration
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#experiment-tracking-best-practices">
+<span class="md-ellipsis">
+      Experiment Tracking Best Practices
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#how-to-run-experiments-and-manage-outcomes-with-weights-biases">
+<span class="md-ellipsis">
+      How to Run Experiments and Manage Outcomes with Weights &amp; Biases
+    </span>
+</a>
+<nav aria-label="How to Run Experiments and Manage Outcomes with Weights &amp; Biases" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#initiating-experiments-with-wb">
+<span class="md-ellipsis">
+      Initiating Experiments with W&amp;B
+    </span>
+</a>
+<nav aria-label="Initiating Experiments with W&amp;B" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#start-your-wb-runs">
+<span class="md-ellipsis">
+      Start Your W&amp;B Runs
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#automate-with-wb-sweeps">
+<span class="md-ellipsis">
+      Automate with W&amp;B Sweeps
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#monitor-and-analyze-results">
+<span class="md-ellipsis">
+      Monitor and Analyze Results
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#experiment-branch-strategy">
+<span class="md-ellipsis">
+      Experiment Branch Strategy
+    </span>
+</a>
+<nav aria-label="Experiment Branch Strategy" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#for-successful-experiments">
+<span class="md-ellipsis">
+      For Successful Experiments
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#for-unsuccessful-experiments">
+<span class="md-ellipsis">
+      For Unsuccessful Experiments
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#best-practices">
+<span class="md-ellipsis">
+      Best Practices
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1 id="ml-experiments-life-cycle-with-weights-biases">ML Experiments Life-Cycle with Weights &amp; Biases<a class="headerlink" href="#ml-experiments-life-cycle-with-weights-biases" title="Permanent link">¶</a></h1>
+<p>Manage the life-cycle of your AI experiments effectively using Weights &amp;
+Biases by following this structured guide. Ensure reproducibility,
+scalability, and collaboration through each phase of your experiment.</p>
+<div class="admonition note">
+<p class="admonition-title">Getting Started</p>
+<p>Before you begin documenting your experiment, familiarize yourself with the goals and hypotheses of your experiment. This will enable you to create clear and effective documentation.</p>
+</div>
+<h2 id="how-to-create-a-github-issue-or-a-jira-story-for-your-experiment">How to Create a GitHub Issue or a Jira Story for Your Experiment<a class="headerlink" href="#how-to-create-a-github-issue-or-a-jira-story-for-your-experiment" title="Permanent link">¶</a></h2>
+<p>Documenting your experiment's intent by opening a GitHub issue or Jira
+story is the first crucial step in the experiment life-cycle.</p>
+<div class="admonition warning">
+<p class="admonition-title">Create an Issue/Story for Each Family of Experiments</p>
+<p>This ensures consistency and traceability within your 
+project.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Use a Template</p>
+<p>Select the following a pre-defined template that fits experiment
+documentation: <a href="../templates/">Experiment Issue/Story Template</a></p>
+</div>
+<h3 id="preparation">Preparation<a class="headerlink" href="#preparation" title="Permanent link">¶</a></h3>
+<ol>
+<li><strong>Understand the Experiment</strong>:
+   Before you start documenting, ensure you have a clear understanding
+   of the experiment's goals and the methods you'll use.</li>
+</ol>
+<h3 id="documentation-steps">Documentation Steps<a class="headerlink" href="#documentation-steps" title="Permanent link">¶</a></h3>
+<ol>
+<li>
+<p><strong>Create a New Issue/Story</strong>: Navigate to your project's GitHub
+   repository or Jira board and initiate a new issue or story.</p>
+</li>
+<li>
+<p><strong>Use a Template</strong>: If available use a pre-defined template that
+   fits experiment documentation.</p>
+</li>
+<li>
+<p><strong>Title Your Issue/Story</strong>: Start with a succinct and descriptive
+   title, prefixed with 'experiment/' followed by a brief identifier and
+   issue number or Jira key.</p>
+</li>
+<li>
+<p><strong>Describe Your Experiment</strong>: Provide a detailed description of the
+   experiment's background, objectives, and hypothesis.</p>
+</li>
+<li>
+<p><strong>List Your Goals</strong>: Clearly outline the specific goals or questions
+   your experiment aims to address.</p>
+</li>
+<li>
+<p><strong>Link to Resources</strong>: Include links to any relevant documents, code
+   repositories, or previous experiments.</p>
+</li>
+<li>
+<p><strong>Ensure Visibility</strong>: Make sure all potential stakeholders have
+   visibility and encourage team members to comment.</p>
+</li>
+<li>
+<p><strong>Submit the Documentation</strong>: Once all details are filled in, submit
+   your issue or story.</p>
+</li>
+</ol>
+<p>To reformat the guide for branch naming and management using the MkDocs Material theme, you would utilize a variety of the theme's features to enhance the presentation and usability of the document. Here's how you could write the markdown with Material for MkDocs features:</p>
+<h2 id="how-to-create-a-new-experiment-branch">How to Create a New Experiment Branch<a class="headerlink" href="#how-to-create-a-new-experiment-branch" title="Permanent link">¶</a></h2>
+<p>This guide will provide a structured approach to creating a consistent
+branch naming convention for your experiment.</p>
+<div class="admonition warning">
+<p class="admonition-title">Create a New Branch for Each Family of Experiments.</p>
+<p>This ensures consistency and traceability within your project.</p>
+</div>
+<h3 id="create-a-naming-convention">Create a Naming Convention<a class="headerlink" href="#create-a-naming-convention" title="Permanent link">¶</a></h3>
+<p>Structure your branch names to include the category, description, and
+issue or Jira key.</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>experiment/&lt;description&gt;-&lt;issue_number_or_jira_key&gt;
+</code></pre></div>
+<p>For example:</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a>experiment/rag-fusion-GH15
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Naming Convention</p>
+<p>Choose names that are short yet descriptive to convey the branch's
+purpose at a glance and provide context for the work being 
+done.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Best Practices for Experiment Branch Naming Conventions</p>
+<p>For detailed insights and guidelines on establishing effective naming conventions for your experiment branches, please refer to the following resource: <a href="../github-actions-naming-convention/">Experiment Branch Naming Convention</a>.</p>
+</div>
+<h2 id="how-to-develop-python-code-for-ml-experiments">How to Develop Python Code for ML Experiments<a class="headerlink" href="#how-to-develop-python-code-for-ml-experiments" title="Permanent link">¶</a></h2>
+<p>Developing Python code for machine learning (ML) experiments is a
+critical phase where your experimental concepts are transformed into
+executable models and analyses. This how-to guide outlines a structured
+approach to code development, focusing on integrating advanced ML
+components like LangChain RAG Fusion into your projects.</p>
+<h3 id="preparing-for-development">Preparing for Development<a class="headerlink" href="#preparing-for-development" title="Permanent link">¶</a></h3>
+<p>Before diving into coding, it's essential to align your development work
+with the experiment's goals and requirements.</p>
+<h4 id="review-experiment-documentation">Review Experiment Documentation<a class="headerlink" href="#review-experiment-documentation" title="Permanent link">¶</a></h4>
+<ul>
+<li><strong>Objective</strong>: Ensure your development efforts are guided by the
+  experiment's defined goals and success criteria.</li>
+<li><strong>Action</strong>: Revisit the experiment's description, goals, and success
+  criteria detailed in the GitHub issue or Jira story.</li>
+</ul>
+<h4 id="conduct-technical-research">Conduct Technical Research<a class="headerlink" href="#conduct-technical-research" title="Permanent link">¶</a></h4>
+<ul>
+<li><strong>Objective</strong>: Gain a deep understanding of the technologies and
+  components you plan to integrate, such as LangChain RAG Fusion.</li>
+<li><strong>Action</strong>: Review technical documentation, research papers, and
+  source code related to the technologies in use.</li>
+</ul>
+<h3 id="implementing-your-experiment">Implementing Your Experiment<a class="headerlink" href="#implementing-your-experiment" title="Permanent link">¶</a></h3>
+<p>Follow these steps to implement your experiment within your Python
+codebase.</p>
+<h4 id="data-preparation">Data Preparation<a class="headerlink" href="#data-preparation" title="Permanent link">¶</a></h4>
+<ul>
+<li><strong>Objective</strong>: Prepare your data to meet the input requirements of
+  your ML components.</li>
+<li><strong>Action</strong>:</li>
+<li>Write scripts for data preprocessing.</li>
+<li>Ensure data formats are compatible with LangChain RAG Fusion.</li>
+</ul>
+<h4 id="model-integration">Model Integration<a class="headerlink" href="#model-integration" title="Permanent link">¶</a></h4>
+<ul>
+<li><strong>Objective</strong>: Seamlessly integrate the LangChain RAG Fusion component
+  into your ML pipeline.</li>
+<li><strong>Action</strong>:</li>
+<li>Adapt existing code to accommodate the new component.</li>
+<li>Define new interfaces or integrate third-party libraries as
+     necessary.</li>
+</ul>
+<h4 id="configuration-and-parameters">Configuration and Parameters<a class="headerlink" href="#configuration-and-parameters" title="Permanent link">¶</a></h4>
+<p>At this stage, identify your experiment's hyperparameters and hardcode
+them into your Python code. This decision is crucial for the
+experiment's setup.</p>
+<div class="admonition warning">
+<p class="admonition-title">Identify Hyperparameters</p>
+<p>Determine your experiment's hyperparameters now. We'll introduce
+dynamic parameter configuration with Weights &amp; Biases (W&amp;B) in the
+next section.</p>
+</div>
+<h4 id="logging-and-monitoring">Logging and Monitoring<a class="headerlink" href="#logging-and-monitoring" title="Permanent link">¶</a></h4>
+<p>Understanding what metrics and outputs to log is essential. The detailed
+setup for logging and monitoring will be covered next, using W&amp;B.</p>
+<div class="admonition warning">
+<p class="admonition-title">Logging Setup Ahead</p>
+<p>Prepare for logging by identifying key metrics. Dynamic logging
+and monitoring with W&amp;B will be detailed in the following section.</p>
+</div>
+<h3 id="ensuring-code-quality-and-reliability">Ensuring Code Quality and Reliability<a class="headerlink" href="#ensuring-code-quality-and-reliability" title="Permanent link">¶</a></h3>
+<p>Maintain high standards of code quality and reliability throughout the
+development process.</p>
+<h4 id="write-unit-tests">Write Unit Tests<a class="headerlink" href="#write-unit-tests" title="Permanent link">¶</a></h4>
+<ul>
+<li><strong>Objective</strong>: Verify that individual components of your code operate
+  correctly.</li>
+<li><strong>Action</strong>:</li>
+<li>Create unit tests for critical functions and modules.</li>
+<li>Use a testing framework like pytest to automate testing.</li>
+</ul>
+<h4 id="conduct-integration-testing">Conduct Integration Testing<a class="headerlink" href="#conduct-integration-testing" title="Permanent link">¶</a></h4>
+<ul>
+<li><strong>Objective</strong>: Ensure that different components of your system work
+  together as intended.</li>
+<li><strong>Action</strong>:</li>
+<li>Design and run integration tests after integrating new components.</li>
+<li>Pay special attention to the interaction between LangChain RAG
+     Fusion and other parts of your system.</li>
+</ul>
+<h4 id="perform-experiment-runs">Perform Experiment Runs<a class="headerlink" href="#perform-experiment-runs" title="Permanent link">¶</a></h4>
+<ul>
+<li><strong>Objective</strong>: Validate the overall setup and functionality of your
+  experiment.</li>
+<li><strong>Action</strong>:</li>
+<li>Conduct initial small-scale runs to test the experimental setup.</li>
+<li>Adjust code and configurations based on initial outcomes.</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Continuous Improvement</p>
+<p>Treat the development process as iterative. Use insights from
+testing and initial experiment runs to continuously refine and
+improve your code.</p>
+</div>
+<p>By following this guide, you'll develop Python code for your ML
+experiments that is not only aligned with your scientific goals but also
+adheres to best practices in software engineering and ML research.</p>
+<h2 id="how-to-configure-and-track-ml-experiments-with-weights-biases">How to Configure and Track ML Experiments with Weights &amp; Biases<a class="headerlink" href="#how-to-configure-and-track-ml-experiments-with-weights-biases" title="Permanent link">¶</a></h2>
+<p>Configuring your machine learning experiments with Weights &amp; Biases
+(W&amp;B) is crucial for effective tracking, logging, and optimization.
+Follow this guide to set up W&amp;B for managing and automating your
+experiments.</p>
+<h3 id="setting-up-wb-for-your-experiments">Setting Up W&amp;B for Your Experiments<a class="headerlink" href="#setting-up-wb-for-your-experiments" title="Permanent link">¶</a></h3>
+<h4 id="create-a-sweep-configuration">Create a Sweep Configuration<a class="headerlink" href="#create-a-sweep-configuration" title="Permanent link">¶</a></h4>
+<ol>
+<li><strong>Objective</strong>: Define the experiment's hyperparameters and their
+   search space.</li>
+<li><strong>Action</strong>: Write a <code>sweep_config.yaml</code> file detailing parameters and
+   search strategies (grid, random, Bayesian).</li>
+<li><strong>Version Control</strong>: Ensure this file and other configuration files
+   are under version control for reproducibility.</li>
+</ol>
+<h4 id="adapt-your-code-for-wb-integration">Adapt Your Code for W&amp;B Integration<a class="headerlink" href="#adapt-your-code-for-wb-integration" title="Permanent link">¶</a></h4>
+<p>Integrating W&amp;B into your Python code allows dynamic parameter
+adjustment and comprehensive metric logging.</p>
+<ol>
+<li><strong>Dynamic Parameters</strong>:</li>
+<li>Modify code to fetch and use parameters from W&amp;B dynamically.</li>
+<li>
+<p>Utilize the W&amp;B API to implement this functionality.</p>
+</li>
+<li>
+<p><strong>Logging Metrics</strong>:</p>
+</li>
+<li>Enhance your code to log training and evaluation metrics to W&amp;B.</li>
+<li>
+<p>Ensure both outcome metrics and intermediate metrics are logged for
+     in-depth analysis.</p>
+</li>
+<li>
+<p><strong>Automate Hyperparameter Search with Sweeps</strong>:</p>
+</li>
+<li>Set up W&amp;B Sweeps in your code for automated hyperparameter
+     optimization.</li>
+<li>Handle sweep initialization, metric reporting, and parameter
+     updates within your code.</li>
+</ol>
+<div class="admonition warning">
+<p class="admonition-title">Double-Check Experiment Reproducibility</p>
+<p>Ensure you're logging <strong>all</strong> necessary components to guarantee
+experiment reproducibility. This includes:</p>
+<ul>
+<li><strong>All Metrics</strong>: Verify that every relevant metric is being captured.</li>
+<li><strong>Modified Python Scripts</strong>: Keep track of any changes in your Python scripts.</li>
+<li><strong>Configuration Files</strong>: Ensure all configuration files are logged and version-controlled.</li>
+<li><strong>Notes and Labels</strong>: Add descriptive notes and labels to your logged data for clarity.</li>
+</ul>
+<p>Reproducibility is key to validating and sharing your ML experiments. Missing data can lead to incomplete insights and challenges in replicating results. Always review your logging setup to ensure comprehensive coverage of your experiment's artifacts.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Best Practice: Use W&amp;B's API Documentation</p>
+<p>Refer to W&amp;B's API documentation for detailed instructions on
+implementing these features in your code.</p>
+</div>
+<h3 id="experiment-tracking-best-practices">Experiment Tracking Best Practices<a class="headerlink" href="#experiment-tracking-best-practices" title="Permanent link">¶</a></h3>
+<p>Maximize the benefits of W&amp;B for your ML experiments with these tracking
+best practices.</p>
+<ol>
+<li><strong>Comprehensive Logging</strong>:</li>
+<li>
+<p>Log every relevant piece of experiment data, including
+     configurations, results, and binaries.</p>
+</li>
+<li>
+<p><strong>Iterative Improvement</strong>:</p>
+</li>
+<li>
+<p>Use logged data to iteratively refine your experiments, aiming for
+     continuous improvement.</p>
+</li>
+<li>
+<p><strong>Collaboration</strong>:</p>
+</li>
+<li>Share experiment results on W&amp;B's platform for collaborative
+     analysis and discussion.</li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Collaboration is Key</p>
+<p>Encourage team engagement by sharing insights and discussing
+experiment results through W&amp;B.</p>
+</div>
+<p>Integrating W&amp;B into your ML experiment workflow enhances tracking,
+optimization, and collaboration. By following this guide, you'll
+establish a solid foundation for managing your experiments, leading to
+more efficient and impactful research outcomes.</p>
+<h2 id="how-to-run-experiments-and-manage-outcomes-with-weights-biases">How to Run Experiments and Manage Outcomes with Weights &amp; Biases<a class="headerlink" href="#how-to-run-experiments-and-manage-outcomes-with-weights-biases" title="Permanent link">¶</a></h2>
+<p>Running experiments with Weights &amp; Biases (W&amp;B) and managing the outcomes efficiently is crucial for the success of machine learning projects. This guide provides a structured approach to executing experiments and handling the results, whether integrating successful outcomes into production or documenting learnings from unsuccessful attempts.</p>
+<h3 id="initiating-experiments-with-wb">Initiating Experiments with W&amp;B<a class="headerlink" href="#initiating-experiments-with-wb" title="Permanent link">¶</a></h3>
+<h4 id="start-your-wb-runs">Start Your W&amp;B Runs<a class="headerlink" href="#start-your-wb-runs" title="Permanent link">¶</a></h4>
+<ol>
+<li><strong>Objective</strong>: Log parameters, metrics, and outcomes of your experiment.</li>
+<li><strong>Action</strong>: Ensure your code initializes a W&amp;B run at the start of your experiment script.</li>
+</ol>
+<h4 id="automate-with-wb-sweeps">Automate with W&amp;B Sweeps<a class="headerlink" href="#automate-with-wb-sweeps" title="Permanent link">¶</a></h4>
+<ol>
+<li><strong>Objective</strong>: Optimize hyperparameters and manage multiple configurations efficiently.</li>
+<li><strong>Action</strong>: Set up W&amp;B Sweeps in your <code>sweep_config.yaml</code> and initiate them for automated parameter exploration.</li>
+</ol>
+<h4 id="monitor-and-analyze-results">Monitor and Analyze Results<a class="headerlink" href="#monitor-and-analyze-results" title="Permanent link">¶</a></h4>
+<ol>
+<li><strong>Objective</strong>: Keep track of experiment progress and analyze data for insights.</li>
+<li><strong>Action</strong>: Use the W&amp;B dashboard for real-time monitoring and result analysis.</li>
+</ol>
+<h3 id="experiment-branch-strategy">Experiment Branch Strategy<a class="headerlink" href="#experiment-branch-strategy" title="Permanent link">¶</a></h3>
+<h4 id="for-successful-experiments">For Successful Experiments<a class="headerlink" href="#for-successful-experiments" title="Permanent link">¶</a></h4>
+<pre class="mermaid"><code>%%{init: { 'logLevel': 'debug', 'theme': 'base', 'gitGraph': {'rotateCommitLabel': true} } }%%
+gitGraph TB:
+    commit tag: "Initial commit"
+    branch experiment
+    checkout experiment
+    commit tag: "Experiment changes"
+    commit tag: "Interate Experiment"
+    commit tag: "Successful approach found"
+    checkout main
+    commit tag: "Changes on master"
+    merge experiment tag: "Merge successful experiment into master"
+    commit tag: "Changes on master"</code></pre>
+<ol>
+<li><strong>Opening Pull Requests</strong>: Prepare and open a PR for successful experiment branches, clearly documenting the experiment and its findings.</li>
+<li><strong>Peer Review</strong>: Undergo a review process, providing links to W&amp;B pages for detailed metrics.</li>
+<li><strong>Documentation</strong>: Record the experiment's methodology and findings in the project's main documentation.</li>
+</ol>
+<h4 id="for-unsuccessful-experiments">For Unsuccessful Experiments<a class="headerlink" href="#for-unsuccessful-experiments" title="Permanent link">¶</a></h4>
+<pre class="mermaid"><code>%%{init: { 'logLevel': 'debug', 'theme': 'base' } }%%
+gitGraph TB:
+  commit tag: "Initial commit"
+  branch experiment
+  checkout experiment
+  commit tag: "First Commit on experiment"
+  commit tag: "Iterate Experiment"
+  commit tag: "Failed Experiment"</code></pre>
+<ol>
+<li><strong>Keep Branches Open</strong>: Retain the experimental branch open for documentation and to avoid repeating unsuccessful experiments.</li>
+<li><strong>Analysis and Documentation</strong>: Document the approach, results, and learnings from the experiment in the repository.</li>
+</ol>
+<div class="admonition info">
+<p class="admonition-title">Comprehensive Guide to Branch Strategy</p>
+<p>For an in-depth exploration of best practices and strategies for managing branches within your projects, consult our dedicated guide: <a href="../branching-strategy/">Branch Strategy</a>.</p>
+</div>
+<h3 id="best-practices">Best Practices<a class="headerlink" href="#best-practices" title="Permanent link">¶</a></h3>
+<ul>
+<li><strong>Batch Running and Automation</strong>: Use scripts or CI/CD pipelines for automating experiments, especially when leveraging W&amp;B Sweeps.</li>
+<li><strong>Iterative Improvement</strong>: Apply insights from all experiments to refine future experimental designs.</li>
+<li><strong>Collaboration and Sharing</strong>: Promote a collaborative environment by sharing results and insights within the team and using W&amp;B for discussions.</li>
+</ul>
+<aside class="md-source-file">
+<span class="md-source-file__fact">
+<span class="md-icon" title="Last update">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"></path></svg>
+</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 5, 2024</span>
+</span>
+</aside>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+<div class="md-social">
+<a class="md-social__link" href="https://github.com/LLMsLab/cookiecutter-ai-flock" rel="noopener" target="_blank" title="github.com">
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../..", "features": ["content.code.annotate"], "search": "../../assets/javascripts/workers/search.c011b7c0.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+<script src="../../assets/javascripts/bundle.7389ff0e.min.js"></script>
+<script src="https://fonts.googleapis.com/icon?family=Material+Icons"></script>
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+<script src="../../javascripts/mathjax.js"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+</html>

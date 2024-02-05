@@ -5,12 +5,12 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="https://llmslab.github.io/cookiecutter-ai-flock/how-to-guides/offline-cookiecutter-setup/" rel="canonical"/>
-<link href="../dvc-vscode-extension/" rel="prev"/>
-<link href="../git-branch-naming-standards/" rel="next"/>
+<link href="https://llmslab.github.io/cookiecutter-ai-flock/explanation/ml-naming-conventions/" rel="canonical"/>
+<link href="../github-naming-conventions/" rel="prev"/>
+<link href="../model-persistence-naming-conventions/" rel="next"/>
 <link href="../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.5.3, mkdocs-material-9.5.4" name="generator"/>
-<title>Offline Cookiecutter Setup - Cookiecutter Ai Flock</title>
+<title>Notebook and Script Naming Conventions in ML Projects - Cookiecutter Ai Flock</title>
 <link href="../../assets/stylesheets/main.50c56a3b.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -35,7 +35,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#using-cookiecutter-without-direct-github-command">
+<a class="md-skip" href="#notebook-and-script-naming-conventions-in-ml-projects">
           Skip to content
         </a>
 </div>
@@ -59,7 +59,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Offline Cookiecutter Setup
+              Notebook and Script Naming Conventions in ML Projects
             
           </span>
 </div>
@@ -237,45 +237,160 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
 <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
 <span class="md-ellipsis">
     How-To Guides
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="true" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<nav aria-expanded="false" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_3">
 <span class="md-nav__icon md-icon"></span>
             How-To Guides
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../toc-how-to-guides/">
+<a class="md-nav__link" href="../../how-to-guides/toc-how-to-guides/">
 <span class="md-ellipsis">
     TOC
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../dvc-set-up/">
+<a class="md-nav__link" href="../../how-to-guides/dvc-set-up/">
 <span class="md-ellipsis">
     DVC Setup
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../dvc-communication/">
+<a class="md-nav__link" href="../../how-to-guides/dvc-communication/">
 <span class="md-ellipsis">
     DVC Communication
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../dvc-vscode-extension/">
+<a class="md-nav__link" href="../../how-to-guides/dvc-vscode-extension/">
 <span class="md-ellipsis">
     DVC VS Code Extension
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../how-to-guides/offline-cookiecutter-setup/">
+<span class="md-ellipsis">
+    Offline Cookiecutter Setup
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../how-to-guides/git-branch-naming-standards/">
+<span class="md-ellipsis">
+    Git Branch Naming Standards
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../how-to-guides/commit-message-standards-ml/">
+<span class="md-ellipsis">
+    Commit Message Standards in ML Projects
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../how-to-guides/ml-data-folder-naming/">
+<span class="md-ellipsis">
+    ML Data Folder Naming Guide
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../how-to-guides/ml-data-naming-conventions/">
+<span class="md-ellipsis">
+    Data Files Naming Conventions
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../how-to-guides/machine-learning-metadata-automation/">
+<span class="md-ellipsis">
+    Automating Metadata Creation
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../how-to-guides/github-actions-naming-convention/">
+<span class="md-ellipsis">
+    Enforcing Naming Conventions with GitHub Actions
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../how-to-guides/wandb-experiment-tracking-rag/">
+<span class="md-ellipsis">
+    Best Practices for Experiment Tracking in RAG Projects Using Weights &amp; Biases
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../how-to-guides/templates/">
+<span class="md-ellipsis">
+    Templates for Issues/Stories and PRs
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../how-to-guides/branching-strategy/">
+<span class="md-ellipsis">
+    Branching Strategies
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+<span class="md-ellipsis">
+    Explanation
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+            Explanation
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../toc-explanation/">
+<span class="md-ellipsis">
+    TOC
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../dvc-understanding-dvs/">
+<span class="md-ellipsis">
+    Understanding DVC
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../dvc-git-branches/">
+<span class="md-ellipsis">
+    Git Branches in DVC
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../github-naming-conventions/">
+<span class="md-ellipsis">
+    Effective GitHub Naming Conventions
   </span>
 </a>
 </li>
@@ -283,13 +398,13 @@
 <input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
 <label class="md-nav__link md-nav__link--active" for="__toc">
 <span class="md-ellipsis">
-    Offline Cookiecutter Setup
+    Notebook and Script Naming Conventions in ML Projects
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
 <a class="md-nav__link md-nav__link--active" href="./">
 <span class="md-ellipsis">
-    Offline Cookiecutter Setup
+    Notebook and Script Naming Conventions in ML Projects
   </span>
 </a>
 <nav aria-label="On this page" class="md-nav md-nav--secondary">
@@ -299,178 +414,67 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#prerequisites">
+<a class="md-nav__link" href="#overview">
 <span class="md-ellipsis">
-      Prerequisites
+      Overview
     </span>
 </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#steps">
-<span class="md-ellipsis">
-      Steps
-    </span>
-</a>
-<nav aria-label="Steps" class="md-nav">
+<nav aria-label="Overview" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#1-downloading-the-cookiecutter-template">
+<a class="md-nav__link" href="#naming-convention-structure">
 <span class="md-ellipsis">
-      1. Downloading the Cookiecutter Template
+      Naming Convention Structure
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#2-setting-up-your-environment">
+<a class="md-nav__link" href="#components">
 <span class="md-ellipsis">
-      2. Setting Up Your Environment
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#3-creating-your-project">
-<span class="md-ellipsis">
-      3. Creating Your Project
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#4-finalizing-the-project">
-<span class="md-ellipsis">
-      4. Finalizing the Project
+      Components:
     </span>
 </a>
 </li>
 </ul>
 </nav>
 </li>
-</ul>
-</nav>
-</li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../git-branch-naming-standards/">
+<a class="md-nav__link" href="#guidelines">
 <span class="md-ellipsis">
-    Git Branch Naming Standards
-  </span>
+      Guidelines:
+    </span>
 </a>
-</li>
+<nav aria-label="Guidelines:" class="md-nav">
+<ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../commit-message-standards-ml/">
+<a class="md-nav__link" href="#examples">
 <span class="md-ellipsis">
-    Commit Message Standards in ML Projects
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../ml-data-folder-naming/">
-<span class="md-ellipsis">
-    ML Data Folder Naming Guide
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../ml-data-naming-conventions/">
-<span class="md-ellipsis">
-    Data Files Naming Conventions
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../machine-learning-metadata-automation/">
-<span class="md-ellipsis">
-    Automating Metadata Creation
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../github-actions-naming-convention/">
-<span class="md-ellipsis">
-    Enforcing Naming Conventions with GitHub Actions
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../wandb-experiment-tracking-rag/">
-<span class="md-ellipsis">
-    Best Practices for Experiment Tracking in RAG Projects Using Weights &amp; Biases
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../templates/">
-<span class="md-ellipsis">
-    Templates for Issues/Stories and PRs
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../branching-strategy/">
-<span class="md-ellipsis">
-    Branching Strategies
-  </span>
+      Examples:
+    </span>
 </a>
 </li>
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
-<span class="md-ellipsis">
-    Explanation
-  </span>
-<span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-expanded="false" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_4">
-<span class="md-nav__icon md-icon"></span>
-            Explanation
-          </label>
-<ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../explanation/toc-explanation/">
+<a class="md-nav__link" href="#conclusion">
 <span class="md-ellipsis">
-    TOC
-  </span>
+      Conclusion
+    </span>
 </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../explanation/dvc-understanding-dvs/">
-<span class="md-ellipsis">
-    Understanding DVC
-  </span>
-</a>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../explanation/dvc-git-branches/">
-<span class="md-ellipsis">
-    Git Branches in DVC
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../explanation/github-naming-conventions/">
-<span class="md-ellipsis">
-    Effective GitHub Naming Conventions
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../explanation/ml-naming-conventions/">
-<span class="md-ellipsis">
-    Notebook and Script Naming Conventions in ML Projects
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../explanation/model-persistence-naming-conventions/">
+<a class="md-nav__link" href="../model-persistence-naming-conventions/">
 <span class="md-ellipsis">
     Model Persistence File Naming Conventions
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../explanation/naming-conventions/">
+<a class="md-nav__link" href="../naming-conventions/">
 <span class="md-ellipsis">
     Introduction to Naming Conventions for AI Project Assets
   </span>
@@ -518,50 +522,54 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#prerequisites">
+<a class="md-nav__link" href="#overview">
 <span class="md-ellipsis">
-      Prerequisites
+      Overview
     </span>
 </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#steps">
-<span class="md-ellipsis">
-      Steps
-    </span>
-</a>
-<nav aria-label="Steps" class="md-nav">
+<nav aria-label="Overview" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#1-downloading-the-cookiecutter-template">
+<a class="md-nav__link" href="#naming-convention-structure">
 <span class="md-ellipsis">
-      1. Downloading the Cookiecutter Template
+      Naming Convention Structure
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#2-setting-up-your-environment">
+<a class="md-nav__link" href="#components">
 <span class="md-ellipsis">
-      2. Setting Up Your Environment
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#3-creating-your-project">
-<span class="md-ellipsis">
-      3. Creating Your Project
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#4-finalizing-the-project">
-<span class="md-ellipsis">
-      4. Finalizing the Project
+      Components:
     </span>
 </a>
 </li>
 </ul>
 </nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#guidelines">
+<span class="md-ellipsis">
+      Guidelines:
+    </span>
+</a>
+<nav aria-label="Guidelines:" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#examples">
+<span class="md-ellipsis">
+      Examples:
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#conclusion">
+<span class="md-ellipsis">
+      Conclusion
+    </span>
+</a>
 </li>
 </ul>
 </nav>
@@ -570,59 +578,77 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="using-cookiecutter-without-direct-github-command">Using Cookiecutter Without Direct GitHub Command<a class="headerlink" href="#using-cookiecutter-without-direct-github-command" title="Permanent link">¶</a></h1>
+<h1 id="notebook-and-script-naming-conventions-in-ml-projects">Notebook and Script Naming Conventions in ML Projects<a class="headerlink" href="#notebook-and-script-naming-conventions-in-ml-projects" title="Permanent link">¶</a></h1>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">¶</a></h2>
+<p>Properly naming Jupyter notebooks and scripts is essential for quick identification, efficient management, and collaborative ease in machine learning projects. A systematic naming convention helps in understanding the file's purpose at a glance and tracking its evolution over time.</p>
+<div class="admonition note">
+<p class="admonition-title">Importance of Naming</p>
+<p>A well-defined naming convention is crucial for organizing and managing files in any ML project.</p>
+</div>
+<h3 id="naming-convention-structure">Naming Convention Structure<a class="headerlink" href="#naming-convention-structure" title="Permanent link">¶</a></h3>
+<p>Use the following format for naming notebooks and scripts:</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>&lt;type&gt;_&lt;topic&gt;_&lt;version&gt;_&lt;YYYYMMDD&gt;.&lt;extension&gt;
+</code></pre></div>
+<h3 id="components">Components:<a class="headerlink" href="#components" title="Permanent link">¶</a></h3>
+<ul>
+<li><strong>Type</strong>: A short identifier indicating the nature of the work (e.g., <code>eda</code> for exploratory data analysis, <code>preprocess</code> for data preprocessing, <code>model</code> for model training).</li>
+<li><strong>Topic</strong>: A concise descriptor of the notebook's or script's main focus.</li>
+<li><strong>Version</strong>: An optional version number or identifier, especially useful if the notebook or script undergoes significant iterative updates.</li>
+<li><strong>Date</strong>: The creation or last modified date in <code>YYYYMMDD</code> format.</li>
+<li><strong>Extension</strong>: The file extension, like <code>.ipynb</code> for Jupyter notebooks, <code>.py</code> for Python scripts.</li>
+</ul>
 <div class="admonition tip">
-<p class="admonition-title">Goal</p>
-<p>Learn how to manually download and use a Cookiecutter template from GitHub when direct command line access to GitHub (<code>cookiecutter gh:...</code>) is not available.</p>
+<p class="admonition-title">Components Breakdown</p>
+<p>Understanding each component of the naming convention helps in creating more informative and easily recognizable file names.</p>
 </div>
-<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">¶</a></h2>
+<h2 id="guidelines">Guidelines:<a class="headerlink" href="#guidelines" title="Permanent link">¶</a></h2>
+<ol>
+<li><strong>Descriptive and Purposeful:</strong></li>
+<li>Start with a type that categorizes the file based on its primary purpose in the ML workflow.</li>
+<li>
+<p>The topic should be sufficiently descriptive to convey the specific focus or task of the notebook/script.</p>
+</li>
+<li>
+<p><strong>Versioning:</strong></p>
+</li>
+<li>
+<p>Include a version number if the file is part of an iterative process, such as <code>v1</code>, <code>v2</code>, or more detailed semantic versioning like <code>1.0</code>, <code>1.1</code>.</p>
+</li>
+<li>
+<p><strong>Date Stamp:</strong></p>
+</li>
+<li>
+<p>Adding the date (in <code>YYYYMMDD</code> format) helps in identifying the most recent version or understanding the timeline of development.</p>
+</li>
+<li>
+<p><strong>Consistency:</strong></p>
+</li>
+<li>
+<p>Maintain a consistent naming convention across all notebooks and scripts for ease of organization and retrieval.</p>
+</li>
+<li>
+<p><strong>Clarity and Brevity:</strong></p>
+</li>
+<li>Ensure the name is clear yet concise. Avoid overly long names but provide enough information to understand the file's content and purpose.</li>
+</ol>
+<h3 id="examples">Examples:<a class="headerlink" href="#examples" title="Permanent link">¶</a></h3>
 <ul>
-<li>Basic understanding of command line operations.</li>
-<li>Python and pip installed on your system.</li>
-<li>Access to GitHub through a web browser.</li>
+<li><code>eda_customer_segmentation_v1_20240101.ipynb</code></li>
+<li><code>preprocess_data_cleaning_v2_20240215.py</code></li>
+<li><code>model_train_regression_20240310.ipynb</code></li>
 </ul>
-<h2 id="steps">Steps<a class="headerlink" href="#steps" title="Permanent link">¶</a></h2>
-<h3 id="1-downloading-the-cookiecutter-template">1. Downloading the Cookiecutter Template<a class="headerlink" href="#1-downloading-the-cookiecutter-template" title="Permanent link">¶</a></h3>
-<details class="note" open="open">
-<summary>Find and Download the Repository</summary>
-<ul>
-<li><strong>Find the Repository:</strong> Visit the GitHub page of the desired Cookiecutter template, e.g., <code>LLMsLab/cookiecutter-ai-flock</code>.</li>
-<li><strong>Download the Repository:</strong> Click on the 'Code' button, select 'Download ZIP', save, and extract it to a known location on your computer.</li>
-</ul>
-</details>
-<h3 id="2-setting-up-your-environment">2. Setting Up Your Environment<a class="headerlink" href="#2-setting-up-your-environment" title="Permanent link">¶</a></h3>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1"># Install Cookiecutter if not already installed</span>
-<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a>pip<span class="w"> </span>install<span class="w"> </span>cookiecutter
-<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a>
-<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="c1"># Navigate to your desired project directory</span>
-<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="nb">cd</span><span class="w"> </span>path/to/your/Projects
-</code></pre></div>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Replace <code>path/to/your/Projects</code> with the actual path where you want to create your project.</p>
+<div class="admonition example">
+<p class="admonition-title">Naming Examples</p>
+<p>These examples illustrate how the naming convention is applied in practice.</p>
 </div>
-<h3 id="3-creating-your-project">3. Creating Your Project<a class="headerlink" href="#3-creating-your-project" title="Permanent link">¶</a></h3>
-<details class="success" open="open">
-<summary>Run Cookiecutter and Input Project Details</summary>
-<p>Run Cookiecutter and provide the path to the unzipped template folder:</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a>cookiecutter<span class="w"> </span>path/to/unzipped/cookiecutter-ai-flock
-</code></pre></div>
-<p>Replace <code>path/to/unzipped/cookiecutter-ai-flock</code> with the actual path to the unzipped template. Follow the prompts to input details for your new project.</p>
-</details>
-<h3 id="4-finalizing-the-project">4. Finalizing the Project<a class="headerlink" href="#4-finalizing-the-project" title="Permanent link">¶</a></h3>
-<p>After running the command, a new directory with your project name will
-be created. Navigate to this directory to perform any additional setup
-required by the template.</p>
-<div class="admonition check">
-<p class="admonition-title">Conclusion</p>
-<p>You've successfully used a Cookiecutter template without direct GitHub command line integration. This approach is useful in environments with restricted internet access or limitations in using GitHub tools directly.</p>
-</div>
+<h2 id="conclusion">Conclusion<a class="headerlink" href="#conclusion" title="Permanent link">¶</a></h2>
+<p>This naming convention for Jupyter notebooks and scripts will foster a more organized and manageable ML project environment. It aids in quickly locating specific files, understanding their purpose, and tracking their evolution over time.</p>
 <aside class="md-source-file">
 <span class="md-source-file__fact">
 <span class="md-icon" title="Last update">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 26, 2024</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 29, 2024</span>
 </span>
 </aside>
 </article>

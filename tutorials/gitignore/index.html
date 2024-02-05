@@ -5,12 +5,12 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="https://llmslab.github.io/cookiecutter-ai-flock/how-to-guides/offline-cookiecutter-setup/" rel="canonical"/>
-<link href="../dvc-vscode-extension/" rel="prev"/>
-<link href="../git-branch-naming-standards/" rel="next"/>
+<link href="https://llmslab.github.io/cookiecutter-ai-flock/tutorials/gitignore/" rel="canonical"/>
+<link href="../hydra-config/" rel="prev"/>
+<link href="../data/" rel="next"/>
 <link href="../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.5.3, mkdocs-material-9.5.4" name="generator"/>
-<title>Offline Cookiecutter Setup - Cookiecutter Ai Flock</title>
+<title>Gitignore File Creation - Cookiecutter Ai Flock</title>
 <link href="../../assets/stylesheets/main.50c56a3b.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -35,7 +35,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#using-cookiecutter-without-direct-github-command">
+<a class="md-skip" href="#understanding-the-gitignore-file">
           Skip to content
         </a>
 </div>
@@ -59,7 +59,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Offline Cookiecutter Setup
+              Gitignore File Creation
             
           </span>
 </div>
@@ -115,167 +115,59 @@
   </span>
 </a>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
 <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
 <span class="md-ellipsis">
     Tutorials
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="false" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<nav aria-expanded="true" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_2">
 <span class="md-nav__icon md-icon"></span>
             Tutorials
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../tutorials/toc-tutorials/">
+<a class="md-nav__link" href="../toc-tutorials/">
 <span class="md-ellipsis">
     TOC
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../tutorials/black-formatter/">
+<a class="md-nav__link" href="../black-formatter/">
 <span class="md-ellipsis">
     Black Formatter
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../tutorials/ruff-linter/">
+<a class="md-nav__link" href="../ruff-linter/">
 <span class="md-ellipsis">
     Ruff Linter
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../tutorials/poetry/">
+<a class="md-nav__link" href="../poetry/">
 <span class="md-ellipsis">
     Poetry Package Management
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../tutorials/mkdocs-docs/">
+<a class="md-nav__link" href="../mkdocs-docs/">
 <span class="md-ellipsis">
     MkDocs Documentation
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../tutorials/hydra-config/">
+<a class="md-nav__link" href="../hydra-config/">
 <span class="md-ellipsis">
     Hydra Configuration
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../tutorials/gitignore/">
-<span class="md-ellipsis">
-    Gitignore File Creation
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../tutorials/data/">
-<span class="md-ellipsis">
-    Managing Data
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../tutorials/data-version-control/">
-<span class="md-ellipsis">
-    Data Version Control
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../tutorials/dvc-local/">
-<span class="md-ellipsis">
-    DVC Local Workflow
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../tutorials/dvc-cloud/">
-<span class="md-ellipsis">
-    DVC Cloud Storage
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../tutorials/dvc-collaboration/">
-<span class="md-ellipsis">
-    DVC for Collaboration
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../tutorials/naming-conventions/">
-<span class="md-ellipsis">
-    Naming Conventions Tutorial
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../tutorials/windows-os-setup/">
-<span class="md-ellipsis">
-    Windows OS Setup
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../tutorials/markdown-ml-model-documentation/">
-<span class="md-ellipsis">
-    Markdown Documentation for ML Models
-  </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
-<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
-<span class="md-ellipsis">
-    How-To Guides
-  </span>
-<span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-expanded="true" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_3">
-<span class="md-nav__icon md-icon"></span>
-            How-To Guides
-          </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../toc-how-to-guides/">
-<span class="md-ellipsis">
-    TOC
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../dvc-set-up/">
-<span class="md-ellipsis">
-    DVC Setup
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../dvc-communication/">
-<span class="md-ellipsis">
-    DVC Communication
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../dvc-vscode-extension/">
-<span class="md-ellipsis">
-    DVC VS Code Extension
   </span>
 </a>
 </li>
@@ -283,13 +175,13 @@
 <input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
 <label class="md-nav__link md-nav__link--active" for="__toc">
 <span class="md-ellipsis">
-    Offline Cookiecutter Setup
+    Gitignore File Creation
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
 <a class="md-nav__link md-nav__link--active" href="./">
 <span class="md-ellipsis">
-    Offline Cookiecutter Setup
+    Gitignore File Creation
   </span>
 </a>
 <nav aria-label="On this page" class="md-nav md-nav--secondary">
@@ -299,45 +191,77 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#prerequisites">
+<a class="md-nav__link" href="#introduction">
 <span class="md-ellipsis">
-      Prerequisites
+      Introduction
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#steps">
+<a class="md-nav__link" href="#how-gitignore-works">
 <span class="md-ellipsis">
-      Steps
+      How .gitignore works
     </span>
 </a>
-<nav aria-label="Steps" class="md-nav">
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#literal-file-names">
+<span class="md-ellipsis">
+      Literal File Names
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#directories">
+<span class="md-ellipsis">
+      Directories
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#wildcard">
+<span class="md-ellipsis">
+      Wildcard
+    </span>
+</a>
+<nav aria-label="Wildcard" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#1-downloading-the-cookiecutter-template">
+<a class="md-nav__link" href="#negation">
 <span class="md-ellipsis">
-      1. Downloading the Cookiecutter Template
+      Negation
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#2-setting-up-your-environment">
+<a class="md-nav__link" href="#double-asterisk">
 <span class="md-ellipsis">
-      2. Setting Up Your Environment
+      Double Asterisk
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#3-creating-your-project">
+<a class="md-nav__link" href="#comments">
 <span class="md-ellipsis">
-      3. Creating Your Project
+      Comments
     </span>
 </a>
 </li>
+</ul>
+</nav>
+</li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#4-finalizing-the-project">
+<a class="md-nav__link" href="#automatically-create-gitignore-file-from-vs-code">
 <span class="md-ellipsis">
-      4. Finalizing the Project
+      Automatically create .gitignore file from VS Code
+    </span>
+</a>
+<nav aria-label="Automatically create .gitignore file from VS Code" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#usage">
+<span class="md-ellipsis">
+      Usage
     </span>
 </a>
 </li>
@@ -348,63 +272,171 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../git-branch-naming-standards/">
+<a class="md-nav__link" href="../data/">
+<span class="md-ellipsis">
+    Managing Data
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../data-version-control/">
+<span class="md-ellipsis">
+    Data Version Control
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../dvc-local/">
+<span class="md-ellipsis">
+    DVC Local Workflow
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../dvc-cloud/">
+<span class="md-ellipsis">
+    DVC Cloud Storage
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../dvc-collaboration/">
+<span class="md-ellipsis">
+    DVC for Collaboration
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../naming-conventions/">
+<span class="md-ellipsis">
+    Naming Conventions Tutorial
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../windows-os-setup/">
+<span class="md-ellipsis">
+    Windows OS Setup
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../markdown-ml-model-documentation/">
+<span class="md-ellipsis">
+    Markdown Documentation for ML Models
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+<span class="md-ellipsis">
+    How-To Guides
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+            How-To Guides
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../how-to-guides/toc-how-to-guides/">
+<span class="md-ellipsis">
+    TOC
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../how-to-guides/dvc-set-up/">
+<span class="md-ellipsis">
+    DVC Setup
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../how-to-guides/dvc-communication/">
+<span class="md-ellipsis">
+    DVC Communication
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../how-to-guides/dvc-vscode-extension/">
+<span class="md-ellipsis">
+    DVC VS Code Extension
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../how-to-guides/offline-cookiecutter-setup/">
+<span class="md-ellipsis">
+    Offline Cookiecutter Setup
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../how-to-guides/git-branch-naming-standards/">
 <span class="md-ellipsis">
     Git Branch Naming Standards
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../commit-message-standards-ml/">
+<a class="md-nav__link" href="../../how-to-guides/commit-message-standards-ml/">
 <span class="md-ellipsis">
     Commit Message Standards in ML Projects
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../ml-data-folder-naming/">
+<a class="md-nav__link" href="../../how-to-guides/ml-data-folder-naming/">
 <span class="md-ellipsis">
     ML Data Folder Naming Guide
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../ml-data-naming-conventions/">
+<a class="md-nav__link" href="../../how-to-guides/ml-data-naming-conventions/">
 <span class="md-ellipsis">
     Data Files Naming Conventions
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../machine-learning-metadata-automation/">
+<a class="md-nav__link" href="../../how-to-guides/machine-learning-metadata-automation/">
 <span class="md-ellipsis">
     Automating Metadata Creation
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../github-actions-naming-convention/">
+<a class="md-nav__link" href="../../how-to-guides/github-actions-naming-convention/">
 <span class="md-ellipsis">
     Enforcing Naming Conventions with GitHub Actions
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../wandb-experiment-tracking-rag/">
+<a class="md-nav__link" href="../../how-to-guides/wandb-experiment-tracking-rag/">
 <span class="md-ellipsis">
     Best Practices for Experiment Tracking in RAG Projects Using Weights &amp; Biases
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../templates/">
+<a class="md-nav__link" href="../../how-to-guides/templates/">
 <span class="md-ellipsis">
     Templates for Issues/Stories and PRs
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../branching-strategy/">
+<a class="md-nav__link" href="../../how-to-guides/branching-strategy/">
 <span class="md-ellipsis">
     Branching Strategies
   </span>
@@ -518,45 +550,77 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#prerequisites">
+<a class="md-nav__link" href="#introduction">
 <span class="md-ellipsis">
-      Prerequisites
+      Introduction
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#steps">
+<a class="md-nav__link" href="#how-gitignore-works">
 <span class="md-ellipsis">
-      Steps
+      How .gitignore works
     </span>
 </a>
-<nav aria-label="Steps" class="md-nav">
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#literal-file-names">
+<span class="md-ellipsis">
+      Literal File Names
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#directories">
+<span class="md-ellipsis">
+      Directories
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#wildcard">
+<span class="md-ellipsis">
+      Wildcard
+    </span>
+</a>
+<nav aria-label="Wildcard" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#1-downloading-the-cookiecutter-template">
+<a class="md-nav__link" href="#negation">
 <span class="md-ellipsis">
-      1. Downloading the Cookiecutter Template
+      Negation
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#2-setting-up-your-environment">
+<a class="md-nav__link" href="#double-asterisk">
 <span class="md-ellipsis">
-      2. Setting Up Your Environment
+      Double Asterisk
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#3-creating-your-project">
+<a class="md-nav__link" href="#comments">
 <span class="md-ellipsis">
-      3. Creating Your Project
+      Comments
     </span>
 </a>
 </li>
+</ul>
+</nav>
+</li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#4-finalizing-the-project">
+<a class="md-nav__link" href="#automatically-create-gitignore-file-from-vs-code">
 <span class="md-ellipsis">
-      4. Finalizing the Project
+      Automatically create .gitignore file from VS Code
+    </span>
+</a>
+<nav aria-label="Automatically create .gitignore file from VS Code" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#usage">
+<span class="md-ellipsis">
+      Usage
     </span>
 </a>
 </li>
@@ -570,59 +634,116 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="using-cookiecutter-without-direct-github-command">Using Cookiecutter Without Direct GitHub Command<a class="headerlink" href="#using-cookiecutter-without-direct-github-command" title="Permanent link">¶</a></h1>
+<h1 id="understanding-the-gitignore-file">Understanding the <code>.gitignore</code> file<a class="headerlink" href="#understanding-the-gitignore-file" title="Permanent link">¶</a></h1>
 <div class="admonition tip">
-<p class="admonition-title">Goal</p>
-<p>Learn how to manually download and use a Cookiecutter template from GitHub when direct command line access to GitHub (<code>cookiecutter gh:...</code>) is not available.</p>
+<p class="admonition-title">Should you commit <code>.gitignore</code> to git repositories?</p>
+<p>Yes, <code>.gitignore</code> files should be commited.</p>
 </div>
-<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">¶</a></h2>
-<ul>
-<li>Basic understanding of command line operations.</li>
-<li>Python and pip installed on your system.</li>
-<li>Access to GitHub through a web browser.</li>
-</ul>
-<h2 id="steps">Steps<a class="headerlink" href="#steps" title="Permanent link">¶</a></h2>
-<h3 id="1-downloading-the-cookiecutter-template">1. Downloading the Cookiecutter Template<a class="headerlink" href="#1-downloading-the-cookiecutter-template" title="Permanent link">¶</a></h3>
-<details class="note" open="open">
-<summary>Find and Download the Repository</summary>
-<ul>
-<li><strong>Find the Repository:</strong> Visit the GitHub page of the desired Cookiecutter template, e.g., <code>LLMsLab/cookiecutter-ai-flock</code>.</li>
-<li><strong>Download the Repository:</strong> Click on the 'Code' button, select 'Download ZIP', save, and extract it to a known location on your computer.</li>
-</ul>
-</details>
-<h3 id="2-setting-up-your-environment">2. Setting Up Your Environment<a class="headerlink" href="#2-setting-up-your-environment" title="Permanent link">¶</a></h3>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1"># Install Cookiecutter if not already installed</span>
-<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a>pip<span class="w"> </span>install<span class="w"> </span>cookiecutter
-<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a>
-<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="c1"># Navigate to your desired project directory</span>
-<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="nb">cd</span><span class="w"> </span>path/to/your/Projects
-</code></pre></div>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Replace <code>path/to/your/Projects</code> with the actual path where you want to create your project.</p>
+<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">¶</a></h2>
+<p>When you make commits in a git repository, you choose which files to
+stage and commit by using <code>git add FILENAME</code> and then git commit. But
+what if there are some files that you never want to commit? It's too
+easy to accidentally commit them (especially if you use <code>git add .</code> to
+stage all files in the current directory). That's where a <code>.gitignore</code>
+file comes in handy. It lets Git know that it should ignore certain
+files and not track them.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>The purpose of gitignore files is to ensure that certain files not
+tracked by Git remain untracked.</p>
 </div>
-<h3 id="3-creating-your-project">3. Creating Your Project<a class="headerlink" href="#3-creating-your-project" title="Permanent link">¶</a></h3>
-<details class="success" open="open">
-<summary>Run Cookiecutter and Input Project Details</summary>
-<p>Run Cookiecutter and provide the path to the unzipped template folder:</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a>cookiecutter<span class="w"> </span>path/to/unzipped/cookiecutter-ai-flock
+<h2 id="how-gitignore-works">How <code>.gitignore</code> works<a class="headerlink" href="#how-gitignore-works" title="Permanent link">¶</a></h2>
+<p>Here's how it works. A <code>.gitignore</code> file is a plain text file where each
+line contains a pattern for files/directories to ignore. Generally, this
+is placed in the root folder of the repository.</p>
+<h2 id="literal-file-names">Literal File Names<a class="headerlink" href="#literal-file-names" title="Permanent link">¶</a></h2>
+<p>The easiest pattern is a literal file name, for example:</p>
+<div class="highlight"><span class="filename">.gitignore</span><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>.DS_Store
 </code></pre></div>
-<p>Replace <code>path/to/unzipped/cookiecutter-ai-flock</code> with the actual path to the unzipped template. Follow the prompts to input details for your new project.</p>
-</details>
-<h3 id="4-finalizing-the-project">4. Finalizing the Project<a class="headerlink" href="#4-finalizing-the-project" title="Permanent link">¶</a></h3>
-<p>After running the command, a new directory with your project name will
-be created. Navigate to this directory to perform any additional setup
-required by the template.</p>
-<div class="admonition check">
-<p class="admonition-title">Conclusion</p>
-<p>You've successfully used a Cookiecutter template without direct GitHub command line integration. This approach is useful in environments with restricted internet access or limitations in using GitHub tools directly.</p>
+<p>This will ignore any files named <code>.DS_Store</code>, which is a common file on
+macOS.</p>
+<h2 id="directories">Directories<a class="headerlink" href="#directories" title="Permanent link">¶</a></h2>
+<p>You can ignore entire directories, just by including their paths and
+putting a <code>/</code> on the end:</p>
+<div class="highlight"><span class="filename">.gitignore</span><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a>node_modules/
+<a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a>logs/
+</code></pre></div>
+<p>If you leave the slash off of the end, it will match both files and
+directories with that name.</p>
+<h2 id="wildcard">Wildcard<a class="headerlink" href="#wildcard" title="Permanent link">¶</a></h2>
+<p>The <code>*</code> matches 0 or more characters (except the <code>/</code>). So, for example,
+<code>*.log</code> matches any file ending with the <code>.log</code> extension.</p>
+<p>Another example is <code>*~</code>, which matches any file ending with <code>~</code>, such as
+<code>index.html~</code></p>
+<p>You can also use the <code>?</code>, which matches any one character except for the
+<code>/</code>.</p>
+<h3 id="negation">Negation<a class="headerlink" href="#negation" title="Permanent link">¶</a></h3>
+<p>You can use a prefix of <code>!</code> to negate a file that would be ignored.</p>
+<div class="highlight"><span class="filename">.gitignore</span><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a>*.log
+<a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a>!example.log
+</code></pre></div>
+<p>In this example, <code>example.log</code> is not ignored, even though all other
+files ending with <code>.log</code> are ignored.</p>
+<p>But be aware, you can't negate a file inside of an ignored directory:</p>
+<div class="highlight"><span class="filename">.gitignore</span><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a>logs/
+<a href="#__codelineno-3-2" id="__codelineno-3-2" name="__codelineno-3-2"></a>!logs/example.log
+</code></pre></div>
+<p>Due to performance reasons, git will still ignore <code>logs/example.log</code>
+here because the entire logs directory is ignored.</p>
+<h3 id="double-asterisk">Double Asterisk<a class="headerlink" href="#double-asterisk" title="Permanent link">¶</a></h3>
+<p><code>**</code>  can be used to match any number of directories.</p>
+<ul>
+<li>
+<p><code>**/logs</code>  matches all files or directories named logs (same as the
+  pattern  <code>logs</code>)</p>
+</li>
+<li>
+<p><code>**/logs/*.log</code>  matches all files ending with  <code>.log</code>  in a logs
+  directory</p>
+</li>
+<li>
+<p><code>logs/**/*.log</code>  matches all files ending with  <code>.log</code>  in the logs
+  directory and any of its subdirectories</p>
+</li>
+</ul>
+<p><code>**</code>  can also be used to match all files inside of a directory, so for
+example  <code>logs/**</code>  matches all files inside of logs.</p>
+<h3 id="comments">Comments<a class="headerlink" href="#comments" title="Permanent link">¶</a></h3>
+<p>Any lines that start with  <code>#</code>  are comments:</p>
+<div class="highlight"><span class="filename">.gitignore</span><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a>1# macOS Files
+<a href="#__codelineno-4-2" id="__codelineno-4-2" name="__codelineno-4-2"></a>2.DS_Store
+</code></pre></div>
+<h2 id="automatically-create-gitignore-file-from-vs-code">Automatically create <code>.gitignore</code> file from VS Code<a class="headerlink" href="#automatically-create-gitignore-file-from-vs-code" title="Permanent link">¶</a></h2>
+<p>The <code>gitignore</code> VS Code extension included in the list of recommended
+extensions for this repository automates the creation of <code>.gitignore</code>
+files.</p>
+<h3 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">¶</a></h3>
+<p>Start command palette (with <code>Ctrl</code>+<code>Shift</code>t+<code>P</code> or <code>F1</code>) and start
+typing<code>Add gitignore</code>. Then select a programming language from the list.</p>
+<p>It is possible to append multiple programming languages like Python and
+R. Add first Python and then, if you try to add R you will see these
+options:</p>
+<div class="highlight"><span class="filename">.gitignore</span><pre><span></span><code><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a>Append Append to existing .gitignore file
+<a href="#__codelineno-5-2" id="__codelineno-5-2" name="__codelineno-5-2"></a>Overwrite Overwrite existing .gitignore file
+</code></pre></div>
+<p>Choose append and you will see the following message:</p>
+<div class="highlight"><span class="filename">.gitignore</span><pre><span></span><code><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a>Appended Python.gitignore to the existing .gitignore in the project root
+</code></pre></div>
+<div class="admonition info">
+<p class="admonition-title">References</p>
+<ul>
+<li><a href="https://git-scm.com/docs/gitignore#:~:text=A%20gitignore%20file%20specifies%20intentionally,gitignore%20file%20specifies%20a%20pattern">git
+  documentation</a></li>
+<li><a href="https://www.pluralsight.com/guides/how-to-use-gitignore-file">How to Use a <code>.gitignore</code>
+  File</a></li>
+</ul>
 </div>
 <aside class="md-source-file">
 <span class="md-source-file__fact">
 <span class="md-icon" title="Last update">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 26, 2024</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 29, 2024</span>
 </span>
 </aside>
 </article>
