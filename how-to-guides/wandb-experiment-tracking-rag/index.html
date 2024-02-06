@@ -1072,16 +1072,19 @@ scalability, and collaboration through each phase of your experiment.</p>
 <p class="admonition-title">Getting Started</p>
 <p>Before you begin documenting your experiment, familiarize yourself with the goals and hypotheses of your experiment. This will enable you to create clear and effective documentation.</p>
 </div>
-<p><strong>ML Experiment Lyfe-Cycle with W&amp;B</strong></p>
-<pre class="mermaid"><code>flowchart TB
+<pre class="mermaid"><code>---
+title: ML Experiment Life-Cycle with W&amp;B
+---
+flowchart TB
     A(1. Create Issue/Story) --&gt; B(2. Branching for the Experiment)
     B --&gt; C(3. Coding the Experiment)
     C --&gt; D(4. Configuring W&amp;B)
-    D --&gt; E(5. Running the Experiment)
+    D --&gt; |"Commit Changes ⚠️"| E(5. Running the Experiment)
     E --&gt; F(6. Analyzing Results)
     F --&gt; G(7. Refining the Experiment)
-    G --&gt; |Create a New Experiment| A
-    G --&gt; |Iterate| C</code></pre>
+    G --&gt; |Iterate| C
+    G --&gt; H(8. Document)
+    H --&gt; |Create a New Experiment| A</code></pre>
 <h2 id="how-to-create-a-github-issue-or-a-jira-story-for-your-experiment">How to Create a GitHub Issue or a Jira Story for Your Experiment<a class="headerlink" href="#how-to-create-a-github-issue-or-a-jira-story-for-your-experiment" title="Permanent link">¶</a></h2>
 <p>Documenting your experiment's intent by opening a GitHub issue or Jira
 story is the first crucial step in the experiment life-cycle.</p>
@@ -1093,7 +1096,7 @@ project.</p>
 <div class="admonition info">
 <p class="admonition-title">Use a Template</p>
 <p>Select the following a pre-defined template that fits experiment
-documentation: {Experiment Issue/Story Template](templates.md)</p>
+documentation: <a href="../templates/">Experiment Issue/Story Template</a></p>
 </div>
 <h3 id="preparation">Preparation<a class="headerlink" href="#preparation" title="Permanent link">¶</a></h3>
 <ol>
