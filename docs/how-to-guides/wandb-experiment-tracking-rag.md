@@ -7,20 +7,21 @@ scalability, and collaboration through each phase of your experiment.
 !!! note "Getting Started"
     Before you begin documenting your experiment, familiarize yourself with the goals and hypotheses of your experiment. This will enable you to create clear and effective documentation.
 
-**ML Experiment Lyfe-Cycle with W&B**
-
 ```mermaid
+---
+title: ML Experiment Life-Cycle with W&B
+---
 flowchart TB
     A(1. Create Issue/Story) --> B(2. Branching for the Experiment)
     B --> C(3. Coding the Experiment)
     C --> D(4. Configuring W&B)
-    D --> E(5. Running the Experiment)
+    D --> |"Commit Changes ⚠️"| E(5. Running the Experiment)
     E --> F(6. Analyzing Results)
     F --> G(7. Refining the Experiment)
-    G --> |Create a New Experiment| A
     G --> |Iterate| C
+    G --> H(8. Document)
+    H --> |Create a New Experiment| A
 ```
-
 
 ## How to Create a GitHub Issue or a Jira Story for Your Experiment
 
@@ -34,7 +35,7 @@ story is the first crucial step in the experiment life-cycle.
 
 !!! info "Use a Template"
     Select the following a pre-defined template that fits experiment
-    documentation: {Experiment Issue/Story Template](templates.md)
+    documentation: [Experiment Issue/Story Template](templates.md)
 
 ### Preparation
 
