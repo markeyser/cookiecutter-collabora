@@ -5,12 +5,12 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="https://llmslab.github.io/cookiecutter-ai-flock/how-to-guides/dvc-set-up/" rel="canonical"/>
-<link href="../toc-how-to-guides/" rel="prev"/>
-<link href="../dvc-communication/" rel="next"/>
+<link href="https://llmslab.github.io/cookiecutter-ai-flock/how-to-guides/data-conversion-from-xlsx-to-csv/" rel="canonical"/>
+<link href="../branching-strategy/" rel="prev"/>
+<link href="../../explanation/toc-explanation/" rel="next"/>
 <link href="../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.5.3, mkdocs-material-9.5.4" name="generator"/>
-<title>DVC Setup - Cookiecutter Ai Flock</title>
+<title>Python Scripting for Data Conversion - Cookiecutter Ai Flock</title>
 <link href="../../assets/stylesheets/main.50c56a3b.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -35,7 +35,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#how-to-guide-setting-up-and-using-data-version-control-with-dvc">
+<a class="md-skip" href="#data-conversion-workflow-for-nlp-projects">
           Skip to content
         </a>
 </div>
@@ -59,7 +59,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              DVC Setup
+              Python Scripting for Data Conversion
             
           </span>
 </div>
@@ -258,130 +258,12 @@
   </span>
 </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-<span class="md-ellipsis">
-    DVC Setup
-  </span>
-<span class="md-nav__icon md-icon"></span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="./">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../dvc-set-up/">
 <span class="md-ellipsis">
     DVC Setup
   </span>
 </a>
-<nav aria-label="On this page" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      On this page
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#setting-up-dvc-in-your-project">
-<span class="md-ellipsis">
-      Setting Up DVC in Your Project
-    </span>
-</a>
-<nav aria-label="Setting Up DVC in Your Project" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#step-1-initialize-dvc">
-<span class="md-ellipsis">
-      Step 1: Initialize DVC
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#step-2-set-up-remote-storage">
-<span class="md-ellipsis">
-      Step 2: Set Up Remote Storage
-    </span>
-</a>
-<nav aria-label="Step 2: Set Up Remote Storage" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#for-azure-blob-storage">
-<span class="md-ellipsis">
-      For Azure Blob Storage
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#for-aws-s3">
-<span class="md-ellipsis">
-      For AWS S3
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#for-local-storage">
-<span class="md-ellipsis">
-      For Local Storage
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#step-3-add-data-to-dvc">
-<span class="md-ellipsis">
-      Step 3: Add Data to DVC
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#step-4-commit-changes-to-version-control">
-<span class="md-ellipsis">
-      Step 4: Commit Changes to Version Control
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#step-5-push-data-to-remote-storage">
-<span class="md-ellipsis">
-      Step 5: Push Data to Remote Storage
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#updating-data-with-dvc">
-<span class="md-ellipsis">
-      Updating Data with DVC
-    </span>
-</a>
-<nav aria-label="Updating Data with DVC" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#local-data-updates">
-<span class="md-ellipsis">
-      Local Data Updates
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#cloud-data-updates">
-<span class="md-ellipsis">
-      Cloud Data Updates
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#conclusion">
-<span class="md-ellipsis">
-      Conclusion
-    </span>
-</a>
-</li>
-</ul>
-</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../dvc-communication/">
@@ -467,12 +349,109 @@
   </span>
 </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../data-conversion-from-xlsx-to-csv/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    Python Scripting for Data Conversion
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
 <span class="md-ellipsis">
     Python Scripting for Data Conversion
   </span>
 </a>
+<nav aria-label="On this page" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#overview">
+<span class="md-ellipsis">
+      Overview
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#procedure">
+<span class="md-ellipsis">
+      Procedure
+    </span>
+</a>
+<nav aria-label="Procedure" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#context">
+<span class="md-ellipsis">
+      Context
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#conversion-from-xlsx-to-csv">
+<span class="md-ellipsis">
+      Conversion from XLSX to CSV
+    </span>
+</a>
+<nav aria-label="Conversion from XLSX to CSV" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#function-convert_xlsx_to_csv">
+<span class="md-ellipsis">
+      Function: convert_xlsx_to_csv
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#conversion-from-csv-to-xlsx">
+<span class="md-ellipsis">
+      Conversion from CSV to XLSX
+    </span>
+</a>
+<nav aria-label="Conversion from CSV to XLSX" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#function-convert_csv_to_xlsx">
+<span class="md-ellipsis">
+      Function: convert_csv_to_xlsx
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#requirements">
+<span class="md-ellipsis">
+      Requirements
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#installation">
+<span class="md-ellipsis">
+      Installation
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#conclusion">
+<span class="md-ellipsis">
+      Conclusion
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -582,46 +561,39 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#setting-up-dvc-in-your-project">
+<a class="md-nav__link" href="#overview">
 <span class="md-ellipsis">
-      Setting Up DVC in Your Project
+      Overview
     </span>
 </a>
-<nav aria-label="Setting Up DVC in Your Project" class="md-nav">
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#procedure">
+<span class="md-ellipsis">
+      Procedure
+    </span>
+</a>
+<nav aria-label="Procedure" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#step-1-initialize-dvc">
+<a class="md-nav__link" href="#context">
 <span class="md-ellipsis">
-      Step 1: Initialize DVC
+      Context
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#step-2-set-up-remote-storage">
+<a class="md-nav__link" href="#conversion-from-xlsx-to-csv">
 <span class="md-ellipsis">
-      Step 2: Set Up Remote Storage
+      Conversion from XLSX to CSV
     </span>
 </a>
-<nav aria-label="Step 2: Set Up Remote Storage" class="md-nav">
+<nav aria-label="Conversion from XLSX to CSV" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#for-azure-blob-storage">
+<a class="md-nav__link" href="#function-convert_xlsx_to_csv">
 <span class="md-ellipsis">
-      For Azure Blob Storage
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#for-aws-s3">
-<span class="md-ellipsis">
-      For AWS S3
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#for-local-storage">
-<span class="md-ellipsis">
-      For Local Storage
+      Function: convert_xlsx_to_csv
     </span>
 </a>
 </li>
@@ -629,53 +601,39 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#step-3-add-data-to-dvc">
+<a class="md-nav__link" href="#conversion-from-csv-to-xlsx">
 <span class="md-ellipsis">
-      Step 3: Add Data to DVC
+      Conversion from CSV to XLSX
     </span>
 </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#step-4-commit-changes-to-version-control">
-<span class="md-ellipsis">
-      Step 4: Commit Changes to Version Control
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#step-5-push-data-to-remote-storage">
-<span class="md-ellipsis">
-      Step 5: Push Data to Remote Storage
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#updating-data-with-dvc">
-<span class="md-ellipsis">
-      Updating Data with DVC
-    </span>
-</a>
-<nav aria-label="Updating Data with DVC" class="md-nav">
+<nav aria-label="Conversion from CSV to XLSX" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#local-data-updates">
+<a class="md-nav__link" href="#function-convert_csv_to_xlsx">
 <span class="md-ellipsis">
-      Local Data Updates
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#cloud-data-updates">
-<span class="md-ellipsis">
-      Cloud Data Updates
+      Function: convert_csv_to_xlsx
     </span>
 </a>
 </li>
 </ul>
 </nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#requirements">
+<span class="md-ellipsis">
+      Requirements
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#installation">
+<span class="md-ellipsis">
+      Installation
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#conclusion">
@@ -691,104 +649,148 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="how-to-guide-setting-up-and-using-data-version-control-with-dvc">How-To Guide: Setting Up and Using Data Version Control with DVC<a class="headerlink" href="#how-to-guide-setting-up-and-using-data-version-control-with-dvc" title="Permanent link">¶</a></h1>
-<h2 id="setting-up-dvc-in-your-project">Setting Up DVC in Your Project<a class="headerlink" href="#setting-up-dvc-in-your-project" title="Permanent link">¶</a></h2>
-<h3 id="step-1-initialize-dvc">Step 1: Initialize DVC<a class="headerlink" href="#step-1-initialize-dvc" title="Permanent link">¶</a></h3>
-<div class="admonition note">
-<p class="admonition-title">Initialization</p>
-<ol>
-<li>Open your terminal.</li>
-<li>Navigate to your project repository.</li>
-<li>Run the following command:
-   <div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>dvc<span class="w"> </span>init
+<h1 id="data-conversion-workflow-for-nlp-projects">Data Conversion Workflow for NLP Projects<a class="headerlink" href="#data-conversion-workflow-for-nlp-projects" title="Permanent link">¶</a></h1>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">¶</a></h2>
+<p>This document outlines the process and provides the necessary Python
+functions for converting data files between XLSX and CSV formats within
+a Natural Language Processing (NLP) project. The workflow is designed to
+facilitate seamless data sharing and manipulation among non-technical
+stakeholders and machine learning (ML) experts, ensuring uniform
+encoding and formatting across different operating systems.</p>
+<h2 id="procedure">Procedure<a class="headerlink" href="#procedure" title="Permanent link">¶</a></h2>
+<h3 id="context">Context<a class="headerlink" href="#context" title="Permanent link">¶</a></h3>
+<p>Non-technical stakeholders often manually create and share data in XLSX
+format using Windows OS, without employing programming tools like
+Python. ML experts, on the other hand, utilize containers running Linux
+to manipulate this data with Python and incorporate it into the
+project's codebase. To ensure compatibility and uniformity in data
+handling, two Python functions have been developed for converting data
+files between XLSX and CSV formats.</p>
+<h3 id="conversion-from-xlsx-to-csv">Conversion from XLSX to CSV<a class="headerlink" href="#conversion-from-xlsx-to-csv" title="Permanent link">¶</a></h3>
+<p>When ML experts receive an XLSX file from business stakeholders, the
+following Python function should be executed in a Linux-based container
+to convert the file into a CSV format. This conversion ensures the data
+is encoded in UTF-8 and retains consistent formatting for use in the
+project's NLP codebase.</p>
+<h4 id="function-convert_xlsx_to_csv">Function: <code>convert_xlsx_to_csv</code><a class="headerlink" href="#function-convert_xlsx_to_csv" title="Permanent link">¶</a></h4>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a>
+<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a>
+<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="k">def</span> <span class="nf">convert_xlsx_to_csv</span><span class="p">(</span><span class="n">xlsx_path</span><span class="p">,</span> <span class="n">csv_path</span><span class="p">,</span> <span class="n">sheet_name</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">    </span><span class="sd">"""</span>
+<a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="sd">    Converts an XLSX file to a CSV file with UTF-8 encoding.</span>
+<a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a>
+<a href="#__codelineno-0-8" id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="sd">    This function takes the path to an XLSX file and a destination path</span>
+<a href="#__codelineno-0-9" id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="sd">    for the CSV file as arguments. It optionally accepts the name or</span>
+<a href="#__codelineno-0-10" id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="sd">    index of the sheet to convert. It uses `pandas` to read the</span>
+<a href="#__codelineno-0-11" id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="sd">    specified sheet, ensuring all data is treated as strings</span>
+<a href="#__codelineno-0-12" id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="sd">    (`dtype=str`) to preserve formatting. It then fills any missing</span>
+<a href="#__codelineno-0-13" id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="sd">    values with empty strings to avoid the string 'nan' appearing in</span>
+<a href="#__codelineno-0-14" id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="sd">    your CSV. Finally, it writes the data to a CSV file, specifying</span>
+<a href="#__codelineno-0-15" id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="sd">    UTF-8 encoding and using `\n` as the line terminator to ensure</span>
+<a href="#__codelineno-0-16" id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="sd">    compatibility across different operating systems.</span>
+<a href="#__codelineno-0-17" id="__codelineno-0-17" name="__codelineno-0-17"></a>
+<a href="#__codelineno-0-18" id="__codelineno-0-18" name="__codelineno-0-18"></a><span class="sd">    Parameters: - xlsx_path: Path to the source XLSX file.  - csv_path:</span>
+<a href="#__codelineno-0-19" id="__codelineno-0-19" name="__codelineno-0-19"></a><span class="sd">    Path where the output CSV file should be saved.  - sheet_name: Name</span>
+<a href="#__codelineno-0-20" id="__codelineno-0-20" name="__codelineno-0-20"></a><span class="sd">    or index of the sheet in the XLSX file to convert.</span>
+<a href="#__codelineno-0-21" id="__codelineno-0-21" name="__codelineno-0-21"></a><span class="sd">                  Defaults to the first sheet.</span>
+<a href="#__codelineno-0-22" id="__codelineno-0-22" name="__codelineno-0-22"></a><span class="sd">    """</span>
+<a href="#__codelineno-0-23" id="__codelineno-0-23" name="__codelineno-0-23"></a>    <span class="k">try</span><span class="p">:</span>
+<a href="#__codelineno-0-24" id="__codelineno-0-24" name="__codelineno-0-24"></a>        <span class="c1"># Load the specified sheet from the XLSX file</span>
+<a href="#__codelineno-0-25" id="__codelineno-0-25" name="__codelineno-0-25"></a>        <span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">xlsx_path</span><span class="p">,</span> <span class="n">sheet_name</span><span class="o">=</span><span class="n">sheet_name</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">str</span><span class="p">)</span>
+<a href="#__codelineno-0-26" id="__codelineno-0-26" name="__codelineno-0-26"></a>
+<a href="#__codelineno-0-27" id="__codelineno-0-27" name="__codelineno-0-27"></a>        <span class="c1"># Convert any NaN values to empty strings to avoid 'nan' in the CSV</span>
+<a href="#__codelineno-0-28" id="__codelineno-0-28" name="__codelineno-0-28"></a>        <span class="n">data</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="s2">""</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<a href="#__codelineno-0-29" id="__codelineno-0-29" name="__codelineno-0-29"></a>
+<a href="#__codelineno-0-30" id="__codelineno-0-30" name="__codelineno-0-30"></a>        <span class="c1"># Save the DataFrame to a CSV file with UTF-8 encoding</span>
+<a href="#__codelineno-0-31" id="__codelineno-0-31" name="__codelineno-0-31"></a>        <span class="n">data</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span>
+<a href="#__codelineno-0-32" id="__codelineno-0-32" name="__codelineno-0-32"></a>            <span class="n">csv_path</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">"utf-8"</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">line_terminator</span><span class="o">=</span><span class="s2">"</span><span class="se">\n</span><span class="s2">"</span>
+<a href="#__codelineno-0-33" id="__codelineno-0-33" name="__codelineno-0-33"></a>        <span class="p">)</span>
+<a href="#__codelineno-0-34" id="__codelineno-0-34" name="__codelineno-0-34"></a>
+<a href="#__codelineno-0-35" id="__codelineno-0-35" name="__codelineno-0-35"></a>        <span class="nb">print</span><span class="p">(</span>
+<a href="#__codelineno-0-36" id="__codelineno-0-36" name="__codelineno-0-36"></a>            <span class="sa">f</span><span class="s2">"Successfully converted </span><span class="si">{</span><span class="n">xlsx_path</span><span class="si">}</span><span class="s2"> to </span><span class="si">{</span><span class="n">csv_path</span><span class="si">}</span><span class="s2"> in UTF-8 encoding."</span>
+<a href="#__codelineno-0-37" id="__codelineno-0-37" name="__codelineno-0-37"></a>        <span class="p">)</span>
+<a href="#__codelineno-0-38" id="__codelineno-0-38" name="__codelineno-0-38"></a>    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+<a href="#__codelineno-0-39" id="__codelineno-0-39" name="__codelineno-0-39"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Error converting </span><span class="si">{</span><span class="n">xlsx_path</span><span class="si">}</span><span class="s2"> to CSV: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 </code></pre></div>
-   This initializes DVC in your repository, creating a <code>.dvc</code> directory.</li>
-</ol>
-</div>
-<h3 id="step-2-set-up-remote-storage">Step 2: Set Up Remote Storage<a class="headerlink" href="#step-2-set-up-remote-storage" title="Permanent link">¶</a></h3>
-<div class="admonition tip">
-<p class="admonition-title">Choose Your Storage Backend</p>
-<p>DVC supports various storage backends. Depending on your choice (Azure, AWS, local), follow the appropriate steps below.</p>
-</div>
-<h4 id="for-azure-blob-storage">For Azure Blob Storage<a class="headerlink" href="#for-azure-blob-storage" title="Permanent link">¶</a></h4>
-<ol>
-<li>Run the commands:
-   <div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a>dvc<span class="w"> </span>remote<span class="w"> </span>add<span class="w"> </span>-d<span class="w"> </span>myremote<span class="w"> </span>azure://mycontainer/path
-<a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a>dvc<span class="w"> </span>remote<span class="w"> </span>modify<span class="w"> </span>myremote<span class="w"> </span>connection_string<span class="w"> </span><span class="s1">'myconnectionstring'</span>
-</code></pre></div></li>
-</ol>
-<h4 id="for-aws-s3">For AWS S3<a class="headerlink" href="#for-aws-s3" title="Permanent link">¶</a></h4>
-<ol>
-<li>Configure AWS and run:
-   <div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a>dvc<span class="w"> </span>remote<span class="w"> </span>add<span class="w"> </span>-d<span class="w"> </span>myremote<span class="w"> </span>s3://mybucket/path
-</code></pre></div></li>
-</ol>
-<h4 id="for-local-storage">For Local Storage<a class="headerlink" href="#for-local-storage" title="Permanent link">¶</a></h4>
-<ol>
-<li>Set up local storage:
-   <div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a>dvc<span class="w"> </span>remote<span class="w"> </span>add<span class="w"> </span>-d<span class="w"> </span>myremote<span class="w"> </span>/path/to/local/storage
-</code></pre></div></li>
-</ol>
-<h3 id="step-3-add-data-to-dvc">Step 3: Add Data to DVC<a class="headerlink" href="#step-3-add-data-to-dvc" title="Permanent link">¶</a></h3>
-<div class="admonition warning">
-<p class="admonition-title">Tracking Data</p>
-<ol>
-<li>Use the <code>dvc add</code> command to track files or directories:
-   <div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a>dvc<span class="w"> </span>add<span class="w"> </span>data/dataset.csv
-</code></pre></div></li>
-</ol>
-</div>
-<h3 id="step-4-commit-changes-to-version-control">Step 4: Commit Changes to Version Control<a class="headerlink" href="#step-4-commit-changes-to-version-control" title="Permanent link">¶</a></h3>
-<ol>
-<li>Commit the changes to both DVC and Git:
-   <div class="highlight"><pre><span></span><code><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a>git<span class="w"> </span>add<span class="w"> </span>data/dataset.csv.dvc<span class="w"> </span>data/.gitignore
-<a href="#__codelineno-5-2" id="__codelineno-5-2" name="__codelineno-5-2"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">"Add dataset with DVC"</span>
-</code></pre></div></li>
-</ol>
-<h3 id="step-5-push-data-to-remote-storage">Step 5: Push Data to Remote Storage<a class="headerlink" href="#step-5-push-data-to-remote-storage" title="Permanent link">¶</a></h3>
-<ol>
-<li>Push your data to the remote storage:
-   <div class="highlight"><pre><span></span><code><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a>dvc<span class="w"> </span>push
-</code></pre></div></li>
-</ol>
-<h2 id="updating-data-with-dvc">Updating Data with DVC<a class="headerlink" href="#updating-data-with-dvc" title="Permanent link">¶</a></h2>
-<h3 id="local-data-updates">Local Data Updates<a class="headerlink" href="#local-data-updates" title="Permanent link">¶</a></h3>
-<div class="admonition success">
-<p class="admonition-title">Updating Local Data</p>
-<ol>
-<li>Modify your dataset file (e.g., <code>dataset.csv</code>).</li>
-<li>Run <code>dvc add dataset.csv</code> to update the <code>.dvc</code> file.</li>
-<li>Commit and push the changes:
-   <div class="highlight"><pre><span></span><code><a href="#__codelineno-7-1" id="__codelineno-7-1" name="__codelineno-7-1"></a>git<span class="w"> </span>add<span class="w"> </span>dataset.csv.dvc
-<a href="#__codelineno-7-2" id="__codelineno-7-2" name="__codelineno-7-2"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">"Update dataset.csv"</span>
-<a href="#__codelineno-7-3" id="__codelineno-7-3" name="__codelineno-7-3"></a>dvc<span class="w"> </span>push
-</code></pre></div></li>
-</ol>
-</div>
-<h3 id="cloud-data-updates">Cloud Data Updates<a class="headerlink" href="#cloud-data-updates" title="Permanent link">¶</a></h3>
-<div class="admonition info">
-<p class="admonition-title">Cloud Updates</p>
-<ol>
-<li>Synchronize with the cloud using <code>dvc pull</code>.</li>
-<li>After detecting changes, pull the updated data.</li>
-<li>Commit and push any local changes:
-   <div class="highlight"><pre><span></span><code><a href="#__codelineno-8-1" id="__codelineno-8-1" name="__codelineno-8-1"></a>dvc<span class="w"> </span>add<span class="w"> </span>dataset.csv
-<a href="#__codelineno-8-2" id="__codelineno-8-2" name="__codelineno-8-2"></a>git<span class="w"> </span>add<span class="w"> </span>dataset.csv.dvc
-<a href="#__codelineno-8-3" id="__codelineno-8-3" name="__codelineno-8-3"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">"Update dataset.csv with cloud changes"</span>
-<a href="#__codelineno-8-4" id="__codelineno-8-4" name="__codelineno-8-4"></a>dvc<span class="w"> </span>push
-</code></pre></div></li>
-</ol>
-</div>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>xlsx_path</code>: The file path to the source XLSX file.</li>
+<li><code>csv_path</code>: The file path where the output CSV file will be saved.</li>
+<li><code>sheet_name</code>: (Optional) The name or index of the sheet in the XLSX
+  file to be converted.</li>
+</ul>
+<p><strong>Usage:</strong></p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="n">convert_xlsx_to_csv</span><span class="p">(</span><span class="s1">'path/to/input.xlsx'</span><span class="p">,</span> <span class="s1">'path/to/output.csv'</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="conversion-from-csv-to-xlsx">Conversion from CSV to XLSX<a class="headerlink" href="#conversion-from-csv-to-xlsx" title="Permanent link">¶</a></h3>
+<p>For sharing processed data back with non-technical stakeholders, ML
+experts can convert the CSV files (previously created or manipulated
+within the Linux containers) back into XLSX format. This conversion
+facilitates easy access and interpretation of the results by business
+users.</p>
+<h4 id="function-convert_csv_to_xlsx">Function: <code>convert_csv_to_xlsx</code><a class="headerlink" href="#function-convert_csv_to_xlsx" title="Permanent link">¶</a></h4>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a>
+<a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a>
+<a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="k">def</span> <span class="nf">convert_csv_to_xlsx</span><span class="p">(</span><span class="n">csv_path</span><span class="p">,</span> <span class="n">xlsx_path</span><span class="p">):</span>
+<a href="#__codelineno-2-5" id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="w">    </span><span class="sd">"""</span>
+<a href="#__codelineno-2-6" id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="sd">    Converts a CSV file to an XLSX file.</span>
+<a href="#__codelineno-2-7" id="__codelineno-2-7" name="__codelineno-2-7"></a>
+<a href="#__codelineno-2-8" id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="sd">    This function takes the path to a CSV file and the desired output</span>
+<a href="#__codelineno-2-9" id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="sd">    path for the XLSX file. It uses `pandas` to read the CSV file,</span>
+<a href="#__codelineno-2-10" id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="sd">    assuming it is encoded in UTF-8 (as ensured by the CSV creation</span>
+<a href="#__codelineno-2-11" id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="sd">    function). Then, it writes the data to an XLSX file using the</span>
+<a href="#__codelineno-2-12" id="__codelineno-2-12" name="__codelineno-2-12"></a><span class="sd">    `openpyxl` engine, which is required for writing to XLSX format and</span>
+<a href="#__codelineno-2-13" id="__codelineno-2-13" name="__codelineno-2-13"></a><span class="sd">    needs to be installed alongside `pandas` if it's not already present</span>
+<a href="#__codelineno-2-14" id="__codelineno-2-14" name="__codelineno-2-14"></a><span class="sd">    in your environment.</span>
+<a href="#__codelineno-2-15" id="__codelineno-2-15" name="__codelineno-2-15"></a>
+<a href="#__codelineno-2-16" id="__codelineno-2-16" name="__codelineno-2-16"></a><span class="sd">    Parameters: - csv_path: Path to the source CSV file.  - xlsx_path:</span>
+<a href="#__codelineno-2-17" id="__codelineno-2-17" name="__codelineno-2-17"></a><span class="sd">    Path where the output XLSX file should be saved.</span>
+<a href="#__codelineno-2-18" id="__codelineno-2-18" name="__codelineno-2-18"></a><span class="sd">    """</span>
+<a href="#__codelineno-2-19" id="__codelineno-2-19" name="__codelineno-2-19"></a>    <span class="k">try</span><span class="p">:</span>
+<a href="#__codelineno-2-20" id="__codelineno-2-20" name="__codelineno-2-20"></a>        <span class="c1"># Load the CSV file, assuming UTF-8 encoding</span>
+<a href="#__codelineno-2-21" id="__codelineno-2-21" name="__codelineno-2-21"></a>        <span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">csv_path</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">"utf-8"</span><span class="p">)</span>
+<a href="#__codelineno-2-22" id="__codelineno-2-22" name="__codelineno-2-22"></a>
+<a href="#__codelineno-2-23" id="__codelineno-2-23" name="__codelineno-2-23"></a>        <span class="c1"># Save the DataFrame to an XLSX file</span>
+<a href="#__codelineno-2-24" id="__codelineno-2-24" name="__codelineno-2-24"></a>        <span class="k">with</span> <span class="n">pd</span><span class="o">.</span><span class="n">ExcelWriter</span><span class="p">(</span><span class="n">xlsx_path</span><span class="p">,</span> <span class="n">engine</span><span class="o">=</span><span class="s2">"openpyxl"</span><span class="p">)</span> <span class="k">as</span> <span class="n">writer</span><span class="p">:</span>
+<a href="#__codelineno-2-25" id="__codelineno-2-25" name="__codelineno-2-25"></a>            <span class="n">data</span><span class="o">.</span><span class="n">to_excel</span><span class="p">(</span><span class="n">writer</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<a href="#__codelineno-2-26" id="__codelineno-2-26" name="__codelineno-2-26"></a>
+<a href="#__codelineno-2-27" id="__codelineno-2-27" name="__codelineno-2-27"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Successfully converted </span><span class="si">{</span><span class="n">csv_path</span><span class="si">}</span><span class="s2"> to </span><span class="si">{</span><span class="n">xlsx_path</span><span class="si">}</span><span class="s2">."</span><span class="p">)</span>
+<a href="#__codelineno-2-28" id="__codelineno-2-28" name="__codelineno-2-28"></a>    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+<a href="#__codelineno-2-29" id="__codelineno-2-29" name="__codelineno-2-29"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Error converting </span><span class="si">{</span><span class="n">csv_path</span><span class="si">}</span><span class="s2"> to XLSX: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+</code></pre></div>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>csv_path</code>: The file path to the source CSV file.</li>
+<li><code>xlsx_path</code>: The file path where the output XLSX file will be saved.</li>
+</ul>
+<p><strong>Usage:</strong></p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="n">convert_csv_to_xlsx</span><span class="p">(</span><span class="s1">'path/to/input.csv'</span><span class="p">,</span> <span class="s1">'path/to/output.xlsx'</span><span class="p">)</span>
+</code></pre></div>
+<h2 id="requirements">Requirements<a class="headerlink" href="#requirements" title="Permanent link">¶</a></h2>
+<ul>
+<li>Python 3.x</li>
+<li>Pandas library</li>
+<li>Openpyxl library (for XLSX file writing)</li>
+</ul>
+<h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">¶</a></h2>
+<p>Ensure the required libraries are installed in your Linux container:</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a>pip<span class="w"> </span>install<span class="w"> </span>pandas<span class="w"> </span>openpyxl
+</code></pre></div>
 <h2 id="conclusion">Conclusion<a class="headerlink" href="#conclusion" title="Permanent link">¶</a></h2>
-<p>By following these steps, you can effectively utilize DVC for data
-version control, ensuring the consistency and reproducibility of your
-data science and machine learning projects.</p>
+<p>This procedure guide facilitates a smooth data exchange and processing
+workflow for NLP projects, bridging the gap between non-technical
+stakeholders and ML experts. By following the documented steps and
+utilizing the provided Python functions, teams can ensure data
+consistency, compatibility, and efficiency throughout the project
+lifecycle.</p>
 <aside class="md-source-file">
 <span class="md-source-file__fact">
 <span class="md-icon" title="Last update">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 29, 2024</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 9, 2024</span>
 </span>
 </aside>
 </article>
