@@ -36,9 +36,6 @@ project's NLP codebase.
 #### Function: `convert_xlsx_to_csv`
 
 ```python
-import pandas as pd
-
-
 def convert_xlsx_to_csv(xlsx_path, csv_path, sheet_name=0):
     """
     Converts an XLSX file to a CSV file with UTF-8 encoding.
@@ -67,7 +64,7 @@ def convert_xlsx_to_csv(xlsx_path, csv_path, sheet_name=0):
 
         # Save the DataFrame to a CSV file with UTF-8 encoding
         data.to_csv(
-            csv_path, encoding="utf-8", index=False, line_terminator="\n"
+            csv_path, encoding="utf-8", index=False, lineterminator="\n"
         )
 
         print(
@@ -116,8 +113,9 @@ def convert_csv_to_xlsx(csv_path, xlsx_path):
     needs to be installed alongside `pandas` if it's not already present
     in your environment.
 
-    Parameters: - csv_path: Path to the source CSV file.  - xlsx_path:
-    Path where the output XLSX file should be saved.
+    Parameters:
+    - csv_path: Path to the source CSV file.
+    - xlsx_path: Path where the output XLSX file should be saved.
     """
     try:
         # Load the CSV file, assuming UTF-8 encoding
