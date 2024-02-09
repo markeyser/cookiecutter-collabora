@@ -5,12 +5,12 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="https://llmslab.github.io/cookiecutter-ai-flock/how-to-guides/toc-how-to-guides/" rel="canonical"/>
-<link href="../../tutorials/markdown-ml-model-documentation/" rel="prev"/>
-<link href="../dvc-set-up/" rel="next"/>
+<link href="https://llmslab.github.io/cookiecutter-ai-flock/how-to-guides/automating-wandb-backups/" rel="canonical"/>
+<link href="../data-conversion-from-xlsx-to-csv/" rel="prev"/>
+<link href="../../explanation/toc-explanation/" rel="next"/>
 <link href="../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.5.3, mkdocs-material-9.5.4" name="generator"/>
-<title>TOC - Cookiecutter Ai Flock</title>
+<title>Automating Backups for Weights &amp; Biases - Cookiecutter Ai Flock</title>
 <link href="../../assets/stylesheets/main.50c56a3b.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -35,7 +35,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#how-to-guides">
+<a class="md-skip" href="#how-to-back-up-weights-biases-experiments-locally-on-macbook-pro">
           Skip to content
         </a>
 </div>
@@ -59,7 +59,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              TOC
+              Automating Backups for Weights &amp; Biases
             
           </span>
 </div>
@@ -251,41 +251,12 @@
             How-To Guides
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-<span class="md-ellipsis">
-    TOC
-  </span>
-<span class="md-nav__icon md-icon"></span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="./">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../toc-how-to-guides/">
 <span class="md-ellipsis">
     TOC
   </span>
 </a>
-<nav aria-label="On this page" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      On this page
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#purpose">
-<span class="md-ellipsis">
-      Purpose
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#table-of-contents">
-<span class="md-ellipsis">
-      Table of Contents
-    </span>
-</a>
-</li>
-</ul>
-</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../dvc-set-up/">
@@ -385,12 +356,166 @@
   </span>
 </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../automating-wandb-backups/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    Automating Backups for Weights &amp; Biases
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
 <span class="md-ellipsis">
     Automating Backups for Weights &amp; Biases
   </span>
 </a>
+<nav aria-label="On this page" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#define-the-task">
+<span class="md-ellipsis">
+      Define the Task
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#assumptions">
+<span class="md-ellipsis">
+      Assumptions
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tools-and-requirements">
+<span class="md-ellipsis">
+      Tools and Requirements
+    </span>
+</a>
+<nav aria-label="Tools and Requirements" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#task-instructions">
+<span class="md-ellipsis">
+      Task Instructions
+    </span>
+</a>
+<nav aria-label="Task Instructions" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1-export-wb-data">
+<span class="md-ellipsis">
+      1. Export W&amp;B Data
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2-database-backup">
+<span class="md-ellipsis">
+      2. Database Backup
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3-artifact-storage">
+<span class="md-ellipsis">
+      3. Artifact Storage
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#4-automate-backups">
+<span class="md-ellipsis">
+      4. Automate Backups
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#5-version-control-integration">
+<span class="md-ellipsis">
+      5. Version Control Integration
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#verification-steps">
+<span class="md-ellipsis">
+      Verification Steps
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#troubleshooting">
+<span class="md-ellipsis">
+      Troubleshooting
+    </span>
+</a>
+<nav aria-label="Troubleshooting" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#automating-backups-with-a-script">
+<span class="md-ellipsis">
+      Automating Backups with a Script
+    </span>
+</a>
+<nav aria-label="Automating Backups with a Script" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#backup-script-example">
+<span class="md-ellipsis">
+      Backup Script Example
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#verification-and-monitoring">
+<span class="md-ellipsis">
+      Verification and Monitoring
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#conclusion">
+<span class="md-ellipsis">
+      Conclusion
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#conclusion_1">
+<span class="md-ellipsis">
+      Conclusion
+    </span>
+</a>
+<nav aria-label="Conclusion" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#further-assistance">
+<span class="md-ellipsis">
+      Further Assistance
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -500,18 +625,143 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#purpose">
+<a class="md-nav__link" href="#define-the-task">
 <span class="md-ellipsis">
-      Purpose
+      Define the Task
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#table-of-contents">
+<a class="md-nav__link" href="#assumptions">
 <span class="md-ellipsis">
-      Table of Contents
+      Assumptions
     </span>
 </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tools-and-requirements">
+<span class="md-ellipsis">
+      Tools and Requirements
+    </span>
+</a>
+<nav aria-label="Tools and Requirements" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#task-instructions">
+<span class="md-ellipsis">
+      Task Instructions
+    </span>
+</a>
+<nav aria-label="Task Instructions" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1-export-wb-data">
+<span class="md-ellipsis">
+      1. Export W&amp;B Data
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2-database-backup">
+<span class="md-ellipsis">
+      2. Database Backup
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3-artifact-storage">
+<span class="md-ellipsis">
+      3. Artifact Storage
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#4-automate-backups">
+<span class="md-ellipsis">
+      4. Automate Backups
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#5-version-control-integration">
+<span class="md-ellipsis">
+      5. Version Control Integration
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#verification-steps">
+<span class="md-ellipsis">
+      Verification Steps
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#troubleshooting">
+<span class="md-ellipsis">
+      Troubleshooting
+    </span>
+</a>
+<nav aria-label="Troubleshooting" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#automating-backups-with-a-script">
+<span class="md-ellipsis">
+      Automating Backups with a Script
+    </span>
+</a>
+<nav aria-label="Automating Backups with a Script" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#backup-script-example">
+<span class="md-ellipsis">
+      Backup Script Example
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#verification-and-monitoring">
+<span class="md-ellipsis">
+      Verification and Monitoring
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#conclusion">
+<span class="md-ellipsis">
+      Conclusion
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#conclusion_1">
+<span class="md-ellipsis">
+      Conclusion
+    </span>
+</a>
+<nav aria-label="Conclusion" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#further-assistance">
+<span class="md-ellipsis">
+      Further Assistance
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -520,39 +770,174 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="how-to-guides">How-To Guides<a class="headerlink" href="#how-to-guides" title="Permanent link">¶</a></h1>
-<div class="admonition info">
-<p class="admonition-title">About This Section</p>
-<p>The How-To Guides section is a repository of <strong>in-depth, practical guides</strong> for specific tasks within Python projects and broader software development workflows. Each guide delivers concise, step-by-step directions designed to tackle particular challenges, ranging from initial setups to complex processes.</p>
-</div>
-<h2 id="purpose">Purpose<a class="headerlink" href="#purpose" title="Permanent link">¶</a></h2>
+<h1 id="how-to-back-up-weights-biases-experiments-locally-on-macbook-pro">How to Back Up Weights &amp; Biases Experiments Locally on MacBook Pro<a class="headerlink" href="#how-to-back-up-weights-biases-experiments-locally-on-macbook-pro" title="Permanent link">¶</a></h1>
+<p>This guide provides step-by-step instructions on how to back up your
+Weights &amp; Biases (W&amp;B) experiments when running locally on a MacBook
+Pro. Following the Detaxis approach for structured technical
+documentation, this guide ensures that you can securely and efficiently
+safeguard your data.</p>
+<h2 id="define-the-task"><strong>Define the Task</strong><a class="headerlink" href="#define-the-task" title="Permanent link">¶</a></h2>
+<p>Backing up W&amp;B experiments involves saving experiment data, metadata,
+and artifacts to prevent data loss and ensure reproducibility of
+results.</p>
+<h2 id="assumptions"><strong>Assumptions</strong><a class="headerlink" href="#assumptions" title="Permanent link">¶</a></h2>
 <ul>
-<li><span class="twemoji"><svg viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M5.433 2.304A4.492 4.492 0 0 0 3.5 6c0 1.598.832 3.002 2.09 3.802.518.328.929.923.902 1.64v.008l-.164 3.337a.75.75 0 1 1-1.498-.073l.163-3.33c.002-.085-.05-.216-.207-.316A5.996 5.996 0 0 1 2 6a5.993 5.993 0 0 1 2.567-4.92 1.482 1.482 0 0 1 1.673-.04c.462.296.76.827.76 1.423v2.82c0 .082.041.16.11.206l.75.51a.25.25 0 0 0 .28 0l.75-.51A.249.249 0 0 0 9 5.282V2.463c0-.596.298-1.127.76-1.423a1.482 1.482 0 0 1 1.673.04A5.993 5.993 0 0 1 14 6a5.996 5.996 0 0 1-2.786 5.068c-.157.1-.209.23-.207.315l.163 3.33a.752.752 0 0 1-1.094.714.75.75 0 0 1-.404-.64l-.164-3.345c-.027-.717.384-1.312.902-1.64A4.495 4.495 0 0 0 12.5 6a4.492 4.492 0 0 0-1.933-3.696c-.024.017-.067.067-.067.16v2.818a1.75 1.75 0 0 1-.767 1.448l-.75.51a1.75 1.75 0 0 1-1.966 0l-.75-.51A1.75 1.75 0 0 1 5.5 5.282V2.463c0-.092-.043-.142-.067-.159Z"></path></svg></span> <strong>Targeted Instruction:</strong> The guides are crafted to deliver straightforward, actionable steps for distinct development hurdles.</li>
-<li><span class="twemoji"><svg viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M5 5.782V2.5h-.25a.75.75 0 0 1 0-1.5h6.5a.75.75 0 0 1 0 1.5H11v3.282l3.666 5.76C15.619 13.04 14.543 15 12.767 15H3.233c-1.776 0-2.852-1.96-1.899-3.458Zm-2.4 6.565a.75.75 0 0 0 .633 1.153h9.534a.75.75 0 0 0 .633-1.153L12.225 10.5h-8.45ZM9.5 2.5h-3V6c0 .143-.04.283-.117.403L4.73 9h6.54L9.617 6.403A.746.746 0 0 1 9.5 6Z"></path></svg></span> <strong>Comprehensive Topic Coverage:</strong> Encompassing a spectrum of subjects, from fundamental configurations to intricate enhancements.</li>
-<li><span class="twemoji"><svg viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M1.75 16A1.75 1.75 0 0 1 0 14.25V1.75C0 .784.784 0 1.75 0h8.5C11.216 0 12 .784 12 1.75v12.5c0 .085-.006.168-.018.25h2.268a.25.25 0 0 0 .25-.25V8.285a.25.25 0 0 0-.111-.208l-1.055-.703a.749.749 0 1 1 .832-1.248l1.055.703c.487.325.779.871.779 1.456v5.965A1.75 1.75 0 0 1 14.25 16h-3.5a.766.766 0 0 1-.197-.026c-.099.017-.2.026-.303.026h-3a.75.75 0 0 1-.75-.75V14h-1v1.25a.75.75 0 0 1-.75.75Zm-.25-1.75c0 .138.112.25.25.25H4v-1.25a.75.75 0 0 1 .75-.75h2.5a.75.75 0 0 1 .75.75v1.25h2.25a.25.25 0 0 0 .25-.25V1.75a.25.25 0 0 0-.25-.25h-8.5a.25.25 0 0 0-.25.25ZM3.75 6h.5a.75.75 0 0 1 0 1.5h-.5a.75.75 0 0 1 0-1.5ZM3 3.75A.75.75 0 0 1 3.75 3h.5a.75.75 0 0 1 0 1.5h-.5A.75.75 0 0 1 3 3.75Zm4 3A.75.75 0 0 1 7.75 6h.5a.75.75 0 0 1 0 1.5h-.5A.75.75 0 0 1 7 6.75ZM7.75 3h.5a.75.75 0 0 1 0 1.5h-.5a.75.75 0 0 1 0-1.5ZM3 9.75A.75.75 0 0 1 3.75 9h.5a.75.75 0 0 1 0 1.5h-.5A.75.75 0 0 1 3 9.75ZM7.75 9h.5a.75.75 0 0 1 0 1.5h-.5a.75.75 0 0 1 0-1.5Z"></path></svg></span> <strong>Universal Applicability:</strong> Suited for developers of all experience levels, offering valuable insights for both beginners and veterans.</li>
+<li>You have W&amp;B set up and running locally on your MacBook Pro.</li>
+<li>Basic familiarity with terminal commands.</li>
 </ul>
-<h2 id="table-of-contents">Table of Contents<a class="headerlink" href="#table-of-contents" title="Permanent link">¶</a></h2>
+<h2 id="tools-and-requirements"><strong>Tools and Requirements</strong><a class="headerlink" href="#tools-and-requirements" title="Permanent link">¶</a></h2>
 <ul>
-<li><a href="../dvc-set-up/">Setting Up DVC for Efficient Data Management</a></li>
-<li><a href="../dvc-communication/">Facilitating Team Communication with DVC</a></li>
-<li><a href="../dvc-vscode-extension/">Integrating DVC with VS Code for Enhanced Workflow</a></li>
-<li><a href="../git-branch-naming-standards/">Creating Git Branches Following Best Practices</a></li>
-<li><a href="../commit-message-standards-ml/">Standardizing Commit Messages in ML Projects</a></li>
-<li><a href="../ml-data-folder-naming/">Naming Data Folders in ML Projects for Better Organization</a></li>
-<li><a href="../ml-data-naming-conventions/">Adopting Effective Data File Naming Conventions</a></li>
-<li><a href="../machine-learning-metadata-automation/">Automating the Creation of Metadata for Machine Learning Models</a></li>
-<li><a href="../github-actions-naming-convention/">Implementing GitHub Actions to Enforce Naming Conventions</a></li>
-<li><a href="../offline-cookiecutter-setup/">Using Cookiecutter for Project Setup Without Internet Access</a></li>
-<li><a href="../wandb-experiment-tracking-rag/">ML Experiments Life-Cycle with Weights &amp; Biases</a></li>
-<li><a href="../templates/">Templates for Issues/Stories and PRs</a></li>
-<li><a href="../branching-strategy/">Branching Strategies for ML Projects</a></li>
-<li><a href="../data-conversion-from-xlsx-to-csv/">Python Scripting for Data Conversion</a></li>
-<li><a href="../automating-wandb-backups/">Automating Backups for Weights &amp; Biases</a></li>
+<li>Terminal access on MacBook Pro.</li>
+<li>Optional: Access to cloud storage services or an external hard drive
+  for remote backups.</li>
 </ul>
-<div class="admonition check">
-<p class="admonition-title">Optimizing Your Workflow</p>
-<p>These guides are intentionally designed to function independently, providing the flexibility to directly engage with topics pertinent to your immediate challenges. As a compendium of efficient, practical solutions, they are an excellent resource for enhancing productivity and mastering various development tasks.</p>
-</div>
+<h3 id="task-instructions"><strong>Task Instructions</strong><a class="headerlink" href="#task-instructions" title="Permanent link">¶</a></h3>
+<h4 id="1-export-wb-data"><strong>1. Export W&amp;B Data</strong><a class="headerlink" href="#1-export-wb-data" title="Permanent link">¶</a></h4>
+<ul>
+<li><strong>Action</strong>: Use the W&amp;B CLI to export project data.</li>
+<li><strong>Commands</strong>:
+    <div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>wandb<span class="w"> </span><span class="nb">export</span><span class="w"> </span>USERNAME/PROJECT_NAME<span class="w"> </span>--output<span class="w"> </span>file.json
+</code></pre></div>
+    Replace <code>USERNAME</code> with your W&amp;B username and <code>PROJECT_NAME</code> with
+    the name of your project.</li>
+</ul>
+<h4 id="2-database-backup"><strong>2. Database Backup</strong><a class="headerlink" href="#2-database-backup" title="Permanent link">¶</a></h4>
+<ul>
+<li><strong>Action</strong>: Locate and copy the W&amp;B local SQLite database for backup.</li>
+<li><strong>Location</strong>: The default W&amp;B directory is <code>~/wandb</code>. Find the
+  <code>local.db</code> file within this directory.</li>
+<li><strong>Backup Command</strong>:
+    <div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a>cp<span class="w"> </span>~/wandb/local.db<span class="w"> </span>/path/to/your/backup/location
+</code></pre></div></li>
+</ul>
+<h4 id="3-artifact-storage"><strong>3. Artifact Storage</strong><a class="headerlink" href="#3-artifact-storage" title="Permanent link">¶</a></h4>
+<ul>
+<li><strong>Action</strong>: Manually back up the artifacts directory.</li>
+<li><strong>Command</strong>:
+    <div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a>cp<span class="w"> </span>-R<span class="w"> </span>~/wandb/artifacts<span class="w"> </span>/path/to/your/backup/location
+</code></pre></div></li>
+</ul>
+<h4 id="4-automate-backups"><strong>4. Automate Backups</strong><a class="headerlink" href="#4-automate-backups" title="Permanent link">¶</a></h4>
+<ul>
+<li><strong>Action</strong>: Create a script to automate the backup process.</li>
+<li><strong>Details</strong>: Use the provided example backup script, modifying paths
+  and destinations as needed. Schedule this script using <code>cron</code> for
+  periodic backups.</li>
+</ul>
+<h4 id="5-version-control-integration"><strong>5. Version Control Integration</strong><a class="headerlink" href="#5-version-control-integration" title="Permanent link">¶</a></h4>
+<ul>
+<li><strong>Action</strong>: Ensure that your project code is under version control
+  (e.g., Git).</li>
+<li><strong>Purpose</strong>: Facilitates matching experiment results with code
+  versions, enhancing reproducibility.</li>
+</ul>
+<h2 id="verification-steps"><strong>Verification Steps</strong><a class="headerlink" href="#verification-steps" title="Permanent link">¶</a></h2>
+<ol>
+<li><strong>Check Exported Data</strong>: Ensure that the JSON or CSV file contains
+   all relevant experiment data.</li>
+<li><strong>Validate Database Copy</strong>: Verify that the <code>local.db</code> file is
+   correctly copied to your backup location and is not corrupted.</li>
+<li><strong>Artifact Backup</strong>: Confirm that all files in the <code>artifacts</code>
+   directory are present in your backup location.</li>
+<li><strong>Test Automation Script</strong>: Execute your backup script manually to
+   ensure it works as expected. Check the backup destination for the new
+   backup folder.</li>
+<li><strong>Review Backup Frequency</strong>: Ensure that your backup script is
+   scheduled appropriately and runs at the desired frequency.</li>
+</ol>
+<h2 id="troubleshooting"><strong>Troubleshooting</strong><a class="headerlink" href="#troubleshooting" title="Permanent link">¶</a></h2>
+<ul>
+<li><strong>Issue</strong>: Export command fails.</li>
+<li><strong>Solution</strong>: Check your W&amp;B username and project name for typos.
+    Ensure you're connected to the internet if using W&amp;B cloud.</li>
+<li><strong>Issue</strong>: Backup script does not run automatically.</li>
+<li><strong>Solution</strong>: Verify the <code>cron</code> job setup. Check for syntax errors
+    in your cron configuration.</li>
+<li><strong>Issue</strong>: Insufficient backup space.</li>
+<li><strong>Solution</strong>: Regularly monitor your backup location's available
+    space. Consider using cloud storage for additional capacity.</li>
+</ul>
+<h3 id="automating-backups-with-a-script"><strong>Automating Backups with a Script</strong><a class="headerlink" href="#automating-backups-with-a-script" title="Permanent link">¶</a></h3>
+<p>To simplify and automate the backup process for Weights &amp; Biases
+experiments on your MacBook Pro, you can use a shell script. This
+section provides an example script and instructions on how to set it up
+for automated execution using <code>cron</code>.</p>
+<h4 id="backup-script-example"><strong>Backup Script Example</strong><a class="headerlink" href="#backup-script-example" title="Permanent link">¶</a></h4>
+<p>Below is an example of a backup script named <code>wandb_backup.sh</code>. This
+script backs up the W&amp;B local database and artifacts to a specified
+backup directory.</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="ch">#!/bin/bash</span>
+<a href="#__codelineno-3-2" id="__codelineno-3-2" name="__codelineno-3-2"></a>
+<a href="#__codelineno-3-3" id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="c1"># Define the source and destination directories</span>
+<a href="#__codelineno-3-4" id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="nv">WANDB_DIR</span><span class="o">=</span><span class="s2">"</span><span class="nv">$HOME</span><span class="s2">/wandb"</span>
+<a href="#__codelineno-3-5" id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="nv">BACKUP_DIR</span><span class="o">=</span><span class="s2">"/path/to/your/backup/location/</span><span class="k">$(</span>date<span class="w"> </span>+%Y%m%d_%H%M%S<span class="k">)</span><span class="s2">"</span>
+<a href="#__codelineno-3-6" id="__codelineno-3-6" name="__codelineno-3-6"></a>
+<a href="#__codelineno-3-7" id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="c1"># Create a new backup directory with a timestamp</span>
+<a href="#__codelineno-3-8" id="__codelineno-3-8" name="__codelineno-3-8"></a>mkdir<span class="w"> </span>-p<span class="w"> </span><span class="s2">"</span><span class="nv">$BACKUP_DIR</span><span class="s2">"</span>
+<a href="#__codelineno-3-9" id="__codelineno-3-9" name="__codelineno-3-9"></a>
+<a href="#__codelineno-3-10" id="__codelineno-3-10" name="__codelineno-3-10"></a><span class="c1"># Backup the local database</span>
+<a href="#__codelineno-3-11" id="__codelineno-3-11" name="__codelineno-3-11"></a>cp<span class="w"> </span><span class="s2">"</span><span class="nv">$WANDB_DIR</span><span class="s2">/local.db"</span><span class="w"> </span><span class="s2">"</span><span class="nv">$BACKUP_DIR</span><span class="s2">"</span>
+<a href="#__codelineno-3-12" id="__codelineno-3-12" name="__codelineno-3-12"></a>
+<a href="#__codelineno-3-13" id="__codelineno-3-13" name="__codelineno-3-13"></a><span class="c1"># Backup artifacts</span>
+<a href="#__codelineno-3-14" id="__codelineno-3-14" name="__codelineno-3-14"></a>cp<span class="w"> </span>-R<span class="w"> </span><span class="s2">"</span><span class="nv">$WANDB_DIR</span><span class="s2">/artifacts"</span><span class="w"> </span><span class="s2">"</span><span class="nv">$BACKUP_DIR</span><span class="s2">/artifacts"</span>
+<a href="#__codelineno-3-15" id="__codelineno-3-15" name="__codelineno-3-15"></a>
+<a href="#__codelineno-3-16" id="__codelineno-3-16" name="__codelineno-3-16"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">"Backup completed successfully."</span>
+</code></pre></div>
+<p><strong>Instructions:</strong></p>
+<ol>
+<li><strong>Create the Script</strong>:</li>
+<li>Open your terminal.</li>
+<li>Use a text editor (e.g., <code>nano</code> or <code>vim</code>) to create a new file
+     named <code>wandb_backup.sh</code>.</li>
+<li>Copy and paste the script above into the file.</li>
+<li>
+<p>Replace <code>/path/to/your/backup/location</code> with the actual path where
+     you want to store your backups.</p>
+</li>
+<li>
+<p><strong>Make the Script Executable</strong>:</p>
+</li>
+<li>
+<p>Run the following command in your terminal:
+     <div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a>chmod<span class="w"> </span>+x<span class="w"> </span>wandb_backup.sh
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Automating Execution with <code>cron</code></strong>:</p>
+</li>
+<li>Open your crontab for editing by running:
+     <div class="highlight"><pre><span></span><code><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a>crontab<span class="w"> </span>-e
+</code></pre></div></li>
+<li>Add a line to schedule the script execution. For example, to run
+     the backup daily at 2 AM, add:
+     <div class="highlight"><pre><span></span><code><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a>0 2 * * * /path/to/your/wandb_backup.sh
+</code></pre></div></li>
+<li>Save and close the editor. <code>cron</code> will now execute the script
+     according to the schedule.</li>
+</ol>
+<h4 id="verification-and-monitoring"><strong>Verification and Monitoring</strong><a class="headerlink" href="#verification-and-monitoring" title="Permanent link">¶</a></h4>
+<ul>
+<li>After setting up the script and scheduling it with <code>cron</code>, verify that
+  it runs as expected by checking the backup directory for new backups
+  after the scheduled time.</li>
+<li>Monitor your system logs and the backup directory to ensure ongoing
+  successful executions. You might want to set up email notifications
+  for <code>cron</code> jobs to stay informed about the backup script's execution
+  status.</li>
+</ul>
+<h4 id="conclusion"><strong>Conclusion</strong><a class="headerlink" href="#conclusion" title="Permanent link">¶</a></h4>
+<p>Automating the backup process ensures that your Weights &amp; Biases
+experiments and data are regularly saved without manual intervention. By
+following these steps, you create a resilient and efficient backup
+workflow, safeguarding your valuable machine learning experiments.</p>
+<h2 id="conclusion_1"><strong>Conclusion</strong><a class="headerlink" href="#conclusion_1" title="Permanent link">¶</a></h2>
+<p>By following these steps, you've created a robust backup strategy for
+your Weights &amp; Biases experiments. Regular backups ensure that your data
+is secure and that your experiments are reproducible, regardless of
+unforeseen data loss.</p>
+<h3 id="further-assistance"><strong>Further Assistance</strong><a class="headerlink" href="#further-assistance" title="Permanent link">¶</a></h3>
+<p>For more detailed information on W&amp;B features and troubleshooting, visit
+the <a href="https://docs.wandb.ai/">Weights &amp; Biases documentation</a>.</p>
 <aside class="md-source-file">
 <span class="md-source-file__fact">
 <span class="md-icon" title="Last update">
