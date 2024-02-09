@@ -61,9 +61,8 @@ framework](https://diataxis.fr/).
     - :octicons-book-16: [Notebook and Script Naming Conventions in ML Projects](explanation/ml-naming-conventions.md) - Essential guidelines for naming Jupyter notebooks and scripts in ML projects, emphasizing clarity, consistency, and efficient file management.
     - :octicons-tools-16: [Enforcing Naming Conventions with GitHub Actions](how-to-guides/github-actions-naming-convention.md) - A practical guide to set up GitHub Actions for enforcing naming conventions in machine learning projects, ensuring consistency and organization.
     - :octicons-tools-16: [Templates for pull requests, issues/stories, feature and readme files](how-to-guides/templates.md)
-    - :octicons-tools-16: [Branching
-    Strategies for ML Projects](how-to-guides/branching-strategy.md) - Branching
-    strategies for AI-based projects.
+    - :octicons-tools-16: [Branching Strategies for ML Projects](how-to-guides/branching-strategy.md) - Branching strategies for AI-based projects.
+    - :octicons-tools-16: [Python Scripting for Data Conversion](how-to-guides/data-conversion-from-xlsx-to-csv.md) - Detailed Python functions for converting data between XLSX and CSV formats, tailored for machine learning experts working on NLP projects.
 
 ??? custom "Data Version Control with DVC"
     - :octicons-book-16: [Understanding DVC](explanation/dvc-understanding-dvs.md) - Essentials of DVC for large datasets management in ML, covering integration, versioning, and reproducibility.:construction:
