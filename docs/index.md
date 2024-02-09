@@ -85,6 +85,7 @@ framework](https://diataxis.fr/).
 
 ??? custom "Weights & Biases Experiment Tracking"
     - :octicons-tools-16: [ML Experiments Life-Cycle with Weights & Biases](how-to-guides/wandb-experiment-tracking-rag.md) - This guide provides a comprehensive overview of managing the life-cycle of machine learning (ML) experiments using Weights & Biases (W&B). It offers a structured approach for documenting experiments, establishing coding practices, configuring and tracking experiments with W&B, and efficiently managing outcomes.
+    - :octicons-tools-16: [Automating Backups for Weights & Biases](how-to-guides/automating-wandb-backups.md) - A comprehensive guide dedicated to establishing robust backup mechanisms for Weights & Biases experiments on your MacBook Pro
 <!--
 ## Data Version Control (DVC) Documentation Index
 

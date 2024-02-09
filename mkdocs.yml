@@ -112,6 +112,7 @@ nav:
       - Templates for Issues/Stories and PRs: how-to-guides/templates.md
       - Branching Strategies for ML Projects: how-to-guides/branching-strategy.md
       - Python Scripting for Data Conversion: how-to-guides/data-conversion-from-xlsx-to-csv.md
+      - Automating Backups for Weights & Biases: how-to-guides/automating-wandb-backups.md
   - Explanation:
       - TOC: explanation/toc-explanation.md
       - Understanding DVC: explanation/dvc-understanding-dvs.md
