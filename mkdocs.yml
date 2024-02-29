@@ -1,7 +1,7 @@
 site_name: Cookiecutter Two Lanes
-site_url: "https://llmslab.github.io/cookiecutter-two-lanes/"
-repo_url: "https://github.com/LLMsLab/cookiecutter-two-lanes"
-repo_name: llmslab.github.io/ccookiecutter-genai-ml-ai/
+site_url: "https://markeyser.github.io/cookiecutter-two-lanes/"
+repo_url: "https://github.com/markeyser/cookiecutter-two-lanes"
+repo_name: markeyser.github.io/cookiecutter-two-lanes/
 edit_uri: edit/main/docs/
 
 theme:
@@ -36,7 +36,7 @@ theme:
 extra:
   social:
     - icon: "fontawesome/brands/github"
-      link: "https://github.com/LLMsLab/cookiecutter-two-lanes"
+      link: "https://github.com/markeyser/cookiecutter-two-lanes"
 
 markdown_extensions:
   # Include admonitions https://squidfunk.github.io/mkdocs-material/reference/admonitions/

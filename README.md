@@ -75,13 +75,13 @@ pip install cookiecutter
 Create a new project by running:
 
 ```shell
-cookiecutter gh:LLMsLab/cookiecutter-two-lanes.git
+cookiecutter gh:markeyser/cookiecutter-two-lanes.git
 ```
 
 <!-- NOTE: Needs discussion or investigation -@marcos_aguilerakeyser at 12/22/2023, 11:12:51 AM -->
 Other appraoches such as for example:
 
-`cookiecutter git@github.com-personal:LLMsLab/cookiecutter-two-lanes.git`
+`cookiecutter git@github.com-personal:markeyser/cookiecutter-two-lanes.git`
 <!--  -->
 
 
