@@ -14,7 +14,7 @@ development.
 <p align="center">
   <img src="docs/assets/logo-gh-01.jpg" alt="Logo" width="1000"/>
   <br>
-  <em>The two lanes in our logo represents the uniformity and consistency that our cookie-cutter template brings to AI projects, ensuring each starts with a standardized foundation, much like a flock moving together harmoniously.</em>
+  <em>The two lanes in our logo represents the uniformity and consistency that our cookie-cutter template brings to AI projects, ensuring each starts with a standardized foundation, akin to two lanes moving forward in harmony, to guarantee uniformity from the beginning.</em>
 </p>
 
 ## 🌟 Features
