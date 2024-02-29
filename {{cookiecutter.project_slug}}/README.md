@@ -617,10 +617,10 @@ virtual environment and get your project's dependencies up and running.
    need, specify the correct version for Poetry:
 
    ```zsh
-   poetry env use 3.10.4
+   poetry env use 3.10.13
    ```
 
-   Replace `3.10.4` with your desired Python version.
+   Replace `3.10.13` with your desired Python version.
 
 2. **Install Dependencies with Poetry**: Navigate to the root of your
    project (where `pyproject.toml` is located) and run the following
