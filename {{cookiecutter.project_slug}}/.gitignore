@@ -11,6 +11,9 @@
 *.amltmp
 .amlignore
 
+## Data ##
+
+data/
 
 ### Python ###
 

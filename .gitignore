@@ -6,6 +6,10 @@
 .DS_Store
 **/.DS_Store
 
+## Data ##
+
+data/
+
 ## Azure Machine Learning ##
 
 *.amltmp
