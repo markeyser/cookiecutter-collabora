@@ -1,7 +1,7 @@
 # API Reference
 
 !!! info "About This Section"
-    The API Reference section provides detailed information and documentation for various components and functionalities of the Cookiecutter AI Flock project. This reference is a valuable resource for developers and contributors who want in-depth insights into the project's APIs and modules.
+    The API Reference section provides detailed information and documentation for various components and functionalities of the Cookiecutter Two Lanes project. This reference is a valuable resource for developers and contributors who want in-depth insights into the project's APIs and modules.
 
 ## Purpose
 

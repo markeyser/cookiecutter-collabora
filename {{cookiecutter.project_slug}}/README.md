@@ -5,10 +5,10 @@
 Certainly! Here's your updated message with the additional text:
 
 ⚡⚡ This project has been created using the [Cookiecutter Ai
-Flock](https://github.com/LLMsLab/cookiecutter-ai-flock) template. The
+Flock](https://github.com/LLMsLab/cookiecutter-two-lanes) template. The
 following website provides information on how to use all the tools
-included in the project repository: [Cookiecutter Ai Flock Template
-Docs](https://llmslab.github.io/cookiecutter-ai-flock/) ⚡⚡
+included in the project repository: [Cookiecutter Two Lanes Template
+Docs](https://llmslab.github.io/cookiecutter-two-lanes/) ⚡⚡
 
 ## 📂 Directory Structure
 

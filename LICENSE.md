@@ -1,6 +1,6 @@
-**Combined License for `cookiecutter-ai-flock`**
+**Combined License for `cookiecutter-two-lanes`**
 
-This project, `cookiecutter-ai-flock`, consists of both software code
+This project, `cookiecutter-two-lanes`, consists of both software code
 and documentation. The licensing terms for these components are as
 follows:
 
@@ -28,7 +28,7 @@ Under the following terms:
 
 **2. Software Code:**
 
-The source code of `cookiecutter-ai-flock` (including but not limited to
+The source code of `cookiecutter-two-lanes` (including but not limited to
 Python scripts, HTML/CSS/JavaScript files, and other code files) is
 licensed under the MIT License. The terms of the MIT License are as
 follows:

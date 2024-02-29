@@ -14,7 +14,7 @@
 ### 1. Downloading the Cookiecutter Template
 
 ???+ note "Find and Download the Repository"
-    - **Find the Repository:** Visit the GitHub page of the desired Cookiecutter template, e.g., `LLMsLab/cookiecutter-ai-flock`.
+    - **Find the Repository:** Visit the GitHub page of the desired Cookiecutter template, e.g., `LLMsLab/cookiecutter-two-lanes`.
     - **Download the Repository:** Click on the 'Code' button, select 'Download ZIP', save, and extract it to a known location on your computer.
 
 ### 2. Setting Up Your Environment
@@ -36,10 +36,10 @@ cd path/to/your/Projects
     Run Cookiecutter and provide the path to the unzipped template folder:
 
     ``` bash
-    cookiecutter path/to/unzipped/cookiecutter-ai-flock
+    cookiecutter path/to/unzipped/cookiecutter-two-lanes
     ```
 
-    Replace `path/to/unzipped/cookiecutter-ai-flock` with the actual path to the unzipped template. Follow the prompts to input details for your new project.
+    Replace `path/to/unzipped/cookiecutter-two-lanes` with the actual path to the unzipped template. Follow the prompts to input details for your new project.
 
 ### 4. Finalizing the Project
 

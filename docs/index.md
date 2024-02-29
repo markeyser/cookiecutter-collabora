@@ -1,8 +1,8 @@
-![](assets/Steel-Horse-Barns.jpg)
+![](assets/logo-gh-02.jpeg)
 
-**Welcome to Cookiecutter Ai Flock Documentation**
+**Welcome to Cookiecutter Two Lanes Documentation**
 
-Cookiecutter Ai Flock is a specialized Cookiecutter template designed to
+Cookiecutter Two Lanes is a specialized Cookiecutter template designed to
 facilitate collaborative artificial intelligence, machine learning, and
 generative AI projects. This template serves as an extensive framework,
 bringing together a comprehensive set of tools and practices that meet
@@ -10,15 +10,15 @@ the evolving demands of modern AI development.
 
 **Purpose and Vision**
 
-Our aim is to provide a standardized foundation for your AI projects,
-much like a flock moves together in harmony, to ensure uniformity and
-consistency from the outset. The Cookiecutter Ai Flock template
-integrates best practices for collaboration and reproducibility, as
-advocated in "[The Turing
+Our goal is to establish a standardized foundation for your AI
+projects, akin to two lanes moving forward in harmony, to guarantee
+both diversity and uniformity from the beginning. The Cookiecutter Two
+Lanes template integrates best practices for collaboration and
+reproducibility, as advocated in "[The Turing
 Way](https://the-turing-way.netlify.app/index.html)," promoting an open
 culture of data science and research within the AI community.
 
-The Cookiecutter Ai Flock template is crafted for ML professionals who
+The Cookiecutter Two Lanes template is crafted for ML professionals who
 aspire to engage in collaborative and reproducible research
 methodologies. It lays the groundwork for projects to be conducted with
 efficiency and precision, providing a robust starting point for
