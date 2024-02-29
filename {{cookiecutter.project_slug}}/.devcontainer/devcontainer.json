@@ -1,3 +1,20 @@
+//For Container-to-Container Communication: Set WANDB_BASE_URL to 
+//http://172.18.0.3:8080 in your devcontainer.json. This ensures that 
+// your code running inside the unruffled_jang container communicates 
+// correctly with the W&B server container.
+//
+//For External Access: 
+//
+//   Using WiFi:
+//   Set WANDB_BASE_URL to http://http://192.168.1.92:8080 when 
+//   accessing the W&B server from outside the Docker network (like from 
+//   a browser on your host machine).
+//
+//   Using Ethernet:
+//   Set WANDB_BASE_URL to http://192.168.1.16:8080 when 
+//   accessing the W&B server from outside the Docker network (like from 
+//   a browser on your host machine).
+
 {
     "name": "Python 3",
     "image": "mcr.microsoft.com/devcontainers/python:1-3.10-bookworm",
@@ -5,14 +22,17 @@
         "ghcr.io/devcontainers-contrib/features/bash-command:1": {}
     },
     "containerEnv": {
-        "WANDB_BASE_URL": "http://192.168.1.92:8080"
-    },
+        "WANDB_BASE_URL": "http://172.18.0.2:8080",
+        "SSL_CERT_FILE": "/etc/ssl/certs/ca-certificates.crt"
+    },    
     "postCreateCommand": [
         "apt-get update",
         "&& apt-get install -y ca-certificates",
+        "&& update-ca-certificates",
+        "&& pip install --upgrade certifi",
         "&& if [ -f .env ]; then set -a;",
         "source .env;",
         "set +a; fi"
-    ],
+    ],    
     "runArgs": ["--network=wandb_dev_network"]
 }
