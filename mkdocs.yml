@@ -1,6 +1,6 @@
-site_name: Cookiecutter Ai Flock
-site_url: "https://llmslab.github.io/cookiecutter-ai-flock/"
-repo_url: "https://github.com/LLMsLab/cookiecutter-ai-flock"
+site_name: Cookiecutter Two Lanes
+site_url: "https://llmslab.github.io/cookiecutter-two-lanes/"
+repo_url: "https://github.com/LLMsLab/cookiecutter-two-lanes"
 repo_name: llmslab.github.io/ccookiecutter-genai-ml-ai/
 edit_uri: edit/main/docs/
 
@@ -10,18 +10,33 @@ theme:
   icon:
     repo: simple/github
   palette:
-    - scheme: slate
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/link
+        name: Switch to light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
       primary: indigo
       accent: indigo
       toggle:
-        icon: material/toggle-switch-off-outline
-        name: Switch to light mode
+        icon: material/toggle-switch
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch-off
+        name: Switch to system preference
+  font:
+    text: Roboto
+    code: Roboto Mono
   features:
     - content.code.annotate
 extra:
   social:
     - icon: "fontawesome/brands/github"
-      link: "https://github.com/LLMsLab/cookiecutter-ai-flock"
+      link: "https://github.com/LLMsLab/cookiecutter-two-lanes"
 
 markdown_extensions:
   # Include admonitions https://squidfunk.github.io/mkdocs-material/reference/admonitions/
