@@ -69,18 +69,19 @@
         "editor.defaultFormatter": "ms-python.black-formatter",
         "editor.formatOnSave": false
     },
+    "jupyter.notebookFileRoot": "${workspaceFolder}",
     "[jupyter]": {
-        "editor.formatOnSave": false
+        "editor.formatOnSave": false,
     },
     "black-formatter.importStrategy": "fromEnvironment",
     "ruff.args": [
         "--config=pyproject.toml"
     ],
     "ruff.path": [
-        ""
+        "/bin/python/ruff"
     ],
     "ruff.interpreter": [
-        ""
+        "/bin/python"
     ],
     "editor.bracketPairColorization.enabled": true,
     "editor.guides.bracketPairs": false,
