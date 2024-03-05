@@ -6,7 +6,7 @@ edit_uri: edit/main/docs/
 
 theme:
   name: "material"
-  logo: assets/logo.png
+  logo: assets/two-lanes-logo.png
   icon:
     repo: simple/github
   palette:
