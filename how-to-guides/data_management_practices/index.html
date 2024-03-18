@@ -5,12 +5,12 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="https://markeyser.github.io/cookiecutter-two-lanes/tutorials/data/" rel="canonical"/>
-<link href="../gitignore/" rel="prev"/>
-<link href="../data-version-control/" rel="next"/>
+<link href="https://markeyser.github.io/cookiecutter-two-lanes/how-to-guides/data_management_practices/" rel="canonical"/>
+<link href="../jupyter-vscode-directory/" rel="prev"/>
+<link href="../../explanation/toc-explanation/" rel="next"/>
 <link href="../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.5.3, mkdocs-material-9.5.4" name="generator"/>
-<title>Managing Data - Cookiecutter Two Lanes</title>
+<title>Project Data Management Practices - Cookiecutter Two Lanes</title>
 <link href="../../assets/stylesheets/main.50c56a3b.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -59,7 +59,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Managing Data
+              Project Data Management Practices
             
           </span>
 </div>
@@ -123,66 +123,258 @@
   </span>
 </a>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
 <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
 <span class="md-ellipsis">
     Tutorials
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="true" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<nav aria-expanded="false" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_2">
 <span class="md-nav__icon md-icon"></span>
             Tutorials
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../toc-tutorials/">
+<a class="md-nav__link" href="../../tutorials/toc-tutorials/">
 <span class="md-ellipsis">
     TOC
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../black-formatter/">
+<a class="md-nav__link" href="../../tutorials/black-formatter/">
 <span class="md-ellipsis">
     Black Formatter
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../ruff-linter/">
+<a class="md-nav__link" href="../../tutorials/ruff-linter/">
 <span class="md-ellipsis">
     Ruff Linter
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../poetry/">
+<a class="md-nav__link" href="../../tutorials/poetry/">
 <span class="md-ellipsis">
     Poetry Package Management
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../mkdocs-docs/">
+<a class="md-nav__link" href="../../tutorials/mkdocs-docs/">
 <span class="md-ellipsis">
     MkDocs Documentation
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../hydra-config/">
+<a class="md-nav__link" href="../../tutorials/hydra-config/">
 <span class="md-ellipsis">
     Hydra Configuration
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../gitignore/">
+<a class="md-nav__link" href="../../tutorials/gitignore/">
 <span class="md-ellipsis">
     Gitignore File Creation
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tutorials/data/">
+<span class="md-ellipsis">
+    Managing Data
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tutorials/data-version-control/">
+<span class="md-ellipsis">
+    Data Version Control
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tutorials/dvc-local/">
+<span class="md-ellipsis">
+    DVC Local Workflow
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tutorials/dvc-cloud/">
+<span class="md-ellipsis">
+    DVC Cloud Storage
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tutorials/dvc-collaboration/">
+<span class="md-ellipsis">
+    DVC for Collaboration
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tutorials/naming-conventions/">
+<span class="md-ellipsis">
+    Naming Conventions Tutorial
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tutorials/windows-os-setup/">
+<span class="md-ellipsis">
+    Windows OS Setup
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tutorials/markdown-ml-model-documentation/">
+<span class="md-ellipsis">
+    Markdown Documentation for ML Models
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+<span class="md-ellipsis">
+    How-To Guides
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+            How-To Guides
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../toc-how-to-guides/">
+<span class="md-ellipsis">
+    TOC
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../dvc-set-up/">
+<span class="md-ellipsis">
+    DVC Setup
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../dvc-communication/">
+<span class="md-ellipsis">
+    DVC Communication
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../dvc-vscode-extension/">
+<span class="md-ellipsis">
+    DVC VS Code Extension
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../offline-cookiecutter-setup/">
+<span class="md-ellipsis">
+    Offline Cookiecutter Setup
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../git-branch-naming-standards/">
+<span class="md-ellipsis">
+    Git Branch Naming Standards
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../commit-message-standards-ml/">
+<span class="md-ellipsis">
+    Commit Message Standards in ML Projects
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ml-data-folder-naming/">
+<span class="md-ellipsis">
+    ML Data Folder Naming Guide
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ml-data-naming-conventions/">
+<span class="md-ellipsis">
+    Data Files Naming Conventions
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../machine-learning-metadata-automation/">
+<span class="md-ellipsis">
+    Automating Metadata Creation
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../github-actions-naming-convention/">
+<span class="md-ellipsis">
+    Enforcing Naming Conventions with GitHub Actions
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../wandb-experiment-tracking-rag/">
+<span class="md-ellipsis">
+    ML Experiments Life-Cycle with Weights &amp; Biases
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../templates/">
+<span class="md-ellipsis">
+    Templates for Issues/Stories and PRs
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../branching-strategy/">
+<span class="md-ellipsis">
+    Branching Strategies for ML Projects
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../data-conversion-from-xlsx-to-csv/">
+<span class="md-ellipsis">
+    Python Scripting for Data Conversion
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../automating-wandb-backups/">
+<span class="md-ellipsis">
+    Automating Backups for Weights &amp; Biases
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../jupyter-vscode-directory/">
+<span class="md-ellipsis">
+    Configuring Jupyter Notebook Start-up Directory in VS Code
   </span>
 </a>
 </li>
@@ -190,13 +382,13 @@
 <input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
 <label class="md-nav__link md-nav__link--active" for="__toc">
 <span class="md-ellipsis">
-    Managing Data
+    Project Data Management Practices
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
 <a class="md-nav__link md-nav__link--active" href="./">
 <span class="md-ellipsis">
-    Managing Data
+    Project Data Management Practices
   </span>
 </a>
 <nav aria-label="On this page" class="md-nav md-nav--secondary">
@@ -231,12 +423,12 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#centralized-data-folders-whether-to-use-them-or-not">
+<a class="md-nav__link" href="#centralized-data-repository">
 <span class="md-ellipsis">
-      Centralized data folders: whether to use them or not
+      Centralized data repository
     </span>
 </a>
-<nav aria-label="Centralized data folders: whether to use them or not" class="md-nav">
+<nav aria-label="Centralized data repository" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#using-vs-code-on-a-project-with-a-centralized-shared-data-folder">
@@ -360,198 +552,6 @@
 </li>
 </ul>
 </nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../data-version-control/">
-<span class="md-ellipsis">
-    Data Version Control
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../dvc-local/">
-<span class="md-ellipsis">
-    DVC Local Workflow
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../dvc-cloud/">
-<span class="md-ellipsis">
-    DVC Cloud Storage
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../dvc-collaboration/">
-<span class="md-ellipsis">
-    DVC for Collaboration
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../naming-conventions/">
-<span class="md-ellipsis">
-    Naming Conventions Tutorial
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../windows-os-setup/">
-<span class="md-ellipsis">
-    Windows OS Setup
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../markdown-ml-model-documentation/">
-<span class="md-ellipsis">
-    Markdown Documentation for ML Models
-  </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
-<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
-<span class="md-ellipsis">
-    How-To Guides
-  </span>
-<span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-expanded="false" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_3">
-<span class="md-nav__icon md-icon"></span>
-            How-To Guides
-          </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../how-to-guides/toc-how-to-guides/">
-<span class="md-ellipsis">
-    TOC
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../how-to-guides/dvc-set-up/">
-<span class="md-ellipsis">
-    DVC Setup
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../how-to-guides/dvc-communication/">
-<span class="md-ellipsis">
-    DVC Communication
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../how-to-guides/dvc-vscode-extension/">
-<span class="md-ellipsis">
-    DVC VS Code Extension
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../how-to-guides/offline-cookiecutter-setup/">
-<span class="md-ellipsis">
-    Offline Cookiecutter Setup
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../how-to-guides/git-branch-naming-standards/">
-<span class="md-ellipsis">
-    Git Branch Naming Standards
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../how-to-guides/commit-message-standards-ml/">
-<span class="md-ellipsis">
-    Commit Message Standards in ML Projects
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../how-to-guides/ml-data-folder-naming/">
-<span class="md-ellipsis">
-    ML Data Folder Naming Guide
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../how-to-guides/ml-data-naming-conventions/">
-<span class="md-ellipsis">
-    Data Files Naming Conventions
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../how-to-guides/machine-learning-metadata-automation/">
-<span class="md-ellipsis">
-    Automating Metadata Creation
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../how-to-guides/github-actions-naming-convention/">
-<span class="md-ellipsis">
-    Enforcing Naming Conventions with GitHub Actions
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../how-to-guides/wandb-experiment-tracking-rag/">
-<span class="md-ellipsis">
-    ML Experiments Life-Cycle with Weights &amp; Biases
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../how-to-guides/templates/">
-<span class="md-ellipsis">
-    Templates for Issues/Stories and PRs
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../how-to-guides/branching-strategy/">
-<span class="md-ellipsis">
-    Branching Strategies for ML Projects
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../how-to-guides/data-conversion-from-xlsx-to-csv/">
-<span class="md-ellipsis">
-    Python Scripting for Data Conversion
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../how-to-guides/automating-wandb-backups/">
-<span class="md-ellipsis">
-    Automating Backups for Weights &amp; Biases
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../how-to-guides/jupyter-vscode-directory/">
-<span class="md-ellipsis">
-    Configuring Jupyter Notebook Start-up Directory in VS Code
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../how-to-guides/data_management_practices/">
-<span class="md-ellipsis">
-    Project Data Management Practices
-  </span>
-</a>
 </li>
 </ul>
 </nav>
@@ -686,12 +686,12 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#centralized-data-folders-whether-to-use-them-or-not">
+<a class="md-nav__link" href="#centralized-data-repository">
 <span class="md-ellipsis">
-      Centralized data folders: whether to use them or not
+      Centralized data repository
     </span>
 </a>
-<nav aria-label="Centralized data folders: whether to use them or not" class="md-nav">
+<nav aria-label="Centralized data repository" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#using-vs-code-on-a-project-with-a-centralized-shared-data-folder">
@@ -831,7 +831,7 @@ designed for storing large binary files or sensitive information.</p>
 <h2 id="data-files">Data files<a class="headerlink" href="#data-files" title="Permanent link">¶</a></h2>
 <div class="admonition tip">
 <p class="admonition-title">Best Practice</p>
-<p>Store project's data on the remote Data Hub Linux server.</p>
+<p>Store project's data on the remote centralized data repository like AWS S3.</p>
 </div>
 <p>Creating separate folders for raw, external, interim, and processed data
 is the best practice for organizing and managing data in a project.
@@ -891,26 +891,14 @@ that it is properly managed throughout the project and that any
 necessary modifications or transformations can be easily traced and
 recorded. Additionally, it can also make it easier for other team
 members or stakeholders to understand and access the data as needed.</p>
-<h2 id="centralized-data-folders-whether-to-use-them-or-not">Centralized data folders: whether to use them or not<a class="headerlink" href="#centralized-data-folders-whether-to-use-them-or-not" title="Permanent link">¶</a></h2>
-<p>The answer to this question depends on the specific requirements of the
-project and the organization's data management policies.</p>
-<p>In some cases, it may be appropriate for data scientists to keep a copy
-of the project's data on their local machines for ease of access and
-local processing. This can be especially useful when working with large
-data sets that may not be feasible to store and transfer over the
-network.</p>
-<p>However, in most cases, it is a best practice to use a centralized
+<h2 id="centralized-data-repository">Centralized data repository<a class="headerlink" href="#centralized-data-repository" title="Permanent link">¶</a></h2>
+<p>In most cases, it is a best practice to use a centralized
 shared data folder that is stored on a networked storage system or a
 cloud-based data storage service. This allows all team members to access
 the data, and ensures that the data is stored in a secure and organized
 manner. Additionally, using a centralized data folder can help to avoid
 duplication and ensure that everyone is working with the same version of
 the data.</p>
-<p>Regardless of the approach used, it's important to establish clear
-guidelines and protocols for data management and access, and to ensure
-that data security and privacy concerns are properly addressed. This may
-involve implementing access controls, encryption, and backup and
-recovery measures.</p>
 <h3 id="using-vs-code-on-a-project-with-a-centralized-shared-data-folder">Using VS Code on a project with a centralized shared data folder<a class="headerlink" href="#using-vs-code-on-a-project-with-a-centralized-shared-data-folder" title="Permanent link">¶</a></h3>
 <p>Step 4 of the <a href="getting-started.md">Getting Started</a> guide involves
 creating a shared data directory for the project. To make the data
@@ -1235,7 +1223,7 @@ its purpose and content.</p>
 <span class="md-icon" title="Last update">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 24, 2024</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 18, 2024</span>
 </span>
 </aside>
 </article>
