@@ -129,6 +129,7 @@ nav:
       - Python Scripting for Data Conversion: how-to-guides/data-conversion-from-xlsx-to-csv.md
       - Automating Backups for Weights & Biases: how-to-guides/automating-wandb-backups.md
       - Configuring Jupyter Notebook Start-up Directory in VS Code: how-to-guides/jupyter-vscode-directory.md
+      - Project Data Management Practices: how-to-guides/data_management_practices.md
   - Explanation:
       - TOC: explanation/toc-explanation.md
       - Understanding DVC: explanation/dvc-understanding-dvs.md
