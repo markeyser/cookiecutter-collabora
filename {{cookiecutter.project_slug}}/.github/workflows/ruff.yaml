@@ -1,32 +1,18 @@
-name: Ruff Linter
-
-on: [push, pull_request]
-
+name: Ruff
+on: push
 jobs:
-  lint:
+  build:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
-
-    - name: Set up Python
-      uses: actions/setup-python@v2
-      with:
-        python-version: 3.9
-
-    - name: Install Ruff
-      run: pip install ruff
-
-    - name: Check code with Ruff
-      run: ruff check --preview src/ notebooks/
-
-
-    - name: Fail if linting errors are detected
-      run: |
-        if ruff check --preview src/ notebooks/
-          --quiet | grep -q 'error'; then
-          echo "Linting errors detected. Please lint your code locally with Ruff and resolve all issues before pushing."
-          exit 1
-        else
-          echo "No linting errors detected."
-        fi
+      - uses: actions/checkout@v2  # This is the latest verified version as of now
+      - name: Install Python
+        uses: actions/setup-python@v2  # This is the latest verified version as of now
+        with:
+          python-version: "3.10.13"
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install ruff==0.3.2  # Specifying the exact version of Ruff you wish to use
+      # Update output format to enable automatic inline annotations.
+      - name: Run Ruff
+        run: ruff check --output-format=github --preview
