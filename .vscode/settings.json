@@ -96,7 +96,8 @@
     // #############################
     // Path to the pyproject.toml
     "ruff.args": [
-        "--config=pyproject.toml"
+        "--config=pyproject.toml",
+        "--preview"
     ],
     // Path to a custom ruff executable
     "ruff.path": [

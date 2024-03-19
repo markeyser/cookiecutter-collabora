@@ -78,7 +78,8 @@
         "--config=pyproject.toml"
     ],
     "ruff.path": [
-        "/bin/python/ruff"
+        "/bin/python/ruff",
+        "--preview"
     ],
     "ruff.interpreter": [
         "/bin/python"
