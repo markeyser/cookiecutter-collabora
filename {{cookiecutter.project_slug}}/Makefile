@@ -99,6 +99,10 @@ poetry_test: # Run tests using pytest (assuming pytest is a dependency)
 	@echo "Running tests..."
 	@poetry run pytest
 
+poetry_test_coverage: # Run tests with coverage and open the coverage report
+	@echo "Running tests with coverage..."
+	@poetry run pytest --cov=src/acroexpandpackage --cov-report html tests/ && open htmlcov/index.html
+
 poetry_env_info: # Display Poetry environment information
 	@echo "Fetching Poetry environment information..."
 	@poetry env info
@@ -106,6 +110,17 @@ poetry_env_info: # Display Poetry environment information
 poetry_env_path: # Get the path to the Poetry virtual environment
 	@echo "Fetching Poetry environment information..."
 	@poetry env info --path
+
+#-----------------------------------------------------------------------
+# Ruff Code Linter
+#-----------------------------------------------------------------------
+# Prompt for user input filepath for example:
+# project_directory/services/parser.py
+FILEPATH ?= $(shell bash -c 'read -p "Filepath: " filepath; echo $$filepath')
+ruff_check_fix: # Run Ruff to check and fix the specified Python file
+	@clear
+	@echo "Running Ruff check with auto-fix on $(FILEPATH)..."
+	@ruff check --preview --fix $(FILEPATH)
 
 #-----------------------------------------------------------------------
 # Git
