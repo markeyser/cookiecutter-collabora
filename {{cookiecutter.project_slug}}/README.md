@@ -33,7 +33,7 @@
 └── tests                          <- Automated tests for the project, typically using a framework like pytest.
 ```
 
-### Quick Start
+## Quick Start
 
 Here's a quick example to get you started with the `{{
 cookiecutter.project_name }}` right away:
