@@ -65,6 +65,9 @@ framework](https://diataxis.fr/).
     - :octicons-tools-16: [Python Scripting for Data Conversion](how-to-guides/data-conversion-from-xlsx-to-csv.md) - Detailed Python functions for converting data between XLSX and CSV formats, tailored for machine learning experts working on NLP projects.
     - :octicons-tools-16: [Project Data Management Practices](how-to-guides/data_management_practices.md) - Best practices for organizing and managing project data, including folder structure, naming conventions, and centralized data repository usage.
 
+??? custom "Python Code Quality Tools"
+    - :octicons-tools-16: [Formatting Your Code with Black](tutorials/black-formatter.md) - A comprehensive guide on using Black to format Python code, ensuring consistency and readability across your codebase.
+    - :octicons-checklist-16: [Accelerating Linting with Ruff](tutorials/ruff-linter.md) - Learn how to integrate Ruff for fast and efficient linting to maintain high-quality Python code.
 
 ??? custom "Data Version Control with DVC"
     - :octicons-book-16: [Understanding DVC](explanation/dvc-understanding-dvs.md) - Essentials of DVC for large datasets management in ML, covering integration, versioning, and reproducibility.:construction:
