@@ -33,6 +33,45 @@
 └── tests                          <- Automated tests for the project, typically using a framework like pytest.
 ```
 
+### Quick Start
+
+Here's a quick example to get you started with the `{{
+cookiecutter.project_name }}` right away:
+
+1. **Import the Application class**
+   - This class is the core of our package, managing the application
+     logic.
+
+```python
+from {{ cookiecutter.package_name }} import Application
+```
+
+2. **Configure your application**
+   - Setup your application's configuration settings. Below is an
+     example configuration:
+
+```python
+config = {
+    'name': '{{ cookiecutter.project_name }}',
+    'version': '1.0',
+    'environment': '{{ cookiecutter.environment_name }}'
+}
+```
+
+3. **Create an instance and run your application**
+   - Instantiate your application with the configuration and call the
+     `run` method to start it.
+
+```python
+app = Application(config)
+app.run()
+```
+
+This example demonstrates how to set up and run a basic instance of the
+application using the `{{ cookiecutter.package_name }}` package. For
+more detailed usage, refer to our [How-To
+Guide](./docs/how-to-guides.md) and [Tutorials](./docs/tutorials.md).
+
 ## Contributing
 
 We welcome contributions to our project! For details on how to get
