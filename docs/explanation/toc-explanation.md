@@ -14,7 +14,6 @@
 - [Understanding Data Version Control (DVC)](./dvc-understanding-dvs.md)
 - [Git Branches in DVC: A Collaborative Perspective](./dvc-git-branches.md)
 - [GitHub Naming Conventions: A Key to Organized Collaboration](./github-naming-conventions.md)
-- [Notebook and Script Naming Conventions in ML Projects](./ml-naming-conventions.md)
 - [Model Persistence Naming Conventions: Ensuring Consistency and Efficiency](./model-persistence-naming-conventions.md)
 - [Introduction to Naming Conventions for AI Project Assets](./naming-conventions.md)
 
