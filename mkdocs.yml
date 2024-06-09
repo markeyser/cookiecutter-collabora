@@ -136,6 +136,7 @@ nav:
       - Configuring Jupyter Notebook Start-up Directory in VS Code: how-to-guides/jupyter-vscode-directory.md
       - Project Data Management Practices: how-to-guides/data_management_practices.md
       - Using Code Tags: how-to-guides/using-code-tags.md
+      - Using TODO Tree with Code Tags: how-to-guides/using-todo-tree-with-code-tags.md
   - Explanation:
       - TOC: explanation/toc-explanation.md
       - Understanding DVC: explanation/dvc-understanding-dvs.md

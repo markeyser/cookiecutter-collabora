@@ -36,7 +36,7 @@
     // ### Docstring ####
     // #############################
     // Use Numpy format for docstrings
-    "autoDocstring.docstringFormat": "numpy",
+    "autoDocstring.docstringFormat": "google",
     // Include Extender Summary section
     "autoDocstring.includeExtendedSummary": true,
     // Include function name at the start of docstrings
@@ -309,6 +309,39 @@
     ],
     "todohighlight.defaultStyle": {},
 // #############################
+// ### Todo Tree ###
+// #############################
+"todo-tree.tree.showScanModeButton": true,
+"todo-tree.tree.showCountsInTree": true,
+"todo-tree.general.tags": [
+    "BUG:",
+    "NOBUG:",
+    "RFE:",
+    "IDEA:",
+    "???:",
+    "!!!:",
+    "PORT:",
+    "CAVEAT:",
+    "FAQ:",
+    "GLOSS:",
+    "SEE:",
+    "TODOC:",
+    "CRED:",
+    "STAT:",
+    "RVD:",
+    "NOTE:",
+    "HACK:",
+    "TODO:"
+],
+"todo-tree.regex.regex": "((//|#|<!--|;|/\\*|^)\\s*($TAGS)|^\\s*- \\[ \\])",
+"todo-tree.regex.regexCaseSensitive": false,
+"todo-tree.general.tagGroups": {
+    "Bugs": ["BUG:", "NOBUG:"],
+    "Enhancements": ["RFE:", "IDEA:"],
+    "Questions": ["???:", "FAQ:", "SEE:"],
+    "Important": ["!!!:", "CAVEAT:", "NOTE:"],
+    "Other": ["PORT:", "GLOSS:", "TODOC:", "CRED:", "STAT:", "RVD:", "HACK:", "TODO:"],
+// #############################
 // ### OTHER ###
 // #############################
 "files.associations": {
@@ -465,7 +498,29 @@
 "CodeGPT.maxTokens":1000,
 "CodeGPT.model": "gpt-4",
 "CodeGPT.query.language": "English",
-"CodeGPT.temperature": 0.3
+"CodeGPT.temperature": 0.3,
+"workbench.colorCustomizations": {
+    "activityBar.activeBackground": "#3399ff",
+    "activityBar.background": "#3399ff",
+    "activityBar.foreground": "#15202b",
+    "activityBar.inactiveForeground": "#15202b99",
+    "activityBarBadge.background": "#bf0060",
+    "activityBarBadge.foreground": "#e7e7e7",
+    "commandCenter.border": "#e7e7e799",
+    "sash.hoverBorder": "#3399ff",
+    "statusBar.background": "#007fff",
+    "statusBar.foreground": "#e7e7e7",
+    "statusBarItem.hoverBackground": "#3399ff",
+    "statusBarItem.remoteBackground": "#007fff",
+    "statusBarItem.remoteForeground": "#e7e7e7",
+    "titleBar.activeBackground": "#007fff",
+    "titleBar.activeForeground": "#e7e7e7",
+    "titleBar.inactiveBackground": "#007fff99",
+    "titleBar.inactiveForeground": "#e7e7e799"
+},
+"peacock.color": "#007fff"
+
+
 
 // Fix Code Runner extension bug while using Python.
 // To make it possible to use Code Runner with Python use the below
