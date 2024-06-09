@@ -362,8 +362,22 @@
     </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#examples">
+<span class="md-ellipsis">
+      Examples
+    </span>
+</a>
+</li>
 </ul>
 </nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../pushing-to-github-best-practices.md">
+<span class="md-ellipsis">
+    Best Practices for Pushing to GitHub
+  </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../ml-data-folder-naming/">
@@ -549,6 +563,13 @@
     </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#examples">
+<span class="md-ellipsis">
+      Examples
+    </span>
+</a>
+</li>
 </ul>
 </nav>
 </div>
@@ -559,7 +580,7 @@
 <h1 id="git-commit-message-standards-for-ml-projects">Git Commit Message Standards for ML Projects<a class="headerlink" href="#git-commit-message-standards-for-ml-projects" title="Permanent link">¶</a></h1>
 <div class="admonition tip">
 <p class="admonition-title">Introduction</p>
-<p>Clear, informative commit messages are vital for effective team collaboration in machine learning projects. This guide provides standards and tools for creating standardized commit messages, especially for including GitHub issue numbers or Jira keys.</p>
+<p>Clear, informative commit messages are vital for effective team collaboration in machine learning projects. This guide provides standards and tools for creating standardized commit messages, including how to reference GitHub issue numbers or Jira keys. We follow the <a href="https://www.conventionalcommits.org/en/v1.0.0/">Conventional Commits</a> specification.</p>
 </div>
 <div class="admonition example">
 <p class="admonition-title">Commit Message Structure</p>
@@ -626,6 +647,22 @@
 <td><code>chore</code></td>
 <td>Routine tasks or non-production code updates</td>
 </tr>
+<tr>
+<td><code>build</code></td>
+<td>Changes that affect the build system or external dependencies</td>
+</tr>
+<tr>
+<td><code>ci</code></td>
+<td>Changes to CI configuration files and scripts</td>
+</tr>
+<tr>
+<td><code>revert</code></td>
+<td>Reverts a previous commit</td>
+</tr>
+<tr>
+<td><code>style</code></td>
+<td>Code style changes (formatting, missing semicolons, etc.)</td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -641,6 +678,29 @@
 <li><strong>Reference Issues and Pull Requests</strong>: Include relevant links for context.</li>
 </ol>
 </div>
+<h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">¶</a></h2>
+<p>Here are some examples of commit messages that meet our standards:</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a>feat(auth): add user authentication feature [#DATA123]
+<a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a>
+<a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a>Added a new user authentication feature to enhance security.
+<a href="#__codelineno-1-4" id="__codelineno-1-4" name="__codelineno-1-4"></a>This includes login, registration, and password recovery.
+<a href="#__codelineno-1-5" id="__codelineno-1-5" name="__codelineno-1-5"></a>
+<a href="#__codelineno-1-6" id="__codelineno-1-6" name="__codelineno-1-6"></a>Footer: Reviewed by Jane Doe
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a>fix(data): resolve data loading error [#GH45]
+<a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a>
+<a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a>Fixed an issue where data loading was failing due to incorrect file paths.
+<a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a>Updated the file paths and added error handling.
+<a href="#__codelineno-2-5" id="__codelineno-2-5" name="__codelineno-2-5"></a>
+<a href="#__codelineno-2-6" id="__codelineno-2-6" name="__codelineno-2-6"></a>Footer: Closes #GH45
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a>docs: update API documentation
+<a href="#__codelineno-3-2" id="__codelineno-3-2" name="__codelineno-3-2"></a>
+<a href="#__codelineno-3-3" id="__codelineno-3-3" name="__codelineno-3-3"></a>Improved the API documentation to include new endpoints and usage examples.
+<a href="#__codelineno-3-4" id="__codelineno-3-4" name="__codelineno-3-4"></a>Fixed typos and clarified descriptions.
+<a href="#__codelineno-3-5" id="__codelineno-3-5" name="__codelineno-3-5"></a>
+<a href="#__codelineno-3-6" id="__codelineno-3-6" name="__codelineno-3-6"></a>Footer: Documentation reviewed by the tech writing team
+</code></pre></div>
 <div class="admonition info">
 <p class="admonition-title">VS Code Extensions</p>
 <p>Enhance commit message standardization with these VS Code extensions:
@@ -660,7 +720,7 @@
 <span class="md-icon" title="Last update">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 29, 2024</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 9, 2024</span>
 </span>
 </aside>
 </article>
