@@ -124,6 +124,7 @@ nav:
       - Offline Cookiecutter Setup: how-to-guides/offline-cookiecutter-setup.md
       - Git Branch Naming Standards: how-to-guides/git-branch-naming-standards.md
       - Commit Message Standards in ML Projects: how-to-guides/commit-message-standards-ml.md
+      - Best Practices for Pushing to GitHub: how-to-guides/pushing-to-github-best-practices.md
       - ML Data Folder Naming Guide: how-to-guides/ml-data-folder-naming.md
       - Automating Metadata Creation: how-to-guides/machine-learning-metadata-automation.md
       - Enforcing Naming Conventions with GitHub Actions: how-to-guides/github-actions-naming-convention.md
