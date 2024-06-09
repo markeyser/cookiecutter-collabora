@@ -146,6 +146,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://markeyser.github.io/cookiecutter-two-lanes/how-to-guides/python-docstrings-conventions/</loc>
+         <lastmod>2024-06-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://markeyser.github.io/cookiecutter-two-lanes/how-to-guides/templates/</loc>
          <lastmod>2024-06-09</lastmod>
          <changefreq>daily</changefreq>
