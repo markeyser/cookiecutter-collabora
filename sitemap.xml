@@ -181,6 +181,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://markeyser.github.io/cookiecutter-two-lanes/how-to-guides/using-todo-tree-with-code-tags/</loc>
+         <lastmod>2024-06-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://markeyser.github.io/cookiecutter-two-lanes/how-to-guides/wandb-experiment-tracking-rag/</loc>
          <lastmod>2024-06-09</lastmod>
          <changefreq>daily</changefreq>
