@@ -1,0 +1,1089 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="https://markeyser.github.io/cookiecutter-two-lanes/how-to-guides/project-scaffolding-standards/" rel="canonical"/>
+<link href="../toc-how-to-guides/" rel="prev"/>
+<link href="../file-naming-conventions/" rel="next"/>
+<link href="../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.5.3, mkdocs-material-9.5.4" name="generator"/>
+<title>Project Scaffolding Standards - Cookiecutter Two Lanes</title>
+<link href="../../assets/stylesheets/main.50c56a3b.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<link href="../../assets/_mkdocstrings.css" rel="stylesheet"/>
+<link href="../../stylesheets/extra.css" rel="stylesheet"/>
+<link href="../../assets/css/custom.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+ <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+<body data-md-color-accent="indigo" data-md-color-primary="indigo" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#project-scaffolding-standards-for-aiml-projects">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="Cookiecutter Two Lanes" class="md-header__button md-logo" data-md-component="logo" href="../.." title="Cookiecutter Two Lanes">
+<img alt="logo" src="../../assets/two-lanes-logo.png"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Cookiecutter Two Lanes
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Project Scaffolding Standards
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Switch to light mode" class="md-option" data-md-color-accent="indigo" data-md-color-media="(prefers-color-scheme)" data-md-color-primary="indigo" data-md-color-scheme="default" id="__palette_0" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to light mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1M8 13h8v-2H8v2m9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1 0 1.71-1.39 3.1-3.1 3.1h-4V17h4a5 5 0 0 0 5-5 5 5 0 0 0-5-5Z"></path></svg>
+</label>
+<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="indigo" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="indigo" data-md-color-scheme="default" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_2" hidden="" title="Switch to dark mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"></path></svg>
+</label>
+<input aria-label="Switch to system preference" class="md-option" data-md-color-accent="indigo" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-primary="black" data-md-color-scheme="slate" id="__palette_2" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_0" hidden="" title="Switch to system preference">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5M7 15a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"></path></svg>
+</label>
+</form>
+<script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<div class="md-header__source">
+<a class="md-source" data-md-component="source" href="https://github.com/markeyser/cookiecutter-two-lanes" title="Go to repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path></svg>
+</div>
+<div class="md-source__repository">
+    markeyser.github.io/cookiecutter-two-lanes/
+  </div>
+</a>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Cookiecutter Two Lanes" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="Cookiecutter Two Lanes">
+<img alt="logo" src="../../assets/two-lanes-logo.png"/>
+</a>
+    Cookiecutter Two Lanes
+  </label>
+<div class="md-nav__source">
+<a class="md-source" data-md-component="source" href="https://github.com/markeyser/cookiecutter-two-lanes" title="Go to repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path></svg>
+</div>
+<div class="md-source__repository">
+    markeyser.github.io/cookiecutter-two-lanes/
+  </div>
+</a>
+</div>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../..">
+<span class="md-ellipsis">
+    Home
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+<span class="md-ellipsis">
+    Tutorials
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+            Tutorials
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tutorials/toc-tutorials/">
+<span class="md-ellipsis">
+    TOC
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tutorials/black-formatter/">
+<span class="md-ellipsis">
+    Black Formatter
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tutorials/ruff-linter/">
+<span class="md-ellipsis">
+    Ruff Linter
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tutorials/poetry/">
+<span class="md-ellipsis">
+    Poetry Package Management
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tutorials/mkdocs-docs/">
+<span class="md-ellipsis">
+    MkDocs Documentation
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tutorials/hydra-config/">
+<span class="md-ellipsis">
+    Hydra Configuration
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tutorials/gitignore/">
+<span class="md-ellipsis">
+    Gitignore File Creation
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tutorials/data/">
+<span class="md-ellipsis">
+    Managing Data
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tutorials/data-version-control/">
+<span class="md-ellipsis">
+    Data Version Control
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tutorials/dvc-local/">
+<span class="md-ellipsis">
+    DVC Local Workflow
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tutorials/dvc-cloud/">
+<span class="md-ellipsis">
+    DVC Cloud Storage
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tutorials/dvc-collaboration/">
+<span class="md-ellipsis">
+    DVC for Collaboration
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tutorials/naming-conventions/">
+<span class="md-ellipsis">
+    Naming Conventions Tutorial
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tutorials/windows-os-setup/">
+<span class="md-ellipsis">
+    Windows OS Setup
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tutorials/markdown-ml-model-documentation/">
+<span class="md-ellipsis">
+    Markdown Documentation for ML Models
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+<span class="md-ellipsis">
+    How-To Guides
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+            How-To Guides
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../toc-how-to-guides/">
+<span class="md-ellipsis">
+    TOC
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    Project Scaffolding Standards
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    Project Scaffolding Standards
+  </span>
+</a>
+<nav aria-label="On this page" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#overview">
+<span class="md-ellipsis">
+      Overview
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#folder-and-file-structure">
+<span class="md-ellipsis">
+      Folder and File Structure
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#directory-descriptions">
+<span class="md-ellipsis">
+      Directory Descriptions
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#example-structure">
+<span class="md-ellipsis">
+      Example Structure
+    </span>
+</a>
+<nav aria-label="Example Structure" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#config-directory">
+<span class="md-ellipsis">
+      Config Directory
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#documentation-directory">
+<span class="md-ellipsis">
+      Documentation Directory
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#source-directory">
+<span class="md-ellipsis">
+      Source Directory
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#note-on-shared-configuration-files-for-mlai-projects">
+<span class="md-ellipsis">
+      Note on Shared Configuration Files for ML/AI Projects
+    </span>
+</a>
+<nav aria-label="Note on Shared Configuration Files for ML/AI Projects" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#files-that-should-not-be-modified-by-developers">
+<span class="md-ellipsis">
+      Files That Should Not Be Modified by Developers
+    </span>
+</a>
+<nav aria-label="Files That Should Not Be Modified by Developers" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#vscode-folder-content">
+<span class="md-ellipsis">
+      .vscode Folder Content
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#github-folder-content">
+<span class="md-ellipsis">
+      .github Folder Content
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#devcontainer-folder-content">
+<span class="md-ellipsis">
+      .devcontainer Folder Content
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#pyprojecttoml-sections">
+<span class="md-ellipsis">
+      pyproject.toml Sections
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#summary">
+<span class="md-ellipsis">
+      Summary
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#conclusion">
+<span class="md-ellipsis">
+      Conclusion
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../file-naming-conventions/">
+<span class="md-ellipsis">
+    File Naming Conventions
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../column-naming-conventions/">
+<span class="md-ellipsis">
+    Column Naming Conventions
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../python-docstrings-conventions/">
+<span class="md-ellipsis">
+    Python Docstrings Conventions
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../python-line-length-standards.md">
+<span class="md-ellipsis">
+    Line Length Standards in Python Projects
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../dvc-set-up/">
+<span class="md-ellipsis">
+    DVC Setup
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../dvc-communication/">
+<span class="md-ellipsis">
+    DVC Communication
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../dvc-vscode-extension/">
+<span class="md-ellipsis">
+    DVC VS Code Extension
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../offline-cookiecutter-setup/">
+<span class="md-ellipsis">
+    Offline Cookiecutter Setup
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../git-branch-naming-standards/">
+<span class="md-ellipsis">
+    Git Branch Naming Standards
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../commit-message-standards-ml/">
+<span class="md-ellipsis">
+    Commit Message Standards in ML Projects
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ml-data-folder-naming/">
+<span class="md-ellipsis">
+    ML Data Folder Naming Guide
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../machine-learning-metadata-automation/">
+<span class="md-ellipsis">
+    Automating Metadata Creation
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../github-actions-naming-convention/">
+<span class="md-ellipsis">
+    Enforcing Naming Conventions with GitHub Actions
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../wandb-experiment-tracking-rag/">
+<span class="md-ellipsis">
+    ML Experiments Life-Cycle with Weights &amp; Biases
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../templates/">
+<span class="md-ellipsis">
+    Templates for Issues/Stories and PRs
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../branching-strategy/">
+<span class="md-ellipsis">
+    Branching Strategies for ML Projects
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../data-conversion-from-xlsx-to-csv/">
+<span class="md-ellipsis">
+    Python Scripting for Data Conversion
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../automating-wandb-backups/">
+<span class="md-ellipsis">
+    Automating Backups for Weights &amp; Biases
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../jupyter-vscode-directory/">
+<span class="md-ellipsis">
+    Configuring Jupyter Notebook Start-up Directory in VS Code
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../data_management_practices/">
+<span class="md-ellipsis">
+    Project Data Management Practices
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+<span class="md-ellipsis">
+    Explanation
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+            Explanation
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../explanation/toc-explanation/">
+<span class="md-ellipsis">
+    TOC
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../explanation/dvc-understanding-dvs/">
+<span class="md-ellipsis">
+    Understanding DVC
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../explanation/dvc-git-branches/">
+<span class="md-ellipsis">
+    Git Branches in DVC
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../explanation/github-naming-conventions/">
+<span class="md-ellipsis">
+    Effective GitHub Naming Conventions
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../explanation/ml-naming-conventions/">
+<span class="md-ellipsis">
+    Notebook and Script Naming Conventions in ML Projects
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../explanation/model-persistence-naming-conventions/">
+<span class="md-ellipsis">
+    Model Persistence File Naming Conventions
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../explanation/naming-conventions/">
+<span class="md-ellipsis">
+    Introduction to Naming Conventions for AI Project Assets
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+<span class="md-ellipsis">
+    API Reference
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_5_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+            API Reference
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../api-reference/toc-api-reference/">
+<span class="md-ellipsis">
+    TOC
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="On this page" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#overview">
+<span class="md-ellipsis">
+      Overview
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#folder-and-file-structure">
+<span class="md-ellipsis">
+      Folder and File Structure
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#directory-descriptions">
+<span class="md-ellipsis">
+      Directory Descriptions
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#example-structure">
+<span class="md-ellipsis">
+      Example Structure
+    </span>
+</a>
+<nav aria-label="Example Structure" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#config-directory">
+<span class="md-ellipsis">
+      Config Directory
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#documentation-directory">
+<span class="md-ellipsis">
+      Documentation Directory
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#source-directory">
+<span class="md-ellipsis">
+      Source Directory
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#note-on-shared-configuration-files-for-mlai-projects">
+<span class="md-ellipsis">
+      Note on Shared Configuration Files for ML/AI Projects
+    </span>
+</a>
+<nav aria-label="Note on Shared Configuration Files for ML/AI Projects" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#files-that-should-not-be-modified-by-developers">
+<span class="md-ellipsis">
+      Files That Should Not Be Modified by Developers
+    </span>
+</a>
+<nav aria-label="Files That Should Not Be Modified by Developers" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#vscode-folder-content">
+<span class="md-ellipsis">
+      .vscode Folder Content
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#github-folder-content">
+<span class="md-ellipsis">
+      .github Folder Content
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#devcontainer-folder-content">
+<span class="md-ellipsis">
+      .devcontainer Folder Content
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#pyprojecttoml-sections">
+<span class="md-ellipsis">
+      pyproject.toml Sections
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#summary">
+<span class="md-ellipsis">
+      Summary
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#conclusion">
+<span class="md-ellipsis">
+      Conclusion
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1 id="project-scaffolding-standards-for-aiml-projects">Project Scaffolding Standards for AI/ML Projects<a class="headerlink" href="#project-scaffolding-standards-for-aiml-projects" title="Permanent link">¶</a></h1>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">¶</a></h2>
+<p>Establishing a standardized project structure is essential for
+maintaining organization, enhancing collaboration, and ensuring
+consistency across all AI/ML projects. This guide outlines the
+recommended folder and file structure to follow for all projects within
+the AI team.</p>
+<h2 id="folder-and-file-structure">Folder and File Structure<a class="headerlink" href="#folder-and-file-structure" title="Permanent link">¶</a></h2>
+<p>Here is the standardized folder and file structure for AI/ML projects:</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>├── .devcontainer
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a>│   └── devcontainer.json           &lt;- Configuration file for VS Code Dev Containers.
+<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a>├── .github
+<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a>│   ├── CODEOWNERS                  &lt;- Defines the code owners for the repository.
+<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a>│   ├── CONTRIBUTING.md             &lt;- Guidelines for contributing to the project.
+<a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a>│   ├── ISSUE_TEMPLATE
+<a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a>│   │   ├── ask_issues_template.md
+<a href="#__codelineno-0-8" id="__codelineno-0-8" name="__codelineno-0-8"></a>│   │   ├── bug_report_template.md
+<a href="#__codelineno-0-9" id="__codelineno-0-9" name="__codelineno-0-9"></a>│   │   ├── data_acquisition_template.md
+<a href="#__codelineno-0-10" id="__codelineno-0-10" name="__codelineno-0-10"></a>│   │   ├── data_creation_template.md
+<a href="#__codelineno-0-11" id="__codelineno-0-11" name="__codelineno-0-11"></a>│   │   ├── experiment_issues_template.md
+<a href="#__codelineno-0-12" id="__codelineno-0-12" name="__codelineno-0-12"></a>│   │   ├── explore_issues_template.md
+<a href="#__codelineno-0-13" id="__codelineno-0-13" name="__codelineno-0-13"></a>│   │   ├── feature_request.md
+<a href="#__codelineno-0-14" id="__codelineno-0-14" name="__codelineno-0-14"></a>│   │   └── model_issues_templates.md
+<a href="#__codelineno-0-15" id="__codelineno-0-15" name="__codelineno-0-15"></a>│   ├── PULL_REQUEST_TEMPLATE
+<a href="#__codelineno-0-16" id="__codelineno-0-16" name="__codelineno-0-16"></a>│   │   └── pull_request_template.md
+<a href="#__codelineno-0-17" id="__codelineno-0-17" name="__codelineno-0-17"></a>│   └── workflows
+<a href="#__codelineno-0-18" id="__codelineno-0-18" name="__codelineno-0-18"></a>│       ├── black.yaml              &lt;- GitHub Actions workflow for Black formatter.
+<a href="#__codelineno-0-19" id="__codelineno-0-19" name="__codelineno-0-19"></a>│       └── ruff.yaml               &lt;- GitHub Actions workflow for Ruff linter.
+<a href="#__codelineno-0-20" id="__codelineno-0-20" name="__codelineno-0-20"></a>├── .gitignore                      &lt;- Specifies intentionally untracked files to ignore.
+<a href="#__codelineno-0-21" id="__codelineno-0-21" name="__codelineno-0-21"></a>├── .vscode
+<a href="#__codelineno-0-22" id="__codelineno-0-22" name="__codelineno-0-22"></a>│   ├── cspell.json                 &lt;- Spell checker configuration.
+<a href="#__codelineno-0-23" id="__codelineno-0-23" name="__codelineno-0-23"></a>│   ├── dictionaries
+<a href="#__codelineno-0-24" id="__codelineno-0-24" name="__codelineno-0-24"></a>│   │   └── data-science-en.txt     &lt;- Custom dictionary for spell checker.
+<a href="#__codelineno-0-25" id="__codelineno-0-25" name="__codelineno-0-25"></a>│   ├── extensions.json             &lt;- List of recommended VS Code extensions.
+<a href="#__codelineno-0-26" id="__codelineno-0-26" name="__codelineno-0-26"></a>│   └── settings.json               &lt;- VS Code workspace settings.
+<a href="#__codelineno-0-27" id="__codelineno-0-27" name="__codelineno-0-27"></a>├── README.md                       &lt;- The top-level README for developers using this project.
+<a href="#__codelineno-0-28" id="__codelineno-0-28" name="__codelineno-0-28"></a>├── Makefile                        &lt;- Makefile with commands like `make data` or `make train`.
+<a href="#__codelineno-0-29" id="__codelineno-0-29" name="__codelineno-0-29"></a>├── config                          &lt;- Configuration files for the project.
+<a href="#__codelineno-0-30" id="__codelineno-0-30" name="__codelineno-0-30"></a>│   ├── base_config.cfg
+<a href="#__codelineno-0-31" id="__codelineno-0-31" name="__codelineno-0-31"></a>│   ├── config.cfg
+<a href="#__codelineno-0-32" id="__codelineno-0-32" name="__codelineno-0-32"></a>│   └── settings.yaml
+<a href="#__codelineno-0-33" id="__codelineno-0-33" name="__codelineno-0-33"></a>├── dist                            &lt;- Distribution files (e.g., wheels and tarballs).
+<a href="#__codelineno-0-34" id="__codelineno-0-34" name="__codelineno-0-34"></a>│   └── ...                         &lt;- Versioned distribution files.
+<a href="#__codelineno-0-35" id="__codelineno-0-35" name="__codelineno-0-35"></a>├── docs                            &lt;- Documentation files for the project.
+<a href="#__codelineno-0-36" id="__codelineno-0-36" name="__codelineno-0-36"></a>│   ├── api-reference.md
+<a href="#__codelineno-0-37" id="__codelineno-0-37" name="__codelineno-0-37"></a>│   ├── explanation.md
+<a href="#__codelineno-0-38" id="__codelineno-0-38" name="__codelineno-0-38"></a>│   ├── how-to-guides.md
+<a href="#__codelineno-0-39" id="__codelineno-0-39" name="__codelineno-0-39"></a>│   ├── index.md
+<a href="#__codelineno-0-40" id="__codelineno-0-40" name="__codelineno-0-40"></a>│   ├── tutorials.md
+<a href="#__codelineno-0-41" id="__codelineno-0-41" name="__codelineno-0-41"></a>│   └── assets                      &lt;- Assets for documentation (images, CSS, etc.).
+<a href="#__codelineno-0-42" id="__codelineno-0-42" name="__codelineno-0-42"></a>│       └── ...
+<a href="#__codelineno-0-43" id="__codelineno-0-43" name="__codelineno-0-43"></a>├── logs                            &lt;- Logs generated by the project.
+<a href="#__codelineno-0-44" id="__codelineno-0-44" name="__codelineno-0-44"></a>│   └── application.log
+<a href="#__codelineno-0-45" id="__codelineno-0-45" name="__codelineno-0-45"></a>├── mkdocs.yml                      &lt;- Configuration for mkdocs documentation generation.
+<a href="#__codelineno-0-46" id="__codelineno-0-46" name="__codelineno-0-46"></a>├── notebooks                       &lt;- Jupyter notebooks for exploration and analysis.
+<a href="#__codelineno-0-47" id="__codelineno-0-47" name="__codelineno-0-47"></a>│   └── ...                         &lt;- Individual notebook files.
+<a href="#__codelineno-0-48" id="__codelineno-0-48" name="__codelineno-0-48"></a>├── poetry.lock                     &lt;- Poetry lock file for dependencies.
+<a href="#__codelineno-0-49" id="__codelineno-0-49" name="__codelineno-0-49"></a>├── pyproject.toml                  &lt;- Project configuration file for dependencies and tools.
+<a href="#__codelineno-0-50" id="__codelineno-0-50" name="__codelineno-0-50"></a>├── src                             &lt;- Source code for the project.
+<a href="#__codelineno-0-51" id="__codelineno-0-51" name="__codelineno-0-51"></a>│   ├── project_name                &lt;- Main package for the project.
+<a href="#__codelineno-0-52" id="__codelineno-0-52" name="__codelineno-0-52"></a>│   │   ├── __init__.py
+<a href="#__codelineno-0-53" id="__codelineno-0-53" name="__codelineno-0-53"></a>│   │   ├── data                    &lt;- Data management scripts.
+<a href="#__codelineno-0-54" id="__codelineno-0-54" name="__codelineno-0-54"></a>│   │   │   ├── __init__.py
+<a href="#__codelineno-0-55" id="__codelineno-0-55" name="__codelineno-0-55"></a>│   │   │   ├── external            &lt;- External data sources.
+<a href="#__codelineno-0-56" id="__codelineno-0-56" name="__codelineno-0-56"></a>│   │   │   ├── features            &lt;- Feature engineering scripts.
+<a href="#__codelineno-0-57" id="__codelineno-0-57" name="__codelineno-0-57"></a>│   │   │   ├── interim             &lt;- Intermediate data storage.
+<a href="#__codelineno-0-58" id="__codelineno-0-58" name="__codelineno-0-58"></a>│   │   │   └── processed           &lt;- Processed data ready for modeling.
+<a href="#__codelineno-0-59" id="__codelineno-0-59" name="__codelineno-0-59"></a>│   │   ├── models                  &lt;- Model definitions and training scripts.
+<a href="#__codelineno-0-60" id="__codelineno-0-60" name="__codelineno-0-60"></a>│   │   │   ├── __init__.py
+<a href="#__codelineno-0-61" id="__codelineno-0-61" name="__codelineno-0-61"></a>│   │   │   └── ...                 &lt;- Model files and scripts.
+<a href="#__codelineno-0-62" id="__codelineno-0-62" name="__codelineno-0-62"></a>│   │   ├── utils                   &lt;- Utility scripts.
+<a href="#__codelineno-0-63" id="__codelineno-0-63" name="__codelineno-0-63"></a>│   │   │   ├── __init__.py
+<a href="#__codelineno-0-64" id="__codelineno-0-64" name="__codelineno-0-64"></a>│   │   │   └── utils.py
+<a href="#__codelineno-0-65" id="__codelineno-0-65" name="__codelineno-0-65"></a>│   │   ├── logs                    &lt;- Logs specific to source code operations.
+<a href="#__codelineno-0-66" id="__codelineno-0-66" name="__codelineno-0-66"></a>│   │   │   └── application.log
+<a href="#__codelineno-0-67" id="__codelineno-0-67" name="__codelineno-0-67"></a>│   │   ├── __pycache__             &lt;- Cached bytecode files.
+<a href="#__codelineno-0-68" id="__codelineno-0-68" name="__codelineno-0-68"></a>│   │   └── ...                     &lt;- Other source files and scripts.
+<a href="#__codelineno-0-69" id="__codelineno-0-69" name="__codelineno-0-69"></a>└── tests                           &lt;- Unit and integration tests.
+<a href="#__codelineno-0-70" id="__codelineno-0-70" name="__codelineno-0-70"></a>    ├── __init__.py
+<a href="#__codelineno-0-71" id="__codelineno-0-71" name="__codelineno-0-71"></a>    ├── test_module1.py
+<a href="#__codelineno-0-72" id="__codelineno-0-72" name="__codelineno-0-72"></a>    ├── test_module2.py
+<a href="#__codelineno-0-73" id="__codelineno-0-73" name="__codelineno-0-73"></a>    └── ...
+</code></pre></div>
+<h2 id="directory-descriptions">Directory Descriptions<a class="headerlink" href="#directory-descriptions" title="Permanent link">¶</a></h2>
+<ul>
+<li>
+<p><strong>README.md</strong>: A top-level README file that provides an overview of
+  the project, how to set up and use it, and any other relevant
+  information for developers.</p>
+</li>
+<li>
+<p><strong>Makefile</strong>: Contains commands for setting up and running the
+  project, such as <code>make data</code> for data preparation or <code>make train</code> for
+  model training.</p>
+</li>
+<li>
+<p><strong>config/</strong>: Contains configuration files used by the project. These
+  files define various settings and parameters needed for the project.</p>
+</li>
+<li>
+<p><strong>dist/</strong>: Stores distribution files for the project, such as wheels
+  and tarballs for package distribution.</p>
+</li>
+<li>
+<p><strong>docs/</strong>: Contains all documentation files, including API references,
+  explanations, how-to guides, and tutorials. The assets subdirectory
+  holds images and CSS used in the documentation.</p>
+</li>
+<li>
+<p><strong>logs/</strong>: Stores log files generated by the project, useful for
+  debugging and monitoring.</p>
+</li>
+<li>
+<p><strong>mkdocs.yml</strong>: Configuration file for generating project
+  documentation using mkdocs.</p>
+</li>
+<li>
+<p><strong>notebooks/</strong>: Contains Jupyter notebooks for exploratory data
+  analysis and experiments.</p>
+</li>
+<li>
+<p><strong>poetry.lock</strong>: Poetry lock file that specifies the exact versions of
+  dependencies used in the project.</p>
+</li>
+<li>
+<p><strong>pyproject.toml</strong>: Project configuration file that defines
+  dependencies, tools, and other settings for the project.</p>
+</li>
+<li>
+<p><strong>src/</strong>: Contains all source code for the project. This includes data
+  management scripts, model definitions, utility scripts, and any other
+  code needed for the project.</p>
+</li>
+<li>
+<p><strong>tests/</strong>: Contains all unit and integration tests for the project.
+  Each test module typically corresponds to a module in the src
+  directory.</p>
+</li>
+<li>
+<p><strong>.devcontainer/</strong>: Configuration for VS Code Dev Containers to ensure
+  a consistent development environment.</p>
+</li>
+<li>
+<p><strong>.github/</strong>: Contains GitHub-specific files for repository
+  management, including issue templates, pull request templates,
+  workflows, and contributing guidelines.</p>
+</li>
+<li>
+<p><strong>.gitignore</strong>: Specifies intentionally untracked files to ignore,
+  helping to keep the repository clean.</p>
+</li>
+<li>
+<p><strong>.vscode/</strong>: Contains settings and extensions for Visual Studio Code
+  to ensure a consistent development environment.</p>
+</li>
+</ul>
+<h2 id="example-structure">Example Structure<a class="headerlink" href="#example-structure" title="Permanent link">¶</a></h2>
+<h3 id="config-directory">Config Directory<a class="headerlink" href="#config-directory" title="Permanent link">¶</a></h3>
+<p>The config directory holds all configuration files required by the
+project:</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a>config/
+<a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a>├── base_config.cfg
+<a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a>├── config.cfg
+<a href="#__codelineno-1-4" id="__codelineno-1-4" name="__codelineno-1-4"></a>└── settings.yaml
+</code></pre></div>
+<h3 id="documentation-directory">Documentation Directory<a class="headerlink" href="#documentation-directory" title="Permanent link">¶</a></h3>
+<p>The docs directory includes various types of documentation and assets:</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a>docs/
+<a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a>├── api-reference.md
+<a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a>├── explanation.md
+<a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a>├── how-to-guides.md
+<a href="#__codelineno-2-5" id="__codelineno-2-5" name="__codelineno-2-5"></a>├── index.md
+<a href="#__codelineno-2-6" id="__codelineno-2-6" name="__codelineno-2-6"></a>├── tutorials.md
+<a href="#__codelineno-2-7" id="__codelineno-2-7" name="__codelineno-2-7"></a>└── assets/
+<a href="#__codelineno-2-8" id="__codelineno-2-8" name="__codelineno-2-8"></a>    ├── images/
+<a href="#__codelineno-2-9" id="__codelineno-2-9" name="__codelineno-2-9"></a>    │   └── example.png
+<a href="#__codelineno-2-10" id="__codelineno-2-10" name="__codelineno-2-10"></a>    ├── css/
+<a href="#__codelineno-2-11" id="__codelineno-2-11" name="__codelineno-2-11"></a>    │   └── custom.css
+<a href="#__codelineno-2-12" id="__codelineno-2-12" name="__codelineno-2-12"></a>    └── logo.png
+</code></pre></div>
+<h3 id="source-directory">Source Directory<a class="headerlink" href="#source-directory" title="Permanent link">¶</a></h3>
+<p>The src directory contains all the source code organized into
+subdirectories:</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a>src/
+<a href="#__codelineno-3-2" id="__codelineno-3-2" name="__codelineno-3-2"></a>├── project_name/
+<a href="#__codelineno-3-3" id="__codelineno-3-3" name="__codelineno-3-3"></a>│   ├── __init__.py
+<a href="#__codelineno-3-4" id="__codelineno-3-4" name="__codelineno-3-4"></a>│   ├── data/
+<a href="#__codelineno-3-5" id="__codelineno-3-5" name="__codelineno-3-5"></a>│   │   ├── __init__.py
+<a href="#__codelineno-3-6" id="__codelineno-3-6" name="__codelineno-3-6"></a>│   │   ├── external/
+<a href="#__codelineno-3-7" id="__codelineno-3-7" name="__codelineno-3-7"></a>│   │   ├── features/
+<a href="#__codelineno-3-8" id="__codelineno-3-8" name="__codelineno-3-8"></a>│   │   ├── interim/
+<a href="#__codelineno-3-9" id="__codelineno-3-9" name="__codelineno-3-9"></a>│   │   └── processed/
+<a href="#__codelineno-3-10" id="__codelineno-3-10" name="__codelineno-3-10"></a>│   ├── models/
+<a href="#__codelineno-3-11" id="__codelineno-3-11" name="__codelineno-3-11"></a>│   │   ├── __init__.py
+<a href="#__codelineno-3-12" id="__codelineno-3-12" name="__codelineno-3-12"></a>│   │   └── model.py
+<a href="#__codelineno-3-13" id="__codelineno-3-13" name="__codelineno-3-13"></a>│   ├── utils/
+<a href="#__codelineno-3-14" id="__codelineno-3-14" name="__codelineno-3-14"></a>│   │   ├── __init__.py
+<a href="#__codelineno-3-15" id="__codelineno-3-15" name="__codelineno-3-15"></a>│   │   └── utils.py
+<a href="#__codelineno-3-16" id="__codelineno-3-16" name="__codelineno-3-16"></a>│   └── logs/
+<a href="#__codelineno-3-17" id="__codelineno-3-17" name="__codelineno-3-17"></a>│       └── application.log
+<a href="#__codelineno-3-18" id="__codelineno-3-18" name="__codelineno-3-18"></a>└── tests/
+<a href="#__codelineno-3-19" id="__codelineno-3-19" name="__codelineno-3-19"></a>    ├── __init__.py
+<a href="#__codelineno-3-20" id="__codelineno-3-20" name="__codelineno-3-20"></a>    ├── test_data.py
+<a href="#__codelineno-3-21" id="__codelineno-3-21" name="__codelineno-3-21"></a>    ├── test_models.py
+<a href="#__codelineno-3-22" id="__codelineno-3-22" name="__codelineno-3-22"></a>    └── test_utils.py
+</code></pre></div>
+<h2 id="note-on-shared-configuration-files-for-mlai-projects">Note on Shared Configuration Files for ML/AI Projects<a class="headerlink" href="#note-on-shared-configuration-files-for-mlai-projects" title="Permanent link">¶</a></h2>
+<p>To ensure consistency and maintain high standards across all ML/AI
+projects, specific files have been pre-configured and included in the
+GitHub repository. These files contain settings and configurations that
+enforce standardized practices for all developers involved in the
+project. As such, these files should not be modified by individual
+developers. The pre-configured files help to ensure that everyone
+follows the same standards, enhancing collaboration and project
+management.</p>
+<h3 id="files-that-should-not-be-modified-by-developers">Files That Should Not Be Modified by Developers<a class="headerlink" href="#files-that-should-not-be-modified-by-developers" title="Permanent link">¶</a></h3>
+<p>The following files and sections are crucial for maintaining the
+project's standards and should not be altered:</p>
+<h4 id="vscode-folder-content">.vscode Folder Content<a class="headerlink" href="#vscode-folder-content" title="Permanent link">¶</a></h4>
+<p>The <code>.vscode</code> folder contains settings and extensions for Visual Studio
+Code to ensure a consistent development environment for all team
+members.</p>
+<h4 id="github-folder-content">.github Folder Content<a class="headerlink" href="#github-folder-content" title="Permanent link">¶</a></h4>
+<p>The <code>.github</code> folder includes files for repository management, such as
+issue templates, pull request templates, workflows, and contributing
+guidelines.</p>
+<h4 id="devcontainer-folder-content">.devcontainer Folder Content<a class="headerlink" href="#devcontainer-folder-content" title="Permanent link">¶</a></h4>
+<p>The <code>.devcontainer</code> folder holds configuration files for VS Code Dev
+Containers, providing a consistent development environment setup.</p>
+<h4 id="pyprojecttoml-sections">pyproject.toml Sections<a class="headerlink" href="#pyprojecttoml-sections" title="Permanent link">¶</a></h4>
+<p>Specific sections in the <code>pyproject.toml</code> file are configured to enforce
+coding standards and dependencies. These sections should not be
+modified:</p>
+<ul>
+<li><strong>[tool.poetry.dev-dependencies]</strong></li>
+<li><strong>[tool.poetry.group.dev.dependencies]</strong></li>
+<li><strong>[tool.black]</strong></li>
+<li><strong>[tool.ruff]</strong></li>
+<li><strong>[tool.pymarkdown]</strong></li>
+<li><strong>[tool.coverage.report]</strong></li>
+</ul>
+<p>By keeping these files and sections untouched, we ensure that all
+developers are adhering to the same standards, which is critical for
+maintaining code quality and project consistency. The person who set up
+the GitHub repository has included these configurations to streamline
+the development process and enforce best practices.</p>
+<h3 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">¶</a></h3>
+<ul>
+<li><strong>.vscode Folder</strong>: Contains settings and extensions for a consistent
+  VS Code environment.</li>
+<li><strong>.github Folder</strong>: Includes repository management files and
+  templates.</li>
+<li><strong>.devcontainer Folder</strong>: Provides configuration for VS Code Dev
+  Containers.</li>
+<li><strong>pyproject.toml Sections</strong>: Enforces coding standards and
+  dependencies.</li>
+</ul>
+<p>These pre-configured files and settings help to maintain uniformity and
+high standards across the project, ensuring that all team members follow
+the same practices. Therefore, developers should not modify these files.</p>
+<h2 id="conclusion">Conclusion<a class="headerlink" href="#conclusion" title="Permanent link">¶</a></h2>
+<p>Following this standardized folder and file structure will help maintain
+consistency and readability across all AI/ML projects, making it easier
+for team members to collaborate and manage the project effectively. This
+structure ensures that all necessary components are well-organized and
+easily accessible.</p>
+<aside class="md-source-file">
+<span class="md-source-file__fact">
+<span class="md-icon" title="Last update">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"></path></svg>
+</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 9, 2024</span>
+</span>
+</aside>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+<div class="md-social">
+<a class="md-social__link" href="https://github.com/markeyser/cookiecutter-two-lanes" rel="noopener" target="_blank" title="github.com">
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../..", "features": ["content.code.annotate"], "search": "../../assets/javascripts/workers/search.c011b7c0.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+<script src="../../assets/javascripts/bundle.7389ff0e.min.js"></script>
+<script src="https://fonts.googleapis.com/icon?family=Material+Icons"></script>
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+<script src="../../javascripts/mathjax.js"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+</html>
