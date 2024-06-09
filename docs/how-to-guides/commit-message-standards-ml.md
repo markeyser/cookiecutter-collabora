@@ -1,7 +1,7 @@
 # Git Commit Message Standards for ML Projects
 
 !!! tip "Introduction"
-    Clear, informative commit messages are vital for effective team collaboration in machine learning projects. This guide provides standards and tools for creating standardized commit messages, especially for including GitHub issue numbers or Jira keys.
+    Clear, informative commit messages are vital for effective team collaboration in machine learning projects. This guide provides standards and tools for creating standardized commit messages, including how to reference GitHub issue numbers or Jira keys. We follow the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) specification.
 
 !!! example "Commit Message Structure"
     Commit messages should follow this structure:
@@ -24,17 +24,21 @@
 !!! summary "Commit Types"
     Maintain consistency and organization with these commit types:
 
-    | Type         | Description                                                       |
-    |--------------|-------------------------------------------------------------------|
-    | `feat`       | New features or enhancements                                      |
-    | `fix`        | Bug fixes                                                         |
-    | `data`       | Data processing or management changes                             |
-    | `experiment` | Experimental or exploratory code changes                          |
-    | `model`      | Model development, testing, or deployment changes                  |
-    | `docs`       | Documentation additions or updates                                |
-    | `refactor`   | Performance enhancements without functionality changes            |
-    | `test`       | Test writing or fixing                                            |
-    | `chore`      | Routine tasks or non-production code updates                      |
+    | Type         | Description                                                   |
+    |--------------|---------------------------------------------------------------|
+    | `feat`       | New features or enhancements                                  |
+    | `fix`        | Bug fixes                                                     |
+    | `data`       | Data processing or management changes                         |
+    | `experiment` | Experimental or exploratory code changes                      |
+    | `model`      | Model development, testing, or deployment changes             |
+    | `docs`       | Documentation additions or updates                            |
+    | `refactor`   | Performance enhancements without functionality changes        |
+    | `test`       | Test writing or fixing                                        |
+    | `chore`      | Routine tasks or non-production code updates                  |
+    | `build`      | Changes that affect the build system or external dependencies |
+    | `ci`         | Changes to CI configuration files and scripts                 |
+    | `revert`     | Reverts a previous commit                                     |
+    | `style`      | Code style changes (formatting, missing semicolons, etc.)     |
 
 !!! check "Best Practices"
     1. **Concise Subject**: Keep it short and descriptive.
@@ -44,6 +48,37 @@
     5. **Separate Body with a Blank Line**: For tool compatibility.
     6. **Explain What and Why**: Not just how, in the body.
     7. **Reference Issues and Pull Requests**: Include relevant links for context.
+
+## Examples
+
+Here are some examples of commit messages that meet our standards:
+
+```text
+feat(auth): add user authentication feature [#DATA123]
+
+Added a new user authentication feature to enhance security.
+This includes login, registration, and password recovery.
+
+Footer: Reviewed by Jane Doe
+```
+
+```text
+fix(data): resolve data loading error [#GH45]
+
+Fixed an issue where data loading was failing due to incorrect file paths.
+Updated the file paths and added error handling.
+
+Footer: Closes #GH45
+```
+
+```text
+docs: update API documentation
+
+Improved the API documentation to include new endpoints and usage examples.
+Fixed typos and clarified descriptions.
+
+Footer: Documentation reviewed by the tech writing team
+```
 
 !!! info "VS Code Extensions"
     Enhance commit message standardization with these VS Code extensions:
