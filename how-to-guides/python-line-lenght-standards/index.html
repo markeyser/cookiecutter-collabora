@@ -5,12 +5,10 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="https://markeyser.github.io/cookiecutter-two-lanes/how-to-guides/branching-strategy/" rel="canonical"/>
-<link href="../templates/" rel="prev"/>
-<link href="../data-conversion-from-xlsx-to-csv/" rel="next"/>
+<link href="https://markeyser.github.io/cookiecutter-two-lanes/how-to-guides/python-line-lenght-standards/" rel="canonical"/>
 <link href="../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.5.3, mkdocs-material-9.5.4" name="generator"/>
-<title>Branching Strategies for ML Projects - Cookiecutter Two Lanes</title>
+<title>Code and Comment Length Standards in Python Projects - Cookiecutter Two Lanes</title>
 <link href="../../assets/stylesheets/main.50c56a3b.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -35,7 +33,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#branching-stragegies">
+<a class="md-skip" href="#code-and-comment-length-standards-in-python-projects">
           Skip to content
         </a>
 </div>
@@ -59,7 +57,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Branching Strategies for ML Projects
+              Code and Comment Length Standards in Python Projects
             
           </span>
 </div>
@@ -245,15 +243,15 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
 <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
 <span class="md-ellipsis">
     How-To Guides
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="true" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<nav aria-expanded="false" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_3">
 <span class="md-nav__icon md-icon"></span>
             How-To Guides
@@ -371,52 +369,12 @@
   </span>
 </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-<span class="md-ellipsis">
-    Branching Strategies for ML Projects
-  </span>
-<span class="md-nav__icon md-icon"></span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="./">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../branching-strategy/">
 <span class="md-ellipsis">
     Branching Strategies for ML Projects
   </span>
 </a>
-<nav aria-label="On this page" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      On this page
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#experiment-branches">
-<span class="md-ellipsis">
-      Experiment Branches
-    </span>
-</a>
-<nav aria-label="Experiment Branches" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#failed-experiments">
-<span class="md-ellipsis">
-      Failed Experiments
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#successful-experiments">
-<span class="md-ellipsis">
-      Successful Experiments
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-</ul>
-</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../data-conversion-from-xlsx-to-csv/">
@@ -554,29 +512,71 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#experiment-branches">
+<a class="md-nav__link" href="#overview">
 <span class="md-ellipsis">
-      Experiment Branches
-    </span>
-</a>
-<nav aria-label="Experiment Branches" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#failed-experiments">
-<span class="md-ellipsis">
-      Failed Experiments
+      Overview
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#successful-experiments">
+<a class="md-nav__link" href="#standards">
 <span class="md-ellipsis">
-      Successful Experiments
+      Standards
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#configuring-vs-code">
+<span class="md-ellipsis">
+      Configuring VS Code
+    </span>
+</a>
+<nav aria-label="Configuring VS Code" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#step-1-pre-configured-vs-code-settings">
+<span class="md-ellipsis">
+      Step 1: Pre-configured VS Code Settings
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#step-2-pre-configured-extensions">
+<span class="md-ellipsis">
+      Step 2: Pre-configured Extensions
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#step-3-pre-configured-pyprojecttoml">
+<span class="md-ellipsis">
+      Step 3: Pre-configured pyproject.toml
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#using-vs-code-tools">
+<span class="md-ellipsis">
+      Using VS Code Tools
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#example-usage">
+<span class="md-ellipsis">
+      Example Usage
     </span>
 </a>
 </li>
 </ul>
 </nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#conclusion">
+<span class="md-ellipsis">
+      Conclusion
+    </span>
+</a>
 </li>
 </ul>
 </nav>
@@ -585,60 +585,111 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="branching-stragegies">Branching Stragegies<a class="headerlink" href="#branching-stragegies" title="Permanent link">¶</a></h1>
-<h2 id="experiment-branches">Experiment Branches<a class="headerlink" href="#experiment-branches" title="Permanent link">¶</a></h2>
-<p>Use this branch type for working on and collaborating on experiments.
-Because you'll often build lots of models and features that don't work,
-you don't want to commit everything to your collaboration branch.</p>
-<h3 id="failed-experiments">Failed Experiments<a class="headerlink" href="#failed-experiments" title="Permanent link">¶</a></h3>
-<p>If an experiment doesn't pan out, mark the Experiment issue as failed
-with a label, close the PR without merging and update the Experiment
-issue with a TLDR explaining what you tried and how it turned out. Link
-to your experiment tracking tool so that others can view the runs.</p>
-<pre class="mermaid"><code>---
-title: Unsaccessful Experiment Branching Pattern
----
-
-%%{init: { 'logLevel': 'debug', 'theme': 'base' } }%%
-gitGraph TB:
-  commit tag: "Initial commit"
-  branch experiment
-  checkout experiment
-  commit tag: "First Commit on experiment"
-  commit tag: "Iterate Experiment"
-  commit tag: "Failed Experiment"</code></pre>
-<h3 id="successful-experiments">Successful Experiments<a class="headerlink" href="#successful-experiments" title="Permanent link">¶</a></h3>
-<p>If an experiment is successful and you want to start the deployment process:</p>
+<h1 id="code-and-comment-length-standards-in-python-projects">Code and Comment Length Standards in Python Projects<a class="headerlink" href="#code-and-comment-length-standards-in-python-projects" title="Permanent link">¶</a></h1>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">¶</a></h2>
+<p>Maintaining consistent code and comment lengths is crucial for
+readability and maintainability. This guide outlines the standards for
+line lengths in code and comments and explains how to configure and use
+Visual Studio Code (VS Code) to enforce these standards.</p>
+<h2 id="standards">Standards<a class="headerlink" href="#standards" title="Permanent link">¶</a></h2>
+<ul>
+<li><strong>Comments</strong>: Limit comments to 72 characters per line.</li>
+<li><strong>Code</strong>: Limit code lines to 79 characters.</li>
+</ul>
+<p>These standards help ensure that the codebase remains readable and
+manageable, particularly when reviewing code in different environments.</p>
+<h2 id="configuring-vs-code">Configuring VS Code<a class="headerlink" href="#configuring-vs-code" title="Permanent link">¶</a></h2>
+<p>To enforce these standards, we have pre-configured the following files
+in the repository:</p>
+<ul>
+<li><code>.vscode/settings.json</code></li>
+<li><code>.vscode/extensions.json</code></li>
+<li><code>pyproject.toml</code></li>
+</ul>
+<p>As a developer, you do not need to touch or modify these files. They are
+set up to ensure consistent standards across the project.</p>
+<h3 id="step-1-pre-configured-vs-code-settings">Step 1: Pre-configured VS Code Settings<a class="headerlink" href="#step-1-pre-configured-vs-code-settings" title="Permanent link">¶</a></h3>
+<p>The <code>.vscode/settings.json</code> file is set to include rulers at 72 and 79
+characters. This provides a visual cue for the character limits.</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="p">{</span>
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">    </span><span class="nt">"editor.rulers"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">        </span><span class="mi">72</span><span class="p">,</span>
+<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">        </span><span class="mi">79</span>
+<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">    </span><span class="p">],</span>
+<a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">    </span><span class="nt">"rewrap.wrappingColumn"</span><span class="p">:</span><span class="w"> </span><span class="mi">72</span><span class="p">,</span>
+<a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">    </span><span class="nt">"[python]"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a href="#__codelineno-0-8" id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">        </span><span class="nt">"editor.defaultFormatter"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ms-python.black-formatter"</span><span class="p">,</span>
+<a href="#__codelineno-0-9" id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="w">        </span><span class="nt">"editor.formatOnSave"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
+<a href="#__codelineno-0-10" id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="w">    </span><span class="p">},</span>
+<a href="#__codelineno-0-11" id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="w">    </span><span class="nt">"rewrap.autoWrap.enabled"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+<a href="#__codelineno-0-12" id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="p">}</span>
+</code></pre></div>
+<h3 id="step-2-pre-configured-extensions">Step 2: Pre-configured Extensions<a class="headerlink" href="#step-2-pre-configured-extensions" title="Permanent link">¶</a></h3>
+<p>The <code>.vscode/extensions.json</code> file includes the necessary extensions
+like Black formatter and Ruff linter to enforce the standards.</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="p">{</span>
+<a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="w">    </span><span class="nt">"recommendations"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="w">        </span><span class="s2">"ms-python.black-formatter"</span><span class="p">,</span>
+<a href="#__codelineno-1-4" id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="w">        </span><span class="s2">"ms-python.python"</span><span class="p">,</span>
+<a href="#__codelineno-1-5" id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="w">        </span><span class="s2">"stkb.rewrap"</span>
+<a href="#__codelineno-1-6" id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="w">    </span><span class="p">]</span>
+<a href="#__codelineno-1-7" id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="p">}</span>
+</code></pre></div>
+<h3 id="step-3-pre-configured-pyprojecttoml">Step 3: Pre-configured pyproject.toml<a class="headerlink" href="#step-3-pre-configured-pyprojecttoml" title="Permanent link">¶</a></h3>
+<p>The <code>pyproject.toml</code> file is configured to use Black and Ruff, adhering
+to the line length standards. These libraries have been included under
+<code>[tool.poetry.dev-dependencies]</code> and this section should not be changed
+to maintain consistent formatting and linting across the project.</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="k">[tool.black]</span>
+<a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="n">line-length</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">79</span>
+<a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a>
+<a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="k">[tool.ruff]</span>
+<a href="#__codelineno-2-5" id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="n">line-length</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">79</span>
+<a href="#__codelineno-2-6" id="__codelineno-2-6" name="__codelineno-2-6"></a>
+<a href="#__codelineno-2-7" id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="k">[tool.poetry.dev-dependencies]</span>
+<a href="#__codelineno-2-8" id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="n">black</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">version</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s2">"23.7.0"</span><span class="p">,</span><span class="w"> </span><span class="n">extras</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="s2">"jupyter"</span><span class="p">]</span><span class="w"> </span><span class="p">}</span>
+<a href="#__codelineno-2-9" id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="n">ruff</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"0.3.2"</span>
+<a href="#__codelineno-2-10" id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="c1"># Other dependencies...</span>
+</code></pre></div>
+<h3 id="using-vs-code-tools">Using VS Code Tools<a class="headerlink" href="#using-vs-code-tools" title="Permanent link">¶</a></h3>
 <ol>
-<li>Update the experiment issue with a TLDR and mark as successful using a label.</li>
-<li>Open a Model Issue to prepare the model and pipelines for production.</li>
-<li>Create a "Model" branch using Main as the base.</li>
-<li>Merge upstream changes from Main into your experiment branch and resolve any conflicts.</li>
-<li>Change the target of the Experiment PR to the Model branch.</li>
-<li>Merge the pull request to your Model branch and close the Experiment Issue.</li>
-<li>Delete the experiment branch after merging the PR.</li>
+<li><strong>Visual Indicators</strong>: The rulers at 72 and 79 characters will help
+   you visually align your code and comments.</li>
+<li><strong>Rewrap Extension</strong>: Use the Rewrap extension to format comments
+   quickly:</li>
+<li>Select the comment text.</li>
+<li>Press <code>Command + Shift + P</code> (to open the Command Palette) and
+     search for "Rewrap comment/text".</li>
 </ol>
-<pre class="mermaid"><code>---
-title: Successful Experiment Branching Pattern
----
-%%{init: { 'logLevel': 'debug', 'theme': 'base', 'gitGraph': {'rotateCommitLabel': true} } }%%
-gitGraph TB:
-    commit tag: "Initial commit"
-    branch experiment
-    checkout experiment
-    commit tag: "Experiment changes"
-    commit tag: "Interate Experiment"
-    commit tag: "Successful approach found"
-    checkout main
-    commit tag: "Changes on master"
-    merge experiment tag: "Merge successful experiment into master"
-    commit tag: "Changes on master"</code></pre>
+<h3 id="example-usage">Example Usage<a class="headerlink" href="#example-usage" title="Permanent link">¶</a></h3>
+<p><strong>Before Rewrap:</strong></p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="c1"># This is a very long comment that exceeds the recommended 72 characters per line limit and should be wrapped.</span>
+<a href="#__codelineno-3-2" id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="k">def</span> <span class="nf">example_function</span><span class="p">():</span>
+<a href="#__codelineno-3-3" id="__codelineno-3-3" name="__codelineno-3-3"></a>    <span class="k">pass</span>
+</code></pre></div>
+<p><strong>After Rewrap:</strong></p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="c1"># This is a very long comment that exceeds the recommended 72 characters</span>
+<a href="#__codelineno-4-2" id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="c1"># per line limit and should be wrapped.</span>
+<a href="#__codelineno-4-3" id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="k">def</span> <span class="nf">example_function</span><span class="p">():</span>
+<a href="#__codelineno-4-4" id="__codelineno-4-4" name="__codelineno-4-4"></a>    <span class="k">pass</span>
+</code></pre></div>
+<h2 id="conclusion">Conclusion<a class="headerlink" href="#conclusion" title="Permanent link">¶</a></h2>
+<p>By following these standards and using the pre-configured tools provided
+in the repository, you can maintain a clean and readable codebase.
+Consistent line lengths for code and comments improve readability,
+making it easier for team members to understand and review code. The
+configurations in <code>.vscode/settings.json</code>, <code>.vscode/extensions.json</code>,
+and <code>pyproject.toml</code> enforce these standards automatically, so
+developers can focus on writing quality code without worrying about
+configuration details. Additionally, the Python libraries Ruff and Black
+included in <code>[tool.poetry.dev-dependencies]</code> should not be changed to
+ensure consistent formatting and linting practices across the project.</p>
 <aside class="md-source-file">
 <span class="md-source-file__fact">
 <span class="md-icon" title="Last update">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 5, 2024</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 9, 2024</span>
 </span>
 </aside>
 </article>
