@@ -114,6 +114,7 @@ nav:
   - How-To Guides:
       - File Naming Conventions: how-to-guides/file-naming-conventions.md
       - Column Naming Conventions: how-to-guides/column-naming-conventions.md
+      - Python Docstrings Conventions: how-to-guides/python-docstrings-conventions.md
       - TOC: how-to-guides/toc-how-to-guides.md
       - DVC Setup: how-to-guides/dvc-set-up.md
       - DVC Communication: how-to-guides/dvc-communication.md
