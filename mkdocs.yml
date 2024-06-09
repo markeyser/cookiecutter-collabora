@@ -112,10 +112,11 @@ nav:
       - Windows OS Setup: tutorials/windows-os-setup.md
       - Markdown Documentation for ML Models: tutorials/markdown-ml-model-documentation.md
   - How-To Guides:
+      - TOC: how-to-guides/toc-how-to-guides.md
       - File Naming Conventions: how-to-guides/file-naming-conventions.md
       - Column Naming Conventions: how-to-guides/column-naming-conventions.md
       - Python Docstrings Conventions: how-to-guides/python-docstrings-conventions.md
-      - TOC: how-to-guides/toc-how-to-guides.md
+      - Line Length Standards in Python Projects: how-to-guides/python-line-length-standards.md
       - DVC Setup: how-to-guides/dvc-set-up.md
       - DVC Communication: how-to-guides/dvc-communication.md
       - DVC VS Code Extension: how-to-guides/dvc-vscode-extension.md
