@@ -112,6 +112,7 @@ nav:
       - Windows OS Setup: tutorials/windows-os-setup.md
       - Markdown Documentation for ML Models: tutorials/markdown-ml-model-documentation.md
   - How-To Guides:
+      - File Naming Conventions: how-to-guides/file-naming-conventions.md
       - TOC: how-to-guides/toc-how-to-guides.md
       - DVC Setup: how-to-guides/dvc-set-up.md
       - DVC Communication: how-to-guides/dvc-communication.md

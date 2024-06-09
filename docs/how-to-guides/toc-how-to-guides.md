@@ -11,6 +11,7 @@
 
 ## Table of Contents
 
+- [File Naming Conventions](./file-naming-conventions.md)
 - [Setting Up DVC for Efficient Data Management](./dvc-set-up.md)
 - [Facilitating Team Communication with DVC](./dvc-communication.md)
 - [Integrating DVC with VS Code for Enhanced Workflow](./dvc-vscode-extension.md)
