@@ -25,5 +25,6 @@
 - [Introduction to Naming Conventions for AI Project Assets](./naming-conventions.md)
 - [Windows OS: Setting Up Your Development Environment](./windows-os-setup.md)
 - [Data Management in ML Projects](./data.md)
+- [Using Code Tags](./using-code-tags.md)
 
 Dive into each tutorial for detailed, step-by-step guidance that you can follow along with ease. Start exploring the topics that interest you the most.

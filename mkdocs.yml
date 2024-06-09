@@ -135,6 +135,7 @@ nav:
       - Automating Backups for Weights & Biases: how-to-guides/automating-wandb-backups.md
       - Configuring Jupyter Notebook Start-up Directory in VS Code: how-to-guides/jupyter-vscode-directory.md
       - Project Data Management Practices: how-to-guides/data_management_practices.md
+      - Using Code Tags: how-to-guides/using-code-tags.md
   - Explanation:
       - TOC: explanation/toc-explanation.md
       - Understanding DVC: explanation/dvc-understanding-dvs.md

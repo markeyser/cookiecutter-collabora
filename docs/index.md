@@ -69,6 +69,7 @@ framework](https://diataxis.fr/).
     - :octicons-tools-16: [Branching Strategies for ML Projects](how-to-guides/branching-strategy.md) - Branching strategies for AI-based projects.
     - :octicons-tools-16: [Python Scripting for Data Conversion](how-to-guides/data-conversion-from-xlsx-to-csv.md) - Detailed Python functions for converting data between XLSX and CSV formats, tailored for machine learning experts working on NLP projects.
     - :octicons-tools-16: [Project Data Management Practices](how-to-guides/data_management_practices.md) - Best practices for organizing and managing project data, including folder structure, naming conventions, and centralized data repository usage.
+    - :octicons-tools-16: [Using Code Tags](how-to-guides/using-code-tags.md) - A practical guide on why and how to use code tags in ML/AI projects, leveraging VS Code extensions to enhance code readability and collaboration.
 
 ??? custom "Python Code Quality Tools"
     - :octicons-tools-16: [Formatting Your Code with Black](tutorials/black-formatter.md) - A comprehensive guide on using Black to format Python code, ensuring consistency and readability across your codebase.
