@@ -28,15 +28,19 @@ theme:
       toggle:
         icon: material/toggle-switch-off
         name: Switch to system preference
+
   font:
     text: Roboto
     code: Roboto Mono
   features:
     - content.code.annotate
+
 extra:
   social:
     - icon: "fontawesome/brands/github"
       link: "https://github.com/markeyser/cookiecutter-two-lanes"
+
+copyright: Copyright &copy; 2022 - 2024 Marcos Aguilera-Keyser
 
 markdown_extensions:
   # Include admonitions https://squidfunk.github.io/mkdocs-material/reference/admonitions/
