@@ -5,12 +5,12 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="https://markeyser.github.io/cookiecutter-two-lanes/how-to-guides/jupyter-vscode-directory/" rel="canonical"/>
-<link href="../automating-wandb-backups/" rel="prev"/>
-<link href="../data_management_practices/" rel="next"/>
+<link href="https://markeyser.github.io/cookiecutter-two-lanes/how-to-guides/using-code-tags/" rel="canonical"/>
+<link href="../data_management_practices/" rel="prev"/>
+<link href="../../explanation/toc-explanation/" rel="next"/>
 <link href="../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.5.3, mkdocs-material-9.5.4" name="generator"/>
-<title>Configuring Jupyter Notebook Start-up Directory in VS Code - Cookiecutter Two Lanes</title>
+<title>Using Code Tags - Cookiecutter Two Lanes</title>
 <link href="../../assets/stylesheets/main.50c56a3b.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -35,7 +35,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#how-to-set-up-jupyter-notebooks-in-vs-code-to-use-the-correct-start-up-directory">
+<a class="md-skip" href="#guide-to-using-code-tags-in-mlai-projects">
           Skip to content
         </a>
 </div>
@@ -59,7 +59,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Configuring Jupyter Notebook Start-up Directory in VS Code
+              Using Code Tags
             
           </span>
 </div>
@@ -406,17 +406,31 @@
   </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../jupyter-vscode-directory/">
+<span class="md-ellipsis">
+    Configuring Jupyter Notebook Start-up Directory in VS Code
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../data_management_practices/">
+<span class="md-ellipsis">
+    Project Data Management Practices
+  </span>
+</a>
+</li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
 <label class="md-nav__link md-nav__link--active" for="__toc">
 <span class="md-ellipsis">
-    Configuring Jupyter Notebook Start-up Directory in VS Code
+    Using Code Tags
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
 <a class="md-nav__link md-nav__link--active" href="./">
 <span class="md-ellipsis">
-    Configuring Jupyter Notebook Start-up Directory in VS Code
+    Using Code Tags
   </span>
 </a>
 <nav aria-label="On this page" class="md-nav md-nav--secondary">
@@ -426,18 +440,50 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#prerequisites">
+<a class="md-nav__link" href="#overview">
 <span class="md-ellipsis">
-      Prerequisites
+      Overview
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#step-by-step-guide">
+<a class="md-nav__link" href="#why-use-code-tags">
 <span class="md-ellipsis">
-      Step-by-Step Guide
+      Why Use Code Tags?
     </span>
 </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#setting-up-vs-code">
+<span class="md-ellipsis">
+      Setting Up VS Code
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#using-code-tags-in-your-project">
+<span class="md-ellipsis">
+      Using Code Tags in Your Project
+    </span>
+</a>
+<nav aria-label="Using Code Tags in Your Project" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#example-usage">
+<span class="md-ellipsis">
+      Example Usage
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#automation-with-codetags-and-todo-highlight">
+<span class="md-ellipsis">
+      Automation with CodeTags and Todo Highlight
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#conclusion">
@@ -448,20 +494,6 @@
 </li>
 </ul>
 </nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../data_management_practices/">
-<span class="md-ellipsis">
-    Project Data Management Practices
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../using-code-tags/">
-<span class="md-ellipsis">
-    Using Code Tags
-  </span>
-</a>
 </li>
 </ul>
 </nav>
@@ -571,18 +603,50 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#prerequisites">
+<a class="md-nav__link" href="#overview">
 <span class="md-ellipsis">
-      Prerequisites
+      Overview
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#step-by-step-guide">
+<a class="md-nav__link" href="#why-use-code-tags">
 <span class="md-ellipsis">
-      Step-by-Step Guide
+      Why Use Code Tags?
     </span>
 </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#setting-up-vs-code">
+<span class="md-ellipsis">
+      Setting Up VS Code
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#using-code-tags-in-your-project">
+<span class="md-ellipsis">
+      Using Code Tags in Your Project
+    </span>
+</a>
+<nav aria-label="Using Code Tags in Your Project" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#example-usage">
+<span class="md-ellipsis">
+      Example Usage
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#automation-with-codetags-and-todo-highlight">
+<span class="md-ellipsis">
+      Automation with CodeTags and Todo Highlight
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#conclusion">
@@ -598,74 +662,169 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="how-to-set-up-jupyter-notebooks-in-vs-code-to-use-the-correct-start-up-directory">How to Set Up Jupyter Notebooks in VS Code to Use the Correct Start-up Directory<a class="headerlink" href="#how-to-set-up-jupyter-notebooks-in-vs-code-to-use-the-correct-start-up-directory" title="Permanent link">¶</a></h1>
-<p>Ensuring that Jupyter notebooks in Visual Studio Code (VS Code) start in
-the correct directory is crucial for maintaining a smooth and efficient
-workflow, especially when dealing with file paths. This guide will walk
-you through configuring VS Code so that Jupyter notebooks always use
-your project's root directory as their start-up directory, eliminating
-the need to adjust paths frequently.</p>
-<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">¶</a></h2>
+<h1 id="guide-to-using-code-tags-in-mlai-projects">Guide to Using Code Tags in ML/AI Projects<a class="headerlink" href="#guide-to-using-code-tags-in-mlai-projects" title="Permanent link">¶</a></h1>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">¶</a></h2>
+<p>Code tags are an essential tool for maintaining readability and
+manageability in your codebase. They provide clear markers for important
+comments, issues, and reminders, enhancing collaboration and ensuring
+critical information is not overlooked. This guide explains why and how
+to use code tags in your ML/AI projects, leveraging the VS Code
+extensions <strong>CodeTags</strong> and <strong>Todo Highlight</strong>.</p>
+<h2 id="why-use-code-tags">Why Use Code Tags?<a class="headerlink" href="#why-use-code-tags" title="Permanent link">¶</a></h2>
+<ol>
+<li><strong>Improve Readability</strong>: Highlight important comments, making them
+   stand out in the code.</li>
+<li><strong>Facilitate Collaboration</strong>: Help team members quickly identify
+   issues, requests, and important notes.</li>
+<li><strong>Enhance Documentation</strong>: Provide clear and consistent documentation
+   within the code.</li>
+<li><strong>Ensure Accountability</strong>: Track who is responsible for various parts
+   of the code.</li>
+<li><strong>Increase Efficiency</strong>: Quickly locate and address critical areas in
+   the codebase.</li>
+</ol>
+<h2 id="setting-up-vs-code">Setting Up VS Code<a class="headerlink" href="#setting-up-vs-code" title="Permanent link">¶</a></h2>
+<p>To get started, ensure you have the following extensions installed:</p>
 <ul>
-<li>Ensure you have Visual Studio Code installed.</li>
-<li>Ensure the Jupyter extension for VS Code is installed and enabled.</li>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=cg-cnu.vscode-codetags">CodeTags</a></li>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=wayou.vscode-todo-highlight">Todo
+  Highlight</a></li>
 </ul>
-<h2 id="step-by-step-guide">Step-by-Step Guide<a class="headerlink" href="#step-by-step-guide" title="Permanent link">¶</a></h2>
-<ol>
-<li>
-<p><strong>Open VS Code Settings in JSON Format</strong></p>
-</li>
-<li>
-<p>Open VS Code.</p>
-</li>
-<li>Access the Command Palette by pressing <code>Ctrl+Shift+P</code> on
-     Windows/Linux or <code>Cmd+Shift+P</code> on macOS.</li>
-<li>
-<p>Type <code>Open Settings (JSON)</code> and select the option that appears to
-     open your settings file in JSON format.</p>
-</li>
-<li>
-<p><strong>Configure the Start-up Directory</strong></p>
-</li>
-<li>
-<p>In the <code>settings.json</code> file, look for the
-     <code>jupyter.notebookFileRoot</code> setting. If it's not present, you'll
-     need to add it.</p>
-</li>
-<li>
-<p>Insert or modify the line as follows:</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="nt">"jupyter.notebookFileRoot"</span><span class="p">:</span><span class="w"> </span><span class="s2">"${workspaceFolder}"</span><span class="p">,</span>
+<p>The configuration for these extensions is located in your
+<code>.vscode/settings.json</code> file. This configuration includes specific
+keywords for code tags, their styling, and which file types to include
+or exclude. Here is a brief overview:</p>
+<ul>
+<li><strong>Keywords</strong>: Defines various tags like <code>BUG</code>, <code>TODO</code>, <code>RFE</code>, etc.,
+  with specific colors and background settings.</li>
+<li><strong>Include/Exclude</strong>: Specifies which file types and directories should
+  be included or excluded from highlighting.</li>
+</ul>
+<p>Example settings:</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1">// #############################</span>
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="c1">// ### CODETAGS ###</span>
+<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="c1">// #############################</span>
+<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="nt">"todohighlight.keywords"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">    </span><span class="c1">// Keywords and styling configurations...</span>
+<a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="p">],</span>
+<a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="nt">"codetags.custom"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-0-8" id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">    </span><span class="c1">// Custom tags and their descriptions...</span>
+<a href="#__codelineno-0-9" id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="p">],</span>
+<a href="#__codelineno-0-10" id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="nt">"todohighlight.include"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-0-11" id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="w">    </span><span class="s2">"**/*.js"</span><span class="p">,</span>
+<a href="#__codelineno-0-12" id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="w">    </span><span class="s2">"**/*.jsx"</span><span class="p">,</span>
+<a href="#__codelineno-0-13" id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="w">    </span><span class="s2">"**/*.ts"</span><span class="p">,</span>
+<a href="#__codelineno-0-14" id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="w">    </span><span class="s2">"**/*.tsx"</span><span class="p">,</span>
+<a href="#__codelineno-0-15" id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="w">    </span><span class="s2">"**/*.html"</span><span class="p">,</span>
+<a href="#__codelineno-0-16" id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="w">    </span><span class="s2">"**/*.php"</span><span class="p">,</span>
+<a href="#__codelineno-0-17" id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="w">    </span><span class="s2">"**/*.css"</span><span class="p">,</span>
+<a href="#__codelineno-0-18" id="__codelineno-0-18" name="__codelineno-0-18"></a><span class="w">    </span><span class="s2">"**/*.scss"</span><span class="p">,</span>
+<a href="#__codelineno-0-19" id="__codelineno-0-19" name="__codelineno-0-19"></a><span class="w">    </span><span class="s2">"**/*.py"</span>
+<a href="#__codelineno-0-20" id="__codelineno-0-20" name="__codelineno-0-20"></a><span class="p">],</span>
+<a href="#__codelineno-0-21" id="__codelineno-0-21" name="__codelineno-0-21"></a><span class="nt">"todohighlight.exclude"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-0-22" id="__codelineno-0-22" name="__codelineno-0-22"></a><span class="w">    </span><span class="s2">"**/node_modules/**"</span><span class="p">,</span>
+<a href="#__codelineno-0-23" id="__codelineno-0-23" name="__codelineno-0-23"></a><span class="w">    </span><span class="s2">"**/bower_components/**"</span><span class="p">,</span>
+<a href="#__codelineno-0-24" id="__codelineno-0-24" name="__codelineno-0-24"></a><span class="w">    </span><span class="s2">"**/dist/**"</span><span class="p">,</span>
+<a href="#__codelineno-0-25" id="__codelineno-0-25" name="__codelineno-0-25"></a><span class="w">    </span><span class="s2">"**/build/**"</span><span class="p">,</span>
+<a href="#__codelineno-0-26" id="__codelineno-0-26" name="__codelineno-0-26"></a><span class="w">    </span><span class="s2">"**/.vscode/**"</span><span class="p">,</span>
+<a href="#__codelineno-0-27" id="__codelineno-0-27" name="__codelineno-0-27"></a><span class="w">    </span><span class="s2">"**/.github/**"</span><span class="p">,</span>
+<a href="#__codelineno-0-28" id="__codelineno-0-28" name="__codelineno-0-28"></a><span class="w">    </span><span class="s2">"**/_output/**"</span><span class="p">,</span>
+<a href="#__codelineno-0-29" id="__codelineno-0-29" name="__codelineno-0-29"></a><span class="w">    </span><span class="s2">"**/*.min.*"</span><span class="p">,</span>
+<a href="#__codelineno-0-30" id="__codelineno-0-30" name="__codelineno-0-30"></a><span class="w">    </span><span class="s2">"**/*.map"</span><span class="p">,</span>
+<a href="#__codelineno-0-31" id="__codelineno-0-31" name="__codelineno-0-31"></a><span class="w">    </span><span class="s2">"**/.next/**"</span>
+<a href="#__codelineno-0-32" id="__codelineno-0-32" name="__codelineno-0-32"></a><span class="p">]</span>
 </code></pre></div>
-</li>
-</ol>
-<p>This setting instructs VS Code to use the workspace folder (the
-   project root directory) as the default directory for Jupyter
-   notebooks. The workspace folder is determined by the location of your
-   <code>.code-workspace</code> file or the primary folder you have opened in VS
-   Code.</p>
-<ol>
-<li>
-<p><strong>Save the Changes</strong></p>
-</li>
-<li>
-<p>After adding or modifying the line, save the <code>settings.json</code> file.</p>
-</li>
-<li>Close and reopen any active Jupyter notebooks for the changes to
-     take effect.</li>
-</ol>
+<h2 id="using-code-tags-in-your-project">Using Code Tags in Your Project<a class="headerlink" href="#using-code-tags-in-your-project" title="Permanent link">¶</a></h2>
+<p>Here are some common code tags and their intended use in ML/AI projects:</p>
+<ul>
+<li><strong>BUG</strong>: To mark sections of code that have known bugs.</li>
+<li><strong>NOBUG</strong>: To indicate well-known issues that will not be addressed.</li>
+<li><strong>RFE</strong>: To mark requests for enhancements or features to be added.</li>
+<li><strong>IDEA</strong>: To highlight ideas or potential improvements.</li>
+<li><strong>???</strong>: To mark areas of the code that need further investigation.</li>
+<li><strong>!!!</strong>: To indicate urgent issues that need immediate attention.</li>
+<li><strong>PORT</strong>: To note portability issues or workarounds.</li>
+<li><strong>CAVEAT</strong>: To point out non-intuitive implementation details.</li>
+<li><strong>FAQ</strong>: To highlight frequently asked questions or important notes.</li>
+<li><strong>GLOSS</strong>: To add glossaries or explanations of terms.</li>
+<li><strong>SEE</strong>: To provide pointers to other parts of the code or external
+  resources.</li>
+<li><strong>TODOC</strong>: To indicate areas that need documentation.</li>
+<li><strong>CRED</strong>: To give credit for external help or contributions.</li>
+<li><strong>STAT</strong>: To indicate the status or maturity of a file.</li>
+<li><strong>RVD</strong>: To mark files or sections that have been reviewed.</li>
+<li><strong>NOTE</strong>: To add general notes or important reminders.</li>
+<li><strong>HACK</strong>: To mark quick and dirty fixes or hacks.</li>
+<li><strong>TODO</strong>: To indicate tasks that need to be done.</li>
+</ul>
+<h3 id="example-usage">Example Usage<a class="headerlink" href="#example-usage" title="Permanent link">¶</a></h3>
+<p>Here are some examples of how to use these code tags in your Python
+code:</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="c1"># TODO: Implement the function to process the data</span>
+<a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="k">def</span> <span class="nf">process_data</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+<a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="w">    </span><span class="sd">"""</span>
+<a href="#__codelineno-1-4" id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="sd">    Processes the input data.</span>
+<a href="#__codelineno-1-5" id="__codelineno-1-5" name="__codelineno-1-5"></a>
+<a href="#__codelineno-1-6" id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="sd">    Args:</span>
+<a href="#__codelineno-1-7" id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="sd">        data (list): The data to be processed.</span>
+<a href="#__codelineno-1-8" id="__codelineno-1-8" name="__codelineno-1-8"></a>
+<a href="#__codelineno-1-9" id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="sd">    Returns:</span>
+<a href="#__codelineno-1-10" id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="sd">        list: The processed data.</span>
+<a href="#__codelineno-1-11" id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="sd">    """</span>
+<a href="#__codelineno-1-12" id="__codelineno-1-12" name="__codelineno-1-12"></a>    <span class="k">pass</span>
+<a href="#__codelineno-1-13" id="__codelineno-1-13" name="__codelineno-1-13"></a>
+<a href="#__codelineno-1-14" id="__codelineno-1-14" name="__codelineno-1-14"></a><span class="c1"># BUG: This function does not handle empty lists properly</span>
+<a href="#__codelineno-1-15" id="__codelineno-1-15" name="__codelineno-1-15"></a><span class="k">def</span> <span class="nf">calculate_average</span><span class="p">(</span><span class="n">numbers</span><span class="p">):</span>
+<a href="#__codelineno-1-16" id="__codelineno-1-16" name="__codelineno-1-16"></a><span class="w">    </span><span class="sd">"""</span>
+<a href="#__codelineno-1-17" id="__codelineno-1-17" name="__codelineno-1-17"></a><span class="sd">    Calculates the average of a list of numbers.</span>
+<a href="#__codelineno-1-18" id="__codelineno-1-18" name="__codelineno-1-18"></a>
+<a href="#__codelineno-1-19" id="__codelineno-1-19" name="__codelineno-1-19"></a><span class="sd">    Args:</span>
+<a href="#__codelineno-1-20" id="__codelineno-1-20" name="__codelineno-1-20"></a><span class="sd">        numbers (list): A list of numbers.</span>
+<a href="#__codelineno-1-21" id="__codelineno-1-21" name="__codelineno-1-21"></a>
+<a href="#__codelineno-1-22" id="__codelineno-1-22" name="__codelineno-1-22"></a><span class="sd">    Returns:</span>
+<a href="#__codelineno-1-23" id="__codelineno-1-23" name="__codelineno-1-23"></a><span class="sd">        float: The average of the numbers.</span>
+<a href="#__codelineno-1-24" id="__codelineno-1-24" name="__codelineno-1-24"></a>
+<a href="#__codelineno-1-25" id="__codelineno-1-25" name="__codelineno-1-25"></a><span class="sd">    Raises:</span>
+<a href="#__codelineno-1-26" id="__codelineno-1-26" name="__codelineno-1-26"></a><span class="sd">        ValueError: If the input list is empty.</span>
+<a href="#__codelineno-1-27" id="__codelineno-1-27" name="__codelineno-1-27"></a><span class="sd">    """</span>
+<a href="#__codelineno-1-28" id="__codelineno-1-28" name="__codelineno-1-28"></a>    <span class="k">if</span> <span class="ow">not</span> <span class="n">numbers</span><span class="p">:</span>
+<a href="#__codelineno-1-29" id="__codelineno-1-29" name="__codelineno-1-29"></a>        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">"Cannot calculate average of an empty list."</span><span class="p">)</span>
+<a href="#__codelineno-1-30" id="__codelineno-1-30" name="__codelineno-1-30"></a>    <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span>
+<a href="#__codelineno-1-31" id="__codelineno-1-31" name="__codelineno-1-31"></a>
+<a href="#__codelineno-1-32" id="__codelineno-1-32" name="__codelineno-1-32"></a><span class="c1"># !!!: This section needs immediate attention to fix performance issues</span>
+<a href="#__codelineno-1-33" id="__codelineno-1-33" name="__codelineno-1-33"></a><span class="k">def</span> <span class="nf">perform_heavy_computation</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+<a href="#__codelineno-1-34" id="__codelineno-1-34" name="__codelineno-1-34"></a><span class="w">    </span><span class="sd">"""</span>
+<a href="#__codelineno-1-35" id="__codelineno-1-35" name="__codelineno-1-35"></a><span class="sd">    Performs a heavy computation on the input data.</span>
+<a href="#__codelineno-1-36" id="__codelineno-1-36" name="__codelineno-1-36"></a>
+<a href="#__codelineno-1-37" id="__codelineno-1-37" name="__codelineno-1-37"></a><span class="sd">    Args:</span>
+<a href="#__codelineno-1-38" id="__codelineno-1-38" name="__codelineno-1-38"></a><span class="sd">        data (list): The data to be processed.</span>
+<a href="#__codelineno-1-39" id="__codelineno-1-39" name="__codelineno-1-39"></a>
+<a href="#__codelineno-1-40" id="__codelineno-1-40" name="__codelineno-1-40"></a><span class="sd">    Returns:</span>
+<a href="#__codelineno-1-41" id="__codelineno-1-41" name="__codelineno-1-41"></a><span class="sd">        list: The result of the computation.</span>
+<a href="#__codelineno-1-42" id="__codelineno-1-42" name="__codelineno-1-42"></a><span class="sd">    """</span>
+<a href="#__codelineno-1-43" id="__codelineno-1-43" name="__codelineno-1-43"></a>    <span class="c1"># Placeholder for the heavy computation logic</span>
+<a href="#__codelineno-1-44" id="__codelineno-1-44" name="__codelineno-1-44"></a>    <span class="n">result</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="o">*</span> <span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">data</span><span class="p">]</span>  <span class="c1"># Optimize this line for better performance</span>
+<a href="#__codelineno-1-45" id="__codelineno-1-45" name="__codelineno-1-45"></a>    <span class="k">return</span> <span class="n">result</span>
+<a href="#__codelineno-1-46" id="__codelineno-1-46" name="__codelineno-1-46"></a>
+<a href="#__codelineno-1-47" id="__codelineno-1-47" name="__codelineno-1-47"></a><span class="c1"># SEE: For more details on the algorithm, refer to the research paper (link).</span>
+</code></pre></div>
+<h3 id="automation-with-codetags-and-todo-highlight">Automation with CodeTags and Todo Highlight<a class="headerlink" href="#automation-with-codetags-and-todo-highlight" title="Permanent link">¶</a></h3>
+<p>By configuring the <code>todohighlight.keywords</code>, <code>todohighlight.include</code>,
+and <code>todohighlight.exclude</code> settings in your <code>.vscode/settings.json</code>
+file, you can automate the highlighting of important code tags, making
+it easier to manage and navigate your codebase.</p>
 <h2 id="conclusion">Conclusion<a class="headerlink" href="#conclusion" title="Permanent link">¶</a></h2>
-<p>By following these steps, you have successfully configured Visual Studio
-Code to set the project's root directory as the default start-up
-directory for Jupyter notebooks. This configuration streamlines your
-workflow by removing the need to frequently adjust paths within your
-notebooks. Now, you can focus more on your data analysis or development
-tasks without the hassle of directory-related issues.</p>
+<p>Using code tags effectively helps maintain a clean, readable, and
+manageable codebase. By following this guide and using the provided VS
+Code extensions, you can enhance collaboration, improve documentation,
+and ensure critical areas of your code are highlighted and addressed
+promptly.</p>
 <aside class="md-source-file">
 <span class="md-source-file__fact">
 <span class="md-icon" title="Last update">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 29, 2024</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 9, 2024</span>
 </span>
 </aside>
 </article>
