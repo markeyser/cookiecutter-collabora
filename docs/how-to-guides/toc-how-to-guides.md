@@ -12,6 +12,7 @@
 ## Table of Contents
 
 - [Setting Up DVC for Efficient Data Management](./dvc-set-up.md)
+- [Project Scaffolding Standards](./project-scaffolding-standards.md)
 - [File Naming Conventions](./file-naming-conventions.md)
 - [Column Naming Conventions for ML/AI Projects](./column-naming-conventions.md)
 - [Python Docstrings Conventions](./python-docstrings-conventions.md)

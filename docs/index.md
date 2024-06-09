@@ -49,6 +49,7 @@ framework](https://diataxis.fr/).
 ## Resource Compendium
 
 ??? custom "Conventions"
+    - :octicons-tools-16: [Project Scaffolding Standards](how-to-guides/project-scaffolding-standards.md) - A comprehensive guide on establishing a standardized folder and file structure for AI/ML projects, enhancing organization and collaboration within the AI team.
     - :octicons-file-code-16: [Introduction to Naming Conventions for AI Project Assets](explanation/naming-conventions.md) - An essential guide that underscores the significance of systematic naming conventions in fostering clear communication, efficient project management, and reproducibility in AI and ML collaborations.
     -	:octicons-tools-16: [File Naming Conventions](how-to-guides/file-naming-conventions.md) - A comprehensive guide on using the snake_case naming convention for all file types in your project to maintain consistency and readability.
     - :octicons-tools-16: [Column Naming Conventions for ML/AI Projects](how-to-guides/column-naming-conventions.md) - A comprehensive guide on using the snake_case naming convention for column names across different types of data files in your ML/AI projects to maintain consistency and readability.

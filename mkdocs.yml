@@ -113,6 +113,7 @@ nav:
       - Markdown Documentation for ML Models: tutorials/markdown-ml-model-documentation.md
   - How-To Guides:
       - TOC: how-to-guides/toc-how-to-guides.md
+      - Project Scaffolding Standards: how-to-guides/project-scaffolding-standards.md
       - File Naming Conventions: how-to-guides/file-naming-conventions.md
       - Column Naming Conventions: how-to-guides/column-naming-conventions.md
       - Python Docstrings Conventions: how-to-guides/python-docstrings-conventions.md
