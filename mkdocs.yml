@@ -121,7 +121,6 @@ nav:
       - Git Branch Naming Standards: how-to-guides/git-branch-naming-standards.md
       - Commit Message Standards in ML Projects: how-to-guides/commit-message-standards-ml.md
       - ML Data Folder Naming Guide: how-to-guides/ml-data-folder-naming.md
-      - Data Files Naming Conventions: how-to-guides/ml-data-naming-conventions.md
       - Automating Metadata Creation: how-to-guides/machine-learning-metadata-automation.md
       - Enforcing Naming Conventions with GitHub Actions: how-to-guides/github-actions-naming-convention.md
       - ML Experiments Life-Cycle with Weights & Biases: how-to-guides/wandb-experiment-tracking-rag.md
