@@ -5,12 +5,12 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="https://markeyser.github.io/cookiecutter-two-lanes/how-to-guides/data-conversion-from-xlsx-to-csv/" rel="canonical"/>
-<link href="../branching-strategy/" rel="prev"/>
-<link href="../automating-wandb-backups/" rel="next"/>
+<link href="https://markeyser.github.io/cookiecutter-two-lanes/how-to-guides/column-naming-conventions/" rel="canonical"/>
+<link href="../file-naming-conventions/" rel="prev"/>
+<link href="../toc-how-to-guides/" rel="next"/>
 <link href="../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.5.3, mkdocs-material-9.5.4" name="generator"/>
-<title>Python Scripting for Data Conversion - Cookiecutter Two Lanes</title>
+<title>Column Naming Conventions - Cookiecutter Two Lanes</title>
 <link href="../../assets/stylesheets/main.50c56a3b.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -35,7 +35,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#data-conversion-workflow-for-nlp-projects">
+<a class="md-skip" href="#column-naming-conventions-for-mlai-projects">
           Skip to content
         </a>
 </div>
@@ -59,7 +59,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Python Scripting for Data Conversion
+              Column Naming Conventions
             
           </span>
 </div>
@@ -266,12 +266,101 @@
   </span>
 </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../column-naming-conventions/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    Column Naming Conventions
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
 <span class="md-ellipsis">
     Column Naming Conventions
   </span>
 </a>
+<nav aria-label="On this page" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#overview">
+<span class="md-ellipsis">
+      Overview
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#what-is-snake_case">
+<span class="md-ellipsis">
+      What is Snake_Case?
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#rules-for-snake_case-column-naming">
+<span class="md-ellipsis">
+      Rules for Snake_Case Column Naming
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#examples">
+<span class="md-ellipsis">
+      Examples
+    </span>
+</a>
+<nav aria-label="Examples" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#structured-data-csv-file">
+<span class="md-ellipsis">
+      Structured Data (CSV File)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#semi-structured-data-json-file">
+<span class="md-ellipsis">
+      Semi-Structured Data (JSON File)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#unstructured-data-text-with-metadata">
+<span class="md-ellipsis">
+      Unstructured Data (Text with Metadata)
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#common-column-names-in-mlai-projects">
+<span class="md-ellipsis">
+      Common Column Names in ML/AI Projects
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tips">
+<span class="md-ellipsis">
+      Tips
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#common-mistakes-to-avoid">
+<span class="md-ellipsis">
+      Common Mistakes to Avoid
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../toc-how-to-guides/">
@@ -364,109 +453,12 @@
   </span>
 </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-<span class="md-ellipsis">
-    Python Scripting for Data Conversion
-  </span>
-<span class="md-nav__icon md-icon"></span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="./">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../data-conversion-from-xlsx-to-csv/">
 <span class="md-ellipsis">
     Python Scripting for Data Conversion
   </span>
 </a>
-<nav aria-label="On this page" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      On this page
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#overview">
-<span class="md-ellipsis">
-      Overview
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#procedure">
-<span class="md-ellipsis">
-      Procedure
-    </span>
-</a>
-<nav aria-label="Procedure" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#context">
-<span class="md-ellipsis">
-      Context
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#conversion-from-xlsx-to-csv">
-<span class="md-ellipsis">
-      Conversion from XLSX to CSV
-    </span>
-</a>
-<nav aria-label="Conversion from XLSX to CSV" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#function-convert_xlsx_to_csv">
-<span class="md-ellipsis">
-      Function: convert_xlsx_to_csv
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#conversion-from-csv-to-xlsx">
-<span class="md-ellipsis">
-      Conversion from CSV to XLSX
-    </span>
-</a>
-<nav aria-label="Conversion from CSV to XLSX" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#function-convert_csv_to_xlsx">
-<span class="md-ellipsis">
-      Function: convert_csv_to_xlsx
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#requirements">
-<span class="md-ellipsis">
-      Requirements
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#installation">
-<span class="md-ellipsis">
-      Installation
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#conclusion">
-<span class="md-ellipsis">
-      Conclusion
-    </span>
-</a>
-</li>
-</ul>
-</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../automating-wandb-backups/">
@@ -604,32 +596,45 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#procedure">
+<a class="md-nav__link" href="#what-is-snake_case">
 <span class="md-ellipsis">
-      Procedure
-    </span>
-</a>
-<nav aria-label="Procedure" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#context">
-<span class="md-ellipsis">
-      Context
+      What is Snake_Case?
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#conversion-from-xlsx-to-csv">
+<a class="md-nav__link" href="#rules-for-snake_case-column-naming">
 <span class="md-ellipsis">
-      Conversion from XLSX to CSV
+      Rules for Snake_Case Column Naming
     </span>
 </a>
-<nav aria-label="Conversion from XLSX to CSV" class="md-nav">
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#examples">
+<span class="md-ellipsis">
+      Examples
+    </span>
+</a>
+<nav aria-label="Examples" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#function-convert_xlsx_to_csv">
+<a class="md-nav__link" href="#structured-data-csv-file">
 <span class="md-ellipsis">
-      Function: convert_xlsx_to_csv
+      Structured Data (CSV File)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#semi-structured-data-json-file">
+<span class="md-ellipsis">
+      Semi-Structured Data (JSON File)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#unstructured-data-text-with-metadata">
+<span class="md-ellipsis">
+      Unstructured Data (Text with Metadata)
     </span>
 </a>
 </li>
@@ -637,44 +642,23 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#conversion-from-csv-to-xlsx">
+<a class="md-nav__link" href="#common-column-names-in-mlai-projects">
 <span class="md-ellipsis">
-      Conversion from CSV to XLSX
-    </span>
-</a>
-<nav aria-label="Conversion from CSV to XLSX" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#function-convert_csv_to_xlsx">
-<span class="md-ellipsis">
-      Function: convert_csv_to_xlsx
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#requirements">
-<span class="md-ellipsis">
-      Requirements
+      Common Column Names in ML/AI Projects
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#installation">
+<a class="md-nav__link" href="#tips">
 <span class="md-ellipsis">
-      Installation
+      Tips
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#conclusion">
+<a class="md-nav__link" href="#common-mistakes-to-avoid">
 <span class="md-ellipsis">
-      Conclusion
+      Common Mistakes to Avoid
     </span>
 </a>
 </li>
@@ -685,151 +669,110 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="data-conversion-workflow-for-nlp-projects">Data Conversion Workflow for NLP Projects<a class="headerlink" href="#data-conversion-workflow-for-nlp-projects" title="Permanent link">¶</a></h1>
+<h1 id="column-naming-conventions-for-mlai-projects">Column Naming Conventions for ML/AI Projects<a class="headerlink" href="#column-naming-conventions-for-mlai-projects" title="Permanent link">¶</a></h1>
 <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">¶</a></h2>
-<p>This document outlines the process and provides the necessary Python
-functions for converting data files between XLSX and CSV formats within
-a Natural Language Processing (NLP) project. The workflow is designed to
-facilitate seamless data sharing and manipulation among non-technical
-stakeholders and machine learning (ML) experts, ensuring uniform
-encoding and formatting across different operating systems.</p>
-<h2 id="procedure">Procedure<a class="headerlink" href="#procedure" title="Permanent link">¶</a></h2>
-<h3 id="context">Context<a class="headerlink" href="#context" title="Permanent link">¶</a></h3>
-<p>Non-technical stakeholders often manually create and share data in XLSX
-format using Windows OS, without employing programming tools like
-Python. ML experts, on the other hand, utilize containers running Linux
-to manipulate this data with Python and incorporate it into the
-project's codebase. To ensure compatibility and uniformity in data
-handling, two Python functions have been developed for converting data
-files between XLSX and CSV formats.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This Guide works even if the developer uses Mac or Windows
-without Docker.</p>
-</div>
-<h3 id="conversion-from-xlsx-to-csv">Conversion from XLSX to CSV<a class="headerlink" href="#conversion-from-xlsx-to-csv" title="Permanent link">¶</a></h3>
-<p>When ML experts receive an XLSX file from business stakeholders, the
-following Python function should be executed in a Linux-based container
-to convert the file into a CSV format. This conversion ensures the data
-is encoded in UTF-8 and retains consistent formatting for use in the
-project's NLP codebase.</p>
-<h4 id="function-convert_xlsx_to_csv">Function: <code>convert_xlsx_to_csv</code><a class="headerlink" href="#function-convert_xlsx_to_csv" title="Permanent link">¶</a></h4>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="k">def</span> <span class="nf">convert_xlsx_to_csv</span><span class="p">(</span><span class="n">xlsx_path</span><span class="p">,</span> <span class="n">csv_path</span><span class="p">,</span> <span class="n">sheet_name</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
-<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">    </span><span class="sd">"""</span>
-<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="sd">    Converts an XLSX file to a CSV file with UTF-8 encoding.</span>
-<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a>
-<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="sd">    This function takes the path to an XLSX file and a destination path</span>
-<a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="sd">    for the CSV file as arguments. It optionally accepts the name or</span>
-<a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="sd">    index of the sheet to convert. It uses `pandas` to read the</span>
-<a href="#__codelineno-0-8" id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="sd">    specified sheet, ensuring all data is treated as strings</span>
-<a href="#__codelineno-0-9" id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="sd">    (`dtype=str`) to preserve formatting. It then fills any missing</span>
-<a href="#__codelineno-0-10" id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="sd">    values with empty strings to avoid the string 'nan' appearing in</span>
-<a href="#__codelineno-0-11" id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="sd">    your CSV. Finally, it writes the data to a CSV file, specifying</span>
-<a href="#__codelineno-0-12" id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="sd">    UTF-8 encoding and using `\n` as the line terminator to ensure</span>
-<a href="#__codelineno-0-13" id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="sd">    compatibility across different operating systems.</span>
-<a href="#__codelineno-0-14" id="__codelineno-0-14" name="__codelineno-0-14"></a>
-<a href="#__codelineno-0-15" id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="sd">    Parameters: - xlsx_path: Path to the source XLSX file.  - csv_path:</span>
-<a href="#__codelineno-0-16" id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="sd">    Path where the output CSV file should be saved.  - sheet_name: Name</span>
-<a href="#__codelineno-0-17" id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="sd">    or index of the sheet in the XLSX file to convert.</span>
-<a href="#__codelineno-0-18" id="__codelineno-0-18" name="__codelineno-0-18"></a><span class="sd">                  Defaults to the first sheet.</span>
-<a href="#__codelineno-0-19" id="__codelineno-0-19" name="__codelineno-0-19"></a><span class="sd">    """</span>
-<a href="#__codelineno-0-20" id="__codelineno-0-20" name="__codelineno-0-20"></a>    <span class="k">try</span><span class="p">:</span>
-<a href="#__codelineno-0-21" id="__codelineno-0-21" name="__codelineno-0-21"></a>        <span class="c1"># Load the specified sheet from the XLSX file</span>
-<a href="#__codelineno-0-22" id="__codelineno-0-22" name="__codelineno-0-22"></a>        <span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">xlsx_path</span><span class="p">,</span> <span class="n">sheet_name</span><span class="o">=</span><span class="n">sheet_name</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">str</span><span class="p">)</span>
-<a href="#__codelineno-0-23" id="__codelineno-0-23" name="__codelineno-0-23"></a>
-<a href="#__codelineno-0-24" id="__codelineno-0-24" name="__codelineno-0-24"></a>        <span class="c1"># Convert any NaN values to empty strings to avoid 'nan' in the CSV</span>
-<a href="#__codelineno-0-25" id="__codelineno-0-25" name="__codelineno-0-25"></a>        <span class="n">data</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="s2">""</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<a href="#__codelineno-0-26" id="__codelineno-0-26" name="__codelineno-0-26"></a>
-<a href="#__codelineno-0-27" id="__codelineno-0-27" name="__codelineno-0-27"></a>        <span class="c1"># Save the DataFrame to a CSV file with UTF-8 encoding</span>
-<a href="#__codelineno-0-28" id="__codelineno-0-28" name="__codelineno-0-28"></a>        <span class="n">data</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span>
-<a href="#__codelineno-0-29" id="__codelineno-0-29" name="__codelineno-0-29"></a>            <span class="n">csv_path</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">"utf-8"</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">lineterminator</span><span class="o">=</span><span class="s2">"</span><span class="se">\n</span><span class="s2">"</span>
-<a href="#__codelineno-0-30" id="__codelineno-0-30" name="__codelineno-0-30"></a>        <span class="p">)</span>
-<a href="#__codelineno-0-31" id="__codelineno-0-31" name="__codelineno-0-31"></a>
-<a href="#__codelineno-0-32" id="__codelineno-0-32" name="__codelineno-0-32"></a>        <span class="nb">print</span><span class="p">(</span>
-<a href="#__codelineno-0-33" id="__codelineno-0-33" name="__codelineno-0-33"></a>            <span class="sa">f</span><span class="s2">"Successfully converted </span><span class="si">{</span><span class="n">xlsx_path</span><span class="si">}</span><span class="s2"> to </span><span class="si">{</span><span class="n">csv_path</span><span class="si">}</span><span class="s2"> in UTF-8 encoding."</span>
-<a href="#__codelineno-0-34" id="__codelineno-0-34" name="__codelineno-0-34"></a>        <span class="p">)</span>
-<a href="#__codelineno-0-35" id="__codelineno-0-35" name="__codelineno-0-35"></a>    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
-<a href="#__codelineno-0-36" id="__codelineno-0-36" name="__codelineno-0-36"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Error converting </span><span class="si">{</span><span class="n">xlsx_path</span><span class="si">}</span><span class="s2"> to CSV: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<p>To maintain consistency and readability in our project, we use the
+"snake_case" naming convention for all column names in CSV, JSON, and
+other data files. This guide provides a set of rules and examples to
+help you name columns correctly, applicable to all types of data
+including structured, semi-structured, and unstructured data.</p>
+<h2 id="what-is-snake_case">What is Snake_Case?<a class="headerlink" href="#what-is-snake_case" title="Permanent link">¶</a></h2>
+<p>Snake_case is a naming convention where each word in a column name is
+lowercase and separated by underscores (<code>_</code>). This format is widely used
+in the Python ecosystem and ensures that column names are easily
+readable and consistent.</p>
+<h2 id="rules-for-snake_case-column-naming">Rules for Snake_Case Column Naming<a class="headerlink" href="#rules-for-snake_case-column-naming" title="Permanent link">¶</a></h2>
+<ol>
+<li><strong>Use Lowercase Letters</strong>: All letters should be in lowercase.</li>
+<li><strong>Separate Words with Underscores</strong>: Use underscores (<code>_</code>) to
+   separate words.</li>
+<li><strong>Be Descriptive</strong>: Column names should clearly indicate the contents
+   or purpose of the column.</li>
+<li><strong>Avoid Special Characters and Spaces</strong>: Do not use spaces, hyphens,
+   or any special characters other than underscores.</li>
+</ol>
+<h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">¶</a></h2>
+<h3 id="structured-data-csv-file">Structured Data (CSV File)<a class="headerlink" href="#structured-data-csv-file" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>user_id, age, gender, purchase_amount, purchase_date
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a>1, 34, "M", 45.67, "2023-05-12"
+<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a>2, 29, "F", 78.90, "2023-05-13"
 </code></pre></div>
-<p><strong>Parameters:</strong></p>
+<h3 id="semi-structured-data-json-file">Semi-Structured Data (JSON File)<a class="headerlink" href="#semi-structured-data-json-file" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="p">[</span>
+<a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="w">  </span><span class="p">{</span>
+<a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="w">    </span><span class="nt">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<a href="#__codelineno-1-4" id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="w">    </span><span class="nt">"age"</span><span class="p">:</span><span class="w"> </span><span class="mi">34</span><span class="p">,</span>
+<a href="#__codelineno-1-5" id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="w">    </span><span class="nt">"gender"</span><span class="p">:</span><span class="w"> </span><span class="s2">"M"</span><span class="p">,</span>
+<a href="#__codelineno-1-6" id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="w">    </span><span class="nt">"purchase_amount"</span><span class="p">:</span><span class="w"> </span><span class="mf">45.67</span><span class="p">,</span>
+<a href="#__codelineno-1-7" id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="w">    </span><span class="nt">"purchase_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2023-05-12"</span>
+<a href="#__codelineno-1-8" id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="w">  </span><span class="p">},</span>
+<a href="#__codelineno-1-9" id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="w">  </span><span class="p">{</span>
+<a href="#__codelineno-1-10" id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="w">    </span><span class="nt">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span>
+<a href="#__codelineno-1-11" id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="w">    </span><span class="nt">"age"</span><span class="p">:</span><span class="w"> </span><span class="mi">29</span><span class="p">,</span>
+<a href="#__codelineno-1-12" id="__codelineno-1-12" name="__codelineno-1-12"></a><span class="w">    </span><span class="nt">"gender"</span><span class="p">:</span><span class="w"> </span><span class="s2">"F"</span><span class="p">,</span>
+<a href="#__codelineno-1-13" id="__codelineno-1-13" name="__codelineno-1-13"></a><span class="w">    </span><span class="nt">"purchase_amount"</span><span class="p">:</span><span class="w"> </span><span class="mf">78.90</span><span class="p">,</span>
+<a href="#__codelineno-1-14" id="__codelineno-1-14" name="__codelineno-1-14"></a><span class="w">    </span><span class="nt">"purchase_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2023-05-13"</span>
+<a href="#__codelineno-1-15" id="__codelineno-1-15" name="__codelineno-1-15"></a><span class="w">  </span><span class="p">}</span>
+<a href="#__codelineno-1-16" id="__codelineno-1-16" name="__codelineno-1-16"></a><span class="p">]</span>
+</code></pre></div>
+<h3 id="unstructured-data-text-with-metadata">Unstructured Data (Text with Metadata)<a class="headerlink" href="#unstructured-data-text-with-metadata" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="p">{</span>
+<a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="w">  </span><span class="nt">"documents"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="w">    </span><span class="p">{</span>
+<a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="w">      </span><span class="nt">"doc_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"12345"</span><span class="p">,</span>
+<a href="#__codelineno-2-5" id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="w">      </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Analysis of Sales Data"</span><span class="p">,</span>
+<a href="#__codelineno-2-6" id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="w">      </span><span class="nt">"author"</span><span class="p">:</span><span class="w"> </span><span class="s2">"John Doe"</span><span class="p">,</span>
+<a href="#__codelineno-2-7" id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="w">      </span><span class="nt">"content"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The sales data for Q1 shows a significant increase in revenue."</span><span class="p">,</span>
+<a href="#__codelineno-2-8" id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="w">      </span><span class="nt">"timestamp"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2023-06-01T12:34:56Z"</span>
+<a href="#__codelineno-2-9" id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="w">    </span><span class="p">},</span>
+<a href="#__codelineno-2-10" id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="w">    </span><span class="p">{</span>
+<a href="#__codelineno-2-11" id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="w">      </span><span class="nt">"doc_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"12346"</span><span class="p">,</span>
+<a href="#__codelineno-2-12" id="__codelineno-2-12" name="__codelineno-2-12"></a><span class="w">      </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Customer Feedback Summary"</span><span class="p">,</span>
+<a href="#__codelineno-2-13" id="__codelineno-2-13" name="__codelineno-2-13"></a><span class="w">      </span><span class="nt">"author"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Jane Smith"</span><span class="p">,</span>
+<a href="#__codelineno-2-14" id="__codelineno-2-14" name="__codelineno-2-14"></a><span class="w">      </span><span class="nt">"content"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Customer feedback for Q1 has been overwhelmingly positive."</span><span class="p">,</span>
+<a href="#__codelineno-2-15" id="__codelineno-2-15" name="__codelineno-2-15"></a><span class="w">      </span><span class="nt">"timestamp"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2023-06-02T14:22:33Z"</span>
+<a href="#__codelineno-2-16" id="__codelineno-2-16" name="__codelineno-2-16"></a><span class="w">    </span><span class="p">}</span>
+<a href="#__codelineno-2-17" id="__codelineno-2-17" name="__codelineno-2-17"></a><span class="w">  </span><span class="p">]</span>
+<a href="#__codelineno-2-18" id="__codelineno-2-18" name="__codelineno-2-18"></a><span class="p">}</span>
+</code></pre></div>
+<h2 id="common-column-names-in-mlai-projects">Common Column Names in ML/AI Projects<a class="headerlink" href="#common-column-names-in-mlai-projects" title="Permanent link">¶</a></h2>
 <ul>
-<li><code>xlsx_path</code>: The file path to the source XLSX file.</li>
-<li><code>csv_path</code>: The file path where the output CSV file will be saved.</li>
-<li><code>sheet_name</code>: (Optional) The name or index of the sheet in the XLSX
-  file to be converted.</li>
+<li><code>user_id</code></li>
+<li><code>age</code></li>
+<li><code>gender</code></li>
+<li><code>purchase_amount</code></li>
+<li><code>purchase_date</code></li>
+<li><code>doc_id</code></li>
+<li><code>title</code></li>
+<li><code>author</code></li>
+<li><code>content</code></li>
+<li><code>timestamp</code></li>
 </ul>
-<p><strong>Usage:</strong></p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="n">convert_xlsx_to_csv</span><span class="p">(</span><span class="s1">'path/to/input.xlsx'</span><span class="p">,</span> <span class="s1">'path/to/output.csv'</span><span class="p">)</span>
-</code></pre></div>
-<h3 id="conversion-from-csv-to-xlsx">Conversion from CSV to XLSX<a class="headerlink" href="#conversion-from-csv-to-xlsx" title="Permanent link">¶</a></h3>
-<p>For sharing processed data back with non-technical stakeholders, ML
-experts can convert the CSV files (previously created or manipulated
-within the Linux containers) back into XLSX format. This conversion
-facilitates easy access and interpretation of the results by business
-users.</p>
-<h4 id="function-convert_csv_to_xlsx">Function: <code>convert_csv_to_xlsx</code><a class="headerlink" href="#function-convert_csv_to_xlsx" title="Permanent link">¶</a></h4>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a>
-<a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a>
-<a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="k">def</span> <span class="nf">convert_csv_to_xlsx</span><span class="p">(</span><span class="n">csv_path</span><span class="p">,</span> <span class="n">xlsx_path</span><span class="p">):</span>
-<a href="#__codelineno-2-5" id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="w">    </span><span class="sd">"""</span>
-<a href="#__codelineno-2-6" id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="sd">    Converts a CSV file to an XLSX file.</span>
-<a href="#__codelineno-2-7" id="__codelineno-2-7" name="__codelineno-2-7"></a>
-<a href="#__codelineno-2-8" id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="sd">    This function takes the path to a CSV file and the desired output</span>
-<a href="#__codelineno-2-9" id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="sd">    path for the XLSX file. It uses `pandas` to read the CSV file,</span>
-<a href="#__codelineno-2-10" id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="sd">    assuming it is encoded in UTF-8 (as ensured by the CSV creation</span>
-<a href="#__codelineno-2-11" id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="sd">    function). Then, it writes the data to an XLSX file using the</span>
-<a href="#__codelineno-2-12" id="__codelineno-2-12" name="__codelineno-2-12"></a><span class="sd">    `openpyxl` engine, which is required for writing to XLSX format and</span>
-<a href="#__codelineno-2-13" id="__codelineno-2-13" name="__codelineno-2-13"></a><span class="sd">    needs to be installed alongside `pandas` if it's not already present</span>
-<a href="#__codelineno-2-14" id="__codelineno-2-14" name="__codelineno-2-14"></a><span class="sd">    in your environment.</span>
-<a href="#__codelineno-2-15" id="__codelineno-2-15" name="__codelineno-2-15"></a>
-<a href="#__codelineno-2-16" id="__codelineno-2-16" name="__codelineno-2-16"></a><span class="sd">    Parameters:</span>
-<a href="#__codelineno-2-17" id="__codelineno-2-17" name="__codelineno-2-17"></a><span class="sd">    - csv_path: Path to the source CSV file.</span>
-<a href="#__codelineno-2-18" id="__codelineno-2-18" name="__codelineno-2-18"></a><span class="sd">    - xlsx_path: Path where the output XLSX file should be saved.</span>
-<a href="#__codelineno-2-19" id="__codelineno-2-19" name="__codelineno-2-19"></a><span class="sd">    """</span>
-<a href="#__codelineno-2-20" id="__codelineno-2-20" name="__codelineno-2-20"></a>    <span class="k">try</span><span class="p">:</span>
-<a href="#__codelineno-2-21" id="__codelineno-2-21" name="__codelineno-2-21"></a>        <span class="c1"># Load the CSV file, assuming UTF-8 encoding</span>
-<a href="#__codelineno-2-22" id="__codelineno-2-22" name="__codelineno-2-22"></a>        <span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">csv_path</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">"utf-8"</span><span class="p">)</span>
-<a href="#__codelineno-2-23" id="__codelineno-2-23" name="__codelineno-2-23"></a>
-<a href="#__codelineno-2-24" id="__codelineno-2-24" name="__codelineno-2-24"></a>        <span class="c1"># Save the DataFrame to an XLSX file</span>
-<a href="#__codelineno-2-25" id="__codelineno-2-25" name="__codelineno-2-25"></a>        <span class="k">with</span> <span class="n">pd</span><span class="o">.</span><span class="n">ExcelWriter</span><span class="p">(</span><span class="n">xlsx_path</span><span class="p">,</span> <span class="n">engine</span><span class="o">=</span><span class="s2">"openpyxl"</span><span class="p">)</span> <span class="k">as</span> <span class="n">writer</span><span class="p">:</span>
-<a href="#__codelineno-2-26" id="__codelineno-2-26" name="__codelineno-2-26"></a>            <span class="n">data</span><span class="o">.</span><span class="n">to_excel</span><span class="p">(</span><span class="n">writer</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-<a href="#__codelineno-2-27" id="__codelineno-2-27" name="__codelineno-2-27"></a>
-<a href="#__codelineno-2-28" id="__codelineno-2-28" name="__codelineno-2-28"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Successfully converted </span><span class="si">{</span><span class="n">csv_path</span><span class="si">}</span><span class="s2"> to </span><span class="si">{</span><span class="n">xlsx_path</span><span class="si">}</span><span class="s2">."</span><span class="p">)</span>
-<a href="#__codelineno-2-29" id="__codelineno-2-29" name="__codelineno-2-29"></a>    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
-<a href="#__codelineno-2-30" id="__codelineno-2-30" name="__codelineno-2-30"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Error converting </span><span class="si">{</span><span class="n">csv_path</span><span class="si">}</span><span class="s2"> to XLSX: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
-</code></pre></div>
-<p><strong>Parameters:</strong></p>
+<h2 id="tips">Tips<a class="headerlink" href="#tips" title="Permanent link">¶</a></h2>
 <ul>
-<li><code>csv_path</code>: The file path to the source CSV file.</li>
-<li><code>xlsx_path</code>: The file path where the output XLSX file will be saved.</li>
+<li><strong>Keep it Short and Simple</strong>: Aim for clarity but avoid overly long
+  column names.</li>
+<li><strong>Use Consistent Terminology</strong>: Use the same terms consistently across
+  different columns (e.g., <code>timestamp</code> vs. <code>date_time</code>).</li>
+<li><strong>Context-Specific Names</strong>: Tailor column names to the specific
+  context and requirements of your project.</li>
 </ul>
-<p><strong>Usage:</strong></p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="n">convert_csv_to_xlsx</span><span class="p">(</span><span class="s1">'path/to/input.csv'</span><span class="p">,</span> <span class="s1">'path/to/output.xlsx'</span><span class="p">)</span>
-</code></pre></div>
-<h2 id="requirements">Requirements<a class="headerlink" href="#requirements" title="Permanent link">¶</a></h2>
+<h2 id="common-mistakes-to-avoid">Common Mistakes to Avoid<a class="headerlink" href="#common-mistakes-to-avoid" title="Permanent link">¶</a></h2>
 <ul>
-<li>Python 3.x</li>
-<li>Pandas library</li>
-<li>Openpyxl library (for XLSX file writing)</li>
+<li><strong>Uppercase Letters</strong>: <code>UserID</code> (Incorrect)</li>
+<li><strong>Spaces</strong>: <code>user id</code> (Incorrect)</li>
+<li><strong>Hyphens</strong>: <code>user-id</code> (Incorrect)</li>
+<li><strong>Special Characters</strong>: <code>user@id!</code> (Incorrect)</li>
 </ul>
-<h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">¶</a></h2>
-<p>Ensure the required libraries are installed in your Linux container:</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a>pip<span class="w"> </span>install<span class="w"> </span>pandas<span class="w"> </span>openpyxl
-</code></pre></div>
-<h2 id="conclusion">Conclusion<a class="headerlink" href="#conclusion" title="Permanent link">¶</a></h2>
-<p>This procedure guide facilitates a smooth data exchange and processing
-workflow for NLP projects, bridging the gap between non-technical
-stakeholders and ML experts. By following the documented steps and
-utilizing the provided Python functions, teams can ensure data
-consistency, compatibility, and efficiency throughout the project
-lifecycle.</p>
+<p>By following these guidelines, we ensure that our column names are
+consistent, readable, and easy to work with in data processing and
+analysis tasks, regardless of the type of data.</p>
 <aside class="md-source-file">
 <span class="md-source-file__fact">
 <span class="md-icon" title="Last update">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 9, 2024</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 9, 2024</span>
 </span>
 </aside>
 </article>
