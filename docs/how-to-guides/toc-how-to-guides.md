@@ -11,8 +11,9 @@
 
 ## Table of Contents
 
-- [File Naming Conventions](./file-naming-conventions.md)
 - [Setting Up DVC for Efficient Data Management](./dvc-set-up.md)
+- [File Naming Conventions](./file-naming-conventions.md)
+- [Column Naming Conventions for ML/AI Projects](./column-naming-conventions.md)
 - [Facilitating Team Communication with DVC](./dvc-communication.md)
 - [Integrating DVC with VS Code for Enhanced Workflow](./dvc-vscode-extension.md)
 - [Creating Git Branches Following Best Practices](./git-branch-naming-standards.md)
