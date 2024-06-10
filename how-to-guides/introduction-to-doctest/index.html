@@ -5,10 +5,12 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="https://markeyser.github.io/cookiecutter-two-lanes/how-to-guides/metadata-integration-data-analysis/" rel="canonical"/>
+<link href="https://markeyser.github.io/cookiecutter-two-lanes/how-to-guides/introduction-to-doctest/" rel="canonical"/>
+<link href="../lifecycle-git-github/" rel="prev"/>
+<link href="../../explanation/toc-explanation/" rel="next"/>
 <link href="../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.5.3, mkdocs-material-9.5.4" name="generator"/>
-<title>Integrating Metadata with Data Analysis Tools - Cookiecutter Two Lanes</title>
+<title>Introduction to Doctest - Cookiecutter Two Lanes</title>
 <link href="../../assets/stylesheets/main.50c56a3b.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -33,7 +35,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#integrating-metadata-with-data-analysis-tools">
+<a class="md-skip" href="#introduction-to-testing-with-doctest-for-data-scientists">
           Skip to content
         </a>
 </div>
@@ -57,7 +59,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Integrating Metadata with Data Analysis Tools
+              Introduction to Doctest
             
           </span>
 </div>
@@ -243,15 +245,15 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
 <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
 <span class="md-ellipsis">
     How-To Guides
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="false" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<nav aria-expanded="true" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_3">
 <span class="md-nav__icon md-icon"></span>
             How-To Guides
@@ -439,12 +441,69 @@
   </span>
 </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../introduction-to-doctest/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    Introduction to Doctest
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
 <span class="md-ellipsis">
     Introduction to Doctest
   </span>
 </a>
+<nav aria-label="On this page" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#what-is-doctest">
+<span class="md-ellipsis">
+      What is Doctest?
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#why-use-doctest">
+<span class="md-ellipsis">
+      Why Use Doctest?
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#why-unit-testing-is-important">
+<span class="md-ellipsis">
+      Why Unit Testing is Important
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#doctest-for-simple-unit-tests">
+<span class="md-ellipsis">
+      Doctest for Simple Unit Tests
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#running-doctests">
+<span class="md-ellipsis">
+      Running Doctests
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#additional-resources">
+<span class="md-ellipsis">
+      Additional Resources
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -554,29 +613,46 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#step-by-step-guide-for-metadata-integration">
+<a class="md-nav__link" href="#what-is-doctest">
 <span class="md-ellipsis">
-      Step-by-Step Guide for Metadata Integration
+      What is Doctest?
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#collaborative-metadata-management">
+<a class="md-nav__link" href="#why-use-doctest">
 <span class="md-ellipsis">
-      Collaborative Metadata Management
-    </span>
-</a>
-<nav aria-label="Collaborative Metadata Management" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#strategies-for-team-based-metadata-handling">
-<span class="md-ellipsis">
-      Strategies for Team-Based Metadata Handling
+      Why Use Doctest?
     </span>
 </a>
 </li>
-</ul>
-</nav>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#why-unit-testing-is-important">
+<span class="md-ellipsis">
+      Why Unit Testing is Important
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#doctest-for-simple-unit-tests">
+<span class="md-ellipsis">
+      Doctest for Simple Unit Tests
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#running-doctests">
+<span class="md-ellipsis">
+      Running Doctests
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#additional-resources">
+<span class="md-ellipsis">
+      Additional Resources
+    </span>
+</a>
 </li>
 </ul>
 </nav>
@@ -585,114 +661,99 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="integrating-metadata-with-data-analysis-tools">Integrating Metadata with Data Analysis Tools<a class="headerlink" href="#integrating-metadata-with-data-analysis-tools" title="Permanent link">¶</a></h1>
-<h2 id="step-by-step-guide-for-metadata-integration">Step-by-Step Guide for Metadata Integration<a class="headerlink" href="#step-by-step-guide-for-metadata-integration" title="Permanent link">¶</a></h2>
-<ol>
-<li>
-<p><strong>Selection of Tools</strong>: Choose data analysis tools compatible with your metadata format (e.g., Python libraries for JSON/XML).</p>
-</li>
-<li>
-<p><strong>Metadata Reading</strong>: Develop scripts or use built-in functions to read metadata into your analysis environment.</p>
-</li>
-<li>
-<p><strong>Linking Data and Metadata</strong>: Ensure a seamless connection between metadata and the corresponding data sets.</p>
-</li>
-<li>
-<p><strong>Utilizing Metadata in Analysis</strong>: Use metadata to inform data preprocessing, analysis choices, and interpretation.</p>
-</li>
-<li>
-<p><strong>Metadata-Driven Workflows</strong>: Create workflows where metadata dictates certain analysis paths or decisions.</p>
-</li>
-<li>
-<p><strong>Updating Metadata Post-Analysis</strong>: After analysis, update metadata to include new insights or derived data characteristics.</p>
-</li>
-<li>
-<p><strong>Version Control</strong>: Use version control systems to track changes in both data and metadata.</p>
-</li>
-<li>
-<p><strong>Collaboration</strong>: Share metadata along with data among team members to ensure consistent understanding and analysis approaches.</p>
-</li>
-<li>
-<p><strong>Documentation of Process</strong>: Document how metadata is used in the analysis process, enhancing reproducibility.</p>
-</li>
-<li>
-<p><strong>Feedback Loop</strong>: Establish a feedback mechanism to continually improve metadata usage in data analysis.</p>
-</li>
-</ol>
-<div class="highlight"><span class="filename">Example: Python Script for Metadata Integration</span><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="kn">import</span> <span class="nn">json</span>
-<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+<h1 id="introduction-to-testing-with-doctest-for-data-scientists">Introduction to Testing with Doctest for Data Scientists<a class="headerlink" href="#introduction-to-testing-with-doctest-for-data-scientists" title="Permanent link">¶</a></h1>
+<p>This guide introduces you to <code>doctest</code>, a simple and effective tool for
+testing and documenting your Python code. As a team of data scientists,
+you might not have extensive coding experience, but <code>doctest</code> provides a
+straightforward way to ensure your code works as expected while also
+serving as a form of documentation.</p>
+<h2 id="what-is-doctest">What is Doctest?<a class="headerlink" href="#what-is-doctest" title="Permanent link">¶</a></h2>
+<p><code>doctest</code> is a module included in the Python standard library that
+allows you to test your code by running examples embedded in the
+documentation and verifying that they produce the expected results. This
+approach helps to ensure that your code works as documented.</p>
+<h2 id="why-use-doctest">Why Use Doctest?<a class="headerlink" href="#why-use-doctest" title="Permanent link">¶</a></h2>
+<ul>
+<li><strong>Ease of Use</strong>: <code>doctest</code> is simple to set up and use, making it an
+  excellent starting point for those new to testing.</li>
+<li><strong>Documentation</strong>: Tests written with <code>doctest</code> serve as both test
+  cases and examples of how to use your functions, improving code
+  readability and usability.</li>
+<li><strong>Immediate Feedback</strong>: Running <code>doctest</code> provides immediate feedback
+  on whether your code is working as expected.</li>
+</ul>
+<h2 id="why-unit-testing-is-important">Why Unit Testing is Important<a class="headerlink" href="#why-unit-testing-is-important" title="Permanent link">¶</a></h2>
+<p>Even though libraries like pandas, scikit-learn, and TensorFlow are
+well-tested and reliable, it’s crucial to unit test your custom code. In
+machine learning projects, custom code often includes data
+preprocessing, feature engineering, model evaluation, and utility
+functions. Ensuring the correctness of this code is vital for the
+accuracy and reliability of your models. Unit testing helps catch errors
+early, facilitates code maintenance, and promotes confidence in your
+code’s functionality.</p>
+<p>As a data scientist, testing your code before opening a pull request
+(PR) and merging it into the production branch is critical. This
+practice is especially important in projects like Retrieval-Augmented
+Generation (RAG) systems, where data scientists are expected to
+contribute to production code from the very beginning. Unlike
+traditional machine learning projects, RAG systems require seamless
+integration of custom code into the production environment, making
+thorough testing essential to prevent potential issues and ensure smooth
+operation.</p>
+<p>By incorporating unit testing into your workflow, you ensure that your
+contributions are reliable and maintain the integrity of the overall
+project. This not only enhances the quality of your code but also
+promotes collaborative development, where team members can confidently
+build upon each other's work.</p>
+<h2 id="doctest-for-simple-unit-tests">Doctest for Simple Unit Tests<a class="headerlink" href="#doctest-for-simple-unit-tests" title="Permanent link">¶</a></h2>
+<p>Here's an example of how to use doctest with Google-style docstrings:</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">    </span><span class="sd">"""</span>
+<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="sd">    Adds two numbers together.</span>
 <a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a>
-<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="k">def</span> <span class="nf">generate_metadata</span><span class="p">(</span><span class="n">csv_file_path</span><span class="p">):</span>
-<a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a>    <span class="c1"># Read the CSV file</span>
-<a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a>    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">csv_file_path</span><span class="p">)</span>
+<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="sd">    Args:</span>
+<a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="sd">        a (int): The first number.</span>
+<a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="sd">        b (int): The second number.</span>
 <a href="#__codelineno-0-8" id="__codelineno-0-8" name="__codelineno-0-8"></a>
-<a href="#__codelineno-0-9" id="__codelineno-0-9" name="__codelineno-0-9"></a>    <span class="c1"># Extracting information</span>
-<a href="#__codelineno-0-10" id="__codelineno-0-10" name="__codelineno-0-10"></a>    <span class="n">file_name</span> <span class="o">=</span> <span class="n">csv_file_path</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">'/'</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
-<a href="#__codelineno-0-11" id="__codelineno-0-11" name="__codelineno-0-11"></a>    <span class="n">creation_date</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">"%Y-%m-</span><span class="si">%d</span><span class="s2">"</span><span class="p">)</span>
-<a href="#__codelineno-0-12" id="__codelineno-0-12" name="__codelineno-0-12"></a>    <span class="n">number_of_rows</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-<a href="#__codelineno-0-13" id="__codelineno-0-13" name="__codelineno-0-13"></a>    <span class="n">number_of_columns</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
-<a href="#__codelineno-0-14" id="__codelineno-0-14" name="__codelineno-0-14"></a>    <span class="n">columns</span> <span class="o">=</span> <span class="p">[{</span><span class="s2">"name"</span><span class="p">:</span> <span class="n">col</span><span class="p">,</span> <span class="s2">"type"</span><span class="p">:</span> <span class="nb">str</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">dtype</span><span class="p">)}</span> <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">]</span>
-<a href="#__codelineno-0-15" id="__codelineno-0-15" name="__codelineno-0-15"></a>
-<a href="#__codelineno-0-16" id="__codelineno-0-16" name="__codelineno-0-16"></a>    <span class="c1"># Metadata dictionary</span>
-<a href="#__codelineno-0-17" id="__codelineno-0-17" name="__codelineno-0-17"></a>    <span class="n">metadata</span> <span class="o">=</span> <span class="p">{</span>
-<a href="#__codelineno-0-18" id="__codelineno-0-18" name="__codelineno-0-18"></a>        <span class="s2">"file_name"</span><span class="p">:</span> <span class="n">file_name</span><span class="p">,</span>
-<a href="#__codelineno-0-19" id="__codelineno-0-19" name="__codelineno-0-19"></a>        <span class="s2">"creation_date"</span><span class="p">:</span> <span class="n">creation_date</span><span class="p">,</span>
-<a href="#__codelineno-0-20" id="__codelineno-0-20" name="__codelineno-0-20"></a>        <span class="s2">"source"</span><span class="p">:</span> <span class="s2">"Specify the data source"</span><span class="p">,</span>
-<a href="#__codelineno-0-21" id="__codelineno-0-21" name="__codelineno-0-21"></a>        <span class="s2">"number_of_rows"</span><span class="p">:</span> <span class="n">number_of_rows</span><span class="p">,</span>
-<a href="#__codelineno-0-22" id="__codelineno-0-22" name="__codelineno-0-22"></a>        <span class="s2">"number_of_columns"</span><span class="p">:</span> <span class="n">number_of_columns</span><span class="p">,</span>
-<a href="#__codelineno-0-23" id="__codelineno-0-23" name="__codelineno-0-23"></a>        <span class="s2">"columns"</span><span class="p">:</span> <span class="n">columns</span><span class="p">,</span>
-<a href="#__codelineno-0-24" id="__codelineno-0-24" name="__codelineno-0-24"></a>        <span class="s2">"preprocessing"</span><span class="p">:</span> <span class="p">[],</span>  <span class="c1"># Add any preprocessing steps manually or through code</span>
-<a href="#__codelineno-0-25" id="__codelineno-0-25" name="__codelineno-0-25"></a>        <span class="s2">"notes"</span><span class="p">:</span> <span class="s2">"Add any additional notes here"</span>
-<a href="#__codelineno-0-26" id="__codelineno-0-26" name="__codelineno-0-26"></a>    <span class="p">}</span>
-<a href="#__codelineno-0-27" id="__codelineno-0-27" name="__codelineno-0-27"></a>
-<a href="#__codelineno-0-28" id="__codelineno-0-28" name="__codelineno-0-28"></a>    <span class="c1"># Saving metadata to a JSON file</span>
-<a href="#__codelineno-0-29" id="__codelineno-0-29" name="__codelineno-0-29"></a>    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">file_name</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">'.csv'</span><span class="p">,</span> <span class="s1">'_metadata.json'</span><span class="p">),</span> <span class="s1">'w'</span><span class="p">)</span> <span class="k">as</span> <span class="n">json_file</span><span class="p">:</span>
-<a href="#__codelineno-0-30" id="__codelineno-0-30" name="__codelineno-0-30"></a>        <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">metadata</span><span class="p">,</span> <span class="n">json_file</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
-<a href="#__codelineno-0-31" id="__codelineno-0-31" name="__codelineno-0-31"></a>
-<a href="#__codelineno-0-32" id="__codelineno-0-32" name="__codelineno-0-32"></a><span class="c1"># Example usage</span>
-<a href="#__codelineno-0-33" id="__codelineno-0-33" name="__codelineno-0-33"></a><span class="n">generate_metadata</span><span class="p">(</span><span class="s1">'path/to/your/sales_data.csv'</span><span class="p">)</span>
+<a href="#__codelineno-0-9" id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="sd">    Returns:</span>
+<a href="#__codelineno-0-10" id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="sd">        int: The sum of the two numbers.</span>
+<a href="#__codelineno-0-11" id="__codelineno-0-11" name="__codelineno-0-11"></a>
+<a href="#__codelineno-0-12" id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="sd">    Example:</span>
+<a href="#__codelineno-0-13" id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="sd">        &gt;&gt;&gt; add(2, 3)</span>
+<a href="#__codelineno-0-14" id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="sd">        5</span>
+<a href="#__codelineno-0-15" id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="sd">        &gt;&gt;&gt; add(-1, 1)</span>
+<a href="#__codelineno-0-16" id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="sd">        0</span>
+<a href="#__codelineno-0-17" id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="sd">        &gt;&gt;&gt; add(0, 0)</span>
+<a href="#__codelineno-0-18" id="__codelineno-0-18" name="__codelineno-0-18"></a><span class="sd">        0</span>
+<a href="#__codelineno-0-19" id="__codelineno-0-19" name="__codelineno-0-19"></a><span class="sd">    """</span>
+<a href="#__codelineno-0-20" id="__codelineno-0-20" name="__codelineno-0-20"></a>    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
 </code></pre></div>
-<h2 id="collaborative-metadata-management">Collaborative Metadata Management<a class="headerlink" href="#collaborative-metadata-management" title="Permanent link">¶</a></h2>
-<h3 id="strategies-for-team-based-metadata-handling">Strategies for Team-Based Metadata Handling<a class="headerlink" href="#strategies-for-team-based-metadata-handling" title="Permanent link">¶</a></h3>
-<ol>
-<li>
-<p><strong>Centralized Metadata Repository</strong>: Establish a central repository for metadata, accessible to all team members.</p>
-</li>
-<li>
-<p><strong>Standardization of Formats</strong>: Agree on standardized metadata formats to ensure consistency across different datasets.</p>
-</li>
-<li>
-<p><strong>Regular Updates and Reviews</strong>: Implement a schedule for regular metadata updates and reviews by team members.</p>
-</li>
-<li>
-<p><strong>Role-Based Access</strong>: Define roles and corresponding access levels for different team members in the metadata repository.</p>
-</li>
-<li>
-<p><strong>Integration with Collaboration Tools</strong>: Integrate metadata management with existing collaboration tools (e.g., version control systems, project management software).</p>
-</li>
-<li>
-<p><strong>Training Sessions</strong>: Conduct training sessions to familiarize team members with metadata standards and tools.</p>
-</li>
-<li>
-<p><strong>Feedback Mechanisms</strong>: Implement mechanisms for team members to provide feedback on metadata usage and management.</p>
-</li>
-<li>
-<p><strong>Audit Trails</strong>: Maintain audit trails for metadata changes to track modifications and the responsible parties.</p>
-</li>
-<li>
-<p><strong>Continuous Improvement</strong>: Regularly evaluate and improve the metadata management process based on team feedback and changing project needs.</p>
-</li>
-<li>
-<p><strong>Best Practices Documentation</strong>: Document best practices for metadata management and ensure they are readily accessible to the team.</p>
-</li>
-</ol>
+<h2 id="running-doctests">Running Doctests<a class="headerlink" href="#running-doctests" title="Permanent link">¶</a></h2>
+<p>To run the doctests in your module, use the following command:</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a>python<span class="w"> </span>-m<span class="w"> </span>doctest<span class="w"> </span>-v<span class="w"> </span>your_module.py
+</code></pre></div>
+<h2 id="additional-resources">Additional Resources<a class="headerlink" href="#additional-resources" title="Permanent link">¶</a></h2>
+<p>For further learning on testing in Python, including more advanced
+techniques, consider the following resources:</p>
+<ul>
+<li><a href="https://www.datacamp.com/courses/introduction-to-testing-in-python">Introduction to Testing in Python -
+  DataCamp</a></li>
+<li><a href="https://realpython.com/python-testing/">Python Testing - Real Python</a></li>
+<li><a href="https://realpython.com/python-unittest/">Python Unit Testing - Real
+  Python</a></li>
+<li><a href="https://www.datacamp.com/tutorial/unit-testing-python">Unit Testing in Python -
+  DataCamp</a></li>
+</ul>
+<p>By following this guide and incorporating doctest into your development
+workflow, you can ensure that your code is well-documented, tested, and
+reliable. This foundational practice will help you and your team produce
+high-quality, maintainable machine learning projects.</p>
 <aside class="md-source-file">
 <span class="md-source-file__fact">
 <span class="md-icon" title="Last update">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 29, 2024</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 10, 2024</span>
 </span>
 </aside>
 </article>

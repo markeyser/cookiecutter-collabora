@@ -116,6 +116,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://markeyser.github.io/cookiecutter-two-lanes/how-to-guides/introduction-to-doctest/</loc>
+         <lastmod>2024-06-10</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://markeyser.github.io/cookiecutter-two-lanes/how-to-guides/jupyter-vscode-directory/</loc>
          <lastmod>2024-06-10</lastmod>
          <changefreq>daily</changefreq>
