@@ -5,12 +5,12 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="https://markeyser.github.io/cookiecutter-two-lanes/how-to-guides/toc-how-to-guides/" rel="canonical"/>
-<link href="../../tutorials/markdown-ml-model-documentation/" rel="prev"/>
-<link href="../project-scaffolding-standards/" rel="next"/>
+<link href="https://markeyser.github.io/cookiecutter-two-lanes/how-to-guides/code-review-best-practices/" rel="canonical"/>
+<link href="../python-oop-for-ml/" rel="prev"/>
+<link href="../../explanation/toc-explanation/" rel="next"/>
 <link href="../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.5.3, mkdocs-material-9.5.4" name="generator"/>
-<title>TOC - Cookiecutter Two Lanes</title>
+<title>Code Review Best Practices - Cookiecutter Two Lanes</title>
 <link href="../../assets/stylesheets/main.50c56a3b.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -35,7 +35,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#how-to-guides">
+<a class="md-skip" href="#guide-to-code-review-in-machine-learning-projects">
           Skip to content
         </a>
 </div>
@@ -59,7 +59,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              TOC
+              Code Review Best Practices
             
           </span>
 </div>
@@ -259,41 +259,12 @@
             How-To Guides
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-<span class="md-ellipsis">
-    TOC
-  </span>
-<span class="md-nav__icon md-icon"></span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="./">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../toc-how-to-guides/">
 <span class="md-ellipsis">
     TOC
   </span>
 </a>
-<nav aria-label="On this page" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      On this page
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#purpose">
-<span class="md-ellipsis">
-      Purpose
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#table-of-contents">
-<span class="md-ellipsis">
-      Table of Contents
-    </span>
-</a>
-</li>
-</ul>
-</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../project-scaffolding-standards/">
@@ -484,12 +455,179 @@
   </span>
 </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../code-review-best-practices/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    Code Review Best Practices
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
 <span class="md-ellipsis">
     Code Review Best Practices
   </span>
 </a>
+<nav aria-label="On this page" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#introduction">
+<span class="md-ellipsis">
+      Introduction
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#prerequisites">
+<span class="md-ellipsis">
+      Prerequisites
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#importance-and-personal-benefits">
+<span class="md-ellipsis">
+      Importance and Personal Benefits
+    </span>
+</a>
+<nav aria-label="Importance and Personal Benefits" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#quality-assurance">
+<span class="md-ellipsis">
+      Quality Assurance
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#documentation-and-readability">
+<span class="md-ellipsis">
+      Documentation and Readability
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#style-enforcement">
+<span class="md-ellipsis">
+      Style Enforcement
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#group-knowledge-and-cohesion">
+<span class="md-ellipsis">
+      Group Knowledge and Cohesion
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#recommendations-and-best-practices">
+<span class="md-ellipsis">
+      Recommendations and Best Practices
+    </span>
+</a>
+<nav aria-label="Recommendations and Best Practices" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#who-reviews">
+<span class="md-ellipsis">
+      Who Reviews?
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#be-nice-and-collaborative">
+<span class="md-ellipsis">
+      Be Nice and Collaborative
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#objective-and-clear-feedback">
+<span class="md-ellipsis">
+      Objective and Clear Feedback
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#review-in-small-chunks">
+<span class="md-ellipsis">
+      Review in Small Chunks
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#typical-workflows">
+<span class="md-ellipsis">
+      Typical Workflows
+    </span>
+</a>
+<nav aria-label="Typical Workflows" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#formal-vs-informal-reviews">
+<span class="md-ellipsis">
+      Formal vs. Informal Reviews
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#prepare-the-code">
+<span class="md-ellipsis">
+      Prepare the Code
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#propose-changes-and-create-a-review">
+<span class="md-ellipsis">
+      Propose Changes and Create a Review
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#discuss-and-implement-feedback">
+<span class="md-ellipsis">
+      Discuss and Implement Feedback
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#communicate-results-and-merge-changes">
+<span class="md-ellipsis">
+      Communicate Results and Merge Changes
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#resources">
+<span class="md-ellipsis">
+      Resources
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#conclusion">
+<span class="md-ellipsis">
+      Conclusion
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -599,16 +737,154 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#purpose">
+<a class="md-nav__link" href="#introduction">
 <span class="md-ellipsis">
-      Purpose
+      Introduction
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#table-of-contents">
+<a class="md-nav__link" href="#prerequisites">
 <span class="md-ellipsis">
-      Table of Contents
+      Prerequisites
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#importance-and-personal-benefits">
+<span class="md-ellipsis">
+      Importance and Personal Benefits
+    </span>
+</a>
+<nav aria-label="Importance and Personal Benefits" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#quality-assurance">
+<span class="md-ellipsis">
+      Quality Assurance
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#documentation-and-readability">
+<span class="md-ellipsis">
+      Documentation and Readability
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#style-enforcement">
+<span class="md-ellipsis">
+      Style Enforcement
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#group-knowledge-and-cohesion">
+<span class="md-ellipsis">
+      Group Knowledge and Cohesion
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#recommendations-and-best-practices">
+<span class="md-ellipsis">
+      Recommendations and Best Practices
+    </span>
+</a>
+<nav aria-label="Recommendations and Best Practices" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#who-reviews">
+<span class="md-ellipsis">
+      Who Reviews?
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#be-nice-and-collaborative">
+<span class="md-ellipsis">
+      Be Nice and Collaborative
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#objective-and-clear-feedback">
+<span class="md-ellipsis">
+      Objective and Clear Feedback
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#review-in-small-chunks">
+<span class="md-ellipsis">
+      Review in Small Chunks
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#typical-workflows">
+<span class="md-ellipsis">
+      Typical Workflows
+    </span>
+</a>
+<nav aria-label="Typical Workflows" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#formal-vs-informal-reviews">
+<span class="md-ellipsis">
+      Formal vs. Informal Reviews
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#prepare-the-code">
+<span class="md-ellipsis">
+      Prepare the Code
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#propose-changes-and-create-a-review">
+<span class="md-ellipsis">
+      Propose Changes and Create a Review
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#discuss-and-implement-feedback">
+<span class="md-ellipsis">
+      Discuss and Implement Feedback
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#communicate-results-and-merge-changes">
+<span class="md-ellipsis">
+      Communicate Results and Merge Changes
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#resources">
+<span class="md-ellipsis">
+      Resources
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#conclusion">
+<span class="md-ellipsis">
+      Conclusion
     </span>
 </a>
 </li>
@@ -619,50 +895,123 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="how-to-guides">How-To Guides<a class="headerlink" href="#how-to-guides" title="Permanent link">¶</a></h1>
-<div class="admonition info">
-<p class="admonition-title">About This Section</p>
-<p>The How-To Guides section is a repository of <strong>in-depth, practical guides</strong> for specific tasks within Python projects and broader software development workflows. Each guide delivers concise, step-by-step directions designed to tackle particular challenges, ranging from initial setups to complex processes.</p>
-</div>
-<h2 id="purpose">Purpose<a class="headerlink" href="#purpose" title="Permanent link">¶</a></h2>
+<h1 id="guide-to-code-review-in-machine-learning-projects">Guide to Code Review in Machine Learning Projects<a class="headerlink" href="#guide-to-code-review-in-machine-learning-projects" title="Permanent link">¶</a></h1>
+<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">¶</a></h2>
+<p>Code reviews are a crucial part of maintaining high-quality,
+reproducible, and collaborative codebases in machine learning (ML)
+projects. Despite the robustness of libraries such as pandas,
+scikit-learn, and TensorFlow, custom code written for data
+preprocessing, feature engineering, model evaluation, and utility
+functions must be rigorously tested and reviewed. This guide summarizes
+best practices for code reviews, emphasizing the importance of a
+third-party review for maintaining code integrity in a production
+environment.</p>
+<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">¶</a></h2>
+<p>Before diving into code reviews, ensure you have a solid understanding
+of version control, particularly how GitHub arranges its branches,
+forks, and pull requests within repositories. This knowledge is
+essential for effectively managing code contributions and reviews.</p>
+<h2 id="importance-and-personal-benefits">Importance and Personal Benefits<a class="headerlink" href="#importance-and-personal-benefits" title="Permanent link">¶</a></h2>
+<h3 id="quality-assurance">Quality Assurance<a class="headerlink" href="#quality-assurance" title="Permanent link">¶</a></h3>
+<p>Code reviews provide an additional layer of quality assurance beyond
+automated tests. They help identify and correct errors that might have
+been overlooked by the original author. According to McConnell (2004),
+unit testing finds approximately 25% of defects, function testing 35%,
+integration testing 45%, and code review 55-60%. While no single method
+is sufficient on its own, combining these approaches, including code
+reviews, is crucial for maintaining high-quality software.</p>
+<h3 id="documentation-and-readability">Documentation and Readability<a class="headerlink" href="#documentation-and-readability" title="Permanent link">¶</a></h3>
+<p>Code reviews also help ensure that documentation is clear and adequate.
+They provide a fresh perspective on whether the documentation is
+comprehensive enough for new users. Additionally, reviews improve code
+readability, making it easier for other developers to understand and
+build upon the code.</p>
+<h3 id="style-enforcement">Style Enforcement<a class="headerlink" href="#style-enforcement" title="Permanent link">¶</a></h3>
+<p>Code reviews ensure that all code adheres to the project's style
+guidelines, whether they are widely adopted standards like PEP8 or
+project-specific conventions. This consistency enhances the overall
+quality and maintainability of the codebase.</p>
+<h3 id="group-knowledge-and-cohesion">Group Knowledge and Cohesion<a class="headerlink" href="#group-knowledge-and-cohesion" title="Permanent link">¶</a></h3>
+<p>Reviews facilitate knowledge sharing and collaboration among team
+members. They promote a collective understanding of the codebase and
+help newcomers integrate more effectively. Good reviews also foster a
+sense of community and cohesion within the team.</p>
+<h2 id="recommendations-and-best-practices">Recommendations and Best Practices<a class="headerlink" href="#recommendations-and-best-practices" title="Permanent link">¶</a></h2>
+<h3 id="who-reviews">Who Reviews?<a class="headerlink" href="#who-reviews" title="Permanent link">¶</a></h3>
+<p>For small-scale projects, the coder can tag someone within the group as
+the reviewer. For larger projects, established rules for reviewer
+allocation help balance the workload and maximize the benefits of the
+review process. Ensure that reviewers have sufficient knowledge of the
+changes they are reviewing to provide valuable feedback.</p>
+<h3 id="be-nice-and-collaborative">Be Nice and Collaborative<a class="headerlink" href="#be-nice-and-collaborative" title="Permanent link">¶</a></h3>
+<p>Always assume good faith and be constructive in your feedback. Code
+reviews should be a collaborative process where reviewers and authors
+work together to improve the code. Open and respectful communication is
+key to effective reviews.</p>
+<h3 id="objective-and-clear-feedback">Objective and Clear Feedback<a class="headerlink" href="#objective-and-clear-feedback" title="Permanent link">¶</a></h3>
+<p>Strive to provide objective feedback based on documented project
+standards. Distinguish between crucial changes and optional suggestions.
+Use clear language to specify the importance of each comment, helping
+the author prioritize their responses.</p>
+<h3 id="review-in-small-chunks">Review in Small Chunks<a class="headerlink" href="#review-in-small-chunks" title="Permanent link">¶</a></h3>
+<p>Reviewing small, incremental changes is more effective than tackling
+large, monolithic pull requests. This approach makes it easier to catch
+mistakes early and ensures a smoother review process.</p>
+<h2 id="typical-workflows">Typical Workflows<a class="headerlink" href="#typical-workflows" title="Permanent link">¶</a></h2>
+<h3 id="formal-vs-informal-reviews">Formal vs. Informal Reviews<a class="headerlink" href="#formal-vs-informal-reviews" title="Permanent link">¶</a></h3>
+<p>Both formal and informal code reviews are valuable. Formal reviews often
+occur within structured environments like GitHub, where pull requests
+and review comments are tracked systematically. Informal reviews, such
+as over-the-shoulder peer reviews, can complement formal processes by
+catching issues early.</p>
+<h3 id="prepare-the-code">Prepare the Code<a class="headerlink" href="#prepare-the-code" title="Permanent link">¶</a></h3>
+<p>Before requesting a review, ensure your code meets the project's quality
+benchmarks. This includes adhering to style guides, passing all tests,
+and providing adequate documentation.</p>
+<h3 id="propose-changes-and-create-a-review">Propose Changes and Create a Review<a class="headerlink" href="#propose-changes-and-create-a-review" title="Permanent link">¶</a></h3>
+<p>In GitHub, start the review process by creating a pull request. This
+allows reviewers to provide general and line-by-line comments,
+facilitating detailed discussions about the proposed changes.</p>
+<h3 id="discuss-and-implement-feedback">Discuss and Implement Feedback<a class="headerlink" href="#discuss-and-implement-feedback" title="Permanent link">¶</a></h3>
+<p>Engage in constructive discussions to address reviewer comments. Once
+all feedback is addressed, the reviewer can approve the changes, and the
+pull request can be merged.</p>
+<h3 id="communicate-results-and-merge-changes">Communicate Results and Merge Changes<a class="headerlink" href="#communicate-results-and-merge-changes" title="Permanent link">¶</a></h3>
+<p>Use GitHub's commenting features to provide detailed feedback. Once the
+review is complete, merge the changes according to the project's
+guidelines.</p>
+<h2 id="resources">Resources<a class="headerlink" href="#resources" title="Permanent link">¶</a></h2>
+<p>For further reading and a deeper understanding of code review processes,
+refer to the following resources:</p>
 <ul>
-<li><span class="twemoji"><svg viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M5.433 2.304A4.492 4.492 0 0 0 3.5 6c0 1.598.832 3.002 2.09 3.802.518.328.929.923.902 1.64v.008l-.164 3.337a.75.75 0 1 1-1.498-.073l.163-3.33c.002-.085-.05-.216-.207-.316A5.996 5.996 0 0 1 2 6a5.993 5.993 0 0 1 2.567-4.92 1.482 1.482 0 0 1 1.673-.04c.462.296.76.827.76 1.423v2.82c0 .082.041.16.11.206l.75.51a.25.25 0 0 0 .28 0l.75-.51A.249.249 0 0 0 9 5.282V2.463c0-.596.298-1.127.76-1.423a1.482 1.482 0 0 1 1.673.04A5.993 5.993 0 0 1 14 6a5.996 5.996 0 0 1-2.786 5.068c-.157.1-.209.23-.207.315l.163 3.33a.752.752 0 0 1-1.094.714.75.75 0 0 1-.404-.64l-.164-3.345c-.027-.717.384-1.312.902-1.64A4.495 4.495 0 0 0 12.5 6a4.492 4.492 0 0 0-1.933-3.696c-.024.017-.067.067-.067.16v2.818a1.75 1.75 0 0 1-.767 1.448l-.75.51a1.75 1.75 0 0 1-1.966 0l-.75-.51A1.75 1.75 0 0 1 5.5 5.282V2.463c0-.092-.043-.142-.067-.159Z"></path></svg></span> <strong>Targeted Instruction:</strong> The guides are crafted to deliver straightforward, actionable steps for distinct development hurdles.</li>
-<li><span class="twemoji"><svg viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M5 5.782V2.5h-.25a.75.75 0 0 1 0-1.5h6.5a.75.75 0 0 1 0 1.5H11v3.282l3.666 5.76C15.619 13.04 14.543 15 12.767 15H3.233c-1.776 0-2.852-1.96-1.899-3.458Zm-2.4 6.565a.75.75 0 0 0 .633 1.153h9.534a.75.75 0 0 0 .633-1.153L12.225 10.5h-8.45ZM9.5 2.5h-3V6c0 .143-.04.283-.117.403L4.73 9h6.54L9.617 6.403A.746.746 0 0 1 9.5 6Z"></path></svg></span> <strong>Comprehensive Topic Coverage:</strong> Encompassing a spectrum of subjects, from fundamental configurations to intricate enhancements.</li>
-<li><span class="twemoji"><svg viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M1.75 16A1.75 1.75 0 0 1 0 14.25V1.75C0 .784.784 0 1.75 0h8.5C11.216 0 12 .784 12 1.75v12.5c0 .085-.006.168-.018.25h2.268a.25.25 0 0 0 .25-.25V8.285a.25.25 0 0 0-.111-.208l-1.055-.703a.749.749 0 1 1 .832-1.248l1.055.703c.487.325.779.871.779 1.456v5.965A1.75 1.75 0 0 1 14.25 16h-3.5a.766.766 0 0 1-.197-.026c-.099.017-.2.026-.303.026h-3a.75.75 0 0 1-.75-.75V14h-1v1.25a.75.75 0 0 1-.75.75Zm-.25-1.75c0 .138.112.25.25.25H4v-1.25a.75.75 0 0 1 .75-.75h2.5a.75.75 0 0 1 .75.75v1.25h2.25a.25.25 0 0 0 .25-.25V1.75a.25.25 0 0 0-.25-.25h-8.5a.25.25 0 0 0-.25.25ZM3.75 6h.5a.75.75 0 0 1 0 1.5h-.5a.75.75 0 0 1 0-1.5ZM3 3.75A.75.75 0 0 1 3.75 3h.5a.75.75 0 0 1 0 1.5h-.5A.75.75 0 0 1 3 3.75Zm4 3A.75.75 0 0 1 7.75 6h.5a.75.75 0 0 1 0 1.5h-.5A.75.75 0 0 1 7 6.75ZM7.75 3h.5a.75.75 0 0 1 0 1.5h-.5a.75.75 0 0 1 0-1.5ZM3 9.75A.75.75 0 0 1 3.75 9h.5a.75.75 0 0 1 0 1.5h-.5A.75.75 0 0 1 3 9.75ZM7.75 9h.5a.75.75 0 0 1 0 1.5h-.5a.75.75 0 0 1 0-1.5Z"></path></svg></span> <strong>Universal Applicability:</strong> Suited for developers of all experience levels, offering valuable insights for both beginners and veterans.</li>
+<li><a href="https://www.codinghorror.com/blog/2006/11/code-reviews-just-do-it.html">Atwood, Jeff (2006) Code Reviews: Just Do
+  It</a></li>
+<li><a href="https://kev.inburke.com/kevin/why-code-review-beats-testing/">Burke, Kevin (2011) Why code review beats testing: evidence from
+  decades of programming
+  research</a></li>
+<li><a href="https://www.amazon.com/Code-Complete-Practical-Handbook-Construction/dp/0735619670">McConnell, Steve (2004) Code Complete: A Practical Handbook of
+  Software Construction, Second
+  Edition</a></li>
+<li><a href="https://the-turing-way.netlify.app/reproducible-research/reviewing">The Turing Way:
+  Reviewing</a></li>
+<li><a href="https://the-turing-way.netlify.app/reproducible-research/reviewing/reviewing-motivation">The Turing Way: Reviewing
+  Motivation</a></li>
+<li><a href="https://the-turing-way.netlify.app/reproducible-research/reviewing/reviewing-recommend">The Turing Way: Reviewing
+  Recommendations</a></li>
+<li><a href="https://the-turing-way.netlify.app/reproducible-research/reviewing/reviewing-workflow">The Turing Way: Reviewing
+  Workflow</a></li>
+<li><a href="https://the-turing-way.netlify.app/reproducible-research/reviewing/reviewing-checklist">The Turing Way: Reviewing
+  Checklist</a></li>
+<li><a href="https://the-turing-way.netlify.app/reproducible-research/reviewing/reviewing-resources">The Turing Way: Reviewing
+  Resources</a></li>
 </ul>
-<h2 id="table-of-contents">Table of Contents<a class="headerlink" href="#table-of-contents" title="Permanent link">¶</a></h2>
-<ul>
-<li><a href="../dvc-set-up/">Setting Up DVC for Efficient Data Management</a></li>
-<li><a href="../project-scaffolding-standards/">Project Scaffolding Standards</a></li>
-<li><a href="../file-naming-conventions/">File Naming Conventions</a></li>
-<li><a href="../column-naming-conventions/">Column Naming Conventions for ML/AI Projects</a></li>
-<li><a href="../python-docstrings-conventions/">Python Docstrings Conventions</a></li>
-<li><a href="./pushing-to-github-best-practices.md">Best Practices for Using Git and Pushing to GitHub</a></li>
-<li><a href="./python-line-length-standards.md">Code and Comment Length Standards in Python Projects</a></li>
-<li><a href="../dvc-communication/">Facilitating Team Communication with DVC</a></li>
-<li><a href="../dvc-vscode-extension/">Integrating DVC with VS Code for Enhanced Workflow</a></li>
-<li><a href="../git-branch-naming-standards/">Creating Git Branches Following Best Practices</a></li>
-<li><a href="../commit-message-standards-ml/">Standardizing Commit Messages in ML Projects</a></li>
-<li><a href="../ml-data-folder-naming/">Naming Data Folders in ML Projects for Better Organization</a></li>
-<li><a href="../ml-data-naming-conventions/">Adopting Effective Data File Naming Conventions</a></li>
-<li><a href="../machine-learning-metadata-automation/">Automating the Creation of Metadata for Machine Learning Models</a></li>
-<li><a href="../github-actions-naming-convention/">Implementing GitHub Actions to Enforce Naming Conventions</a></li>
-<li><a href="../offline-cookiecutter-setup/">Using Cookiecutter for Project Setup Without Internet Access</a></li>
-<li><a href="../wandb-experiment-tracking-rag/">ML Experiments Life-Cycle with Weights &amp; Biases</a></li>
-<li><a href="../templates/">Templates for Issues/Stories and PRs</a></li>
-<li><a href="../branching-strategy/">Branching Strategies for ML Projects</a></li>
-<li><a href="../data-conversion-from-xlsx-to-csv/">Python Scripting for Data Conversion</a></li>
-<li><a href="../automating-wandb-backups/">Automating Backups for Weights &amp; Biases</a></li>
-<li><a href="../jupyter-vscode-directory/">Configuring Jupyter Notebook Start-up Directory in VS Code</a></li>
-<li><a href="../data_management_practices/">Project Data Management Practices</a></li>
-<li><a href="../lifecycle-git-github/">AI/ML Project Lifecycle with Git and GitHub</a></li>
-<li><a href="../introduction-to-doctest/">Introduction to Doctest</a></li>
-<li><a href="../code-review-best-practices/">Code Review Best Practices</a></li>
-</ul>
-<div class="admonition check">
-<p class="admonition-title">Optimizing Your Workflow</p>
-<p>These guides are intentionally designed to function independently, providing the flexibility to directly engage with topics pertinent to your immediate challenges. As a compendium of efficient, practical solutions, they are an excellent resource for enhancing productivity and mastering various development tasks.</p>
-</div>
+<h2 id="conclusion">Conclusion<a class="headerlink" href="#conclusion" title="Permanent link">¶</a></h2>
+<p>Implementing a structured and thorough code review process is essential
+for the success of any machine learning project. By following the best
+practices outlined in this guide, you can ensure high-quality,
+reproducible, and collaborative code development. Remember, effective
+code reviews not only improve the codebase but also enhance team
+collaboration and knowledge sharing.</p>
 <aside class="md-source-file">
 <span class="md-source-file__fact">
 <span class="md-icon" title="Last update">
