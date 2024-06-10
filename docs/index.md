@@ -73,6 +73,7 @@ framework](https://diataxis.fr/).
     - :octicons-tasklist-16: [Using TODO Tree with Code Tags](how-to-guides/using-todo-tree-with-code-tags.md) - A guide on how to effectively use the TODO Tree VS Code extension in combination with code tags to manage tasks and comments in your codebase.
     - :octicons-tools-16: [AI/ML Project Lifecycle with Git and GitHub](how-to-guides/lifecycle-git-github.md) - A comprehensive guide outlining the lifecycle of using Git and GitHub for AI/ML projects, detailing steps from opening a JIRA issue to managing successful and unsuccessful experiments.
     - :octicons-tools-16: [Introduction to Doctest](how-to-guides/introduction-to-doctest.md) - A beginner-friendly guide to using doctest for unit testing and documentation in Python, tailored for data scientists in machine learning projects.
+    - :octicons-tools-16: [Python OOP for Machine Learning Projects](how-to-guides/python-oop-for-ml.md) - A comprehensive guide on using Object-Oriented Programming (OOP) in Python to create modular, collaborative, and reproducible code for machine learning projects.
 
 ??? custom "Python Code Quality Tools"
     - :octicons-tools-16: [Formatting Your Code with Black](tutorials/black-formatter.md) - A comprehensive guide on using Black to format Python code, ensuring consistency and readability across your codebase.

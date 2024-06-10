@@ -26,6 +26,7 @@
 - [Windows OS: Setting Up Your Development Environment](./windows-os-setup.md)
 - [Data Management in ML Projects](./data.md)
 - [Using Code Tags](./using-code-tags.md)
-- [Using TODO Tree with Code Tags](how-to-guides/using-todo-tree-with-code-tags.md)
+- [Using TODO Tree with Code Tags](./using-todo-tree-with-code-tags.md)
+- [Python OOP for Machine Learning Projects](./python-oop-for-ml.md)
 
 Dive into each tutorial for detailed, step-by-step guidance that you can follow along with ease. Start exploring the topics that interest you the most.
