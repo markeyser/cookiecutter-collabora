@@ -142,6 +142,7 @@ nav:
       - Using Code Tags: how-to-guides/using-code-tags.md
       - Using TODO Tree with Code Tags: how-to-guides/using-todo-tree-with-code-tags.md
       - AI/ML Project Lifecycle with Git and GitHub: how-to-guides/lifecycle-git-github.md
+      - Introduction to Doctest: how-to-guides/introduction-to-doctest.md
   - Explanation:
       - TOC: explanation/toc-explanation.md
       - Understanding DVC: explanation/dvc-understanding-dvs.md
