@@ -34,6 +34,7 @@
 - [Automating Backups for Weights & Biases](./automating-wandb-backups.md)
 - [Configuring Jupyter Notebook Start-up Directory in VS Code](./jupyter-vscode-directory.md)
 - [Project Data Management Practices](./data_management_practices.md)
+- [AI/ML Project Lifecycle with Git and GitHub](./lifecycle-git-github.md)
 
 !!! check "Optimizing Your Workflow"
     These guides are intentionally designed to function independently, providing the flexibility to directly engage with topics pertinent to your immediate challenges. As a compendium of efficient, practical solutions, they are an excellent resource for enhancing productivity and mastering various development tasks.
