@@ -170,3 +170,9 @@ manageable codebase. By following this guide and using the provided VS
 Code extensions, you can enhance collaboration, improve documentation,
 and ensure critical areas of your code are highlighted and addressed
 promptly.
+
+## References
+
+- [Codetags and TODO Comments](https://inventwithpython.com/beyond/chapter11.html#:~:text=Codetags%20and%20TODO%20Comments)
+- [PEP 350 – Codetags](https://peps.python.org/pep-0350/)
+- [Never Forget Anything Before, After and While Coding](https://hackernoon.com/never-forget-anything-before-after-and-while-coding-98d187ae4cf1)
