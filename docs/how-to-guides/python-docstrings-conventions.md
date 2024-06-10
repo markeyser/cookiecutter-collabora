@@ -318,3 +318,10 @@ def add_numbers(a, b):
 By following these guidelines and using the autoDocstring extension or a
 ChatGPT-like app, you can ensure that your Python code is
 well-documented and easy to understand for other developers.
+
+## References
+
+- [Documenting Python Code: A Complete
+  Guide](https://realpython.com/documenting-python-code/)
+- [Document Your Python Code and Projects With
+  ChatGPT](https://realpython.com/document-python-code-with-chatgpt/)

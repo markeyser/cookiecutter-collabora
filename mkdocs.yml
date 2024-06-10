@@ -144,6 +144,7 @@ nav:
       - AI/ML Project Lifecycle with Git and GitHub: how-to-guides/lifecycle-git-github.md
       - Introduction to Doctest: how-to-guides/introduction-to-doctest.md
       - Python OOP for Machine Learning Projects: how-to-guides/python-oop-for-ml.md
+      - Code Review Best Practices: how-to-guides/code-review-best-practices.md
   - Explanation:
       - TOC: explanation/toc-explanation.md
       - Understanding DVC: explanation/dvc-understanding-dvs.md
