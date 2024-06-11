@@ -9,6 +9,8 @@ theme:
   logo: assets/two-lanes-logo.png
   icon:
     repo: simple/github
+  features:
+    - search.highlight
   palette:
     - media: "(prefers-color-scheme)"
       toggle:
@@ -83,6 +85,7 @@ plugins:
   - mkdocstrings
   - mermaid2
   - glightbox
+  - search
   - git-revision-date-localized:
       fallback_to_build_date: true
 
