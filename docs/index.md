@@ -75,6 +75,7 @@ framework](https://diataxis.fr/).
     - :octicons-tools-16: [Introduction to Doctest](how-to-guides/introduction-to-doctest.md) - A beginner-friendly guide to using doctest for unit testing and documentation in Python, tailored for data scientists in machine learning projects.
     - :octicons-tools-16: [Python OOP for Machine Learning Projects](how-to-guides/python-oop-for-ml.md) - A comprehensive guide on using Object-Oriented Programming (OOP) in Python to create modular, collaborative, and reproducible code for machine learning projects.
     - :octicons-checklist-16: [Code Review Best Practices](how-to-guides/code-review-best-practices.md) - A comprehensive guide on conducting effective code reviews, covering the importance, best practices, and workflows to ensure code quality and collaboration in ML/AI projects.
+    - :octicons-book-16: [Best Practices for Creating JIRA Stories for ML/AI Projects](how-to-guides/jira-story-best-practices.md) - A comprehensive guide to creating well-defined JIRA stories for ML/AI projects, ensuring clarity, actionable tasks, and alignment with project goals.
 
 ??? custom "Python Code Quality Tools"
     - :octicons-tools-16: [Formatting Your Code with Black](tutorials/black-formatter.md) - A comprehensive guide on using Black to format Python code, ensuring consistency and readability across your codebase.

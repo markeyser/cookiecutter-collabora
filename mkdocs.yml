@@ -148,6 +148,7 @@ nav:
       - Introduction to Doctest: how-to-guides/introduction-to-doctest.md
       - Python OOP for Machine Learning Projects: how-to-guides/python-oop-for-ml.md
       - Code Review Best Practices: how-to-guides/code-review-best-practices.md
+      - Best Practices for Creating JIRA Stories for ML/AI Projects: how-to-guides/jira-story-best-practices.md
   - Explanation:
       - TOC: explanation/toc-explanation.md
       - Understanding DVC: explanation/dvc-understanding-dvs.md
