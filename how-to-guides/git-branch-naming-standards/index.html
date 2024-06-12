@@ -361,11 +361,78 @@
 </li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    Git Branch Naming Standards
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
 <a class="md-nav__link md-nav__link--active" href="./">
 <span class="md-ellipsis">
     Git Branch Naming Standards
   </span>
 </a>
+<nav aria-label="On this page" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#connecting-jira-stories-and-github">
+<span class="md-ellipsis">
+      Connecting JIRA stories and GitHub
+    </span>
+</a>
+<nav aria-label="Connecting JIRA stories and GitHub" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#using-jira-story-number-in-branch-names">
+<span class="md-ellipsis">
+      Using JIRA Story Number in Branch Names
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#using-sub-task-numbers-in-branch-names">
+<span class="md-ellipsis">
+      Using Sub-task Numbers in Branch Names
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#recommendations">
+<span class="md-ellipsis">
+      Recommendations
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#commit-message-conventions">
+<span class="md-ellipsis">
+      Commit Message Conventions
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#best-practices-summary">
+<span class="md-ellipsis">
+      Best Practices Summary
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#example-workflow">
+<span class="md-ellipsis">
+      Example Workflow
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../commit-message-standards-ml/">
@@ -493,6 +560,13 @@
   </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../jira-story-best-practices/">
+<span class="md-ellipsis">
+    Best Practices for Creating JIRA Stories for ML/AI Projects
+  </span>
+</a>
+</li>
 </ul>
 </nav>
 </li>
@@ -595,6 +669,65 @@
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="On this page" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#connecting-jira-stories-and-github">
+<span class="md-ellipsis">
+      Connecting JIRA stories and GitHub
+    </span>
+</a>
+<nav aria-label="Connecting JIRA stories and GitHub" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#using-jira-story-number-in-branch-names">
+<span class="md-ellipsis">
+      Using JIRA Story Number in Branch Names
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#using-sub-task-numbers-in-branch-names">
+<span class="md-ellipsis">
+      Using Sub-task Numbers in Branch Names
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#recommendations">
+<span class="md-ellipsis">
+      Recommendations
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#commit-message-conventions">
+<span class="md-ellipsis">
+      Commit Message Conventions
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#best-practices-summary">
+<span class="md-ellipsis">
+      Best Practices Summary
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#example-workflow">
+<span class="md-ellipsis">
+      Example Workflow
+    </span>
+</a>
+</li>
+</ul>
 </nav>
 </div>
 </div>
@@ -691,14 +824,109 @@
 </div>
 <div class="admonition summary">
 <p class="admonition-title">Conclusion</p>
-<p>Following these naming conventions is vital for organizing and accessing our ML project repositories, fostering team collaboration and efficient project management.</p>
+<p>Following these naming conventions is vital for organizing and
+accessing our ML project repositories, fostering team collaboration
+and efficient project management.</p>
 </div>
+<h2 id="connecting-jira-stories-and-github">Connecting JIRA stories and GitHub<a class="headerlink" href="#connecting-jira-stories-and-github" title="Permanent link">¶</a></h2>
+<p>Using JIRA story numbers or sub-task numbers in GitHub branch names and commit messages can be a good practice as it helps maintain traceability between code changes and project management tasks. Here are some considerations and recommendations to optimize this practice:</p>
+<h3 id="using-jira-story-number-in-branch-names">Using JIRA Story Number in Branch Names<a class="headerlink" href="#using-jira-story-number-in-branch-names" title="Permanent link">¶</a></h3>
+<p>Creating a branch for each JIRA story and using the story number in the branch name is a widely adopted practice. This approach ensures that all code changes related to a specific story are organized in one branch.</p>
+<p><strong>Example:</strong></p>
+<ul>
+<li>Branch name for a JIRA story: <code>feature/add-churn-prediction-model-JIRA-123</code></li>
+</ul>
+<h3 id="using-sub-task-numbers-in-branch-names">Using Sub-task Numbers in Branch Names<a class="headerlink" href="#using-sub-task-numbers-in-branch-names" title="Permanent link">¶</a></h3>
+<p>If the story is large and has several sub-tasks, creating separate branches for each sub-task can provide more granular control and better organization of work. This is especially useful if multiple team members are working on different sub-tasks of the same story.</p>
+<p><strong>Example:</strong></p>
+<ul>
+<li>Branch name for a sub-task: <code>feature/preprocess-data-JIRA-123-subtask-1</code></li>
+<li>Branch name for another sub-task: <code>feature/train-model-JIRA-123-subtask-2</code></li>
+</ul>
+<h3 id="recommendations">Recommendations<a class="headerlink" href="#recommendations" title="Permanent link">¶</a></h3>
+<ol>
+<li><strong>Small to Medium Stories:</strong></li>
+<li>Use a single branch for the entire story if the scope is manageable.</li>
+<li>Include the JIRA story number in the branch name.</li>
+<li>
+<p>Example: <code>feature/add-churn-prediction-model-JIRA-123</code></p>
+</li>
+<li>
+<p><strong>Large Stories with Multiple Sub-tasks:</strong></p>
+</li>
+<li>Create separate branches for each sub-task to allow parallel development.</li>
+<li>Include both the JIRA story number and the sub-task number in the branch name.</li>
+<li>Example: <code>feature/preprocess-data-JIRA-123-subtask-1</code></li>
+</ol>
+<h2 id="commit-message-conventions">Commit Message Conventions<a class="headerlink" href="#commit-message-conventions" title="Permanent link">¶</a></h2>
+<p>Including JIRA story or sub-task numbers in commit messages helps maintain a clear history of changes and their associated tasks.</p>
+<p><strong>Example:</strong></p>
+<ul>
+<li>Commit message for a story: <code>Added data preprocessing steps-JIRA-123</code></li>
+<li>Commit message for a sub-task: <code>Implemented initial data cleaning-JIRA-123-subtask-1</code></li>
+</ul>
+<h2 id="best-practices-summary">Best Practices Summary<a class="headerlink" href="#best-practices-summary" title="Permanent link">¶</a></h2>
+<ol>
+<li><strong>Branch Naming:</strong></li>
+<li>Use <code>feature/</code>, <code>bugfix/</code>, or <code>hotfix/</code> prefixes to indicate the type of work.</li>
+<li>Include the JIRA story or sub-task number for traceability.</li>
+<li>
+<p>Use descriptive names to indicate the purpose of the branch.</p>
+</li>
+<li>
+<p><strong>Commit Messages:</strong></p>
+</li>
+<li>Start with the description of the change.</li>
+<li>End with the JIRA story or sub-task number.</li>
+<li>
+<p>Optionally, add more detail in the body of the commit message.</p>
+</li>
+<li>
+<p><strong>Branch Management:</strong></p>
+</li>
+<li>For small to medium stories, create a single branch per story.</li>
+<li>For large stories, create separate branches for each sub-task to facilitate parallel work.</li>
+<li>Ensure all sub-task branches are merged into the main story branch before final integration.</li>
+</ol>
+<h2 id="example-workflow">Example Workflow<a class="headerlink" href="#example-workflow" title="Permanent link">¶</a></h2>
+<ol>
+<li><strong>Create a Branch for the Story:</strong></li>
+<li>
+<p><code>feature/add-churn-prediction-model-JIRA-123</code></p>
+</li>
+<li>
+<p><strong>Create Sub-task Branches:</strong></p>
+</li>
+<li><code>feature/preprocess-data-JIRA-123-subtask-1</code></li>
+<li>
+<p><code>feature/train-model-JIRA-123-subtask-2</code></p>
+</li>
+<li>
+<p><strong>Commit Changes with Clear Messages:</strong></p>
+</li>
+<li><code>Implemented initial data cleaning-JIRA-123-subtask-1</code></li>
+<li>
+<p><code>Trained logistic regression model-JIRA-123-subtask-2</code></p>
+</li>
+<li>
+<p><strong>Merge Sub-task Branches into Story Branch:</strong></p>
+</li>
+<li>Merge <code>feature/preprocess-data-JIRA-123-subtask-1</code> into <code>feature/add-churn-prediction-model-JIRA-123</code></li>
+<li>
+<p>Merge <code>feature/train-model-JIRA-123-subtask-2</code> into <code>feature/add-churn-prediction-model-JIRA-123</code></p>
+</li>
+<li>
+<p><strong>Integrate the Story Branch into Main Development Branch:</strong></p>
+</li>
+<li>Merge <code>feature/add-churn-prediction-model-JIRA-123</code> into <code>dev</code> or <code>main</code></li>
+</ol>
+<p>By following these practices, you can ensure that your development process remains organized and traceable, facilitating better project management and collaboration.</p>
 <aside class="md-source-file">
 <span class="md-source-file__fact">
 <span class="md-icon" title="Last update">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 29, 2024</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 12, 2024</span>
 </span>
 </aside>
 </article>
