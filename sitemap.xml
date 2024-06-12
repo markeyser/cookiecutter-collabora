@@ -161,6 +161,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://markeyser.github.io/cookiecutter-two-lanes/how-to-guides/notebook-to-production/</loc>
+         <lastmod>2024-06-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://markeyser.github.io/cookiecutter-two-lanes/how-to-guides/offline-cookiecutter-setup/</loc>
          <lastmod>2024-06-12</lastmod>
          <changefreq>daily</changefreq>
