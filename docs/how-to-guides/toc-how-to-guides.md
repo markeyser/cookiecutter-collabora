@@ -38,6 +38,7 @@
 - [Introduction to Doctest](./introduction-to-doctest.md)
 - [Code Review Best Practices](./code-review-best-practices.md)
 - [Best Practices for Creating JIRA Stories for ML/AI Projects](./jira-story-best-practices.md)
+- [Moving from Jupyter Notebooks to Production Python Code](./notebook-to-production.md)
 
 !!! check "Optimizing Your Workflow"
     These guides are intentionally designed to function independently, providing the flexibility to directly engage with topics pertinent to your immediate challenges. As a compendium of efficient, practical solutions, they are an excellent resource for enhancing productivity and mastering various development tasks.
