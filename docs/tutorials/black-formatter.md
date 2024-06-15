@@ -257,6 +257,17 @@ Choose the approach that best fits your workflow and project structure.
 Automation and integration with your development tools can significantly
 streamline the formatting process.
 
+!!! warning "Branch Protection with Black"
+
+    To ensure code quality, we need to protect the main branch with branch
+    protection rules. This setup requires that all code must pass Black
+    formatting checks before being merged into the main branch. While you can
+    push code to your feature branches even if it fails formatting, merging
+    into main is blocked until all formatting errors are resolved. This
+    approach mimics pre-commit hooks, maintaining a clean and compliant main
+    branch. Developers should run Black locally and fix issues before pushing
+    code for review.
+
 ## Conclusion
 
 Black ensures consistency and readability across your codebase. With the

@@ -259,6 +259,17 @@ linted locally by the developer. This approach ensures that all team
 members are actively involved in maintaining the code quality and are
 aware of the coding standards enforced by our Ruff configuration.
 
+!!! warning "Branch Protection with Ruff"
+
+    To ensure code quality, we need to protect the main branch with branch
+    protection rules. This setup requires that all code must pass Ruff
+    linting checks before being merged into the main branch. While you can
+    push code to your feature branches even if it fails linting, merging
+    into main is blocked until all linting errors are resolved. This
+    approach mimics pre-commit hooks, maintaining a clean and compliant main
+    branch. Developers should run Ruff locally and fix issues before pushing
+    code for review.
+
 ### Example: GitHub Action Log for Linting Errors
 
 When a developer pushes code or creates a pull request, the GitHub
