@@ -72,6 +72,36 @@ application using the `{{ cookiecutter.package_name }}` package. For
 more detailed usage, refer to our [How-To
 Guide](./docs/how-to-guides.md) and [Tutorials](./docs/tutorials.md).
 
+## Development
+
+### Testing
+
+Run tests using `unittest`:
+
+```sh
+python -m unittest discover tests
+```
+
+### Formatting & linting
+
+Use `black` for code formatting and `ruff` for linting:
+
+```sh
+black . 
+ruff check --preview --fix .
+```
+
+## Configuration
+
+Configuration files are located in the `config` directory. Update these
+files to suit your environment and requirements.
+
+### Environment Variables
+
+Environment variables are managed in the `.env` file. Update this file
+with your specific settings.
+
+
 ## Contributing
 
 We welcome contributions to our project! For details on how to get

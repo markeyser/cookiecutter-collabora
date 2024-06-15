@@ -37,12 +37,12 @@ build-backend = "poetry.core.masonry.api"
 [tool.black]
 line-length = 79
 target-version = ['py310']
-include = """
+include = '''
 (
-    ^notebooks/.*\\.ipynb$
-  | ^src/.*\\.py$
+    \.pyi?$
+  | \.ipynb$
 )
-"""
+'''
 
 [tool.ruff]
 line-length = 79
