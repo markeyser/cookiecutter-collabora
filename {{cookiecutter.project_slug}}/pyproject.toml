@@ -24,7 +24,7 @@ pytest = "7.4.0"
 pytest-benchmark = "4.0.0"
 pytest-xdist = "3.3.1"
 rope = "1.9.0"
-ruff = "0.1.13"
+ruff = "0.4.9"
 dvc = "3.40.1"
 toml = "^0.10.2"
 nbconvert = "^7.8.0"
@@ -45,6 +45,10 @@ include = """
 """
 
 [tool.ruff]
+line-length = 79
+include = ["*.py", "*.pyi", "**/pyproject.toml", "*.ipynb"]
+
+[tool.ruff.lint]
 select = [
     # Pyflakes (F) rules
     "F401", # Unused imports
@@ -124,10 +128,6 @@ select = [
     "D106", # Missing docstring in public nested class
     "D107", # Missing docstring in __init__
 ]
-
-# Decrease the maximum line length to 79 characters.
-line-length = 79
-include = ["*.py", "*.pyi", "**/pyproject.toml", "*.ipynb"]
 
 [tool.pymarkdown]
 disable-rules = ["MD046"]
