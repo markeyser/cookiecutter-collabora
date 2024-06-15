@@ -330,24 +330,24 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#directory-descriptions">
+<a class="md-nav__link" href="#project-structure">
 <span class="md-ellipsis">
-      Directory Descriptions
+      Project Structure
+    </span>
+</a>
+<nav aria-label="Project Structure" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#notes-from-conversation-wth-guy">
+<span class="md-ellipsis">
+      Notes from conversation wth Guy
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#example-structure">
+<a class="md-nav__link" href="#summary-of-changes">
 <span class="md-ellipsis">
-      Example Structure
-    </span>
-</a>
-<nav aria-label="Example Structure" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#config-directory">
-<span class="md-ellipsis">
-      Config Directory
+      Summary of Changes
     </span>
 </a>
 </li>
@@ -760,24 +760,24 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#directory-descriptions">
+<a class="md-nav__link" href="#project-structure">
 <span class="md-ellipsis">
-      Directory Descriptions
+      Project Structure
+    </span>
+</a>
+<nav aria-label="Project Structure" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#notes-from-conversation-wth-guy">
+<span class="md-ellipsis">
+      Notes from conversation wth Guy
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#example-structure">
+<a class="md-nav__link" href="#summary-of-changes">
 <span class="md-ellipsis">
-      Example Structure
-    </span>
-</a>
-<nav aria-label="Example Structure" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#config-directory">
-<span class="md-ellipsis">
-      Config Directory
+      Summary of Changes
     </span>
 </a>
 </li>
@@ -878,162 +878,220 @@ recommended folder and file structure to follow for all projects within
 the AI team.</p>
 <h2 id="folder-and-file-structure">Folder and File Structure<a class="headerlink" href="#folder-and-file-structure" title="Permanent link">¶</a></h2>
 <p>Here is the standardized folder and file structure for AI/ML projects:</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>├── .devcontainer
-<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a>│   └── devcontainer.json           &lt;- Configuration file for VS Code Dev Containers.
-<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a>├── .github
-<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a>│   ├── CODEOWNERS                  &lt;- Defines the code owners for the repository.
-<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a>│   ├── CONTRIBUTING.md             &lt;- Guidelines for contributing to the project.
-<a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a>│   ├── ISSUE_TEMPLATE
-<a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a>│   │   ├── ask_issues_template.md
-<a href="#__codelineno-0-8" id="__codelineno-0-8" name="__codelineno-0-8"></a>│   │   ├── bug_report_template.md
-<a href="#__codelineno-0-9" id="__codelineno-0-9" name="__codelineno-0-9"></a>│   │   ├── data_acquisition_template.md
-<a href="#__codelineno-0-10" id="__codelineno-0-10" name="__codelineno-0-10"></a>│   │   ├── data_creation_template.md
-<a href="#__codelineno-0-11" id="__codelineno-0-11" name="__codelineno-0-11"></a>│   │   ├── experiment_issues_template.md
-<a href="#__codelineno-0-12" id="__codelineno-0-12" name="__codelineno-0-12"></a>│   │   ├── explore_issues_template.md
-<a href="#__codelineno-0-13" id="__codelineno-0-13" name="__codelineno-0-13"></a>│   │   ├── feature_request.md
-<a href="#__codelineno-0-14" id="__codelineno-0-14" name="__codelineno-0-14"></a>│   │   └── model_issues_templates.md
-<a href="#__codelineno-0-15" id="__codelineno-0-15" name="__codelineno-0-15"></a>│   ├── PULL_REQUEST_TEMPLATE
-<a href="#__codelineno-0-16" id="__codelineno-0-16" name="__codelineno-0-16"></a>│   │   └── pull_request_template.md
-<a href="#__codelineno-0-17" id="__codelineno-0-17" name="__codelineno-0-17"></a>│   └── workflows
-<a href="#__codelineno-0-18" id="__codelineno-0-18" name="__codelineno-0-18"></a>│       ├── black.yaml              &lt;- GitHub Actions workflow for Black formatter.
-<a href="#__codelineno-0-19" id="__codelineno-0-19" name="__codelineno-0-19"></a>│       └── ruff.yaml               &lt;- GitHub Actions workflow for Ruff linter.
-<a href="#__codelineno-0-20" id="__codelineno-0-20" name="__codelineno-0-20"></a>├── .gitignore                      &lt;- Specifies intentionally untracked files to ignore.
-<a href="#__codelineno-0-21" id="__codelineno-0-21" name="__codelineno-0-21"></a>├── .vscode
-<a href="#__codelineno-0-22" id="__codelineno-0-22" name="__codelineno-0-22"></a>│   ├── cspell.json                 &lt;- Spell checker configuration.
-<a href="#__codelineno-0-23" id="__codelineno-0-23" name="__codelineno-0-23"></a>│   ├── dictionaries
-<a href="#__codelineno-0-24" id="__codelineno-0-24" name="__codelineno-0-24"></a>│   │   └── data-science-en.txt     &lt;- Custom dictionary for spell checker.
-<a href="#__codelineno-0-25" id="__codelineno-0-25" name="__codelineno-0-25"></a>│   ├── extensions.json             &lt;- List of recommended VS Code extensions.
-<a href="#__codelineno-0-26" id="__codelineno-0-26" name="__codelineno-0-26"></a>│   └── settings.json               &lt;- VS Code workspace settings.
-<a href="#__codelineno-0-27" id="__codelineno-0-27" name="__codelineno-0-27"></a>├── README.md                       &lt;- The top-level README for developers using this project.
-<a href="#__codelineno-0-28" id="__codelineno-0-28" name="__codelineno-0-28"></a>├── Makefile                        &lt;- Makefile with commands like `make data` or `make train`.
-<a href="#__codelineno-0-29" id="__codelineno-0-29" name="__codelineno-0-29"></a>├── config                          &lt;- Configuration files for the project.
-<a href="#__codelineno-0-30" id="__codelineno-0-30" name="__codelineno-0-30"></a>│   ├── base_config.cfg
-<a href="#__codelineno-0-31" id="__codelineno-0-31" name="__codelineno-0-31"></a>│   ├── config.cfg
-<a href="#__codelineno-0-32" id="__codelineno-0-32" name="__codelineno-0-32"></a>│   └── settings.yaml
-<a href="#__codelineno-0-33" id="__codelineno-0-33" name="__codelineno-0-33"></a>├── dist                            &lt;- Distribution files (e.g., wheels and tarballs).
-<a href="#__codelineno-0-34" id="__codelineno-0-34" name="__codelineno-0-34"></a>│   └── ...                         &lt;- Versioned distribution files.
-<a href="#__codelineno-0-35" id="__codelineno-0-35" name="__codelineno-0-35"></a>├── docs                            &lt;- Documentation files for the project.
-<a href="#__codelineno-0-36" id="__codelineno-0-36" name="__codelineno-0-36"></a>│   ├── api-reference.md
-<a href="#__codelineno-0-37" id="__codelineno-0-37" name="__codelineno-0-37"></a>│   ├── explanation.md
-<a href="#__codelineno-0-38" id="__codelineno-0-38" name="__codelineno-0-38"></a>│   ├── how-to-guides.md
-<a href="#__codelineno-0-39" id="__codelineno-0-39" name="__codelineno-0-39"></a>│   ├── index.md
-<a href="#__codelineno-0-40" id="__codelineno-0-40" name="__codelineno-0-40"></a>│   ├── tutorials.md
-<a href="#__codelineno-0-41" id="__codelineno-0-41" name="__codelineno-0-41"></a>│   └── assets                      &lt;- Assets for documentation (images, CSS, etc.).
-<a href="#__codelineno-0-42" id="__codelineno-0-42" name="__codelineno-0-42"></a>│       └── ...
-<a href="#__codelineno-0-43" id="__codelineno-0-43" name="__codelineno-0-43"></a>├── logs                            &lt;- Logs generated by the project.
-<a href="#__codelineno-0-44" id="__codelineno-0-44" name="__codelineno-0-44"></a>│   └── application.log
-<a href="#__codelineno-0-45" id="__codelineno-0-45" name="__codelineno-0-45"></a>├── mkdocs.yml                      &lt;- Configuration for mkdocs documentation generation.
-<a href="#__codelineno-0-46" id="__codelineno-0-46" name="__codelineno-0-46"></a>├── notebooks                       &lt;- Jupyter notebooks for exploration and analysis.
-<a href="#__codelineno-0-47" id="__codelineno-0-47" name="__codelineno-0-47"></a>│   └── ...                         &lt;- Individual notebook files.
-<a href="#__codelineno-0-48" id="__codelineno-0-48" name="__codelineno-0-48"></a>├── poetry.lock                     &lt;- Poetry lock file for dependencies.
-<a href="#__codelineno-0-49" id="__codelineno-0-49" name="__codelineno-0-49"></a>├── pyproject.toml                  &lt;- Project configuration file for dependencies and tools.
-<a href="#__codelineno-0-50" id="__codelineno-0-50" name="__codelineno-0-50"></a>├── src                             &lt;- Source code for the project.
-<a href="#__codelineno-0-51" id="__codelineno-0-51" name="__codelineno-0-51"></a>│   ├── project_name                &lt;- Main package for the project.
-<a href="#__codelineno-0-52" id="__codelineno-0-52" name="__codelineno-0-52"></a>│   │   ├── __init__.py
-<a href="#__codelineno-0-53" id="__codelineno-0-53" name="__codelineno-0-53"></a>│   │   ├── data                    &lt;- Data management scripts.
-<a href="#__codelineno-0-54" id="__codelineno-0-54" name="__codelineno-0-54"></a>│   │   │   ├── __init__.py
-<a href="#__codelineno-0-55" id="__codelineno-0-55" name="__codelineno-0-55"></a>│   │   │   ├── external            &lt;- External data sources.
-<a href="#__codelineno-0-56" id="__codelineno-0-56" name="__codelineno-0-56"></a>│   │   │   ├── features            &lt;- Feature engineering scripts.
-<a href="#__codelineno-0-57" id="__codelineno-0-57" name="__codelineno-0-57"></a>│   │   │   ├── interim             &lt;- Intermediate data storage.
-<a href="#__codelineno-0-58" id="__codelineno-0-58" name="__codelineno-0-58"></a>│   │   │   └── processed           &lt;- Processed data ready for modeling.
-<a href="#__codelineno-0-59" id="__codelineno-0-59" name="__codelineno-0-59"></a>│   │   ├── models                  &lt;- Model definitions and training scripts.
-<a href="#__codelineno-0-60" id="__codelineno-0-60" name="__codelineno-0-60"></a>│   │   │   ├── __init__.py
-<a href="#__codelineno-0-61" id="__codelineno-0-61" name="__codelineno-0-61"></a>│   │   │   └── ...                 &lt;- Model files and scripts.
-<a href="#__codelineno-0-62" id="__codelineno-0-62" name="__codelineno-0-62"></a>│   │   ├── utils                   &lt;- Utility scripts.
-<a href="#__codelineno-0-63" id="__codelineno-0-63" name="__codelineno-0-63"></a>│   │   │   ├── __init__.py
-<a href="#__codelineno-0-64" id="__codelineno-0-64" name="__codelineno-0-64"></a>│   │   │   └── utils.py
-<a href="#__codelineno-0-65" id="__codelineno-0-65" name="__codelineno-0-65"></a>│   │   ├── logs                    &lt;- Logs specific to source code operations.
-<a href="#__codelineno-0-66" id="__codelineno-0-66" name="__codelineno-0-66"></a>│   │   │   └── application.log
-<a href="#__codelineno-0-67" id="__codelineno-0-67" name="__codelineno-0-67"></a>│   │   ├── __pycache__             &lt;- Cached bytecode files.
-<a href="#__codelineno-0-68" id="__codelineno-0-68" name="__codelineno-0-68"></a>│   │   └── ...                     &lt;- Other source files and scripts.
-<a href="#__codelineno-0-69" id="__codelineno-0-69" name="__codelineno-0-69"></a>└── tests                           &lt;- Unit and integration tests.
-<a href="#__codelineno-0-70" id="__codelineno-0-70" name="__codelineno-0-70"></a>    ├── __init__.py
-<a href="#__codelineno-0-71" id="__codelineno-0-71" name="__codelineno-0-71"></a>    ├── test_module1.py
-<a href="#__codelineno-0-72" id="__codelineno-0-72" name="__codelineno-0-72"></a>    ├── test_module2.py
-<a href="#__codelineno-0-73" id="__codelineno-0-73" name="__codelineno-0-73"></a>    └── ...
+<h2 id="project-structure">Project Structure<a class="headerlink" href="#project-structure" title="Permanent link">¶</a></h2>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>├── .github
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a>│   ├── CONTRIBUTING.md             &lt;- Guidelines for contributing to the project.
+<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a>│   ├── PULL_REQUEST_TEMPLATE
+<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a>│   │   └── pull_request_template.md
+<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a>│   └── workflows
+<a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a>│       ├── black.yaml              &lt;- GitHub Actions workflow for Black formatter.
+<a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a>│       └── ruff.yaml               &lt;- GitHub Actions workflow for Ruff linter.
+<a href="#__codelineno-0-8" id="__codelineno-0-8" name="__codelineno-0-8"></a>├── .gitignore                      &lt;- Specifies intentionally untracked files to ignore.
+<a href="#__codelineno-0-9" id="__codelineno-0-9" name="__codelineno-0-9"></a>├── .vscode
+<a href="#__codelineno-0-10" id="__codelineno-0-10" name="__codelineno-0-10"></a>│   ├── cspell.json                 &lt;- Spell checker configuration.
+<a href="#__codelineno-0-11" id="__codelineno-0-11" name="__codelineno-0-11"></a>│   ├── dictionaries
+<a href="#__codelineno-0-12" id="__codelineno-0-12" name="__codelineno-0-12"></a>│   │   └── data-science-en.txt     &lt;- Custom dictionary for spell checker.
+<a href="#__codelineno-0-13" id="__codelineno-0-13" name="__codelineno-0-13"></a>│   ├── extensions.json             &lt;- List of recommended VS Code extensions.
+<a href="#__codelineno-0-14" id="__codelineno-0-14" name="__codelineno-0-14"></a>│   └── settings.json               &lt;- VS Code workspace settings.
+<a href="#__codelineno-0-15" id="__codelineno-0-15" name="__codelineno-0-15"></a>├── .env                            &lt;- Environment variables configuration file.
+<a href="#__codelineno-0-16" id="__codelineno-0-16" name="__codelineno-0-16"></a>├── README.md                       &lt;- The top-level README for developers using this project.
+<a href="#__codelineno-0-17" id="__codelineno-0-17" name="__codelineno-0-17"></a>├── Makefile                        &lt;- Makefile with commands like `make data` or `make train`.
+<a href="#__codelineno-0-18" id="__codelineno-0-18" name="__codelineno-0-18"></a>├── config                          &lt;- Configuration files for the project.
+<a href="#__codelineno-0-19" id="__codelineno-0-19" name="__codelineno-0-19"></a>│   ├── base_config.cfg
+<a href="#__codelineno-0-20" id="__codelineno-0-20" name="__codelineno-0-20"></a>│   ├── config.cfg
+<a href="#__codelineno-0-21" id="__codelineno-0-21" name="__codelineno-0-21"></a>│   └── settings.yaml
+<a href="#__codelineno-0-22" id="__codelineno-0-22" name="__codelineno-0-22"></a>├── data                            &lt;- Data files for the project.
+<a href="#__codelineno-0-23" id="__codelineno-0-23" name="__codelineno-0-23"></a>│   ├── raw                         &lt;- Raw data files.
+<a href="#__codelineno-0-24" id="__codelineno-0-24" name="__codelineno-0-24"></a>│   └── processed                   &lt;- Processed data files.
+<a href="#__codelineno-0-25" id="__codelineno-0-25" name="__codelineno-0-25"></a>├── docs                            &lt;- Documentation files for the project.
+<a href="#__codelineno-0-26" id="__codelineno-0-26" name="__codelineno-0-26"></a>│   ├── api-reference.md
+<a href="#__codelineno-0-27" id="__codelineno-0-27" name="__codelineno-0-27"></a>│   ├── explanation.md
+<a href="#__codelineno-0-28" id="__codelineno-0-28" name="__codelineno-0-28"></a>│   ├── how-to-guides.md
+<a href="#__codelineno-0-29" id="__codelineno-0-29" name="__codelineno-0-29"></a>│   ├── index.md
+<a href="#__codelineno-0-30" id="__codelineno-0-30" name="__codelineno-0-30"></a>│   ├── tutorials.md
+<a href="#__codelineno-0-31" id="__codelineno-0-31" name="__codelineno-0-31"></a>│   └── assets                      &lt;- Assets for documentation (images, CSS, etc.).
+<a href="#__codelineno-0-32" id="__codelineno-0-32" name="__codelineno-0-32"></a>│       └── ...
+<a href="#__codelineno-0-33" id="__codelineno-0-33" name="__codelineno-0-33"></a>├── logs                            &lt;- Logs generated by the project.
+<a href="#__codelineno-0-34" id="__codelineno-0-34" name="__codelineno-0-34"></a>│   └── application.log
+<a href="#__codelineno-0-35" id="__codelineno-0-35" name="__codelineno-0-35"></a>├── mkdocs.yml                      &lt;- Configuration for mkdocs documentation generation.
+<a href="#__codelineno-0-36" id="__codelineno-0-36" name="__codelineno-0-36"></a>├── notebooks                       &lt;- Jupyter notebooks for exploration and analysis.
+<a href="#__codelineno-0-37" id="__codelineno-0-37" name="__codelineno-0-37"></a>│   └── ...                         &lt;- Individual notebook files.
+<a href="#__codelineno-0-38" id="__codelineno-0-38" name="__codelineno-0-38"></a>├── pyproject.toml                  &lt;- Project configuration file for dependencies and tools.
+<a href="#__codelineno-0-39" id="__codelineno-0-39" name="__codelineno-0-39"></a>├── poetry.lock                     &lt;- Lock file for poetry to ensure reproducibility.
+<a href="#__codelineno-0-40" id="__codelineno-0-40" name="__codelineno-0-40"></a>├── scripts                         &lt;- Utility scripts for various tasks.
+<a href="#__codelineno-0-41" id="__codelineno-0-41" name="__codelineno-0-41"></a>│   ├── preprocess_data.py          &lt;- Script for data preprocessing
+<a href="#__codelineno-0-42" id="__codelineno-0-42" name="__codelineno-0-42"></a>│   ├── train_model.py              &lt;- Script for model training
+<a href="#__codelineno-0-43" id="__codelineno-0-43" name="__codelineno-0-43"></a>│   ├── deploy_model.py             &lt;- Script for model deployment
+<a href="#__codelineno-0-44" id="__codelineno-0-44" name="__codelineno-0-44"></a>│   ├── evaluate_model.py           &lt;- Script for evaluating model performance
+<a href="#__codelineno-0-45" id="__codelineno-0-45" name="__codelineno-0-45"></a>│   └── data_operations.py          &lt;- Script for S3 data operations
+<a href="#__codelineno-0-46" id="__codelineno-0-46" name="__codelineno-0-46"></a>├── sagemaker                       &lt;- SageMaker-specific scripts and configurations.
+<a href="#__codelineno-0-47" id="__codelineno-0-47" name="__codelineno-0-47"></a>│   ├── train_script.py             &lt;- Training script for SageMaker.
+<a href="#__codelineno-0-48" id="__codelineno-0-48" name="__codelineno-0-48"></a>│   ├── deploy_script.py            &lt;- Deployment script for SageMaker.
+<a href="#__codelineno-0-49" id="__codelineno-0-49" name="__codelineno-0-49"></a>│   ├── preprocessing_script.py     &lt;- Preprocessing script for SageMaker.
+<a href="#__codelineno-0-50" id="__codelineno-0-50" name="__codelineno-0-50"></a>│   ├── hyperparameters.json        &lt;- Hyperparameters for SageMaker training jobs.
+<a href="#__codelineno-0-51" id="__codelineno-0-51" name="__codelineno-0-51"></a>│   └── sagemaker_config.json       &lt;- Configuration for SageMaker jobs.
+<a href="#__codelineno-0-52" id="__codelineno-0-52" name="__codelineno-0-52"></a>├── src                             &lt;- Source code for the project.
+<a href="#__codelineno-0-53" id="__codelineno-0-53" name="__codelineno-0-53"></a>│   └── package_name                &lt;- Main package directory.
+<a href="#__codelineno-0-54" id="__codelineno-0-54" name="__codelineno-0-54"></a>│       ├── __init__.py             &lt;- Module docstring
+<a href="#__codelineno-0-55" id="__codelineno-0-55" name="__codelineno-0-55"></a>│       ├── data_preprocessing
+<a href="#__codelineno-0-56" id="__codelineno-0-56" name="__codelineno-0-56"></a>│       │   ├── __init__.py         &lt;- Module docstring
+<a href="#__codelineno-0-57" id="__codelineno-0-57" name="__codelineno-0-57"></a>│       │   ├── data_reader.py      &lt;- Module for reading original documents
+<a href="#__codelineno-0-58" id="__codelineno-0-58" name="__codelineno-0-58"></a>│       │   ├── data_cleaning.py    &lt;- Module for cleaning and preprocessing documents
+<a href="#__codelineno-0-59" id="__codelineno-0-59" name="__codelineno-0-59"></a>│       │   └── data_chunking.py    &lt;- Module for chunking documents
+<a href="#__codelineno-0-60" id="__codelineno-0-60" name="__codelineno-0-60"></a>│       ├── embeddings
+<a href="#__codelineno-0-61" id="__codelineno-0-61" name="__codelineno-0-61"></a>│       │   ├── __init__.py         &lt;- Module docstring
+<a href="#__codelineno-0-62" id="__codelineno-0-62" name="__codelineno-0-62"></a>│       │   ├── embedding_generator.py &lt;- Module for generating embeddings
+<a href="#__codelineno-0-63" id="__codelineno-0-63" name="__codelineno-0-63"></a>│       │   └── embedding_utils.py  &lt;- Utility functions for embeddings
+<a href="#__codelineno-0-64" id="__codelineno-0-64" name="__codelineno-0-64"></a>│       ├── retrievers
+<a href="#__codelineno-0-65" id="__codelineno-0-65" name="__codelineno-0-65"></a>│       │   ├── __init__.py         &lt;- Module docstring
+<a href="#__codelineno-0-66" id="__codelineno-0-66" name="__codelineno-0-66"></a>│       │   ├── retriever.py        &lt;- Module for retrieving relevant chunks
+<a href="#__codelineno-0-67" id="__codelineno-0-67" name="__codelineno-0-67"></a>│       │   ├── retriever_utils.py  &lt;- Utility functions for retrievers
+<a href="#__codelineno-0-68" id="__codelineno-0-68" name="__codelineno-0-68"></a>│       │   └── retriever_preprocessing.py &lt;- Module for pre-processing queries before retrieval
+<a href="#__codelineno-0-69" id="__codelineno-0-69" name="__codelineno-0-69"></a>│       ├── generators
+<a href="#__codelineno-0-70" id="__codelineno-0-70" name="__codelineno-0-70"></a>│       │   ├── __init__.py         &lt;- Module docstring
+<a href="#__codelineno-0-71" id="__codelineno-0-71" name="__codelineno-0-71"></a>│       │   ├── generator.py        &lt;- Module for generating answers from retrieved chunks
+<a href="#__codelineno-0-72" id="__codelineno-0-72" name="__codelineno-0-72"></a>│       │   ├── generator_utils.py  &lt;- Utility functions for generators
+<a href="#__codelineno-0-73" id="__codelineno-0-73" name="__codelineno-0-73"></a>│       │   └── generation_postprocessing.py &lt;- Module for post-processing generated answers
+<a href="#__codelineno-0-74" id="__codelineno-0-74" name="__codelineno-0-74"></a>│       ├── evaluation
+<a href="#__codelineno-0-75" id="__codelineno-0-75" name="__codelineno-0-75"></a>│       │   ├── __init__.py         &lt;- Module docstring
+<a href="#__codelineno-0-76" id="__codelineno-0-76" name="__codelineno-0-76"></a>│       │   ├── evaluation_metrics.py &lt;- Module for evaluating model performance
+<a href="#__codelineno-0-77" id="__codelineno-0-77" name="__codelineno-0-77"></a>│       │   └── evaluation_utils.py &lt;- Utility functions for evaluation
+<a href="#__codelineno-0-78" id="__codelineno-0-78" name="__codelineno-0-78"></a>│       ├── utils
+<a href="#__codelineno-0-79" id="__codelineno-0-79" name="__codelineno-0-79"></a>│       │   ├── __init__.py         &lt;- Module docstring
+<a href="#__codelineno-0-80" id="__codelineno-0-80" name="__codelineno-0-80"></a>│       │   ├── logger.py           &lt;- Module for logging
+<a href="#__codelineno-0-81" id="__codelineno-0-81" name="__codelineno-0-81"></a>│       │   ├── config.py           &lt;- Module for configuration management
+<a href="#__codelineno-0-82" id="__codelineno-0-82" name="__codelineno-0-82"></a>│       │   ├── constants.py        &lt;- Module for constants used across the project
+<a href="#__codelineno-0-83" id="__codelineno-0-83" name="__codelineno-0-83"></a>│       │   └── utils.py            &lt;- General utility functions used across the project
+<a href="#__codelineno-0-84" id="__codelineno-0-84" name="__codelineno-0-84"></a>│       ├── main.py                 &lt;- Main entry point for the application
+<a href="#__codelineno-0-85" id="__codelineno-0-85" name="__codelineno-0-85"></a>│       └── app.py                  &lt;- Application setup and configuration
+<a href="#__codelineno-0-86" id="__codelineno-0-86" name="__codelineno-0-86"></a>├── Dockerfile                      &lt;- Dockerfile for containerizing the application.
+<a href="#__codelineno-0-87" id="__codelineno-0-87" name="__codelineno-0-87"></a>└── tests                           &lt;- Unit and integration tests.
+<a href="#__codelineno-0-88" id="__codelineno-0-88" name="__codelineno-0-88"></a>    ├── __init__.py                 &lt;- Module docstring
+<a href="#__codelineno-0-89" id="__codelineno-0-89" name="__codelineno-0-89"></a>    ├── test_data_preprocessing.py  &lt;- Tests for data preprocessing
+<a href="#__codelineno-0-90" id="__codelineno-0-90" name="__codelineno-0-90"></a>    ├── test_embeddings.py          &lt;- Tests for embedding generation
+<a href="#__codelineno-0-91" id="__codelineno-0-91" name="__codelineno-0-91"></a>    ├── test_retrievers.py          &lt;- Tests for retrievers
+<a href="#__codelineno-0-92" id="__codelineno-0-92" name="__codelineno-0-92"></a>    │   └── test_retriever_preprocessing.py &lt;- Tests for query pre-processing
+<a href="#__codelineno-0-93" id="__codelineno-0-93" name="__codelineno-0-93"></a>    ├── test_generators.py          &lt;- Tests for generators
+<a href="#__codelineno-0-94" id="__codelineno-0-94" name="__codelineno-0-94"></a>    │   └── test_generation_postprocessing.py &lt;- Tests for post-processing generated answers
+<a href="#__codelineno-0-95" id="__codelineno-0-95" name="__codelineno-0-95"></a>    └── test_evaluation.py          &lt;- Tests for evaluation
 </code></pre></div>
-<h2 id="directory-descriptions">Directory Descriptions<a class="headerlink" href="#directory-descriptions" title="Permanent link">¶</a></h2>
+<h3 id="notes-from-conversation-wth-guy">Notes from conversation wth Guy<a class="headerlink" href="#notes-from-conversation-wth-guy" title="Permanent link">¶</a></h3>
+<p>I beleive we need a spearated moducle fo the cunking techniques.</p>
+<p>yes, the data folder must be there because we need local data for you
+to run evaluation etc. So, update the .gitignore file accordignly.
+Let's put in the docs the .gitingore that aligns with the above tree.</p>
+<p>The <code>embedding_generator.py</code> generets the embeddings and push them into
+the vector database. Mention this. Both actions happens in the same
+moducle. Generate embeddings and populate them into OpenSearch.
+Impliciity this module also ingest the metadata.</p>
+<p>For the retrivers we need to add another script there, one for the
+pre-processing. We do not need it to populate it in the first
+interaction but we keep it as placeholder. For example, the
+pre-processing is useful if we get questions that are not well formed
+so, if we want to do query expansion we can hadle it in a pre-process
+module. So, here we are going to do query pre-processing things like.
+For example query expansion or acronym expansion. So, anything we do
+with the query before put in into the retrieval.</p>
+<p>For generation, we need a post-processing module to include thinghs such
+as content moderation. Or  to include the code aobut showoing the
+citation.</p>
+<p>Include a general util for cross function modules maybe the name can be
+helper.py.</p>
+<p>Notice that we already have a Docker file there.</p>
+<p>Docker compose, for backend
+We need also the requiremts.txt file, the dependencies.
+The readme.md put links to all data etc....</p>
+<p>We need the dependicies for the backend.</p>
+<p>In summary, I need to put there:</p>
 <ul>
-<li>
-<p><strong>README.md</strong>: A top-level README file that provides an overview of
-  the project, how to set up and use it, and any other relevant
-  information for developers.</p>
-</li>
-<li>
-<p><strong>Makefile</strong>: Contains commands for setting up and running the
-  project, such as <code>make data</code> for data preparation or <code>make train</code> for
-  model training.</p>
-</li>
-<li>
-<p><strong>config/</strong>: Contains configuration files used by the project. These
-  files define various settings and parameters needed for the project.</p>
-</li>
-<li>
-<p><strong>dist/</strong>: Stores distribution files for the project, such as wheels
-  and tarballs for package distribution.</p>
-</li>
-<li>
-<p><strong>docs/</strong>: Contains all documentation files, including API references,
-  explanations, how-to guides, and tutorials. The assets subdirectory
-  holds images and CSS used in the documentation.</p>
-</li>
-<li>
-<p><strong>logs/</strong>: Stores log files generated by the project, useful for
-  debugging and monitoring.</p>
-</li>
-<li>
-<p><strong>mkdocs.yml</strong>: Configuration file for generating project
-  documentation using mkdocs.</p>
-</li>
-<li>
-<p><strong>notebooks/</strong>: Contains Jupyter notebooks for exploratory data
-  analysis and experiments.</p>
-</li>
-<li>
-<p><strong>poetry.lock</strong>: Poetry lock file that specifies the exact versions of
-  dependencies used in the project.</p>
-</li>
-<li>
-<p><strong>pyproject.toml</strong>: Project configuration file that defines
-  dependencies, tools, and other settings for the project.</p>
-</li>
-<li>
-<p><strong>src/</strong>: Contains all source code for the project. This includes data
-  management scripts, model definitions, utility scripts, and any other
-  code needed for the project.</p>
-</li>
-<li>
-<p><strong>tests/</strong>: Contains all unit and integration tests for the project.
-  Each test module typically corresponds to a module in the src
-  directory.</p>
-</li>
-<li>
-<p><strong>.devcontainer/</strong>: Configuration for VS Code Dev Containers to ensure
-  a consistent development environment.</p>
-</li>
-<li>
-<p><strong>.github/</strong>: Contains GitHub-specific files for repository
-  management, including issue templates, pull request templates,
-  workflows, and contributing guidelines.</p>
-</li>
-<li>
-<p><strong>.gitignore</strong>: Specifies intentionally untracked files to ignore,
-  helping to keep the repository clean.</p>
-</li>
-<li>
-<p><strong>.vscode/</strong>: Contains settings and extensions for Visual Studio Code
-  to ensure a consistent development environment.</p>
-</li>
+<li>README.md</li>
+<li>CONTRIBUTING.md</li>
+<li>pyproject.toml (instead of the requirements.txt)</li>
+<li>.gitignore</li>
+<li>empty files and folders with the right names.</li>
 </ul>
-<h2 id="example-structure">Example Structure<a class="headerlink" href="#example-structure" title="Permanent link">¶</a></h2>
-<h3 id="config-directory">Config Directory<a class="headerlink" href="#config-directory" title="Permanent link">¶</a></h3>
-<p>The config directory holds all configuration files required by the
-project:</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a>config/
-<a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a>├── base_config.cfg
-<a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a>├── config.cfg
-<a href="#__codelineno-1-4" id="__codelineno-1-4" name="__codelineno-1-4"></a>└── settings.yaml
-</code></pre></div>
+<h3 id="summary-of-changes">Summary of Changes<a class="headerlink" href="#summary-of-changes" title="Permanent link">¶</a></h3>
+<ol>
+<li><strong>.env File</strong>: Included for managing environment variables locally.</li>
+<li><strong>data Folder</strong>: Kept for storing raw and processed data files, useful during local development.</li>
+<li><strong>SageMaker Folder</strong>: Added for SageMaker-specific scripts and configurations to manage training and deployment.</li>
+<li><strong>Scripts Folder</strong>: Added for utility scripts that support various tasks such as preprocessing, training, deployment, and data operations.</li>
+<li><strong>Dockerfile</strong>: Included for containerizing the application, ensuring a consistent development and production environment.</li>
+<li><strong>Additional Documentation Files</strong>: Included <code>LICENSE</code> and <code>CODE_OF_CONDUCT.md</code> for legal and community guidelines.</li>
+</ol>
+<p>This structure is designed to support development workflows for Data
+Scientists initially and can be easily extended as Machine Learning
+Engineers join the project. It also ensures that both local development
+and deployment to AWS SageMaker are well-organized and manageable. o
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a>## Directory Descriptions
+<a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a>
+<a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a>- **README.md**: A top-level README file that provides an overview of
+<a href="#__codelineno-1-4" id="__codelineno-1-4" name="__codelineno-1-4"></a>  the project, how to set up and use it, and any other relevant
+<a href="#__codelineno-1-5" id="__codelineno-1-5" name="__codelineno-1-5"></a>  information for developers.
+<a href="#__codelineno-1-6" id="__codelineno-1-6" name="__codelineno-1-6"></a>
+<a href="#__codelineno-1-7" id="__codelineno-1-7" name="__codelineno-1-7"></a>- **Makefile**: Contains commands for setting up and running the
+<a href="#__codelineno-1-8" id="__codelineno-1-8" name="__codelineno-1-8"></a>  project, such as `make data` for data preparation or `make train` for
+<a href="#__codelineno-1-9" id="__codelineno-1-9" name="__codelineno-1-9"></a>  model training.
+<a href="#__codelineno-1-10" id="__codelineno-1-10" name="__codelineno-1-10"></a>
+<a href="#__codelineno-1-11" id="__codelineno-1-11" name="__codelineno-1-11"></a>- **config/**: Contains configuration files used by the project. These
+<a href="#__codelineno-1-12" id="__codelineno-1-12" name="__codelineno-1-12"></a>  files define various settings and parameters needed for the project.
+<a href="#__codelineno-1-13" id="__codelineno-1-13" name="__codelineno-1-13"></a>
+<a href="#__codelineno-1-14" id="__codelineno-1-14" name="__codelineno-1-14"></a>- **dist/**: Stores distribution files for the project, such as wheels
+<a href="#__codelineno-1-15" id="__codelineno-1-15" name="__codelineno-1-15"></a>  and tarballs for package distribution.
+<a href="#__codelineno-1-16" id="__codelineno-1-16" name="__codelineno-1-16"></a>
+<a href="#__codelineno-1-17" id="__codelineno-1-17" name="__codelineno-1-17"></a>- **docs/**: Contains all documentation files, including API references,
+<a href="#__codelineno-1-18" id="__codelineno-1-18" name="__codelineno-1-18"></a>  explanations, how-to guides, and tutorials. The assets subdirectory
+<a href="#__codelineno-1-19" id="__codelineno-1-19" name="__codelineno-1-19"></a>  holds images and CSS used in the documentation.
+<a href="#__codelineno-1-20" id="__codelineno-1-20" name="__codelineno-1-20"></a>
+<a href="#__codelineno-1-21" id="__codelineno-1-21" name="__codelineno-1-21"></a>- **logs/**: Stores log files generated by the project, useful for
+<a href="#__codelineno-1-22" id="__codelineno-1-22" name="__codelineno-1-22"></a>  debugging and monitoring.
+<a href="#__codelineno-1-23" id="__codelineno-1-23" name="__codelineno-1-23"></a>
+<a href="#__codelineno-1-24" id="__codelineno-1-24" name="__codelineno-1-24"></a>- **mkdocs.yml**: Configuration file for generating project
+<a href="#__codelineno-1-25" id="__codelineno-1-25" name="__codelineno-1-25"></a>  documentation using mkdocs.
+<a href="#__codelineno-1-26" id="__codelineno-1-26" name="__codelineno-1-26"></a>
+<a href="#__codelineno-1-27" id="__codelineno-1-27" name="__codelineno-1-27"></a>- **notebooks/**: Contains Jupyter notebooks for exploratory data
+<a href="#__codelineno-1-28" id="__codelineno-1-28" name="__codelineno-1-28"></a>  analysis and experiments.
+<a href="#__codelineno-1-29" id="__codelineno-1-29" name="__codelineno-1-29"></a>
+<a href="#__codelineno-1-30" id="__codelineno-1-30" name="__codelineno-1-30"></a>- **poetry.lock**: Poetry lock file that specifies the exact versions of
+<a href="#__codelineno-1-31" id="__codelineno-1-31" name="__codelineno-1-31"></a>  dependencies used in the project.
+<a href="#__codelineno-1-32" id="__codelineno-1-32" name="__codelineno-1-32"></a>
+<a href="#__codelineno-1-33" id="__codelineno-1-33" name="__codelineno-1-33"></a>- **pyproject.toml**: Project configuration file that defines
+<a href="#__codelineno-1-34" id="__codelineno-1-34" name="__codelineno-1-34"></a>  dependencies, tools, and other settings for the project.
+<a href="#__codelineno-1-35" id="__codelineno-1-35" name="__codelineno-1-35"></a>
+<a href="#__codelineno-1-36" id="__codelineno-1-36" name="__codelineno-1-36"></a>- **src/**: Contains all source code for the project. This includes data
+<a href="#__codelineno-1-37" id="__codelineno-1-37" name="__codelineno-1-37"></a>  management scripts, model definitions, utility scripts, and any other
+<a href="#__codelineno-1-38" id="__codelineno-1-38" name="__codelineno-1-38"></a>  code needed for the project.
+<a href="#__codelineno-1-39" id="__codelineno-1-39" name="__codelineno-1-39"></a>
+<a href="#__codelineno-1-40" id="__codelineno-1-40" name="__codelineno-1-40"></a>- **tests/**: Contains all unit and integration tests for the project.
+<a href="#__codelineno-1-41" id="__codelineno-1-41" name="__codelineno-1-41"></a>  Each test module typically corresponds to a module in the src
+<a href="#__codelineno-1-42" id="__codelineno-1-42" name="__codelineno-1-42"></a>  directory.
+<a href="#__codelineno-1-43" id="__codelineno-1-43" name="__codelineno-1-43"></a>
+<a href="#__codelineno-1-44" id="__codelineno-1-44" name="__codelineno-1-44"></a>- **.devcontainer/**: Configuration for VS Code Dev Containers to ensure
+<a href="#__codelineno-1-45" id="__codelineno-1-45" name="__codelineno-1-45"></a>  a consistent development environment.
+<a href="#__codelineno-1-46" id="__codelineno-1-46" name="__codelineno-1-46"></a>
+<a href="#__codelineno-1-47" id="__codelineno-1-47" name="__codelineno-1-47"></a>- **.github/**: Contains GitHub-specific files for repository
+<a href="#__codelineno-1-48" id="__codelineno-1-48" name="__codelineno-1-48"></a>  management, including issue templates, pull request templates,
+<a href="#__codelineno-1-49" id="__codelineno-1-49" name="__codelineno-1-49"></a>  workflows, and contributing guidelines.
+<a href="#__codelineno-1-50" id="__codelineno-1-50" name="__codelineno-1-50"></a>
+<a href="#__codelineno-1-51" id="__codelineno-1-51" name="__codelineno-1-51"></a>- **.gitignore**: Specifies intentionally untracked files to ignore,
+<a href="#__codelineno-1-52" id="__codelineno-1-52" name="__codelineno-1-52"></a>  helping to keep the repository clean.
+<a href="#__codelineno-1-53" id="__codelineno-1-53" name="__codelineno-1-53"></a>
+<a href="#__codelineno-1-54" id="__codelineno-1-54" name="__codelineno-1-54"></a>- **.vscode/**: Contains settings and extensions for Visual Studio Code
+<a href="#__codelineno-1-55" id="__codelineno-1-55" name="__codelineno-1-55"></a>  to ensure a consistent development environment.
+<a href="#__codelineno-1-56" id="__codelineno-1-56" name="__codelineno-1-56"></a>
+<a href="#__codelineno-1-57" id="__codelineno-1-57" name="__codelineno-1-57"></a>## Example Structure
+<a href="#__codelineno-1-58" id="__codelineno-1-58" name="__codelineno-1-58"></a>
+<a href="#__codelineno-1-59" id="__codelineno-1-59" name="__codelineno-1-59"></a>### Config Directory
+<a href="#__codelineno-1-60" id="__codelineno-1-60" name="__codelineno-1-60"></a>
+<a href="#__codelineno-1-61" id="__codelineno-1-61" name="__codelineno-1-61"></a>The config directory holds all configuration files required by the
+<a href="#__codelineno-1-62" id="__codelineno-1-62" name="__codelineno-1-62"></a>project:
+<a href="#__codelineno-1-63" id="__codelineno-1-63" name="__codelineno-1-63"></a>
+<a href="#__codelineno-1-64" id="__codelineno-1-64" name="__codelineno-1-64"></a>```plaintext
+<a href="#__codelineno-1-65" id="__codelineno-1-65" name="__codelineno-1-65"></a>config/
+<a href="#__codelineno-1-66" id="__codelineno-1-66" name="__codelineno-1-66"></a>├── base_config.cfg
+<a href="#__codelineno-1-67" id="__codelineno-1-67" name="__codelineno-1-67"></a>├── config.cfg
+<a href="#__codelineno-1-68" id="__codelineno-1-68" name="__codelineno-1-68"></a>└── settings.yaml
+</code></pre></div></p>
 <h3 id="documentation-directory">Documentation Directory<a class="headerlink" href="#documentation-directory" title="Permanent link">¶</a></h3>
 <p>The docs directory includes various types of documentation and assets:</p>
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a>docs/
