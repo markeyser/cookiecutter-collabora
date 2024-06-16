@@ -67,13 +67,13 @@ pip install cookiecutter
 Create a new project by running:
 
 ```shell
-cookiecutter gh:markeyser/cookiecutter-two-lanes.git
+cookiecutter gh:markeyser/cookiecutter-collabora.git
 ```
 
 <!-- NOTE: Needs discussion or investigation -@marcos_aguilerakeyser at 12/22/2023, 11:12:51 AM -->
 Other appraoches such as for example:
 
-`cookiecutter git@github.com-personal:markeyser/cookiecutter-two-lanes.git`
+`cookiecutter git@github.com-personal:markeyser/cookiecutter-collabora.git`
 <!--  -->
 
 
@@ -96,7 +96,7 @@ INFO:root:Current working directory: /Users/username/Projects/my-ai-project
 This process will generate a new project with your specific
 configurations.
 
-This will create a new project based on the `cookiecutter-two-lanes` template
+This will create a new project based on the `cookiecutter-collabora` template
 with your specified details.
 
 ```bash
@@ -121,7 +121,7 @@ To see installed Cookiecutter templates, use:
 ```bash
 cookiecutter --list-installed
 1 installed templates:
- * cookiecutter-two-lanes
+ * cookiecutter-collabora
 ```
 
 #### Locating the `.cookiecutters` Directory on a Mac
@@ -143,15 +143,15 @@ Your cloned cookiecutters are usually stored in `~/.cookiecutters/`.
 
    ```bash
    pwd
-   /Users/username/.cookiecutters/cookiecutter-two-lanes
+   /Users/username/.cookiecutters/cookiecutter-collabora
    ```
 
 #### Creating a New Project with a Template
 
-To create a project using the `cookiecutter-two-lanes` template:
+To create a project using the `cookiecutter-collabora` template:
 
 ```bash
-cookiecutter /Users/username/.cookiecutters/cookiecutter-two-lanes
+cookiecutter /Users/username/.cookiecutters/cookiecutter-collabora
 ```
 
 Enter the details for your project when prompted. For instance:
@@ -169,7 +169,7 @@ Enter the details for your project when prompted. For instance:
 INFO:root:Current working directory: /Users/username/Projects/my-ai-project
 ```
 
-This will create a new project based on the `cookiecutter-two-lanes` template
+This will create a new project based on the `cookiecutter-collabora` template
 with your specified details.
 
 ```bash

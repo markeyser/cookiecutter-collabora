@@ -12,21 +12,11 @@ the AI team.
 
 Here is the standardized folder and file structure for AI/ML projects:
 
+## Project Structure
+
 ```text
-├── .devcontainer
-│   └── devcontainer.json           <- Configuration file for VS Code Dev Containers.
 ├── .github
-│   ├── CODEOWNERS                  <- Defines the code owners for the repository.
 │   ├── CONTRIBUTING.md             <- Guidelines for contributing to the project.
-│   ├── ISSUE_TEMPLATE
-│   │   ├── ask_issues_template.md
-│   │   ├── bug_report_template.md
-│   │   ├── data_acquisition_template.md
-│   │   ├── data_creation_template.md
-│   │   ├── experiment_issues_template.md
-│   │   ├── explore_issues_template.md
-│   │   ├── feature_request.md
-│   │   └── model_issues_templates.md
 │   ├── PULL_REQUEST_TEMPLATE
 │   │   └── pull_request_template.md
 │   └── workflows
@@ -39,14 +29,16 @@ Here is the standardized folder and file structure for AI/ML projects:
 │   │   └── data-science-en.txt     <- Custom dictionary for spell checker.
 │   ├── extensions.json             <- List of recommended VS Code extensions.
 │   └── settings.json               <- VS Code workspace settings.
+├── .env                            <- Environment variables configuration file.
 ├── README.md                       <- The top-level README for developers using this project.
 ├── Makefile                        <- Makefile with commands like `make data` or `make train`.
 ├── config                          <- Configuration files for the project.
 │   ├── base_config.cfg
 │   ├── config.cfg
 │   └── settings.yaml
-├── dist                            <- Distribution files (e.g., wheels and tarballs).
-│   └── ...                         <- Versioned distribution files.
+├── data                            <- Data files for the project.
+│   ├── raw                         <- Raw data files.
+│   └── processed                   <- Processed data files.
 ├── docs                            <- Documentation files for the project.
 │   ├── api-reference.md
 │   ├── explanation.md
@@ -60,32 +52,124 @@ Here is the standardized folder and file structure for AI/ML projects:
 ├── mkdocs.yml                      <- Configuration for mkdocs documentation generation.
 ├── notebooks                       <- Jupyter notebooks for exploration and analysis.
 │   └── ...                         <- Individual notebook files.
-├── poetry.lock                     <- Poetry lock file for dependencies.
 ├── pyproject.toml                  <- Project configuration file for dependencies and tools.
+├── poetry.lock                     <- Lock file for poetry to ensure reproducibility.
+├── scripts                         <- Utility scripts for various tasks.
+│   ├── preprocess_data.py          <- Script for data preprocessing
+│   ├── train_model.py              <- Script for model training
+│   ├── deploy_model.py             <- Script for model deployment
+│   ├── evaluate_model.py           <- Script for evaluating model performance
+│   └── data_operations.py          <- Script for S3 data operations
+├── sagemaker                       <- SageMaker-specific scripts and configurations.
+│   ├── train_script.py             <- Training script for SageMaker.
+│   ├── deploy_script.py            <- Deployment script for SageMaker.
+│   ├── preprocessing_script.py     <- Preprocessing script for SageMaker.
+│   ├── hyperparameters.json        <- Hyperparameters for SageMaker training jobs.
+│   └── sagemaker_config.json       <- Configuration for SageMaker jobs.
 ├── src                             <- Source code for the project.
-│   ├── project_name                <- Main package for the project.
-│   │   ├── __init__.py
-│   │   ├── data                    <- Data management scripts.
-│   │   │   ├── __init__.py
-│   │   │   ├── external            <- External data sources.
-│   │   │   ├── features            <- Feature engineering scripts.
-│   │   │   ├── interim             <- Intermediate data storage.
-│   │   │   └── processed           <- Processed data ready for modeling.
-│   │   ├── models                  <- Model definitions and training scripts.
-│   │   │   ├── __init__.py
-│   │   │   └── ...                 <- Model files and scripts.
-│   │   ├── utils                   <- Utility scripts.
-│   │   │   ├── __init__.py
-│   │   │   └── utils.py
-│   │   ├── logs                    <- Logs specific to source code operations.
-│   │   │   └── application.log
-│   │   ├── __pycache__             <- Cached bytecode files.
-│   │   └── ...                     <- Other source files and scripts.
+│   └── package_name                <- Main package directory.
+│       ├── __init__.py             <- Module docstring
+│       ├── data_preprocessing
+│       │   ├── __init__.py         <- Module docstring
+│       │   ├── data_reader.py      <- Module for reading original documents
+│       │   ├── data_cleaning.py    <- Module for cleaning and preprocessing documents
+│       │   └── data_chunking.py    <- Module for chunking documents
+│       ├── embeddings
+│       │   ├── __init__.py         <- Module docstring
+│       │   ├── embedding_generator.py <- Module for generating embeddings
+│       │   └── embedding_utils.py  <- Utility functions for embeddings
+│       ├── retrievers
+│       │   ├── __init__.py         <- Module docstring
+│       │   ├── retriever.py        <- Module for retrieving relevant chunks
+│       │   ├── retriever_utils.py  <- Utility functions for retrievers
+│       │   └── retriever_preprocessing.py <- Module for pre-processing queries before retrieval
+│       ├── generators
+│       │   ├── __init__.py         <- Module docstring
+│       │   ├── generator.py        <- Module for generating answers from retrieved chunks
+│       │   ├── generator_utils.py  <- Utility functions for generators
+│       │   └── generation_postprocessing.py <- Module for post-processing generated answers
+│       ├── evaluation
+│       │   ├── __init__.py         <- Module docstring
+│       │   ├── evaluation_metrics.py <- Module for evaluating model performance
+│       │   └── evaluation_utils.py <- Utility functions for evaluation
+│       ├── utils
+│       │   ├── __init__.py         <- Module docstring
+│       │   ├── logger.py           <- Module for logging
+│       │   ├── config.py           <- Module for configuration management
+│       │   ├── constants.py        <- Module for constants used across the project
+│       │   └── utils.py            <- General utility functions used across the project
+│       ├── main.py                 <- Main entry point for the application
+│       └── app.py                  <- Application setup and configuration
+├── Dockerfile                      <- Dockerfile for containerizing the application.
 └── tests                           <- Unit and integration tests.
-    ├── __init__.py
-    ├── test_module1.py
-    ├── test_module2.py
-    └── ...
+    ├── __init__.py                 <- Module docstring
+    ├── test_data_preprocessing.py  <- Tests for data preprocessing
+    ├── test_embeddings.py          <- Tests for embedding generation
+    ├── test_retrievers.py          <- Tests for retrievers
+    │   └── test_retriever_preprocessing.py <- Tests for query pre-processing
+    ├── test_generators.py          <- Tests for generators
+    │   └── test_generation_postprocessing.py <- Tests for post-processing generated answers
+    └── test_evaluation.py          <- Tests for evaluation
+```
+
+### Notes from conversation wth Guy
+
+I beleive we need a spearated moducle fo the cunking techniques.
+
+yes, the data folder must be there because we need local data for you
+to run evaluation etc. So, update the .gitignore file accordignly.
+Let's put in the docs the .gitingore that aligns with the above tree.
+
+The `embedding_generator.py` generets the embeddings and push them into
+the vector database. Mention this. Both actions happens in the same
+moducle. Generate embeddings and populate them into OpenSearch.
+Impliciity this module also ingest the metadata.
+
+For the retrivers we need to add another script there, one for the
+pre-processing. We do not need it to populate it in the first
+interaction but we keep it as placeholder. For example, the
+pre-processing is useful if we get questions that are not well formed
+so, if we want to do query expansion we can hadle it in a pre-process
+module. So, here we are going to do query pre-processing things like.
+For example query expansion or acronym expansion. So, anything we do
+with the query before put in into the retrieval.
+
+For generation, we need a post-processing module to include thinghs such
+as content moderation. Or  to include the code aobut showoing the
+citation.
+
+Include a general util for cross function modules maybe the name can be
+helper.py.
+
+Notice that we already have a Docker file there.
+
+Docker compose, for backend
+We need also the requiremts.txt file, the dependencies.
+The readme.md put links to all data etc....
+
+We need the dependicies for the backend.
+
+In summary, I need to put there:
+
+- README.md
+- CONTRIBUTING.md
+- pyproject.toml (instead of the requirements.txt)
+- .gitignore
+- empty files and folders with the right names.
+
+### Summary of Changes
+
+1. **.env File**: Included for managing environment variables locally.
+2. **data Folder**: Kept for storing raw and processed data files, useful during local development.
+3. **SageMaker Folder**: Added for SageMaker-specific scripts and configurations to manage training and deployment.
+4. **Scripts Folder**: Added for utility scripts that support various tasks such as preprocessing, training, deployment, and data operations.
+5. **Dockerfile**: Included for containerizing the application, ensuring a consistent development and production environment.
+6. **Additional Documentation Files**: Included `LICENSE` and `CODE_OF_CONDUCT.md` for legal and community guidelines.
+
+This structure is designed to support development workflows for Data
+Scientists initially and can be easily extended as Machine Learning
+Engineers join the project. It also ensures that both local development
+and deployment to AWS SageMaker are well-organized and manageable. o
 ```
 
 ## Directory Descriptions

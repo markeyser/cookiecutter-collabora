@@ -20,7 +20,7 @@ collaboration.
 
 - Create a branch following the naming standard described in the [Git
   Branch Naming
-  Standards](https://markeyser.github.io/cookiecutter-two-lanes/how-to-guides/git-branch-naming-standards/).
+  Standards](https://markeyser.github.io/cookiecutter-collabora/how-to-guides/git-branch-naming-standards/).
   Including the JIRA number in the branch name aids in navigation across
   the repository.
 

@@ -35,10 +35,10 @@ cd path/to/your/Projects
     Run Cookiecutter and provide the path to the unzipped template folder:
 
     ``` bash
-    cookiecutter path/to/unzipped/cookiecutter-two-lanes
+    cookiecutter path/to/unzipped/cookiecutter-collabora
     ```
 
-    Replace `path/to/unzipped/cookiecutter-two-lanes` with the actual path to the unzipped template. Follow the prompts to input details for your new project.
+    Replace `path/to/unzipped/cookiecutter-collabora` with the actual path to the unzipped template. Follow the prompts to input details for your new project.
 
 ### 4. Finalizing the Project
 

@@ -1,7 +1,7 @@
 site_name: Cookiecutter Collabora
-site_url: "https://markeyser.github.io/cookiecutter-two-lanes/"
-repo_url: "https://github.com/markeyser/cookiecutter-two-lanes"
-repo_name: markeyser.github.io/cookiecutter-two-lanes/
+site_url: "https://markeyser.github.io/cookiecutter-collabora/"
+repo_url: "https://github.com/markeyser/cookiecutter-collabora"
+repo_name: markeyser.github.io/cookiecutter-collabora/
 edit_uri: edit/main/docs/
 
 theme:
@@ -40,7 +40,7 @@ theme:
 extra:
   social:
     - icon: "fontawesome/brands/github"
-      link: "https://github.com/markeyser/cookiecutter-two-lanes"
+      link: "https://github.com/markeyser/cookiecutter-collabora"
 
 copyright: Copyright &copy; 2022 - 2024 Marcos Aguilera-Keyser
 

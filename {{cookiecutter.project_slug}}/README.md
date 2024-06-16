@@ -112,7 +112,7 @@ see our [CONTRIBUTING.md](.github/CONTRIBUTING.md) file.
 
 ⚡⚡ **Project Creation Notice**: This project has been created with the
 help of the [Cookiecutter Two
-Lanes](https://github.com/markeyser/cookiecutter-two-lanes) template.
+Lanes](https://github.com/markeyser/cookiecutter-collabora) template.
 For comprehensive guidance on utilizing the tools included in the
 project repository, please visit the [Cookiecutter Collabora Template
-Docs](https://markeyser.github.io/cookiecutter-two-lanes/). ⚡⚡
+Docs](https://markeyser.github.io/cookiecutter-collabora/). ⚡⚡
