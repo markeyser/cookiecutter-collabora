@@ -1,8 +1,6 @@
-[![Built with Material for MkDocs](https://img.shields.io/badge/Material_for_MkDocs-526CFE?style=for-the-badge&logo=MaterialForMkDocs&logoColor=white)](https://squidfunk.github.io/mkdocs-material/)
+# Cookiecutter Collabora
 
-# Cookiecutter Two Lanes
-
-Welcome to Cookiecutter Two Lanes, a
+Welcome to Cookiecutter Collabora, a
 [Cookiecutter](https://www.cookiecutter.io/) template engineered for
 artificial intelligence, machine learning, and generative AI projects.
 This template isn't just a starting point; it's a comprehensive
@@ -10,12 +8,6 @@ framework designed to guide you through the intricacies of AI project
 development.  It combines best practices, industry standards, and a
 suite of tools that aligns with the dynamic needs of modern AI
 development.
-
-<p align="center">
-  <img src="docs/assets/logo-gh-01.jpg" alt="Logo" width="1000"/>
-  <br>
-  <em>The two lanes in our logo represents the uniformity and consistency that our cookie-cutter template brings to AI projects, ensuring each starts with a standardized foundation, akin to two lanes moving forward in harmony, to guarantee uniformity from the beginning.</em>
-</p>
 
 ## 🌟 Features
 

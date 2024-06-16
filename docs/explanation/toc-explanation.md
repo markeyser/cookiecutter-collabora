@@ -1,7 +1,7 @@
 # Explanation
 
 !!! info "About This Section"
-    The Explanation section delves deep into the theoretical underpinnings and practical applications within the Cookiecutter Two Lanes project. It serves as a pivotal educational hub for users and developers seeking to grasp the foundational concepts and sophisticated methodologies that are integral to the project.
+    The Explanation section delves deep into the theoretical underpinnings and practical applications within the Cookiecutter Collabora project. It serves as a pivotal educational hub for users and developers seeking to grasp the foundational concepts and sophisticated methodologies that are integral to the project.
 
 ## Purpose
 
