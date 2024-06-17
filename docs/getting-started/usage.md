@@ -20,19 +20,23 @@ You will be prompted to enter details for your project, such as project
 name, OS type, author name, and more. For example:
 
 ```bash
-[1/13] project_name (Project Name): My AI Project
-[2/13] project_slug (my-ai-project):
-[3/13] package_name (myaiproject):
-[4/13] environment_name (my-ai-project-env):
-[5/13] author_name (Your name or your organization/company/team): Jane Doe
-[6/13] author_email (youremail@example.com): jane.doe@example.com
-[7/13] description (A short description of the project.): AI project development
-[8/13] independent_reviewer (github_username_of_independent_reviewer):
-[9/13] site_name (My AI Project Docs):
-[10/13] os (Operating System) [Linux, Windows, Mac]: Linux
-[11/13] cloud_provider (Cloud Provider) [Google Cloud, AWS, Azure]: AWS
-[12/13] ml_project_type (Type of ML Project) [Python package, Supervised ML project, Unsupervised ML project Generative AI project]: Generative AI project
-[13/13] data_type (Type of Data) [Structured, Unstructured, Semi-structured]: Unstructured
+[1/17] project_name (Project Name): My AI Project
+[2/17] project_slug (Project Slug): my-ai-project
+[3/17] package_name (Package Name): myaiproject
+[4/17] env_name (Environment Name): my-ai-project-env
+[5/17] author (Author Name): Jane Doe
+[6/17] email (Author Email): jane.doe@example.com
+[7/17] description (Project Description): AI project development
+[8/17] reviewer (Independent Reviewer GitHub): 
+[9/17] site_name (Documentation Site Name): My AI Project Docs
+[10/17] os (Operating System) [Linux, Windows, Mac]: Linux
+[11/17] cloud (Cloud Provider) [Google Cloud, AWS, Azure]: AWS
+[12/17] ml_type (ML Project Type) [Package, Supervised, Unsupervised, Generative AI]: Generative AI
+[13/17] data_type (Data Type) [Structured, Unstructured, Semi-structured]: Unstructured
+[14/17] packaging (Packaging Tool) [Poetry, Conda]: Poetry
+[15/17] venv (Create Virtual Environment) [Yes, No]: Yes
+[16/17] formatter (Code Formatter) [Black, Ruff]: Black
+[17/17] docker (Use Docker with VS Code Dev Containers) [Yes, No]: Yes
 INFO:root:Current working directory: /Users/username/Projects/my-ai-project
 ```
 
@@ -99,19 +103,23 @@ cookiecutter /Users/username/.cookiecutters/cookiecutter-collabora
 Enter the details for your project when prompted. For instance:
 
 ```bash
-[1/13] project_name (Project Name): My AI Project
-[2/13] project_slug (my-ai-project):
-[3/13] package_name (myaiproject):
-[4/13] environment_name (my-ai-project-env):
-[5/13] author_name (Your name or your organization/company/team): Jane Doe
-[6/13] author_email (youremail@example.com): jane.doe@example.com
-[7/13] description (A short description of the project.): AI project development
-[8/13] independent_reviewer (github_username_of_independent_reviewer):
-[9/13] site_name (My AI Project Docs):
-[10/13] os (Operating System) [Linux, Windows, Mac]: Linux
-[11/13] cloud_provider (Cloud Provider) [Google Cloud, AWS, Azure]: AWS
-[12/13] ml_project_type (Type of ML Project) [Python package, Supervised ML project, Unsupervised ML project Generative AI project]: Generative AI project
-[13/13] data_type (Type of Data) [Structured, Unstructured, Semi-structured]: Unstructured
+[1/17] project_name (Project Name): My AI Project
+[2/17] project_slug (Project Slug): my-ai-project
+[3/17] package_name (Package Name): myaiproject
+[4/17] env_name (Environment Name): my-ai-project-env
+[5/17] author (Author Name): Jane Doe
+[6/17] email (Author Email): jane.doe@example.com
+[7/17] description (Project Description): AI project development
+[8/17] reviewer (Independent Reviewer GitHub): 
+[9/17] site_name (Documentation Site Name): My AI Project Docs
+[10/17] os (Operating System) [Linux, Windows, Mac]: Linux
+[11/17] cloud (Cloud Provider) [Google Cloud, AWS, Azure]: AWS
+[12/17] ml_type (ML Project Type) [Package, Supervised, Unsupervised, Generative AI]: Generative AI
+[13/17] data_type (Data Type) [Structured, Unstructured, Semi-structured]: Unstructured
+[14/17] packaging (Packaging Tool) [Poetry, Conda]: Poetry
+[15/17] venv (Create Virtual Environment) [Yes, No]: Yes
+[16/17] formatter (Code Formatter) [Black, Ruff]: Black
+[17/17] docker (Use Docker with VS Code Dev Containers) [Yes, No]: Yes
 INFO:root:Current working directory: /Users/username/Projects/my-ai-project
 ```
 
