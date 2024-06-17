@@ -11,6 +11,8 @@ theme:
     repo: simple/github
   features:
     - search.highlight
+    - navigation.tabs
+    - content.code.annotate
   palette:
     - media: "(prefers-color-scheme)"
       toggle:
@@ -18,7 +20,7 @@ theme:
         name: Switch to light mode
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: indigo
+      primary: black
       accent: indigo
       toggle:
         icon: material/toggle-switch
@@ -34,8 +36,6 @@ theme:
   font:
     text: Roboto
     code: Roboto Mono
-  features:
-    - content.code.annotate
 
 extra:
   social:
@@ -102,6 +102,12 @@ extra_css:
 
 nav:
   - Home: index.md
+  - Getting starded:
+      - Usage: getting-started/usage.md
+      - Standards Cheat Sheet: getting-started/standards_summary.md
+      - Cofiguration Guidelines: getting-started/config_files_guidelines.md
+      - Resource Compilation: getting-started/resource_compilation.md
+      - Purpose and Vision: getting-started/purpose_and_vision.md
   - Tutorials:
       - TOC: tutorials/toc-tutorials.md
       - Black Formatter: tutorials/black-formatter.md
