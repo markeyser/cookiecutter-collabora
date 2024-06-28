@@ -10,7 +10,7 @@ theme:
   icon:
     repo: simple/github
   features:
-    - search.highlight
+    - search
     - navigation.tabs
     - content.code.annotate
     - content.code.copy
