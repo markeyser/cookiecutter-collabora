@@ -11,15 +11,15 @@ This flowchart provides a visual representation of the key stages involved in th
 title: Software Development Cycle
 ---
 flowchart TB
-  A([1. Open the JIRA story <a href='https://markeyser.github.io/cookiecutter-collabora/how-to-guides/jira-story-best-practices/?h=jira'>link</a>]) --> B([2. Create a branch from main <a href='https://markeyser.github.io/cookiecutter-collabora/how-to-guides/git-branch-naming-standards/'>link</a>])
+  A([1. Open the JIRA story <a href='https://markeyser.github.io/cookiecutter-collabora/how-to-guides/jira-story-best-practices/?h=jira'>link</a>]) --> B([2. Create a branch from main 🪝 <a href='https://markeyser.github.io/cookiecutter-collabora/how-to-guides/git-branch-naming-standards/'>link</a>])
   B --> C([3. Develop Python code])
   C --> D([4. Debug Python code])
-  D --> E([5. Unit test with PyTest <a href='https://markeyser.github.io/cookiecutter-collabora/how-to-guides/introduction-to-doctest/?h=test'>link</a>])
+  D --> E([5. Unit test with PyTest 🪝 <a href='https://markeyser.github.io/cookiecutter-collabora/how-to-guides/introduction-to-doctest/?h=test'>link</a>])
   E --> F([6. Type check with Mypy <a href='https://markeyser.github.io/cookiecutter-collabora/how-to-guides/type-checking-mypy/?h=type+che'>link</a>])
   F --> G([7. Refactor code])
-  G --> H([8. Format code with Black <a href='https://markeyser.github.io/cookiecutter-collabora/tutorials/black-formatter/?h=black'>link</a>])
-  H --> I([9. Lint code with Ruff <a href='https://markeyser.github.io/cookiecutter-collabora/tutorials/ruff-linter/?h=lint'>link</a>])
-  I --> J([10. Pass pre-commit hooks])
+  G --> H([8. Format code with Black 🪝 <a href='https://markeyser.github.io/cookiecutter-collabora/tutorials/black-formatter/?h=black'>link</a>])
+  H --> I([9. Lint code with Ruff 🪝 <a href='https://markeyser.github.io/cookiecutter-collabora/tutorials/ruff-linter/?h=lint'>link</a>])
+  I --> J([10. Pass pre-commit hooks 🪝])
   J --> K([11. Update documentation <a href='https://markeyser.github.io/cookiecutter-collabora/tutorials/mkdocs-docs/?h=mkd'>link</a>])
   K --> L([12. Commit changes <a href='https://markeyser.github.io/cookiecutter-collabora/how-to-guides/commit-message-standards-ml/?h=commit'>link</a>])
   L --> M([13. Push to remote repo])
