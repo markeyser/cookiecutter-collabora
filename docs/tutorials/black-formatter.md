@@ -1,5 +1,17 @@
 # Using Black Code Formatter in Your Project
 
+!!! example "Running Black Formatter"
+
+    To format your Python script with Black, run the following command in
+    your terminal:
+
+    ```bash
+    black sample_script.py
+    ```
+
+    This command will reformat your `sample_script.py` file according to
+    Black's style guidelines.
+
 Black is an uncompromising code formatter. It ensures that your Python
 code adheres to a consistent, readable style. The setup you have thanks
 to the Cookiecutter template makes it even more convenient to use Black
