@@ -323,6 +323,34 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
+<a class="md-nav__link" href="#example-prompt-for-a-function">
+<span class="md-ellipsis">
+      Example Prompt for a Function
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#generated-docstring">
+<span class="md-ellipsis">
+      Generated Docstring
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#example-prompt-for-a-class">
+<span class="md-ellipsis">
+      Example Prompt for a Class
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#generated-docstring_1">
+<span class="md-ellipsis">
+      Generated Docstring
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#getting-started-with-ruff-check">
 <span class="md-ellipsis">
       Getting Started with ruff check
@@ -936,6 +964,34 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
+<a class="md-nav__link" href="#example-prompt-for-a-function">
+<span class="md-ellipsis">
+      Example Prompt for a Function
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#generated-docstring">
+<span class="md-ellipsis">
+      Generated Docstring
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#example-prompt-for-a-class">
+<span class="md-ellipsis">
+      Example Prompt for a Class
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#generated-docstring_1">
+<span class="md-ellipsis">
+      Generated Docstring
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#getting-started-with-ruff-check">
 <span class="md-ellipsis">
       Getting Started with ruff check
@@ -1121,6 +1177,171 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="ruff-python-linting-for-clean-and-compliant-code">Ruff: Python Linting for Clean and Compliant Code<a class="headerlink" href="#ruff-python-linting-for-clean-and-compliant-code" title="Permanent link">¶</a></h1>
+<div class="admonition example">
+<p class="admonition-title">ChatGPT Prompt for Google-Style Docstrings</p>
+<p>A fast and easy way to create Google-style docstrings is by using ChatGPT. 
+You can provide a simple prompt to request the creation of the docstring 
+for any Python function.</p>
+<h3 id="example-prompt-for-a-function">Example Prompt for a Function<a class="headerlink" href="#example-prompt-for-a-function" title="Permanent link">¶</a></h3>
+<p>Here’s an example prompt you could use with ChatGPT to request a Google-style 
+docstring following the settings in your <code>.vscode/settings.json</code> file:</p>
+<p><strong>Prompt:</strong></p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>Create a Google-style docstring for the following Python function. 
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a>Limit comments to 72 characters per line and code lines to 79 characters.
+<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a>
+<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a>Function:
+<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a>def add_numbers(a, b):
+<a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a>    result = a + b
+<a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a>    return result
+<a href="#__codelineno-0-8" id="__codelineno-0-8" name="__codelineno-0-8"></a>
+<a href="#__codelineno-0-9" id="__codelineno-0-9" name="__codelineno-0-9"></a>Context (optional): This function adds two numbers together.
+</code></pre></div>
+<h3 id="generated-docstring">Generated Docstring<a class="headerlink" href="#generated-docstring" title="Permanent link">¶</a></h3>
+<p>Using the prompt above, ChatGPT will generate a docstring similar to this:</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="k">def</span> <span class="nf">add_numbers</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+<a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="w">    </span><span class="sd">"""</span>
+<a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="sd">    Adds two numbers together.</span>
+<a href="#__codelineno-1-4" id="__codelineno-1-4" name="__codelineno-1-4"></a>
+<a href="#__codelineno-1-5" id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="sd">    Args:</span>
+<a href="#__codelineno-1-6" id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="sd">        a (int): The first number.</span>
+<a href="#__codelineno-1-7" id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="sd">        b (int): The second number.</span>
+<a href="#__codelineno-1-8" id="__codelineno-1-8" name="__codelineno-1-8"></a>
+<a href="#__codelineno-1-9" id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="sd">    Returns:</span>
+<a href="#__codelineno-1-10" id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="sd">        int: The sum of the two numbers.</span>
+<a href="#__codelineno-1-11" id="__codelineno-1-11" name="__codelineno-1-11"></a>
+<a href="#__codelineno-1-12" id="__codelineno-1-12" name="__codelineno-1-12"></a><span class="sd">    Raises:</span>
+<a href="#__codelineno-1-13" id="__codelineno-1-13" name="__codelineno-1-13"></a><span class="sd">        TypeError: If either 'a' or 'b' is not an integer.</span>
+<a href="#__codelineno-1-14" id="__codelineno-1-14" name="__codelineno-1-14"></a><span class="sd">    """</span>
+<a href="#__codelineno-1-15" id="__codelineno-1-15" name="__codelineno-1-15"></a>    <span class="n">result</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+<a href="#__codelineno-1-16" id="__codelineno-1-16" name="__codelineno-1-16"></a>    <span class="k">return</span> <span class="n">result</span>
+</code></pre></div>
+<h3 id="example-prompt-for-a-class">Example Prompt for a Class<a class="headerlink" href="#example-prompt-for-a-class" title="Permanent link">¶</a></h3>
+<p>Here’s an example prompt you could use with ChatGPT to request Google-style 
+docstrings for an entire class, including the module-level docstring, 
+class-level docstring, and docstrings for each method:</p>
+<p><strong>Prompt:</strong></p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a>Create Google-style docstrings for the following Python class. 
+<a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a>Limit comments to 72 characters per line and code lines to 79 characters.
+<a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a>Include the module-level docstring at the very top of the script before the imports,
+<a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a>the class-level docstring, and the docstrings for each method.
+<a href="#__codelineno-2-5" id="__codelineno-2-5" name="__codelineno-2-5"></a>
+<a href="#__codelineno-2-6" id="__codelineno-2-6" name="__codelineno-2-6"></a>Class:
+<a href="#__codelineno-2-7" id="__codelineno-2-7" name="__codelineno-2-7"></a>class TextProcessor:
+<a href="#__codelineno-2-8" id="__codelineno-2-8" name="__codelineno-2-8"></a>    def __init__(self, language):
+<a href="#__codelineno-2-9" id="__codelineno-2-9" name="__codelineno-2-9"></a>        if language not in ['en', 'es', 'fr']:
+<a href="#__codelineno-2-10" id="__codelineno-2-10" name="__codelineno-2-10"></a>            raise ValueError(f"Unsupported language: {language}")
+<a href="#__codelineno-2-11" id="__codelineno-2-11" name="__codelineno-2-11"></a>        self.language = language
+<a href="#__codelineno-2-12" id="__codelineno-2-12" name="__codelineno-2-12"></a>
+<a href="#__codelineno-2-13" id="__codelineno-2-13" name="__codelineno-2-13"></a>    def clean_text(self, text):
+<a href="#__codelineno-2-14" id="__codelineno-2-14" name="__codelineno-2-14"></a>        if not isinstance(text, str):
+<a href="#__codelineno-2-15" id="__codelineno-2-15" name="__codelineno-2-15"></a>            raise TypeError("Input text must be a string")
+<a href="#__codelineno-2-16" id="__codelineno-2-16" name="__codelineno-2-16"></a>        # Implementation goes here
+<a href="#__codelineno-2-17" id="__codelineno-2-17" name="__codelineno-2-17"></a>        pass
+<a href="#__codelineno-2-18" id="__codelineno-2-18" name="__codelineno-2-18"></a>
+<a href="#__codelineno-2-19" id="__codelineno-2-19" name="__codelineno-2-19"></a>    def tokenize(self, text):
+<a href="#__codelineno-2-20" id="__codelineno-2-20" name="__codelineno-2-20"></a>        if not isinstance(text, str):
+<a href="#__codelineno-2-21" id="__codelineno-2-21" name="__codelineno-2-21"></a>            raise TypeError("Input text must be a string")
+<a href="#__codelineno-2-22" id="__codelineno-2-22" name="__codelineno-2-22"></a>        # Implementation goes here
+<a href="#__codelineno-2-23" id="__codelineno-2-23" name="__codelineno-2-23"></a>        pass
+<a href="#__codelineno-2-24" id="__codelineno-2-24" name="__codelineno-2-24"></a>
+<a href="#__codelineno-2-25" id="__codelineno-2-25" name="__codelineno-2-25"></a>    def analyze_sentiment(self, text):
+<a href="#__codelineno-2-26" id="__codelineno-2-26" name="__codelineno-2-26"></a>        if not isinstance(text, str):
+<a href="#__codelineno-2-27" id="__codelineno-2-27" name="__codelineno-2-27"></a>            raise TypeError("Input text must be a string")
+<a href="#__codelineno-2-28" id="__codelineno-2-28" name="__codelineno-2-28"></a>        # Implementation goes here
+<a href="#__codelineno-2-29" id="__codelineno-2-29" name="__codelineno-2-29"></a>        pass
+<a href="#__codelineno-2-30" id="__codelineno-2-30" name="__codelineno-2-30"></a>
+<a href="#__codelineno-2-31" id="__codelineno-2-31" name="__codelineno-2-31"></a>Context (optional): This class is used for text processing in NLP tasks.
+<a href="#__codelineno-2-32" id="__codelineno-2-32" name="__codelineno-2-32"></a>It includes methods for cleaning text, tokenizing sentences, and analyzing sentiment.
+</code></pre></div>
+<h3 id="generated-docstring_1">Generated Docstring<a class="headerlink" href="#generated-docstring_1" title="Permanent link">¶</a></h3>
+<p>ChatGPT might respond with:</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="sd">"""</span>
+<a href="#__codelineno-3-2" id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="sd">This module provides text processing utilities for NLP projects.</span>
+<a href="#__codelineno-3-3" id="__codelineno-3-3" name="__codelineno-3-3"></a>
+<a href="#__codelineno-3-4" id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="sd">The utilities include functions for text cleaning, tokenization, and </span>
+<a href="#__codelineno-3-5" id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="sd">sentiment analysis.</span>
+<a href="#__codelineno-3-6" id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="sd">"""</span>
+<a href="#__codelineno-3-7" id="__codelineno-3-7" name="__codelineno-3-7"></a>
+<a href="#__codelineno-3-8" id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="k">class</span> <span class="nc">TextProcessor</span><span class="p">:</span>
+<a href="#__codelineno-3-9" id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="w">    </span><span class="sd">"""</span>
+<a href="#__codelineno-3-10" id="__codelineno-3-10" name="__codelineno-3-10"></a><span class="sd">    A class used to perform text processing for NLP tasks.</span>
+<a href="#__codelineno-3-11" id="__codelineno-3-11" name="__codelineno-3-11"></a>
+<a href="#__codelineno-3-12" id="__codelineno-3-12" name="__codelineno-3-12"></a><span class="sd">    This class includes methods for cleaning text, tokenizing sentences,</span>
+<a href="#__codelineno-3-13" id="__codelineno-3-13" name="__codelineno-3-13"></a><span class="sd">    and calculating sentiment scores.</span>
+<a href="#__codelineno-3-14" id="__codelineno-3-14" name="__codelineno-3-14"></a>
+<a href="#__codelineno-3-15" id="__codelineno-3-15" name="__codelineno-3-15"></a><span class="sd">    Attributes:</span>
+<a href="#__codelineno-3-16" id="__codelineno-3-16" name="__codelineno-3-16"></a><span class="sd">        language (str): The language of the text to be processed.</span>
+<a href="#__codelineno-3-17" id="__codelineno-3-17" name="__codelineno-3-17"></a><span class="sd">    """</span>
+<a href="#__codelineno-3-18" id="__codelineno-3-18" name="__codelineno-3-18"></a>
+<a href="#__codelineno-3-19" id="__codelineno-3-19" name="__codelineno-3-19"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">language</span><span class="p">):</span>
+<a href="#__codelineno-3-20" id="__codelineno-3-20" name="__codelineno-3-20"></a><span class="w">        </span><span class="sd">"""</span>
+<a href="#__codelineno-3-21" id="__codelineno-3-21" name="__codelineno-3-21"></a><span class="sd">        Initializes the TextProcessor with a specified language.</span>
+<a href="#__codelineno-3-22" id="__codelineno-3-22" name="__codelineno-3-22"></a>
+<a href="#__codelineno-3-23" id="__codelineno-3-23" name="__codelineno-3-23"></a><span class="sd">        Args:</span>
+<a href="#__codelineno-3-24" id="__codelineno-3-24" name="__codelineno-3-24"></a><span class="sd">            language (str): The language of the text to be processed.</span>
+<a href="#__codelineno-3-25" id="__codelineno-3-25" name="__codelineno-3-25"></a>
+<a href="#__codelineno-3-26" id="__codelineno-3-26" name="__codelineno-3-26"></a><span class="sd">        Raises:</span>
+<a href="#__codelineno-3-27" id="__codelineno-3-27" name="__codelineno-3-27"></a><span class="sd">            ValueError: If the provided language is not supported.</span>
+<a href="#__codelineno-3-28" id="__codelineno-3-28" name="__codelineno-3-28"></a><span class="sd">        """</span>
+<a href="#__codelineno-3-29" id="__codelineno-3-29" name="__codelineno-3-29"></a>        <span class="k">if</span> <span class="n">language</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">'en'</span><span class="p">,</span> <span class="s1">'es'</span><span class="p">,</span> <span class="s1">'fr'</span><span class="p">]:</span>
+<a href="#__codelineno-3-30" id="__codelineno-3-30" name="__codelineno-3-30"></a>            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Unsupported language: </span><span class="si">{</span><span class="n">language</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<a href="#__codelineno-3-31" id="__codelineno-3-31" name="__codelineno-3-31"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">language</span> <span class="o">=</span> <span class="n">language</span>
+<a href="#__codelineno-3-32" id="__codelineno-3-32" name="__codelineno-3-32"></a>
+<a href="#__codelineno-3-33" id="__codelineno-3-33" name="__codelineno-3-33"></a>    <span class="k">def</span> <span class="nf">clean_text</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="p">):</span>
+<a href="#__codelineno-3-34" id="__codelineno-3-34" name="__codelineno-3-34"></a><span class="w">        </span><span class="sd">"""</span>
+<a href="#__codelineno-3-35" id="__codelineno-3-35" name="__codelineno-3-35"></a><span class="sd">        Cleans the input text by removing special characters and extra spaces.</span>
+<a href="#__codelineno-3-36" id="__codelineno-3-36" name="__codelineno-3-36"></a>
+<a href="#__codelineno-3-37" id="__codelineno-3-37" name="__codelineno-3-37"></a><span class="sd">        Args:</span>
+<a href="#__codelineno-3-38" id="__codelineno-3-38" name="__codelineno-3-38"></a><span class="sd">            text (str): The text to be cleaned.</span>
+<a href="#__codelineno-3-39" id="__codelineno-3-39" name="__codelineno-3-39"></a>
+<a href="#__codelineno-3-40" id="__codelineno-3-40" name="__codelineno-3-40"></a><span class="sd">        Returns:</span>
+<a href="#__codelineno-3-41" id="__codelineno-3-41" name="__codelineno-3-41"></a><span class="sd">            str: The cleaned text.</span>
+<a href="#__codelineno-3-42" id="__codelineno-3-42" name="__codelineno-3-42"></a>
+<a href="#__codelineno-3-43" id="__codelineno-3-43" name="__codelineno-3-43"></a><span class="sd">        Raises:</span>
+<a href="#__codelineno-3-44" id="__codelineno-3-44" name="__codelineno-3-44"></a><span class="sd">            TypeError: If the input text is not a string.</span>
+<a href="#__codelineno-3-45" id="__codelineno-3-45" name="__codelineno-3-45"></a><span class="sd">        """</span>
+<a href="#__codelineno-3-46" id="__codelineno-3-46" name="__codelineno-3-46"></a>        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+<a href="#__codelineno-3-47" id="__codelineno-3-47" name="__codelineno-3-47"></a>            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">"Input text must be a string"</span><span class="p">)</span>
+<a href="#__codelineno-3-48" id="__codelineno-3-48" name="__codelineno-3-48"></a>        <span class="c1"># Implementation goes here</span>
+<a href="#__codelineno-3-49" id="__codelineno-3-49" name="__codelineno-3-49"></a>        <span class="k">pass</span>
+<a href="#__codelineno-3-50" id="__codelineno-3-50" name="__codelineno-3-50"></a>
+<a href="#__codelineno-3-51" id="__codelineno-3-51" name="__codelineno-3-51"></a>    <span class="k">def</span> <span class="nf">tokenize</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="p">):</span>
+<a href="#__codelineno-3-52" id="__codelineno-3-52" name="__codelineno-3-52"></a><span class="w">        </span><span class="sd">"""</span>
+<a href="#__codelineno-3-53" id="__codelineno-3-53" name="__codelineno-3-53"></a><span class="sd">        Tokenizes the input text into a list of words.</span>
+<a href="#__codelineno-3-54" id="__codelineno-3-54" name="__codelineno-3-54"></a>
+<a href="#__codelineno-3-55" id="__codelineno-3-55" name="__codelineno-3-55"></a><span class="sd">        Args:</span>
+<a href="#__codelineno-3-56" id="__codelineno-3-56" name="__codelineno-3-56"></a><span class="sd">            text (str): The text to be tokenized.</span>
+<a href="#__codelineno-3-57" id="__codelineno-3-57" name="__codelineno-3-57"></a>
+<a href="#__codelineno-3-58" id="__codelineno-3-58" name="__codelineno-3-58"></a><span class="sd">        Returns:</span>
+<a href="#__codelineno-3-59" id="__codelineno-3-59" name="__codelineno-3-59"></a><span class="sd">            list: A list of words (tokens).</span>
+<a href="#__codelineno-3-60" id="__codelineno-3-60" name="__codelineno-3-60"></a>
+<a href="#__codelineno-3-61" id="__codelineno-3-61" name="__codelineno-3-61"></a><span class="sd">        Raises:</span>
+<a href="#__codelineno-3-62" id="__codelineno-3-62" name="__codelineno-3-62"></a><span class="sd">            TypeError: If the input text is not a string.</span>
+<a href="#__codelineno-3-63" id="__codelineno-3-63" name="__codelineno-3-63"></a><span class="sd">        """</span>
+<a href="#__codelineno-3-64" id="__codelineno-3-64" name="__codelineno-3-64"></a>        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+<a href="#__codelineno-3-65" id="__codelineno-3-65" name="__codelineno-3-65"></a>            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">"Input text must be a string"</span><span class="p">)</span>
+<a href="#__codelineno-3-66" id="__codelineno-3-66" name="__codelineno-3-66"></a>        <span class="c1"># Implementation goes here</span>
+<a href="#__codelineno-3-67" id="__codelineno-3-67" name="__codelineno-3-67"></a>        <span class="k">pass</span>
+<a href="#__codelineno-3-68" id="__codelineno-3-68" name="__codelineno-3-68"></a>
+<a href="#__codelineno-3-69" id="__codelineno-3-69" name="__codelineno-3-69"></a>    <span class="k">def</span> <span class="nf">analyze_sentiment</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="p">):</span>
+<a href="#__codelineno-3-70" id="__codelineno-3-70" name="__codelineno-3-70"></a><span class="w">        </span><span class="sd">"""</span>
+<a href="#__codelineno-3-71" id="__codelineno-3-71" name="__codelineno-3-71"></a><span class="sd">        Analyzes the sentiment of the input text.</span>
+<a href="#__codelineno-3-72" id="__codelineno-3-72" name="__codelineno-3-72"></a>
+<a href="#__codelineno-3-73" id="__codelineno-3-73" name="__codelineno-3-73"></a><span class="sd">        Args:</span>
+<a href="#__codelineno-3-74" id="__codelineno-3-74" name="__codelineno-3-74"></a><span class="sd">            text (str): The text to be analyzed.</span>
+<a href="#__codelineno-3-75" id="__codelineno-3-75" name="__codelineno-3-75"></a>
+<a href="#__codelineno-3-76" id="__codelineno-3-76" name="__codelineno-3-76"></a><span class="sd">        Returns:</span>
+<a href="#__codelineno-3-77" id="__codelineno-3-77" name="__codelineno-3-77"></a><span class="sd">            float: The sentiment score of the text.</span>
+<a href="#__codelineno-3-78" id="__codelineno-3-78" name="__codelineno-3-78"></a>
+<a href="#__codelineno-3-79" id="__codelineno-3-79" name="__codelineno-3-79"></a><span class="sd">        Raises:</span>
+<a href="#__codelineno-3-80" id="__codelineno-3-80" name="__codelineno-3-80"></a><span class="sd">            TypeError: If the input text is not a string.</span>
+<a href="#__codelineno-3-81" id="__codelineno-3-81" name="__codelineno-3-81"></a><span class="sd">        """</span>
+<a href="#__codelineno-3-82" id="__codelineno-3-82" name="__codelineno-3-82"></a>        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+<a href="#__codelineno-3-83" id="__codelineno-3-83" name="__codelineno-3-83"></a>            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">"Input text must be a string"</span><span class="p">)</span>
+<a href="#__codelineno-3-84" id="__codelineno-3-84" name="__codelineno-3-84"></a>        <span class="c1"># Implementation goes here</span>
+<a href="#__codelineno-3-85" id="__codelineno-3-85" name="__codelineno-3-85"></a>        <span class="k">pass</span>
+</code></pre></div>
+</div>
 <p>Ruff is a high-performance linter for Python that swiftly evaluates and
 enhances the quality of your code. With an emphasis on speed and
 practicality, Ruff assists developers in maintaining consistent coding
@@ -1131,28 +1352,28 @@ and thorough analysis of your Python files to identify and flag
 potential issues.</p>
 <h3 id="standard-linting-procedure">Standard Linting Procedure<a class="headerlink" href="#standard-linting-procedure" title="Permanent link">¶</a></h3>
 <p>To initiate linting, utilize the following command pattern:</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>ruff<span class="w"> </span>check<span class="w"> </span>path/to/file_or_directory
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a>ruff<span class="w"> </span>check<span class="w"> </span>path/to/file_or_directory
 </code></pre></div>
 <p>For example, to lint a service component within your application, you
 might use:</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a>ruff<span class="w"> </span>check<span class="w"> </span>project_directory/services/
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a>ruff<span class="w"> </span>check<span class="w"> </span>project_directory/services/
 </code></pre></div>
 <h3 id="automated-error-correction-with-fix">Automated Error Correction with <code>--fix</code><a class="headerlink" href="#automated-error-correction-with-fix" title="Permanent link">¶</a></h3>
 <p>Ruff's auto-fix capability streamlines the error correction process by
 automatically resolving numerous common linting issues:</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a>ruff<span class="w"> </span>check<span class="w"> </span>--fix<span class="w"> </span>path/to/file_or_directory
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a>ruff<span class="w"> </span>check<span class="w"> </span>--fix<span class="w"> </span>path/to/file_or_directory
 </code></pre></div>
 <p>For instance, to apply auto-fixes to an entire application directory:</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a>ruff<span class="w"> </span>check<span class="w"> </span>--fix<span class="w"> </span>project_directory/
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-7-1" id="__codelineno-7-1" name="__codelineno-7-1"></a>ruff<span class="w"> </span>check<span class="w"> </span>--fix<span class="w"> </span>project_directory/
 </code></pre></div>
 <h2 id="utilizing-nursery-rules-with-preview">Utilizing Nursery Rules with <code>--preview</code><a class="headerlink" href="#utilizing-nursery-rules-with-preview" title="Permanent link">¶</a></h2>
 <p>To explore beyond standard linting rules and include experimental ones,
 use the <code>--preview</code> flag:</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a>ruff<span class="w"> </span>check<span class="w"> </span>--preview<span class="w"> </span>--fix<span class="w"> </span>path/to/file_or_directory
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-8-1" id="__codelineno-8-1" name="__codelineno-8-1"></a>ruff<span class="w"> </span>check<span class="w"> </span>--preview<span class="w"> </span>--fix<span class="w"> </span>path/to/file_or_directory
 </code></pre></div>
 <p>This is particularly useful when linting individual files that may
 leverage cutting-edge Python features:</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a>ruff<span class="w"> </span>check<span class="w"> </span>--preview<span class="w"> </span>--fix<span class="w"> </span>project_directory/utils/advanced_parser.py
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-9-1" id="__codelineno-9-1" name="__codelineno-9-1"></a>ruff<span class="w"> </span>check<span class="w"> </span>--preview<span class="w"> </span>--fix<span class="w"> </span>project_directory/utils/advanced_parser.py
 </code></pre></div>
 <h3 id="understanding-ruffs-rules">Understanding Ruff's Rules<a class="headerlink" href="#understanding-ruffs-rules" title="Permanent link">¶</a></h3>
 <p>An extensive explanation of Ruff's rules, both standard and nursery, is
@@ -1162,31 +1383,31 @@ Documentation</a>.</p>
 <p>Let's say you have a Python script at
 <code>project_directory/services/parser.py</code>. To lint this script, apply
 standard and nursery rules, and fix issues:</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a>ruff<span class="w"> </span>check<span class="w"> </span>--preview<span class="w"> </span>--fix<span class="w"> </span>project_directory/services/parser.py
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-10-1" id="__codelineno-10-1" name="__codelineno-10-1"></a>ruff<span class="w"> </span>check<span class="w"> </span>--preview<span class="w"> </span>--fix<span class="w"> </span>project_directory/services/parser.py
 </code></pre></div>
 <h3 id="example-working-with-jupyter-notebooks">Example: Working with Jupyter Notebooks<a class="headerlink" href="#example-working-with-jupyter-notebooks" title="Permanent link">¶</a></h3>
 <p>For a Jupyter notebook, <code>analysis.ipynb</code>, located in the same directory:</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-7-1" id="__codelineno-7-1" name="__codelineno-7-1"></a>ruff<span class="w"> </span>check<span class="w"> </span>--preview<span class="w"> </span>--fix<span class="w"> </span>project_directory/notebooks/analysis.ipynb
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-11-1" id="__codelineno-11-1" name="__codelineno-11-1"></a>ruff<span class="w"> </span>check<span class="w"> </span>--preview<span class="w"> </span>--fix<span class="w"> </span>project_directory/notebooks/analysis.ipynb
 </code></pre></div>
 <p>Ruff will lint the notebook and provide feedback or fixes in a format
 compatible with Jupyter's code cells.</p>
 <h2 id="real-world-example-and-terminal-output">Real-World Example and Terminal Output<a class="headerlink" href="#real-world-example-and-terminal-output" title="Permanent link">¶</a></h2>
 <p>Here's a real-world example showcasing the execution of Ruff and the
 corresponding terminal output:</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-8-1" id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="c1"># Non-compliant code with E201</span>
-<a href="#__codelineno-8-2" id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="k">def</span> <span class="nf">my_function</span><span class="p">():</span> <span class="c1"># Violates "undocumented-public-function"</span>
-<a href="#__codelineno-8-3" id="__codelineno-8-3" name="__codelineno-8-3"></a>    <span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span> <span class="p">]</span> <span class="c1"># Violates "whitespace-after-open-bracket" and "whitespace-before-close-bracket"</span>
-<a href="#__codelineno-8-4" id="__codelineno-8-4" name="__codelineno-8-4"></a>    <span class="n">long_string</span> <span class="o">=</span> <span class="s2">"This is a very long string..."</span> <span class="c1"># Violates "line-too-long"</span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-12-1" id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="c1"># Non-compliant code with E201</span>
+<a href="#__codelineno-12-2" id="__codelineno-12-2" name="__codelineno-12-2"></a><span class="k">def</span> <span class="nf">my_function</span><span class="p">():</span> <span class="c1"># Violates "undocumented-public-function"</span>
+<a href="#__codelineno-12-3" id="__codelineno-12-3" name="__codelineno-12-3"></a>    <span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span> <span class="p">]</span> <span class="c1"># Violates "whitespace-after-open-bracket" and "whitespace-before-close-bracket"</span>
+<a href="#__codelineno-12-4" id="__codelineno-12-4" name="__codelineno-12-4"></a>    <span class="n">long_string</span> <span class="o">=</span> <span class="s2">"This is a very long string..."</span> <span class="c1"># Violates "line-too-long"</span>
 </code></pre></div>
 <p>Assuming you're working on <code>project_directory/models/data_model.py</code> with
 some issues, you run:</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-9-1" id="__codelineno-9-1" name="__codelineno-9-1"></a>ruff<span class="w"> </span>check<span class="w"> </span>--preview<span class="w"> </span>--fix<span class="w"> </span>project_directory/models/data_model.py
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-13-1" id="__codelineno-13-1" name="__codelineno-13-1"></a>ruff<span class="w"> </span>check<span class="w"> </span>--preview<span class="w"> </span>--fix<span class="w"> </span>project_directory/models/data_model.py
 </code></pre></div>
 <p>The terminal output might look like this:</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-10-1" id="__codelineno-10-1" name="__codelineno-10-1"></a>project_directory/models/data_model.py:1:1:<span class="w"> </span>D100<span class="w"> </span>Missing<span class="w"> </span>docstring<span class="w"> </span><span class="k">in</span><span class="w"> </span>public<span class="w"> </span>module
-<a href="#__codelineno-10-2" id="__codelineno-10-2" name="__codelineno-10-2"></a>project_directory/models/data_model.py:5:10:<span class="w"> </span>E231<span class="w"> </span>missing<span class="w"> </span>whitespace<span class="w"> </span>after<span class="w"> </span><span class="s1">','</span>
-<a href="#__codelineno-10-3" id="__codelineno-10-3" name="__codelineno-10-3"></a>project_directory/models/data_model.py:7:1:<span class="w"> </span>E302<span class="w"> </span>expected<span class="w"> </span><span class="m">2</span><span class="w"> </span>blank<span class="w"> </span>lines,<span class="w"> </span>found<span class="w"> </span><span class="m">1</span>
-<a href="#__codelineno-10-4" id="__codelineno-10-4" name="__codelineno-10-4"></a>Found<span class="w"> </span><span class="m">5</span><span class="w"> </span>errors<span class="w"> </span><span class="o">(</span><span class="m">3</span><span class="w"> </span>fixed,<span class="w"> </span><span class="m">2</span><span class="w"> </span>remaining<span class="o">)</span>.
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-14-1" id="__codelineno-14-1" name="__codelineno-14-1"></a>project_directory/models/data_model.py:1:1:<span class="w"> </span>D100<span class="w"> </span>Missing<span class="w"> </span>docstring<span class="w"> </span><span class="k">in</span><span class="w"> </span>public<span class="w"> </span>module
+<a href="#__codelineno-14-2" id="__codelineno-14-2" name="__codelineno-14-2"></a>project_directory/models/data_model.py:5:10:<span class="w"> </span>E231<span class="w"> </span>missing<span class="w"> </span>whitespace<span class="w"> </span>after<span class="w"> </span><span class="s1">','</span>
+<a href="#__codelineno-14-3" id="__codelineno-14-3" name="__codelineno-14-3"></a>project_directory/models/data_model.py:7:1:<span class="w"> </span>E302<span class="w"> </span>expected<span class="w"> </span><span class="m">2</span><span class="w"> </span>blank<span class="w"> </span>lines,<span class="w"> </span>found<span class="w"> </span><span class="m">1</span>
+<a href="#__codelineno-14-4" id="__codelineno-14-4" name="__codelineno-14-4"></a>Found<span class="w"> </span><span class="m">5</span><span class="w"> </span>errors<span class="w"> </span><span class="o">(</span><span class="m">3</span><span class="w"> </span>fixed,<span class="w"> </span><span class="m">2</span><span class="w"> </span>remaining<span class="o">)</span>.
 </code></pre></div>
 <p>Each line of the output directs you to the specific issue within your
 code, providing guidance on the nature of the problem and its location.</p>
@@ -1197,11 +1418,11 @@ code, providing guidance on the nature of the problem and its location.</p>
 <div class="admonition tip">
 <p class="admonition-title">Handling Nursery Rule Warnings</p>
 <p>If you encounter a warning like:</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-11-1" id="__codelineno-11-1" name="__codelineno-11-1"></a>warning: Selection of nursery rule `E201` without the `--preview` flag is deprecated.
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-15-1" id="__codelineno-15-1" name="__codelineno-15-1"></a>warning: Selection of nursery rule `E201` without the `--preview` flag is deprecated.
 </code></pre></div>
 <p>This indicates that your <code>pyproject.toml</code> includes nursery rules, which are experimental and require the <code>--preview</code> flag during execution. In our configuration, where we utilize a set of 50 rules that encompasses several nursery rules, it's essential to always use the <code>--preview</code> flag. This ensures that Ruff considers all specified rules, including the experimental ones, to maintain the integrity of your code linting strategy.</p>
 <p>Always run Ruff with the <code>--preview</code> flag to avoid deprecation warnings and adhere to the complete set of rules defined for your project:</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-12-1" id="__codelineno-12-1" name="__codelineno-12-1"></a>ruff<span class="w"> </span>check<span class="w"> </span>--preview<span class="w"> </span>path/to/file_or_directory
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-16-1" id="__codelineno-16-1" name="__codelineno-16-1"></a>ruff<span class="w"> </span>check<span class="w"> </span>--preview<span class="w"> </span>path/to/file_or_directory
 </code></pre></div>
 <p>By doing so, you'll leverage the full capabilities of Ruff, keeping your codebase up to date with both standard and progressive linting practices.</p>
 </div>
@@ -1218,21 +1439,21 @@ code quality and consistency.</p>
 <h3 id="setting-up-pre-commit-hooks">Setting Up Pre-commit Hooks<a class="headerlink" href="#setting-up-pre-commit-hooks" title="Permanent link">¶</a></h3>
 <p>To utilize Ruff as a pre-commit hook, you'll need to add a configuration
 to your <code>.pre-commit-config.yaml</code> file:</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-13-1" id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="nt">repos</span><span class="p">:</span>
-<a href="#__codelineno-13-2" id="__codelineno-13-2" name="__codelineno-13-2"></a><span class="p p-Indicator">-</span><span class="w">   </span><span class="nt">repo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://github.com/charliermarsh/ruff</span>
-<a href="#__codelineno-13-3" id="__codelineno-13-3" name="__codelineno-13-3"></a><span class="w">    </span><span class="nt">rev</span><span class="p">:</span><span class="w"> </span><span class="s">''</span><span class="w">  </span><span class="c1"># Use the tag for the desired release</span>
-<a href="#__codelineno-13-4" id="__codelineno-13-4" name="__codelineno-13-4"></a><span class="w">    </span><span class="nt">hooks</span><span class="p">:</span>
-<a href="#__codelineno-13-5" id="__codelineno-13-5" name="__codelineno-13-5"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ruff</span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-17-1" id="__codelineno-17-1" name="__codelineno-17-1"></a><span class="nt">repos</span><span class="p">:</span>
+<a href="#__codelineno-17-2" id="__codelineno-17-2" name="__codelineno-17-2"></a><span class="p p-Indicator">-</span><span class="w">   </span><span class="nt">repo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://github.com/charliermarsh/ruff</span>
+<a href="#__codelineno-17-3" id="__codelineno-17-3" name="__codelineno-17-3"></a><span class="w">    </span><span class="nt">rev</span><span class="p">:</span><span class="w"> </span><span class="s">''</span><span class="w">  </span><span class="c1"># Use the tag for the desired release</span>
+<a href="#__codelineno-17-4" id="__codelineno-17-4" name="__codelineno-17-4"></a><span class="w">    </span><span class="nt">hooks</span><span class="p">:</span>
+<a href="#__codelineno-17-5" id="__codelineno-17-5" name="__codelineno-17-5"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ruff</span>
 </code></pre></div>
 <p>This configuration will instruct the pre-commit tool to run Ruff against
 staged files whenever <code>git commit</code> is executed.</p>
 <h3 id="example-pre-commit-hook-in-action">Example: Pre-commit Hook in Action<a class="headerlink" href="#example-pre-commit-hook-in-action" title="Permanent link">¶</a></h3>
 <p>When you attempt to commit, the hook will run, and you might see output
 like this if issues are found:</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-14-1" id="__codelineno-14-1" name="__codelineno-14-1"></a>pre-commit<span class="w"> </span>running:<span class="w"> </span>ruff
-<a href="#__codelineno-14-2" id="__codelineno-14-2" name="__codelineno-14-2"></a>project_directory/services/parser.py:10:1:<span class="w"> </span>E302<span class="w"> </span>expected<span class="w"> </span><span class="m">2</span><span class="w"> </span>blank<span class="w"> </span>lines,<span class="w"> </span>found<span class="w"> </span><span class="m">1</span>
-<a href="#__codelineno-14-3" id="__codelineno-14-3" name="__codelineno-14-3"></a>
-<a href="#__codelineno-14-4" id="__codelineno-14-4" name="__codelineno-14-4"></a>Failed.<span class="w"> </span>Ruff<span class="w"> </span>found<span class="w"> </span>linting<span class="w"> </span>errors.<span class="w"> </span>Review<span class="w"> </span>the<span class="w"> </span>issues<span class="w"> </span>and<span class="w"> </span>commit<span class="w"> </span>again.
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-18-1" id="__codelineno-18-1" name="__codelineno-18-1"></a>pre-commit<span class="w"> </span>running:<span class="w"> </span>ruff
+<a href="#__codelineno-18-2" id="__codelineno-18-2" name="__codelineno-18-2"></a>project_directory/services/parser.py:10:1:<span class="w"> </span>E302<span class="w"> </span>expected<span class="w"> </span><span class="m">2</span><span class="w"> </span>blank<span class="w"> </span>lines,<span class="w"> </span>found<span class="w"> </span><span class="m">1</span>
+<a href="#__codelineno-18-3" id="__codelineno-18-3" name="__codelineno-18-3"></a>
+<a href="#__codelineno-18-4" id="__codelineno-18-4" name="__codelineno-18-4"></a>Failed.<span class="w"> </span>Ruff<span class="w"> </span>found<span class="w"> </span>linting<span class="w"> </span>errors.<span class="w"> </span>Review<span class="w"> </span>the<span class="w"> </span>issues<span class="w"> </span>and<span class="w"> </span>commit<span class="w"> </span>again.
 </code></pre></div>
 <h2 id="github-actions-for-continuous-linting">GitHub Actions for Continuous Linting<a class="headerlink" href="#github-actions-for-continuous-linting" title="Permanent link">¶</a></h2>
 <p>GitHub Actions can be set up to run Ruff on every push or pull request
@@ -1266,38 +1487,38 @@ consists of the following steps:</p>
 </ol>
 <h4 id="ruff-linting-action-definition">Ruff Linting Action Definition<a class="headerlink" href="#ruff-linting-action-definition" title="Permanent link">¶</a></h4>
 <p>Here is the code snippet for the GitHub Actions workflow:</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-15-1" id="__codelineno-15-1" name="__codelineno-15-1"></a><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Ruff Linter</span>
-<a href="#__codelineno-15-2" id="__codelineno-15-2" name="__codelineno-15-2"></a>
-<a href="#__codelineno-15-3" id="__codelineno-15-3" name="__codelineno-15-3"></a><span class="nt">on</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">push</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">pull_request</span><span class="p p-Indicator">]</span>
-<a href="#__codelineno-15-4" id="__codelineno-15-4" name="__codelineno-15-4"></a>
-<a href="#__codelineno-15-5" id="__codelineno-15-5" name="__codelineno-15-5"></a><span class="nt">jobs</span><span class="p">:</span>
-<a href="#__codelineno-15-6" id="__codelineno-15-6" name="__codelineno-15-6"></a><span class="w">  </span><span class="nt">lint</span><span class="p">:</span>
-<a href="#__codelineno-15-7" id="__codelineno-15-7" name="__codelineno-15-7"></a><span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ubuntu-latest</span>
-<a href="#__codelineno-15-8" id="__codelineno-15-8" name="__codelineno-15-8"></a><span class="w">    </span><span class="nt">steps</span><span class="p">:</span>
-<a href="#__codelineno-15-9" id="__codelineno-15-9" name="__codelineno-15-9"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Checkout code</span>
-<a href="#__codelineno-15-10" id="__codelineno-15-10" name="__codelineno-15-10"></a><span class="w">      </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/checkout@v2</span>
-<a href="#__codelineno-15-11" id="__codelineno-15-11" name="__codelineno-15-11"></a>
-<a href="#__codelineno-15-12" id="__codelineno-15-12" name="__codelineno-15-12"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Set up Python</span>
-<a href="#__codelineno-15-13" id="__codelineno-15-13" name="__codelineno-15-13"></a><span class="w">      </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/setup-python@v2</span>
-<a href="#__codelineno-15-14" id="__codelineno-15-14" name="__codelineno-15-14"></a><span class="w">      </span><span class="nt">with</span><span class="p">:</span>
-<a href="#__codelineno-15-15" id="__codelineno-15-15" name="__codelineno-15-15"></a><span class="w">        </span><span class="nt">python-version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3.9</span>
-<a href="#__codelineno-15-16" id="__codelineno-15-16" name="__codelineno-15-16"></a>
-<a href="#__codelineno-15-17" id="__codelineno-15-17" name="__codelineno-15-17"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Install Ruff</span>
-<a href="#__codelineno-15-18" id="__codelineno-15-18" name="__codelineno-15-18"></a><span class="w">      </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pip install ruff</span>
-<a href="#__codelineno-15-19" id="__codelineno-15-19" name="__codelineno-15-19"></a>
-<a href="#__codelineno-15-20" id="__codelineno-15-20" name="__codelineno-15-20"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Check code with Ruff</span>
-<a href="#__codelineno-15-21" id="__codelineno-15-21" name="__codelineno-15-21"></a><span class="w">      </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ruff check --preview src/ notebooks/</span>
-<a href="#__codelineno-15-22" id="__codelineno-15-22" name="__codelineno-15-22"></a>
-<a href="#__codelineno-15-23" id="__codelineno-15-23" name="__codelineno-15-23"></a>
-<a href="#__codelineno-15-24" id="__codelineno-15-24" name="__codelineno-15-24"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Fail if linting errors are detected</span>
-<a href="#__codelineno-15-25" id="__codelineno-15-25" name="__codelineno-15-25"></a><span class="w">      </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
-<a href="#__codelineno-15-26" id="__codelineno-15-26" name="__codelineno-15-26"></a><span class="w">        </span><span class="no">if ruff check --preview src/ notebooks/</span>
-<a href="#__codelineno-15-27" id="__codelineno-15-27" name="__codelineno-15-27"></a><span class="w">          </span><span class="no">--quiet | grep -q 'error'; then</span>
-<a href="#__codelineno-15-28" id="__codelineno-15-28" name="__codelineno-15-28"></a><span class="w">          </span><span class="no">echo "Linting errors detected. Please lint your code locally with Ruff and resolve all issues before pushing."</span>
-<a href="#__codelineno-15-29" id="__codelineno-15-29" name="__codelineno-15-29"></a><span class="w">          </span><span class="no">exit 1</span>
-<a href="#__codelineno-15-30" id="__codelineno-15-30" name="__codelineno-15-30"></a><span class="w">        </span><span class="no">else</span>
-<a href="#__codelineno-15-31" id="__codelineno-15-31" name="__codelineno-15-31"></a><span class="w">          </span><span class="no">echo "No linting errors detected."</span>
-<a href="#__codelineno-15-32" id="__codelineno-15-32" name="__codelineno-15-32"></a><span class="w">        </span><span class="no">fi</span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-19-1" id="__codelineno-19-1" name="__codelineno-19-1"></a><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Ruff Linter</span>
+<a href="#__codelineno-19-2" id="__codelineno-19-2" name="__codelineno-19-2"></a>
+<a href="#__codelineno-19-3" id="__codelineno-19-3" name="__codelineno-19-3"></a><span class="nt">on</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">push</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">pull_request</span><span class="p p-Indicator">]</span>
+<a href="#__codelineno-19-4" id="__codelineno-19-4" name="__codelineno-19-4"></a>
+<a href="#__codelineno-19-5" id="__codelineno-19-5" name="__codelineno-19-5"></a><span class="nt">jobs</span><span class="p">:</span>
+<a href="#__codelineno-19-6" id="__codelineno-19-6" name="__codelineno-19-6"></a><span class="w">  </span><span class="nt">lint</span><span class="p">:</span>
+<a href="#__codelineno-19-7" id="__codelineno-19-7" name="__codelineno-19-7"></a><span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ubuntu-latest</span>
+<a href="#__codelineno-19-8" id="__codelineno-19-8" name="__codelineno-19-8"></a><span class="w">    </span><span class="nt">steps</span><span class="p">:</span>
+<a href="#__codelineno-19-9" id="__codelineno-19-9" name="__codelineno-19-9"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Checkout code</span>
+<a href="#__codelineno-19-10" id="__codelineno-19-10" name="__codelineno-19-10"></a><span class="w">      </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/checkout@v2</span>
+<a href="#__codelineno-19-11" id="__codelineno-19-11" name="__codelineno-19-11"></a>
+<a href="#__codelineno-19-12" id="__codelineno-19-12" name="__codelineno-19-12"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Set up Python</span>
+<a href="#__codelineno-19-13" id="__codelineno-19-13" name="__codelineno-19-13"></a><span class="w">      </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/setup-python@v2</span>
+<a href="#__codelineno-19-14" id="__codelineno-19-14" name="__codelineno-19-14"></a><span class="w">      </span><span class="nt">with</span><span class="p">:</span>
+<a href="#__codelineno-19-15" id="__codelineno-19-15" name="__codelineno-19-15"></a><span class="w">        </span><span class="nt">python-version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3.9</span>
+<a href="#__codelineno-19-16" id="__codelineno-19-16" name="__codelineno-19-16"></a>
+<a href="#__codelineno-19-17" id="__codelineno-19-17" name="__codelineno-19-17"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Install Ruff</span>
+<a href="#__codelineno-19-18" id="__codelineno-19-18" name="__codelineno-19-18"></a><span class="w">      </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pip install ruff</span>
+<a href="#__codelineno-19-19" id="__codelineno-19-19" name="__codelineno-19-19"></a>
+<a href="#__codelineno-19-20" id="__codelineno-19-20" name="__codelineno-19-20"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Check code with Ruff</span>
+<a href="#__codelineno-19-21" id="__codelineno-19-21" name="__codelineno-19-21"></a><span class="w">      </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ruff check --preview src/ notebooks/</span>
+<a href="#__codelineno-19-22" id="__codelineno-19-22" name="__codelineno-19-22"></a>
+<a href="#__codelineno-19-23" id="__codelineno-19-23" name="__codelineno-19-23"></a>
+<a href="#__codelineno-19-24" id="__codelineno-19-24" name="__codelineno-19-24"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Fail if linting errors are detected</span>
+<a href="#__codelineno-19-25" id="__codelineno-19-25" name="__codelineno-19-25"></a><span class="w">      </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<a href="#__codelineno-19-26" id="__codelineno-19-26" name="__codelineno-19-26"></a><span class="w">        </span><span class="no">if ruff check --preview src/ notebooks/</span>
+<a href="#__codelineno-19-27" id="__codelineno-19-27" name="__codelineno-19-27"></a><span class="w">          </span><span class="no">--quiet | grep -q 'error'; then</span>
+<a href="#__codelineno-19-28" id="__codelineno-19-28" name="__codelineno-19-28"></a><span class="w">          </span><span class="no">echo "Linting errors detected. Please lint your code locally with Ruff and resolve all issues before pushing."</span>
+<a href="#__codelineno-19-29" id="__codelineno-19-29" name="__codelineno-19-29"></a><span class="w">          </span><span class="no">exit 1</span>
+<a href="#__codelineno-19-30" id="__codelineno-19-30" name="__codelineno-19-30"></a><span class="w">        </span><span class="no">else</span>
+<a href="#__codelineno-19-31" id="__codelineno-19-31" name="__codelineno-19-31"></a><span class="w">          </span><span class="no">echo "No linting errors detected."</span>
+<a href="#__codelineno-19-32" id="__codelineno-19-32" name="__codelineno-19-32"></a><span class="w">        </span><span class="no">fi</span>
 </code></pre></div>
 <p>With this setup, we do not automatically fix any issues with Ruff in the
 GitHub Actions workflow. Instead, we enforce that the code must be
@@ -1320,15 +1541,15 @@ code for review.</p>
 Action is triggered to ensure the code meets our linting standards. If
 Ruff detects linting issues, the action will fail, and the output in the
 GitHub Actions log will resemble the following:</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-16-1" id="__codelineno-16-1" name="__codelineno-16-1"></a>Run<span class="w"> </span>ruff<span class="w"> </span>check<span class="w"> </span>--preview<span class="w"> </span>src/<span class="w"> </span>notebooks/
-<a href="#__codelineno-16-2" id="__codelineno-16-2" name="__codelineno-16-2"></a>Linting<span class="w"> </span>errors<span class="w"> </span>detected.<span class="w"> </span>Please<span class="w"> </span>lint<span class="w"> </span>your<span class="w"> </span>code<span class="w"> </span>locally<span class="w"> </span>with<span class="w"> </span>Ruff<span class="w"> </span>and<span class="w"> </span>resolve<span class="w"> </span>all<span class="w"> </span>issues<span class="w"> </span>before<span class="w"> </span>pushing.
-<a href="#__codelineno-16-3" id="__codelineno-16-3" name="__codelineno-16-3"></a>
-<a href="#__codelineno-16-4" id="__codelineno-16-4" name="__codelineno-16-4"></a>project_directory/models/data_model.py:1:1:<span class="w"> </span>D100<span class="w"> </span>Missing<span class="w"> </span>docstring<span class="w"> </span><span class="k">in</span><span class="w"> </span>public<span class="w"> </span>module
-<a href="#__codelineno-16-5" id="__codelineno-16-5" name="__codelineno-16-5"></a>project_directory/services/parser.py:5:10:<span class="w"> </span>E231<span class="w"> </span>missing<span class="w"> </span>whitespace<span class="w"> </span>after<span class="w"> </span><span class="s1">','</span>
-<a href="#__codelineno-16-6" id="__codelineno-16-6" name="__codelineno-16-6"></a>project_directory/utils/calculations.py:7:1:<span class="w"> </span>E302<span class="w"> </span>expected<span class="w"> </span><span class="m">2</span><span class="w"> </span>blank<span class="w"> </span>lines,<span class="w"> </span>found<span class="w"> </span><span class="m">1</span>
-<a href="#__codelineno-16-7" id="__codelineno-16-7" name="__codelineno-16-7"></a>...
-<a href="#__codelineno-16-8" id="__codelineno-16-8" name="__codelineno-16-8"></a>
-<a href="#__codelineno-16-9" id="__codelineno-16-9" name="__codelineno-16-9"></a>Error:<span class="w"> </span>Process<span class="w"> </span>completed<span class="w"> </span>with<span class="w"> </span><span class="nb">exit</span><span class="w"> </span>code<span class="w"> </span><span class="m">1</span>.
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-20-1" id="__codelineno-20-1" name="__codelineno-20-1"></a>Run<span class="w"> </span>ruff<span class="w"> </span>check<span class="w"> </span>--preview<span class="w"> </span>src/<span class="w"> </span>notebooks/
+<a href="#__codelineno-20-2" id="__codelineno-20-2" name="__codelineno-20-2"></a>Linting<span class="w"> </span>errors<span class="w"> </span>detected.<span class="w"> </span>Please<span class="w"> </span>lint<span class="w"> </span>your<span class="w"> </span>code<span class="w"> </span>locally<span class="w"> </span>with<span class="w"> </span>Ruff<span class="w"> </span>and<span class="w"> </span>resolve<span class="w"> </span>all<span class="w"> </span>issues<span class="w"> </span>before<span class="w"> </span>pushing.
+<a href="#__codelineno-20-3" id="__codelineno-20-3" name="__codelineno-20-3"></a>
+<a href="#__codelineno-20-4" id="__codelineno-20-4" name="__codelineno-20-4"></a>project_directory/models/data_model.py:1:1:<span class="w"> </span>D100<span class="w"> </span>Missing<span class="w"> </span>docstring<span class="w"> </span><span class="k">in</span><span class="w"> </span>public<span class="w"> </span>module
+<a href="#__codelineno-20-5" id="__codelineno-20-5" name="__codelineno-20-5"></a>project_directory/services/parser.py:5:10:<span class="w"> </span>E231<span class="w"> </span>missing<span class="w"> </span>whitespace<span class="w"> </span>after<span class="w"> </span><span class="s1">','</span>
+<a href="#__codelineno-20-6" id="__codelineno-20-6" name="__codelineno-20-6"></a>project_directory/utils/calculations.py:7:1:<span class="w"> </span>E302<span class="w"> </span>expected<span class="w"> </span><span class="m">2</span><span class="w"> </span>blank<span class="w"> </span>lines,<span class="w"> </span>found<span class="w"> </span><span class="m">1</span>
+<a href="#__codelineno-20-7" id="__codelineno-20-7" name="__codelineno-20-7"></a>...
+<a href="#__codelineno-20-8" id="__codelineno-20-8" name="__codelineno-20-8"></a>
+<a href="#__codelineno-20-9" id="__codelineno-20-9" name="__codelineno-20-9"></a>Error:<span class="w"> </span>Process<span class="w"> </span>completed<span class="w"> </span>with<span class="w"> </span><span class="nb">exit</span><span class="w"> </span>code<span class="w"> </span><span class="m">1</span>.
 </code></pre></div>
 <p>This log provides detailed feedback about the linting errors found. The
 developer is expected to address these issues by running Ruff locally
@@ -1340,11 +1561,11 @@ push again.</p>
 <code>pyproject.toml</code> file. This enables you to specify which rules to
 enable, disable, or configure further.</p>
 <h3 id="commentary-on-pyprojecttoml-configuration">Commentary on <code>pyproject.toml</code> Configuration<a class="headerlink" href="#commentary-on-pyprojecttoml-configuration" title="Permanent link">¶</a></h3>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-17-1" id="__codelineno-17-1" name="__codelineno-17-1"></a><span class="c1"># pyproject.toml</span>
-<a href="#__codelineno-17-2" id="__codelineno-17-2" name="__codelineno-17-2"></a><span class="k">[tool.ruff]</span>
-<a href="#__codelineno-17-3" id="__codelineno-17-3" name="__codelineno-17-3"></a><span class="c1"># We're using a curated set of 50 rules, which you can review and adjust as needed</span>
-<a href="#__codelineno-17-4" id="__codelineno-17-4" name="__codelineno-17-4"></a><span class="n">include</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="err">... ]</span>
-<a href="#__codelineno-17-5" id="__codelineno-17-5" name="__codelineno-17-5"></a><span class="n">exclude</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="err">... ]</span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-21-1" id="__codelineno-21-1" name="__codelineno-21-1"></a><span class="c1"># pyproject.toml</span>
+<a href="#__codelineno-21-2" id="__codelineno-21-2" name="__codelineno-21-2"></a><span class="k">[tool.ruff]</span>
+<a href="#__codelineno-21-3" id="__codelineno-21-3" name="__codelineno-21-3"></a><span class="c1"># We're using a curated set of 50 rules, which you can review and adjust as needed</span>
+<a href="#__codelineno-21-4" id="__codelineno-21-4" name="__codelineno-21-4"></a><span class="n">include</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="err">... ]</span>
+<a href="#__codelineno-21-5" id="__codelineno-21-5" name="__codelineno-21-5"></a><span class="n">exclude</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="err">... ]</span>
 </code></pre></div>
 <p>The <code>include</code> and <code>exclude</code> keys allow you to precisely control which
 rules Ruff will apply or ignore. This ensures that the linter is aligned
@@ -1725,7 +1946,7 @@ your Python projects.</p>
 <span class="md-icon" title="Last update">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 15, 2024</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 28, 2024</span>
 </span>
 </aside>
 </article>
