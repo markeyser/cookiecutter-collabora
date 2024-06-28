@@ -5,12 +5,12 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="https://markeyser.github.io/cookiecutter-collabora/how-to-guides/automating-wandb-backups/" rel="canonical"/>
-<link href="../data-conversion-from-xlsx-to-csv/" rel="prev"/>
-<link href="../jupyter-vscode-directory/" rel="next"/>
+<link href="https://markeyser.github.io/cookiecutter-collabora/how-to-guides/pre-commit-hooks-guide/" rel="canonical"/>
+<link href="../type-checking-mypy/" rel="prev"/>
+<link href="../../explanation/toc-explanation/" rel="next"/>
 <link href="../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.5.3, mkdocs-material-9.5.4" name="generator"/>
-<title>Automating Backups for Weights &amp; Biases - Cookiecutter Collabora</title>
+<title>Using Pre-Commit Hooks to Enforce Coding Standards - Cookiecutter Collabora</title>
 <link href="../../assets/stylesheets/main.50c56a3b.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -35,7 +35,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#how-to-back-up-weights-biases-experiments-locally-on-macbook-pro">
+<a class="md-skip" href="#using-pre-commit-hooks-to-enforce-coding-standards">
           Skip to content
         </a>
 </div>
@@ -59,7 +59,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Automating Backups for Weights &amp; Biases
+              Using Pre-Commit Hooks to Enforce Coding Standards
             
           </span>
 </div>
@@ -551,166 +551,12 @@
   </span>
 </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-<span class="md-ellipsis">
-    Automating Backups for Weights &amp; Biases
-  </span>
-<span class="md-nav__icon md-icon"></span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="./">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../automating-wandb-backups/">
 <span class="md-ellipsis">
     Automating Backups for Weights &amp; Biases
   </span>
 </a>
-<nav aria-label="On this page" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      On this page
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#define-the-task">
-<span class="md-ellipsis">
-      Define the Task
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#assumptions">
-<span class="md-ellipsis">
-      Assumptions
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#tools-and-requirements">
-<span class="md-ellipsis">
-      Tools and Requirements
-    </span>
-</a>
-<nav aria-label="Tools and Requirements" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#task-instructions">
-<span class="md-ellipsis">
-      Task Instructions
-    </span>
-</a>
-<nav aria-label="Task Instructions" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#1-export-wb-data">
-<span class="md-ellipsis">
-      1. Export W&amp;B Data
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#2-database-backup">
-<span class="md-ellipsis">
-      2. Database Backup
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#3-artifact-storage">
-<span class="md-ellipsis">
-      3. Artifact Storage
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#4-automate-backups">
-<span class="md-ellipsis">
-      4. Automate Backups
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#5-version-control-integration">
-<span class="md-ellipsis">
-      5. Version Control Integration
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#verification-steps">
-<span class="md-ellipsis">
-      Verification Steps
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#troubleshooting">
-<span class="md-ellipsis">
-      Troubleshooting
-    </span>
-</a>
-<nav aria-label="Troubleshooting" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#automating-backups-with-a-script">
-<span class="md-ellipsis">
-      Automating Backups with a Script
-    </span>
-</a>
-<nav aria-label="Automating Backups with a Script" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#backup-script-example">
-<span class="md-ellipsis">
-      Backup Script Example
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#verification-and-monitoring">
-<span class="md-ellipsis">
-      Verification and Monitoring
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#conclusion">
-<span class="md-ellipsis">
-      Conclusion
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#conclusion_1">
-<span class="md-ellipsis">
-      Conclusion
-    </span>
-</a>
-<nav aria-label="Conclusion" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#further-assistance">
-<span class="md-ellipsis">
-      Further Assistance
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-</ul>
-</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../jupyter-vscode-directory/">
@@ -789,12 +635,171 @@
   </span>
 </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../pre-commit-hooks-guide/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    Using Pre-Commit Hooks to Enforce Coding Standards
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
 <span class="md-ellipsis">
     Using Pre-Commit Hooks to Enforce Coding Standards
   </span>
 </a>
+<nav aria-label="On this page" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#introduction">
+<span class="md-ellipsis">
+      Introduction
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#pre-commit-hooks-overview">
+<span class="md-ellipsis">
+      Pre-Commit Hooks Overview
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#using-the-terminal-for-git-and-pre-commit-hooks">
+<span class="md-ellipsis">
+      Using the Terminal for Git and Pre-Commit Hooks
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#detailed-descriptions-and-examples">
+<span class="md-ellipsis">
+      Detailed Descriptions and Examples
+    </span>
+</a>
+<nav aria-label="Detailed Descriptions and Examples" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1-run-pytest">
+<span class="md-ellipsis">
+      1. Run PyTest
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2-commit-message-check">
+<span class="md-ellipsis">
+      2. Commit Message Check
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3-restricted-file-and-section-check">
+<span class="md-ellipsis">
+      3. Restricted File and Section Check
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#4-filename-snake-case-check">
+<span class="md-ellipsis">
+      4. Filename Snake Case Check
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#5-generate-documentation">
+<span class="md-ellipsis">
+      5. Generate Documentation
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#6-branch-name-check">
+<span class="md-ellipsis">
+      6. Branch Name Check
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#7-ruff-linter">
+<span class="md-ellipsis">
+      7. ruff-linter
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#8-black-formatter">
+<span class="md-ellipsis">
+      8. black-formatter
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#9-black-jupyter-formatter">
+<span class="md-ellipsis">
+      9. black-jupyter-formatter
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#10-trailing-whitespace">
+<span class="md-ellipsis">
+      10. Trailing Whitespace
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#11-end-of-file-fixer">
+<span class="md-ellipsis">
+      11. End of File Fixer
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#12-check-added-large-files">
+<span class="md-ellipsis">
+      12. Check Added Large Files
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#13-debug-statements">
+<span class="md-ellipsis">
+      13. Debug Statements
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#14-detect-private-key">
+<span class="md-ellipsis">
+      14. Detect Private Key
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#15-prettier">
+<span class="md-ellipsis">
+      15. Prettier
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#16-mypy">
+<span class="md-ellipsis">
+      16. Mypy
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -904,138 +909,143 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#define-the-task">
+<a class="md-nav__link" href="#introduction">
 <span class="md-ellipsis">
-      Define the Task
+      Introduction
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#assumptions">
+<a class="md-nav__link" href="#pre-commit-hooks-overview">
 <span class="md-ellipsis">
-      Assumptions
+      Pre-Commit Hooks Overview
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#tools-and-requirements">
+<a class="md-nav__link" href="#using-the-terminal-for-git-and-pre-commit-hooks">
 <span class="md-ellipsis">
-      Tools and Requirements
+      Using the Terminal for Git and Pre-Commit Hooks
     </span>
 </a>
-<nav aria-label="Tools and Requirements" class="md-nav">
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#detailed-descriptions-and-examples">
+<span class="md-ellipsis">
+      Detailed Descriptions and Examples
+    </span>
+</a>
+<nav aria-label="Detailed Descriptions and Examples" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#task-instructions">
+<a class="md-nav__link" href="#1-run-pytest">
 <span class="md-ellipsis">
-      Task Instructions
-    </span>
-</a>
-<nav aria-label="Task Instructions" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#1-export-wb-data">
-<span class="md-ellipsis">
-      1. Export W&amp;B Data
+      1. Run PyTest
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#2-database-backup">
+<a class="md-nav__link" href="#2-commit-message-check">
 <span class="md-ellipsis">
-      2. Database Backup
+      2. Commit Message Check
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#3-artifact-storage">
+<a class="md-nav__link" href="#3-restricted-file-and-section-check">
 <span class="md-ellipsis">
-      3. Artifact Storage
+      3. Restricted File and Section Check
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#4-automate-backups">
+<a class="md-nav__link" href="#4-filename-snake-case-check">
 <span class="md-ellipsis">
-      4. Automate Backups
+      4. Filename Snake Case Check
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#5-version-control-integration">
+<a class="md-nav__link" href="#5-generate-documentation">
 <span class="md-ellipsis">
-      5. Version Control Integration
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#verification-steps">
-<span class="md-ellipsis">
-      Verification Steps
+      5. Generate Documentation
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#troubleshooting">
+<a class="md-nav__link" href="#6-branch-name-check">
 <span class="md-ellipsis">
-      Troubleshooting
-    </span>
-</a>
-<nav aria-label="Troubleshooting" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#automating-backups-with-a-script">
-<span class="md-ellipsis">
-      Automating Backups with a Script
-    </span>
-</a>
-<nav aria-label="Automating Backups with a Script" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#backup-script-example">
-<span class="md-ellipsis">
-      Backup Script Example
+      6. Branch Name Check
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#verification-and-monitoring">
+<a class="md-nav__link" href="#7-ruff-linter">
 <span class="md-ellipsis">
-      Verification and Monitoring
+      7. ruff-linter
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#conclusion">
+<a class="md-nav__link" href="#8-black-formatter">
 <span class="md-ellipsis">
-      Conclusion
+      8. black-formatter
     </span>
 </a>
 </li>
-</ul>
-</nav>
-</li>
-</ul>
-</nav>
-</li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#conclusion_1">
+<a class="md-nav__link" href="#9-black-jupyter-formatter">
 <span class="md-ellipsis">
-      Conclusion
+      9. black-jupyter-formatter
     </span>
 </a>
-<nav aria-label="Conclusion" class="md-nav">
-<ul class="md-nav__list">
+</li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#further-assistance">
+<a class="md-nav__link" href="#10-trailing-whitespace">
 <span class="md-ellipsis">
-      Further Assistance
+      10. Trailing Whitespace
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#11-end-of-file-fixer">
+<span class="md-ellipsis">
+      11. End of File Fixer
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#12-check-added-large-files">
+<span class="md-ellipsis">
+      12. Check Added Large Files
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#13-debug-statements">
+<span class="md-ellipsis">
+      13. Debug Statements
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#14-detect-private-key">
+<span class="md-ellipsis">
+      14. Detect Private Key
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#15-prettier">
+<span class="md-ellipsis">
+      15. Prettier
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#16-mypy">
+<span class="md-ellipsis">
+      16. Mypy
     </span>
 </a>
 </li>
@@ -1049,180 +1059,277 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="how-to-back-up-weights-biases-experiments-locally-on-macbook-pro">How to Back Up Weights &amp; Biases Experiments Locally on MacBook Pro<a class="headerlink" href="#how-to-back-up-weights-biases-experiments-locally-on-macbook-pro" title="Permanent link">¶</a></h1>
-<p>This guide provides step-by-step instructions on how to back up your
-Weights &amp; Biases (W&amp;B) experiments when running locally on a MacBook
-Pro. Following the Detaxis approach for structured technical
-documentation, this guide ensures that you can securely and efficiently
-safeguard your data.</p>
-<h2 id="define-the-task"><strong>Define the Task</strong><a class="headerlink" href="#define-the-task" title="Permanent link">¶</a></h2>
-<p>Backing up W&amp;B experiments involves saving experiment data, metadata,
-and artifacts to prevent data loss and ensure reproducibility of
-results.</p>
-<h2 id="assumptions"><strong>Assumptions</strong><a class="headerlink" href="#assumptions" title="Permanent link">¶</a></h2>
-<ul>
-<li>You have W&amp;B set up and running locally on your MacBook Pro.</li>
-<li>Basic familiarity with terminal commands.</li>
-</ul>
-<h2 id="tools-and-requirements"><strong>Tools and Requirements</strong><a class="headerlink" href="#tools-and-requirements" title="Permanent link">¶</a></h2>
-<ul>
-<li>Terminal access on MacBook Pro.</li>
-<li>Optional: Access to cloud storage services or an external hard drive
-  for remote backups.</li>
-</ul>
-<h3 id="task-instructions"><strong>Task Instructions</strong><a class="headerlink" href="#task-instructions" title="Permanent link">¶</a></h3>
-<h4 id="1-export-wb-data"><strong>1. Export W&amp;B Data</strong><a class="headerlink" href="#1-export-wb-data" title="Permanent link">¶</a></h4>
-<ul>
-<li><strong>Action</strong>: Use the W&amp;B CLI to export project data.</li>
-<li><strong>Commands</strong>:
-    <div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>wandb<span class="w"> </span><span class="nb">export</span><span class="w"> </span>USERNAME/PROJECT_NAME<span class="w"> </span>--output<span class="w"> </span>file.json
-</code></pre></div>
-    Replace <code>USERNAME</code> with your W&amp;B username and <code>PROJECT_NAME</code> with
-    the name of your project.</li>
-</ul>
-<h4 id="2-database-backup"><strong>2. Database Backup</strong><a class="headerlink" href="#2-database-backup" title="Permanent link">¶</a></h4>
-<ul>
-<li><strong>Action</strong>: Locate and copy the W&amp;B local SQLite database for backup.</li>
-<li><strong>Location</strong>: The default W&amp;B directory is <code>~/wandb</code>. Find the
-  <code>local.db</code> file within this directory.</li>
-<li><strong>Backup Command</strong>:
-    <div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a>cp<span class="w"> </span>~/wandb/local.db<span class="w"> </span>/path/to/your/backup/location
-</code></pre></div></li>
-</ul>
-<h4 id="3-artifact-storage"><strong>3. Artifact Storage</strong><a class="headerlink" href="#3-artifact-storage" title="Permanent link">¶</a></h4>
-<ul>
-<li><strong>Action</strong>: Manually back up the artifacts directory.</li>
-<li><strong>Command</strong>:
-    <div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a>cp<span class="w"> </span>-R<span class="w"> </span>~/wandb/artifacts<span class="w"> </span>/path/to/your/backup/location
-</code></pre></div></li>
-</ul>
-<h4 id="4-automate-backups"><strong>4. Automate Backups</strong><a class="headerlink" href="#4-automate-backups" title="Permanent link">¶</a></h4>
-<ul>
-<li><strong>Action</strong>: Create a script to automate the backup process.</li>
-<li><strong>Details</strong>: Use the provided example backup script, modifying paths
-  and destinations as needed. Schedule this script using <code>cron</code> for
-  periodic backups.</li>
-</ul>
-<h4 id="5-version-control-integration"><strong>5. Version Control Integration</strong><a class="headerlink" href="#5-version-control-integration" title="Permanent link">¶</a></h4>
-<ul>
-<li><strong>Action</strong>: Ensure that your project code is under version control
-  (e.g., Git).</li>
-<li><strong>Purpose</strong>: Facilitates matching experiment results with code
-  versions, enhancing reproducibility.</li>
-</ul>
-<h2 id="verification-steps"><strong>Verification Steps</strong><a class="headerlink" href="#verification-steps" title="Permanent link">¶</a></h2>
+<h1 id="using-pre-commit-hooks-to-enforce-coding-standards">Using Pre-Commit Hooks to Enforce Coding Standards<a class="headerlink" href="#using-pre-commit-hooks-to-enforce-coding-standards" title="Permanent link">¶</a></h1>
+<div class="admonition example">
+<p class="admonition-title">Interacting with Pre-Commit Hooks</p>
+<p>To ensure code quality and adherence to coding standards, you must use the terminal for all Git operations. The pre-commit hooks are automatically triggered during these operations, so it's crucial to follow these steps:</p>
 <ol>
-<li><strong>Check Exported Data</strong>: Ensure that the JSON or CSV file contains
-   all relevant experiment data.</li>
-<li><strong>Validate Database Copy</strong>: Verify that the <code>local.db</code> file is
-   correctly copied to your backup location and is not corrupted.</li>
-<li><strong>Artifact Backup</strong>: Confirm that all files in the <code>artifacts</code>
-   directory are present in your backup location.</li>
-<li><strong>Test Automation Script</strong>: Execute your backup script manually to
-   ensure it works as expected. Check the backup destination for the new
-   backup folder.</li>
-<li><strong>Review Backup Frequency</strong>: Ensure that your backup script is
-   scheduled appropriately and runs at the desired frequency.</li>
+<li><strong>Install Pre-Commit Hooks</strong> (This step is needed only once, when you clone the repo and follow the installation steps):</li>
 </ol>
-<h2 id="troubleshooting"><strong>Troubleshooting</strong><a class="headerlink" href="#troubleshooting" title="Permanent link">¶</a></h2>
-<ul>
-<li><strong>Issue</strong>: Export command fails.</li>
-<li><strong>Solution</strong>: Check your W&amp;B username and project name for typos.
-    Ensure you're connected to the internet if using W&amp;B cloud.</li>
-<li><strong>Issue</strong>: Backup script does not run automatically.</li>
-<li><strong>Solution</strong>: Verify the <code>cron</code> job setup. Check for syntax errors
-    in your cron configuration.</li>
-<li><strong>Issue</strong>: Insufficient backup space.</li>
-<li><strong>Solution</strong>: Regularly monitor your backup location's available
-    space. Consider using cloud storage for additional capacity.</li>
-</ul>
-<h3 id="automating-backups-with-a-script"><strong>Automating Backups with a Script</strong><a class="headerlink" href="#automating-backups-with-a-script" title="Permanent link">¶</a></h3>
-<p>To simplify and automate the backup process for Weights &amp; Biases
-experiments on your MacBook Pro, you can use a shell script. This
-section provides an example script and instructions on how to set it up
-for automated execution using <code>cron</code>.</p>
-<h4 id="backup-script-example"><strong>Backup Script Example</strong><a class="headerlink" href="#backup-script-example" title="Permanent link">¶</a></h4>
-<p>Below is an example of a backup script named <code>wandb_backup.sh</code>. This
-script backs up the W&amp;B local database and artifacts to a specified
-backup directory.</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="ch">#!/bin/bash</span>
-<a href="#__codelineno-3-2" id="__codelineno-3-2" name="__codelineno-3-2"></a>
-<a href="#__codelineno-3-3" id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="c1"># Define the source and destination directories</span>
-<a href="#__codelineno-3-4" id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="nv">WANDB_DIR</span><span class="o">=</span><span class="s2">"</span><span class="nv">$HOME</span><span class="s2">/wandb"</span>
-<a href="#__codelineno-3-5" id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="nv">BACKUP_DIR</span><span class="o">=</span><span class="s2">"/path/to/your/backup/location/</span><span class="k">$(</span>date<span class="w"> </span>+%Y%m%d_%H%M%S<span class="k">)</span><span class="s2">"</span>
-<a href="#__codelineno-3-6" id="__codelineno-3-6" name="__codelineno-3-6"></a>
-<a href="#__codelineno-3-7" id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="c1"># Create a new backup directory with a timestamp</span>
-<a href="#__codelineno-3-8" id="__codelineno-3-8" name="__codelineno-3-8"></a>mkdir<span class="w"> </span>-p<span class="w"> </span><span class="s2">"</span><span class="nv">$BACKUP_DIR</span><span class="s2">"</span>
-<a href="#__codelineno-3-9" id="__codelineno-3-9" name="__codelineno-3-9"></a>
-<a href="#__codelineno-3-10" id="__codelineno-3-10" name="__codelineno-3-10"></a><span class="c1"># Backup the local database</span>
-<a href="#__codelineno-3-11" id="__codelineno-3-11" name="__codelineno-3-11"></a>cp<span class="w"> </span><span class="s2">"</span><span class="nv">$WANDB_DIR</span><span class="s2">/local.db"</span><span class="w"> </span><span class="s2">"</span><span class="nv">$BACKUP_DIR</span><span class="s2">"</span>
-<a href="#__codelineno-3-12" id="__codelineno-3-12" name="__codelineno-3-12"></a>
-<a href="#__codelineno-3-13" id="__codelineno-3-13" name="__codelineno-3-13"></a><span class="c1"># Backup artifacts</span>
-<a href="#__codelineno-3-14" id="__codelineno-3-14" name="__codelineno-3-14"></a>cp<span class="w"> </span>-R<span class="w"> </span><span class="s2">"</span><span class="nv">$WANDB_DIR</span><span class="s2">/artifacts"</span><span class="w"> </span><span class="s2">"</span><span class="nv">$BACKUP_DIR</span><span class="s2">/artifacts"</span>
-<a href="#__codelineno-3-15" id="__codelineno-3-15" name="__codelineno-3-15"></a>
-<a href="#__codelineno-3-16" id="__codelineno-3-16" name="__codelineno-3-16"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">"Backup completed successfully."</span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>pre-commit<span class="w"> </span>install
 </code></pre></div>
-<p><strong>Instructions:</strong></p>
 <ol>
-<li><strong>Create the Script</strong>:</li>
-<li>Open your terminal.</li>
-<li>Use a text editor (e.g., <code>nano</code> or <code>vim</code>) to create a new file
-     named <code>wandb_backup.sh</code>.</li>
-<li>Copy and paste the script above into the file.</li>
-<li>
-<p>Replace <code>/path/to/your/backup/location</code> with the actual path where
-     you want to store your backups.</p>
-</li>
-<li>
-<p><strong>Make the Script Executable</strong>:</p>
-</li>
-<li>
-<p>Run the following command in your terminal:
-     <div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a>chmod<span class="w"> </span>+x<span class="w"> </span>wandb_backup.sh
+<li><strong>Run Pre-Commit Hooks on All Files</strong>:</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a>pre-commit<span class="w"> </span>run<span class="w"> </span>--all-files
+</code></pre></div>
+<ol>
+<li><strong>Add and Commit Changes</strong>:</li>
+</ol>
+<p>After fixing any issues reported by the pre-commit hooks, use the following commands:</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a>git<span class="w"> </span>add<span class="w"> </span>&lt;fixed_files&gt;
+<a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">"your commit message"</span>
+</code></pre></div>
+<ol>
+<li><strong>Avoid Using the VS Code Version Control Pane</strong>:</li>
+</ol>
+<p>Ensure you perform all Git operations through the terminal to properly trigger and handle pre-commit hooks.</p>
+</div>
+<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">¶</a></h2>
+<p>Pre-commit hooks are a powerful tool to enforce coding standards and
+ensure code quality before changes are committed to the repository.
+These hooks automatically run checks and tasks, such as linting,
+formatting, running tests, and verifying branch names. This document
+provides an overview of the pre-commit hooks implemented in our project
+and how to use them effectively.</p>
+<h2 id="pre-commit-hooks-overview">Pre-Commit Hooks Overview<a class="headerlink" href="#pre-commit-hooks-overview" title="Permanent link">¶</a></h2>
+<p>The following table provides a synthetic description of each pre-commit
+hook, including whether you need to repeat the <code>git add</code> and <code>git
+commit</code> commands after fixing issues:</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Repeat git add/commit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Run PyTest</td>
+<td>Runs PyTest to execute all tests in the <code>tests/</code> directory.</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Commit Message Check</td>
+<td>Ensures commit messages follow the specified format.</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Restricted File and Section Check</td>
+<td>Prevents modifications to restricted files.</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Filename Snake Case Check</td>
+<td>Verifies that filenames follow the snake_case convention.</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Generate Documentation</td>
+<td>Generates project documentation and stages it for commit.</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Branch Name Check</td>
+<td>Validates branch names against the specified pattern.</td>
+<td>No</td>
+</tr>
+<tr>
+<td>ruff-linter</td>
+<td>Lints Python code using Ruff.</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>black-formatter</td>
+<td>Formats Python code using Black.</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>black-jupyter-formatter</td>
+<td>Formats Jupyter notebooks using Black.</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>trailing-whitespace</td>
+<td>Trims trailing whitespace from files.</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>end-of-file-fixer</td>
+<td>Ensures files end with a newline.</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>check-added-large-files</td>
+<td>Warns if large files are added to the commit.</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>debug-statements</td>
+<td>Detects and prevents debug statements in the code.</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>detect-private-key</td>
+<td>Prevents private keys from being committed.</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>prettier</td>
+<td>Formats YAML files using Prettier.</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>mypy</td>
+<td>Checks static typing using Mypy.</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<h2 id="using-the-terminal-for-git-and-pre-commit-hooks">Using the Terminal for Git and Pre-Commit Hooks<a class="headerlink" href="#using-the-terminal-for-git-and-pre-commit-hooks" title="Permanent link">¶</a></h2>
+<p>To ensure that pre-commit hooks run correctly, it is recommended to use
+the terminal for all Git operations. Avoid using the VS Code version
+control pane, as it may not properly trigger the hooks.</p>
+<h2 id="detailed-descriptions-and-examples">Detailed Descriptions and Examples<a class="headerlink" href="#detailed-descriptions-and-examples" title="Permanent link">¶</a></h2>
+<h3 id="1-run-pytest">1. Run PyTest<a class="headerlink" href="#1-run-pytest" title="Permanent link">¶</a></h3>
+<p><strong>Description</strong>: Runs all tests in the <code>tests/</code> directory using PyTest.</p>
+<p><strong>Example</strong>: If a test fails, you will see an error message indicating
+which test failed. Fix the issue, stage the changes, and commit again.</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a>pre-commit<span class="w"> </span>install
+<a href="#__codelineno-3-2" id="__codelineno-3-2" name="__codelineno-3-2"></a>pre-commit<span class="w"> </span>run<span class="w"> </span>--all-files
+</code></pre></div>
+<p><strong>Error</strong>: 
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a>============================= test session starts ==============================
+<a href="#__codelineno-4-2" id="__codelineno-4-2" name="__codelineno-4-2"></a>platform linux -- Python 3.10.0, pytest-6.2.4, py-1.10.0, pluggy-0.13.1
+<a href="#__codelineno-4-3" id="__codelineno-4-3" name="__codelineno-4-3"></a>rootdir: /path/to/repo
+<a href="#__codelineno-4-4" id="__codelineno-4-4" name="__codelineno-4-4"></a>collected 2 items                                                              
+<a href="#__codelineno-4-5" id="__codelineno-4-5" name="__codelineno-4-5"></a>
+<a href="#__codelineno-4-6" id="__codelineno-4-6" name="__codelineno-4-6"></a>tests/test_sample.py .F                                                  [100%]
+<a href="#__codelineno-4-7" id="__codelineno-4-7" name="__codelineno-4-7"></a>
+<a href="#__codelineno-4-8" id="__codelineno-4-8" name="__codelineno-4-8"></a>=================================== FAILURES ===================================
+<a href="#__codelineno-4-9" id="__codelineno-4-9" name="__codelineno-4-9"></a>______________________________ test_function_fail ______________________________
+<a href="#__codelineno-4-10" id="__codelineno-4-10" name="__codelineno-4-10"></a>
+<a href="#__codelineno-4-11" id="__codelineno-4-11" name="__codelineno-4-11"></a>    def test_function_fail():
+<a href="#__codelineno-4-12" id="__codelineno-4-12" name="__codelineno-4-12"></a>&gt;       assert 1 == 2
+<a href="#__codelineno-4-13" id="__codelineno-4-13" name="__codelineno-4-13"></a>E       assert 1 == 2
+<a href="#__codelineno-4-14" id="__codelineno-4-14" name="__codelineno-4-14"></a>
+<a href="#__codelineno-4-15" id="__codelineno-4-15" name="__codelineno-4-15"></a>tests/test_sample.py:10: AssertionError
 </code></pre></div></p>
-</li>
-<li>
-<p><strong>Automating Execution with <code>cron</code></strong>:</p>
-</li>
-<li>Open your crontab for editing by running:
-     <div class="highlight"><pre><span></span><code><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a>crontab<span class="w"> </span>-e
-</code></pre></div></li>
-<li>Add a line to schedule the script execution. For example, to run
-     the backup daily at 2 AM, add:
-     <div class="highlight"><pre><span></span><code><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a>0 2 * * * /path/to/your/wandb_backup.sh
-</code></pre></div></li>
-<li>Save and close the editor. <code>cron</code> will now execute the script
-     according to the schedule.</li>
-</ol>
-<h4 id="verification-and-monitoring"><strong>Verification and Monitoring</strong><a class="headerlink" href="#verification-and-monitoring" title="Permanent link">¶</a></h4>
-<ul>
-<li>After setting up the script and scheduling it with <code>cron</code>, verify that
-  it runs as expected by checking the backup directory for new backups
-  after the scheduled time.</li>
-<li>Monitor your system logs and the backup directory to ensure ongoing
-  successful executions. You might want to set up email notifications
-  for <code>cron</code> jobs to stay informed about the backup script's execution
-  status.</li>
-</ul>
-<h4 id="conclusion"><strong>Conclusion</strong><a class="headerlink" href="#conclusion" title="Permanent link">¶</a></h4>
-<p>Automating the backup process ensures that your Weights &amp; Biases
-experiments and data are regularly saved without manual intervention. By
-following these steps, you create a resilient and efficient backup
-workflow, safeguarding your valuable machine learning experiments.</p>
-<h2 id="conclusion_1"><strong>Conclusion</strong><a class="headerlink" href="#conclusion_1" title="Permanent link">¶</a></h2>
-<p>By following these steps, you've created a robust backup strategy for
-your Weights &amp; Biases experiments. Regular backups ensure that your data
-is secure and that your experiments are reproducible, regardless of
-unforeseen data loss.</p>
-<h3 id="further-assistance"><strong>Further Assistance</strong><a class="headerlink" href="#further-assistance" title="Permanent link">¶</a></h3>
-<p>For more detailed information on W&amp;B features and troubleshooting, visit
-the <a href="https://docs.wandb.ai/">Weights &amp; Biases documentation</a>.</p>
+<h3 id="2-commit-message-check">2. Commit Message Check<a class="headerlink" href="#2-commit-message-check" title="Permanent link">¶</a></h3>
+<p><strong>Description</strong>: Ensures commit messages follow the specified format.</p>
+<p><strong>Example</strong>: If the commit message format is incorrect, you will receive
+an error message. Correct the commit message and try again.</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">"feat(auth): add user authentication feature [#DATA123]"</span>
+</code></pre></div>
+<p><strong>Error</strong>:
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a>Error: Commit message must follow the format '&lt;type&gt;(&lt;scope&gt;): &lt;subject&gt; [#JIRA-123]'
+<a href="#__codelineno-6-2" id="__codelineno-6-2" name="__codelineno-6-2"></a>Example: feat(auth): add user authentication feature [#DATA-123]
+</code></pre></div></p>
+<h3 id="3-restricted-file-and-section-check">3. Restricted File and Section Check<a class="headerlink" href="#3-restricted-file-and-section-check" title="Permanent link">¶</a></h3>
+<p><strong>Description</strong>: Prevents modifications to restricted files.</p>
+<p><strong>Example</strong>: If a restricted file is modified, an error will be
+displayed. Revert the changes to the restricted file and commit again.</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-7-1" id="__codelineno-7-1" name="__codelineno-7-1"></a>Error: Modifications to '.vscode/settings.json' are not allowed.
+</code></pre></div>
+<h3 id="4-filename-snake-case-check">4. Filename Snake Case Check<a class="headerlink" href="#4-filename-snake-case-check" title="Permanent link">¶</a></h3>
+<p><strong>Description</strong>: Verifies that filenames follow the snake_case
+convention.</p>
+<p><strong>Example</strong>: If a filename does not follow the snake_case convention,
+you will receive an error. Rename the file accordingly and commit again.</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-8-1" id="__codelineno-8-1" name="__codelineno-8-1"></a>Error: Filename 'MyFile.py' does not follow the snake_case naming convention.
+</code></pre></div>
+<h3 id="5-generate-documentation">5. Generate Documentation<a class="headerlink" href="#5-generate-documentation" title="Permanent link">¶</a></h3>
+<p><strong>Description</strong>: Generates project documentation and stages it for
+commit.</p>
+<p><strong>Example</strong>: If the documentation generation fails, fix the issues and
+run the command again.</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-9-1" id="__codelineno-9-1" name="__codelineno-9-1"></a>pre-commit<span class="w"> </span>install
+<a href="#__codelineno-9-2" id="__codelineno-9-2" name="__codelineno-9-2"></a>pre-commit<span class="w"> </span>run<span class="w"> </span>--all-files
+</code></pre></div>
+<h3 id="6-branch-name-check">6. Branch Name Check<a class="headerlink" href="#6-branch-name-check" title="Permanent link">¶</a></h3>
+<p><strong>Description</strong>: Validates branch names against the specified pattern.</p>
+<p><strong>Example</strong>: If the branch name does not follow the pattern, an error
+will be displayed. Create a new branch with the correct naming
+convention.</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-10-1" id="__codelineno-10-1" name="__codelineno-10-1"></a>git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span><span class="s2">"feature/add-user-authentication-DATA123"</span>
+</code></pre></div>
+<p><strong>Error</strong>:
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-11-1" id="__codelineno-11-1" name="__codelineno-11-1"></a>Error: Branch name must follow the pattern '&lt;category&gt;/&lt;description&gt;-&lt;JIRA_KEY&gt;'
+<a href="#__codelineno-11-2" id="__codelineno-11-2" name="__codelineno-11-2"></a>Example: feature/user-authentication-DATA-123
+<a href="#__codelineno-11-3" id="__codelineno-11-3" name="__codelineno-11-3"></a>Deleting branch: invalid-branch-name
+</code></pre></div></p>
+<h3 id="7-ruff-linter">7. ruff-linter<a class="headerlink" href="#7-ruff-linter" title="Permanent link">¶</a></h3>
+<p><strong>Description</strong>: Lints Python code using Ruff.</p>
+<p><strong>Example</strong>: If the linter finds issues, fix them and commit again.</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-12-1" id="__codelineno-12-1" name="__codelineno-12-1"></a>ruff<span class="w"> </span>check<span class="w"> </span>--preview<span class="w"> </span>--fix<span class="w"> </span>project_directory/utils/advanced_parser.py
+</code></pre></div>
+<h3 id="8-black-formatter">8. black-formatter<a class="headerlink" href="#8-black-formatter" title="Permanent link">¶</a></h3>
+<p><strong>Description</strong>: Formats Python code using Black.</p>
+<p><strong>Example</strong>: If the formatter makes changes, stage the changes and
+commit again.</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-13-1" id="__codelineno-13-1" name="__codelineno-13-1"></a>black<span class="w"> </span>sample_script.py
+</code></pre></div>
+<h3 id="9-black-jupyter-formatter">9. black-jupyter-formatter<a class="headerlink" href="#9-black-jupyter-formatter" title="Permanent link">¶</a></h3>
+<p><strong>Description</strong>: Formats Jupyter notebooks using Black.</p>
+<p><strong>Example</strong>: If the formatter makes changes, stage the changes and
+commit again.</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-14-1" id="__codelineno-14-1" name="__codelineno-14-1"></a>black<span class="w"> </span>sample_notebook.ipynb
+</code></pre></div>
+<h3 id="10-trailing-whitespace">10. Trailing Whitespace<a class="headerlink" href="#10-trailing-whitespace" title="Permanent link">¶</a></h3>
+<p><strong>Description</strong>: Trims trailing whitespace from files.</p>
+<p><strong>Example</strong>: If trailing whitespace is found and removed, stage the
+changes and commit again.</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-15-1" id="__codelineno-15-1" name="__codelineno-15-1"></a>pre-commit<span class="w"> </span>install
+<a href="#__codelineno-15-2" id="__codelineno-15-2" name="__codelineno-15-2"></a>pre-commit<span class="w"> </span>run<span class="w"> </span>--all-files
+</code></pre></div>
+<h3 id="11-end-of-file-fixer">11. End of File Fixer<a class="headerlink" href="#11-end-of-file-fixer" title="Permanent link">¶</a></h3>
+<p><strong>Description</strong>: Ensures files end with a newline.</p>
+<p><strong>Example</strong>: If a file does not end with a newline, fix the issue, stage
+the changes, and commit again.</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-16-1" id="__codelineno-16-1" name="__codelineno-16-1"></a>pre-commit<span class="w"> </span>install
+<a href="#__codelineno-16-2" id="__codelineno-16-2" name="__codelineno-16-2"></a>pre-commit<span class="w"> </span>run<span class="w"> </span>--all-files
+</code></pre></div>
+<h3 id="12-check-added-large-files">12. Check Added Large Files<a class="headerlink" href="#12-check-added-large-files" title="Permanent link">¶</a></h3>
+<p><strong>Description</strong>: Warns if large files are added to the commit.</p>
+<p><strong>Example</strong>: If a large file is detected, you will receive a warning.
+Decide whether to proceed with the commit or remove the large file.</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-17-1" id="__codelineno-17-1" name="__codelineno-17-1"></a>pre-commit<span class="w"> </span>install
+<a href="#__codelineno-17-2" id="__codelineno-17-2" name="__codelineno-17-2"></a>pre-commit<span class="w"> </span>run<span class="w"> </span>--all-files
+</code></pre></div>
+<h3 id="13-debug-statements">13. Debug Statements<a class="headerlink" href="#13-debug-statements" title="Permanent link">¶</a></h3>
+<p><strong>Description</strong>: Detects and prevents debug statements in the code.</p>
+<p><strong>Example</strong>: If debug statements are found, remove them and commit
+again.</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-18-1" id="__codelineno-18-1" name="__codelineno-18-1"></a>pre-commit<span class="w"> </span>install
+<a href="#__codelineno-18-2" id="__codelineno-18-2" name="__codelineno-18-2"></a>pre-commit<span class="w"> </span>run<span class="w"> </span>--all-files
+</code></pre></div>
+<h3 id="14-detect-private-key">14. Detect Private Key<a class="headerlink" href="#14-detect-private-key" title="Permanent link">¶</a></h3>
+<p><strong>Description</strong>: Prevents private keys from being committed.</p>
+<p><strong>Example</strong>: If a private key is detected, remove it and commit again.</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-19-1" id="__codelineno-19-1" name="__codelineno-19-1"></a>pre-commit<span class="w"> </span>install
+<a href="#__codelineno-19-2" id="__codelineno-19-2" name="__codelineno-19-2"></a>pre-commit<span class="w"> </span>run<span class="w"> </span>--all-files
+</code></pre></div>
+<h3 id="15-prettier">15. Prettier<a class="headerlink" href="#15-prettier" title="Permanent link">¶</a></h3>
+<p><strong>Description</strong>: Formats YAML files using Prettier.</p>
+<p><strong>Example</strong>: If the formatter makes changes, stage the changes and
+commit again.</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-20-1" id="__codelineno-20-1" name="__codelineno-20-1"></a>prettier<span class="w"> </span>--write<span class="w"> </span>config.yaml
+</code></pre></div>
+<h3 id="16-mypy">16. Mypy<a class="headerlink" href="#16-mypy" title="Permanent link">¶</a></h3>
+<p><strong>Description</strong>: Checks static typing using Mypy.</p>
+<p><strong>Example</strong>: If Mypy finds type errors, fix them and commit again.</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-21-1" id="__codelineno-21-1" name="__codelineno-21-1"></a>mypy<span class="w"> </span>my_script.py
+</code></pre></div>
+<p>By following these guidelines and using the pre-commit hooks, you can
+ensure that your code adheres to the project's coding standards and that
+any issues are caught early in the development process.</p>
 <aside class="md-source-file">
 <span class="md-source-file__fact">
 <span class="md-icon" title="Last update">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 9, 2024</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 28, 2024</span>
 </span>
 </aside>
 </article>
