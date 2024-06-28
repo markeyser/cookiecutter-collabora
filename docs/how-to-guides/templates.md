@@ -1,5 +1,69 @@
 # Templates for pull request, issue, feature and readme files
 
+## How to Open a Pull Request
+
+!!! example "Using ChatGPT to Write a Pull Request"
+    To create a clear and comprehensive pull request (PR) for your work on
+    the Retrieval-Augmented Generation (RAG) Q&A system, follow this
+    simplified template. Use the provided ChatGPT prompt to generate the PR
+    description automatically.
+
+    **PR Description Template:**
+
+    ```markdown
+    **Title**: [Concise title of the PR]
+
+    **Description**:
+    - **JIRA Story**: [Link to the JIRA story]
+    - **Summary**: Briefly describe the purpose of the PR and the changes made.
+    - **Commit Messages**: List of commit messages for this branch.
+    - **Context**: Any additional context or information that is relevant to understand the changes.
+    - **Testing**: Summary of testing performed, including unit tests, integration tests, and manual testing.
+    - **Documentation**: Mention any updates or additions to the documentation.
+    ```
+
+    **Example PR Description:**
+
+    ```markdown
+    **Title**: Add User Authentication Feature
+
+    **Description**:
+    - **JIRA Story**: [DATA-123](https://jira.example.com/browse/DATA-123)
+    - **Summary**: This PR adds a new user authentication feature, allowing users to register, log in, and recover their passwords. It includes both backend and frontend changes.
+    - **Commit Messages**:
+      - feat(auth): add user registration [#DATA-123]
+      - feat(auth): implement login functionality [#DATA-123]
+      - feat(auth): add password recovery [#DATA-123]
+    - **Context**: This change introduces new endpoints for authentication and updates the user model.
+    - **Testing**: Unit tests, integration tests, and manual testing were performed to ensure the feature works as expected.
+    - **Documentation**: Updated the API documentation and user guide to include the new authentication feature.
+    ```
+
+    **ChatGPT Prompt:**
+
+    ```plaintext
+    I need to create a pull request for my recent changes to the RAG Q&A system. Here are the details:
+
+    1. **JIRA Story**: [Enter JIRA story link]
+    2. **Summary**: Briefly describe the purpose of the PR and the changes made.
+    3. **Commit Messages**: [List of commit messages for this branch]
+    4. **Context**: Any additional context or information relevant to the changes.
+    5. **Testing**: Summary of testing performed.
+    6. **Documentation**: Mention any updates or additions to the documentation.
+
+    Using this information, generate a comprehensive pull request description following the template below:
+
+    **Title**: [Concise title of the PR]
+
+    **Description**:
+    - **JIRA Story**: [Link to the JIRA story]
+    - **Summary**: Briefly describe the purpose of the PR and the changes made.
+    - **Commit Messages**: List of commit messages for this branch.
+    - **Context**: Any additional context or information that is relevant to understand the changes.
+    - **Testing**: Summary of testing performed, including unit tests, integration tests, and manual testing.
+    - **Documentation**: Mention any updates or additions to the documentation.
+    ```
+
 ## Pull request template
 
 The following is an example of a pull request template following a
