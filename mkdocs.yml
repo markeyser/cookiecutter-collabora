@@ -108,6 +108,7 @@ nav:
       - Cofiguration Guidelines: getting-started/config_files_guidelines.md
       - Resource Compilation: getting-started/resource_compilation.md
       - Purpose and Vision: getting-started/purpose_and_vision.md
+      - Software Development Lifecycle: getting-started/software-development-lifecycle.md
   - Tutorials:
       - TOC: tutorials/toc-tutorials.md
       - Black Formatter: tutorials/black-formatter.md
