@@ -160,6 +160,7 @@ nav:
       - Best Practices for Creating JIRA Stories for ML/AI Projects: how-to-guides/jira-story-best-practices.md
       - Moving from Jupyter Notebooks to Production Python Code: how-to-guides/notebook-to-production.md
       - Static Type Checking with Mypy: how-to-guides/type-checking-mypy.md
+      - Using Pre-Commit Hooks to Enforce Coding Standards:  how-to-guides/pre-commit-hooks-guide.md
   - Explanation:
       - TOC: explanation/toc-explanation.md
       - Understanding DVC: explanation/dvc-understanding-dvs.md
