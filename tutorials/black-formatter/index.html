@@ -899,6 +899,15 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="using-black-code-formatter-in-your-project">Using Black Code Formatter in Your Project<a class="headerlink" href="#using-black-code-formatter-in-your-project" title="Permanent link">¶</a></h1>
+<div class="admonition example">
+<p class="admonition-title">Running Black Formatter</p>
+<p>To format your Python script with Black, run the following command in
+your terminal:</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>black<span class="w"> </span>sample_script.py
+</code></pre></div>
+<p>This command will reformat your <code>sample_script.py</code> file according to
+Black's style guidelines.</p>
+</div>
 <p>Black is an uncompromising code formatter. It ensures that your Python
 code adheres to a consistent, readable style. The setup you have thanks
 to the Cookiecutter template makes it even more convenient to use Black
@@ -923,12 +932,12 @@ Notebook</code>.</p>
 <div class="admonition example">
 <p class="admonition-title">Black Formatting in Action</p>
 <p><strong>Before Formatting</strong>:
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="k">def</span> <span class="nf">calculate</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">):</span><span class="n">result</span><span class="o">=</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="p">;</span> <span class="k">return</span> <span class="n">result</span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="k">def</span> <span class="nf">calculate</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">):</span><span class="n">result</span><span class="o">=</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="p">;</span> <span class="k">return</span> <span class="n">result</span>
 </code></pre></div></p>
 <p><strong>After Formatting</strong>: 
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="k">def</span> <span class="nf">calculate</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
-<a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a>    <span class="n">result</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
-<a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a>    <span class="k">return</span> <span class="n">result</span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="k">def</span> <span class="nf">calculate</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+<a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a>    <span class="n">result</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+<a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a>    <span class="k">return</span> <span class="n">result</span>
 </code></pre></div></p>
 </div>
 <div class="admonition info">
@@ -937,14 +946,14 @@ Notebook</code>.</p>
 Formatter provides a detailed log of the operation.</p>
 </div>
 <p>Here's an example of what you might see:</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="m">2023</span>-09-20<span class="w"> </span><span class="m">12</span>:38:00.934<span class="w"> </span><span class="o">[</span>info<span class="o">]</span><span class="w"> </span>Sending<span class="w"> </span>request<span class="w"> </span><span class="s1">'textDocument/formatting - (5)'</span>.
-<a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="m">2023</span>-09-20<span class="w"> </span><span class="m">12</span>:38:00.936<span class="w"> </span><span class="o">[</span>info<span class="o">]</span><span class="w"> </span>Received<span class="w"> </span>notification<span class="w"> </span><span class="s1">'window/logMessage'</span>.
-<a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="m">2023</span>-09-20<span class="w"> </span><span class="m">12</span>:38:00.936<span class="w"> </span><span class="o">[</span>info<span class="o">]</span><span class="w"> </span>Running:<span class="w"> </span>/Users/markeyser/Library/Caches/pypoetry/virtualenvs/cookiecutter_rag-zDtOoUN1-py3.11/bin/python<span class="w"> </span>-m<span class="w"> </span>black<span class="w"> </span>--stdin-filename<span class="w"> </span>/Users/markeyser/Projects/ccookiecutter-genai-ml-ai/checkformatter.py
-<a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="m">2023</span>-09-20<span class="w"> </span><span class="m">12</span>:38:00.938<span class="w"> </span><span class="o">[</span>info<span class="o">]</span><span class="w"> </span>CWD<span class="w"> </span>formatter:<span class="w"> </span>/Users/markeyser/Projects/ccookiecutter-genai-ml-ai
-<a href="#__codelineno-2-5" id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="m">2023</span>-09-20<span class="w"> </span><span class="m">12</span>:38:00.938<span class="w"> </span><span class="o">[</span>info<span class="o">]</span><span class="w"> </span>reformatted<span class="w"> </span>/Users/markeyser/Projects/ccookiecutter-genai-ml-ai/checkformatter.py
-<a href="#__codelineno-2-6" id="__codelineno-2-6" name="__codelineno-2-6"></a>All<span class="w"> </span><span class="k">done</span>!<span class="w"> </span>✨<span class="w"> </span>🍰<span class="w"> </span>✨
-<a href="#__codelineno-2-7" id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="m">1</span><span class="w"> </span>file<span class="w"> </span>reformatted.
-<a href="#__codelineno-2-8" id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="m">2023</span>-09-20<span class="w"> </span><span class="m">12</span>:38:00.940<span class="w"> </span><span class="o">[</span>info<span class="o">]</span><span class="w"> </span>Sending<span class="w"> </span>notification<span class="w"> </span><span class="s1">'textDocument/didChange'</span>.
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="m">2023</span>-09-20<span class="w"> </span><span class="m">12</span>:38:00.934<span class="w"> </span><span class="o">[</span>info<span class="o">]</span><span class="w"> </span>Sending<span class="w"> </span>request<span class="w"> </span><span class="s1">'textDocument/formatting - (5)'</span>.
+<a href="#__codelineno-3-2" id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="m">2023</span>-09-20<span class="w"> </span><span class="m">12</span>:38:00.936<span class="w"> </span><span class="o">[</span>info<span class="o">]</span><span class="w"> </span>Received<span class="w"> </span>notification<span class="w"> </span><span class="s1">'window/logMessage'</span>.
+<a href="#__codelineno-3-3" id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="m">2023</span>-09-20<span class="w"> </span><span class="m">12</span>:38:00.936<span class="w"> </span><span class="o">[</span>info<span class="o">]</span><span class="w"> </span>Running:<span class="w"> </span>/Users/markeyser/Library/Caches/pypoetry/virtualenvs/cookiecutter_rag-zDtOoUN1-py3.11/bin/python<span class="w"> </span>-m<span class="w"> </span>black<span class="w"> </span>--stdin-filename<span class="w"> </span>/Users/markeyser/Projects/ccookiecutter-genai-ml-ai/checkformatter.py
+<a href="#__codelineno-3-4" id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="m">2023</span>-09-20<span class="w"> </span><span class="m">12</span>:38:00.938<span class="w"> </span><span class="o">[</span>info<span class="o">]</span><span class="w"> </span>CWD<span class="w"> </span>formatter:<span class="w"> </span>/Users/markeyser/Projects/ccookiecutter-genai-ml-ai
+<a href="#__codelineno-3-5" id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="m">2023</span>-09-20<span class="w"> </span><span class="m">12</span>:38:00.938<span class="w"> </span><span class="o">[</span>info<span class="o">]</span><span class="w"> </span>reformatted<span class="w"> </span>/Users/markeyser/Projects/ccookiecutter-genai-ml-ai/checkformatter.py
+<a href="#__codelineno-3-6" id="__codelineno-3-6" name="__codelineno-3-6"></a>All<span class="w"> </span><span class="k">done</span>!<span class="w"> </span>✨<span class="w"> </span>🍰<span class="w"> </span>✨
+<a href="#__codelineno-3-7" id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="m">1</span><span class="w"> </span>file<span class="w"> </span>reformatted.
+<a href="#__codelineno-3-8" id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="m">2023</span>-09-20<span class="w"> </span><span class="m">12</span>:38:00.940<span class="w"> </span><span class="o">[</span>info<span class="o">]</span><span class="w"> </span>Sending<span class="w"> </span>notification<span class="w"> </span><span class="s1">'textDocument/didChange'</span>.
 </code></pre></div>
 <p>This log provides insights into the formatting process, including the
 file being formatted, the Black command being executed, and the result
@@ -957,12 +966,12 @@ at once, Black can be run directly from the command line.</p>
 <ul>
 <li>
 <p>For Python scripts, run:
-  <div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a>black<span class="w"> </span>your_script.py
+  <div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a>black<span class="w"> </span>your_script.py
 </code></pre></div></p>
 </li>
 <li>
 <p>For Jupyter notebooks, run: 
-  <div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a>black<span class="w"> </span>your_notebook.ipynb
+  <div class="highlight"><pre><span></span><code><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a>black<span class="w"> </span>your_notebook.ipynb
 </code></pre></div></p>
 </li>
 </ul>
@@ -970,23 +979,23 @@ at once, Black can be run directly from the command line.</p>
 <div class="admonition example">
 <p class="admonition-title">Formatting with Black from the Terminal</p>
 <p>Suppose you've written a Python script named <code>sample_script.py</code> with the following content:</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="k">def</span> <span class="nf">calculate</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">):</span><span class="n">result</span><span class="o">=</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="p">;</span> <span class="k">return</span> <span class="n">result</span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="k">def</span> <span class="nf">calculate</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">):</span><span class="n">result</span><span class="o">=</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="p">;</span> <span class="k">return</span> <span class="n">result</span>
 </code></pre></div>
 </div>
 <p>To format <code>sample_script.py</code> using Black, navigate to the directory
 containing the script and run:</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a>black<span class="w"> </span>sample_script.py
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-7-1" id="__codelineno-7-1" name="__codelineno-7-1"></a>black<span class="w"> </span>sample_script.py
 </code></pre></div>
 <p><strong>Terminal Output</strong>:</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-7-1" id="__codelineno-7-1" name="__codelineno-7-1"></a>reformatted sample_script.py
-<a href="#__codelineno-7-2" id="__codelineno-7-2" name="__codelineno-7-2"></a>All done! ✨ 🍰 ✨
-<a href="#__codelineno-7-3" id="__codelineno-7-3" name="__codelineno-7-3"></a>1 file reformatted.
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-8-1" id="__codelineno-8-1" name="__codelineno-8-1"></a>reformatted sample_script.py
+<a href="#__codelineno-8-2" id="__codelineno-8-2" name="__codelineno-8-2"></a>All done! ✨ 🍰 ✨
+<a href="#__codelineno-8-3" id="__codelineno-8-3" name="__codelineno-8-3"></a>1 file reformatted.
 </code></pre></div>
 <p><strong>Formatted Code</strong>:</p>
 <p>After running the command, your <code>sample_script.py</code> will be updated to:</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-8-1" id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="k">def</span> <span class="nf">calculate</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
-<a href="#__codelineno-8-2" id="__codelineno-8-2" name="__codelineno-8-2"></a>    <span class="n">result</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
-<a href="#__codelineno-8-3" id="__codelineno-8-3" name="__codelineno-8-3"></a>    <span class="k">return</span> <span class="n">result</span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-9-1" id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="k">def</span> <span class="nf">calculate</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+<a href="#__codelineno-9-2" id="__codelineno-9-2" name="__codelineno-9-2"></a>    <span class="n">result</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+<a href="#__codelineno-9-3" id="__codelineno-9-3" name="__codelineno-9-3"></a>    <span class="k">return</span> <span class="n">result</span>
 </code></pre></div>
 <h2 id="pre-commit-hooks-in-git">Pre-commit Hooks in Git<a class="headerlink" href="#pre-commit-hooks-in-git" title="Permanent link">¶</a></h2>
 <p>Thanks to the pre-configured hooks, any attempt to commit unformatted
@@ -994,21 +1003,21 @@ Python code will trigger Black to automatically format the code for you.</p>
 <div class="admonition example">
 <p class="admonition-title">Git Commit with Black</p>
 <p>Suppose you've written the following code in <code>sample_script.py</code>:</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-9-1" id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="k">def</span> <span class="nf">calculate</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">):</span><span class="n">result</span><span class="o">=</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="p">;</span> <span class="k">return</span> <span class="n">result</span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-10-1" id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="k">def</span> <span class="nf">calculate</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">):</span><span class="n">result</span><span class="o">=</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="p">;</span> <span class="k">return</span> <span class="n">result</span>
 </code></pre></div>
 <p>You decide to commit your changes:</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-10-1" id="__codelineno-10-1" name="__codelineno-10-1"></a>git<span class="w"> </span>add<span class="w"> </span>sample_script.py
-<a href="#__codelineno-10-2" id="__codelineno-10-2" name="__codelineno-10-2"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">"Add example function"</span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-11-1" id="__codelineno-11-1" name="__codelineno-11-1"></a>git<span class="w"> </span>add<span class="w"> </span>sample_script.py
+<a href="#__codelineno-11-2" id="__codelineno-11-2" name="__codelineno-11-2"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">"Add example function"</span>
 </code></pre></div>
 </div>
 <p>The pre-commit hook will detect the unformatted code and output a message:</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-11-1" id="__codelineno-11-1" name="__codelineno-11-1"></a>black....................................................................Failed
-<a href="#__codelineno-11-2" id="__codelineno-11-2" name="__codelineno-11-2"></a>-<span class="w"> </span>hook<span class="w"> </span>id:<span class="w"> </span>black
-<a href="#__codelineno-11-3" id="__codelineno-11-3" name="__codelineno-11-3"></a>-<span class="w"> </span>files<span class="w"> </span>were<span class="w"> </span>modified<span class="w"> </span>by<span class="w"> </span>this<span class="w"> </span>hook
-<a href="#__codelineno-11-4" id="__codelineno-11-4" name="__codelineno-11-4"></a>reformatted<span class="w"> </span>sample_script.py
-<a href="#__codelineno-11-5" id="__codelineno-11-5" name="__codelineno-11-5"></a>
-<a href="#__codelineno-11-6" id="__codelineno-11-6" name="__codelineno-11-6"></a>All<span class="w"> </span><span class="k">done</span>!<span class="w"> </span>✨<span class="w"> </span>🍰<span class="w"> </span>✨
-<a href="#__codelineno-11-7" id="__codelineno-11-7" name="__codelineno-11-7"></a><span class="m">1</span><span class="w"> </span>file<span class="w"> </span>reformatted.
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-12-1" id="__codelineno-12-1" name="__codelineno-12-1"></a>black....................................................................Failed
+<a href="#__codelineno-12-2" id="__codelineno-12-2" name="__codelineno-12-2"></a>-<span class="w"> </span>hook<span class="w"> </span>id:<span class="w"> </span>black
+<a href="#__codelineno-12-3" id="__codelineno-12-3" name="__codelineno-12-3"></a>-<span class="w"> </span>files<span class="w"> </span>were<span class="w"> </span>modified<span class="w"> </span>by<span class="w"> </span>this<span class="w"> </span>hook
+<a href="#__codelineno-12-4" id="__codelineno-12-4" name="__codelineno-12-4"></a>reformatted<span class="w"> </span>sample_script.py
+<a href="#__codelineno-12-5" id="__codelineno-12-5" name="__codelineno-12-5"></a>
+<a href="#__codelineno-12-6" id="__codelineno-12-6" name="__codelineno-12-6"></a>All<span class="w"> </span><span class="k">done</span>!<span class="w"> </span>✨<span class="w"> </span>🍰<span class="w"> </span>✨
+<a href="#__codelineno-12-7" id="__codelineno-12-7" name="__codelineno-12-7"></a><span class="m">1</span><span class="w"> </span>file<span class="w"> </span>reformatted.
 </code></pre></div>
 <p>Your commit will be halted, but Black will have automatically formatted
 your file. You can simply run the commit command again, and this time it
@@ -1043,9 +1052,9 @@ push or a pull request.</p>
 </ol>
 <p>When the GitHub Action runs, you might see an output similar to the
 following in the action's log:</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-12-1" id="__codelineno-12-1" name="__codelineno-12-1"></a>reformatted<span class="w"> </span>sample_script.py
-<a href="#__codelineno-12-2" id="__codelineno-12-2" name="__codelineno-12-2"></a>All<span class="w"> </span><span class="k">done</span>!<span class="w"> </span>✨<span class="w"> </span>🍰<span class="w"> </span>✨
-<a href="#__codelineno-12-3" id="__codelineno-12-3" name="__codelineno-12-3"></a><span class="m">1</span><span class="w"> </span>file<span class="w"> </span>reformatted.
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-13-1" id="__codelineno-13-1" name="__codelineno-13-1"></a>reformatted<span class="w"> </span>sample_script.py
+<a href="#__codelineno-13-2" id="__codelineno-13-2" name="__codelineno-13-2"></a>All<span class="w"> </span><span class="k">done</span>!<span class="w"> </span>✨<span class="w"> </span>🍰<span class="w"> </span>✨
+<a href="#__codelineno-13-3" id="__codelineno-13-3" name="__codelineno-13-3"></a><span class="m">1</span><span class="w"> </span>file<span class="w"> </span>reformatted.
 </code></pre></div>
 <p>This output confirms that the action has successfully reformatted the
 code to adhere to our standards.</p>
@@ -1058,15 +1067,15 @@ readability concerns), you can tell Black to skip that section.</p>
 <p>To skip formatting for a particular section, you can wrap that
 section of code between <code># fmt: off</code> and <code># fmt: on</code> comments.</p>
 <p><strong>Example</strong>:</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-13-1" id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="k">def</span> <span class="nf">transformation_matrix</span><span class="p">():</span>
-<a href="#__codelineno-13-2" id="__codelineno-13-2" name="__codelineno-13-2"></a>    <span class="c1"># fmt: off</span>
-<a href="#__codelineno-13-3" id="__codelineno-13-3" name="__codelineno-13-3"></a>    <span class="n">matrix</span> <span class="o">=</span> <span class="p">[</span>
-<a href="#__codelineno-13-4" id="__codelineno-13-4" name="__codelineno-13-4"></a>        <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
-<a href="#__codelineno-13-5" id="__codelineno-13-5" name="__codelineno-13-5"></a>        <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
-<a href="#__codelineno-13-6" id="__codelineno-13-6" name="__codelineno-13-6"></a>        <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
-<a href="#__codelineno-13-7" id="__codelineno-13-7" name="__codelineno-13-7"></a>    <span class="p">]</span>
-<a href="#__codelineno-13-8" id="__codelineno-13-8" name="__codelineno-13-8"></a>    <span class="c1"># fmt: on</span>
-<a href="#__codelineno-13-9" id="__codelineno-13-9" name="__codelineno-13-9"></a>    <span class="k">return</span> <span class="n">matrix</span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-14-1" id="__codelineno-14-1" name="__codelineno-14-1"></a><span class="k">def</span> <span class="nf">transformation_matrix</span><span class="p">():</span>
+<a href="#__codelineno-14-2" id="__codelineno-14-2" name="__codelineno-14-2"></a>    <span class="c1"># fmt: off</span>
+<a href="#__codelineno-14-3" id="__codelineno-14-3" name="__codelineno-14-3"></a>    <span class="n">matrix</span> <span class="o">=</span> <span class="p">[</span>
+<a href="#__codelineno-14-4" id="__codelineno-14-4" name="__codelineno-14-4"></a>        <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+<a href="#__codelineno-14-5" id="__codelineno-14-5" name="__codelineno-14-5"></a>        <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+<a href="#__codelineno-14-6" id="__codelineno-14-6" name="__codelineno-14-6"></a>        <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+<a href="#__codelineno-14-7" id="__codelineno-14-7" name="__codelineno-14-7"></a>    <span class="p">]</span>
+<a href="#__codelineno-14-8" id="__codelineno-14-8" name="__codelineno-14-8"></a>    <span class="c1"># fmt: on</span>
+<a href="#__codelineno-14-9" id="__codelineno-14-9" name="__codelineno-14-9"></a>    <span class="k">return</span> <span class="n">matrix</span>
 </code></pre></div>
 </div>
 <p>When you run Black on this snippet, the matrix remains untouched, while
@@ -1075,9 +1084,9 @@ formatted.</p>
 <p>If you were to format the above with Black without using the comments,
 it might put the entire matrix on a single line if it's short enough, or
 it might space things out differently.</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-14-1" id="__codelineno-14-1" name="__codelineno-14-1"></a><span class="k">def</span> <span class="nf">transformation_matrix</span><span class="p">():</span>
-<a href="#__codelineno-14-2" id="__codelineno-14-2" name="__codelineno-14-2"></a>    <span class="n">matrix</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]]</span>
-<a href="#__codelineno-14-3" id="__codelineno-14-3" name="__codelineno-14-3"></a>    <span class="k">return</span> <span class="n">matrix</span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-15-1" id="__codelineno-15-1" name="__codelineno-15-1"></a><span class="k">def</span> <span class="nf">transformation_matrix</span><span class="p">():</span>
+<a href="#__codelineno-15-2" id="__codelineno-15-2" name="__codelineno-15-2"></a>    <span class="n">matrix</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]]</span>
+<a href="#__codelineno-15-3" id="__codelineno-15-3" name="__codelineno-15-3"></a>    <span class="k">return</span> <span class="n">matrix</span>
 </code></pre></div>
 <h2 id="formatting-multiple-python-files">Formatting Multiple Python Files<a class="headerlink" href="#formatting-multiple-python-files" title="Permanent link">¶</a></h2>
 <p>Formatting multiple Python files with Black can be efficiently handled
@@ -1086,11 +1095,11 @@ workflow. Here are some approaches:</p>
 <p><strong>Format Entire Directory:</strong> If all your Python files are in a specific
    directory (or directories), you can format them all at once by
    running Black on the directory. For example:</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-15-1" id="__codelineno-15-1" name="__codelineno-15-1"></a>black<span class="w"> </span>path/to/directory/
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-16-1" id="__codelineno-16-1" name="__codelineno-16-1"></a>black<span class="w"> </span>path/to/directory/
 </code></pre></div>
 <p><strong>Format Specific File Types:</strong> If you have a mix of file types and only
    want to format the Python files, you can use a command like:</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-16-1" id="__codelineno-16-1" name="__codelineno-16-1"></a>find<span class="w"> </span>.<span class="w"> </span>-type<span class="w"> </span>f<span class="w"> </span>-name<span class="w"> </span><span class="s2">"*.py"</span><span class="w"> </span>-exec<span class="w"> </span>black<span class="w"> </span><span class="o">{}</span><span class="w"> </span>+
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-17-1" id="__codelineno-17-1" name="__codelineno-17-1"></a>find<span class="w"> </span>.<span class="w"> </span>-type<span class="w"> </span>f<span class="w"> </span>-name<span class="w"> </span><span class="s2">"*.py"</span><span class="w"> </span>-exec<span class="w"> </span>black<span class="w"> </span><span class="o">{}</span><span class="w"> </span>+
 </code></pre></div>
 <p>This command uses <code>find</code> to locate all <code>.py</code> files and <code>black</code> to
    format each one.</p>
@@ -1099,7 +1108,7 @@ workflow. Here are some approaches:</p>
    changed. This can be particularly useful in a collaborative
    environment. For example, to format all Python files that have been
    modified but not yet committed:</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-17-1" id="__codelineno-17-1" name="__codelineno-17-1"></a>git<span class="w"> </span>diff<span class="w"> </span>--name-only<span class="w"> </span>--staged<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span><span class="s1">'\.py$'</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>xargs<span class="w"> </span>black
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-18-1" id="__codelineno-18-1" name="__codelineno-18-1"></a>git<span class="w"> </span>diff<span class="w"> </span>--name-only<span class="w"> </span>--staged<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span><span class="s1">'\.py$'</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>xargs<span class="w"> </span>black
 </code></pre></div>
 <p>Choose the approach that best fits your workflow and project structure.
 Automation and integration with your development tools can significantly
@@ -1140,7 +1149,7 @@ documentation is a valuable resource.</p>
 <span class="md-icon" title="Last update">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 15, 2024</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 28, 2024</span>
 </span>
 </aside>
 </article>
