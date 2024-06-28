@@ -60,6 +60,7 @@ framework](../https://diataxis.fr/).
 ??? custom "Python Code Quality Tools"
     - :octicons-tools-16: [Formatting Your Code with Black](../tutorials/black-formatter.md) - A comprehensive guide on using Black to format Python code, ensuring consistency and readability across your codebase.
     - :octicons-checklist-16: [Accelerating Linting with Ruff](../tutorials/ruff-linter.md) - Learn how to integrate Ruff for fast and efficient linting to maintain high-quality Python code.
+    - :octicons-light-bulb-16: [Static Type Checking with Mypy](../how-to-guides/type-checking-mypy.md) - An in-depth guide on using Mypy to enhance your Python code with static type checking, including type inference, union types, optionals, and advanced features like overloads and generics.
 
 ??? custom "Data Version Control with DVC"
     - :octicons-book-16: [Understanding DVC](../explanation/dvc-understanding-dvs.md) - Essentials of DVC for large datasets management in ML, covering integration, versioning, and reproducibility.:construction:
