@@ -21,7 +21,7 @@ flowchart TB
   H --> I([9. Lint code with Ruff 🪝 <a href='https://markeyser.github.io/cookiecutter-collabora/tutorials/ruff-linter/?h=lint'>link</a>])
   I --> J([10. Pass pre-commit hooks 🪝 <a href='https://markeyser.github.io/cookiecutter-collabora/how-to-guides/pre-commit-hooks-guide/'>link</a>])
   J --> K([11. Update documentation <a href='https://markeyser.github.io/cookiecutter-collabora/tutorials/mkdocs-docs/?h=mkd'>link</a>])
-  K --> L([12. Commit changes <a href='https://markeyser.github.io/cookiecutter-collabora/how-to-guides/commit-message-standards-ml/?h=commit'>link</a>])
+  K --> L([12. Commit changes 🪝 <a href='https://markeyser.github.io/cookiecutter-collabora/how-to-guides/commit-message-standards-ml/?h=commit'>link</a>])
   L --> M([13. Push to remote repo])
   M --> N([14. Open a Pull Request <a href='https://markeyser.github.io/cookiecutter-collabora/how-to-guides/templates/?h=pull'>link</a>])
   N --> O([15. Code Review <a href='https://markeyser.github.io/cookiecutter-collabora/how-to-guides/code-review-best-practices/?h=review'>link</a>])
