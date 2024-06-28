@@ -1,5 +1,49 @@
 # Static Type Checking
 
+!!! example "Using ChatGPT to Assist with Static Typing"
+
+    Consider a Retrieval-Augmented Generation (RAG) Q&A system. Here's a function without type annotations:
+
+    ```plaintext
+    I have a Python function that processes user queries and retrieves 
+    relevant documents in a RAG Q&A system. The `query` parameter is a 
+    string. The `retrieve_documents` function returns a list of 
+    dictionaries with `id` and `text` as strings. The `process_query` 
+    function should return a list of document texts. Here is the function:
+
+    def process_query(query, retrieve_documents):
+        documents = retrieve_documents(query)
+        return [doc['text'] for doc in documents]
+
+    Can you add the appropriate type annotations to this function using 
+    Mypy and explain your reasoning?
+    ```
+
+    #### Example Output
+
+    ChatGPT might respond with:
+
+    ```python
+    from typing import Callable, List, Dict
+
+    def process_query(query: str, retrieve_documents: Callable[[str], List[Dict[str, str]]]) -> List[str]:
+        documents = retrieve_documents(query)
+        return [doc['text'] for doc in documents]
+    ```
+
+    #### Reasoning:
+
+    1. **`query: str`**: The `query` parameter is a string because it represents the user's question.
+    2. **`retrieve_documents: Callable[[str], List[Dict[str, str]]]`**: The `retrieve_documents` parameter is a callable function that takes a string (`query`) and returns a list of dictionaries, each containing an `id` and `text` as strings.
+    3. **`-> List[str]`**: The `process_query` function returns a list of strings, which are the texts of the retrieved documents.
+
+    ### Best Practices for Using ChatGPT
+
+    4. **Provide Context**: More context leads to better type annotations. Include sample inputs or describe expected outputs.
+    5. **Ask for Explanations**: If unsure about an annotation, ask ChatGPT for an explanation.
+    6. **Iterate**: Start with a basic function and gradually add complexity to ensure consistent and accurate annotations.
+
+
 ## Why Use Static Typing with Python?
 
 Python's dynamic typing allows for flexible and rapid development but

@@ -13,6 +13,7 @@ theme:
     - search.highlight
     - navigation.tabs
     - content.code.annotate
+    - content.code.copy
   palette:
     - media: "(prefers-color-scheme)"
       toggle:
