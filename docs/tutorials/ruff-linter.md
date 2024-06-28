@@ -1,5 +1,187 @@
 # Ruff: Python Linting for Clean and Compliant Code
 
+!!! example "ChatGPT Prompt for Google-Style Docstrings"
+    A fast and easy way to create Google-style docstrings is by using ChatGPT. 
+    You can provide a simple prompt to request the creation of the docstring 
+    for any Python function.
+
+    ### Example Prompt for a Function
+
+    Here’s an example prompt you could use with ChatGPT to request a Google-style 
+    docstring following the settings in your `.vscode/settings.json` file:
+
+    **Prompt:**
+
+    ```plaintext
+    Create a Google-style docstring for the following Python function. 
+    Limit comments to 72 characters per line and code lines to 79 characters.
+
+    Function:
+    def add_numbers(a, b):
+        result = a + b
+        return result
+
+    Context (optional): This function adds two numbers together.
+    ```
+
+    ### Generated Docstring
+
+    Using the prompt above, ChatGPT will generate a docstring similar to this:
+
+    ```python
+    def add_numbers(a, b):
+        """
+        Adds two numbers together.
+
+        Args:
+            a (int): The first number.
+            b (int): The second number.
+
+        Returns:
+            int: The sum of the two numbers.
+
+        Raises:
+            TypeError: If either 'a' or 'b' is not an integer.
+        """
+        result = a + b
+        return result
+    ```
+
+    ### Example Prompt for a Class
+
+    Here’s an example prompt you could use with ChatGPT to request Google-style 
+    docstrings for an entire class, including the module-level docstring, 
+    class-level docstring, and docstrings for each method:
+
+    **Prompt:**
+
+    ```plaintext
+    Create Google-style docstrings for the following Python class. 
+    Limit comments to 72 characters per line and code lines to 79 characters.
+    Include the module-level docstring at the very top of the script before the imports,
+    the class-level docstring, and the docstrings for each method.
+
+    Class:
+    class TextProcessor:
+        def __init__(self, language):
+            if language not in ['en', 'es', 'fr']:
+                raise ValueError(f"Unsupported language: {language}")
+            self.language = language
+
+        def clean_text(self, text):
+            if not isinstance(text, str):
+                raise TypeError("Input text must be a string")
+            # Implementation goes here
+            pass
+
+        def tokenize(self, text):
+            if not isinstance(text, str):
+                raise TypeError("Input text must be a string")
+            # Implementation goes here
+            pass
+
+        def analyze_sentiment(self, text):
+            if not isinstance(text, str):
+                raise TypeError("Input text must be a string")
+            # Implementation goes here
+            pass
+
+    Context (optional): This class is used for text processing in NLP tasks.
+    It includes methods for cleaning text, tokenizing sentences, and analyzing sentiment.
+    ```
+
+    ### Generated Docstring
+
+    ChatGPT might respond with:
+
+    ```python
+    """
+    This module provides text processing utilities for NLP projects.
+
+    The utilities include functions for text cleaning, tokenization, and 
+    sentiment analysis.
+    """
+
+    class TextProcessor:
+        """
+        A class used to perform text processing for NLP tasks.
+
+        This class includes methods for cleaning text, tokenizing sentences,
+        and calculating sentiment scores.
+
+        Attributes:
+            language (str): The language of the text to be processed.
+        """
+
+        def __init__(self, language):
+            """
+            Initializes the TextProcessor with a specified language.
+
+            Args:
+                language (str): The language of the text to be processed.
+
+            Raises:
+                ValueError: If the provided language is not supported.
+            """
+            if language not in ['en', 'es', 'fr']:
+                raise ValueError(f"Unsupported language: {language}")
+            self.language = language
+
+        def clean_text(self, text):
+            """
+            Cleans the input text by removing special characters and extra spaces.
+
+            Args:
+                text (str): The text to be cleaned.
+
+            Returns:
+                str: The cleaned text.
+
+            Raises:
+                TypeError: If the input text is not a string.
+            """
+            if not isinstance(text, str):
+                raise TypeError("Input text must be a string")
+            # Implementation goes here
+            pass
+
+        def tokenize(self, text):
+            """
+            Tokenizes the input text into a list of words.
+
+            Args:
+                text (str): The text to be tokenized.
+
+            Returns:
+                list: A list of words (tokens).
+
+            Raises:
+                TypeError: If the input text is not a string.
+            """
+            if not isinstance(text, str):
+                raise TypeError("Input text must be a string")
+            # Implementation goes here
+            pass
+
+        def analyze_sentiment(self, text):
+            """
+            Analyzes the sentiment of the input text.
+
+            Args:
+                text (str): The text to be analyzed.
+
+            Returns:
+                float: The sentiment score of the text.
+
+            Raises:
+                TypeError: If the input text is not a string.
+            """
+            if not isinstance(text, str):
+                raise TypeError("Input text must be a string")
+            # Implementation goes here
+            pass
+    ```
+
 Ruff is a high-performance linter for Python that swiftly evaluates and
 enhances the quality of your code. With an emphasis on speed and
 practicality, Ruff assists developers in maintaining consistent coding
