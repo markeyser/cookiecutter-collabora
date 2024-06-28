@@ -35,6 +35,6 @@ flowchart TB
 
   classDef highlighted fill:#d9534f,stroke:#333,stroke-width:2px,color:#fff;
   classDef blue fill:#5bc0de,stroke:#333,stroke-width:2px,color:#fff;
-  class A,B,C,F,H,I,J,K,L,M,N highlighted;
+  class A,B,C,F,H,I,J,L,M,N highlighted;
   class R,S,T,U blue;
 ```

@@ -1,5 +1,77 @@
 # Git Commit Message Standards for ML Projects
 
+!!! example "ChatGPT Prompt for Git Commit Message"
+    To create a standardized git commit message using ChatGPT, provide the
+    following details: the output of `git diff my_python_file.py`, the JIRA
+    story number, and the commit type. ChatGPT will generate the appropriate
+    commit message based on these inputs.
+
+    ### Example Prompt
+
+    **Prompt:**
+
+    ```plaintext
+    Create a git commit message for the following changes. Follow the structure:
+    <type>(<scope>): <subject> [#issue_number | #jira_key]
+    
+    Include the body and footer, and provide the complete git commit
+    command. Limit comments to 72 characters per line and code lines to 79
+    characters.
+
+    Output of `git diff my_python_file.py`:
+    [Include the output of the git diff here]
+
+    JIRA story number: [Enter JIRA story number]
+
+    Commit types:
+    - feat: New features or enhancements
+    - fix: Bug fixes
+    - data: Data processing or management changes
+    - experiment: Experimental or exploratory code changes
+    - model: Model development, testing, or deployment changes
+    - docs: Documentation additions or updates
+    - refactor: Performance enhancements without functionality changes
+    - test: Test writing or fixing
+    - chore: Routine tasks or non-production code updates
+    - build: Changes that affect the build system or external dependencies
+    - ci: Changes to CI configuration files and scripts
+    - revert: Reverts a previous commit
+    - style: Code style changes (formatting, missing semicolons, etc.)
+
+    Example Commit Types:
+    - feat(auth): add user authentication feature [#DATA123]
+    - fix(data): resolve data loading error [#GH45]
+    - docs: update API documentation
+    ```
+
+    ### Generated Commit Message
+
+    ChatGPT might respond with:
+
+    ```plaintext
+    git commit -m "feat(auth): add user authentication feature [#DATA123]
+
+    Added a new user authentication feature to enhance security.
+    This includes login, registration, and password recovery.
+
+    Footer: Reviewed by Jane Doe"
+    ```
+
+    ### Running the Git Command
+
+    To commit your changes with the generated message, run the following command in your terminal:
+
+    ```bash
+    git commit -m "feat(auth): add user authentication feature [#DATA123]
+
+    Added a new user authentication feature to enhance security.
+    This includes login, registration, and password recovery.
+
+    Footer: Reviewed by Jane Doe"
+    ```
+
+Include this admonition in your `docs/how-to-guides/git-commit-message-standards.md` file. This example explains how to request a standardized git commit message from ChatGPT, providing a detailed prompt and the expected output.
+
 !!! tip "Introduction"
     Clear, informative commit messages are vital for effective team collaboration in machine learning projects. This guide provides standards and tools for creating standardized commit messages, including how to reference GitHub issue numbers or Jira keys. We follow the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) specification.
 
