@@ -1,5 +1,38 @@
 # Git Branch Naming Standards for ML Projects
 
+!!! example "ChatGPT Prompt for Branch Name"
+    Copy and paste the following prompt into ChatGPT to generate a branch
+    name based on your JIRA story:
+
+    ```plaintext
+    I need a branch name for a new task. Here are the details:
+    1. The description of the JIRA story: [Enter JIRA story description]
+    2. The JIRA number: [Enter JIRA number]
+    3. The standard to follow: <category>/<description>-<issue_number_or_jira_key>
+
+    Please use one of the following categories: feature, bugfix, data, experiment, model, docs, refactor, test, chore.
+
+    Provide the git command to create this branch.
+    ```
+
+    **Example Prompt:**
+
+    ```plaintext
+    I need a branch name for a new task. Here are the details:
+    4. The description of the JIRA story: Add user authentication
+    5. The JIRA number: DATA123
+    6. The standard to follow: feature/add-user-authentication-DATA123
+
+    Provide the git command to create this branch.
+    ```
+
+    **ChatGPT Output:**
+
+    ```plaintext
+    git checkout -b feature/add-user-authentication-DATA123
+    ```
+
+
 !!! tip "Overview"
     For machine learning projects, maintaining clarity in the Git repository is crucial. A consistent approach to branch naming is key to this clarity, facilitating rapid identification of the branch's purpose, aiding in collaboration, and making repository navigation intuitive.
 
