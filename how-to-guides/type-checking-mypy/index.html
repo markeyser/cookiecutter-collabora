@@ -648,6 +648,27 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
+<a class="md-nav__link" href="#example-output">
+<span class="md-ellipsis">
+      Example Output
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#reasoning">
+<span class="md-ellipsis">
+      Reasoning:
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#best-practices-for-using-chatgpt">
+<span class="md-ellipsis">
+      Best Practices for Using ChatGPT
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#why-use-static-typing-with-python">
 <span class="md-ellipsis">
       Why Use Static Typing with Python?
@@ -974,14 +995,14 @@
 <nav aria-label="Example Prompt" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#example-output">
+<a class="md-nav__link" href="#example-output_1">
 <span class="md-ellipsis">
       Example Output
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#reasoning">
+<a class="md-nav__link" href="#reasoning_1">
 <span class="md-ellipsis">
       Reasoning:
     </span>
@@ -991,7 +1012,7 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#best-practices-for-using-chatgpt">
+<a class="md-nav__link" href="#best-practices-for-using-chatgpt_1">
 <span class="md-ellipsis">
       Best Practices for Using ChatGPT
     </span>
@@ -1111,6 +1132,27 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
+<a class="md-nav__link" href="#example-output">
+<span class="md-ellipsis">
+      Example Output
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#reasoning">
+<span class="md-ellipsis">
+      Reasoning:
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#best-practices-for-using-chatgpt">
+<span class="md-ellipsis">
+      Best Practices for Using ChatGPT
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#why-use-static-typing-with-python">
 <span class="md-ellipsis">
       Why Use Static Typing with Python?
@@ -1437,14 +1479,14 @@
 <nav aria-label="Example Prompt" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#example-output">
+<a class="md-nav__link" href="#example-output_1">
 <span class="md-ellipsis">
       Example Output
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#reasoning">
+<a class="md-nav__link" href="#reasoning_1">
 <span class="md-ellipsis">
       Reasoning:
     </span>
@@ -1454,7 +1496,7 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#best-practices-for-using-chatgpt">
+<a class="md-nav__link" href="#best-practices-for-using-chatgpt_1">
 <span class="md-ellipsis">
       Best Practices for Using ChatGPT
     </span>
@@ -1471,6 +1513,43 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="static-type-checking">Static Type Checking<a class="headerlink" href="#static-type-checking" title="Permanent link">¶</a></h1>
+<div class="admonition example">
+<p class="admonition-title">Using ChatGPT to Assist with Static Typing</p>
+<p>Consider a Retrieval-Augmented Generation (RAG) Q&amp;A system. Here's a function without type annotations:</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>I have a Python function that processes user queries and retrieves 
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a>relevant documents in a RAG Q&amp;A system. The `query` parameter is a 
+<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a>string. The `retrieve_documents` function returns a list of 
+<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a>dictionaries with `id` and `text` as strings. The `process_query` 
+<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a>function should return a list of document texts. Here is the function:
+<a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a>
+<a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a>def process_query(query, retrieve_documents):
+<a href="#__codelineno-0-8" id="__codelineno-0-8" name="__codelineno-0-8"></a>    documents = retrieve_documents(query)
+<a href="#__codelineno-0-9" id="__codelineno-0-9" name="__codelineno-0-9"></a>    return [doc['text'] for doc in documents]
+<a href="#__codelineno-0-10" id="__codelineno-0-10" name="__codelineno-0-10"></a>
+<a href="#__codelineno-0-11" id="__codelineno-0-11" name="__codelineno-0-11"></a>Can you add the appropriate type annotations to this function using 
+<a href="#__codelineno-0-12" id="__codelineno-0-12" name="__codelineno-0-12"></a>Mypy and explain your reasoning?
+</code></pre></div>
+<h4 id="example-output">Example Output<a class="headerlink" href="#example-output" title="Permanent link">¶</a></h4>
+<p>ChatGPT might respond with:</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Callable</span><span class="p">,</span> <span class="n">List</span><span class="p">,</span> <span class="n">Dict</span>
+<a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a>
+<a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="k">def</span> <span class="nf">process_query</span><span class="p">(</span><span class="n">query</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">retrieve_documents</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[[</span><span class="nb">str</span><span class="p">],</span> <span class="n">List</span><span class="p">[</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">]]])</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+<a href="#__codelineno-1-4" id="__codelineno-1-4" name="__codelineno-1-4"></a>    <span class="n">documents</span> <span class="o">=</span> <span class="n">retrieve_documents</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
+<a href="#__codelineno-1-5" id="__codelineno-1-5" name="__codelineno-1-5"></a>    <span class="k">return</span> <span class="p">[</span><span class="n">doc</span><span class="p">[</span><span class="s1">'text'</span><span class="p">]</span> <span class="k">for</span> <span class="n">doc</span> <span class="ow">in</span> <span class="n">documents</span><span class="p">]</span>
+</code></pre></div>
+<h4 id="reasoning">Reasoning:<a class="headerlink" href="#reasoning" title="Permanent link">¶</a></h4>
+<ol>
+<li><strong><code>query: str</code></strong>: The <code>query</code> parameter is a string because it represents the user's question.</li>
+<li><strong><code>retrieve_documents: Callable[[str], List[Dict[str, str]]]</code></strong>: The <code>retrieve_documents</code> parameter is a callable function that takes a string (<code>query</code>) and returns a list of dictionaries, each containing an <code>id</code> and <code>text</code> as strings.</li>
+<li><strong><code>-&gt; List[str]</code></strong>: The <code>process_query</code> function returns a list of strings, which are the texts of the retrieved documents.</li>
+</ol>
+<h3 id="best-practices-for-using-chatgpt">Best Practices for Using ChatGPT<a class="headerlink" href="#best-practices-for-using-chatgpt" title="Permanent link">¶</a></h3>
+<ol>
+<li><strong>Provide Context</strong>: More context leads to better type annotations. Include sample inputs or describe expected outputs.</li>
+<li><strong>Ask for Explanations</strong>: If unsure about an annotation, ask ChatGPT for an explanation.</li>
+<li><strong>Iterate</strong>: Start with a basic function and gradually add complexity to ensure consistent and accurate annotations.</li>
+</ol>
+</div>
 <h2 id="why-use-static-typing-with-python">Why Use Static Typing with Python?<a class="headerlink" href="#why-use-static-typing-with-python" title="Permanent link">¶</a></h2>
 <p>Python's dynamic typing allows for flexible and rapid development but
 comes with trade-offs. Understanding these trade-offs and the benefits
@@ -1486,11 +1565,11 @@ but can lead to subtle and hard-to-diagnose bugs.</p>
 by the presence of certain methods and properties rather than its type.
 This makes code flexible but can make understanding and debugging
 difficult in larger codebases. For example:</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
-<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a>    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
-<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a>
-<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="n">result</span> <span class="o">=</span> <span class="n">add</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="s2">"4"</span><span class="p">)</span>  <span class="c1"># This will cause a runtime error</span>
-<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+<a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a>    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+<a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a>
+<a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="n">result</span> <span class="o">=</span> <span class="n">add</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="s2">"4"</span><span class="p">)</span>  <span class="c1"># This will cause a runtime error</span>
+<a href="#__codelineno-2-5" id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
 </code></pre></div>
 <p>Without explicit type annotations, it's hard to know what types <code>a</code> and
 <code>b</code> should be, leading to potential runtime errors.</p>
@@ -1509,31 +1588,31 @@ explicit, providing several benefits:</p>
 </ul>
 <h3 id="example-explicit-type-annotations">Example: Explicit Type Annotations<a class="headerlink" href="#example-explicit-type-annotations" title="Permanent link">¶</a></h3>
 <h4 id="before-without-type-checking">Before: Without Type Checking<a class="headerlink" href="#before-without-type-checking" title="Permanent link">¶</a></h4>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
-<a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a>    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
-<a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a>
-<a href="#__codelineno-1-4" id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="n">result</span> <span class="o">=</span> <span class="n">add</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="s2">"4"</span><span class="p">)</span>  <span class="c1"># This will cause a runtime error</span>
-<a href="#__codelineno-1-5" id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+<a href="#__codelineno-3-2" id="__codelineno-3-2" name="__codelineno-3-2"></a>    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+<a href="#__codelineno-3-3" id="__codelineno-3-3" name="__codelineno-3-3"></a>
+<a href="#__codelineno-3-4" id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="n">result</span> <span class="o">=</span> <span class="n">add</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="s2">"4"</span><span class="p">)</span>  <span class="c1"># This will cause a runtime error</span>
+<a href="#__codelineno-3-5" id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
 </code></pre></div>
 <h4 id="after-with-type-checking">After: With Type Checking<a class="headerlink" href="#after-with-type-checking" title="Permanent link">¶</a></h4>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">a</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-<a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a>    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
-<a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a>
-<a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="n">result</span> <span class="o">=</span> <span class="n">add</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>  <span class="c1"># This will work</span>
-<a href="#__codelineno-2-5" id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
-<a href="#__codelineno-2-6" id="__codelineno-2-6" name="__codelineno-2-6"></a>
-<a href="#__codelineno-2-7" id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="c1"># Uncommenting the line below will cause a type checking error with mypy</span>
-<a href="#__codelineno-2-8" id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="c1"># result = add(3, "4")  # This will cause a mypy type error</span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">a</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<a href="#__codelineno-4-2" id="__codelineno-4-2" name="__codelineno-4-2"></a>    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+<a href="#__codelineno-4-3" id="__codelineno-4-3" name="__codelineno-4-3"></a>
+<a href="#__codelineno-4-4" id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="n">result</span> <span class="o">=</span> <span class="n">add</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>  <span class="c1"># This will work</span>
+<a href="#__codelineno-4-5" id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+<a href="#__codelineno-4-6" id="__codelineno-4-6" name="__codelineno-4-6"></a>
+<a href="#__codelineno-4-7" id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="c1"># Uncommenting the line below will cause a type checking error with mypy</span>
+<a href="#__codelineno-4-8" id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="c1"># result = add(3, "4")  # This will cause a mypy type error</span>
 </code></pre></div>
 <p>Type annotations specify that <code>a</code> and <code>b</code> must be of type <code>int</code>. The
 type checker will catch any type errors before runtime.</p>
 <p>To check the code with <code>mypy</code>, save the "after" code in a file (e.g.,
 <code>example.py</code>) and run:</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a>mypy<span class="w"> </span>example.py
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a>mypy<span class="w"> </span>example.py
 </code></pre></div>
 <p>Mypy will report an error if you uncomment the line with the type
 mismatch:</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a>example.py:10: error: Argument 2 to "add" has incompatible type "str"; expected "int"
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a>example.py:10: error: Argument 2 to "add" has incompatible type "str"; expected "int"
 </code></pre></div>
 <p>This ensures that type errors are caught early during development,
 improving code robustness.</p>
@@ -1557,23 +1636,23 @@ explicit annotations and keeping the code clean and concise.</p>
 <h4 id="variable-type-inference">Variable Type Inference<a class="headerlink" href="#variable-type-inference" title="Permanent link">¶</a></h4>
 <p>Mypy can infer the type of a variable based on the value assigned to it.
 For example:</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="n">x</span> <span class="o">=</span> <span class="mi">10</span>  <span class="c1"># mypy infers x as int</span>
-<a href="#__codelineno-5-2" id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="n">y</span> <span class="o">=</span> <span class="s2">"Hello, world!"</span>  <span class="c1"># mypy infers y as str</span>
-<a href="#__codelineno-5-3" id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="n">z</span> <span class="o">=</span> <span class="mf">3.14</span>  <span class="c1"># mypy infers z as float</span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-7-1" id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="n">x</span> <span class="o">=</span> <span class="mi">10</span>  <span class="c1"># mypy infers x as int</span>
+<a href="#__codelineno-7-2" id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="n">y</span> <span class="o">=</span> <span class="s2">"Hello, world!"</span>  <span class="c1"># mypy infers y as str</span>
+<a href="#__codelineno-7-3" id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="n">z</span> <span class="o">=</span> <span class="mf">3.14</span>  <span class="c1"># mypy infers z as float</span>
 </code></pre></div>
 <p>In this example, <code>mypy</code> infers that <code>x</code> is of type <code>int</code>, <code>y</code> is of type
 <code>str</code>, and <code>z</code> is of type <code>float</code> based on the assigned values.</p>
 <h4 id="function-return-type-inference">Function Return Type Inference<a class="headerlink" href="#function-return-type-inference" title="Permanent link">¶</a></h4>
 <p>Mypy can also infer the return type of a function based on the return
 statement:</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">a</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-<a href="#__codelineno-6-2" id="__codelineno-6-2" name="__codelineno-6-2"></a>    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
-<a href="#__codelineno-6-3" id="__codelineno-6-3" name="__codelineno-6-3"></a>
-<a href="#__codelineno-6-4" id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="n">result</span> <span class="o">=</span> <span class="n">add</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>  <span class="c1"># mypy infers result as int</span>
-<a href="#__codelineno-6-5" id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
-<a href="#__codelineno-6-6" id="__codelineno-6-6" name="__codelineno-6-6"></a>
-<a href="#__codelineno-6-7" id="__codelineno-6-7" name="__codelineno-6-7"></a><span class="c1"># Uncommenting the line below will cause a type checking error with mypy</span>
-<a href="#__codelineno-6-8" id="__codelineno-6-8" name="__codelineno-6-8"></a><span class="c1"># result = add(3, "4")  # This will cause a mypy type error</span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-8-1" id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">a</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<a href="#__codelineno-8-2" id="__codelineno-8-2" name="__codelineno-8-2"></a>    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+<a href="#__codelineno-8-3" id="__codelineno-8-3" name="__codelineno-8-3"></a>
+<a href="#__codelineno-8-4" id="__codelineno-8-4" name="__codelineno-8-4"></a><span class="n">result</span> <span class="o">=</span> <span class="n">add</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>  <span class="c1"># mypy infers result as int</span>
+<a href="#__codelineno-8-5" id="__codelineno-8-5" name="__codelineno-8-5"></a><span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+<a href="#__codelineno-8-6" id="__codelineno-8-6" name="__codelineno-8-6"></a>
+<a href="#__codelineno-8-7" id="__codelineno-8-7" name="__codelineno-8-7"></a><span class="c1"># Uncommenting the line below will cause a type checking error with mypy</span>
+<a href="#__codelineno-8-8" id="__codelineno-8-8" name="__codelineno-8-8"></a><span class="c1"># result = add(3, "4")  # This will cause a mypy type error</span>
 </code></pre></div>
 <p>Here, <code>mypy</code> infers that the <code>add</code> function returns an <code>int</code> because it
 adds two integers. Consequently, the variable <code>result</code> is inferred to be
@@ -1581,43 +1660,43 @@ of type <code>int</code>.</p>
 <h4 id="collection-type-inference">Collection Type Inference<a class="headerlink" href="#collection-type-inference" title="Permanent link">¶</a></h4>
 <p>When working with collections like lists and dictionaries, <code>mypy</code> can
 infer the types of the elements:</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-7-1" id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>  <span class="c1"># mypy infers numbers as List[int]</span>
-<a href="#__codelineno-7-2" id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"Alice"</span><span class="p">,</span> <span class="s2">"Bob"</span><span class="p">,</span> <span class="s2">"Charlie"</span><span class="p">]</span>  <span class="c1"># mypy infers names as List[str]</span>
-<a href="#__codelineno-7-3" id="__codelineno-7-3" name="__codelineno-7-3"></a>
-<a href="#__codelineno-7-4" id="__codelineno-7-4" name="__codelineno-7-4"></a><span class="n">person</span> <span class="o">=</span> <span class="p">{</span>
-<a href="#__codelineno-7-5" id="__codelineno-7-5" name="__codelineno-7-5"></a>    <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"Marcos"</span><span class="p">,</span>
-<a href="#__codelineno-7-6" id="__codelineno-7-6" name="__codelineno-7-6"></a>    <span class="s2">"age"</span><span class="p">:</span> <span class="mi">42</span>
-<a href="#__codelineno-7-7" id="__codelineno-7-7" name="__codelineno-7-7"></a><span class="p">}</span>  <span class="c1"># mypy infers person as Dict[str, Union[str, int]]</span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-9-1" id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>  <span class="c1"># mypy infers numbers as List[int]</span>
+<a href="#__codelineno-9-2" id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"Alice"</span><span class="p">,</span> <span class="s2">"Bob"</span><span class="p">,</span> <span class="s2">"Charlie"</span><span class="p">]</span>  <span class="c1"># mypy infers names as List[str]</span>
+<a href="#__codelineno-9-3" id="__codelineno-9-3" name="__codelineno-9-3"></a>
+<a href="#__codelineno-9-4" id="__codelineno-9-4" name="__codelineno-9-4"></a><span class="n">person</span> <span class="o">=</span> <span class="p">{</span>
+<a href="#__codelineno-9-5" id="__codelineno-9-5" name="__codelineno-9-5"></a>    <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"Marcos"</span><span class="p">,</span>
+<a href="#__codelineno-9-6" id="__codelineno-9-6" name="__codelineno-9-6"></a>    <span class="s2">"age"</span><span class="p">:</span> <span class="mi">42</span>
+<a href="#__codelineno-9-7" id="__codelineno-9-7" name="__codelineno-9-7"></a><span class="p">}</span>  <span class="c1"># mypy infers person as Dict[str, Union[str, int]]</span>
 </code></pre></div>
 <p>In these examples, <code>mypy</code> infers the types of the lists and dictionaries
 based on their contents. If you later try to add elements of a different
 type to these collections, mypy will flag it as an error, ensuring type
 consistency throughout your codebase.</p>
 <h4 id="example-complete-type-inference">Example: Complete Type Inference<a class="headerlink" href="#example-complete-type-inference" title="Permanent link">¶</a></h4>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-8-1" id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="c1"># example.py</span>
-<a href="#__codelineno-8-2" id="__codelineno-8-2" name="__codelineno-8-2"></a>
-<a href="#__codelineno-8-3" id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">a</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
-<a href="#__codelineno-8-4" id="__codelineno-8-4" name="__codelineno-8-4"></a>    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
-<a href="#__codelineno-8-5" id="__codelineno-8-5" name="__codelineno-8-5"></a>
-<a href="#__codelineno-8-6" id="__codelineno-8-6" name="__codelineno-8-6"></a><span class="k">def</span> <span class="nf">greet</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
-<a href="#__codelineno-8-7" id="__codelineno-8-7" name="__codelineno-8-7"></a>    <span class="k">return</span> <span class="sa">f</span><span class="s2">"Hello, </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">!"</span>
-<a href="#__codelineno-8-8" id="__codelineno-8-8" name="__codelineno-8-8"></a>
-<a href="#__codelineno-8-9" id="__codelineno-8-9" name="__codelineno-8-9"></a><span class="n">x</span> <span class="o">=</span> <span class="mi">10</span>  <span class="c1"># mypy infers x as int</span>
-<a href="#__codelineno-8-10" id="__codelineno-8-10" name="__codelineno-8-10"></a><span class="n">y</span> <span class="o">=</span> <span class="mi">20</span>  <span class="c1"># mypy infers y as int</span>
-<a href="#__codelineno-8-11" id="__codelineno-8-11" name="__codelineno-8-11"></a><span class="n">z</span> <span class="o">=</span> <span class="n">add</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>  <span class="c1"># mypy infers z as int</span>
-<a href="#__codelineno-8-12" id="__codelineno-8-12" name="__codelineno-8-12"></a>
-<a href="#__codelineno-8-13" id="__codelineno-8-13" name="__codelineno-8-13"></a><span class="n">message</span> <span class="o">=</span> <span class="n">greet</span><span class="p">(</span><span class="s2">"Marcos"</span><span class="p">)</span>  <span class="c1"># mypy infers message as str</span>
-<a href="#__codelineno-8-14" id="__codelineno-8-14" name="__codelineno-8-14"></a>
-<a href="#__codelineno-8-15" id="__codelineno-8-15" name="__codelineno-8-15"></a><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>  <span class="c1"># mypy infers numbers as List[int]</span>
-<a href="#__codelineno-8-16" id="__codelineno-8-16" name="__codelineno-8-16"></a><span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"Alice"</span><span class="p">,</span> <span class="s2">"Bob"</span><span class="p">,</span> <span class="s2">"Charlie"</span><span class="p">]</span>  <span class="c1"># mypy infers names as List[str]</span>
-<a href="#__codelineno-8-17" id="__codelineno-8-17" name="__codelineno-8-17"></a>
-<a href="#__codelineno-8-18" id="__codelineno-8-18" name="__codelineno-8-18"></a><span class="n">person</span> <span class="o">=</span> <span class="p">{</span>
-<a href="#__codelineno-8-19" id="__codelineno-8-19" name="__codelineno-8-19"></a>    <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"Marcos"</span><span class="p">,</span>
-<a href="#__codelineno-8-20" id="__codelineno-8-20" name="__codelineno-8-20"></a>    <span class="s2">"age"</span><span class="p">:</span> <span class="mi">42</span>
-<a href="#__codelineno-8-21" id="__codelineno-8-21" name="__codelineno-8-21"></a><span class="p">}</span>  <span class="c1"># mypy infers person as Dict[str, Union[str, int]]</span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-10-1" id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="c1"># example.py</span>
+<a href="#__codelineno-10-2" id="__codelineno-10-2" name="__codelineno-10-2"></a>
+<a href="#__codelineno-10-3" id="__codelineno-10-3" name="__codelineno-10-3"></a><span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">a</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
+<a href="#__codelineno-10-4" id="__codelineno-10-4" name="__codelineno-10-4"></a>    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+<a href="#__codelineno-10-5" id="__codelineno-10-5" name="__codelineno-10-5"></a>
+<a href="#__codelineno-10-6" id="__codelineno-10-6" name="__codelineno-10-6"></a><span class="k">def</span> <span class="nf">greet</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+<a href="#__codelineno-10-7" id="__codelineno-10-7" name="__codelineno-10-7"></a>    <span class="k">return</span> <span class="sa">f</span><span class="s2">"Hello, </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">!"</span>
+<a href="#__codelineno-10-8" id="__codelineno-10-8" name="__codelineno-10-8"></a>
+<a href="#__codelineno-10-9" id="__codelineno-10-9" name="__codelineno-10-9"></a><span class="n">x</span> <span class="o">=</span> <span class="mi">10</span>  <span class="c1"># mypy infers x as int</span>
+<a href="#__codelineno-10-10" id="__codelineno-10-10" name="__codelineno-10-10"></a><span class="n">y</span> <span class="o">=</span> <span class="mi">20</span>  <span class="c1"># mypy infers y as int</span>
+<a href="#__codelineno-10-11" id="__codelineno-10-11" name="__codelineno-10-11"></a><span class="n">z</span> <span class="o">=</span> <span class="n">add</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>  <span class="c1"># mypy infers z as int</span>
+<a href="#__codelineno-10-12" id="__codelineno-10-12" name="__codelineno-10-12"></a>
+<a href="#__codelineno-10-13" id="__codelineno-10-13" name="__codelineno-10-13"></a><span class="n">message</span> <span class="o">=</span> <span class="n">greet</span><span class="p">(</span><span class="s2">"Marcos"</span><span class="p">)</span>  <span class="c1"># mypy infers message as str</span>
+<a href="#__codelineno-10-14" id="__codelineno-10-14" name="__codelineno-10-14"></a>
+<a href="#__codelineno-10-15" id="__codelineno-10-15" name="__codelineno-10-15"></a><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>  <span class="c1"># mypy infers numbers as List[int]</span>
+<a href="#__codelineno-10-16" id="__codelineno-10-16" name="__codelineno-10-16"></a><span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"Alice"</span><span class="p">,</span> <span class="s2">"Bob"</span><span class="p">,</span> <span class="s2">"Charlie"</span><span class="p">]</span>  <span class="c1"># mypy infers names as List[str]</span>
+<a href="#__codelineno-10-17" id="__codelineno-10-17" name="__codelineno-10-17"></a>
+<a href="#__codelineno-10-18" id="__codelineno-10-18" name="__codelineno-10-18"></a><span class="n">person</span> <span class="o">=</span> <span class="p">{</span>
+<a href="#__codelineno-10-19" id="__codelineno-10-19" name="__codelineno-10-19"></a>    <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"Marcos"</span><span class="p">,</span>
+<a href="#__codelineno-10-20" id="__codelineno-10-20" name="__codelineno-10-20"></a>    <span class="s2">"age"</span><span class="p">:</span> <span class="mi">42</span>
+<a href="#__codelineno-10-21" id="__codelineno-10-21" name="__codelineno-10-21"></a><span class="p">}</span>  <span class="c1"># mypy infers person as Dict[str, Union[str, int]]</span>
 </code></pre></div>
 <p>To check the type inference with <code>mypy</code>, run:</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-9-1" id="__codelineno-9-1" name="__codelineno-9-1"></a>mypy<span class="w"> </span>example.py
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-11-1" id="__codelineno-11-1" name="__codelineno-11-1"></a>mypy<span class="w"> </span>example.py
 </code></pre></div>
 <h3 id="benefits-of-type-inference">Benefits of Type Inference<a class="headerlink" href="#benefits-of-type-inference" title="Permanent link">¶</a></h3>
 <ol>
@@ -1638,36 +1717,36 @@ expressive.</p>
 is useful when a variable or function parameter can accept different
 types.</p>
 <h4 id="syntax">Syntax<a class="headerlink" href="#syntax" title="Permanent link">¶</a></h4>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-10-1" id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Union</span>
-<a href="#__codelineno-10-2" id="__codelineno-10-2" name="__codelineno-10-2"></a>
-<a href="#__codelineno-10-3" id="__codelineno-10-3" name="__codelineno-10-3"></a><span class="k">def</span> <span class="nf">process</span><span class="p">(</span><span class="n">value</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-<a href="#__codelineno-10-4" id="__codelineno-10-4" name="__codelineno-10-4"></a>    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
-<a href="#__codelineno-10-5" id="__codelineno-10-5" name="__codelineno-10-5"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Processing an integer: </span><span class="si">{</span><span class="n">value</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
-<a href="#__codelineno-10-6" id="__codelineno-10-6" name="__codelineno-10-6"></a>    <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
-<a href="#__codelineno-10-7" id="__codelineno-10-7" name="__codelineno-10-7"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Processing a string: </span><span class="si">{</span><span class="n">value</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
-<a href="#__codelineno-10-8" id="__codelineno-10-8" name="__codelineno-10-8"></a>
-<a href="#__codelineno-10-9" id="__codelineno-10-9" name="__codelineno-10-9"></a><span class="c1"># Example usage</span>
-<a href="#__codelineno-10-10" id="__codelineno-10-10" name="__codelineno-10-10"></a><span class="n">process</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
-<a href="#__codelineno-10-11" id="__codelineno-10-11" name="__codelineno-10-11"></a><span class="n">process</span><span class="p">(</span><span class="s2">"Hello"</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-12-1" id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Union</span>
+<a href="#__codelineno-12-2" id="__codelineno-12-2" name="__codelineno-12-2"></a>
+<a href="#__codelineno-12-3" id="__codelineno-12-3" name="__codelineno-12-3"></a><span class="k">def</span> <span class="nf">process</span><span class="p">(</span><span class="n">value</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<a href="#__codelineno-12-4" id="__codelineno-12-4" name="__codelineno-12-4"></a>    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
+<a href="#__codelineno-12-5" id="__codelineno-12-5" name="__codelineno-12-5"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Processing an integer: </span><span class="si">{</span><span class="n">value</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<a href="#__codelineno-12-6" id="__codelineno-12-6" name="__codelineno-12-6"></a>    <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+<a href="#__codelineno-12-7" id="__codelineno-12-7" name="__codelineno-12-7"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Processing a string: </span><span class="si">{</span><span class="n">value</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<a href="#__codelineno-12-8" id="__codelineno-12-8" name="__codelineno-12-8"></a>
+<a href="#__codelineno-12-9" id="__codelineno-12-9" name="__codelineno-12-9"></a><span class="c1"># Example usage</span>
+<a href="#__codelineno-12-10" id="__codelineno-12-10" name="__codelineno-12-10"></a><span class="n">process</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
+<a href="#__codelineno-12-11" id="__codelineno-12-11" name="__codelineno-12-11"></a><span class="n">process</span><span class="p">(</span><span class="s2">"Hello"</span><span class="p">)</span>
 </code></pre></div>
 <p>In this example, the <code>process</code> function can accept both <code>int</code> and <code>str</code>
 types for the <code>value</code> parameter. <code>mypy</code> will check that the code
 correctly handles both types.</p>
 <h4 id="example">Example<a class="headerlink" href="#example" title="Permanent link">¶</a></h4>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-11-1" id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Union</span>
-<a href="#__codelineno-11-2" id="__codelineno-11-2" name="__codelineno-11-2"></a>
-<a href="#__codelineno-11-3" id="__codelineno-11-3" name="__codelineno-11-3"></a><span class="k">def</span> <span class="nf">describe</span><span class="p">(</span><span class="n">value</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">,</span> <span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
-<a href="#__codelineno-11-4" id="__codelineno-11-4" name="__codelineno-11-4"></a>    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
-<a href="#__codelineno-11-5" id="__codelineno-11-5" name="__codelineno-11-5"></a>        <span class="k">return</span> <span class="sa">f</span><span class="s2">"Integer: </span><span class="si">{</span><span class="n">value</span><span class="si">}</span><span class="s2">"</span>
-<a href="#__codelineno-11-6" id="__codelineno-11-6" name="__codelineno-11-6"></a>    <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="nb">float</span><span class="p">):</span>
-<a href="#__codelineno-11-7" id="__codelineno-11-7" name="__codelineno-11-7"></a>        <span class="k">return</span> <span class="sa">f</span><span class="s2">"Float: </span><span class="si">{</span><span class="n">value</span><span class="si">}</span><span class="s2">"</span>
-<a href="#__codelineno-11-8" id="__codelineno-11-8" name="__codelineno-11-8"></a>    <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
-<a href="#__codelineno-11-9" id="__codelineno-11-9" name="__codelineno-11-9"></a>        <span class="k">return</span> <span class="sa">f</span><span class="s2">"String: </span><span class="si">{</span><span class="n">value</span><span class="si">}</span><span class="s2">"</span>
-<a href="#__codelineno-11-10" id="__codelineno-11-10" name="__codelineno-11-10"></a>
-<a href="#__codelineno-11-11" id="__codelineno-11-11" name="__codelineno-11-11"></a><span class="c1"># Example usage</span>
-<a href="#__codelineno-11-12" id="__codelineno-11-12" name="__codelineno-11-12"></a><span class="nb">print</span><span class="p">(</span><span class="n">describe</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>     <span class="c1"># Integer: 10</span>
-<a href="#__codelineno-11-13" id="__codelineno-11-13" name="__codelineno-11-13"></a><span class="nb">print</span><span class="p">(</span><span class="n">describe</span><span class="p">(</span><span class="mf">3.14</span><span class="p">))</span>   <span class="c1"># Float: 3.14</span>
-<a href="#__codelineno-11-14" id="__codelineno-11-14" name="__codelineno-11-14"></a><span class="nb">print</span><span class="p">(</span><span class="n">describe</span><span class="p">(</span><span class="s2">"hello"</span><span class="p">))</span>  <span class="c1"># String: hello</span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-13-1" id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Union</span>
+<a href="#__codelineno-13-2" id="__codelineno-13-2" name="__codelineno-13-2"></a>
+<a href="#__codelineno-13-3" id="__codelineno-13-3" name="__codelineno-13-3"></a><span class="k">def</span> <span class="nf">describe</span><span class="p">(</span><span class="n">value</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">,</span> <span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<a href="#__codelineno-13-4" id="__codelineno-13-4" name="__codelineno-13-4"></a>    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
+<a href="#__codelineno-13-5" id="__codelineno-13-5" name="__codelineno-13-5"></a>        <span class="k">return</span> <span class="sa">f</span><span class="s2">"Integer: </span><span class="si">{</span><span class="n">value</span><span class="si">}</span><span class="s2">"</span>
+<a href="#__codelineno-13-6" id="__codelineno-13-6" name="__codelineno-13-6"></a>    <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="nb">float</span><span class="p">):</span>
+<a href="#__codelineno-13-7" id="__codelineno-13-7" name="__codelineno-13-7"></a>        <span class="k">return</span> <span class="sa">f</span><span class="s2">"Float: </span><span class="si">{</span><span class="n">value</span><span class="si">}</span><span class="s2">"</span>
+<a href="#__codelineno-13-8" id="__codelineno-13-8" name="__codelineno-13-8"></a>    <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+<a href="#__codelineno-13-9" id="__codelineno-13-9" name="__codelineno-13-9"></a>        <span class="k">return</span> <span class="sa">f</span><span class="s2">"String: </span><span class="si">{</span><span class="n">value</span><span class="si">}</span><span class="s2">"</span>
+<a href="#__codelineno-13-10" id="__codelineno-13-10" name="__codelineno-13-10"></a>
+<a href="#__codelineno-13-11" id="__codelineno-13-11" name="__codelineno-13-11"></a><span class="c1"># Example usage</span>
+<a href="#__codelineno-13-12" id="__codelineno-13-12" name="__codelineno-13-12"></a><span class="nb">print</span><span class="p">(</span><span class="n">describe</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>     <span class="c1"># Integer: 10</span>
+<a href="#__codelineno-13-13" id="__codelineno-13-13" name="__codelineno-13-13"></a><span class="nb">print</span><span class="p">(</span><span class="n">describe</span><span class="p">(</span><span class="mf">3.14</span><span class="p">))</span>   <span class="c1"># Float: 3.14</span>
+<a href="#__codelineno-13-14" id="__codelineno-13-14" name="__codelineno-13-14"></a><span class="nb">print</span><span class="p">(</span><span class="n">describe</span><span class="p">(</span><span class="s2">"hello"</span><span class="p">))</span>  <span class="c1"># String: hello</span>
 </code></pre></div>
 <p>In this example, the <code>describe</code> function can handle <code>int</code>, <code>float</code>, and
 <code>str</code> types, providing a description for each.</p>
@@ -1675,53 +1754,53 @@ correctly handles both types.</p>
 <p>The <code>Optional</code> type is a shorthand for a <code>Union</code> with <code>None</code>. It
 indicates that a variable can have a specific type or be <code>None</code>.</p>
 <h4 id="syntax_1">Syntax<a class="headerlink" href="#syntax_1" title="Permanent link">¶</a></h4>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-12-1" id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Optional</span>
-<a href="#__codelineno-12-2" id="__codelineno-12-2" name="__codelineno-12-2"></a>
-<a href="#__codelineno-12-3" id="__codelineno-12-3" name="__codelineno-12-3"></a><span class="k">def</span> <span class="nf">greet</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
-<a href="#__codelineno-12-4" id="__codelineno-12-4" name="__codelineno-12-4"></a>    <span class="k">if</span> <span class="n">name</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-<a href="#__codelineno-12-5" id="__codelineno-12-5" name="__codelineno-12-5"></a>        <span class="k">return</span> <span class="s2">"Hello, there!"</span>
-<a href="#__codelineno-12-6" id="__codelineno-12-6" name="__codelineno-12-6"></a>    <span class="k">else</span><span class="p">:</span>
-<a href="#__codelineno-12-7" id="__codelineno-12-7" name="__codelineno-12-7"></a>        <span class="k">return</span> <span class="sa">f</span><span class="s2">"Hello, </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">!"</span>
-<a href="#__codelineno-12-8" id="__codelineno-12-8" name="__codelineno-12-8"></a>
-<a href="#__codelineno-12-9" id="__codelineno-12-9" name="__codelineno-12-9"></a><span class="c1"># Example usage</span>
-<a href="#__codelineno-12-10" id="__codelineno-12-10" name="__codelineno-12-10"></a><span class="nb">print</span><span class="p">(</span><span class="n">greet</span><span class="p">(</span><span class="kc">None</span><span class="p">))</span>        <span class="c1"># Hello, there!</span>
-<a href="#__codelineno-12-11" id="__codelineno-12-11" name="__codelineno-12-11"></a><span class="nb">print</span><span class="p">(</span><span class="n">greet</span><span class="p">(</span><span class="s2">"Marcos"</span><span class="p">))</span>    <span class="c1"># Hello, Marcos!</span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-14-1" id="__codelineno-14-1" name="__codelineno-14-1"></a><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Optional</span>
+<a href="#__codelineno-14-2" id="__codelineno-14-2" name="__codelineno-14-2"></a>
+<a href="#__codelineno-14-3" id="__codelineno-14-3" name="__codelineno-14-3"></a><span class="k">def</span> <span class="nf">greet</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<a href="#__codelineno-14-4" id="__codelineno-14-4" name="__codelineno-14-4"></a>    <span class="k">if</span> <span class="n">name</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+<a href="#__codelineno-14-5" id="__codelineno-14-5" name="__codelineno-14-5"></a>        <span class="k">return</span> <span class="s2">"Hello, there!"</span>
+<a href="#__codelineno-14-6" id="__codelineno-14-6" name="__codelineno-14-6"></a>    <span class="k">else</span><span class="p">:</span>
+<a href="#__codelineno-14-7" id="__codelineno-14-7" name="__codelineno-14-7"></a>        <span class="k">return</span> <span class="sa">f</span><span class="s2">"Hello, </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">!"</span>
+<a href="#__codelineno-14-8" id="__codelineno-14-8" name="__codelineno-14-8"></a>
+<a href="#__codelineno-14-9" id="__codelineno-14-9" name="__codelineno-14-9"></a><span class="c1"># Example usage</span>
+<a href="#__codelineno-14-10" id="__codelineno-14-10" name="__codelineno-14-10"></a><span class="nb">print</span><span class="p">(</span><span class="n">greet</span><span class="p">(</span><span class="kc">None</span><span class="p">))</span>        <span class="c1"># Hello, there!</span>
+<a href="#__codelineno-14-11" id="__codelineno-14-11" name="__codelineno-14-11"></a><span class="nb">print</span><span class="p">(</span><span class="n">greet</span><span class="p">(</span><span class="s2">"Marcos"</span><span class="p">))</span>    <span class="c1"># Hello, Marcos!</span>
 </code></pre></div>
 <p>In this example, the <code>greet</code> function can accept either a <code>str</code> or
 <code>None</code> for the <code>name</code> parameter.</p>
 <h4 id="example_1">Example<a class="headerlink" href="#example_1" title="Permanent link">¶</a></h4>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-13-1" id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Optional</span>
-<a href="#__codelineno-13-2" id="__codelineno-13-2" name="__codelineno-13-2"></a>
-<a href="#__codelineno-13-3" id="__codelineno-13-3" name="__codelineno-13-3"></a><span class="k">def</span> <span class="nf">find_user</span><span class="p">(</span><span class="n">user_id</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
-<a href="#__codelineno-13-4" id="__codelineno-13-4" name="__codelineno-13-4"></a>    <span class="n">users</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">:</span> <span class="s2">"Alice"</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="s2">"Bob"</span><span class="p">}</span>
-<a href="#__codelineno-13-5" id="__codelineno-13-5" name="__codelineno-13-5"></a>    <span class="k">return</span> <span class="n">users</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">user_id</span><span class="p">)</span>
-<a href="#__codelineno-13-6" id="__codelineno-13-6" name="__codelineno-13-6"></a>
-<a href="#__codelineno-13-7" id="__codelineno-13-7" name="__codelineno-13-7"></a><span class="c1"># Example usage</span>
-<a href="#__codelineno-13-8" id="__codelineno-13-8" name="__codelineno-13-8"></a><span class="nb">print</span><span class="p">(</span><span class="n">find_user</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>  <span class="c1"># Alice</span>
-<a href="#__codelineno-13-9" id="__codelineno-13-9" name="__codelineno-13-9"></a><span class="nb">print</span><span class="p">(</span><span class="n">find_user</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>  <span class="c1"># None</span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-15-1" id="__codelineno-15-1" name="__codelineno-15-1"></a><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Optional</span>
+<a href="#__codelineno-15-2" id="__codelineno-15-2" name="__codelineno-15-2"></a>
+<a href="#__codelineno-15-3" id="__codelineno-15-3" name="__codelineno-15-3"></a><span class="k">def</span> <span class="nf">find_user</span><span class="p">(</span><span class="n">user_id</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+<a href="#__codelineno-15-4" id="__codelineno-15-4" name="__codelineno-15-4"></a>    <span class="n">users</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">:</span> <span class="s2">"Alice"</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="s2">"Bob"</span><span class="p">}</span>
+<a href="#__codelineno-15-5" id="__codelineno-15-5" name="__codelineno-15-5"></a>    <span class="k">return</span> <span class="n">users</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">user_id</span><span class="p">)</span>
+<a href="#__codelineno-15-6" id="__codelineno-15-6" name="__codelineno-15-6"></a>
+<a href="#__codelineno-15-7" id="__codelineno-15-7" name="__codelineno-15-7"></a><span class="c1"># Example usage</span>
+<a href="#__codelineno-15-8" id="__codelineno-15-8" name="__codelineno-15-8"></a><span class="nb">print</span><span class="p">(</span><span class="n">find_user</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>  <span class="c1"># Alice</span>
+<a href="#__codelineno-15-9" id="__codelineno-15-9" name="__codelineno-15-9"></a><span class="nb">print</span><span class="p">(</span><span class="n">find_user</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>  <span class="c1"># None</span>
 </code></pre></div>
 <p>In this example, the <code>find_user</code> function returns a <code>str</code> if the user is
 found, otherwise it returns <code>None</code>.</p>
 <h3 id="combining-union-and-optional">Combining Union and Optional<a class="headerlink" href="#combining-union-and-optional" title="Permanent link">¶</a></h3>
 <p>You can combine <code>Union</code> and <code>Optional</code> to specify complex types.</p>
 <h4 id="example_2">Example<a class="headerlink" href="#example_2" title="Permanent link">¶</a></h4>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-14-1" id="__codelineno-14-1" name="__codelineno-14-1"></a><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Union</span><span class="p">,</span> <span class="n">Optional</span>
-<a href="#__codelineno-14-2" id="__codelineno-14-2" name="__codelineno-14-2"></a>
-<a href="#__codelineno-14-3" id="__codelineno-14-3" name="__codelineno-14-3"></a><span class="k">def</span> <span class="nf">read_value</span><span class="p">(</span><span class="n">value</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">,</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]])</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
-<a href="#__codelineno-14-4" id="__codelineno-14-4" name="__codelineno-14-4"></a>    <span class="k">if</span> <span class="n">value</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-<a href="#__codelineno-14-5" id="__codelineno-14-5" name="__codelineno-14-5"></a>        <span class="k">return</span> <span class="s2">"No value"</span>
-<a href="#__codelineno-14-6" id="__codelineno-14-6" name="__codelineno-14-6"></a>    <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
-<a href="#__codelineno-14-7" id="__codelineno-14-7" name="__codelineno-14-7"></a>        <span class="k">return</span> <span class="sa">f</span><span class="s2">"Integer value: </span><span class="si">{</span><span class="n">value</span><span class="si">}</span><span class="s2">"</span>
-<a href="#__codelineno-14-8" id="__codelineno-14-8" name="__codelineno-14-8"></a>    <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="nb">float</span><span class="p">):</span>
-<a href="#__codelineno-14-9" id="__codelineno-14-9" name="__codelineno-14-9"></a>        <span class="k">return</span> <span class="sa">f</span><span class="s2">"Float value: </span><span class="si">{</span><span class="n">value</span><span class="si">}</span><span class="s2">"</span>
-<a href="#__codelineno-14-10" id="__codelineno-14-10" name="__codelineno-14-10"></a>    <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
-<a href="#__codelineno-14-11" id="__codelineno-14-11" name="__codelineno-14-11"></a>        <span class="k">return</span> <span class="sa">f</span><span class="s2">"String value: </span><span class="si">{</span><span class="n">value</span><span class="si">}</span><span class="s2">"</span>
-<a href="#__codelineno-14-12" id="__codelineno-14-12" name="__codelineno-14-12"></a>
-<a href="#__codelineno-14-13" id="__codelineno-14-13" name="__codelineno-14-13"></a><span class="c1"># Example usage</span>
-<a href="#__codelineno-14-14" id="__codelineno-14-14" name="__codelineno-14-14"></a><span class="nb">print</span><span class="p">(</span><span class="n">read_value</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>      <span class="c1"># Integer value: 10</span>
-<a href="#__codelineno-14-15" id="__codelineno-14-15" name="__codelineno-14-15"></a><span class="nb">print</span><span class="p">(</span><span class="n">read_value</span><span class="p">(</span><span class="mf">3.14</span><span class="p">))</span>    <span class="c1"># Float value: 3.14</span>
-<a href="#__codelineno-14-16" id="__codelineno-14-16" name="__codelineno-14-16"></a><span class="nb">print</span><span class="p">(</span><span class="n">read_value</span><span class="p">(</span><span class="s2">"text"</span><span class="p">))</span>  <span class="c1"># String value: text</span>
-<a href="#__codelineno-14-17" id="__codelineno-14-17" name="__codelineno-14-17"></a><span class="nb">print</span><span class="p">(</span><span class="n">read_value</span><span class="p">(</span><span class="kc">None</span><span class="p">))</span>    <span class="c1"># No value</span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-16-1" id="__codelineno-16-1" name="__codelineno-16-1"></a><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Union</span><span class="p">,</span> <span class="n">Optional</span>
+<a href="#__codelineno-16-2" id="__codelineno-16-2" name="__codelineno-16-2"></a>
+<a href="#__codelineno-16-3" id="__codelineno-16-3" name="__codelineno-16-3"></a><span class="k">def</span> <span class="nf">read_value</span><span class="p">(</span><span class="n">value</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">,</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]])</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<a href="#__codelineno-16-4" id="__codelineno-16-4" name="__codelineno-16-4"></a>    <span class="k">if</span> <span class="n">value</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+<a href="#__codelineno-16-5" id="__codelineno-16-5" name="__codelineno-16-5"></a>        <span class="k">return</span> <span class="s2">"No value"</span>
+<a href="#__codelineno-16-6" id="__codelineno-16-6" name="__codelineno-16-6"></a>    <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
+<a href="#__codelineno-16-7" id="__codelineno-16-7" name="__codelineno-16-7"></a>        <span class="k">return</span> <span class="sa">f</span><span class="s2">"Integer value: </span><span class="si">{</span><span class="n">value</span><span class="si">}</span><span class="s2">"</span>
+<a href="#__codelineno-16-8" id="__codelineno-16-8" name="__codelineno-16-8"></a>    <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="nb">float</span><span class="p">):</span>
+<a href="#__codelineno-16-9" id="__codelineno-16-9" name="__codelineno-16-9"></a>        <span class="k">return</span> <span class="sa">f</span><span class="s2">"Float value: </span><span class="si">{</span><span class="n">value</span><span class="si">}</span><span class="s2">"</span>
+<a href="#__codelineno-16-10" id="__codelineno-16-10" name="__codelineno-16-10"></a>    <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+<a href="#__codelineno-16-11" id="__codelineno-16-11" name="__codelineno-16-11"></a>        <span class="k">return</span> <span class="sa">f</span><span class="s2">"String value: </span><span class="si">{</span><span class="n">value</span><span class="si">}</span><span class="s2">"</span>
+<a href="#__codelineno-16-12" id="__codelineno-16-12" name="__codelineno-16-12"></a>
+<a href="#__codelineno-16-13" id="__codelineno-16-13" name="__codelineno-16-13"></a><span class="c1"># Example usage</span>
+<a href="#__codelineno-16-14" id="__codelineno-16-14" name="__codelineno-16-14"></a><span class="nb">print</span><span class="p">(</span><span class="n">read_value</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>      <span class="c1"># Integer value: 10</span>
+<a href="#__codelineno-16-15" id="__codelineno-16-15" name="__codelineno-16-15"></a><span class="nb">print</span><span class="p">(</span><span class="n">read_value</span><span class="p">(</span><span class="mf">3.14</span><span class="p">))</span>    <span class="c1"># Float value: 3.14</span>
+<a href="#__codelineno-16-16" id="__codelineno-16-16" name="__codelineno-16-16"></a><span class="nb">print</span><span class="p">(</span><span class="n">read_value</span><span class="p">(</span><span class="s2">"text"</span><span class="p">))</span>  <span class="c1"># String value: text</span>
+<a href="#__codelineno-16-17" id="__codelineno-16-17" name="__codelineno-16-17"></a><span class="nb">print</span><span class="p">(</span><span class="n">read_value</span><span class="p">(</span><span class="kc">None</span><span class="p">))</span>    <span class="c1"># No value</span>
 </code></pre></div>
 <p>In this example, the <code>read_value</code> function can handle <code>int</code>, <code>float</code>,
 <code>str</code>, and <code>None</code>.</p>
@@ -1737,58 +1816,58 @@ function, enabling different behaviors based on input types. The
 <code>overload</code> decorator from the <code>typing</code> module is used to achieve this in
 Python.</p>
 <h4 id="syntax_2">Syntax<a class="headerlink" href="#syntax_2" title="Permanent link">¶</a></h4>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-15-1" id="__codelineno-15-1" name="__codelineno-15-1"></a><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">overload</span>
-<a href="#__codelineno-15-2" id="__codelineno-15-2" name="__codelineno-15-2"></a>
-<a href="#__codelineno-15-3" id="__codelineno-15-3" name="__codelineno-15-3"></a><span class="nd">@overload</span>
-<a href="#__codelineno-15-4" id="__codelineno-15-4" name="__codelineno-15-4"></a><span class="k">def</span> <span class="nf">process</span><span class="p">(</span><span class="n">value</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-<a href="#__codelineno-15-5" id="__codelineno-15-5" name="__codelineno-15-5"></a>    <span class="o">...</span>
-<a href="#__codelineno-15-6" id="__codelineno-15-6" name="__codelineno-15-6"></a>
-<a href="#__codelineno-15-7" id="__codelineno-15-7" name="__codelineno-15-7"></a><span class="nd">@overload</span>
-<a href="#__codelineno-15-8" id="__codelineno-15-8" name="__codelineno-15-8"></a><span class="k">def</span> <span class="nf">process</span><span class="p">(</span><span class="n">value</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
-<a href="#__codelineno-15-9" id="__codelineno-15-9" name="__codelineno-15-9"></a>    <span class="o">...</span>
-<a href="#__codelineno-15-10" id="__codelineno-15-10" name="__codelineno-15-10"></a>
-<a href="#__codelineno-15-11" id="__codelineno-15-11" name="__codelineno-15-11"></a><span class="k">def</span> <span class="nf">process</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
-<a href="#__codelineno-15-12" id="__codelineno-15-12" name="__codelineno-15-12"></a>    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
-<a href="#__codelineno-15-13" id="__codelineno-15-13" name="__codelineno-15-13"></a>        <span class="k">return</span> <span class="n">value</span> <span class="o">*</span> <span class="mi">2</span>
-<a href="#__codelineno-15-14" id="__codelineno-15-14" name="__codelineno-15-14"></a>    <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
-<a href="#__codelineno-15-15" id="__codelineno-15-15" name="__codelineno-15-15"></a>        <span class="k">return</span> <span class="n">value</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
-<a href="#__codelineno-15-16" id="__codelineno-15-16" name="__codelineno-15-16"></a>
-<a href="#__codelineno-15-17" id="__codelineno-15-17" name="__codelineno-15-17"></a><span class="c1"># Example usage</span>
-<a href="#__codelineno-15-18" id="__codelineno-15-18" name="__codelineno-15-18"></a><span class="nb">print</span><span class="p">(</span><span class="n">process</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>    <span class="c1"># 20</span>
-<a href="#__codelineno-15-19" id="__codelineno-15-19" name="__codelineno-15-19"></a><span class="nb">print</span><span class="p">(</span><span class="n">process</span><span class="p">(</span><span class="s2">"hello"</span><span class="p">))</span>  <span class="c1"># HELLO</span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-17-1" id="__codelineno-17-1" name="__codelineno-17-1"></a><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">overload</span>
+<a href="#__codelineno-17-2" id="__codelineno-17-2" name="__codelineno-17-2"></a>
+<a href="#__codelineno-17-3" id="__codelineno-17-3" name="__codelineno-17-3"></a><span class="nd">@overload</span>
+<a href="#__codelineno-17-4" id="__codelineno-17-4" name="__codelineno-17-4"></a><span class="k">def</span> <span class="nf">process</span><span class="p">(</span><span class="n">value</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<a href="#__codelineno-17-5" id="__codelineno-17-5" name="__codelineno-17-5"></a>    <span class="o">...</span>
+<a href="#__codelineno-17-6" id="__codelineno-17-6" name="__codelineno-17-6"></a>
+<a href="#__codelineno-17-7" id="__codelineno-17-7" name="__codelineno-17-7"></a><span class="nd">@overload</span>
+<a href="#__codelineno-17-8" id="__codelineno-17-8" name="__codelineno-17-8"></a><span class="k">def</span> <span class="nf">process</span><span class="p">(</span><span class="n">value</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<a href="#__codelineno-17-9" id="__codelineno-17-9" name="__codelineno-17-9"></a>    <span class="o">...</span>
+<a href="#__codelineno-17-10" id="__codelineno-17-10" name="__codelineno-17-10"></a>
+<a href="#__codelineno-17-11" id="__codelineno-17-11" name="__codelineno-17-11"></a><span class="k">def</span> <span class="nf">process</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
+<a href="#__codelineno-17-12" id="__codelineno-17-12" name="__codelineno-17-12"></a>    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
+<a href="#__codelineno-17-13" id="__codelineno-17-13" name="__codelineno-17-13"></a>        <span class="k">return</span> <span class="n">value</span> <span class="o">*</span> <span class="mi">2</span>
+<a href="#__codelineno-17-14" id="__codelineno-17-14" name="__codelineno-17-14"></a>    <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+<a href="#__codelineno-17-15" id="__codelineno-17-15" name="__codelineno-17-15"></a>        <span class="k">return</span> <span class="n">value</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
+<a href="#__codelineno-17-16" id="__codelineno-17-16" name="__codelineno-17-16"></a>
+<a href="#__codelineno-17-17" id="__codelineno-17-17" name="__codelineno-17-17"></a><span class="c1"># Example usage</span>
+<a href="#__codelineno-17-18" id="__codelineno-17-18" name="__codelineno-17-18"></a><span class="nb">print</span><span class="p">(</span><span class="n">process</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>    <span class="c1"># 20</span>
+<a href="#__codelineno-17-19" id="__codelineno-17-19" name="__codelineno-17-19"></a><span class="nb">print</span><span class="p">(</span><span class="n">process</span><span class="p">(</span><span class="s2">"hello"</span><span class="p">))</span>  <span class="c1"># HELLO</span>
 </code></pre></div>
 <p>In this example, the <code>process</code> function has two overloaded signatures:
 one for <code>int</code> and one for <code>str</code>. The implementation combines both cases
 and returns different results based on the input type.</p>
 <h4 id="example_3">Example<a class="headerlink" href="#example_3" title="Permanent link">¶</a></h4>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-16-1" id="__codelineno-16-1" name="__codelineno-16-1"></a><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">overload</span><span class="p">,</span> <span class="n">Union</span>
-<a href="#__codelineno-16-2" id="__codelineno-16-2" name="__codelineno-16-2"></a>
-<a href="#__codelineno-16-3" id="__codelineno-16-3" name="__codelineno-16-3"></a><span class="nd">@overload</span>
-<a href="#__codelineno-16-4" id="__codelineno-16-4" name="__codelineno-16-4"></a><span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">a</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-<a href="#__codelineno-16-5" id="__codelineno-16-5" name="__codelineno-16-5"></a>    <span class="o">...</span>
-<a href="#__codelineno-16-6" id="__codelineno-16-6" name="__codelineno-16-6"></a>
-<a href="#__codelineno-16-7" id="__codelineno-16-7" name="__codelineno-16-7"></a><span class="nd">@overload</span>
-<a href="#__codelineno-16-8" id="__codelineno-16-8" name="__codelineno-16-8"></a><span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">a</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
-<a href="#__codelineno-16-9" id="__codelineno-16-9" name="__codelineno-16-9"></a>    <span class="o">...</span>
-<a href="#__codelineno-16-10" id="__codelineno-16-10" name="__codelineno-16-10"></a>
-<a href="#__codelineno-16-11" id="__codelineno-16-11" name="__codelineno-16-11"></a><span class="nd">@overload</span>
-<a href="#__codelineno-16-12" id="__codelineno-16-12" name="__codelineno-16-12"></a><span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">a</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
-<a href="#__codelineno-16-13" id="__codelineno-16-13" name="__codelineno-16-13"></a>    <span class="o">...</span>
-<a href="#__codelineno-16-14" id="__codelineno-16-14" name="__codelineno-16-14"></a>
-<a href="#__codelineno-16-15" id="__codelineno-16-15" name="__codelineno-16-15"></a><span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">a</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">,</span> <span class="nb">str</span><span class="p">],</span> <span class="n">b</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">,</span> <span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">,</span> <span class="nb">str</span><span class="p">]:</span>
-<a href="#__codelineno-16-16" id="__codelineno-16-16" name="__codelineno-16-16"></a>    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="nb">int</span><span class="p">)</span> <span class="ow">and</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
-<a href="#__codelineno-16-17" id="__codelineno-16-17" name="__codelineno-16-17"></a>        <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
-<a href="#__codelineno-16-18" id="__codelineno-16-18" name="__codelineno-16-18"></a>    <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="nb">float</span><span class="p">)</span> <span class="ow">and</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="nb">float</span><span class="p">):</span>
-<a href="#__codelineno-16-19" id="__codelineno-16-19" name="__codelineno-16-19"></a>        <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
-<a href="#__codelineno-16-20" id="__codelineno-16-20" name="__codelineno-16-20"></a>    <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span> <span class="ow">and</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
-<a href="#__codelineno-16-21" id="__codelineno-16-21" name="__codelineno-16-21"></a>        <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
-<a href="#__codelineno-16-22" id="__codelineno-16-22" name="__codelineno-16-22"></a>    <span class="k">else</span><span class="p">:</span>
-<a href="#__codelineno-16-23" id="__codelineno-16-23" name="__codelineno-16-23"></a>        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">"Unsupported types"</span><span class="p">)</span>
-<a href="#__codelineno-16-24" id="__codelineno-16-24" name="__codelineno-16-24"></a>
-<a href="#__codelineno-16-25" id="__codelineno-16-25" name="__codelineno-16-25"></a><span class="c1"># Example usage</span>
-<a href="#__codelineno-16-26" id="__codelineno-16-26" name="__codelineno-16-26"></a><span class="nb">print</span><span class="p">(</span><span class="n">add</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>        <span class="c1"># 3</span>
-<a href="#__codelineno-16-27" id="__codelineno-16-27" name="__codelineno-16-27"></a><span class="nb">print</span><span class="p">(</span><span class="n">add</span><span class="p">(</span><span class="mf">1.5</span><span class="p">,</span> <span class="mf">2.5</span><span class="p">))</span>    <span class="c1"># 4.0</span>
-<a href="#__codelineno-16-28" id="__codelineno-16-28" name="__codelineno-16-28"></a><span class="nb">print</span><span class="p">(</span><span class="n">add</span><span class="p">(</span><span class="s2">"Hello, "</span><span class="p">,</span> <span class="s2">"World!"</span><span class="p">))</span>  <span class="c1"># Hello, World!</span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-18-1" id="__codelineno-18-1" name="__codelineno-18-1"></a><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">overload</span><span class="p">,</span> <span class="n">Union</span>
+<a href="#__codelineno-18-2" id="__codelineno-18-2" name="__codelineno-18-2"></a>
+<a href="#__codelineno-18-3" id="__codelineno-18-3" name="__codelineno-18-3"></a><span class="nd">@overload</span>
+<a href="#__codelineno-18-4" id="__codelineno-18-4" name="__codelineno-18-4"></a><span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">a</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<a href="#__codelineno-18-5" id="__codelineno-18-5" name="__codelineno-18-5"></a>    <span class="o">...</span>
+<a href="#__codelineno-18-6" id="__codelineno-18-6" name="__codelineno-18-6"></a>
+<a href="#__codelineno-18-7" id="__codelineno-18-7" name="__codelineno-18-7"></a><span class="nd">@overload</span>
+<a href="#__codelineno-18-8" id="__codelineno-18-8" name="__codelineno-18-8"></a><span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">a</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+<a href="#__codelineno-18-9" id="__codelineno-18-9" name="__codelineno-18-9"></a>    <span class="o">...</span>
+<a href="#__codelineno-18-10" id="__codelineno-18-10" name="__codelineno-18-10"></a>
+<a href="#__codelineno-18-11" id="__codelineno-18-11" name="__codelineno-18-11"></a><span class="nd">@overload</span>
+<a href="#__codelineno-18-12" id="__codelineno-18-12" name="__codelineno-18-12"></a><span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">a</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<a href="#__codelineno-18-13" id="__codelineno-18-13" name="__codelineno-18-13"></a>    <span class="o">...</span>
+<a href="#__codelineno-18-14" id="__codelineno-18-14" name="__codelineno-18-14"></a>
+<a href="#__codelineno-18-15" id="__codelineno-18-15" name="__codelineno-18-15"></a><span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">a</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">,</span> <span class="nb">str</span><span class="p">],</span> <span class="n">b</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">,</span> <span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">,</span> <span class="nb">str</span><span class="p">]:</span>
+<a href="#__codelineno-18-16" id="__codelineno-18-16" name="__codelineno-18-16"></a>    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="nb">int</span><span class="p">)</span> <span class="ow">and</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
+<a href="#__codelineno-18-17" id="__codelineno-18-17" name="__codelineno-18-17"></a>        <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+<a href="#__codelineno-18-18" id="__codelineno-18-18" name="__codelineno-18-18"></a>    <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="nb">float</span><span class="p">)</span> <span class="ow">and</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="nb">float</span><span class="p">):</span>
+<a href="#__codelineno-18-19" id="__codelineno-18-19" name="__codelineno-18-19"></a>        <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+<a href="#__codelineno-18-20" id="__codelineno-18-20" name="__codelineno-18-20"></a>    <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span> <span class="ow">and</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+<a href="#__codelineno-18-21" id="__codelineno-18-21" name="__codelineno-18-21"></a>        <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+<a href="#__codelineno-18-22" id="__codelineno-18-22" name="__codelineno-18-22"></a>    <span class="k">else</span><span class="p">:</span>
+<a href="#__codelineno-18-23" id="__codelineno-18-23" name="__codelineno-18-23"></a>        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">"Unsupported types"</span><span class="p">)</span>
+<a href="#__codelineno-18-24" id="__codelineno-18-24" name="__codelineno-18-24"></a>
+<a href="#__codelineno-18-25" id="__codelineno-18-25" name="__codelineno-18-25"></a><span class="c1"># Example usage</span>
+<a href="#__codelineno-18-26" id="__codelineno-18-26" name="__codelineno-18-26"></a><span class="nb">print</span><span class="p">(</span><span class="n">add</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>        <span class="c1"># 3</span>
+<a href="#__codelineno-18-27" id="__codelineno-18-27" name="__codelineno-18-27"></a><span class="nb">print</span><span class="p">(</span><span class="n">add</span><span class="p">(</span><span class="mf">1.5</span><span class="p">,</span> <span class="mf">2.5</span><span class="p">))</span>    <span class="c1"># 4.0</span>
+<a href="#__codelineno-18-28" id="__codelineno-18-28" name="__codelineno-18-28"></a><span class="nb">print</span><span class="p">(</span><span class="n">add</span><span class="p">(</span><span class="s2">"Hello, "</span><span class="p">,</span> <span class="s2">"World!"</span><span class="p">))</span>  <span class="c1"># Hello, World!</span>
 </code></pre></div>
 <p>Here, the <code>add</code> function is overloaded to handle <code>int</code>, <code>float</code>, and
 <code>str</code> types, each performing the appropriate addition operation. The
@@ -1803,62 +1882,62 @@ that <code>mypy</code> can verify the type correctness.</p>
 variety of types while maintaining type safety. The <code>TypeVar</code> class from
 the <code>typing</code> module is used to define generic types.</p>
 <h4 id="syntax_3">Syntax<a class="headerlink" href="#syntax_3" title="Permanent link">¶</a></h4>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-17-1" id="__codelineno-17-1" name="__codelineno-17-1"></a><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">TypeVar</span><span class="p">,</span> <span class="n">Generic</span><span class="p">,</span> <span class="n">List</span>
-<a href="#__codelineno-17-2" id="__codelineno-17-2" name="__codelineno-17-2"></a>
-<a href="#__codelineno-17-3" id="__codelineno-17-3" name="__codelineno-17-3"></a><span class="n">T</span> <span class="o">=</span> <span class="n">TypeVar</span><span class="p">(</span><span class="s1">'T'</span><span class="p">)</span>
-<a href="#__codelineno-17-4" id="__codelineno-17-4" name="__codelineno-17-4"></a>
-<a href="#__codelineno-17-5" id="__codelineno-17-5" name="__codelineno-17-5"></a><span class="k">def</span> <span class="nf">get_first_element</span><span class="p">(</span><span class="n">elements</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">T</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">T</span><span class="p">:</span>
-<a href="#__codelineno-17-6" id="__codelineno-17-6" name="__codelineno-17-6"></a>    <span class="k">return</span> <span class="n">elements</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-<a href="#__codelineno-17-7" id="__codelineno-17-7" name="__codelineno-17-7"></a>
-<a href="#__codelineno-17-8" id="__codelineno-17-8" name="__codelineno-17-8"></a><span class="c1"># Example usage</span>
-<a href="#__codelineno-17-9" id="__codelineno-17-9" name="__codelineno-17-9"></a><span class="nb">print</span><span class="p">(</span><span class="n">get_first_element</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]))</span>         <span class="c1"># 1</span>
-<a href="#__codelineno-17-10" id="__codelineno-17-10" name="__codelineno-17-10"></a><span class="nb">print</span><span class="p">(</span><span class="n">get_first_element</span><span class="p">([</span><span class="s2">"a"</span><span class="p">,</span> <span class="s2">"b"</span><span class="p">,</span> <span class="s2">"c"</span><span class="p">]))</span>   <span class="c1"># "a"</span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-19-1" id="__codelineno-19-1" name="__codelineno-19-1"></a><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">TypeVar</span><span class="p">,</span> <span class="n">Generic</span><span class="p">,</span> <span class="n">List</span>
+<a href="#__codelineno-19-2" id="__codelineno-19-2" name="__codelineno-19-2"></a>
+<a href="#__codelineno-19-3" id="__codelineno-19-3" name="__codelineno-19-3"></a><span class="n">T</span> <span class="o">=</span> <span class="n">TypeVar</span><span class="p">(</span><span class="s1">'T'</span><span class="p">)</span>
+<a href="#__codelineno-19-4" id="__codelineno-19-4" name="__codelineno-19-4"></a>
+<a href="#__codelineno-19-5" id="__codelineno-19-5" name="__codelineno-19-5"></a><span class="k">def</span> <span class="nf">get_first_element</span><span class="p">(</span><span class="n">elements</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">T</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">T</span><span class="p">:</span>
+<a href="#__codelineno-19-6" id="__codelineno-19-6" name="__codelineno-19-6"></a>    <span class="k">return</span> <span class="n">elements</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<a href="#__codelineno-19-7" id="__codelineno-19-7" name="__codelineno-19-7"></a>
+<a href="#__codelineno-19-8" id="__codelineno-19-8" name="__codelineno-19-8"></a><span class="c1"># Example usage</span>
+<a href="#__codelineno-19-9" id="__codelineno-19-9" name="__codelineno-19-9"></a><span class="nb">print</span><span class="p">(</span><span class="n">get_first_element</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]))</span>         <span class="c1"># 1</span>
+<a href="#__codelineno-19-10" id="__codelineno-19-10" name="__codelineno-19-10"></a><span class="nb">print</span><span class="p">(</span><span class="n">get_first_element</span><span class="p">([</span><span class="s2">"a"</span><span class="p">,</span> <span class="s2">"b"</span><span class="p">,</span> <span class="s2">"c"</span><span class="p">]))</span>   <span class="c1"># "a"</span>
 </code></pre></div>
 <p>In this example, the <code>get_first_element</code> function is generic and can
 operate on a list of any type, returning an element of the same type.</p>
 <h4 id="generic-classes">Generic Classes<a class="headerlink" href="#generic-classes" title="Permanent link">¶</a></h4>
 <p>You can also create generic classes using <code>Generic</code>.</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-18-1" id="__codelineno-18-1" name="__codelineno-18-1"></a><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">TypeVar</span><span class="p">,</span> <span class="n">Generic</span>
-<a href="#__codelineno-18-2" id="__codelineno-18-2" name="__codelineno-18-2"></a>
-<a href="#__codelineno-18-3" id="__codelineno-18-3" name="__codelineno-18-3"></a><span class="n">T</span> <span class="o">=</span> <span class="n">TypeVar</span><span class="p">(</span><span class="s1">'T'</span><span class="p">)</span>
-<a href="#__codelineno-18-4" id="__codelineno-18-4" name="__codelineno-18-4"></a>
-<a href="#__codelineno-18-5" id="__codelineno-18-5" name="__codelineno-18-5"></a><span class="k">class</span> <span class="nc">Box</span><span class="p">(</span><span class="n">Generic</span><span class="p">[</span><span class="n">T</span><span class="p">]):</span>
-<a href="#__codelineno-18-6" id="__codelineno-18-6" name="__codelineno-18-6"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">content</span><span class="p">:</span> <span class="n">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-<a href="#__codelineno-18-7" id="__codelineno-18-7" name="__codelineno-18-7"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">content</span> <span class="o">=</span> <span class="n">content</span>
-<a href="#__codelineno-18-8" id="__codelineno-18-8" name="__codelineno-18-8"></a>
-<a href="#__codelineno-18-9" id="__codelineno-18-9" name="__codelineno-18-9"></a>    <span class="k">def</span> <span class="nf">get_content</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">T</span><span class="p">:</span>
-<a href="#__codelineno-18-10" id="__codelineno-18-10" name="__codelineno-18-10"></a>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">content</span>
-<a href="#__codelineno-18-11" id="__codelineno-18-11" name="__codelineno-18-11"></a>
-<a href="#__codelineno-18-12" id="__codelineno-18-12" name="__codelineno-18-12"></a><span class="c1"># Example usage</span>
-<a href="#__codelineno-18-13" id="__codelineno-18-13" name="__codelineno-18-13"></a><span class="n">int_box</span> <span class="o">=</span> <span class="n">Box</span><span class="p">(</span><span class="mi">123</span><span class="p">)</span>
-<a href="#__codelineno-18-14" id="__codelineno-18-14" name="__codelineno-18-14"></a><span class="n">str_box</span> <span class="o">=</span> <span class="n">Box</span><span class="p">(</span><span class="s2">"Hello"</span><span class="p">)</span>
-<a href="#__codelineno-18-15" id="__codelineno-18-15" name="__codelineno-18-15"></a>
-<a href="#__codelineno-18-16" id="__codelineno-18-16" name="__codelineno-18-16"></a><span class="nb">print</span><span class="p">(</span><span class="n">int_box</span><span class="o">.</span><span class="n">get_content</span><span class="p">())</span>  <span class="c1"># 123</span>
-<a href="#__codelineno-18-17" id="__codelineno-18-17" name="__codelineno-18-17"></a><span class="nb">print</span><span class="p">(</span><span class="n">str_box</span><span class="o">.</span><span class="n">get_content</span><span class="p">())</span>  <span class="c1"># Hello</span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-20-1" id="__codelineno-20-1" name="__codelineno-20-1"></a><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">TypeVar</span><span class="p">,</span> <span class="n">Generic</span>
+<a href="#__codelineno-20-2" id="__codelineno-20-2" name="__codelineno-20-2"></a>
+<a href="#__codelineno-20-3" id="__codelineno-20-3" name="__codelineno-20-3"></a><span class="n">T</span> <span class="o">=</span> <span class="n">TypeVar</span><span class="p">(</span><span class="s1">'T'</span><span class="p">)</span>
+<a href="#__codelineno-20-4" id="__codelineno-20-4" name="__codelineno-20-4"></a>
+<a href="#__codelineno-20-5" id="__codelineno-20-5" name="__codelineno-20-5"></a><span class="k">class</span> <span class="nc">Box</span><span class="p">(</span><span class="n">Generic</span><span class="p">[</span><span class="n">T</span><span class="p">]):</span>
+<a href="#__codelineno-20-6" id="__codelineno-20-6" name="__codelineno-20-6"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">content</span><span class="p">:</span> <span class="n">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<a href="#__codelineno-20-7" id="__codelineno-20-7" name="__codelineno-20-7"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">content</span> <span class="o">=</span> <span class="n">content</span>
+<a href="#__codelineno-20-8" id="__codelineno-20-8" name="__codelineno-20-8"></a>
+<a href="#__codelineno-20-9" id="__codelineno-20-9" name="__codelineno-20-9"></a>    <span class="k">def</span> <span class="nf">get_content</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">T</span><span class="p">:</span>
+<a href="#__codelineno-20-10" id="__codelineno-20-10" name="__codelineno-20-10"></a>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">content</span>
+<a href="#__codelineno-20-11" id="__codelineno-20-11" name="__codelineno-20-11"></a>
+<a href="#__codelineno-20-12" id="__codelineno-20-12" name="__codelineno-20-12"></a><span class="c1"># Example usage</span>
+<a href="#__codelineno-20-13" id="__codelineno-20-13" name="__codelineno-20-13"></a><span class="n">int_box</span> <span class="o">=</span> <span class="n">Box</span><span class="p">(</span><span class="mi">123</span><span class="p">)</span>
+<a href="#__codelineno-20-14" id="__codelineno-20-14" name="__codelineno-20-14"></a><span class="n">str_box</span> <span class="o">=</span> <span class="n">Box</span><span class="p">(</span><span class="s2">"Hello"</span><span class="p">)</span>
+<a href="#__codelineno-20-15" id="__codelineno-20-15" name="__codelineno-20-15"></a>
+<a href="#__codelineno-20-16" id="__codelineno-20-16" name="__codelineno-20-16"></a><span class="nb">print</span><span class="p">(</span><span class="n">int_box</span><span class="o">.</span><span class="n">get_content</span><span class="p">())</span>  <span class="c1"># 123</span>
+<a href="#__codelineno-20-17" id="__codelineno-20-17" name="__codelineno-20-17"></a><span class="nb">print</span><span class="p">(</span><span class="n">str_box</span><span class="o">.</span><span class="n">get_content</span><span class="p">())</span>  <span class="c1"># Hello</span>
 </code></pre></div>
 <p>In this example, the <code>Box</code> class is generic and can store content of any
 type.</p>
 <h4 id="example-with-multiple-type-variables">Example with Multiple Type Variables<a class="headerlink" href="#example-with-multiple-type-variables" title="Permanent link">¶</a></h4>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-19-1" id="__codelineno-19-1" name="__codelineno-19-1"></a><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">TypeVar</span><span class="p">,</span> <span class="n">Generic</span>
-<a href="#__codelineno-19-2" id="__codelineno-19-2" name="__codelineno-19-2"></a>
-<a href="#__codelineno-19-3" id="__codelineno-19-3" name="__codelineno-19-3"></a><span class="n">T</span> <span class="o">=</span> <span class="n">TypeVar</span><span class="p">(</span><span class="s1">'T'</span><span class="p">)</span>
-<a href="#__codelineno-19-4" id="__codelineno-19-4" name="__codelineno-19-4"></a><span class="n">U</span> <span class="o">=</span> <span class="n">TypeVar</span><span class="p">(</span><span class="s1">'U'</span><span class="p">)</span>
-<a href="#__codelineno-19-5" id="__codelineno-19-5" name="__codelineno-19-5"></a>
-<a href="#__codelineno-19-6" id="__codelineno-19-6" name="__codelineno-19-6"></a><span class="k">class</span> <span class="nc">Pair</span><span class="p">(</span><span class="n">Generic</span><span class="p">[</span><span class="n">T</span><span class="p">,</span> <span class="n">U</span><span class="p">]):</span>
-<a href="#__codelineno-19-7" id="__codelineno-19-7" name="__codelineno-19-7"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">first</span><span class="p">:</span> <span class="n">T</span><span class="p">,</span> <span class="n">second</span><span class="p">:</span> <span class="n">U</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-<a href="#__codelineno-19-8" id="__codelineno-19-8" name="__codelineno-19-8"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">first</span> <span class="o">=</span> <span class="n">first</span>
-<a href="#__codelineno-19-9" id="__codelineno-19-9" name="__codelineno-19-9"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">second</span> <span class="o">=</span> <span class="n">second</span>
-<a href="#__codelineno-19-10" id="__codelineno-19-10" name="__codelineno-19-10"></a>
-<a href="#__codelineno-19-11" id="__codelineno-19-11" name="__codelineno-19-11"></a>    <span class="k">def</span> <span class="nf">get_first</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">T</span><span class="p">:</span>
-<a href="#__codelineno-19-12" id="__codelineno-19-12" name="__codelineno-19-12"></a>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">first</span>
-<a href="#__codelineno-19-13" id="__codelineno-19-13" name="__codelineno-19-13"></a>
-<a href="#__codelineno-19-14" id="__codelineno-19-14" name="__codelineno-19-14"></a>    <span class="k">def</span> <span class="nf">get_second</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">U</span><span class="p">:</span>
-<a href="#__codelineno-19-15" id="__codelineno-19-15" name="__codelineno-19-15"></a>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">second</span>
-<a href="#__codelineno-19-16" id="__codelineno-19-16" name="__codelineno-19-16"></a>
-<a href="#__codelineno-19-17" id="__codelineno-19-17" name="__codelineno-19-17"></a><span class="c1"># Example usage</span>
-<a href="#__codelineno-19-18" id="__codelineno-19-18" name="__codelineno-19-18"></a><span class="n">pair</span> <span class="o">=</span> <span class="n">Pair</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s2">"one"</span><span class="p">)</span>
-<a href="#__codelineno-19-19" id="__codelineno-19-19" name="__codelineno-19-19"></a><span class="nb">print</span><span class="p">(</span><span class="n">pair</span><span class="o">.</span><span class="n">get_first</span><span class="p">())</span>   <span class="c1"># 1</span>
-<a href="#__codelineno-19-20" id="__codelineno-19-20" name="__codelineno-19-20"></a><span class="nb">print</span><span class="p">(</span><span class="n">pair</span><span class="o">.</span><span class="n">get_second</span><span class="p">())</span>  <span class="c1"># one</span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-21-1" id="__codelineno-21-1" name="__codelineno-21-1"></a><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">TypeVar</span><span class="p">,</span> <span class="n">Generic</span>
+<a href="#__codelineno-21-2" id="__codelineno-21-2" name="__codelineno-21-2"></a>
+<a href="#__codelineno-21-3" id="__codelineno-21-3" name="__codelineno-21-3"></a><span class="n">T</span> <span class="o">=</span> <span class="n">TypeVar</span><span class="p">(</span><span class="s1">'T'</span><span class="p">)</span>
+<a href="#__codelineno-21-4" id="__codelineno-21-4" name="__codelineno-21-4"></a><span class="n">U</span> <span class="o">=</span> <span class="n">TypeVar</span><span class="p">(</span><span class="s1">'U'</span><span class="p">)</span>
+<a href="#__codelineno-21-5" id="__codelineno-21-5" name="__codelineno-21-5"></a>
+<a href="#__codelineno-21-6" id="__codelineno-21-6" name="__codelineno-21-6"></a><span class="k">class</span> <span class="nc">Pair</span><span class="p">(</span><span class="n">Generic</span><span class="p">[</span><span class="n">T</span><span class="p">,</span> <span class="n">U</span><span class="p">]):</span>
+<a href="#__codelineno-21-7" id="__codelineno-21-7" name="__codelineno-21-7"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">first</span><span class="p">:</span> <span class="n">T</span><span class="p">,</span> <span class="n">second</span><span class="p">:</span> <span class="n">U</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<a href="#__codelineno-21-8" id="__codelineno-21-8" name="__codelineno-21-8"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">first</span> <span class="o">=</span> <span class="n">first</span>
+<a href="#__codelineno-21-9" id="__codelineno-21-9" name="__codelineno-21-9"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">second</span> <span class="o">=</span> <span class="n">second</span>
+<a href="#__codelineno-21-10" id="__codelineno-21-10" name="__codelineno-21-10"></a>
+<a href="#__codelineno-21-11" id="__codelineno-21-11" name="__codelineno-21-11"></a>    <span class="k">def</span> <span class="nf">get_first</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">T</span><span class="p">:</span>
+<a href="#__codelineno-21-12" id="__codelineno-21-12" name="__codelineno-21-12"></a>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">first</span>
+<a href="#__codelineno-21-13" id="__codelineno-21-13" name="__codelineno-21-13"></a>
+<a href="#__codelineno-21-14" id="__codelineno-21-14" name="__codelineno-21-14"></a>    <span class="k">def</span> <span class="nf">get_second</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">U</span><span class="p">:</span>
+<a href="#__codelineno-21-15" id="__codelineno-21-15" name="__codelineno-21-15"></a>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">second</span>
+<a href="#__codelineno-21-16" id="__codelineno-21-16" name="__codelineno-21-16"></a>
+<a href="#__codelineno-21-17" id="__codelineno-21-17" name="__codelineno-21-17"></a><span class="c1"># Example usage</span>
+<a href="#__codelineno-21-18" id="__codelineno-21-18" name="__codelineno-21-18"></a><span class="n">pair</span> <span class="o">=</span> <span class="n">Pair</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s2">"one"</span><span class="p">)</span>
+<a href="#__codelineno-21-19" id="__codelineno-21-19" name="__codelineno-21-19"></a><span class="nb">print</span><span class="p">(</span><span class="n">pair</span><span class="o">.</span><span class="n">get_first</span><span class="p">())</span>   <span class="c1"># 1</span>
+<a href="#__codelineno-21-20" id="__codelineno-21-20" name="__codelineno-21-20"></a><span class="nb">print</span><span class="p">(</span><span class="n">pair</span><span class="o">.</span><span class="n">get_second</span><span class="p">())</span>  <span class="c1"># one</span>
 </code></pre></div>
 <p>Here, the <code>Pair</code> class uses two type variables <code>T</code> and <code>U</code>, allowing it
 to store and return two values of different types.</p>
@@ -1878,24 +1957,24 @@ improving code quality, readability, and safety.</p>
 <h3 id="example-prompt">Example Prompt<a class="headerlink" href="#example-prompt" title="Permanent link">¶</a></h3>
 <p>Consider a Retrieval-Augmented Generation (RAG) Q&amp;A system. Here's a
 function without type annotations:</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-20-1" id="__codelineno-20-1" name="__codelineno-20-1"></a>I have a Python function that processes user queries and retrieves relevant documents in a RAG Q&amp;A system. The `query` parameter is a string. The `retrieve_documents` function returns a list of dictionaries with `id` and `text` as strings. The `process_query` function should return a list of document texts. Here is the function:
-<a href="#__codelineno-20-2" id="__codelineno-20-2" name="__codelineno-20-2"></a>
-<a href="#__codelineno-20-3" id="__codelineno-20-3" name="__codelineno-20-3"></a>```python
-<a href="#__codelineno-20-4" id="__codelineno-20-4" name="__codelineno-20-4"></a>def process_query(query, retrieve_documents):
-<a href="#__codelineno-20-5" id="__codelineno-20-5" name="__codelineno-20-5"></a>    documents = retrieve_documents(query)
-<a href="#__codelineno-20-6" id="__codelineno-20-6" name="__codelineno-20-6"></a>    return [doc['text'] for doc in documents]
-<a href="#__codelineno-20-7" id="__codelineno-20-7" name="__codelineno-20-7"></a>
-<a href="#__codelineno-20-8" id="__codelineno-20-8" name="__codelineno-20-8"></a>Can you add the appropriate type annotations to this function using Mypy and explain your reasoning?
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-22-1" id="__codelineno-22-1" name="__codelineno-22-1"></a>I have a Python function that processes user queries and retrieves relevant documents in a RAG Q&amp;A system. The `query` parameter is a string. The `retrieve_documents` function returns a list of dictionaries with `id` and `text` as strings. The `process_query` function should return a list of document texts. Here is the function:
+<a href="#__codelineno-22-2" id="__codelineno-22-2" name="__codelineno-22-2"></a>
+<a href="#__codelineno-22-3" id="__codelineno-22-3" name="__codelineno-22-3"></a>```python
+<a href="#__codelineno-22-4" id="__codelineno-22-4" name="__codelineno-22-4"></a>def process_query(query, retrieve_documents):
+<a href="#__codelineno-22-5" id="__codelineno-22-5" name="__codelineno-22-5"></a>    documents = retrieve_documents(query)
+<a href="#__codelineno-22-6" id="__codelineno-22-6" name="__codelineno-22-6"></a>    return [doc['text'] for doc in documents]
+<a href="#__codelineno-22-7" id="__codelineno-22-7" name="__codelineno-22-7"></a>
+<a href="#__codelineno-22-8" id="__codelineno-22-8" name="__codelineno-22-8"></a>Can you add the appropriate type annotations to this function using Mypy and explain your reasoning?
 </code></pre></div>
-<h4 id="example-output">Example Output<a class="headerlink" href="#example-output" title="Permanent link">¶</a></h4>
+<h4 id="example-output_1">Example Output<a class="headerlink" href="#example-output_1" title="Permanent link">¶</a></h4>
 <p>ChatGPT might respond with:</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-21-1" id="__codelineno-21-1" name="__codelineno-21-1"></a><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Callable</span><span class="p">,</span> <span class="n">List</span><span class="p">,</span> <span class="n">Dict</span>
-<a href="#__codelineno-21-2" id="__codelineno-21-2" name="__codelineno-21-2"></a>
-<a href="#__codelineno-21-3" id="__codelineno-21-3" name="__codelineno-21-3"></a><span class="k">def</span> <span class="nf">process_query</span><span class="p">(</span><span class="n">query</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">retrieve_documents</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[[</span><span class="nb">str</span><span class="p">],</span> <span class="n">List</span><span class="p">[</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">]]])</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
-<a href="#__codelineno-21-4" id="__codelineno-21-4" name="__codelineno-21-4"></a>    <span class="n">documents</span> <span class="o">=</span> <span class="n">retrieve_documents</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
-<a href="#__codelineno-21-5" id="__codelineno-21-5" name="__codelineno-21-5"></a>    <span class="k">return</span> <span class="p">[</span><span class="n">doc</span><span class="p">[</span><span class="s1">'text'</span><span class="p">]</span> <span class="k">for</span> <span class="n">doc</span> <span class="ow">in</span> <span class="n">documents</span><span class="p">]</span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-23-1" id="__codelineno-23-1" name="__codelineno-23-1"></a><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Callable</span><span class="p">,</span> <span class="n">List</span><span class="p">,</span> <span class="n">Dict</span>
+<a href="#__codelineno-23-2" id="__codelineno-23-2" name="__codelineno-23-2"></a>
+<a href="#__codelineno-23-3" id="__codelineno-23-3" name="__codelineno-23-3"></a><span class="k">def</span> <span class="nf">process_query</span><span class="p">(</span><span class="n">query</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">retrieve_documents</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[[</span><span class="nb">str</span><span class="p">],</span> <span class="n">List</span><span class="p">[</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">]]])</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+<a href="#__codelineno-23-4" id="__codelineno-23-4" name="__codelineno-23-4"></a>    <span class="n">documents</span> <span class="o">=</span> <span class="n">retrieve_documents</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
+<a href="#__codelineno-23-5" id="__codelineno-23-5" name="__codelineno-23-5"></a>    <span class="k">return</span> <span class="p">[</span><span class="n">doc</span><span class="p">[</span><span class="s1">'text'</span><span class="p">]</span> <span class="k">for</span> <span class="n">doc</span> <span class="ow">in</span> <span class="n">documents</span><span class="p">]</span>
 </code></pre></div>
-<h4 id="reasoning">Reasoning:<a class="headerlink" href="#reasoning" title="Permanent link">¶</a></h4>
+<h4 id="reasoning_1">Reasoning:<a class="headerlink" href="#reasoning_1" title="Permanent link">¶</a></h4>
 <ol>
 <li><strong><code>query: str</code></strong>: The <code>query</code> parameter is a string because it
    represents the user's question.</li>
@@ -1906,7 +1985,7 @@ function without type annotations:</p>
 <li><strong><code>-&gt; List[str]</code></strong>: The <code>process_query</code> function returns a list of
    strings, which are the texts of the retrieved documents.</li>
 </ol>
-<h3 id="best-practices-for-using-chatgpt">Best Practices for Using ChatGPT<a class="headerlink" href="#best-practices-for-using-chatgpt" title="Permanent link">¶</a></h3>
+<h3 id="best-practices-for-using-chatgpt_1">Best Practices for Using ChatGPT<a class="headerlink" href="#best-practices-for-using-chatgpt_1" title="Permanent link">¶</a></h3>
 <ol>
 <li><strong>Provide Context</strong>: More context leads to better type annotations.
    Include sample inputs or describe expected outputs.</li>
@@ -1954,7 +2033,7 @@ function without type annotations:</p>
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": "../..", "features": ["search.highlight", "navigation.tabs", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.c011b7c0.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+<script id="__config" type="application/json">{"base": "../..", "features": ["search.highlight", "navigation.tabs", "content.code.annotate", "content.code.copy"], "search": "../../assets/javascripts/workers/search.c011b7c0.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
 <script src="../../assets/javascripts/bundle.7389ff0e.min.js"></script>
 <script src="https://fonts.googleapis.com/icon?family=Material+Icons"></script>
 <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
