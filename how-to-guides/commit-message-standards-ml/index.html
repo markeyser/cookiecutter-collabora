@@ -508,11 +508,36 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
+<a class="md-nav__link" href="#example-prompt">
+<span class="md-ellipsis">
+      Example Prompt
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#generated-commit-message">
+<span class="md-ellipsis">
+      Generated Commit Message
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#running-the-git-command">
+<span class="md-ellipsis">
+      Running the Git Command
+    </span>
+</a>
+<nav aria-label="Running the Git Command" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
 <a class="md-nav__link" href="#components">
 <span class="md-ellipsis">
       Components
     </span>
 </a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#examples">
@@ -772,11 +797,36 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
+<a class="md-nav__link" href="#example-prompt">
+<span class="md-ellipsis">
+      Example Prompt
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#generated-commit-message">
+<span class="md-ellipsis">
+      Generated Commit Message
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#running-the-git-command">
+<span class="md-ellipsis">
+      Running the Git Command
+    </span>
+</a>
+<nav aria-label="Running the Git Command" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
 <a class="md-nav__link" href="#components">
 <span class="md-ellipsis">
       Components
     </span>
 </a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#examples">
@@ -793,6 +843,66 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="git-commit-message-standards-for-ml-projects">Git Commit Message Standards for ML Projects<a class="headerlink" href="#git-commit-message-standards-for-ml-projects" title="Permanent link">¶</a></h1>
+<div class="admonition example">
+<p class="admonition-title">ChatGPT Prompt for Git Commit Message</p>
+<p>To create a standardized git commit message using ChatGPT, provide the
+following details: the output of <code>git diff my_python_file.py</code>, the JIRA
+story number, and the commit type. ChatGPT will generate the appropriate
+commit message based on these inputs.</p>
+<h3 id="example-prompt">Example Prompt<a class="headerlink" href="#example-prompt" title="Permanent link">¶</a></h3>
+<p><strong>Prompt:</strong></p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>Create a git commit message for the following changes. Follow the structure:
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a>&lt;type&gt;(&lt;scope&gt;): &lt;subject&gt; [#issue_number | #jira_key]
+<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a>
+<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a>Include the body and footer, and provide the complete git commit
+<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a>command. Limit comments to 72 characters per line and code lines to 79
+<a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a>characters.
+<a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a>
+<a href="#__codelineno-0-8" id="__codelineno-0-8" name="__codelineno-0-8"></a>Output of `git diff my_python_file.py`:
+<a href="#__codelineno-0-9" id="__codelineno-0-9" name="__codelineno-0-9"></a>[Include the output of the git diff here]
+<a href="#__codelineno-0-10" id="__codelineno-0-10" name="__codelineno-0-10"></a>
+<a href="#__codelineno-0-11" id="__codelineno-0-11" name="__codelineno-0-11"></a>JIRA story number: [Enter JIRA story number]
+<a href="#__codelineno-0-12" id="__codelineno-0-12" name="__codelineno-0-12"></a>
+<a href="#__codelineno-0-13" id="__codelineno-0-13" name="__codelineno-0-13"></a>Commit types:
+<a href="#__codelineno-0-14" id="__codelineno-0-14" name="__codelineno-0-14"></a>- feat: New features or enhancements
+<a href="#__codelineno-0-15" id="__codelineno-0-15" name="__codelineno-0-15"></a>- fix: Bug fixes
+<a href="#__codelineno-0-16" id="__codelineno-0-16" name="__codelineno-0-16"></a>- data: Data processing or management changes
+<a href="#__codelineno-0-17" id="__codelineno-0-17" name="__codelineno-0-17"></a>- experiment: Experimental or exploratory code changes
+<a href="#__codelineno-0-18" id="__codelineno-0-18" name="__codelineno-0-18"></a>- model: Model development, testing, or deployment changes
+<a href="#__codelineno-0-19" id="__codelineno-0-19" name="__codelineno-0-19"></a>- docs: Documentation additions or updates
+<a href="#__codelineno-0-20" id="__codelineno-0-20" name="__codelineno-0-20"></a>- refactor: Performance enhancements without functionality changes
+<a href="#__codelineno-0-21" id="__codelineno-0-21" name="__codelineno-0-21"></a>- test: Test writing or fixing
+<a href="#__codelineno-0-22" id="__codelineno-0-22" name="__codelineno-0-22"></a>- chore: Routine tasks or non-production code updates
+<a href="#__codelineno-0-23" id="__codelineno-0-23" name="__codelineno-0-23"></a>- build: Changes that affect the build system or external dependencies
+<a href="#__codelineno-0-24" id="__codelineno-0-24" name="__codelineno-0-24"></a>- ci: Changes to CI configuration files and scripts
+<a href="#__codelineno-0-25" id="__codelineno-0-25" name="__codelineno-0-25"></a>- revert: Reverts a previous commit
+<a href="#__codelineno-0-26" id="__codelineno-0-26" name="__codelineno-0-26"></a>- style: Code style changes (formatting, missing semicolons, etc.)
+<a href="#__codelineno-0-27" id="__codelineno-0-27" name="__codelineno-0-27"></a>
+<a href="#__codelineno-0-28" id="__codelineno-0-28" name="__codelineno-0-28"></a>Example Commit Types:
+<a href="#__codelineno-0-29" id="__codelineno-0-29" name="__codelineno-0-29"></a>- feat(auth): add user authentication feature [#DATA123]
+<a href="#__codelineno-0-30" id="__codelineno-0-30" name="__codelineno-0-30"></a>- fix(data): resolve data loading error [#GH45]
+<a href="#__codelineno-0-31" id="__codelineno-0-31" name="__codelineno-0-31"></a>- docs: update API documentation
+</code></pre></div>
+<h3 id="generated-commit-message">Generated Commit Message<a class="headerlink" href="#generated-commit-message" title="Permanent link">¶</a></h3>
+<p>ChatGPT might respond with:</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a>git commit -m "feat(auth): add user authentication feature [#DATA123]
+<a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a>
+<a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a>Added a new user authentication feature to enhance security.
+<a href="#__codelineno-1-4" id="__codelineno-1-4" name="__codelineno-1-4"></a>This includes login, registration, and password recovery.
+<a href="#__codelineno-1-5" id="__codelineno-1-5" name="__codelineno-1-5"></a>
+<a href="#__codelineno-1-6" id="__codelineno-1-6" name="__codelineno-1-6"></a>Footer: Reviewed by Jane Doe"
+</code></pre></div>
+<h3 id="running-the-git-command">Running the Git Command<a class="headerlink" href="#running-the-git-command" title="Permanent link">¶</a></h3>
+<p>To commit your changes with the generated message, run the following command in your terminal:</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">"feat(auth): add user authentication feature [#DATA123]</span>
+<a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a>
+<a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="s2">Added a new user authentication feature to enhance security.</span>
+<a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="s2">This includes login, registration, and password recovery.</span>
+<a href="#__codelineno-2-5" id="__codelineno-2-5" name="__codelineno-2-5"></a>
+<a href="#__codelineno-2-6" id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="s2">Footer: Reviewed by Jane Doe"</span>
+</code></pre></div>
+</div>
+<p>Include this admonition in your <code>docs/how-to-guides/git-commit-message-standards.md</code> file. This example explains how to request a standardized git commit message from ChatGPT, providing a detailed prompt and the expected output.</p>
 <div class="admonition tip">
 <p class="admonition-title">Introduction</p>
 <p>Clear, informative commit messages are vital for effective team collaboration in machine learning projects. This guide provides standards and tools for creating standardized commit messages, including how to reference GitHub issue numbers or Jira keys. We follow the <a href="https://www.conventionalcommits.org/en/v1.0.0/">Conventional Commits</a> specification.</p>
@@ -800,11 +910,11 @@
 <div class="admonition example">
 <p class="admonition-title">Commit Message Structure</p>
 <p>Commit messages should follow this structure:</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>&lt;type&gt;(&lt;scope&gt;): &lt;subject&gt; [#issue_number | #jira_key]
-<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a>
-<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a>&lt;body&gt;
-<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a>
-<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a>&lt;footer&gt;
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a>&lt;type&gt;(&lt;scope&gt;): &lt;subject&gt; [#issue_number | #jira_key]
+<a href="#__codelineno-3-2" id="__codelineno-3-2" name="__codelineno-3-2"></a>
+<a href="#__codelineno-3-3" id="__codelineno-3-3" name="__codelineno-3-3"></a>&lt;body&gt;
+<a href="#__codelineno-3-4" id="__codelineno-3-4" name="__codelineno-3-4"></a>
+<a href="#__codelineno-3-5" id="__codelineno-3-5" name="__codelineno-3-5"></a>&lt;footer&gt;
 </code></pre></div>
 <h4 id="components">Components<a class="headerlink" href="#components" title="Permanent link">¶</a></h4>
 <ul>
@@ -895,26 +1005,26 @@
 </div>
 <h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">¶</a></h2>
 <p>Here are some examples of commit messages that meet our standards:</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a>feat(auth): add user authentication feature [#DATA123]
-<a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a>
-<a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a>Added a new user authentication feature to enhance security.
-<a href="#__codelineno-1-4" id="__codelineno-1-4" name="__codelineno-1-4"></a>This includes login, registration, and password recovery.
-<a href="#__codelineno-1-5" id="__codelineno-1-5" name="__codelineno-1-5"></a>
-<a href="#__codelineno-1-6" id="__codelineno-1-6" name="__codelineno-1-6"></a>Footer: Reviewed by Jane Doe
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a>feat(auth): add user authentication feature [#DATA123]
+<a href="#__codelineno-4-2" id="__codelineno-4-2" name="__codelineno-4-2"></a>
+<a href="#__codelineno-4-3" id="__codelineno-4-3" name="__codelineno-4-3"></a>Added a new user authentication feature to enhance security.
+<a href="#__codelineno-4-4" id="__codelineno-4-4" name="__codelineno-4-4"></a>This includes login, registration, and password recovery.
+<a href="#__codelineno-4-5" id="__codelineno-4-5" name="__codelineno-4-5"></a>
+<a href="#__codelineno-4-6" id="__codelineno-4-6" name="__codelineno-4-6"></a>Footer: Reviewed by Jane Doe
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a>fix(data): resolve data loading error [#GH45]
-<a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a>
-<a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a>Fixed an issue where data loading was failing due to incorrect file paths.
-<a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a>Updated the file paths and added error handling.
-<a href="#__codelineno-2-5" id="__codelineno-2-5" name="__codelineno-2-5"></a>
-<a href="#__codelineno-2-6" id="__codelineno-2-6" name="__codelineno-2-6"></a>Footer: Closes #GH45
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a>fix(data): resolve data loading error [#GH45]
+<a href="#__codelineno-5-2" id="__codelineno-5-2" name="__codelineno-5-2"></a>
+<a href="#__codelineno-5-3" id="__codelineno-5-3" name="__codelineno-5-3"></a>Fixed an issue where data loading was failing due to incorrect file paths.
+<a href="#__codelineno-5-4" id="__codelineno-5-4" name="__codelineno-5-4"></a>Updated the file paths and added error handling.
+<a href="#__codelineno-5-5" id="__codelineno-5-5" name="__codelineno-5-5"></a>
+<a href="#__codelineno-5-6" id="__codelineno-5-6" name="__codelineno-5-6"></a>Footer: Closes #GH45
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a>docs: update API documentation
-<a href="#__codelineno-3-2" id="__codelineno-3-2" name="__codelineno-3-2"></a>
-<a href="#__codelineno-3-3" id="__codelineno-3-3" name="__codelineno-3-3"></a>Improved the API documentation to include new endpoints and usage examples.
-<a href="#__codelineno-3-4" id="__codelineno-3-4" name="__codelineno-3-4"></a>Fixed typos and clarified descriptions.
-<a href="#__codelineno-3-5" id="__codelineno-3-5" name="__codelineno-3-5"></a>
-<a href="#__codelineno-3-6" id="__codelineno-3-6" name="__codelineno-3-6"></a>Footer: Documentation reviewed by the tech writing team
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a>docs: update API documentation
+<a href="#__codelineno-6-2" id="__codelineno-6-2" name="__codelineno-6-2"></a>
+<a href="#__codelineno-6-3" id="__codelineno-6-3" name="__codelineno-6-3"></a>Improved the API documentation to include new endpoints and usage examples.
+<a href="#__codelineno-6-4" id="__codelineno-6-4" name="__codelineno-6-4"></a>Fixed typos and clarified descriptions.
+<a href="#__codelineno-6-5" id="__codelineno-6-5" name="__codelineno-6-5"></a>
+<a href="#__codelineno-6-6" id="__codelineno-6-6" name="__codelineno-6-6"></a>Footer: Documentation reviewed by the tech writing team
 </code></pre></div>
 <div class="admonition info">
 <p class="admonition-title">VS Code Extensions</p>
@@ -935,7 +1045,7 @@
 <span class="md-icon" title="Last update">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 9, 2024</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 28, 2024</span>
 </span>
 </aside>
 </article>
