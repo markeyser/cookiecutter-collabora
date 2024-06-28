@@ -182,6 +182,14 @@
             pass
     ```
 
+    ### Running Ruff
+
+    To check your code with Ruff, run the following command in your terminal:
+
+    ```bash
+    ruff check --preview --fix project_directory/utils/advanced_parser.py
+    ```
+
 Ruff is a high-performance linter for Python that swiftly evaluates and
 enhances the quality of your code. With an emphasis on speed and
 practicality, Ruff assists developers in maintaining consistent coding
