@@ -43,6 +43,13 @@
     5. **Ask for Explanations**: If unsure about an annotation, ask ChatGPT for an explanation.
     6. **Iterate**: Start with a basic function and gradually add complexity to ensure consistent and accurate annotations.
 
+    ### Running Mypy
+
+    To check your code with Mypy, run the following command in your terminal:
+
+    ```bash
+    mypy your_script.py
+    ```
 
 ## Why Use Static Typing with Python?
 
