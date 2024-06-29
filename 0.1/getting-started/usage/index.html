@@ -1,0 +1,1100 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="https://markeyser.github.io/cookiecutter-collabora/0.1/getting-started/usage/" rel="canonical"/>
+<link href="../.." rel="prev"/>
+<link href="../standards_summary/" rel="next"/>
+<link href="../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.5.3, mkdocs-material-9.5.4" name="generator"/>
+<title>Usage - Cookiecutter Collabora</title>
+<link href="../../assets/stylesheets/main.50c56a3b.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<link href="../../assets/_mkdocstrings.css" rel="stylesheet"/>
+<link href="../../stylesheets/extra.css" rel="stylesheet"/>
+<link href="../../assets/css/custom.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+ <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+<body data-md-color-accent="indigo" data-md-color-primary="indigo" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#usage">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<div data-md-color-scheme="default" data-md-component="outdated" hidden="">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="Cookiecutter Collabora" class="md-header__button md-logo" data-md-component="logo" href="../.." title="Cookiecutter Collabora">
+<img alt="logo" src="../../assets/logo.svg"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Cookiecutter Collabora
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Usage
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Switch to light mode" class="md-option" data-md-color-accent="indigo" data-md-color-media="(prefers-color-scheme)" data-md-color-primary="indigo" data-md-color-scheme="default" id="__palette_0" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to light mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1M8 13h8v-2H8v2m9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1 0 1.71-1.39 3.1-3.1 3.1h-4V17h4a5 5 0 0 0 5-5 5 5 0 0 0-5-5Z"></path></svg>
+</label>
+<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="indigo" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="black" data-md-color-scheme="default" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_2" hidden="" title="Switch to dark mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"></path></svg>
+</label>
+<input aria-label="Switch to system preference" class="md-option" data-md-color-accent="indigo" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-primary="black" data-md-color-scheme="slate" id="__palette_2" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_0" hidden="" title="Switch to system preference">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5M7 15a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"></path></svg>
+</label>
+</form>
+<script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg>
+</button>
+</nav>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="md-header__source">
+<a class="md-source" data-md-component="source" href="https://github.com/markeyser/cookiecutter-collabora" title="Go to repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path></svg>
+</div>
+<div class="md-source__repository">
+    markeyser.github.io/cookiecutter-collabora/
+  </div>
+</a>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<nav aria-label="Tabs" class="md-tabs" data-md-component="tabs">
+<div class="md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../..">
+        
+  
+    
+  
+  Home
+
+      </a>
+</li>
+<li class="md-tabs__item md-tabs__item--active">
+<a class="md-tabs__link" href="./">
+          
+  
+  Getting starded
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../tutorials/toc-tutorials/">
+          
+  
+  Tutorials
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../how-to-guides/toc-how-to-guides/">
+          
+  
+  How-To Guides
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../explanation/toc-explanation/">
+          
+  
+  Explanation
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../api-reference/toc-api-reference/">
+          
+  
+  API Reference
+
+        </a>
+</li>
+</ul>
+</div>
+</nav>
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Cookiecutter Collabora" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="Cookiecutter Collabora">
+<img alt="logo" src="../../assets/logo.svg"/>
+</a>
+    Cookiecutter Collabora
+  </label>
+<div class="md-nav__source">
+<a class="md-source" data-md-component="source" href="https://github.com/markeyser/cookiecutter-collabora" title="Go to repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path></svg>
+</div>
+<div class="md-source__repository">
+    markeyser.github.io/cookiecutter-collabora/
+  </div>
+</a>
+</div>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../..">
+<span class="md-ellipsis">
+    Home
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+<span class="md-ellipsis">
+    Getting starded
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+            Getting starded
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    Usage
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    Usage
+  </span>
+</a>
+<nav aria-label="On this page" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#installing-cookiecutter">
+<span class="md-ellipsis">
+      Installing Cookiecutter
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#generate-a-new-project">
+<span class="md-ellipsis">
+      Generate a New Project
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#generate-a-project-from-a-downloaded-template">
+<span class="md-ellipsis">
+      Generate a Project from a Downloaded Template
+    </span>
+</a>
+<nav aria-label="Generate a Project from a Downloaded Template" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#listing-installed-cookiecutter-templates">
+<span class="md-ellipsis">
+      Listing Installed Cookiecutter Templates
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#locating-the-cookiecutters-directory-on-a-mac">
+<span class="md-ellipsis">
+      Locating the .cookiecutters Directory on a Mac
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#creating-a-new-project-with-a-template">
+<span class="md-ellipsis">
+      Creating a New Project with a Template
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#resulting-directory-structure">
+<span class="md-ellipsis">
+      Resulting Directory Structure
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../standards_summary/">
+<span class="md-ellipsis">
+    Standards Cheat Sheet
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../config_files_guidelines/">
+<span class="md-ellipsis">
+    Cofiguration Guidelines
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../resource_compilation/">
+<span class="md-ellipsis">
+    Resource Compilation
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../purpose_and_vision/">
+<span class="md-ellipsis">
+    Purpose and Vision
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../software-development-lifecycle/">
+<span class="md-ellipsis">
+    Software Development Lifecycle
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../software-development-best-practices/">
+<span class="md-ellipsis">
+    Software Development Best Practices
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+<span class="md-ellipsis">
+    Tutorials
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+            Tutorials
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tutorials/toc-tutorials/">
+<span class="md-ellipsis">
+    TOC
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tutorials/black-formatter/">
+<span class="md-ellipsis">
+    Black Formatter
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tutorials/ruff-linter/">
+<span class="md-ellipsis">
+    Ruff Linter
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tutorials/poetry/">
+<span class="md-ellipsis">
+    Poetry Package Management
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tutorials/mkdocs-docs/">
+<span class="md-ellipsis">
+    MkDocs Documentation
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tutorials/hydra-config/">
+<span class="md-ellipsis">
+    Hydra Configuration
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tutorials/gitignore/">
+<span class="md-ellipsis">
+    Gitignore File Creation
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tutorials/data/">
+<span class="md-ellipsis">
+    Managing Data
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tutorials/data-version-control/">
+<span class="md-ellipsis">
+    Data Version Control
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tutorials/dvc-local/">
+<span class="md-ellipsis">
+    DVC Local Workflow
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tutorials/dvc-cloud/">
+<span class="md-ellipsis">
+    DVC Cloud Storage
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tutorials/dvc-collaboration/">
+<span class="md-ellipsis">
+    DVC for Collaboration
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tutorials/naming-conventions/">
+<span class="md-ellipsis">
+    Naming Conventions Tutorial
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tutorials/windows-os-setup/">
+<span class="md-ellipsis">
+    Windows OS Setup
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tutorials/markdown-ml-model-documentation/">
+<span class="md-ellipsis">
+    Markdown Documentation for ML Models
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+<span class="md-ellipsis">
+    How-To Guides
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+            How-To Guides
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../how-to-guides/toc-how-to-guides/">
+<span class="md-ellipsis">
+    TOC
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../how-to-guides/project-scaffolding-standards/">
+<span class="md-ellipsis">
+    Project Scaffolding Standards
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../how-to-guides/file-naming-conventions/">
+<span class="md-ellipsis">
+    File Naming Conventions
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../how-to-guides/column-naming-conventions/">
+<span class="md-ellipsis">
+    Column Naming Conventions
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../how-to-guides/python-docstrings-conventions/">
+<span class="md-ellipsis">
+    Python Docstrings Conventions
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../how-to-guides/python-line-length-standards.md">
+<span class="md-ellipsis">
+    Line Length Standards in Python Projects
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../how-to-guides/dvc-set-up/">
+<span class="md-ellipsis">
+    DVC Setup
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../how-to-guides/dvc-communication/">
+<span class="md-ellipsis">
+    DVC Communication
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../how-to-guides/dvc-vscode-extension/">
+<span class="md-ellipsis">
+    DVC VS Code Extension
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../how-to-guides/offline-cookiecutter-setup/">
+<span class="md-ellipsis">
+    Offline Cookiecutter Setup
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../how-to-guides/git-branch-naming-standards/">
+<span class="md-ellipsis">
+    Git Branch Naming Standards
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../how-to-guides/commit-message-standards-ml/">
+<span class="md-ellipsis">
+    Commit Message Standards in ML Projects
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../how-to-guides/pushing-to-github-best-practices.md">
+<span class="md-ellipsis">
+    Best Practices for Pushing to GitHub
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../how-to-guides/ml-data-folder-naming/">
+<span class="md-ellipsis">
+    ML Data Folder Naming Guide
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../how-to-guides/machine-learning-metadata-automation/">
+<span class="md-ellipsis">
+    Automating Metadata Creation
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../how-to-guides/github-actions-naming-convention/">
+<span class="md-ellipsis">
+    Enforcing Naming Conventions with GitHub Actions
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../how-to-guides/wandb-experiment-tracking-rag/">
+<span class="md-ellipsis">
+    ML Experiments Life-Cycle with Weights &amp; Biases
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../how-to-guides/templates/">
+<span class="md-ellipsis">
+    Templates for Issues/Stories and PRs
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../how-to-guides/branching-strategy/">
+<span class="md-ellipsis">
+    Branching Strategies for ML Projects
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../how-to-guides/data-conversion-from-xlsx-to-csv/">
+<span class="md-ellipsis">
+    Python Scripting for Data Conversion
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../how-to-guides/automating-wandb-backups/">
+<span class="md-ellipsis">
+    Automating Backups for Weights &amp; Biases
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../how-to-guides/jupyter-vscode-directory/">
+<span class="md-ellipsis">
+    Configuring Jupyter Notebook Start-up Directory in VS Code
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../how-to-guides/data_management_practices/">
+<span class="md-ellipsis">
+    Project Data Management Practices
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../how-to-guides/using-code-tags/">
+<span class="md-ellipsis">
+    Using Code Tags
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../how-to-guides/using-todo-tree-with-code-tags/">
+<span class="md-ellipsis">
+    Using TODO Tree with Code Tags
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../how-to-guides/lifecycle-git-github/">
+<span class="md-ellipsis">
+    AI/ML Project Lifecycle with Git and GitHub
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../how-to-guides/introduction-to-doctest/">
+<span class="md-ellipsis">
+    Introduction to Doctest
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../how-to-guides/python-oop-for-ml/">
+<span class="md-ellipsis">
+    Python OOP for Machine Learning Projects
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../how-to-guides/code-review-best-practices/">
+<span class="md-ellipsis">
+    Code Review Best Practices
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../how-to-guides/jira-story-best-practices/">
+<span class="md-ellipsis">
+    Best Practices for Creating JIRA Stories for ML/AI Projects
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../how-to-guides/notebook-to-production/">
+<span class="md-ellipsis">
+    Moving from Jupyter Notebooks to Production Python Code
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../how-to-guides/type-checking-mypy/">
+<span class="md-ellipsis">
+    Static Type Checking with Mypy
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../how-to-guides/pre-commit-hooks-guide/">
+<span class="md-ellipsis">
+    Using Pre-Commit Hooks to Enforce Coding Standards
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+<span class="md-ellipsis">
+    Explanation
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_5_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+            Explanation
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../explanation/toc-explanation/">
+<span class="md-ellipsis">
+    TOC
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../explanation/dvc-understanding-dvs/">
+<span class="md-ellipsis">
+    Understanding DVC
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../explanation/dvc-git-branches/">
+<span class="md-ellipsis">
+    Git Branches in DVC
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../explanation/github-naming-conventions/">
+<span class="md-ellipsis">
+    Effective GitHub Naming Conventions
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../explanation/ml-naming-conventions/">
+<span class="md-ellipsis">
+    Notebook and Script Naming Conventions in ML Projects
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../explanation/model-persistence-naming-conventions/">
+<span class="md-ellipsis">
+    Model Persistence File Naming Conventions
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../explanation/naming-conventions/">
+<span class="md-ellipsis">
+    Introduction to Naming Conventions for AI Project Assets
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+<span class="md-ellipsis">
+    API Reference
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_6_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
+            API Reference
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../api-reference/toc-api-reference/">
+<span class="md-ellipsis">
+    TOC
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="On this page" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#installing-cookiecutter">
+<span class="md-ellipsis">
+      Installing Cookiecutter
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#generate-a-new-project">
+<span class="md-ellipsis">
+      Generate a New Project
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#generate-a-project-from-a-downloaded-template">
+<span class="md-ellipsis">
+      Generate a Project from a Downloaded Template
+    </span>
+</a>
+<nav aria-label="Generate a Project from a Downloaded Template" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#listing-installed-cookiecutter-templates">
+<span class="md-ellipsis">
+      Listing Installed Cookiecutter Templates
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#locating-the-cookiecutters-directory-on-a-mac">
+<span class="md-ellipsis">
+      Locating the .cookiecutters Directory on a Mac
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#creating-a-new-project-with-a-template">
+<span class="md-ellipsis">
+      Creating a New Project with a Template
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#resulting-directory-structure">
+<span class="md-ellipsis">
+      Resulting Directory Structure
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">¶</a></h1>
+<h2 id="installing-cookiecutter">Installing Cookiecutter<a class="headerlink" href="#installing-cookiecutter" title="Permanent link">¶</a></h2>
+<p>Before starting, ensure Cookiecutter is installed on your system:</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>pip<span class="w"> </span>install<span class="w"> </span>cookiecutter
+</code></pre></div>
+<h2 id="generate-a-new-project">Generate a New Project<a class="headerlink" href="#generate-a-new-project" title="Permanent link">¶</a></h2>
+<p>Create a new project by running:</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a>cookiecutter<span class="w"> </span>gh:markeyser/cookiecutter-collabora.git
+</code></pre></div>
+<p>You will be prompted to enter details for your project, such as project
+name, OS type, author name, and more. For example:</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="o">[</span><span class="m">1</span>/17<span class="o">]</span><span class="w"> </span>project_name<span class="w"> </span><span class="o">(</span>Project<span class="w"> </span>Name<span class="o">)</span>:<span class="w"> </span>My<span class="w"> </span>AI<span class="w"> </span>Project
+<a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="o">[</span><span class="m">2</span>/17<span class="o">]</span><span class="w"> </span>project_slug<span class="w"> </span><span class="o">(</span>Project<span class="w"> </span>Slug<span class="o">)</span>:<span class="w"> </span>my-ai-project
+<a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="o">[</span><span class="m">3</span>/17<span class="o">]</span><span class="w"> </span>package_name<span class="w"> </span><span class="o">(</span>Package<span class="w"> </span>Name<span class="o">)</span>:<span class="w"> </span>myaiproject
+<a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="o">[</span><span class="m">4</span>/17<span class="o">]</span><span class="w"> </span>env_name<span class="w"> </span><span class="o">(</span>Environment<span class="w"> </span>Name<span class="o">)</span>:<span class="w"> </span>my-ai-project-env
+<a href="#__codelineno-2-5" id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="o">[</span><span class="m">5</span>/17<span class="o">]</span><span class="w"> </span>author<span class="w"> </span><span class="o">(</span>Author<span class="w"> </span>Name<span class="o">)</span>:<span class="w"> </span>Jane<span class="w"> </span>Doe
+<a href="#__codelineno-2-6" id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="o">[</span><span class="m">6</span>/17<span class="o">]</span><span class="w"> </span>email<span class="w"> </span><span class="o">(</span>Author<span class="w"> </span>Email<span class="o">)</span>:<span class="w"> </span>jane.doe@example.com
+<a href="#__codelineno-2-7" id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="o">[</span><span class="m">7</span>/17<span class="o">]</span><span class="w"> </span>description<span class="w"> </span><span class="o">(</span>Project<span class="w"> </span>Description<span class="o">)</span>:<span class="w"> </span>AI<span class="w"> </span>project<span class="w"> </span>development
+<a href="#__codelineno-2-8" id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="o">[</span><span class="m">8</span>/17<span class="o">]</span><span class="w"> </span>reviewer<span class="w"> </span><span class="o">(</span>Independent<span class="w"> </span>Reviewer<span class="w"> </span>GitHub<span class="o">)</span>:<span class="w"> </span>
+<a href="#__codelineno-2-9" id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="o">[</span><span class="m">9</span>/17<span class="o">]</span><span class="w"> </span>site_name<span class="w"> </span><span class="o">(</span>Documentation<span class="w"> </span>Site<span class="w"> </span>Name<span class="o">)</span>:<span class="w"> </span>My<span class="w"> </span>AI<span class="w"> </span>Project<span class="w"> </span>Docs
+<a href="#__codelineno-2-10" id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="o">[</span><span class="m">10</span>/17<span class="o">]</span><span class="w"> </span>os<span class="w"> </span><span class="o">(</span>Operating<span class="w"> </span>System<span class="o">)</span><span class="w"> </span><span class="o">[</span>Linux,<span class="w"> </span>Windows,<span class="w"> </span>Mac<span class="o">]</span>:<span class="w"> </span>Linux
+<a href="#__codelineno-2-11" id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="o">[</span><span class="m">11</span>/17<span class="o">]</span><span class="w"> </span>cloud<span class="w"> </span><span class="o">(</span>Cloud<span class="w"> </span>Provider<span class="o">)</span><span class="w"> </span><span class="o">[</span>Google<span class="w"> </span>Cloud,<span class="w"> </span>AWS,<span class="w"> </span>Azure<span class="o">]</span>:<span class="w"> </span>AWS
+<a href="#__codelineno-2-12" id="__codelineno-2-12" name="__codelineno-2-12"></a><span class="o">[</span><span class="m">12</span>/17<span class="o">]</span><span class="w"> </span>ml_type<span class="w"> </span><span class="o">(</span>ML<span class="w"> </span>Project<span class="w"> </span>Type<span class="o">)</span><span class="w"> </span><span class="o">[</span>Package,<span class="w"> </span>Supervised,<span class="w"> </span>Unsupervised,<span class="w"> </span>Generative<span class="w"> </span>AI<span class="o">]</span>:<span class="w"> </span>Generative<span class="w"> </span>AI
+<a href="#__codelineno-2-13" id="__codelineno-2-13" name="__codelineno-2-13"></a><span class="o">[</span><span class="m">13</span>/17<span class="o">]</span><span class="w"> </span>data_type<span class="w"> </span><span class="o">(</span>Data<span class="w"> </span>Type<span class="o">)</span><span class="w"> </span><span class="o">[</span>Structured,<span class="w"> </span>Unstructured,<span class="w"> </span>Semi-structured<span class="o">]</span>:<span class="w"> </span>Unstructured
+<a href="#__codelineno-2-14" id="__codelineno-2-14" name="__codelineno-2-14"></a><span class="o">[</span><span class="m">14</span>/17<span class="o">]</span><span class="w"> </span>packaging<span class="w"> </span><span class="o">(</span>Packaging<span class="w"> </span>Tool<span class="o">)</span><span class="w"> </span><span class="o">[</span>Poetry,<span class="w"> </span>Conda<span class="o">]</span>:<span class="w"> </span>Poetry
+<a href="#__codelineno-2-15" id="__codelineno-2-15" name="__codelineno-2-15"></a><span class="o">[</span><span class="m">15</span>/17<span class="o">]</span><span class="w"> </span>venv<span class="w"> </span><span class="o">(</span>Create<span class="w"> </span>Virtual<span class="w"> </span>Environment<span class="o">)</span><span class="w"> </span><span class="o">[</span>Yes,<span class="w"> </span>No<span class="o">]</span>:<span class="w"> </span>Yes
+<a href="#__codelineno-2-16" id="__codelineno-2-16" name="__codelineno-2-16"></a><span class="o">[</span><span class="m">16</span>/17<span class="o">]</span><span class="w"> </span>formatter<span class="w"> </span><span class="o">(</span>Code<span class="w"> </span>Formatter<span class="o">)</span><span class="w"> </span><span class="o">[</span>Black,<span class="w"> </span>Ruff<span class="o">]</span>:<span class="w"> </span>Black
+<a href="#__codelineno-2-17" id="__codelineno-2-17" name="__codelineno-2-17"></a><span class="o">[</span><span class="m">17</span>/17<span class="o">]</span><span class="w"> </span>docker<span class="w"> </span><span class="o">(</span>Use<span class="w"> </span>Docker<span class="w"> </span>with<span class="w"> </span>VS<span class="w"> </span>Code<span class="w"> </span>Dev<span class="w"> </span>Containers<span class="o">)</span><span class="w"> </span><span class="o">[</span>Yes,<span class="w"> </span>No<span class="o">]</span>:<span class="w"> </span>Yes
+<a href="#__codelineno-2-18" id="__codelineno-2-18" name="__codelineno-2-18"></a>INFO:root:Current<span class="w"> </span>working<span class="w"> </span>directory:<span class="w"> </span>/Users/username/Projects/my-ai-project
+</code></pre></div>
+<p>This process will generate a new project with your specific
+configurations.</p>
+<p>This will create a new project based on the <code>cookiecutter-collabora</code> template
+with your specified details.</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="nb">cd</span><span class="w"> </span>my-ai-project
+</code></pre></div>
+<p>Once you're in your project's directory, you can open the entire
+directory in Visual Studio Code:</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a>code<span class="w"> </span>.
+</code></pre></div>
+<h2 id="generate-a-project-from-a-downloaded-template">Generate a Project from a Downloaded Template<a class="headerlink" href="#generate-a-project-from-a-downloaded-template" title="Permanent link">¶</a></h2>
+<p>If you have already downloaded the Cookiecutter template:</p>
+<h3 id="listing-installed-cookiecutter-templates">Listing Installed Cookiecutter Templates<a class="headerlink" href="#listing-installed-cookiecutter-templates" title="Permanent link">¶</a></h3>
+<p>To see installed Cookiecutter templates, use:</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a>cookiecutter<span class="w"> </span>--list-installed
+<a href="#__codelineno-5-2" id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="m">1</span><span class="w"> </span>installed<span class="w"> </span>templates:
+<a href="#__codelineno-5-3" id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="w"> </span>*<span class="w"> </span>cookiecutter-collabora
+</code></pre></div>
+<h3 id="locating-the-cookiecutters-directory-on-a-mac">Locating the <code>.cookiecutters</code> Directory on a Mac<a class="headerlink" href="#locating-the-cookiecutters-directory-on-a-mac" title="Permanent link">¶</a></h3>
+<p>Your cloned cookiecutters are usually stored in <code>~/.cookiecutters/</code>.</p>
+<ol>
+<li>
+<p><strong>Open Terminal</strong>: Find Terminal in Applications &gt; Utilities, or use
+   Spotlight.</p>
+</li>
+<li>
+<p><strong>Navigate to Home Directory</strong>: Type <code>cd ~</code> and press Enter.</p>
+</li>
+<li>
+<p><strong>List Hidden Directories</strong>: Use <code>ls -a</code> to view all files and
+   directories, including hidden ones like <code>.cookiecutters</code>.</p>
+</li>
+<li>
+<p><strong>Access the <code>.cookiecutters</code> Directory</strong>: Enter <code>cd .cookiecutters</code>.</p>
+</li>
+<li>
+<p><strong>View Template Contents (Optional)</strong>: Use <code>ls</code> to view the templates
+   in the <code>.cookiecutters</code> directory.</p>
+</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a>/Users/username/.cookiecutters/cookiecutter-collabora
+</code></pre></div>
+<h3 id="creating-a-new-project-with-a-template">Creating a New Project with a Template<a class="headerlink" href="#creating-a-new-project-with-a-template" title="Permanent link">¶</a></h3>
+<p>To create a project using the <code>cookiecutter-collabora</code> template:</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-7-1" id="__codelineno-7-1" name="__codelineno-7-1"></a>cookiecutter<span class="w"> </span>/Users/username/.cookiecutters/cookiecutter-collabora
+</code></pre></div>
+<p>Enter the details for your project when prompted. For instance:</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-8-1" id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="o">[</span><span class="m">1</span>/17<span class="o">]</span><span class="w"> </span>project_name<span class="w"> </span><span class="o">(</span>Project<span class="w"> </span>Name<span class="o">)</span>:<span class="w"> </span>My<span class="w"> </span>AI<span class="w"> </span>Project
+<a href="#__codelineno-8-2" id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="o">[</span><span class="m">2</span>/17<span class="o">]</span><span class="w"> </span>project_slug<span class="w"> </span><span class="o">(</span>Project<span class="w"> </span>Slug<span class="o">)</span>:<span class="w"> </span>my-ai-project
+<a href="#__codelineno-8-3" id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="o">[</span><span class="m">3</span>/17<span class="o">]</span><span class="w"> </span>package_name<span class="w"> </span><span class="o">(</span>Package<span class="w"> </span>Name<span class="o">)</span>:<span class="w"> </span>myaiproject
+<a href="#__codelineno-8-4" id="__codelineno-8-4" name="__codelineno-8-4"></a><span class="o">[</span><span class="m">4</span>/17<span class="o">]</span><span class="w"> </span>env_name<span class="w"> </span><span class="o">(</span>Environment<span class="w"> </span>Name<span class="o">)</span>:<span class="w"> </span>my-ai-project-env
+<a href="#__codelineno-8-5" id="__codelineno-8-5" name="__codelineno-8-5"></a><span class="o">[</span><span class="m">5</span>/17<span class="o">]</span><span class="w"> </span>author<span class="w"> </span><span class="o">(</span>Author<span class="w"> </span>Name<span class="o">)</span>:<span class="w"> </span>Jane<span class="w"> </span>Doe
+<a href="#__codelineno-8-6" id="__codelineno-8-6" name="__codelineno-8-6"></a><span class="o">[</span><span class="m">6</span>/17<span class="o">]</span><span class="w"> </span>email<span class="w"> </span><span class="o">(</span>Author<span class="w"> </span>Email<span class="o">)</span>:<span class="w"> </span>jane.doe@example.com
+<a href="#__codelineno-8-7" id="__codelineno-8-7" name="__codelineno-8-7"></a><span class="o">[</span><span class="m">7</span>/17<span class="o">]</span><span class="w"> </span>description<span class="w"> </span><span class="o">(</span>Project<span class="w"> </span>Description<span class="o">)</span>:<span class="w"> </span>AI<span class="w"> </span>project<span class="w"> </span>development
+<a href="#__codelineno-8-8" id="__codelineno-8-8" name="__codelineno-8-8"></a><span class="o">[</span><span class="m">8</span>/17<span class="o">]</span><span class="w"> </span>reviewer<span class="w"> </span><span class="o">(</span>Independent<span class="w"> </span>Reviewer<span class="w"> </span>GitHub<span class="o">)</span>:<span class="w"> </span>
+<a href="#__codelineno-8-9" id="__codelineno-8-9" name="__codelineno-8-9"></a><span class="o">[</span><span class="m">9</span>/17<span class="o">]</span><span class="w"> </span>site_name<span class="w"> </span><span class="o">(</span>Documentation<span class="w"> </span>Site<span class="w"> </span>Name<span class="o">)</span>:<span class="w"> </span>My<span class="w"> </span>AI<span class="w"> </span>Project<span class="w"> </span>Docs
+<a href="#__codelineno-8-10" id="__codelineno-8-10" name="__codelineno-8-10"></a><span class="o">[</span><span class="m">10</span>/17<span class="o">]</span><span class="w"> </span>os<span class="w"> </span><span class="o">(</span>Operating<span class="w"> </span>System<span class="o">)</span><span class="w"> </span><span class="o">[</span>Linux,<span class="w"> </span>Windows,<span class="w"> </span>Mac<span class="o">]</span>:<span class="w"> </span>Linux
+<a href="#__codelineno-8-11" id="__codelineno-8-11" name="__codelineno-8-11"></a><span class="o">[</span><span class="m">11</span>/17<span class="o">]</span><span class="w"> </span>cloud<span class="w"> </span><span class="o">(</span>Cloud<span class="w"> </span>Provider<span class="o">)</span><span class="w"> </span><span class="o">[</span>Google<span class="w"> </span>Cloud,<span class="w"> </span>AWS,<span class="w"> </span>Azure<span class="o">]</span>:<span class="w"> </span>AWS
+<a href="#__codelineno-8-12" id="__codelineno-8-12" name="__codelineno-8-12"></a><span class="o">[</span><span class="m">12</span>/17<span class="o">]</span><span class="w"> </span>ml_type<span class="w"> </span><span class="o">(</span>ML<span class="w"> </span>Project<span class="w"> </span>Type<span class="o">)</span><span class="w"> </span><span class="o">[</span>Package,<span class="w"> </span>Supervised,<span class="w"> </span>Unsupervised,<span class="w"> </span>Generative<span class="w"> </span>AI<span class="o">]</span>:<span class="w"> </span>Generative<span class="w"> </span>AI
+<a href="#__codelineno-8-13" id="__codelineno-8-13" name="__codelineno-8-13"></a><span class="o">[</span><span class="m">13</span>/17<span class="o">]</span><span class="w"> </span>data_type<span class="w"> </span><span class="o">(</span>Data<span class="w"> </span>Type<span class="o">)</span><span class="w"> </span><span class="o">[</span>Structured,<span class="w"> </span>Unstructured,<span class="w"> </span>Semi-structured<span class="o">]</span>:<span class="w"> </span>Unstructured
+<a href="#__codelineno-8-14" id="__codelineno-8-14" name="__codelineno-8-14"></a><span class="o">[</span><span class="m">14</span>/17<span class="o">]</span><span class="w"> </span>packaging<span class="w"> </span><span class="o">(</span>Packaging<span class="w"> </span>Tool<span class="o">)</span><span class="w"> </span><span class="o">[</span>Poetry,<span class="w"> </span>Conda<span class="o">]</span>:<span class="w"> </span>Poetry
+<a href="#__codelineno-8-15" id="__codelineno-8-15" name="__codelineno-8-15"></a><span class="o">[</span><span class="m">15</span>/17<span class="o">]</span><span class="w"> </span>venv<span class="w"> </span><span class="o">(</span>Create<span class="w"> </span>Virtual<span class="w"> </span>Environment<span class="o">)</span><span class="w"> </span><span class="o">[</span>Yes,<span class="w"> </span>No<span class="o">]</span>:<span class="w"> </span>Yes
+<a href="#__codelineno-8-16" id="__codelineno-8-16" name="__codelineno-8-16"></a><span class="o">[</span><span class="m">16</span>/17<span class="o">]</span><span class="w"> </span>formatter<span class="w"> </span><span class="o">(</span>Code<span class="w"> </span>Formatter<span class="o">)</span><span class="w"> </span><span class="o">[</span>Black,<span class="w"> </span>Ruff<span class="o">]</span>:<span class="w"> </span>Black
+<a href="#__codelineno-8-17" id="__codelineno-8-17" name="__codelineno-8-17"></a><span class="o">[</span><span class="m">17</span>/17<span class="o">]</span><span class="w"> </span>docker<span class="w"> </span><span class="o">(</span>Use<span class="w"> </span>Docker<span class="w"> </span>with<span class="w"> </span>VS<span class="w"> </span>Code<span class="w"> </span>Dev<span class="w"> </span>Containers<span class="o">)</span><span class="w"> </span><span class="o">[</span>Yes,<span class="w"> </span>No<span class="o">]</span>:<span class="w"> </span>Yes
+<a href="#__codelineno-8-18" id="__codelineno-8-18" name="__codelineno-8-18"></a>INFO:root:Current<span class="w"> </span>working<span class="w"> </span>directory:<span class="w"> </span>/Users/username/Projects/my-ai-project
+</code></pre></div>
+<p>This will create a new project based on the <code>cookiecutter-collabora</code> template
+with your specified details.</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-9-1" id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="nb">cd</span><span class="w"> </span>my-ai-project
+</code></pre></div>
+<p>Once you're in your project's directory, you can open the entire
+directory in Visual Studio Code:</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-10-1" id="__codelineno-10-1" name="__codelineno-10-1"></a>code<span class="w"> </span>.
+</code></pre></div>
+<h2 id="resulting-directory-structure">Resulting Directory Structure<a class="headerlink" href="#resulting-directory-structure" title="Permanent link">¶</a></h2>
+<p>Below is an example directory structure for a Generative AI project that
+fine-tunes a Named Entity Recognition (NER) model using SpaCy
+Transformers to create a Python package:</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-11-1" id="__codelineno-11-1" name="__codelineno-11-1"></a>.
+<a href="#__codelineno-11-2" id="__codelineno-11-2" name="__codelineno-11-2"></a>├── .benchmarks                     # Benchmark files for performance testing.
+<a href="#__codelineno-11-3" id="__codelineno-11-3" name="__codelineno-11-3"></a>├── .devcontainer                   # Configuration files for development containers.
+<a href="#__codelineno-11-4" id="__codelineno-11-4" name="__codelineno-11-4"></a>├── .github                         # GitHub-specific files.
+<a href="#__codelineno-11-5" id="__codelineno-11-5" name="__codelineno-11-5"></a>│   ├── CONTRIBUTING.md             # Guidelines for contributing to the project.
+<a href="#__codelineno-11-6" id="__codelineno-11-6" name="__codelineno-11-6"></a>│   ├── PULL_REQUEST_TEMPLATE       # Template for pull request descriptions.
+<a href="#__codelineno-11-7" id="__codelineno-11-7" name="__codelineno-11-7"></a>│   └── workflows                   # GitHub Actions workflows.
+<a href="#__codelineno-11-8" id="__codelineno-11-8" name="__codelineno-11-8"></a>│       ├── black.yaml              # Workflow for Black formatter.
+<a href="#__codelineno-11-9" id="__codelineno-11-9" name="__codelineno-11-9"></a>│       └── ruff.yaml               # Workflow for Ruff linter.
+<a href="#__codelineno-11-10" id="__codelineno-11-10" name="__codelineno-11-10"></a>├── .vscode                         # VS Code configuration.
+<a href="#__codelineno-11-11" id="__codelineno-11-11" name="__codelineno-11-11"></a>│   ├── cspell.json                 # Spell checker configuration.
+<a href="#__codelineno-11-12" id="__codelineno-11-12" name="__codelineno-11-12"></a>│   ├── dictionaries                # Custom dictionaries for spell checker.
+<a href="#__codelineno-11-13" id="__codelineno-11-13" name="__codelineno-11-13"></a>│   │   └── data-science-en.txt
+<a href="#__codelineno-11-14" id="__codelineno-11-14" name="__codelineno-11-14"></a>│   ├── extensions.json             # Recommended VS Code extensions.
+<a href="#__codelineno-11-15" id="__codelineno-11-15" name="__codelineno-11-15"></a>│   └── settings.json               # VS Code workspace settings.
+<a href="#__codelineno-11-16" id="__codelineno-11-16" name="__codelineno-11-16"></a>├── .env                            # Environment variables configuration file.
+<a href="#__codelineno-11-17" id="__codelineno-11-17" name="__codelineno-11-17"></a>├── .gitignore                      # Specifies intentionally untracked files to ignore.
+<a href="#__codelineno-11-18" id="__codelineno-11-18" name="__codelineno-11-18"></a>├── .coverage                       # Code coverage report.
+<a href="#__codelineno-11-19" id="__codelineno-11-19" name="__codelineno-11-19"></a>├── CHANGELOG.md                    # Changelog for the project.
+<a href="#__codelineno-11-20" id="__codelineno-11-20" name="__codelineno-11-20"></a>├── Makefile                        # Makefile with commands like `make data` or `make train`.
+<a href="#__codelineno-11-21" id="__codelineno-11-21" name="__codelineno-11-21"></a>├── README.md                       # The top-level README for developers using this project.
+<a href="#__codelineno-11-22" id="__codelineno-11-22" name="__codelineno-11-22"></a>├── config                          # Configuration files for the project.
+<a href="#__codelineno-11-23" id="__codelineno-11-23" name="__codelineno-11-23"></a>│   ├── base_config.yaml
+<a href="#__codelineno-11-24" id="__codelineno-11-24" name="__codelineno-11-24"></a>├── dist                            # Distribution files
+<a href="#__codelineno-11-25" id="__codelineno-11-25" name="__codelineno-11-25"></a>├── docs                            # Project documentation.
+<a href="#__codelineno-11-26" id="__codelineno-11-26" name="__codelineno-11-26"></a>│   ├── api-reference.md
+<a href="#__codelineno-11-27" id="__codelineno-11-27" name="__codelineno-11-27"></a>│   ├── assets
+<a href="#__codelineno-11-28" id="__codelineno-11-28" name="__codelineno-11-28"></a>│   │   ├── css
+<a href="#__codelineno-11-29" id="__codelineno-11-29" name="__codelineno-11-29"></a>│   │   │   └── custom.css
+<a href="#__codelineno-11-30" id="__codelineno-11-30" name="__codelineno-11-30"></a>│   │   └── logo.png
+<a href="#__codelineno-11-31" id="__codelineno-11-31" name="__codelineno-11-31"></a>│   ├── explanation.md
+<a href="#__codelineno-11-32" id="__codelineno-11-32" name="__codelineno-11-32"></a>│   ├── how-to-guides.md
+<a href="#__codelineno-11-33" id="__codelineno-11-33" name="__codelineno-11-33"></a>│   ├── index.md
+<a href="#__codelineno-11-34" id="__codelineno-11-34" name="__codelineno-11-34"></a>│   └── tutorials.md
+<a href="#__codelineno-11-35" id="__codelineno-11-35" name="__codelineno-11-35"></a>├── mkdocs.yml                      # MkDocs configuration for generating documentation.
+<a href="#__codelineno-11-36" id="__codelineno-11-36" name="__codelineno-11-36"></a>├── notebooks                       # Jupyter notebooks for exploration and analysis.
+<a href="#__codelineno-11-37" id="__codelineno-11-37" name="__codelineno-11-37"></a>├── poetry.lock                     # Poetry lock file for dependencies.
+<a href="#__codelineno-11-38" id="__codelineno-11-38" name="__codelineno-11-38"></a>├── pyproject.toml                  # Project configuration file for dependencies and tools.
+<a href="#__codelineno-11-39" id="__codelineno-11-39" name="__codelineno-11-39"></a>├── src                             # Source code for the project.
+<a href="#__codelineno-11-40" id="__codelineno-11-40" name="__codelineno-11-40"></a>│   ├── package_name                # Main package directory.
+<a href="#__codelineno-11-41" id="__codelineno-11-41" name="__codelineno-11-41"></a>│   │   ├── __init__.py             # Initialization file for the package.
+<a href="#__codelineno-11-42" id="__codelineno-11-42" name="__codelineno-11-42"></a>│   │   ├── module1.py              # Generic module 1.
+<a href="#__codelineno-11-43" id="__codelineno-11-43" name="__codelineno-11-43"></a>│   │   ├── module2.py              # Generic module 2.
+<a href="#__codelineno-11-44" id="__codelineno-11-44" name="__codelineno-11-44"></a>│   │   ├── module3.py              # Generic module 3.
+<a href="#__codelineno-11-45" id="__codelineno-11-45" name="__codelineno-11-45"></a>│   │   ├── data                    # Data handling modules.
+<a href="#__codelineno-11-46" id="__codelineno-11-46" name="__codelineno-11-46"></a>│   │   │   ├── __init__.py
+<a href="#__codelineno-11-47" id="__codelineno-11-47" name="__codelineno-11-47"></a>│   │   │   ├── external
+<a href="#__codelineno-11-48" id="__codelineno-11-48" name="__codelineno-11-48"></a>│   │   │   ├── features
+<a href="#__codelineno-11-49" id="__codelineno-11-49" name="__codelineno-11-49"></a>│   │   │   ├── interim
+<a href="#__codelineno-11-50" id="__codelineno-11-50" name="__codelineno-11-50"></a>│   │   │   ├── processed
+<a href="#__codelineno-11-51" id="__codelineno-11-51" name="__codelineno-11-51"></a>│   │   │   └── raw
+<a href="#__codelineno-11-52" id="__codelineno-11-52" name="__codelineno-11-52"></a>│   │   ├── logs
+<a href="#__codelineno-11-53" id="__codelineno-11-53" name="__codelineno-11-53"></a>│   │   │   └── application.log
+<a href="#__codelineno-11-54" id="__codelineno-11-54" name="__codelineno-11-54"></a>│   │   └── models                  # Model files
+<a href="#__codelineno-11-55" id="__codelineno-11-55" name="__codelineno-11-55"></a>│   ├── common
+<a href="#__codelineno-11-56" id="__codelineno-11-56" name="__codelineno-11-56"></a>│   │   └── utils.py                # Common utility functions.
+<a href="#__codelineno-11-57" id="__codelineno-11-57" name="__codelineno-11-57"></a>└── tests                           # Unit and integration tests.
+<a href="#__codelineno-11-58" id="__codelineno-11-58" name="__codelineno-11-58"></a>    └── __pycache__
+<a href="#__codelineno-11-59" id="__codelineno-11-59" name="__codelineno-11-59"></a>        ├── test_module1.py
+<a href="#__codelineno-11-60" id="__codelineno-11-60" name="__codelineno-11-60"></a>        └── test_module2.py
+</code></pre></div>
+<aside class="md-source-file">
+<span class="md-source-file__fact">
+<span class="md-icon" title="Last update">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"></path></svg>
+</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 17, 2024</span>
+</span>
+</aside>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+<div class="md-copyright__highlight">
+      Copyright © 2022 - 2024 Marcos Aguilera-Keyser
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+<div class="md-social">
+<a class="md-social__link" href="https://github.com/markeyser/cookiecutter-collabora" rel="noopener" target="_blank" title="github.com">
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../..", "features": ["search", "navigation.tabs", "content.code.annotate", "content.code.copy"], "search": "../../assets/javascripts/workers/search.c011b7c0.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "development", "provider": "mike"}}</script>
+<script src="../../assets/javascripts/bundle.7389ff0e.min.js"></script>
+<script src="https://fonts.googleapis.com/icon?family=Material+Icons"></script>
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+<script src="../../javascripts/mathjax.js"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
+</html>
