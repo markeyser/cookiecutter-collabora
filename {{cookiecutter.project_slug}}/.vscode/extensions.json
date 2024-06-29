@@ -8,7 +8,7 @@
         // Rename multiple files at once
         "JannisX11.batch-rename-extension",
         // Support TOML file
-        "bungcip.better-toml",
+        "tamasfe.even-better-toml",
         // Run code snippet or code file for multiple languages
         "formulahendry.code-runner",
         // spell checker that works well with code and documents
