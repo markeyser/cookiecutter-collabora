@@ -1,102 +1,56 @@
-// Curated VSCode extension list to use with Python
-// -----------------------------------------------------
-// Version: 01
+// VS Code Open-Source Market Place: https://open-vsx.org/
+// The following extensions are not available at https://open-vsx.org/:
+// "cg-cnu.vscode-codetags"
+// "marchiore.csvtomarkdown"
+// "Perkovec.emoji"
+// "bierner.markdown-preview-github-styles"
+// "alexzshl.badges-snippets"
+//  "ms-vscode-remote.remote-ssh"
+// "mohsen1.prettify-json"
+// bierner.github-markdown-preview
+// "bierner.markdown-checkbox"
+// Requires access to Internet. Do not work on NYL AWS:
+// "danielsanmedium.dscodegpt"
 {
     "recommendations": [
-        // Generates python docstrings automatically
-        "njpwerner.autodocstring",
-        // Rename multiple files at once
-        "JannisX11.batch-rename-extension",
-        // Support TOML file
-        "bungcip.better-toml",
-        // Run code snippet or code file for multiple languages
-        "formulahendry.code-runner",
-        // spell checker that works well with code and documents
-        "streetsidesoftware.code-spell-checker",
-        // Add tags to your code with predefined templates
-        "cg-cnu.vscode-codetags",
-        // Convert CSV files to Markdown table
-        "marchiore.csvtomarkdown",
-        // Run, compare, visualize, and track machine learning
-        // experiments
-        "iterative.dvc",
-        // Insert emoji from the command palette
-        "Perkovec.emoji",
-        // Edit Excel spreadsheets and CSV files
-        "GrapeCity.gc-excelviewer",
-        // Create .gitignore templates
-        "codezombiech.gitignore",
-        // Include emojis in commit messages
-        "seatonjiang.gitmoji-vscode",
-        // Make indentation more readable
-        "oderwat.indent-rainbow",
-        // All you need to write Markdown
-        "yzhang.markdown-all-in-one",
-        // Adds checkbox support to the built-in markdown preview
-        "bierner.markdown-checkbox",
-        // Adds emoji syntax support to VS Code's built-in markdown
-        // preview
-        "bierner.markdown-emoji",
-        // Adds support to VS Code's built-in markdown preview
-        "bierner.markdown-image-size",
-        // Github's style Markdown preview
-        "bierner.markdown-preview-github-styles",
-        // Changes VS Code's built-in markdown preview to match GitHub
-        "bierner.github-markdown-preview",
-        // Adds Mermaid support to VS Code's builtin markdown preview
-        "bierner.markdown-mermaid",
-        // Transforms markdown tables to be more readable
-        "darkriszty.markdown-table-prettify",
-        // Markdown linting and style checking
-        "DavidAnson.vscode-markdownlint",
-        // Prettify JSON files
-        "mohsen1.prettify-json",
-        // Rich support for the Python language
-        "ms-python.python",
-        // View and manage Python environments & packages
-        "donjayamanne.python-environment-manager",
-        // Highlight CSV and TSV files, Run SQL-like queries
-        "mechatroner.rainbow-csv",
-        // Open any folder on a remote machine using SSH
-        "ms-vscode-remote.remote-ssh",
-        // ms-vscode-remote.remote-ssh-edit
-        "ms-vscode-remote.remote-ssh-edit",
-        // YAML Language Support
-        "redhat.vscode-yaml",
-        // Snippets to quickly insert shields.io badges into Markdown
-        "alexzshl.badges-snippets",
-        // Official Dracula Theme
-        "dracula-theme.theme-dracula",
-        // Pull Request and Issue Provider for GitHub
-        "github.vscode-pull-request-github",
-        // Syntax highlighting for log files
-        "ibm.output-colorizer",
-        // Correct Python indentation
-        "KevinRose.vsc-python-indent",
-        // Hard word wrapping for comments and other text at a given
-        // column
-        "stkb.rewrap",
-        // Import Sublime Text settings and keybindings into VS Code
+        "tamasfe.even-better-toml",
+        "amazonwebservices.aws-toolkit-vscode",
         "ms-vscode.sublime-keybindings",
-        // Highlight TODO, FIXME and other annotations within your code
+        "Gruntfuggly.todo-tree",
+        "njpwerner.autodocstring",
+        "JannisX11.batch-rename-extension",
+        "bungcip.better-toml",
+        "formulahendry.code-runner",
+        "streetsidesoftware.code-spell-checker",
+        "iterative.dvc",
+        "GrapeCity.gc-excelviewer",
+        "codezombiech.gitignore",
+        "seatonjiang.gitmoji-vscode",
+        "oderwat.indent-rainbow",
+        "yzhang.markdown-all-in-one",
+        "pkief.markdown-checkbox",
+        "bierner.markdown-emoji",
+        "bierner.markdown-image-size",
+        "bierner.markdown-mermaid",
+        "darkriszty.markdown-table-prettify",
+        "DavidAnson.vscode-markdownlint",
+        "ms-python.python",
+        "donjayamanne.python-environment-manager",
+        "mechatroner.rainbow-csv",
+        "redhat.vscode-yaml",
+        "dracula-theme.theme-dracula",
+        "github.vscode-pull-request-github",
+        "ibm.output-colorizer",
+        "KevinRose.vsc-python-indent",
+        "stkb.rewrap",
         "wayou.vscode-todo-highlight",
-        // Icons for Visual Studio Code
         "vscode-icons-team.vscode-icons",
-        // Display pdf file in VSCode
         "tomoki1207.pdf",
-        // View a Git Graph of your repository
         "mhutchie.git-graph",
-        // Unlocks untapped knowledge within each repository
-        "eamodio.gitlens",
-        // Ruff linter
         "charliermarsh.ruff",
-        // Black formatter
         "ms-python.black-formatter",
-        // Manage, view and authoring your workflows
         "github.vscode-github-actions",
-        // Azure Machine Learning
-        "ms-toolsai.vscode-ai",
-        // Code GPT - chat and AI agents
-        "danielsanmedium.dscodegpt"
+        "adam-bender.commit-message-editor",
+        "johnpapa.vscode-peacoc"
     ]
 }
