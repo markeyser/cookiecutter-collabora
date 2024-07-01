@@ -5,7 +5,8 @@
   <div style="padding: 20px;">
     <h1 style="font-size: 2em; color: #888888;">Fast ML/AI Project Scaffolding with Built-In Collaboration and Reproducibility</h1>
     <p style="font-size: 1em; color: #888888;">
-      Jumpstart your ML/AI projects in minutes with our cookiecutter template. As an ML expert, you can immediately begin developing code without spending hours creating custom scaffolding. Our template includes all the tools needed for seamless collaboration and reproducibility, so you can focus on innovation and results from the get-go.
+      Kickstart your AI projects in minutes with our Cookiecutter template. As an AI expert, you can dive straight into coding without the hassle of setting up scaffolding or configuring tools.
+      Everything has been pre-configured to follow best practices and standards in AI software development, with tools included to ensure adherence, guaranteeing high-quality, collaborative, and reproducible development from the start.
     </p>
     <div>
       <a href="getting-started/usage/" style="background-color: #d73a49; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px;">Get started</a>
