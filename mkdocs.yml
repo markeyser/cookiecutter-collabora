@@ -9,6 +9,7 @@ theme:
   logo: assets/logo.svg
   icon:
     repo: simple/github
+    annotation: material/plus-circle
   features:
     - search
     - navigation.tabs
