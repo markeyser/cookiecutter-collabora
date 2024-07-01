@@ -106,12 +106,12 @@ nav:
   - Home: index.md
   - Getting starded:
       - Usage: getting-started/usage.md
-      - Standards Cheat Sheet: getting-started/standards_summary.md
-      - Cofiguration Guidelines: getting-started/config_files_guidelines.md
-      - Resource Compilation: getting-started/resource_compilation.md
-      - Purpose and Vision: getting-started/purpose_and_vision.md
+      #- Standards Cheat Sheet: getting-started/standards_summary.md
+      #- Cofiguration Guidelines: getting-started/config_files_guidelines.md
       - Software Development Lifecycle: getting-started/software-development-lifecycle.md
       - Software Development Best Practices: getting-started/software-development-best-practices.md
+      - Resource Compilation: getting-started/resource_compilation.md
+      - Purpose and Vision: getting-started/purpose_and_vision.md
   - Tutorials:
       - TOC: tutorials/toc-tutorials.md
       - Black Formatter: tutorials/black-formatter.md
@@ -170,6 +170,6 @@ nav:
       - Notebook and Script Naming Conventions in ML Projects: explanation/ml-naming-conventions.md
       - Model Persistence File Naming Conventions: explanation/model-persistence-naming-conventions.md
       - Introduction to Naming Conventions for AI Project Assets: explanation/naming-conventions.md
-  - API Reference:
-      - TOC: api-reference/toc-api-reference.md
+  # - API Reference:
+  #     - TOC: api-reference/toc-api-reference.md
 
