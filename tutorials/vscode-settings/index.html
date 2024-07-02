@@ -5,12 +5,12 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="https://markeyser.github.io/cookiecutter-collabora/how-to-guides/data-conversion-from-xlsx-to-csv/" rel="canonical"/>
-<link href="../branching-strategy/" rel="prev"/>
-<link href="../automating-wandb-backups/" rel="next"/>
+<link href="https://markeyser.github.io/cookiecutter-collabora/tutorials/vscode-settings/" rel="canonical"/>
+<link href="../markdown-ml-model-documentation/" rel="prev"/>
+<link href="../../how-to-guides/toc-how-to-guides/" rel="next"/>
 <link href="../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.5.3, mkdocs-material-9.5.4" name="generator"/>
-<title>Python Scripting for Data Conversion - Cookiecutter Collabora</title>
+<title>Sharing VS Code Settings for Python Projects - Cookiecutter Collabora</title>
 <link href="../../assets/stylesheets/main.50c56a3b.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
 <style>:root{--md-annotation-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 13h-4v4h-2v-4H7v-2h4V7h2v4h4m-5-9A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2Z"/></svg>');}</style>
@@ -36,7 +36,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#data-conversion-workflow-for-nlp-projects">
+<a class="md-skip" href="#sharing-vs-code-settings-for-python-projects">
           Skip to content
         </a>
 </div>
@@ -60,7 +60,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Python Scripting for Data Conversion
+              Sharing VS Code Settings for Python Projects
             
           </span>
 </div>
@@ -145,16 +145,16 @@
 
         </a>
 </li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../../tutorials/toc-tutorials/">
+<li class="md-tabs__item md-tabs__item--active">
+<a class="md-tabs__link" href="../toc-tutorials/">
           
   
   Tutorials
 
         </a>
 </li>
-<li class="md-tabs__item md-tabs__item--active">
-<a class="md-tabs__link" href="../toc-how-to-guides/">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../how-to-guides/toc-how-to-guides/">
           
   
   How-To Guides
@@ -254,279 +254,122 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--section md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
 <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
 <span class="md-ellipsis">
     Tutorials
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="false" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<nav aria-expanded="true" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_3">
 <span class="md-nav__icon md-icon"></span>
             Tutorials
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../tutorials/toc-tutorials/">
+<a class="md-nav__link" href="../toc-tutorials/">
 <span class="md-ellipsis">
     TOC
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../tutorials/black-formatter/">
+<a class="md-nav__link" href="../black-formatter/">
 <span class="md-ellipsis">
     Black Formatter
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../tutorials/ruff-linter/">
+<a class="md-nav__link" href="../ruff-linter/">
 <span class="md-ellipsis">
     Ruff Linter
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../tutorials/poetry/">
+<a class="md-nav__link" href="../poetry/">
 <span class="md-ellipsis">
     Poetry Package Management
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../tutorials/mkdocs-docs/">
+<a class="md-nav__link" href="../mkdocs-docs/">
 <span class="md-ellipsis">
     MkDocs Documentation
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../tutorials/hydra-config/">
+<a class="md-nav__link" href="../hydra-config/">
 <span class="md-ellipsis">
     Hydra Configuration
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../tutorials/gitignore/">
+<a class="md-nav__link" href="../gitignore/">
 <span class="md-ellipsis">
     Gitignore File Creation
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../tutorials/data/">
+<a class="md-nav__link" href="../data/">
 <span class="md-ellipsis">
     Managing Data
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../tutorials/data-version-control/">
+<a class="md-nav__link" href="../data-version-control/">
 <span class="md-ellipsis">
     Data Version Control
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../tutorials/dvc-local/">
+<a class="md-nav__link" href="../dvc-local/">
 <span class="md-ellipsis">
     DVC Local Workflow
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../tutorials/dvc-cloud/">
+<a class="md-nav__link" href="../dvc-cloud/">
 <span class="md-ellipsis">
     DVC Cloud Storage
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../tutorials/dvc-collaboration/">
+<a class="md-nav__link" href="../dvc-collaboration/">
 <span class="md-ellipsis">
     DVC for Collaboration
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../tutorials/naming-conventions/">
+<a class="md-nav__link" href="../naming-conventions/">
 <span class="md-ellipsis">
     Naming Conventions Tutorial
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../tutorials/windows-os-setup/">
+<a class="md-nav__link" href="../windows-os-setup/">
 <span class="md-ellipsis">
     Windows OS Setup
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../tutorials/markdown-ml-model-documentation/">
+<a class="md-nav__link" href="../markdown-ml-model-documentation/">
 <span class="md-ellipsis">
     Markdown Documentation for ML Models
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../tutorials/vscode-settings/">
-<span class="md-ellipsis">
-    Sharing VS Code Settings for Python Projects
-  </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
-<span class="md-ellipsis">
-    How-To Guides
-  </span>
-<span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-expanded="true" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_4">
-<span class="md-nav__icon md-icon"></span>
-            How-To Guides
-          </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../toc-how-to-guides/">
-<span class="md-ellipsis">
-    TOC
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../project-scaffolding-standards/">
-<span class="md-ellipsis">
-    Project Scaffolding Standards
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../file-naming-conventions/">
-<span class="md-ellipsis">
-    File Naming Conventions
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../column-naming-conventions/">
-<span class="md-ellipsis">
-    Column Naming Conventions
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../python-docstrings-conventions/">
-<span class="md-ellipsis">
-    Python Docstrings Conventions
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../python-line-length-standards.md">
-<span class="md-ellipsis">
-    Line Length Standards in Python Projects
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../dvc-set-up/">
-<span class="md-ellipsis">
-    DVC Setup
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../dvc-communication/">
-<span class="md-ellipsis">
-    DVC Communication
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../dvc-vscode-extension/">
-<span class="md-ellipsis">
-    DVC VS Code Extension
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../offline-cookiecutter-setup/">
-<span class="md-ellipsis">
-    Offline Cookiecutter Setup
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../git-branch-naming-standards/">
-<span class="md-ellipsis">
-    Git Branch Naming Standards
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../commit-message-standards-ml/">
-<span class="md-ellipsis">
-    Commit Message Standards in ML Projects
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../pushing-to-github-best-practices.md">
-<span class="md-ellipsis">
-    Best Practices for Pushing to GitHub
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../ml-data-folder-naming/">
-<span class="md-ellipsis">
-    ML Data Folder Naming Guide
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../machine-learning-metadata-automation/">
-<span class="md-ellipsis">
-    Automating Metadata Creation
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../github-actions-naming-convention/">
-<span class="md-ellipsis">
-    Enforcing Naming Conventions with GitHub Actions
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../wandb-experiment-tracking-rag/">
-<span class="md-ellipsis">
-    ML Experiments Life-Cycle with Weights &amp; Biases
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../templates/">
-<span class="md-ellipsis">
-    Templates for Issues/Stories and PRs
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../branching-strategy/">
-<span class="md-ellipsis">
-    Branching Strategies for ML Projects
   </span>
 </a>
 </li>
@@ -534,13 +377,13 @@
 <input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
 <label class="md-nav__link md-nav__link--active" for="__toc">
 <span class="md-ellipsis">
-    Python Scripting for Data Conversion
+    Sharing VS Code Settings for Python Projects
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
 <a class="md-nav__link md-nav__link--active" href="./">
 <span class="md-ellipsis">
-    Python Scripting for Data Conversion
+    Sharing VS Code Settings for Python Projects
   </span>
 </a>
 <nav aria-label="On this page" class="md-nav md-nav--secondary">
@@ -550,39 +393,46 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#overview">
+<a class="md-nav__link" href="#introduction">
 <span class="md-ellipsis">
-      Overview
+      Introduction
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#procedure">
+<a class="md-nav__link" href="#how-we-share-vs-code-settings-across-python-projects">
 <span class="md-ellipsis">
-      Procedure
+      How We Share VS Code Settings Across Python Projects
     </span>
 </a>
-<nav aria-label="Procedure" class="md-nav">
+<nav aria-label="How We Share VS Code Settings Across Python Projects" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#context">
+<a class="md-nav__link" href="#workspace-settings">
 <span class="md-ellipsis">
-      Context
+      Workspace Settings
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#conversion-from-xlsx-to-csv">
+<a class="md-nav__link" href="#remote-development-with-vs-code">
 <span class="md-ellipsis">
-      Conversion from XLSX to CSV
+      Remote Development with VS Code
     </span>
 </a>
-<nav aria-label="Conversion from XLSX to CSV" class="md-nav">
+<nav aria-label="Remote Development with VS Code" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#function-convert_xlsx_to_csv">
+<a class="md-nav__link" href="#example-of-vscodesettingsjson">
 <span class="md-ellipsis">
-      Function: convert_xlsx_to_csv
+      Example of .vscode/settings.json
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#location-and-management">
+<span class="md-ellipsis">
+      Location and Management
     </span>
 </a>
 </li>
@@ -590,17 +440,24 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#conversion-from-csv-to-xlsx">
+<a class="md-nav__link" href="#user-settings">
 <span class="md-ellipsis">
-      Conversion from CSV to XLSX
+      User Settings
     </span>
 </a>
-<nav aria-label="Conversion from CSV to XLSX" class="md-nav">
+<nav aria-label="User Settings" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#function-convert_csv_to_xlsx">
+<a class="md-nav__link" href="#how-to-access-user-settings">
 <span class="md-ellipsis">
-      Function: convert_csv_to_xlsx
+      How to Access User Settings
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#example-of-customizing-user-settings">
+<span class="md-ellipsis">
+      Example of Customizing User Settings
     </span>
 </a>
 </li>
@@ -611,16 +468,30 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#requirements">
+<a class="md-nav__link" href="#settings-precedence">
 <span class="md-ellipsis">
-      Requirements
+      Settings Precedence
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#installation">
+<a class="md-nav__link" href="#practical-example">
 <span class="md-ellipsis">
-      Installation
+      Practical Example
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#implications-for-our-project">
+<span class="md-ellipsis">
+      Implications for Our Project
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#steps-to-follow">
+<span class="md-ellipsis">
+      Steps to Follow
     </span>
 </a>
 </li>
@@ -631,95 +502,259 @@
     </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#references">
+<span class="md-ellipsis">
+      References
+    </span>
+</a>
+</li>
 </ul>
 </nav>
 </li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+<span class="md-ellipsis">
+    How-To Guides
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+            How-To Guides
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../automating-wandb-backups/">
+<a class="md-nav__link" href="../../how-to-guides/toc-how-to-guides/">
+<span class="md-ellipsis">
+    TOC
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../how-to-guides/project-scaffolding-standards/">
+<span class="md-ellipsis">
+    Project Scaffolding Standards
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../how-to-guides/file-naming-conventions/">
+<span class="md-ellipsis">
+    File Naming Conventions
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../how-to-guides/column-naming-conventions/">
+<span class="md-ellipsis">
+    Column Naming Conventions
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../how-to-guides/python-docstrings-conventions/">
+<span class="md-ellipsis">
+    Python Docstrings Conventions
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../how-to-guides/python-line-length-standards.md">
+<span class="md-ellipsis">
+    Line Length Standards in Python Projects
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../how-to-guides/dvc-set-up/">
+<span class="md-ellipsis">
+    DVC Setup
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../how-to-guides/dvc-communication/">
+<span class="md-ellipsis">
+    DVC Communication
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../how-to-guides/dvc-vscode-extension/">
+<span class="md-ellipsis">
+    DVC VS Code Extension
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../how-to-guides/offline-cookiecutter-setup/">
+<span class="md-ellipsis">
+    Offline Cookiecutter Setup
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../how-to-guides/git-branch-naming-standards/">
+<span class="md-ellipsis">
+    Git Branch Naming Standards
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../how-to-guides/commit-message-standards-ml/">
+<span class="md-ellipsis">
+    Commit Message Standards in ML Projects
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../how-to-guides/pushing-to-github-best-practices.md">
+<span class="md-ellipsis">
+    Best Practices for Pushing to GitHub
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../how-to-guides/ml-data-folder-naming/">
+<span class="md-ellipsis">
+    ML Data Folder Naming Guide
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../how-to-guides/machine-learning-metadata-automation/">
+<span class="md-ellipsis">
+    Automating Metadata Creation
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../how-to-guides/github-actions-naming-convention/">
+<span class="md-ellipsis">
+    Enforcing Naming Conventions with GitHub Actions
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../how-to-guides/wandb-experiment-tracking-rag/">
+<span class="md-ellipsis">
+    ML Experiments Life-Cycle with Weights &amp; Biases
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../how-to-guides/templates/">
+<span class="md-ellipsis">
+    Templates for Issues/Stories and PRs
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../how-to-guides/branching-strategy/">
+<span class="md-ellipsis">
+    Branching Strategies for ML Projects
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../how-to-guides/data-conversion-from-xlsx-to-csv/">
+<span class="md-ellipsis">
+    Python Scripting for Data Conversion
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../how-to-guides/automating-wandb-backups/">
 <span class="md-ellipsis">
     Automating Backups for Weights &amp; Biases
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../jupyter-vscode-directory/">
+<a class="md-nav__link" href="../../how-to-guides/jupyter-vscode-directory/">
 <span class="md-ellipsis">
     Configuring Jupyter Notebook Start-up Directory in VS Code
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../data_management_practices/">
+<a class="md-nav__link" href="../../how-to-guides/data_management_practices/">
 <span class="md-ellipsis">
     Project Data Management Practices
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../using-code-tags/">
+<a class="md-nav__link" href="../../how-to-guides/using-code-tags/">
 <span class="md-ellipsis">
     Using Code Tags
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../using-todo-tree-with-code-tags/">
+<a class="md-nav__link" href="../../how-to-guides/using-todo-tree-with-code-tags/">
 <span class="md-ellipsis">
     Using TODO Tree with Code Tags
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../lifecycle-git-github/">
+<a class="md-nav__link" href="../../how-to-guides/lifecycle-git-github/">
 <span class="md-ellipsis">
     AI/ML Project Lifecycle with Git and GitHub
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../introduction-to-doctest/">
+<a class="md-nav__link" href="../../how-to-guides/introduction-to-doctest/">
 <span class="md-ellipsis">
     Introduction to Doctest
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../python-oop-for-ml/">
+<a class="md-nav__link" href="../../how-to-guides/python-oop-for-ml/">
 <span class="md-ellipsis">
     Python OOP for Machine Learning Projects
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../code-review-best-practices/">
+<a class="md-nav__link" href="../../how-to-guides/code-review-best-practices/">
 <span class="md-ellipsis">
     Code Review Best Practices
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../jira-story-best-practices/">
+<a class="md-nav__link" href="../../how-to-guides/jira-story-best-practices/">
 <span class="md-ellipsis">
     Best Practices for Creating JIRA Stories for ML/AI Projects
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../notebook-to-production/">
+<a class="md-nav__link" href="../../how-to-guides/notebook-to-production/">
 <span class="md-ellipsis">
     Moving from Jupyter Notebooks to Production Python Code
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../type-checking-mypy/">
+<a class="md-nav__link" href="../../how-to-guides/type-checking-mypy/">
 <span class="md-ellipsis">
     Static Type Checking with Mypy
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../pre-commit-hooks-guide/">
+<a class="md-nav__link" href="../../how-to-guides/pre-commit-hooks-guide/">
 <span class="md-ellipsis">
     Using Pre-Commit Hooks to Enforce Coding Standards
   </span>
@@ -809,39 +844,46 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#overview">
+<a class="md-nav__link" href="#introduction">
 <span class="md-ellipsis">
-      Overview
+      Introduction
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#procedure">
+<a class="md-nav__link" href="#how-we-share-vs-code-settings-across-python-projects">
 <span class="md-ellipsis">
-      Procedure
+      How We Share VS Code Settings Across Python Projects
     </span>
 </a>
-<nav aria-label="Procedure" class="md-nav">
+<nav aria-label="How We Share VS Code Settings Across Python Projects" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#context">
+<a class="md-nav__link" href="#workspace-settings">
 <span class="md-ellipsis">
-      Context
+      Workspace Settings
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#conversion-from-xlsx-to-csv">
+<a class="md-nav__link" href="#remote-development-with-vs-code">
 <span class="md-ellipsis">
-      Conversion from XLSX to CSV
+      Remote Development with VS Code
     </span>
 </a>
-<nav aria-label="Conversion from XLSX to CSV" class="md-nav">
+<nav aria-label="Remote Development with VS Code" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#function-convert_xlsx_to_csv">
+<a class="md-nav__link" href="#example-of-vscodesettingsjson">
 <span class="md-ellipsis">
-      Function: convert_xlsx_to_csv
+      Example of .vscode/settings.json
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#location-and-management">
+<span class="md-ellipsis">
+      Location and Management
     </span>
 </a>
 </li>
@@ -849,17 +891,24 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#conversion-from-csv-to-xlsx">
+<a class="md-nav__link" href="#user-settings">
 <span class="md-ellipsis">
-      Conversion from CSV to XLSX
+      User Settings
     </span>
 </a>
-<nav aria-label="Conversion from CSV to XLSX" class="md-nav">
+<nav aria-label="User Settings" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#function-convert_csv_to_xlsx">
+<a class="md-nav__link" href="#how-to-access-user-settings">
 <span class="md-ellipsis">
-      Function: convert_csv_to_xlsx
+      How to Access User Settings
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#example-of-customizing-user-settings">
+<span class="md-ellipsis">
+      Example of Customizing User Settings
     </span>
 </a>
 </li>
@@ -870,16 +919,30 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#requirements">
+<a class="md-nav__link" href="#settings-precedence">
 <span class="md-ellipsis">
-      Requirements
+      Settings Precedence
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#installation">
+<a class="md-nav__link" href="#practical-example">
 <span class="md-ellipsis">
-      Installation
+      Practical Example
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#implications-for-our-project">
+<span class="md-ellipsis">
+      Implications for Our Project
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#steps-to-follow">
+<span class="md-ellipsis">
+      Steps to Follow
     </span>
 </a>
 </li>
@@ -890,6 +953,13 @@
     </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#references">
+<span class="md-ellipsis">
+      References
+    </span>
+</a>
+</li>
 </ul>
 </nav>
 </div>
@@ -897,151 +967,180 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="data-conversion-workflow-for-nlp-projects">Data Conversion Workflow for NLP Projects<a class="headerlink" href="#data-conversion-workflow-for-nlp-projects" title="Permanent link">¶</a></h1>
-<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">¶</a></h2>
-<p>This document outlines the process and provides the necessary Python
-functions for converting data files between XLSX and CSV formats within
-a Natural Language Processing (NLP) project. The workflow is designed to
-facilitate seamless data sharing and manipulation among non-technical
-stakeholders and machine learning (ML) experts, ensuring uniform
-encoding and formatting across different operating systems.</p>
-<h2 id="procedure">Procedure<a class="headerlink" href="#procedure" title="Permanent link">¶</a></h2>
-<h3 id="context">Context<a class="headerlink" href="#context" title="Permanent link">¶</a></h3>
-<p>Non-technical stakeholders often manually create and share data in XLSX
-format using Windows OS, without employing programming tools like
-Python. ML experts, on the other hand, utilize containers running Linux
-to manipulate this data with Python and incorporate it into the
-project's codebase. To ensure compatibility and uniformity in data
-handling, two Python functions have been developed for converting data
-files between XLSX and CSV formats.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This Guide works even if the developer uses Mac or Windows
-without Docker.</p>
+<h1 id="sharing-vs-code-settings-for-python-projects">Sharing VS Code Settings for Python Projects<a class="headerlink" href="#sharing-vs-code-settings-for-python-projects" title="Permanent link">¶</a></h1>
+<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">¶</a></h2>
+<p>Setting norms for developer tasks on a team project is crucial for
+maintaining code consistency and readability. Visual Studio Code (VS
+Code) allows us to manage distinct user and workspace settings. This
+flexibility ensures that while each developer can maintain their custom
+settings, the team adheres to the shared settings that ensure
+consistency across the project, especially when working with Python.</p>
+<h2 id="how-we-share-vs-code-settings-across-python-projects">How We Share VS Code Settings Across Python Projects<a class="headerlink" href="#how-we-share-vs-code-settings-across-python-projects" title="Permanent link">¶</a></h2>
+<h3 id="workspace-settings">Workspace Settings<a class="headerlink" href="#workspace-settings" title="Permanent link">¶</a></h3>
+<h3 id="remote-development-with-vs-code">Remote Development with VS Code<a class="headerlink" href="#remote-development-with-vs-code" title="Permanent link">¶</a></h3>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>When developing on remote servers, such as AWS, you will encounter a "Remote" configuration in your VS Code settings, similar to the workspace settings you use locally. This "Remote" configuration serves the same purpose, allowing you to enforce consistent coding standards and best practices across your team. Despite the different context, the functionality remains identical, ensuring a seamless and efficient development experience regardless of your code's location.</p>
 </div>
-<h3 id="conversion-from-xlsx-to-csv">Conversion from XLSX to CSV<a class="headerlink" href="#conversion-from-xlsx-to-csv" title="Permanent link">¶</a></h3>
-<p>When ML experts receive an XLSX file from business stakeholders, the
-following Python function should be executed in a Linux-based container
-to convert the file into a CSV format. This conversion ensures the data
-is encoded in UTF-8 and retains consistent formatting for use in the
-project's NLP codebase.</p>
-<h4 id="function-convert_xlsx_to_csv">Function: <code>convert_xlsx_to_csv</code><a class="headerlink" href="#function-convert_xlsx_to_csv" title="Permanent link">¶</a></h4>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="k">def</span> <span class="nf">convert_xlsx_to_csv</span><span class="p">(</span><span class="n">xlsx_path</span><span class="p">,</span> <span class="n">csv_path</span><span class="p">,</span> <span class="n">sheet_name</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
-<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">    </span><span class="sd">"""</span>
-<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="sd">    Converts an XLSX file to a CSV file with UTF-8 encoding.</span>
-<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a>
-<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="sd">    This function takes the path to an XLSX file and a destination path</span>
-<a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="sd">    for the CSV file as arguments. It optionally accepts the name or</span>
-<a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="sd">    index of the sheet to convert. It uses `pandas` to read the</span>
-<a href="#__codelineno-0-8" id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="sd">    specified sheet, ensuring all data is treated as strings</span>
-<a href="#__codelineno-0-9" id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="sd">    (`dtype=str`) to preserve formatting. It then fills any missing</span>
-<a href="#__codelineno-0-10" id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="sd">    values with empty strings to avoid the string 'nan' appearing in</span>
-<a href="#__codelineno-0-11" id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="sd">    your CSV. Finally, it writes the data to a CSV file, specifying</span>
-<a href="#__codelineno-0-12" id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="sd">    UTF-8 encoding and using `\n` as the line terminator to ensure</span>
-<a href="#__codelineno-0-13" id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="sd">    compatibility across different operating systems.</span>
-<a href="#__codelineno-0-14" id="__codelineno-0-14" name="__codelineno-0-14"></a>
-<a href="#__codelineno-0-15" id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="sd">    Parameters: - xlsx_path: Path to the source XLSX file.  - csv_path:</span>
-<a href="#__codelineno-0-16" id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="sd">    Path where the output CSV file should be saved.  - sheet_name: Name</span>
-<a href="#__codelineno-0-17" id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="sd">    or index of the sheet in the XLSX file to convert.</span>
-<a href="#__codelineno-0-18" id="__codelineno-0-18" name="__codelineno-0-18"></a><span class="sd">                  Defaults to the first sheet.</span>
-<a href="#__codelineno-0-19" id="__codelineno-0-19" name="__codelineno-0-19"></a><span class="sd">    """</span>
-<a href="#__codelineno-0-20" id="__codelineno-0-20" name="__codelineno-0-20"></a>    <span class="k">try</span><span class="p">:</span>
-<a href="#__codelineno-0-21" id="__codelineno-0-21" name="__codelineno-0-21"></a>        <span class="c1"># Load the specified sheet from the XLSX file</span>
-<a href="#__codelineno-0-22" id="__codelineno-0-22" name="__codelineno-0-22"></a>        <span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">xlsx_path</span><span class="p">,</span> <span class="n">sheet_name</span><span class="o">=</span><span class="n">sheet_name</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">str</span><span class="p">)</span>
-<a href="#__codelineno-0-23" id="__codelineno-0-23" name="__codelineno-0-23"></a>
-<a href="#__codelineno-0-24" id="__codelineno-0-24" name="__codelineno-0-24"></a>        <span class="c1"># Convert any NaN values to empty strings to avoid 'nan' in the CSV</span>
-<a href="#__codelineno-0-25" id="__codelineno-0-25" name="__codelineno-0-25"></a>        <span class="n">data</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="s2">""</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<a href="#__codelineno-0-26" id="__codelineno-0-26" name="__codelineno-0-26"></a>
-<a href="#__codelineno-0-27" id="__codelineno-0-27" name="__codelineno-0-27"></a>        <span class="c1"># Save the DataFrame to a CSV file with UTF-8 encoding</span>
-<a href="#__codelineno-0-28" id="__codelineno-0-28" name="__codelineno-0-28"></a>        <span class="n">data</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span>
-<a href="#__codelineno-0-29" id="__codelineno-0-29" name="__codelineno-0-29"></a>            <span class="n">csv_path</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">"utf-8"</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">lineterminator</span><span class="o">=</span><span class="s2">"</span><span class="se">\n</span><span class="s2">"</span>
-<a href="#__codelineno-0-30" id="__codelineno-0-30" name="__codelineno-0-30"></a>        <span class="p">)</span>
-<a href="#__codelineno-0-31" id="__codelineno-0-31" name="__codelineno-0-31"></a>
-<a href="#__codelineno-0-32" id="__codelineno-0-32" name="__codelineno-0-32"></a>        <span class="nb">print</span><span class="p">(</span>
-<a href="#__codelineno-0-33" id="__codelineno-0-33" name="__codelineno-0-33"></a>            <span class="sa">f</span><span class="s2">"Successfully converted </span><span class="si">{</span><span class="n">xlsx_path</span><span class="si">}</span><span class="s2"> to </span><span class="si">{</span><span class="n">csv_path</span><span class="si">}</span><span class="s2"> in UTF-8 encoding."</span>
-<a href="#__codelineno-0-34" id="__codelineno-0-34" name="__codelineno-0-34"></a>        <span class="p">)</span>
-<a href="#__codelineno-0-35" id="__codelineno-0-35" name="__codelineno-0-35"></a>    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
-<a href="#__codelineno-0-36" id="__codelineno-0-36" name="__codelineno-0-36"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Error converting </span><span class="si">{</span><span class="n">xlsx_path</span><span class="si">}</span><span class="s2"> to CSV: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<p>Workspace settings in VS Code are stored in a <code>.vscode/settings.json</code>
+file within the project directory. These settings are shared among all
+team members and include configurations essential for maintaining coding
+standards and best practices in Python. Workspace settings override user
+settings.</p>
+<h4 id="example-of-vscodesettingsjson">Example of <code>.vscode/settings.json</code><a class="headerlink" href="#example-of-vscodesettingsjson" title="Permanent link">¶</a></h4>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="p">{</span>
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">  </span><span class="nt">"python.pythonPath"</span><span class="p">:</span><span class="w"> </span><span class="s2">"venv/bin/python"</span><span class="p">,</span>
+<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">  </span><span class="nt">"python.linting.enabled"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">  </span><span class="nt">"python.linting.pylintEnabled"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">  </span><span class="nt">"python.linting.flake8Enabled"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">  </span><span class="nt">"python.formatting.provider"</span><span class="p">:</span><span class="w"> </span><span class="s2">"black"</span><span class="p">,</span>
+<a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">  </span><span class="nt">"editor.formatOnSave"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<a href="#__codelineno-0-8" id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">  </span><span class="nt">"files.exclude"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a href="#__codelineno-0-9" id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="w">    </span><span class="nt">"**/__pycache__"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<a href="#__codelineno-0-10" id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="w">    </span><span class="nt">"**/*.pyc"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+<a href="#__codelineno-0-11" id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="w">  </span><span class="p">}</span>
+<a href="#__codelineno-0-12" id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="p">}</span>
 </code></pre></div>
-<p><strong>Parameters:</strong></p>
+<p>In the example above, the settings ensure:
+- The correct Python interpreter is used.
+- Linting is enabled using Pylint and Flake8.
+- Code is formatted using Black on save.
+- Certain files and directories (like <code>__pycache__</code> and <code>.pyc</code> files)
+  are excluded from the file explorer.</p>
+<h4 id="location-and-management">Location and Management<a class="headerlink" href="#location-and-management" title="Permanent link">¶</a></h4>
 <ul>
-<li><code>xlsx_path</code>: The file path to the source XLSX file.</li>
-<li><code>csv_path</code>: The file path where the output CSV file will be saved.</li>
-<li><code>sheet_name</code>: (Optional) The name or index of the sheet in the XLSX
-  file to be converted.</li>
+<li>The workspace settings file is located under the <code>.vscode</code> folder in
+  your project’s root directory.</li>
+<li>You can edit the settings directly via the Preferences: Open Workspace
+  Settings (JSON) command in the Command Palette.</li>
 </ul>
-<p><strong>Usage:</strong></p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="n">convert_xlsx_to_csv</span><span class="p">(</span><span class="s1">'path/to/input.xlsx'</span><span class="p">,</span> <span class="s1">'path/to/output.csv'</span><span class="p">)</span>
+<h3 id="user-settings">User Settings<a class="headerlink" href="#user-settings" title="Permanent link">¶</a></h3>
+<p>User settings in VS Code are specific to an individual developer's
+environment and are stored outside the project directory. These settings
+allow each developer to customize their workspace without affecting the
+shared project settings.</p>
+<h4 id="how-to-access-user-settings">How to Access User Settings<a class="headerlink" href="#how-to-access-user-settings" title="Permanent link">¶</a></h4>
+<ol>
+<li>Open VS Code.</li>
+<li>Navigate to <code>File</code> &gt; <code>Preferences</code> &gt; <code>Settings</code> (or use the shortcut
+   <code>Ctrl + ,</code> on Windows/Linux or <code>Cmd + ,</code> on Mac).</li>
+<li>In the Settings tab, ensure you are in the <code>User</code> settings mode.</li>
+</ol>
+<h4 id="example-of-customizing-user-settings">Example of Customizing User Settings<a class="headerlink" href="#example-of-customizing-user-settings" title="Permanent link">¶</a></h4>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="p">{</span>
+<a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="w">  </span><span class="nt">"workbench.colorTheme"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Visual Studio Dark"</span><span class="p">,</span>
+<a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="w">  </span><span class="nt">"editor.fontSize"</span><span class="p">:</span><span class="w"> </span><span class="mi">14</span><span class="p">,</span>
+<a href="#__codelineno-1-4" id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="w">  </span><span class="nt">"editor.fontFamily"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fira Code, monospace"</span>
+<a href="#__codelineno-1-5" id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="p">}</span>
 </code></pre></div>
-<h3 id="conversion-from-csv-to-xlsx">Conversion from CSV to XLSX<a class="headerlink" href="#conversion-from-csv-to-xlsx" title="Permanent link">¶</a></h3>
-<p>For sharing processed data back with non-technical stakeholders, ML
-experts can convert the CSV files (previously created or manipulated
-within the Linux containers) back into XLSX format. This conversion
-facilitates easy access and interpretation of the results by business
-users.</p>
-<h4 id="function-convert_csv_to_xlsx">Function: <code>convert_csv_to_xlsx</code><a class="headerlink" href="#function-convert_csv_to_xlsx" title="Permanent link">¶</a></h4>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a>
-<a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a>
-<a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="k">def</span> <span class="nf">convert_csv_to_xlsx</span><span class="p">(</span><span class="n">csv_path</span><span class="p">,</span> <span class="n">xlsx_path</span><span class="p">):</span>
-<a href="#__codelineno-2-5" id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="w">    </span><span class="sd">"""</span>
-<a href="#__codelineno-2-6" id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="sd">    Converts a CSV file to an XLSX file.</span>
-<a href="#__codelineno-2-7" id="__codelineno-2-7" name="__codelineno-2-7"></a>
-<a href="#__codelineno-2-8" id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="sd">    This function takes the path to a CSV file and the desired output</span>
-<a href="#__codelineno-2-9" id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="sd">    path for the XLSX file. It uses `pandas` to read the CSV file,</span>
-<a href="#__codelineno-2-10" id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="sd">    assuming it is encoded in UTF-8 (as ensured by the CSV creation</span>
-<a href="#__codelineno-2-11" id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="sd">    function). Then, it writes the data to an XLSX file using the</span>
-<a href="#__codelineno-2-12" id="__codelineno-2-12" name="__codelineno-2-12"></a><span class="sd">    `openpyxl` engine, which is required for writing to XLSX format and</span>
-<a href="#__codelineno-2-13" id="__codelineno-2-13" name="__codelineno-2-13"></a><span class="sd">    needs to be installed alongside `pandas` if it's not already present</span>
-<a href="#__codelineno-2-14" id="__codelineno-2-14" name="__codelineno-2-14"></a><span class="sd">    in your environment.</span>
-<a href="#__codelineno-2-15" id="__codelineno-2-15" name="__codelineno-2-15"></a>
-<a href="#__codelineno-2-16" id="__codelineno-2-16" name="__codelineno-2-16"></a><span class="sd">    Parameters:</span>
-<a href="#__codelineno-2-17" id="__codelineno-2-17" name="__codelineno-2-17"></a><span class="sd">    - csv_path: Path to the source CSV file.</span>
-<a href="#__codelineno-2-18" id="__codelineno-2-18" name="__codelineno-2-18"></a><span class="sd">    - xlsx_path: Path where the output XLSX file should be saved.</span>
-<a href="#__codelineno-2-19" id="__codelineno-2-19" name="__codelineno-2-19"></a><span class="sd">    """</span>
-<a href="#__codelineno-2-20" id="__codelineno-2-20" name="__codelineno-2-20"></a>    <span class="k">try</span><span class="p">:</span>
-<a href="#__codelineno-2-21" id="__codelineno-2-21" name="__codelineno-2-21"></a>        <span class="c1"># Load the CSV file, assuming UTF-8 encoding</span>
-<a href="#__codelineno-2-22" id="__codelineno-2-22" name="__codelineno-2-22"></a>        <span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">csv_path</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">"utf-8"</span><span class="p">)</span>
-<a href="#__codelineno-2-23" id="__codelineno-2-23" name="__codelineno-2-23"></a>
-<a href="#__codelineno-2-24" id="__codelineno-2-24" name="__codelineno-2-24"></a>        <span class="c1"># Save the DataFrame to an XLSX file</span>
-<a href="#__codelineno-2-25" id="__codelineno-2-25" name="__codelineno-2-25"></a>        <span class="k">with</span> <span class="n">pd</span><span class="o">.</span><span class="n">ExcelWriter</span><span class="p">(</span><span class="n">xlsx_path</span><span class="p">,</span> <span class="n">engine</span><span class="o">=</span><span class="s2">"openpyxl"</span><span class="p">)</span> <span class="k">as</span> <span class="n">writer</span><span class="p">:</span>
-<a href="#__codelineno-2-26" id="__codelineno-2-26" name="__codelineno-2-26"></a>            <span class="n">data</span><span class="o">.</span><span class="n">to_excel</span><span class="p">(</span><span class="n">writer</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-<a href="#__codelineno-2-27" id="__codelineno-2-27" name="__codelineno-2-27"></a>
-<a href="#__codelineno-2-28" id="__codelineno-2-28" name="__codelineno-2-28"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Successfully converted </span><span class="si">{</span><span class="n">csv_path</span><span class="si">}</span><span class="s2"> to </span><span class="si">{</span><span class="n">xlsx_path</span><span class="si">}</span><span class="s2">."</span><span class="p">)</span>
-<a href="#__codelineno-2-29" id="__codelineno-2-29" name="__codelineno-2-29"></a>    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
-<a href="#__codelineno-2-30" id="__codelineno-2-30" name="__codelineno-2-30"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Error converting </span><span class="si">{</span><span class="n">csv_path</span><span class="si">}</span><span class="s2"> to XLSX: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
-</code></pre></div>
-<p><strong>Parameters:</strong></p>
+<p>In the example above, the settings customize:</p>
 <ul>
-<li><code>csv_path</code>: The file path to the source CSV file.</li>
-<li><code>xlsx_path</code>: The file path where the output XLSX file will be saved.</li>
+<li>The color theme of the editor.</li>
+<li>The font size and font family for the editor.</li>
 </ul>
-<p><strong>Usage:</strong></p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="n">convert_csv_to_xlsx</span><span class="p">(</span><span class="s1">'path/to/input.csv'</span><span class="p">,</span> <span class="s1">'path/to/output.xlsx'</span><span class="p">)</span>
-</code></pre></div>
-<h2 id="requirements">Requirements<a class="headerlink" href="#requirements" title="Permanent link">¶</a></h2>
+<h2 id="settings-precedence">Settings Precedence<a class="headerlink" href="#settings-precedence" title="Permanent link">¶</a></h2>
+<p>VS Code allows configurations to be overridden at multiple levels. The
+settings precedence determines which configuration will ultimately apply
+when there are conflicts. Here is the order of precedence:</p>
+<ol>
+<li><strong>Default settings</strong>: The default, unconfigured setting values.</li>
+<li><strong>User settings</strong>: Apply globally to all VS Code instances.</li>
+<li><strong>Remote settings</strong>: Apply to a remote machine opened by a user.</li>
+<li><strong>Workspace settings</strong>: Apply to the open folder or workspace.</li>
+<li><strong>Workspace Folder settings</strong>: Apply to a specific folder of a
+   multi-root workspace.</li>
+<li><strong>Language-specific default settings</strong>: Default values specific to a
+   language, contributed by extensions.</li>
+<li><strong>Language-specific user settings</strong>: User settings, but specific to a
+   language.</li>
+<li><strong>Language-specific remote settings</strong>: Remote settings, but specific
+   to a language.</li>
+<li><strong>Language-specific workspace settings</strong>: Workspace settings, but
+   specific to a language.</li>
+<li><strong>Language-specific workspace folder settings</strong>: Workspace folder
+    settings, but specific to a language.</li>
+<li><strong>Policy settings</strong>: Set by the system administrator and always
+    override other setting values.</li>
+</ol>
+<p>From this list, it is clear that <strong>workspace settings</strong> override <strong>user
+settings</strong>.</p>
+<h2 id="practical-example">Practical Example<a class="headerlink" href="#practical-example" title="Permanent link">¶</a></h2>
+<p>If a setting is configured at multiple levels, the most specific scope
+will apply. For instance:</p>
 <ul>
-<li>Python 3.x</li>
-<li>Pandas library</li>
-<li>Openpyxl library (for XLSX file writing)</li>
+<li><strong>User settings</strong> (<code>settings.json</code> in the user profile):</li>
 </ul>
-<h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">¶</a></h2>
-<p>Ensure the required libraries are installed in your Linux container:</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a>pip<span class="w"> </span>install<span class="w"> </span>pandas<span class="w"> </span>openpyxl
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="p">{</span>
+<a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="w">  </span><span class="nt">"editor.formatOnSave"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="w">  </span><span class="nt">"editor.fontSize"</span><span class="p">:</span><span class="w"> </span><span class="mi">14</span>
+<a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="p">}</span>
 </code></pre></div>
+<ul>
+<li><strong>Workspace settings</strong> (<code>.vscode/settings.json</code> in the project):</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="p">{</span>
+<a href="#__codelineno-3-2" id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="w">  </span><span class="nt">"editor.formatOnSave"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<a href="#__codelineno-3-3" id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="w">  </span><span class="nt">"editor.fontSize"</span><span class="p">:</span><span class="w"> </span><span class="mi">16</span>
+<a href="#__codelineno-3-4" id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="p">}</span>
+</code></pre></div>
+<p>In this scenario:</p>
+<ul>
+<li>The <strong>editor.formatOnSave</strong> setting will be <code>true</code> for the workspace,
+  overriding the user's global setting of <code>false</code>.</li>
+<li>The <strong>editor.fontSize</strong> will be <code>16</code> for the workspace, overriding the
+  user's global setting of <code>14</code>.</li>
+</ul>
+<h2 id="implications-for-our-project">Implications for Our Project<a class="headerlink" href="#implications-for-our-project" title="Permanent link">¶</a></h2>
+<p>Given the settings precedence, our project uses the
+<code>.vscode/settings.json</code> file to enforce consistent coding standards.
+This file falls under <strong>workspace settings</strong>, which override <strong>user
+settings</strong>.</p>
+<h2 id="steps-to-follow">Steps to Follow<a class="headerlink" href="#steps-to-follow" title="Permanent link">¶</a></h2>
+<ol>
+<li><strong>Clone the Repository:</strong> Ensure you clone the repository that
+   includes the <code>.vscode/settings.json</code> file.</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/your-repo.git
+</code></pre></div>
+<ol>
+<li>
+<p><strong>Do Not Ignore <code>.vscode/settings.json</code>:</strong> Make sure the
+   <code>.vscode/settings.json</code> file is not included in the <code>.gitignore</code> and
+   is shared across the team via GitHub.</p>
+</li>
+<li>
+<p><strong>Customize User Settings:</strong> Personalize your VS Code experience by
+   adding your custom settings to the user settings file without
+   altering the workspace settings.</p>
+</li>
+</ol>
 <h2 id="conclusion">Conclusion<a class="headerlink" href="#conclusion" title="Permanent link">¶</a></h2>
-<p>This procedure guide facilitates a smooth data exchange and processing
-workflow for NLP projects, bridging the gap between non-technical
-stakeholders and ML experts. By following the documented steps and
-utilizing the provided Python functions, teams can ensure data
-consistency, compatibility, and efficiency throughout the project
-lifecycle.</p>
+<p>Using distinct user and workspace settings in VS Code allows us to
+balance personal preferences with team-wide coding standards. By
+following this approach, we maintain code consistency and readability
+across the project while providing the flexibility for individual
+customization.</p>
+<p>This approach helps maintain code consistency and readability across the
+team, ensuring that everyone adheres to the same standards while
+allowing for personal customization where it doesn't impact the
+project's coding practices.</p>
+<h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">¶</a></h2>
+<ul>
+<li><a href="https://dev.to/musixmatch/sharing-vs-code-extensions-across-teams-22ij">Sharing VS Code Extensions Across
+  Teams</a></li>
+<li><a href="https://spin.atomicobject.com/vscode-workspace-settings/">VS Code Workspace Settings
+  Guide</a></li>
+<li><a href="https://code.visualstudio.com/docs/getstarted/settings">VS Code Documentation:
+  Settings</a></li>
+<li><a href="https://www.youtube.com/watch?v=D-Ipyy12Qaw">Video: Sharing VS Code
+  Settings</a></li>
+</ul>
 <aside class="md-source-file">
 <span class="md-source-file__fact">
 <span class="md-icon" title="Last update">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 9, 2024</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 2, 2024</span>
 </span>
 </aside>
 </article>

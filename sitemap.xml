@@ -346,6 +346,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://markeyser.github.io/cookiecutter-collabora/tutorials/vscode-settings/</loc>
+         <lastmod>2024-07-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://markeyser.github.io/cookiecutter-collabora/tutorials/windows-os-setup/</loc>
          <lastmod>2024-07-02</lastmod>
          <changefreq>daily</changefreq>
