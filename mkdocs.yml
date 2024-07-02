@@ -128,6 +128,7 @@ nav:
       - Naming Conventions Tutorial: tutorials/naming-conventions.md
       - Windows OS Setup: tutorials/windows-os-setup.md
       - Markdown Documentation for ML Models: tutorials/markdown-ml-model-documentation.md
+      - Sharing VS Code Settings for Python Projects: tutorials/vscode-settings.md
   - How-To Guides:
       - TOC: how-to-guides/toc-how-to-guides.md
       - Project Scaffolding Standards: how-to-guides/project-scaffolding-standards.md
