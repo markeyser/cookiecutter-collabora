@@ -28,5 +28,6 @@
 - [Using Code Tags](./using-code-tags.md)
 - [Using TODO Tree with Code Tags](./using-todo-tree-with-code-tags.md)
 - [Python OOP for Machine Learning Projects](./python-oop-for-ml.md)
+- [Sharing VS Code Settings for Python Projects](./vscode-settings.md)
 
 Dive into each tutorial for detailed, step-by-step guidance that you can follow along with ease. Start exploring the topics that interest you the most.
