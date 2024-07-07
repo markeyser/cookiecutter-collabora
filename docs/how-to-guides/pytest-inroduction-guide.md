@@ -9,6 +9,11 @@ popular testing framework for Python. We will cover the basics of unit
 testing, why it is essential, and how to set up and write unit tests
 using Pytest with the configuration provided in our project.
 
+!!! info "Detailed Pytest Configuration Guide"
+    For a detailed explanation and setup for Pytest configuration within
+    VS Code and Poetry, see the [Pytest Configuration
+    Guide](../explanation/pytest-configuration-guide.md).
+
 ## What is Unit Testing?
 
 ### Definition
