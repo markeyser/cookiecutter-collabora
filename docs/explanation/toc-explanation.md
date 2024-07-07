@@ -16,6 +16,7 @@
 - [GitHub Naming Conventions: A Key to Organized Collaboration](./github-naming-conventions.md)
 - [Model Persistence Naming Conventions: Ensuring Consistency and Efficiency](./model-persistence-naming-conventions.md)
 - [Introduction to Naming Conventions for AI Project Assets](./naming-conventions.md)
+- [Pytest Configuration Guide](./pytest-configuration-guide.md)
 
 !!! check "Enhancing Conceptual Clarity"
     Arranged in an intuitive sequence, the Explanation section encourages exploratory learning and incremental acquisition of knowledge. Each entry is designed to augment the reader's understanding, providing comprehensive explanations and tangible examples that connect theory with practice.

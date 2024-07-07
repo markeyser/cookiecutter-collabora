@@ -20,9 +20,13 @@ mkdocs-mermaid2-plugin = "1.1.1"
 mkdocstrings-python = "1.8.0"
 pre-commit = "3.3.3"
 pymarkdownlnt = "0.9.13.4"
-pytest = "7.4.0"
+pytest = "8.2.2"
 pytest-benchmark = "4.0.0"
-pytest-xdist = "3.3.1"
+pytest-xdist = "3.6.1"
+pytest-cov = "5.0.0"
+pytest-mock = "^3.14.0"
+pytest-sugar = "1.0.0"
+pytest-timeout = "2.3.1"
 rope = "1.9.0"
 ruff = "0.4.9"
 dvc = "3.40.1"
@@ -131,3 +135,14 @@ select = [
 
 [tool.pymarkdown]
 disable-rules = ["MD046"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-v --cov=src/fpservicesagemodel --cov-report=term-missing -n 2 --timeout=5"
+python_files = "test_*.py"
+python_classes = "Test*"
+python_functions = "test_*"
+log_cli = true
+log_cli_level = "INFO"
+log_format = "%(asctime)s %(levelname)s %(message)s"
+log_date_format = "%Y-%m-%d %H:%M:%S"
