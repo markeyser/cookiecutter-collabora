@@ -770,6 +770,24 @@
 </nav>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#pre-commit-configuration">
+<span class="md-ellipsis">
+      Pre-commit Configuration
+    </span>
+</a>
+<nav aria-label="Pre-commit Configuration" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#explanation_2">
+<span class="md-ellipsis">
+      Explanation
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#conclusion">
 <span class="md-ellipsis">
       Conclusion
@@ -854,6 +872,24 @@
 </nav>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#pre-commit-configuration">
+<span class="md-ellipsis">
+      Pre-commit Configuration
+    </span>
+</a>
+<nav aria-label="Pre-commit Configuration" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#explanation_2">
+<span class="md-ellipsis">
+      Explanation
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#conclusion">
 <span class="md-ellipsis">
       Conclusion
@@ -882,14 +918,8 @@ code quality, and enhance developer productivity by leveraging various
 Pytest plugins and settings.</p>
 <div class="admonition tip">
 <p class="admonition-title">Default Pytest Configuration</p>
-<p>The Pytest configuration in this guide is the default configuration
-included in the “Cookiecutter Collabora” project. This setup is
-designed to provide a robust starting point for running tests
-efficiently and effectively.</p>
-<p>We invite you to adapt and customize
-this configuration to suit your specific project needs and
-preferences. Modify the settings as needed to optimize your testing
-workflow and achieve the best results.</p>
+<p>The Pytest configuration in this guide is the default configuration included in the “Cookiecutter Collabora” project. This setup is designed to provide a robust starting point for running tests efficiently and effectively.</p>
+<p>We invite you to adapt and customize this configuration to suit your specific project needs and preferences. Modify the settings as needed to optimize your testing workflow and achieve the best results.</p>
 </div>
 <h2 id="configuration-overview">Configuration Overview<a class="headerlink" href="#configuration-overview" title="Permanent link">¶</a></h2>
 <p>The Pytest configuration is defined in two key files:</p>
@@ -984,44 +1014,46 @@ the configuration used:</p>
 <li><code>log_format = "%(asctime)s %(levelname)s %(message)s"</code>: Specifies the log message format.</li>
 <li><code>log_date_format = "%Y-%m-%d %H:%M:%S"</code>: Specifies the date format for log messages.</li>
 </ul>
+<h2 id="pre-commit-configuration">Pre-commit Configuration<a class="headerlink" href="#pre-commit-configuration" title="Permanent link">¶</a></h2>
+<p>To ensure that tests are run automatically before committing or pushing code, you can use the pre-commit framework with the following configuration in your <code>.pre-commit-config.yaml</code> file:</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="nt">repos</span><span class="p">:</span>
+<a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">repo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">local</span>
+<a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="w">    </span><span class="nt">hooks</span><span class="p">:</span>
+<a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pytest</span>
+<a href="#__codelineno-2-5" id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="w">        </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Run PyTest</span>
+<a href="#__codelineno-2-6" id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="w">        </span><span class="nt">entry</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pytest</span>
+<a href="#__codelineno-2-7" id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="w">        </span><span class="nt">language</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">system</span>
+<a href="#__codelineno-2-8" id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="w">        </span><span class="nt">types</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">python</span><span class="p p-Indicator">]</span>
+<a href="#__codelineno-2-9" id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="w">        </span><span class="nt">stages</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">pre-commit</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">pre-push</span><span class="p p-Indicator">]</span>
+<a href="#__codelineno-2-10" id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="w">        </span><span class="nt">args</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">"tests/"</span><span class="p p-Indicator">]</span>
+</code></pre></div>
+<h3 id="explanation_2">Explanation<a class="headerlink" href="#explanation_2" title="Permanent link">¶</a></h3>
+<ul>
+<li><strong><code>repo: local</code></strong>: Specifies that this hook is defined locally rather than fetched from a remote repository.</li>
+<li><strong><code>id: pytest</code></strong>: The unique identifier for this hook.</li>
+<li><strong><code>name: Run PyTest</code></strong>: A descriptive name for the hook.</li>
+<li><strong><code>entry: pytest</code></strong>: The command to run Pytest.</li>
+<li><strong><code>language: system</code></strong>: Indicates that the hook uses system-installed tools.</li>
+<li><strong><code>types: [python]</code></strong>: Specifies that this hook should run for Python files.</li>
+<li><strong><code>stages: [pre-commit, pre-push]</code></strong>: Defines when the hook should run, here both before commit and before push.</li>
+<li><strong><code>args: ["tests/"]</code></strong>: Arguments passed to Pytest, specifying the directory to run tests from.</li>
+</ul>
 <details class="question">
 <summary>Why are Pytest extensions under [tool.poetry.dev-dependencies]?</summary>
-<p>Pytest is primarily used during the development phase of a project
-and is not intended for use in production or runtime environments.
-Unit tests, written using Pytest, help developers catch bugs early,
-facilitate code refactoring, and ensure code quality before
-deployment.</p>
-<p>Running Pytest in production can introduce unnecessary
-performance overhead and potential security risks. Instead, unit
-tests are typically executed in CI/CD pipelines to verify code
-functionality and reliability before the code is deployed to
-production. This approach ensures that production environments
-remain optimized for performance and stability.</p>
+<p>Pytest is primarily used during the development phase of a project and is not intended for use in production or runtime environments. Unit tests, written using Pytest, help developers catch bugs early, facilitate code refactoring, and ensure code quality before deployment.</p>
+<p>Running Pytest in production can introduce unnecessary performance overhead and potential security risks. Instead, unit tests are typically executed in CI/CD pipelines to verify code functionality and reliability before the code is deployed to production. This approach ensures that production environments remain optimized for performance and stability.</p>
+<p>This is why we include Pytest and its extensions under <code>[tool.poetry.dev-dependencies]</code> in our configuration, ensuring they are available during development but not included in the production environment.</p>
 </details>
 <details class="question">
 <summary>Why Configure Both .vscode/settings.json and pyproject.toml?</summary>
-<p>Configuring both <code>.vscode/settings.json</code> and <code>pyproject.toml</code>
-ensures consistent and integrated testing in your development
-environment.</p>
+<p>Configuring both <code>.vscode/settings.json</code> and <code>pyproject.toml</code> ensures consistent and integrated testing in your development environment.</p>
 <ul>
-<li>
-<p><strong>.vscode/settings.json</strong>: Customizes Pytest behavior
-in Visual Studio Code. With the Python extension installed, the
-beaker iconappears in the Activity bar, opening the Test
-Explorer for running and debugging tests directly in VS Code.</p>
-</li>
-<li>
-<p><strong>pyproject.toml</strong>: Manages project dependencies and centralizes
-Pytest configurations for use across different environments.</p>
-</li>
+<li><strong>.vscode/settings.json</strong>: Customizes Pytest behavior in Visual Studio Code. With the Python extension installed, the beaker icon (flask) appears in the Activity bar, opening the Test Explorer for running and debugging tests directly in VS Code.</li>
+<li><strong>pyproject.toml</strong>: Manages project dependencies and centralizes Pytest configurations for use across different environments.</li>
 </ul>
 </details>
 <h2 id="conclusion">Conclusion<a class="headerlink" href="#conclusion" title="Permanent link">¶</a></h2>
-<p>This configuration ensures that tests are run efficiently and
-effectively within VS Code, leveraging parallel execution, code
-coverage, and timeouts to maintain code quality and performance. By
-following these settings, developers can ensure a consistent and
-productive testing environment.</p>
+<p>This configuration ensures that tests are run efficiently and effectively within VS Code, leveraging parallel execution, code coverage, and timeouts to maintain code quality and performance. By following these settings, developers can ensure a consistent and productive testing environment.</p>
 <h2 id="see-also">See also<a class="headerlink" href="#see-also" title="Permanent link">¶</a></h2>
 <ul>
 <li><a href="https://code.visualstudio.com/docs/editor/testing">Visual Studio Code Testing Documentation</a></li>
