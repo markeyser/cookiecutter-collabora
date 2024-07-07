@@ -51,6 +51,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://markeyser.github.io/cookiecutter-collabora/explanation/pytest-configuration-guide/</loc>
+         <lastmod>2024-07-07</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://markeyser.github.io/cookiecutter-collabora/explanation/toc-explanation/</loc>
          <lastmod>2024-07-07</lastmod>
          <changefreq>daily</changefreq>
@@ -217,6 +222,11 @@
     </url>
     <url>
          <loc>https://markeyser.github.io/cookiecutter-collabora/how-to-guides/pushing-to-githug-best-practices/</loc>
+         <lastmod>2024-07-07</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://markeyser.github.io/cookiecutter-collabora/how-to-guides/pytest-inroduction-guide/</loc>
          <lastmod>2024-07-07</lastmod>
          <changefreq>daily</changefreq>
     </url>

@@ -5,12 +5,11 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="https://markeyser.github.io/cookiecutter-collabora/how-to-guides/automating-wandb-backups/" rel="canonical"/>
-<link href="../data-conversion-from-xlsx-to-csv/" rel="prev"/>
-<link href="../jupyter-vscode-directory/" rel="next"/>
+<link href="https://markeyser.github.io/cookiecutter-collabora/explanation/pytest-configuration-guide/" rel="canonical"/>
+<link href="../naming-conventions/" rel="prev"/>
 <link href="../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.5.3, mkdocs-material-9.5.4" name="generator"/>
-<title>Automating Backups for Weights &amp; Biases - Cookiecutter Collabora</title>
+<title>Pytest Configuration Guide - Cookiecutter Collabora</title>
 <link href="../../assets/stylesheets/main.50c56a3b.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
 <style>:root{--md-annotation-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 13h-4v4h-2v-4H7v-2h4V7h2v4h4m-5-9A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2Z"/></svg>');}</style>
@@ -36,7 +35,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#how-to-back-up-weights-biases-experiments-locally-on-macbook-pro">
+<a class="md-skip" href="#pytest-configuration-in-vs-code">
           Skip to content
         </a>
 </div>
@@ -60,7 +59,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Automating Backups for Weights &amp; Biases
+              Pytest Configuration Guide
             
           </span>
 </div>
@@ -153,16 +152,16 @@
 
         </a>
 </li>
-<li class="md-tabs__item md-tabs__item--active">
-<a class="md-tabs__link" href="../toc-how-to-guides/">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../how-to-guides/toc-how-to-guides/">
           
   
   How-To Guides
 
         </a>
 </li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../../explanation/toc-explanation/">
+<li class="md-tabs__item md-tabs__item--active">
+<a class="md-tabs__link" href="../toc-explanation/">
           
   
   Explanation
@@ -383,157 +382,321 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
 <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
 <span class="md-ellipsis">
     How-To Guides
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="true" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
+<nav aria-expanded="false" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_4">
 <span class="md-nav__icon md-icon"></span>
             How-To Guides
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../toc-how-to-guides/">
+<a class="md-nav__link" href="../../how-to-guides/toc-how-to-guides/">
 <span class="md-ellipsis">
     TOC
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../project-scaffolding-standards/">
+<a class="md-nav__link" href="../../how-to-guides/project-scaffolding-standards/">
 <span class="md-ellipsis">
     Project Scaffolding Standards
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../file-naming-conventions/">
+<a class="md-nav__link" href="../../how-to-guides/file-naming-conventions/">
 <span class="md-ellipsis">
     File Naming Conventions
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../column-naming-conventions/">
+<a class="md-nav__link" href="../../how-to-guides/column-naming-conventions/">
 <span class="md-ellipsis">
     Column Naming Conventions
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../python-docstrings-conventions/">
+<a class="md-nav__link" href="../../how-to-guides/python-docstrings-conventions/">
 <span class="md-ellipsis">
     Python Docstrings Conventions
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../python-line-length-standards.md">
+<a class="md-nav__link" href="../../how-to-guides/python-line-length-standards.md">
 <span class="md-ellipsis">
     Line Length Standards in Python Projects
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../dvc-set-up/">
+<a class="md-nav__link" href="../../how-to-guides/dvc-set-up/">
 <span class="md-ellipsis">
     DVC Setup
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../dvc-communication/">
+<a class="md-nav__link" href="../../how-to-guides/dvc-communication/">
 <span class="md-ellipsis">
     DVC Communication
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../dvc-vscode-extension/">
+<a class="md-nav__link" href="../../how-to-guides/dvc-vscode-extension/">
 <span class="md-ellipsis">
     DVC VS Code Extension
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../offline-cookiecutter-setup/">
+<a class="md-nav__link" href="../../how-to-guides/offline-cookiecutter-setup/">
 <span class="md-ellipsis">
     Offline Cookiecutter Setup
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../git-branch-naming-standards/">
+<a class="md-nav__link" href="../../how-to-guides/git-branch-naming-standards/">
 <span class="md-ellipsis">
     Git Branch Naming Standards
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../commit-message-standards-ml/">
+<a class="md-nav__link" href="../../how-to-guides/commit-message-standards-ml/">
 <span class="md-ellipsis">
     Commit Message Standards in ML Projects
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../pushing-to-github-best-practices.md">
+<a class="md-nav__link" href="../../how-to-guides/pushing-to-github-best-practices.md">
 <span class="md-ellipsis">
     Best Practices for Pushing to GitHub
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../ml-data-folder-naming/">
+<a class="md-nav__link" href="../../how-to-guides/ml-data-folder-naming/">
 <span class="md-ellipsis">
     ML Data Folder Naming Guide
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../machine-learning-metadata-automation/">
+<a class="md-nav__link" href="../../how-to-guides/machine-learning-metadata-automation/">
 <span class="md-ellipsis">
     Automating Metadata Creation
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../github-actions-naming-convention/">
+<a class="md-nav__link" href="../../how-to-guides/github-actions-naming-convention/">
 <span class="md-ellipsis">
     Enforcing Naming Conventions with GitHub Actions
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../wandb-experiment-tracking-rag/">
+<a class="md-nav__link" href="../../how-to-guides/wandb-experiment-tracking-rag/">
 <span class="md-ellipsis">
     ML Experiments Life-Cycle with Weights &amp; Biases
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../templates/">
+<a class="md-nav__link" href="../../how-to-guides/templates/">
 <span class="md-ellipsis">
     Templates for Issues/Stories and PRs
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../branching-strategy/">
+<a class="md-nav__link" href="../../how-to-guides/branching-strategy/">
 <span class="md-ellipsis">
     Branching Strategies for ML Projects
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../data-conversion-from-xlsx-to-csv/">
+<a class="md-nav__link" href="../../how-to-guides/data-conversion-from-xlsx-to-csv/">
 <span class="md-ellipsis">
     Python Scripting for Data Conversion
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../how-to-guides/automating-wandb-backups/">
+<span class="md-ellipsis">
+    Automating Backups for Weights &amp; Biases
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../how-to-guides/jupyter-vscode-directory/">
+<span class="md-ellipsis">
+    Configuring Jupyter Notebook Start-up Directory in VS Code
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../how-to-guides/data_management_practices/">
+<span class="md-ellipsis">
+    Project Data Management Practices
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../how-to-guides/using-code-tags/">
+<span class="md-ellipsis">
+    Using Code Tags
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../how-to-guides/using-todo-tree-with-code-tags/">
+<span class="md-ellipsis">
+    Using TODO Tree with Code Tags
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../how-to-guides/lifecycle-git-github/">
+<span class="md-ellipsis">
+    AI/ML Project Lifecycle with Git and GitHub
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../how-to-guides/introduction-to-doctest/">
+<span class="md-ellipsis">
+    Introduction to Doctest
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../how-to-guides/python-oop-for-ml/">
+<span class="md-ellipsis">
+    Python OOP for Machine Learning Projects
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../how-to-guides/code-review-best-practices/">
+<span class="md-ellipsis">
+    Code Review Best Practices
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../how-to-guides/jira-story-best-practices/">
+<span class="md-ellipsis">
+    Best Practices for Creating JIRA Stories for ML/AI Projects
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../how-to-guides/notebook-to-production/">
+<span class="md-ellipsis">
+    Moving from Jupyter Notebooks to Production Python Code
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../how-to-guides/type-checking-mypy/">
+<span class="md-ellipsis">
+    Static Type Checking with Mypy
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../how-to-guides/pre-commit-hooks-guide/">
+<span class="md-ellipsis">
+    Using Pre-Commit Hooks to Enforce Coding Standards
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../how-to-guides/pytest-inroduction-guide/">
+<span class="md-ellipsis">
+    Pytest Introduction Guide
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+<span class="md-ellipsis">
+    Explanation
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_5_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+            Explanation
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../toc-explanation/">
+<span class="md-ellipsis">
+    TOC
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../dvc-understanding-dvs/">
+<span class="md-ellipsis">
+    Understanding DVC
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../dvc-git-branches/">
+<span class="md-ellipsis">
+    Git Branches in DVC
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../github-naming-conventions/">
+<span class="md-ellipsis">
+    Effective GitHub Naming Conventions
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ml-naming-conventions/">
+<span class="md-ellipsis">
+    Notebook and Script Naming Conventions in ML Projects
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../model-persistence-naming-conventions/">
+<span class="md-ellipsis">
+    Model Persistence File Naming Conventions
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../naming-conventions/">
+<span class="md-ellipsis">
+    Introduction to Naming Conventions for AI Project Assets
   </span>
 </a>
 </li>
@@ -541,13 +704,13 @@
 <input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
 <label class="md-nav__link md-nav__link--active" for="__toc">
 <span class="md-ellipsis">
-    Automating Backups for Weights &amp; Biases
+    Pytest Configuration Guide
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
 <a class="md-nav__link md-nav__link--active" href="./">
 <span class="md-ellipsis">
-    Automating Backups for Weights &amp; Biases
+    Pytest Configuration Guide
   </span>
 </a>
 <nav aria-label="On this page" class="md-nav md-nav--secondary">
@@ -557,112 +720,54 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#define-the-task">
+<a class="md-nav__link" href="#introduction">
 <span class="md-ellipsis">
-      Define the Task
+      Introduction
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#assumptions">
+<a class="md-nav__link" href="#configuration-overview">
 <span class="md-ellipsis">
-      Assumptions
+      Configuration Overview
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#tools-and-requirements">
+<a class="md-nav__link" href="#vscodesettingsjson">
 <span class="md-ellipsis">
-      Tools and Requirements
+      .vscode/settings.json
     </span>
 </a>
-<nav aria-label="Tools and Requirements" class="md-nav">
+<nav aria-label=".vscode/settings.json" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#task-instructions">
+<a class="md-nav__link" href="#explanation">
 <span class="md-ellipsis">
-      Task Instructions
-    </span>
-</a>
-<nav aria-label="Task Instructions" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#1-export-wb-data">
-<span class="md-ellipsis">
-      1. Export W&amp;B Data
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#2-database-backup">
-<span class="md-ellipsis">
-      2. Database Backup
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#3-artifact-storage">
-<span class="md-ellipsis">
-      3. Artifact Storage
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#4-automate-backups">
-<span class="md-ellipsis">
-      4. Automate Backups
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#5-version-control-integration">
-<span class="md-ellipsis">
-      5. Version Control Integration
+      Explanation
     </span>
 </a>
 </li>
 </ul>
 </nav>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#pyprojecttoml">
+<span class="md-ellipsis">
+      pyproject.toml
+    </span>
+</a>
+<nav aria-label="pyproject.toml" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#explanation_1">
+<span class="md-ellipsis">
+      Explanation
+    </span>
+</a>
+</li>
 </ul>
 </nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#verification-steps">
-<span class="md-ellipsis">
-      Verification Steps
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#troubleshooting">
-<span class="md-ellipsis">
-      Troubleshooting
-    </span>
-</a>
-<nav aria-label="Troubleshooting" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#automating-backups-with-a-script">
-<span class="md-ellipsis">
-      Automating Backups with a Script
-    </span>
-</a>
-<nav aria-label="Automating Backups with a Script" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#backup-script-example">
-<span class="md-ellipsis">
-      Backup Script Example
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#verification-and-monitoring">
-<span class="md-ellipsis">
-      Verification and Monitoring
-    </span>
-</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#conclusion">
@@ -671,196 +776,15 @@
     </span>
 </a>
 </li>
-</ul>
-</nav>
-</li>
-</ul>
-</nav>
-</li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#conclusion_1">
+<a class="md-nav__link" href="#see-also">
 <span class="md-ellipsis">
-      Conclusion
-    </span>
-</a>
-<nav aria-label="Conclusion" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#further-assistance">
-<span class="md-ellipsis">
-      Further Assistance
+      See also
     </span>
 </a>
 </li>
 </ul>
 </nav>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../jupyter-vscode-directory/">
-<span class="md-ellipsis">
-    Configuring Jupyter Notebook Start-up Directory in VS Code
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../data_management_practices/">
-<span class="md-ellipsis">
-    Project Data Management Practices
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../using-code-tags/">
-<span class="md-ellipsis">
-    Using Code Tags
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../using-todo-tree-with-code-tags/">
-<span class="md-ellipsis">
-    Using TODO Tree with Code Tags
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../lifecycle-git-github/">
-<span class="md-ellipsis">
-    AI/ML Project Lifecycle with Git and GitHub
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../introduction-to-doctest/">
-<span class="md-ellipsis">
-    Introduction to Doctest
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../python-oop-for-ml/">
-<span class="md-ellipsis">
-    Python OOP for Machine Learning Projects
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../code-review-best-practices/">
-<span class="md-ellipsis">
-    Code Review Best Practices
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../jira-story-best-practices/">
-<span class="md-ellipsis">
-    Best Practices for Creating JIRA Stories for ML/AI Projects
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../notebook-to-production/">
-<span class="md-ellipsis">
-    Moving from Jupyter Notebooks to Production Python Code
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../type-checking-mypy/">
-<span class="md-ellipsis">
-    Static Type Checking with Mypy
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../pre-commit-hooks-guide/">
-<span class="md-ellipsis">
-    Using Pre-Commit Hooks to Enforce Coding Standards
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../pytest-inroduction-guide/">
-<span class="md-ellipsis">
-    Pytest Introduction Guide
-  </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--section md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_5" type="checkbox"/>
-<label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
-<span class="md-ellipsis">
-    Explanation
-  </span>
-<span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-expanded="false" aria-labelledby="__nav_5_label" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_5">
-<span class="md-nav__icon md-icon"></span>
-            Explanation
-          </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../explanation/toc-explanation/">
-<span class="md-ellipsis">
-    TOC
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../explanation/dvc-understanding-dvs/">
-<span class="md-ellipsis">
-    Understanding DVC
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../explanation/dvc-git-branches/">
-<span class="md-ellipsis">
-    Git Branches in DVC
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../explanation/github-naming-conventions/">
-<span class="md-ellipsis">
-    Effective GitHub Naming Conventions
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../explanation/ml-naming-conventions/">
-<span class="md-ellipsis">
-    Notebook and Script Naming Conventions in ML Projects
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../explanation/model-persistence-naming-conventions/">
-<span class="md-ellipsis">
-    Model Persistence File Naming Conventions
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../explanation/naming-conventions/">
-<span class="md-ellipsis">
-    Introduction to Naming Conventions for AI Project Assets
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../explanation/pytest-configuration-guide/">
-<span class="md-ellipsis">
-    Pytest Configuration Guide
-  </span>
-</a>
 </li>
 </ul>
 </nav>
@@ -880,112 +804,54 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#define-the-task">
+<a class="md-nav__link" href="#introduction">
 <span class="md-ellipsis">
-      Define the Task
+      Introduction
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#assumptions">
+<a class="md-nav__link" href="#configuration-overview">
 <span class="md-ellipsis">
-      Assumptions
+      Configuration Overview
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#tools-and-requirements">
+<a class="md-nav__link" href="#vscodesettingsjson">
 <span class="md-ellipsis">
-      Tools and Requirements
+      .vscode/settings.json
     </span>
 </a>
-<nav aria-label="Tools and Requirements" class="md-nav">
+<nav aria-label=".vscode/settings.json" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#task-instructions">
+<a class="md-nav__link" href="#explanation">
 <span class="md-ellipsis">
-      Task Instructions
-    </span>
-</a>
-<nav aria-label="Task Instructions" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#1-export-wb-data">
-<span class="md-ellipsis">
-      1. Export W&amp;B Data
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#2-database-backup">
-<span class="md-ellipsis">
-      2. Database Backup
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#3-artifact-storage">
-<span class="md-ellipsis">
-      3. Artifact Storage
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#4-automate-backups">
-<span class="md-ellipsis">
-      4. Automate Backups
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#5-version-control-integration">
-<span class="md-ellipsis">
-      5. Version Control Integration
+      Explanation
     </span>
 </a>
 </li>
 </ul>
 </nav>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#pyprojecttoml">
+<span class="md-ellipsis">
+      pyproject.toml
+    </span>
+</a>
+<nav aria-label="pyproject.toml" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#explanation_1">
+<span class="md-ellipsis">
+      Explanation
+    </span>
+</a>
+</li>
 </ul>
 </nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#verification-steps">
-<span class="md-ellipsis">
-      Verification Steps
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#troubleshooting">
-<span class="md-ellipsis">
-      Troubleshooting
-    </span>
-</a>
-<nav aria-label="Troubleshooting" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#automating-backups-with-a-script">
-<span class="md-ellipsis">
-      Automating Backups with a Script
-    </span>
-</a>
-<nav aria-label="Automating Backups with a Script" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#backup-script-example">
-<span class="md-ellipsis">
-      Backup Script Example
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#verification-and-monitoring">
-<span class="md-ellipsis">
-      Verification and Monitoring
-    </span>
-</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#conclusion">
@@ -994,29 +860,12 @@
     </span>
 </a>
 </li>
-</ul>
-</nav>
-</li>
-</ul>
-</nav>
-</li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#conclusion_1">
+<a class="md-nav__link" href="#see-also">
 <span class="md-ellipsis">
-      Conclusion
+      See also
     </span>
 </a>
-<nav aria-label="Conclusion" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#further-assistance">
-<span class="md-ellipsis">
-      Further Assistance
-    </span>
-</a>
-</li>
-</ul>
-</nav>
 </li>
 </ul>
 </nav>
@@ -1025,180 +874,165 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="how-to-back-up-weights-biases-experiments-locally-on-macbook-pro">How to Back Up Weights &amp; Biases Experiments Locally on MacBook Pro<a class="headerlink" href="#how-to-back-up-weights-biases-experiments-locally-on-macbook-pro" title="Permanent link">¶</a></h1>
-<p>This guide provides step-by-step instructions on how to back up your
-Weights &amp; Biases (W&amp;B) experiments when running locally on a MacBook
-Pro. Following the Detaxis approach for structured technical
-documentation, this guide ensures that you can securely and efficiently
-safeguard your data.</p>
-<h2 id="define-the-task"><strong>Define the Task</strong><a class="headerlink" href="#define-the-task" title="Permanent link">¶</a></h2>
-<p>Backing up W&amp;B experiments involves saving experiment data, metadata,
-and artifacts to prevent data loss and ensure reproducibility of
-results.</p>
-<h2 id="assumptions"><strong>Assumptions</strong><a class="headerlink" href="#assumptions" title="Permanent link">¶</a></h2>
-<ul>
-<li>You have W&amp;B set up and running locally on your MacBook Pro.</li>
-<li>Basic familiarity with terminal commands.</li>
-</ul>
-<h2 id="tools-and-requirements"><strong>Tools and Requirements</strong><a class="headerlink" href="#tools-and-requirements" title="Permanent link">¶</a></h2>
-<ul>
-<li>Terminal access on MacBook Pro.</li>
-<li>Optional: Access to cloud storage services or an external hard drive
-  for remote backups.</li>
-</ul>
-<h3 id="task-instructions"><strong>Task Instructions</strong><a class="headerlink" href="#task-instructions" title="Permanent link">¶</a></h3>
-<h4 id="1-export-wb-data"><strong>1. Export W&amp;B Data</strong><a class="headerlink" href="#1-export-wb-data" title="Permanent link">¶</a></h4>
-<ul>
-<li><strong>Action</strong>: Use the W&amp;B CLI to export project data.</li>
-<li><strong>Commands</strong>:
-    <div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>wandb<span class="w"> </span><span class="nb">export</span><span class="w"> </span>USERNAME/PROJECT_NAME<span class="w"> </span>--output<span class="w"> </span>file.json
-</code></pre></div>
-    Replace <code>USERNAME</code> with your W&amp;B username and <code>PROJECT_NAME</code> with
-    the name of your project.</li>
-</ul>
-<h4 id="2-database-backup"><strong>2. Database Backup</strong><a class="headerlink" href="#2-database-backup" title="Permanent link">¶</a></h4>
-<ul>
-<li><strong>Action</strong>: Locate and copy the W&amp;B local SQLite database for backup.</li>
-<li><strong>Location</strong>: The default W&amp;B directory is <code>~/wandb</code>. Find the
-  <code>local.db</code> file within this directory.</li>
-<li><strong>Backup Command</strong>:
-    <div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a>cp<span class="w"> </span>~/wandb/local.db<span class="w"> </span>/path/to/your/backup/location
-</code></pre></div></li>
-</ul>
-<h4 id="3-artifact-storage"><strong>3. Artifact Storage</strong><a class="headerlink" href="#3-artifact-storage" title="Permanent link">¶</a></h4>
-<ul>
-<li><strong>Action</strong>: Manually back up the artifacts directory.</li>
-<li><strong>Command</strong>:
-    <div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a>cp<span class="w"> </span>-R<span class="w"> </span>~/wandb/artifacts<span class="w"> </span>/path/to/your/backup/location
-</code></pre></div></li>
-</ul>
-<h4 id="4-automate-backups"><strong>4. Automate Backups</strong><a class="headerlink" href="#4-automate-backups" title="Permanent link">¶</a></h4>
-<ul>
-<li><strong>Action</strong>: Create a script to automate the backup process.</li>
-<li><strong>Details</strong>: Use the provided example backup script, modifying paths
-  and destinations as needed. Schedule this script using <code>cron</code> for
-  periodic backups.</li>
-</ul>
-<h4 id="5-version-control-integration"><strong>5. Version Control Integration</strong><a class="headerlink" href="#5-version-control-integration" title="Permanent link">¶</a></h4>
-<ul>
-<li><strong>Action</strong>: Ensure that your project code is under version control
-  (e.g., Git).</li>
-<li><strong>Purpose</strong>: Facilitates matching experiment results with code
-  versions, enhancing reproducibility.</li>
-</ul>
-<h2 id="verification-steps"><strong>Verification Steps</strong><a class="headerlink" href="#verification-steps" title="Permanent link">¶</a></h2>
+<h1 id="pytest-configuration-in-vs-code">Pytest Configuration in VS Code<a class="headerlink" href="#pytest-configuration-in-vs-code" title="Permanent link">¶</a></h1>
+<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">¶</a></h2>
+<p>This document explains the Pytest configuration for a Python project
+using VS Code and Poetry. The setup aims to streamline testing, ensure
+code quality, and enhance developer productivity by leveraging various
+Pytest plugins and settings.</p>
+<div class="admonition tip">
+<p class="admonition-title">Default Pytest Configuration</p>
+<p>The Pytest configuration in this guide is the default configuration
+included in the “Cookiecutter Collabora” project. This setup is
+designed to provide a robust starting point for running tests
+efficiently and effectively.</p>
+<p>We invite you to adapt and customize
+this configuration to suit your specific project needs and
+preferences. Modify the settings as needed to optimize your testing
+workflow and achieve the best results.</p>
+</div>
+<h2 id="configuration-overview">Configuration Overview<a class="headerlink" href="#configuration-overview" title="Permanent link">¶</a></h2>
+<p>The Pytest configuration is defined in two key files:</p>
 <ol>
-<li><strong>Check Exported Data</strong>: Ensure that the JSON or CSV file contains
-   all relevant experiment data.</li>
-<li><strong>Validate Database Copy</strong>: Verify that the <code>local.db</code> file is
-   correctly copied to your backup location and is not corrupted.</li>
-<li><strong>Artifact Backup</strong>: Confirm that all files in the <code>artifacts</code>
-   directory are present in your backup location.</li>
-<li><strong>Test Automation Script</strong>: Execute your backup script manually to
-   ensure it works as expected. Check the backup destination for the new
-   backup folder.</li>
-<li><strong>Review Backup Frequency</strong>: Ensure that your backup script is
-   scheduled appropriately and runs at the desired frequency.</li>
+<li><code>.vscode/settings.json</code></li>
+<li><code>pyproject.toml</code></li>
 </ol>
-<h2 id="troubleshooting"><strong>Troubleshooting</strong><a class="headerlink" href="#troubleshooting" title="Permanent link">¶</a></h2>
-<ul>
-<li><strong>Issue</strong>: Export command fails.</li>
-<li><strong>Solution</strong>: Check your W&amp;B username and project name for typos.
-    Ensure you're connected to the internet if using W&amp;B cloud.</li>
-<li><strong>Issue</strong>: Backup script does not run automatically.</li>
-<li><strong>Solution</strong>: Verify the <code>cron</code> job setup. Check for syntax errors
-    in your cron configuration.</li>
-<li><strong>Issue</strong>: Insufficient backup space.</li>
-<li><strong>Solution</strong>: Regularly monitor your backup location's available
-    space. Consider using cloud storage for additional capacity.</li>
-</ul>
-<h3 id="automating-backups-with-a-script"><strong>Automating Backups with a Script</strong><a class="headerlink" href="#automating-backups-with-a-script" title="Permanent link">¶</a></h3>
-<p>To simplify and automate the backup process for Weights &amp; Biases
-experiments on your MacBook Pro, you can use a shell script. This
-section provides an example script and instructions on how to set it up
-for automated execution using <code>cron</code>.</p>
-<h4 id="backup-script-example"><strong>Backup Script Example</strong><a class="headerlink" href="#backup-script-example" title="Permanent link">¶</a></h4>
-<p>Below is an example of a backup script named <code>wandb_backup.sh</code>. This
-script backs up the W&amp;B local database and artifacts to a specified
-backup directory.</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="ch">#!/bin/bash</span>
-<a href="#__codelineno-3-2" id="__codelineno-3-2" name="__codelineno-3-2"></a>
-<a href="#__codelineno-3-3" id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="c1"># Define the source and destination directories</span>
-<a href="#__codelineno-3-4" id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="nv">WANDB_DIR</span><span class="o">=</span><span class="s2">"</span><span class="nv">$HOME</span><span class="s2">/wandb"</span>
-<a href="#__codelineno-3-5" id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="nv">BACKUP_DIR</span><span class="o">=</span><span class="s2">"/path/to/your/backup/location/</span><span class="k">$(</span>date<span class="w"> </span>+%Y%m%d_%H%M%S<span class="k">)</span><span class="s2">"</span>
-<a href="#__codelineno-3-6" id="__codelineno-3-6" name="__codelineno-3-6"></a>
-<a href="#__codelineno-3-7" id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="c1"># Create a new backup directory with a timestamp</span>
-<a href="#__codelineno-3-8" id="__codelineno-3-8" name="__codelineno-3-8"></a>mkdir<span class="w"> </span>-p<span class="w"> </span><span class="s2">"</span><span class="nv">$BACKUP_DIR</span><span class="s2">"</span>
-<a href="#__codelineno-3-9" id="__codelineno-3-9" name="__codelineno-3-9"></a>
-<a href="#__codelineno-3-10" id="__codelineno-3-10" name="__codelineno-3-10"></a><span class="c1"># Backup the local database</span>
-<a href="#__codelineno-3-11" id="__codelineno-3-11" name="__codelineno-3-11"></a>cp<span class="w"> </span><span class="s2">"</span><span class="nv">$WANDB_DIR</span><span class="s2">/local.db"</span><span class="w"> </span><span class="s2">"</span><span class="nv">$BACKUP_DIR</span><span class="s2">"</span>
-<a href="#__codelineno-3-12" id="__codelineno-3-12" name="__codelineno-3-12"></a>
-<a href="#__codelineno-3-13" id="__codelineno-3-13" name="__codelineno-3-13"></a><span class="c1"># Backup artifacts</span>
-<a href="#__codelineno-3-14" id="__codelineno-3-14" name="__codelineno-3-14"></a>cp<span class="w"> </span>-R<span class="w"> </span><span class="s2">"</span><span class="nv">$WANDB_DIR</span><span class="s2">/artifacts"</span><span class="w"> </span><span class="s2">"</span><span class="nv">$BACKUP_DIR</span><span class="s2">/artifacts"</span>
-<a href="#__codelineno-3-15" id="__codelineno-3-15" name="__codelineno-3-15"></a>
-<a href="#__codelineno-3-16" id="__codelineno-3-16" name="__codelineno-3-16"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">"Backup completed successfully."</span>
+<h2 id="vscodesettingsjson"><code>.vscode/settings.json</code><a class="headerlink" href="#vscodesettingsjson" title="Permanent link">¶</a></h2>
+<p>This file configures Pytest to work seamlessly within VS Code. Below is
+the configuration used:</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="p">{</span>
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">    </span><span class="nt">"python.testing.pytestArgs"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">        </span><span class="s2">"tests"</span><span class="p">,</span>
+<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">        </span><span class="s2">"--cov=src"</span><span class="p">,</span>
+<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">        </span><span class="s2">"--cov-report=term-missing"</span><span class="p">,</span>
+<a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">        </span><span class="s2">"-v"</span><span class="p">,</span>
+<a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">        </span><span class="s2">"-n"</span><span class="p">,</span>
+<a href="#__codelineno-0-8" id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">        </span><span class="s2">"2"</span><span class="p">,</span>
+<a href="#__codelineno-0-9" id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="w">        </span><span class="s2">"--timeout=5"</span>
+<a href="#__codelineno-0-10" id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="w">    </span><span class="p">],</span>
+<a href="#__codelineno-0-11" id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="w">    </span><span class="nt">"python.testing.unittestEnabled"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<a href="#__codelineno-0-12" id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="w">    </span><span class="nt">"python.testing.pytestEnabled"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+<a href="#__codelineno-0-13" id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="p">}</span>
 </code></pre></div>
-<p><strong>Instructions:</strong></p>
-<ol>
-<li><strong>Create the Script</strong>:</li>
-<li>Open your terminal.</li>
-<li>Use a text editor (e.g., <code>nano</code> or <code>vim</code>) to create a new file
-     named <code>wandb_backup.sh</code>.</li>
-<li>Copy and paste the script above into the file.</li>
-<li>
-<p>Replace <code>/path/to/your/backup/location</code> with the actual path where
-     you want to store your backups.</p>
-</li>
-<li>
-<p><strong>Make the Script Executable</strong>:</p>
-</li>
-<li>
-<p>Run the following command in your terminal:
-     <div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a>chmod<span class="w"> </span>+x<span class="w"> </span>wandb_backup.sh
-</code></pre></div></p>
-</li>
-<li>
-<p><strong>Automating Execution with <code>cron</code></strong>:</p>
-</li>
-<li>Open your crontab for editing by running:
-     <div class="highlight"><pre><span></span><code><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a>crontab<span class="w"> </span>-e
-</code></pre></div></li>
-<li>Add a line to schedule the script execution. For example, to run
-     the backup daily at 2 AM, add:
-     <div class="highlight"><pre><span></span><code><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a>0 2 * * * /path/to/your/wandb_backup.sh
-</code></pre></div></li>
-<li>Save and close the editor. <code>cron</code> will now execute the script
-     according to the schedule.</li>
-</ol>
-<h4 id="verification-and-monitoring"><strong>Verification and Monitoring</strong><a class="headerlink" href="#verification-and-monitoring" title="Permanent link">¶</a></h4>
+<h3 id="explanation">Explanation<a class="headerlink" href="#explanation" title="Permanent link">¶</a></h3>
 <ul>
-<li>After setting up the script and scheduling it with <code>cron</code>, verify that
-  it runs as expected by checking the backup directory for new backups
-  after the scheduled time.</li>
-<li>Monitor your system logs and the backup directory to ensure ongoing
-  successful executions. You might want to set up email notifications
-  for <code>cron</code> jobs to stay informed about the backup script's execution
-  status.</li>
+<li><strong><code>python.testing.pytestArgs</code></strong>: An array of arguments passed to Pytest when running tests in VS Code.</li>
+<li><code>"tests"</code>: Specifies the directory where test files are located.</li>
+<li><code>"--cov=src"</code>: Enables code coverage measurement for the <code>src</code> directory.</li>
+<li><code>"--cov-report=term-missing"</code>: Displays a coverage report in the terminal, highlighting missing lines.</li>
+<li><code>"-v"</code>: Enables verbose mode, providing detailed test output.</li>
+<li><code>"-n", "2"</code>: Utilizes <code>pytest-xdist</code> to run tests in parallel using 2 CPU cores.</li>
+<li>
+<p><code>"--timeout=5"</code>: Sets a 5-second timeout for each test to prevent hanging tests.</p>
+</li>
+<li>
+<p><strong><code>python.testing.unittestEnabled</code></strong>: Disables the unittest framework.</p>
+</li>
+<li><strong><code>python.testing.pytestEnabled</code></strong>: Enables the Pytest framework.</li>
 </ul>
-<h4 id="conclusion"><strong>Conclusion</strong><a class="headerlink" href="#conclusion" title="Permanent link">¶</a></h4>
-<p>Automating the backup process ensures that your Weights &amp; Biases
-experiments and data are regularly saved without manual intervention. By
-following these steps, you create a resilient and efficient backup
-workflow, safeguarding your valuable machine learning experiments.</p>
-<h2 id="conclusion_1"><strong>Conclusion</strong><a class="headerlink" href="#conclusion_1" title="Permanent link">¶</a></h2>
-<p>By following these steps, you've created a robust backup strategy for
-your Weights &amp; Biases experiments. Regular backups ensure that your data
-is secure and that your experiments are reproducible, regardless of
-unforeseen data loss.</p>
-<h3 id="further-assistance"><strong>Further Assistance</strong><a class="headerlink" href="#further-assistance" title="Permanent link">¶</a></h3>
-<p>For more detailed information on W&amp;B features and troubleshooting, visit
-the <a href="https://docs.wandb.ai/">Weights &amp; Biases documentation</a>.</p>
+<h2 id="pyprojecttoml"><code>pyproject.toml</code><a class="headerlink" href="#pyprojecttoml" title="Permanent link">¶</a></h2>
+<p>This file manages the project dependencies and Pytest settings through Poetry.</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="k">[tool.poetry.dev-dependencies]</span>
+<a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="n">pytest</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"8.2.2"</span>
+<a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="n">pytest-benchmark</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"4.0.0"</span>
+<a href="#__codelineno-1-4" id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="n">pytest-xdist</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"3.6.1"</span>
+<a href="#__codelineno-1-5" id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="n">pytest-cov</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"5.0.0"</span>
+<a href="#__codelineno-1-6" id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="n">pytest-mock</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"^3.14.0"</span>
+<a href="#__codelineno-1-7" id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="n">pytest-sugar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"1.0.0"</span>
+<a href="#__codelineno-1-8" id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="n">pytest-timeout</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"2.3.1"</span>
+<a href="#__codelineno-1-9" id="__codelineno-1-9" name="__codelineno-1-9"></a>
+<a href="#__codelineno-1-10" id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="k">[tool.pytest.ini_options]</span>
+<a href="#__codelineno-1-11" id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="n">testpaths</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">"tests"</span><span class="p">]</span>
+<a href="#__codelineno-1-12" id="__codelineno-1-12" name="__codelineno-1-12"></a><span class="n">addopts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"-v --cov=src/fpservicesagemodel --cov-report=term-missing -n 2 --timeout=5"</span>
+<a href="#__codelineno-1-13" id="__codelineno-1-13" name="__codelineno-1-13"></a><span class="n">python_files</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"test_*.py"</span>
+<a href="#__codelineno-1-14" id="__codelineno-1-14" name="__codelineno-1-14"></a><span class="n">python_classes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Test*"</span>
+<a href="#__codelineno-1-15" id="__codelineno-1-15" name="__codelineno-1-15"></a><span class="n">python_functions</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"test_*"</span>
+<a href="#__codelineno-1-16" id="__codelineno-1-16" name="__codelineno-1-16"></a><span class="n">log_cli</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span>
+<a href="#__codelineno-1-17" id="__codelineno-1-17" name="__codelineno-1-17"></a><span class="n">log_cli_level</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"INFO"</span>
+<a href="#__codelineno-1-18" id="__codelineno-1-18" name="__codelineno-1-18"></a><span class="n">log_format</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"%(asctime)s %(levelname)s %(message)s"</span>
+<a href="#__codelineno-1-19" id="__codelineno-1-19" name="__codelineno-1-19"></a><span class="n">log_date_format</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"%Y-%m-%d %H:%M:%S"</span>
+</code></pre></div>
+<h3 id="explanation_1">Explanation<a class="headerlink" href="#explanation_1" title="Permanent link">¶</a></h3>
+<ul>
+<li><strong><code>[tool.poetry.dev-dependencies]</code></strong>: Specifies the development dependencies required for the project.</li>
+<li><code>pytest</code>: The core testing framework.</li>
+<li><code>pytest-benchmark</code>: For benchmarking test performance.</li>
+<li><code>pytest-xdist</code>: For parallel test execution.</li>
+<li><code>pytest-cov</code>: For measuring code coverage.</li>
+<li><code>pytest-mock</code>: For mocking objects in tests.</li>
+<li><code>pytest-sugar</code>: For a more readable test output.</li>
+<li>
+<p><code>pytest-timeout</code>: For setting time limits on tests.</p>
+</li>
+<li>
+<p><strong><code>[tool.pytest.ini_options]</code></strong>: Configures Pytest options.</p>
+</li>
+<li><code>testpaths = ["tests"]</code>: Specifies the directory where test files are located.</li>
+<li><code>addopts = "-v --cov=src/fpservicesagemodel --cov-report=term-missing -n 2 --timeout=5"</code>: Additional options for running tests.<ul>
+<li><code>"-v"</code>: Enables verbose mode.</li>
+<li><code>"--cov=src/fpservicesagemodel"</code>: Measures coverage for the specified directory.</li>
+<li><code>"--cov-report=term-missing"</code>: Displays missing coverage in the terminal.</li>
+<li><code>"-n 2"</code>: Runs tests in parallel using 2 CPU cores.</li>
+<li><code>"--timeout=5"</code>: Sets a 5-second timeout for each test.</li>
+</ul>
+</li>
+<li><code>python_files = "test_*.py"</code>: Pattern for identifying test files.</li>
+<li><code>python_classes = "Test*"</code>: Pattern for identifying test classes.</li>
+<li><code>python_functions = "test_*"</code>: Pattern for identifying test functions.</li>
+<li><code>log_cli = true</code>: Enables logging to the console during test runs.</li>
+<li><code>log_cli_level = "INFO"</code>: Sets the log level to INFO.</li>
+<li><code>log_format = "%(asctime)s %(levelname)s %(message)s"</code>: Specifies the log message format.</li>
+<li><code>log_date_format = "%Y-%m-%d %H:%M:%S"</code>: Specifies the date format for log messages.</li>
+</ul>
+<details class="question">
+<summary>Why are Pytest extensions under [tool.poetry.dev-dependencies]?</summary>
+<p>Pytest is primarily used during the development phase of a project
+and is not intended for use in production or runtime environments.
+Unit tests, written using Pytest, help developers catch bugs early,
+facilitate code refactoring, and ensure code quality before
+deployment.</p>
+<p>Running Pytest in production can introduce unnecessary
+performance overhead and potential security risks. Instead, unit
+tests are typically executed in CI/CD pipelines to verify code
+functionality and reliability before the code is deployed to
+production. This approach ensures that production environments
+remain optimized for performance and stability.</p>
+</details>
+<details class="question">
+<summary>Why Configure Both .vscode/settings.json and pyproject.toml?</summary>
+<p>Configuring both <code>.vscode/settings.json</code> and <code>pyproject.toml</code>
+ensures consistent and integrated testing in your development
+environment.</p>
+<ul>
+<li>
+<p><strong>.vscode/settings.json</strong>: Customizes Pytest behavior
+in Visual Studio Code. With the Python extension installed, the
+beaker iconappears in the Activity bar, opening the Test
+Explorer for running and debugging tests directly in VS Code.</p>
+</li>
+<li>
+<p><strong>pyproject.toml</strong>: Manages project dependencies and centralizes
+Pytest configurations for use across different environments.</p>
+</li>
+</ul>
+</details>
+<h2 id="conclusion">Conclusion<a class="headerlink" href="#conclusion" title="Permanent link">¶</a></h2>
+<p>This configuration ensures that tests are run efficiently and
+effectively within VS Code, leveraging parallel execution, code
+coverage, and timeouts to maintain code quality and performance. By
+following these settings, developers can ensure a consistent and
+productive testing environment.</p>
+<h2 id="see-also">See also<a class="headerlink" href="#see-also" title="Permanent link">¶</a></h2>
+<ul>
+<li><a href="https://code.visualstudio.com/docs/editor/testing">Visual Studio Code Testing Documentation</a></li>
+<li><a href="https://code.visualstudio.com/docs/python/testing">Visual Studio Code Python Testing Documentation</a></li>
+</ul>
 <aside class="md-source-file">
 <span class="md-source-file__fact">
 <span class="md-icon" title="Last update">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 9, 2024</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 7, 2024</span>
 </span>
 </aside>
 </article>

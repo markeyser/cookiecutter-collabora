@@ -5,12 +5,12 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="https://markeyser.github.io/cookiecutter-collabora/how-to-guides/automating-wandb-backups/" rel="canonical"/>
-<link href="../data-conversion-from-xlsx-to-csv/" rel="prev"/>
-<link href="../jupyter-vscode-directory/" rel="next"/>
+<link href="https://markeyser.github.io/cookiecutter-collabora/how-to-guides/pytest-inroduction-guide/" rel="canonical"/>
+<link href="../pre-commit-hooks-guide/" rel="prev"/>
+<link href="../../explanation/toc-explanation/" rel="next"/>
 <link href="../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.5.3, mkdocs-material-9.5.4" name="generator"/>
-<title>Automating Backups for Weights &amp; Biases - Cookiecutter Collabora</title>
+<title>Pytest Introduction Guide - Cookiecutter Collabora</title>
 <link href="../../assets/stylesheets/main.50c56a3b.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
 <style>:root{--md-annotation-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 13h-4v4h-2v-4H7v-2h4V7h2v4h4m-5-9A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2Z"/></svg>');}</style>
@@ -36,7 +36,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#how-to-back-up-weights-biases-experiments-locally-on-macbook-pro">
+<a class="md-skip" href="#introduction-to-unit-testing-with-pytest">
           Skip to content
         </a>
 </div>
@@ -60,7 +60,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Automating Backups for Weights &amp; Biases
+              Pytest Introduction Guide
             
           </span>
 </div>
@@ -537,166 +537,12 @@
   </span>
 </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-<span class="md-ellipsis">
-    Automating Backups for Weights &amp; Biases
-  </span>
-<span class="md-nav__icon md-icon"></span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="./">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../automating-wandb-backups/">
 <span class="md-ellipsis">
     Automating Backups for Weights &amp; Biases
   </span>
 </a>
-<nav aria-label="On this page" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      On this page
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#define-the-task">
-<span class="md-ellipsis">
-      Define the Task
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#assumptions">
-<span class="md-ellipsis">
-      Assumptions
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#tools-and-requirements">
-<span class="md-ellipsis">
-      Tools and Requirements
-    </span>
-</a>
-<nav aria-label="Tools and Requirements" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#task-instructions">
-<span class="md-ellipsis">
-      Task Instructions
-    </span>
-</a>
-<nav aria-label="Task Instructions" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#1-export-wb-data">
-<span class="md-ellipsis">
-      1. Export W&amp;B Data
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#2-database-backup">
-<span class="md-ellipsis">
-      2. Database Backup
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#3-artifact-storage">
-<span class="md-ellipsis">
-      3. Artifact Storage
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#4-automate-backups">
-<span class="md-ellipsis">
-      4. Automate Backups
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#5-version-control-integration">
-<span class="md-ellipsis">
-      5. Version Control Integration
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#verification-steps">
-<span class="md-ellipsis">
-      Verification Steps
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#troubleshooting">
-<span class="md-ellipsis">
-      Troubleshooting
-    </span>
-</a>
-<nav aria-label="Troubleshooting" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#automating-backups-with-a-script">
-<span class="md-ellipsis">
-      Automating Backups with a Script
-    </span>
-</a>
-<nav aria-label="Automating Backups with a Script" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#backup-script-example">
-<span class="md-ellipsis">
-      Backup Script Example
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#verification-and-monitoring">
-<span class="md-ellipsis">
-      Verification and Monitoring
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#conclusion">
-<span class="md-ellipsis">
-      Conclusion
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#conclusion_1">
-<span class="md-ellipsis">
-      Conclusion
-    </span>
-</a>
-<nav aria-label="Conclusion" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#further-assistance">
-<span class="md-ellipsis">
-      Further Assistance
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-</ul>
-</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../jupyter-vscode-directory/">
@@ -782,12 +628,116 @@
   </span>
 </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../pytest-inroduction-guide/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    Pytest Introduction Guide
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
 <span class="md-ellipsis">
     Pytest Introduction Guide
   </span>
 </a>
+<nav aria-label="On this page" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#introduction">
+<span class="md-ellipsis">
+      Introduction
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#what-is-unit-testing">
+<span class="md-ellipsis">
+      What is Unit Testing?
+    </span>
+</a>
+<nav aria-label="What is Unit Testing?" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#definition">
+<span class="md-ellipsis">
+      Definition
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#importance">
+<span class="md-ellipsis">
+      Importance
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#why-use-pytest">
+<span class="md-ellipsis">
+      Why Use Pytest?
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#writing-your-first-unit-test">
+<span class="md-ellipsis">
+      Writing Your First Unit Test
+    </span>
+</a>
+<nav aria-label="Writing Your First Unit Test" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#running-the-tests">
+<span class="md-ellipsis">
+      Running the Tests
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#advanced-features">
+<span class="md-ellipsis">
+      Advanced Features
+    </span>
+</a>
+<nav aria-label="Advanced Features" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#fixtures">
+<span class="md-ellipsis">
+      Fixtures
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#parameterization">
+<span class="md-ellipsis">
+      Parameterization
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#conclusion">
+<span class="md-ellipsis">
+      Conclusion
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -880,112 +830,86 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#define-the-task">
+<a class="md-nav__link" href="#introduction">
 <span class="md-ellipsis">
-      Define the Task
+      Introduction
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#assumptions">
+<a class="md-nav__link" href="#what-is-unit-testing">
 <span class="md-ellipsis">
-      Assumptions
+      What is Unit Testing?
     </span>
 </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#tools-and-requirements">
-<span class="md-ellipsis">
-      Tools and Requirements
-    </span>
-</a>
-<nav aria-label="Tools and Requirements" class="md-nav">
+<nav aria-label="What is Unit Testing?" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#task-instructions">
+<a class="md-nav__link" href="#definition">
 <span class="md-ellipsis">
-      Task Instructions
-    </span>
-</a>
-<nav aria-label="Task Instructions" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#1-export-wb-data">
-<span class="md-ellipsis">
-      1. Export W&amp;B Data
+      Definition
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#2-database-backup">
+<a class="md-nav__link" href="#importance">
 <span class="md-ellipsis">
-      2. Database Backup
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#3-artifact-storage">
-<span class="md-ellipsis">
-      3. Artifact Storage
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#4-automate-backups">
-<span class="md-ellipsis">
-      4. Automate Backups
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#5-version-control-integration">
-<span class="md-ellipsis">
-      5. Version Control Integration
+      Importance
     </span>
 </a>
 </li>
 </ul>
 </nav>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#why-use-pytest">
+<span class="md-ellipsis">
+      Why Use Pytest?
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#writing-your-first-unit-test">
+<span class="md-ellipsis">
+      Writing Your First Unit Test
+    </span>
+</a>
+<nav aria-label="Writing Your First Unit Test" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#running-the-tests">
+<span class="md-ellipsis">
+      Running the Tests
+    </span>
+</a>
+</li>
 </ul>
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#verification-steps">
+<a class="md-nav__link" href="#advanced-features">
 <span class="md-ellipsis">
-      Verification Steps
+      Advanced Features
+    </span>
+</a>
+<nav aria-label="Advanced Features" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#fixtures">
+<span class="md-ellipsis">
+      Fixtures
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#troubleshooting">
+<a class="md-nav__link" href="#parameterization">
 <span class="md-ellipsis">
-      Troubleshooting
-    </span>
-</a>
-<nav aria-label="Troubleshooting" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#automating-backups-with-a-script">
-<span class="md-ellipsis">
-      Automating Backups with a Script
-    </span>
-</a>
-<nav aria-label="Automating Backups with a Script" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#backup-script-example">
-<span class="md-ellipsis">
-      Backup Script Example
+      Parameterization
     </span>
 </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#verification-and-monitoring">
-<span class="md-ellipsis">
-      Verification and Monitoring
-    </span>
-</a>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#conclusion">
@@ -996,209 +920,114 @@
 </li>
 </ul>
 </nav>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#conclusion_1">
-<span class="md-ellipsis">
-      Conclusion
-    </span>
-</a>
-<nav aria-label="Conclusion" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#further-assistance">
-<span class="md-ellipsis">
-      Further Assistance
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-</ul>
-</nav>
 </div>
 </div>
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="how-to-back-up-weights-biases-experiments-locally-on-macbook-pro">How to Back Up Weights &amp; Biases Experiments Locally on MacBook Pro<a class="headerlink" href="#how-to-back-up-weights-biases-experiments-locally-on-macbook-pro" title="Permanent link">¶</a></h1>
-<p>This guide provides step-by-step instructions on how to back up your
-Weights &amp; Biases (W&amp;B) experiments when running locally on a MacBook
-Pro. Following the Detaxis approach for structured technical
-documentation, this guide ensures that you can securely and efficiently
-safeguard your data.</p>
-<h2 id="define-the-task"><strong>Define the Task</strong><a class="headerlink" href="#define-the-task" title="Permanent link">¶</a></h2>
-<p>Backing up W&amp;B experiments involves saving experiment data, metadata,
-and artifacts to prevent data loss and ensure reproducibility of
-results.</p>
-<h2 id="assumptions"><strong>Assumptions</strong><a class="headerlink" href="#assumptions" title="Permanent link">¶</a></h2>
+<h1 id="introduction-to-unit-testing-with-pytest">Introduction to Unit Testing with Pytest<a class="headerlink" href="#introduction-to-unit-testing-with-pytest" title="Permanent link">¶</a></h1>
+<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">¶</a></h2>
+<p>Unit testing is a fundamental practice in software development that
+involves testing individual units of code to ensure they work as
+intended. This guide introduces you to unit testing with Pytest, a
+popular testing framework for Python. We will cover the basics of unit
+testing, why it is essential, and how to set up and write unit tests
+using Pytest with the configuration provided in our project.</p>
+<h2 id="what-is-unit-testing">What is Unit Testing?<a class="headerlink" href="#what-is-unit-testing" title="Permanent link">¶</a></h2>
+<h3 id="definition">Definition<a class="headerlink" href="#definition" title="Permanent link">¶</a></h3>
+<p>Unit testing involves testing the smallest parts of an application,
+called units, in isolation. A unit can be a function, method, or class.
+The goal is to verify that each unit of the software performs as
+expected.</p>
+<h3 id="importance">Importance<a class="headerlink" href="#importance" title="Permanent link">¶</a></h3>
 <ul>
-<li>You have W&amp;B set up and running locally on your MacBook Pro.</li>
-<li>Basic familiarity with terminal commands.</li>
+<li><strong>Early Bug Detection</strong>: Unit tests help catch bugs early in the development cycle.</li>
+<li><strong>Documentation</strong>: They serve as documentation, explaining what the code is supposed to do.</li>
+<li><strong>Refactoring Support</strong>: Unit tests make it safer to refactor code since you can quickly verify that your changes didn't break anything.</li>
+<li><strong>Confidence in Code</strong>: They provide confidence that the code works correctly, leading to more reliable and maintainable software.</li>
 </ul>
-<h2 id="tools-and-requirements"><strong>Tools and Requirements</strong><a class="headerlink" href="#tools-and-requirements" title="Permanent link">¶</a></h2>
+<h2 id="why-use-pytest">Why Use Pytest?<a class="headerlink" href="#why-use-pytest" title="Permanent link">¶</a></h2>
+<p>Pytest is a powerful and flexible testing framework that makes it easy
+to write simple and scalable test cases. Here are some reasons to use
+Pytest:</p>
 <ul>
-<li>Terminal access on MacBook Pro.</li>
-<li>Optional: Access to cloud storage services or an external hard drive
-  for remote backups.</li>
+<li><strong>Simple Syntax</strong>: Pytest's syntax is straightforward, making it easy to write and understand tests.</li>
+<li><strong>Fixtures</strong>: Pytest provides fixtures for managing setup and teardown code.</li>
+<li><strong>Plugins</strong>: A rich ecosystem of plugins extends Pytest's functionality.</li>
+<li><strong>Parameterization</strong>: Easily parameterize tests to run them with different inputs.</li>
 </ul>
-<h3 id="task-instructions"><strong>Task Instructions</strong><a class="headerlink" href="#task-instructions" title="Permanent link">¶</a></h3>
-<h4 id="1-export-wb-data"><strong>1. Export W&amp;B Data</strong><a class="headerlink" href="#1-export-wb-data" title="Permanent link">¶</a></h4>
-<ul>
-<li><strong>Action</strong>: Use the W&amp;B CLI to export project data.</li>
-<li><strong>Commands</strong>:
-    <div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>wandb<span class="w"> </span><span class="nb">export</span><span class="w"> </span>USERNAME/PROJECT_NAME<span class="w"> </span>--output<span class="w"> </span>file.json
+<h2 id="writing-your-first-unit-test">Writing Your First Unit Test<a class="headerlink" href="#writing-your-first-unit-test" title="Permanent link">¶</a></h2>
+<p>Let's write a simple unit test for a function that adds two numbers.
+Create a Python file named <code>calculator.py</code> in your <code>src</code> directory with
+the following content:</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1"># src/calculator.py</span>
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a>
+<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a>    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
 </code></pre></div>
-    Replace <code>USERNAME</code> with your W&amp;B username and <code>PROJECT_NAME</code> with
-    the name of your project.</li>
-</ul>
-<h4 id="2-database-backup"><strong>2. Database Backup</strong><a class="headerlink" href="#2-database-backup" title="Permanent link">¶</a></h4>
-<ul>
-<li><strong>Action</strong>: Locate and copy the W&amp;B local SQLite database for backup.</li>
-<li><strong>Location</strong>: The default W&amp;B directory is <code>~/wandb</code>. Find the
-  <code>local.db</code> file within this directory.</li>
-<li><strong>Backup Command</strong>:
-    <div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a>cp<span class="w"> </span>~/wandb/local.db<span class="w"> </span>/path/to/your/backup/location
-</code></pre></div></li>
-</ul>
-<h4 id="3-artifact-storage"><strong>3. Artifact Storage</strong><a class="headerlink" href="#3-artifact-storage" title="Permanent link">¶</a></h4>
-<ul>
-<li><strong>Action</strong>: Manually back up the artifacts directory.</li>
-<li><strong>Command</strong>:
-    <div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a>cp<span class="w"> </span>-R<span class="w"> </span>~/wandb/artifacts<span class="w"> </span>/path/to/your/backup/location
-</code></pre></div></li>
-</ul>
-<h4 id="4-automate-backups"><strong>4. Automate Backups</strong><a class="headerlink" href="#4-automate-backups" title="Permanent link">¶</a></h4>
-<ul>
-<li><strong>Action</strong>: Create a script to automate the backup process.</li>
-<li><strong>Details</strong>: Use the provided example backup script, modifying paths
-  and destinations as needed. Schedule this script using <code>cron</code> for
-  periodic backups.</li>
-</ul>
-<h4 id="5-version-control-integration"><strong>5. Version Control Integration</strong><a class="headerlink" href="#5-version-control-integration" title="Permanent link">¶</a></h4>
-<ul>
-<li><strong>Action</strong>: Ensure that your project code is under version control
-  (e.g., Git).</li>
-<li><strong>Purpose</strong>: Facilitates matching experiment results with code
-  versions, enhancing reproducibility.</li>
-</ul>
-<h2 id="verification-steps"><strong>Verification Steps</strong><a class="headerlink" href="#verification-steps" title="Permanent link">¶</a></h2>
-<ol>
-<li><strong>Check Exported Data</strong>: Ensure that the JSON or CSV file contains
-   all relevant experiment data.</li>
-<li><strong>Validate Database Copy</strong>: Verify that the <code>local.db</code> file is
-   correctly copied to your backup location and is not corrupted.</li>
-<li><strong>Artifact Backup</strong>: Confirm that all files in the <code>artifacts</code>
-   directory are present in your backup location.</li>
-<li><strong>Test Automation Script</strong>: Execute your backup script manually to
-   ensure it works as expected. Check the backup destination for the new
-   backup folder.</li>
-<li><strong>Review Backup Frequency</strong>: Ensure that your backup script is
-   scheduled appropriately and runs at the desired frequency.</li>
-</ol>
-<h2 id="troubleshooting"><strong>Troubleshooting</strong><a class="headerlink" href="#troubleshooting" title="Permanent link">¶</a></h2>
-<ul>
-<li><strong>Issue</strong>: Export command fails.</li>
-<li><strong>Solution</strong>: Check your W&amp;B username and project name for typos.
-    Ensure you're connected to the internet if using W&amp;B cloud.</li>
-<li><strong>Issue</strong>: Backup script does not run automatically.</li>
-<li><strong>Solution</strong>: Verify the <code>cron</code> job setup. Check for syntax errors
-    in your cron configuration.</li>
-<li><strong>Issue</strong>: Insufficient backup space.</li>
-<li><strong>Solution</strong>: Regularly monitor your backup location's available
-    space. Consider using cloud storage for additional capacity.</li>
-</ul>
-<h3 id="automating-backups-with-a-script"><strong>Automating Backups with a Script</strong><a class="headerlink" href="#automating-backups-with-a-script" title="Permanent link">¶</a></h3>
-<p>To simplify and automate the backup process for Weights &amp; Biases
-experiments on your MacBook Pro, you can use a shell script. This
-section provides an example script and instructions on how to set it up
-for automated execution using <code>cron</code>.</p>
-<h4 id="backup-script-example"><strong>Backup Script Example</strong><a class="headerlink" href="#backup-script-example" title="Permanent link">¶</a></h4>
-<p>Below is an example of a backup script named <code>wandb_backup.sh</code>. This
-script backs up the W&amp;B local database and artifacts to a specified
-backup directory.</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="ch">#!/bin/bash</span>
+<p>Next, create a test file named <code>test_calculator.py</code> in the <code>tests</code>
+directory with the following content:</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="c1"># tests/test_calculator.py</span>
+<a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a>
+<a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="kn">from</span> <span class="nn">src.calculator</span> <span class="kn">import</span> <span class="n">add</span>
+<a href="#__codelineno-1-4" id="__codelineno-1-4" name="__codelineno-1-4"></a>
+<a href="#__codelineno-1-5" id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="k">def</span> <span class="nf">test_add</span><span class="p">():</span>
+<a href="#__codelineno-1-6" id="__codelineno-1-6" name="__codelineno-1-6"></a>    <span class="k">assert</span> <span class="n">add</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span> <span class="o">==</span> <span class="mi">5</span>
+<a href="#__codelineno-1-7" id="__codelineno-1-7" name="__codelineno-1-7"></a>    <span class="k">assert</span> <span class="n">add</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span>
+<a href="#__codelineno-1-8" id="__codelineno-1-8" name="__codelineno-1-8"></a>    <span class="k">assert</span> <span class="n">add</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="o">-</span><span class="mi">2</span>
+</code></pre></div>
+<h3 id="running-the-tests">Running the Tests<a class="headerlink" href="#running-the-tests" title="Permanent link">¶</a></h3>
+<p>To run the tests, use the following command:</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a>poetry<span class="w"> </span>run<span class="w"> </span>pytest
+</code></pre></div>
+<p>You should see output indicating that the tests have passed.</p>
+<h2 id="advanced-features">Advanced Features<a class="headerlink" href="#advanced-features" title="Permanent link">¶</a></h2>
+<h3 id="fixtures">Fixtures<a class="headerlink" href="#fixtures" title="Permanent link">¶</a></h3>
+<p>Fixtures are used to manage setup and teardown code. Here’s an example
+of using a fixture:</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="c1"># tests/test_calculator.py</span>
 <a href="#__codelineno-3-2" id="__codelineno-3-2" name="__codelineno-3-2"></a>
-<a href="#__codelineno-3-3" id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="c1"># Define the source and destination directories</span>
-<a href="#__codelineno-3-4" id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="nv">WANDB_DIR</span><span class="o">=</span><span class="s2">"</span><span class="nv">$HOME</span><span class="s2">/wandb"</span>
-<a href="#__codelineno-3-5" id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="nv">BACKUP_DIR</span><span class="o">=</span><span class="s2">"/path/to/your/backup/location/</span><span class="k">$(</span>date<span class="w"> </span>+%Y%m%d_%H%M%S<span class="k">)</span><span class="s2">"</span>
-<a href="#__codelineno-3-6" id="__codelineno-3-6" name="__codelineno-3-6"></a>
-<a href="#__codelineno-3-7" id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="c1"># Create a new backup directory with a timestamp</span>
-<a href="#__codelineno-3-8" id="__codelineno-3-8" name="__codelineno-3-8"></a>mkdir<span class="w"> </span>-p<span class="w"> </span><span class="s2">"</span><span class="nv">$BACKUP_DIR</span><span class="s2">"</span>
+<a href="#__codelineno-3-3" id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="kn">import</span> <span class="nn">pytest</span>
+<a href="#__codelineno-3-4" id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="kn">from</span> <span class="nn">src.calculator</span> <span class="kn">import</span> <span class="n">add</span>
+<a href="#__codelineno-3-5" id="__codelineno-3-5" name="__codelineno-3-5"></a>
+<a href="#__codelineno-3-6" id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="nd">@pytest</span><span class="o">.</span><span class="n">fixture</span>
+<a href="#__codelineno-3-7" id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="k">def</span> <span class="nf">numbers</span><span class="p">():</span>
+<a href="#__codelineno-3-8" id="__codelineno-3-8" name="__codelineno-3-8"></a>    <span class="k">return</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span>
 <a href="#__codelineno-3-9" id="__codelineno-3-9" name="__codelineno-3-9"></a>
-<a href="#__codelineno-3-10" id="__codelineno-3-10" name="__codelineno-3-10"></a><span class="c1"># Backup the local database</span>
-<a href="#__codelineno-3-11" id="__codelineno-3-11" name="__codelineno-3-11"></a>cp<span class="w"> </span><span class="s2">"</span><span class="nv">$WANDB_DIR</span><span class="s2">/local.db"</span><span class="w"> </span><span class="s2">"</span><span class="nv">$BACKUP_DIR</span><span class="s2">"</span>
-<a href="#__codelineno-3-12" id="__codelineno-3-12" name="__codelineno-3-12"></a>
-<a href="#__codelineno-3-13" id="__codelineno-3-13" name="__codelineno-3-13"></a><span class="c1"># Backup artifacts</span>
-<a href="#__codelineno-3-14" id="__codelineno-3-14" name="__codelineno-3-14"></a>cp<span class="w"> </span>-R<span class="w"> </span><span class="s2">"</span><span class="nv">$WANDB_DIR</span><span class="s2">/artifacts"</span><span class="w"> </span><span class="s2">"</span><span class="nv">$BACKUP_DIR</span><span class="s2">/artifacts"</span>
-<a href="#__codelineno-3-15" id="__codelineno-3-15" name="__codelineno-3-15"></a>
-<a href="#__codelineno-3-16" id="__codelineno-3-16" name="__codelineno-3-16"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">"Backup completed successfully."</span>
+<a href="#__codelineno-3-10" id="__codelineno-3-10" name="__codelineno-3-10"></a><span class="k">def</span> <span class="nf">test_add</span><span class="p">(</span><span class="n">numbers</span><span class="p">):</span>
+<a href="#__codelineno-3-11" id="__codelineno-3-11" name="__codelineno-3-11"></a>    <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">numbers</span>
+<a href="#__codelineno-3-12" id="__codelineno-3-12" name="__codelineno-3-12"></a>    <span class="k">assert</span> <span class="n">add</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span> <span class="o">==</span> <span class="mi">5</span>
 </code></pre></div>
-<p><strong>Instructions:</strong></p>
-<ol>
-<li><strong>Create the Script</strong>:</li>
-<li>Open your terminal.</li>
-<li>Use a text editor (e.g., <code>nano</code> or <code>vim</code>) to create a new file
-     named <code>wandb_backup.sh</code>.</li>
-<li>Copy and paste the script above into the file.</li>
-<li>
-<p>Replace <code>/path/to/your/backup/location</code> with the actual path where
-     you want to store your backups.</p>
-</li>
-<li>
-<p><strong>Make the Script Executable</strong>:</p>
-</li>
-<li>
-<p>Run the following command in your terminal:
-     <div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a>chmod<span class="w"> </span>+x<span class="w"> </span>wandb_backup.sh
-</code></pre></div></p>
-</li>
-<li>
-<p><strong>Automating Execution with <code>cron</code></strong>:</p>
-</li>
-<li>Open your crontab for editing by running:
-     <div class="highlight"><pre><span></span><code><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a>crontab<span class="w"> </span>-e
-</code></pre></div></li>
-<li>Add a line to schedule the script execution. For example, to run
-     the backup daily at 2 AM, add:
-     <div class="highlight"><pre><span></span><code><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a>0 2 * * * /path/to/your/wandb_backup.sh
-</code></pre></div></li>
-<li>Save and close the editor. <code>cron</code> will now execute the script
-     according to the schedule.</li>
-</ol>
-<h4 id="verification-and-monitoring"><strong>Verification and Monitoring</strong><a class="headerlink" href="#verification-and-monitoring" title="Permanent link">¶</a></h4>
-<ul>
-<li>After setting up the script and scheduling it with <code>cron</code>, verify that
-  it runs as expected by checking the backup directory for new backups
-  after the scheduled time.</li>
-<li>Monitor your system logs and the backup directory to ensure ongoing
-  successful executions. You might want to set up email notifications
-  for <code>cron</code> jobs to stay informed about the backup script's execution
-  status.</li>
-</ul>
-<h4 id="conclusion"><strong>Conclusion</strong><a class="headerlink" href="#conclusion" title="Permanent link">¶</a></h4>
-<p>Automating the backup process ensures that your Weights &amp; Biases
-experiments and data are regularly saved without manual intervention. By
-following these steps, you create a resilient and efficient backup
-workflow, safeguarding your valuable machine learning experiments.</p>
-<h2 id="conclusion_1"><strong>Conclusion</strong><a class="headerlink" href="#conclusion_1" title="Permanent link">¶</a></h2>
-<p>By following these steps, you've created a robust backup strategy for
-your Weights &amp; Biases experiments. Regular backups ensure that your data
-is secure and that your experiments are reproducible, regardless of
-unforeseen data loss.</p>
-<h3 id="further-assistance"><strong>Further Assistance</strong><a class="headerlink" href="#further-assistance" title="Permanent link">¶</a></h3>
-<p>For more detailed information on W&amp;B features and troubleshooting, visit
-the <a href="https://docs.wandb.ai/">Weights &amp; Biases documentation</a>.</p>
+<h3 id="parameterization">Parameterization<a class="headerlink" href="#parameterization" title="Permanent link">¶</a></h3>
+<p>Parameterization allows you to run a test with multiple sets of inputs.
+Here’s an example:</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="c1"># tests/test_calculator.py</span>
+<a href="#__codelineno-4-2" id="__codelineno-4-2" name="__codelineno-4-2"></a>
+<a href="#__codelineno-4-3" id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="kn">import</span> <span class="nn">pytest</span>
+<a href="#__codelineno-4-4" id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="kn">from</span> <span class="nn">src.calculator</span> <span class="kn">import</span> <span class="n">add</span>
+<a href="#__codelineno-4-5" id="__codelineno-4-5" name="__codelineno-4-5"></a>
+<a href="#__codelineno-4-6" id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">parametrize</span><span class="p">(</span><span class="s2">"a, b, expected"</span><span class="p">,</span> <span class="p">[</span>
+<a href="#__codelineno-4-7" id="__codelineno-4-7" name="__codelineno-4-7"></a>    <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span>
+<a href="#__codelineno-4-8" id="__codelineno-4-8" name="__codelineno-4-8"></a>    <span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
+<a href="#__codelineno-4-9" id="__codelineno-4-9" name="__codelineno-4-9"></a>    <span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">)</span>
+<a href="#__codelineno-4-10" id="__codelineno-4-10" name="__codelineno-4-10"></a><span class="p">])</span>
+<a href="#__codelineno-4-11" id="__codelineno-4-11" name="__codelineno-4-11"></a><span class="k">def</span> <span class="nf">test_add</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">expected</span><span class="p">):</span>
+<a href="#__codelineno-4-12" id="__codelineno-4-12" name="__codelineno-4-12"></a>    <span class="k">assert</span> <span class="n">add</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span> <span class="o">==</span> <span class="n">expected</span>
+</code></pre></div>
+<h2 id="conclusion">Conclusion<a class="headerlink" href="#conclusion" title="Permanent link">¶</a></h2>
+<p>This guide introduced you to the basics of unit testing with Pytest. We
+covered the importance of unit testing, the benefits of using Pytest,
+and how to write and run your first unit test. With this foundation, you
+can start writing tests for your codebase, ensuring its reliability and
+maintainability. As you become more familiar with Pytest, you can
+explore its advanced features to further enhance your testing workflow.
+Happy testing!</p>
 <aside class="md-source-file">
 <span class="md-source-file__fact">
 <span class="md-icon" title="Last update">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 9, 2024</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 7, 2024</span>
 </span>
 </aside>
 </article>
