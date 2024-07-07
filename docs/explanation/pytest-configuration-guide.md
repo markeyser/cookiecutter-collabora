@@ -8,15 +8,9 @@ code quality, and enhance developer productivity by leveraging various
 Pytest plugins and settings.
 
 !!! tip "Default Pytest Configuration"
-    The Pytest configuration in this guide is the default configuration
-    included in the “Cookiecutter Collabora” project. This setup is
-    designed to provide a robust starting point for running tests
-    efficiently and effectively.
+    The Pytest configuration in this guide is the default configuration included in the “Cookiecutter Collabora” project. This setup is designed to provide a robust starting point for running tests efficiently and effectively.
 
-    We invite you to adapt and customize
-    this configuration to suit your specific project needs and
-    preferences. Modify the settings as needed to optimize your testing
-    workflow and achieve the best results.
+    We invite you to adapt and customize this configuration to suit your specific project needs and preferences. Modify the settings as needed to optimize your testing workflow and achieve the best results.
 
 ## Configuration Overview
 
@@ -112,40 +106,50 @@ log_date_format = "%Y-%m-%d %H:%M:%S"
   - `log_format = "%(asctime)s %(levelname)s %(message)s"`: Specifies the log message format.
   - `log_date_format = "%Y-%m-%d %H:%M:%S"`: Specifies the date format for log messages.
 
-??? question "Why are Pytest extensions under [tool.poetry.dev-dependencies]?"
-    Pytest is primarily used during the development phase of a project
-    and is not intended for use in production or runtime environments.
-    Unit tests, written using Pytest, help developers catch bugs early,
-    facilitate code refactoring, and ensure code quality before
-    deployment.
+## Pre-commit Configuration
 
-    Running Pytest in production can introduce unnecessary
-    performance overhead and potential security risks. Instead, unit
-    tests are typically executed in CI/CD pipelines to verify code
-    functionality and reliability before the code is deployed to
-    production. This approach ensures that production environments
-    remain optimized for performance and stability.
+To ensure that tests are run automatically before committing or pushing code, you can use the pre-commit framework with the following configuration in your `.pre-commit-config.yaml` file:
+
+```yaml
+repos:
+  - repo: local
+    hooks:
+      - id: pytest
+        name: Run PyTest
+        entry: pytest
+        language: system
+        types: [python]
+        stages: [pre-commit, pre-push]
+        args: ["tests/"]
+```
+
+### Explanation
+
+- **`repo: local`**: Specifies that this hook is defined locally rather than fetched from a remote repository.
+- **`id: pytest`**: The unique identifier for this hook.
+- **`name: Run PyTest`**: A descriptive name for the hook.
+- **`entry: pytest`**: The command to run Pytest.
+- **`language: system`**: Indicates that the hook uses system-installed tools.
+- **`types: [python]`**: Specifies that this hook should run for Python files.
+- **`stages: [pre-commit, pre-push]`**: Defines when the hook should run, here both before commit and before push.
+- **`args: ["tests/"]`**: Arguments passed to Pytest, specifying the directory to run tests from.
+
+??? question "Why are Pytest extensions under [tool.poetry.dev-dependencies]?"
+    Pytest is primarily used during the development phase of a project and is not intended for use in production or runtime environments. Unit tests, written using Pytest, help developers catch bugs early, facilitate code refactoring, and ensure code quality before deployment.
+
+    Running Pytest in production can introduce unnecessary performance overhead and potential security risks. Instead, unit tests are typically executed in CI/CD pipelines to verify code functionality and reliability before the code is deployed to production. This approach ensures that production environments remain optimized for performance and stability.
+
+    This is why we include Pytest and its extensions under `[tool.poetry.dev-dependencies]` in our configuration, ensuring they are available during development but not included in the production environment.
 
 ??? question "Why Configure Both .vscode/settings.json and pyproject.toml?"
-    Configuring both `.vscode/settings.json` and `pyproject.toml`
-    ensures consistent and integrated testing in your development
-    environment.
+    Configuring both `.vscode/settings.json` and `pyproject.toml` ensures consistent and integrated testing in your development environment.
 
-    - **.vscode/settings.json**: Customizes Pytest behavior
-    in Visual Studio Code. With the Python extension installed, the
-    beaker iconappears in the Activity bar, opening the Test
-    Explorer for running and debugging tests directly in VS Code.
-    
-    - **pyproject.toml**: Manages project dependencies and centralizes
-    Pytest configurations for use across different environments.
+    - **.vscode/settings.json**: Customizes Pytest behavior in Visual Studio Code. With the Python extension installed, the beaker icon (flask) appears in the Activity bar, opening the Test Explorer for running and debugging tests directly in VS Code.
+    - **pyproject.toml**: Manages project dependencies and centralizes Pytest configurations for use across different environments.
 
 ## Conclusion
 
-This configuration ensures that tests are run efficiently and
-effectively within VS Code, leveraging parallel execution, code
-coverage, and timeouts to maintain code quality and performance. By
-following these settings, developers can ensure a consistent and
-productive testing environment.
+This configuration ensures that tests are run efficiently and effectively within VS Code, leveraging parallel execution, code coverage, and timeouts to maintain code quality and performance. By following these settings, developers can ensure a consistent and productive testing environment.
 
 ## See also
 
