@@ -274,121 +274,132 @@
         "**/.next/**"
     ],
     "todohighlight.defaultStyle": {},
-"files.associations": {
-    ".gitignore": "bat"
-},
-"github-enterprise.uri": "https://git.nylcloud.com/",
-"terminal.integrated.tabs.defaultColor": null,
-"cSpell.language": "en",
-"cSpell.maxNumberOfProblems": 100,
-"cSpell.numSuggestions": 8,
-"cSpell.minWordLength": 4,
-"cSpell.enabledLanguageIds": [
-    "csharp",
-    "go",
-    "javascript",
-    "javascriptreact",
-    "markdown",
-    "php",
-    "plaintext",
-    "typescript",
-    "typescriptreact",
-    "yml",
-    "python",
-    "R"
-],
-"cSpell.enabled": true,
-"cSpell.showStatus": true,
-"cSpell.words": [
-    "autoflake"
-],
-"cSpell.allowCompoundWords": false,
-"cSpell.ignoreWords": [
-    "behaviour"
-],
-"cSpell.userWords": [
-    "arange",
-    "iloc",
-    "interquartile",
-    "lineplot",
-    "subseting",
-    "yhat",
-    "astype",
-    "bytree",
-    "cnty",
-    "colsample",
-    "colwidth",
-    "dataframe",
-    "dateutil",
-    "dtype",
-    "finfo",
-    "fips",
-    "grps",
-    "isin",
-    "isort",
-    "joblib",
-    "mamimo",
-    "MAPE",
-    "matplotlib",
-    "nonbrand",
-    "nthread",
-    "pyplot",
-    "rcvm",
-    "rcvq",
-    "relativedelta",
-    "RMSE",
-    "savefig",
-    "scikit",
-    "scipy",
-    "shap",
-    "SHAP",
-    "Shapley",
-    "sklearn",
-    "softmax",
-    "statsmodels",
-    "tweedie",
-    "xgboost"
-],
-"cSpell.ignorePaths": [
-    "node_modules", 
-    "**/node_modules",
-    "**/node_modules/**",
-    "node_modules/**",
-    "vscode-extension",
-    ".git",
-    "*.dll",
-    "**/*.dll"
-],
-"cSpell.flagWords": [
-    "hte"
-],
-"cSpell.spellCheckDelayMs": 50,
-"[markdown]": {
-    "editor.quickSuggestions": {
-        "other": true,
-        "comments": true,
-        "strings": true
+    "files.associations": {
+        ".gitignore": "bat"
+    },
+    "github-enterprise.uri": "https://git.nylcloud.com/",
+    "terminal.integrated.tabs.defaultColor": null,
+    "cSpell.language": "en",
+    "cSpell.maxNumberOfProblems": 100,
+    "cSpell.numSuggestions": 8,
+    "cSpell.minWordLength": 4,
+    "cSpell.enabledLanguageIds": [
+        "csharp",
+        "go",
+        "javascript",
+        "javascriptreact",
+        "markdown",
+        "php",
+        "plaintext",
+        "typescript",
+        "typescriptreact",
+        "yml",
+        "python",
+        "R"
+    ],
+    "cSpell.enabled": true,
+    "cSpell.showStatus": true,
+    "cSpell.words": [
+        "autoflake"
+    ],
+    "cSpell.allowCompoundWords": false,
+    "cSpell.ignoreWords": [
+        "behaviour"
+    ],
+    "cSpell.userWords": [
+        "arange",
+        "iloc",
+        "interquartile",
+        "lineplot",
+        "subseting",
+        "yhat",
+        "astype",
+        "bytree",
+        "cnty",
+        "colsample",
+        "colwidth",
+        "dataframe",
+        "dateutil",
+        "dtype",
+        "finfo",
+        "fips",
+        "grps",
+        "isin",
+        "isort",
+        "joblib",
+        "mamimo",
+        "MAPE",
+        "matplotlib",
+        "nonbrand",
+        "nthread",
+        "pyplot",
+        "rcvm",
+        "rcvq",
+        "relativedelta",
+        "RMSE",
+        "savefig",
+        "scikit",
+        "scipy",
+        "shap",
+        "SHAP",
+        "Shapley",
+        "sklearn",
+        "softmax",
+        "statsmodels",
+        "tweedie",
+        "xgboost"
+    ],
+    "cSpell.ignorePaths": [
+        "node_modules", 
+        "**/node_modules",
+        "**/node_modules/**",
+        "node_modules/**",
+        "vscode-extension",
+        ".git",
+        "*.dll",
+        "**/*.dll"
+    ],
+    "cSpell.flagWords": [
+        "hte"
+    ],
+    "cSpell.spellCheckDelayMs": 50,
+    "[markdown]": {
+        "editor.quickSuggestions": {
+            "other": true,
+            "comments": true,
+            "strings": true
+        }
+    },
+    "markdownlint.config": {
+        "MD046": false,
+        "MD033": false
+    },
+    "redhat.telemetry.enabled": false,
+    "notebook.markup.fontSize": 16,
+    "notebook.output.wordWrap": true,
+    "notebook.formatOnCellExecution": false,
+    "notebook.formatOnSave.enabled": false,
+    "workbench.editorAssociations": {
+        "*.m4a": "wavPreview.audioPreview"
+    },
+    "code-runner.executorMap": {
+        "javascript": "node",
+        "java": "cd $dir && javac $fileName && java $fileNameWithoutExt",
+        "c": "cd $dir && gcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+        "cpp": "cd $dir && g++ $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+        "objective-c": "cd $dir && gcc -framework Cocoa $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+        "php": "php",
+        "python": "\"$pythonPath\" $fullFileName",
+    "python.testing.pytestArgs": [
+        "tests",
+        "--cov=src",
+        "--cov-report=term-missing",
+        "-v",
+        "-n",
+        "2",
+        "--timeout=5"
+        ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true
     }
-},
-"markdownlint.config": {
-    "MD046": false,
-    "MD033": false
-},
-"redhat.telemetry.enabled": false,
-"notebook.markup.fontSize": 16,
-"notebook.output.wordWrap": true,
-"notebook.formatOnCellExecution": false,
-"notebook.formatOnSave.enabled": false,
-"workbench.editorAssociations": {
-    "*.m4a": "wavPreview.audioPreview"
-},
-"code-runner.executorMap": {
-    "javascript": "node",
-    "java": "cd $dir && javac $fileName && java $fileNameWithoutExt",
-    "c": "cd $dir && gcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
-    "cpp": "cd $dir && g++ $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
-    "objective-c": "cd $dir && gcc -framework Cocoa $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
-    "php": "php",
-    "python": "\"$pythonPath\" $fullFileName"
-}
 }

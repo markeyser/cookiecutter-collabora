@@ -41,6 +41,7 @@
 - [Moving from Jupyter Notebooks to Production Python Code](./notebook-to-production.md)
 - [Static Type Checking with Mypy](./type-checking-mypy.md)
 - [Using Pre-Commit Hooks to Enforce Coding Standards](./pre-commit-hooks-guide.md)
+- [Pytest Introduction Guide](./pytest-inroduction-guide.md)
   
 !!! check "Optimizing Your Workflow"
     These guides are intentionally designed to function independently, providing the flexibility to directly engage with topics pertinent to your immediate challenges. As a compendium of efficient, practical solutions, they are an excellent resource for enhancing productivity and mastering various development tasks.

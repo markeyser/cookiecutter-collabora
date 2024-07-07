@@ -162,7 +162,8 @@ nav:
       - Best Practices for Creating JIRA Stories for ML/AI Projects: how-to-guides/jira-story-best-practices.md
       - Moving from Jupyter Notebooks to Production Python Code: how-to-guides/notebook-to-production.md
       - Static Type Checking with Mypy: how-to-guides/type-checking-mypy.md
-      - Using Pre-Commit Hooks to Enforce Coding Standards:  how-to-guides/pre-commit-hooks-guide.md
+      - Using Pre-Commit Hooks to Enforce Coding Standards: how-to-guides/pre-commit-hooks-guide.md
+      - Pytest Introduction Guide: how-to-guides/pytest-inroduction-guide.md
   - Explanation:
       - TOC: explanation/toc-explanation.md
       - Understanding DVC: explanation/dvc-understanding-dvs.md
@@ -171,6 +172,7 @@ nav:
       - Notebook and Script Naming Conventions in ML Projects: explanation/ml-naming-conventions.md
       - Model Persistence File Naming Conventions: explanation/model-persistence-naming-conventions.md
       - Introduction to Naming Conventions for AI Project Assets: explanation/naming-conventions.md
+      - Pytest Configuration Guide: explanation/pytest-configuration-guide.md
   # - API Reference:
   #     - TOC: api-reference/toc-api-reference.md
 
