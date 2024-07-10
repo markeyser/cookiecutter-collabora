@@ -51,6 +51,11 @@
     mypy your_script.py
     ```
 
+!!! info "Detailed Mypy Configuration Guide"
+    For a detailed explanation and setup for Mypy configuration within
+    VS Code and `pyproject.toml`, see the [Mypy Configuration
+    Guide](../explanation/mypy-configuration-guide.md).
+
 ## Why Use Static Typing with Python?
 
 Python's dynamic typing allows for flexible and rapid development but
