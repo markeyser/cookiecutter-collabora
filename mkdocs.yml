@@ -173,6 +173,7 @@ nav:
       - Model Persistence File Naming Conventions: explanation/model-persistence-naming-conventions.md
       - Introduction to Naming Conventions for AI Project Assets: explanation/naming-conventions.md
       - Pytest Configuration Guide: explanation/pytest-configuration-guide.md
+      - Mypy Configuration Guide: explanation/mypy-configuration-guide.md
   # - API Reference:
   #     - TOC: api-reference/toc-api-reference.md
 

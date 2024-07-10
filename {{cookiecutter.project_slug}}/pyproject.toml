@@ -207,3 +207,9 @@ repos = [
     ] },
   ] },
 ]
+
+[tool.mypy]
+python_version = "3.10"
+disallow_untyped_defs = true
+disallow_untyped_calls = true
+ignore_missing_imports = true

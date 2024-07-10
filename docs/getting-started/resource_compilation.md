@@ -64,6 +64,7 @@ framework](../https://diataxis.fr/).
     - :octicons-light-bulb-16: [Static Type Checking with Mypy](../how-to-guides/type-checking-mypy.md) - An in-depth guide on using Mypy to enhance your Python code with static type checking, including type inference, union types, optionals, and advanced features like overloads and generics.
     - :octicons-beaker-16: [Pytest Introduction Guide](../how-to-guides/pytest-inroduction-guide.md) - A beginner's guide to unit testing with Pytest, covering the basics of unit testing, its importance, and how to write and run tests using Pytest.
     - :octicons-gear-16: [Pytest Configuration Guide](../explanation/pytest-configuration-guide.md) - Detailed explanation and setup for Pytest configuration within VS Code, ensuring efficient and effective test execution.
+    - :octicons-gear-16: [Mypy Configuration Guide](../explanation/mypy-configuration-guide.md) - Detailed explanation and setup for Mypy configuration within VS Code and `pyproject.toml`, ensuring efficient and effective type checking.
 
 ??? custom "Data Version Control with DVC"
     - :octicons-book-16: [Understanding DVC](../explanation/dvc-understanding-dvs.md) - Essentials of DVC for large datasets management in ML, covering integration, versioning, and reproducibility.:construction:
