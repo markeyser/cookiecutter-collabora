@@ -664,6 +664,13 @@
   </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../how-to-guides/cofig-files/">
+<span class="md-ellipsis">
+    Uisng config files
+  </span>
+</a>
+</li>
 </ul>
 </nav>
 </li>
@@ -817,12 +824,31 @@ flowchart TB
   classDef blue fill:#5bc0de,stroke:#333,stroke-width:2px,color:#fff;
   class A,B,C,F,H,I,J,L,M,N highlighted;
   class R,S,T,U blue;</code></pre>
+<pre class="mermaid"><code>---
+title: Software Development Cycle
+---
+flowchart TB
+  A("&lt;div style='text-align: left;'&gt;&lt;b&gt;1. Initiation and Planning:&lt;/b&gt; &lt;br&gt;• Scope and Requirements &lt;br&gt;• &lt;a href='https://markeyser.github.io/cookiecutter-collabora/how-to-guides/jira-story-best-practices/?h=jira' style='text-decoration: underline; color: #ff00ff;'&gt;Open Jira Story&lt;/a&gt; &lt;br&gt;• &lt;a href='https://markeyser.github.io/cookiecutter-collabora/how-to-guides/git-branch-naming-standards/'&gt;Create a branch&lt;/a&gt;&lt;/div&gt;")
+  B("&lt;div style='text-align: left;'&gt;&lt;b&gt;2. Development:&lt;/b&gt; &lt;br&gt;• Develop Python Code&lt;br&gt;• &lt;a href='https://markeyser.github.io/cookiecutter-collabora/how-to-guides/jira-story-best-practices/?h=jira' style='text-decoration: underline; color: #ff00ff;'&gt;Error handling and logging&lt;/a&gt; &lt;br&gt;• &lt;a href='https://markeyser.github.io/cookiecutter-collabora/how-to-guides/git-branch-naming-standards/'&gt;Inline comments and docstrings&lt;/a&gt;&lt;/div&gt;")
+  A ==&gt; B
+  C("&lt;div style='text-align: left;'&gt;&lt;b&gt;3. Refactoring:&lt;/b&gt; &lt;br&gt;• Type hints&lt;br&gt;• &lt;a href='https://markeyser.github.io/cookiecutter-collabora/how-to-guides/jira-story-best-practices/?h=jira' style='text-decoration: underline; color: #ff00ff;'&gt;Config files&lt;/a&gt; &lt;br&gt;• &lt;a href='https://markeyser.github.io/cookiecutter-collabora/how-to-guides/config-files/'&gt;Document&lt;/a&gt;&lt;/div&gt;")
+  B ==&gt; C
+  D("&lt;div style='text-align: left;'&gt;&lt;b&gt;4. Quality:&lt;/b&gt; &lt;br&gt;• &lt;a href='https://markeyser.github.io/cookiecutter-collabora/how-to-guides/jira-story-best-practices/?h=jira' style='text-decoration: underline; color: #ff00ff;'&gt;Run formatter&lt;/a&gt;&lt;br&gt;• &lt;a href='https://markeyser.github.io/cookiecutter-collabora/how-to-guides/jira-story-best-practices/?h=jira' style='text-decoration: underline; color: #ff00ff;'&gt;Run linter&lt;/a&gt; &lt;br&gt;• &lt;a href='https://markeyser.github.io/cookiecutter-collabora/how-to-guides/git-branch-naming-standards/'&gt;Run Static typing checker&lt;/a&gt;&lt;br&gt;• &lt;a href='https://markeyser.github.io/cookiecutter-collabora/how-to-guides/git-branch-naming-standards/'&gt;Perform unit tests&lt;/a&gt;&lt;br&gt;• &lt;a href='https://markeyser.github.io/cookiecutter-collabora/how-to-guides/git-branch-naming-standards/'&gt;Conduct integration testing&lt;/a&gt;&lt;br&gt;• &lt;a href='https://markeyser.github.io/cookiecutter-collabora/how-to-guides/git-branch-naming-standards/'&gt;Optimize performance&lt;/a&gt;&lt;/div&gt;")
+  C ==&gt; D
+  E("&lt;div style='text-align: left;'&gt;&lt;b&gt;4. Comprehensive Testing and Review:&lt;/b&gt; &lt;br&gt;• &lt;a href='https://markeyser.github.io/cookiecutter-collabora/how-to-guides/jira-story-best-practices/?h=jira' style='text-decoration: underline; color: #ff00ff;'&gt;Perform end-to-end testing&lt;/a&gt;&lt;br&gt;• &lt;a href='https://markeyser.github.io/cookiecutter-collabora/how-to-guides/jira-story-best-practices/?h=jira' style='text-decoration: underline; color: #ff00ff;'&gt;Conduct code coverage analysis&lt;/a&gt; &lt;br&gt;• &lt;a href='https://markeyser.github.io/cookiecutter-collabora/how-to-guides/git-branch-naming-standards/'&gt;Perform additional unit tests&lt;/a&gt;&lt;br&gt;• &lt;a href='https://markeyser.github.io/cookiecutter-collabora/how-to-guides/git-branch-naming-standards/'&gt;Perform unit tests&lt;/a&gt;&lt;/div&gt;")
+  D ==&gt; E
+  F("&lt;div style='text-align: left;'&gt;&lt;b&gt;5. Quality Assurance and Compliance:&lt;/b&gt; &lt;br&gt;• &lt;a href='https://markeyser.github.io/cookiecutter-collabora/how-to-guides/jira-story-best-practices/?h=jira' style='text-decoration: underline; color: #ff00ff;'&gt;Pass pre-commit hooks&lt;/a&gt;&lt;br&gt;• &lt;a href='https://markeyser.github.io/cookiecutter-collabora/how-to-guides/jira-story-best-practices/?h=jira' style='text-decoration: underline; color: #ff00ff;'&gt;Update documentation&lt;/a&gt; &lt;br&gt;• &lt;a href='https://markeyser.github.io/cookiecutter-collabora/how-to-guides/git-branch-naming-standards/'&gt;Perform additional unit tests&lt;/a&gt;&lt;br&gt;• &lt;a href='https://markeyser.github.io/cookiecutter-collabora/how-to-guides/git-branch-naming-standards/'&gt;Perform unit tests&lt;/a&gt;&lt;br&gt;• &lt;a href='https://markeyser.github.io/cookiecutter-collabora/how-to-guides/git-branch-naming-standards/'&gt;Prepare deployment procedures and update CI/CD pipelines&lt;/a&gt;&lt;/div&gt;")
+  E ==&gt; F
+  classDef highlighted fill:#d9534f,stroke:#333,stroke-width:2px,color:#fff;
+  classDef blue fill:#5bc0de,stroke:#333,stroke-width:2px,color:#fff;
+  class H,I,J,L,M,N highlighted;
+  class R,S,T,U blue;</code></pre>
 <aside class="md-source-file">
 <span class="md-source-file__fact">
 <span class="md-icon" title="Last update">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 7, 2024</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 24, 2024</span>
 </span>
 </aside>
 </article>
