@@ -39,3 +39,27 @@ flowchart TB
   class A,B,C,F,H,I,J,L,M,N highlighted;
   class R,S,T,U blue;
 ```
+
+
+```mermaid
+---
+title: Software Development Cycle
+---
+flowchart TB
+  A("<div style='text-align: left;'><b>1. Initiation and Planning:</b> <br>• Scope and Requirements <br>• <a href='https://markeyser.github.io/cookiecutter-collabora/how-to-guides/jira-story-best-practices/?h=jira' style='text-decoration: underline; color: #ff00ff;'>Open Jira Story</a> <br>• <a href='https://markeyser.github.io/cookiecutter-collabora/how-to-guides/git-branch-naming-standards/'>Create a branch</a></div>")
+  B("<div style='text-align: left;'><b>2. Development:</b> <br>• Develop Python Code<br>• <a href='https://markeyser.github.io/cookiecutter-collabora/how-to-guides/jira-story-best-practices/?h=jira' style='text-decoration: underline; color: #ff00ff;'>Error handling and logging</a> <br>• <a href='https://markeyser.github.io/cookiecutter-collabora/how-to-guides/git-branch-naming-standards/'>Inline comments and docstrings</a></div>")
+  A ==> B
+  C("<div style='text-align: left;'><b>3. Refactoring:</b> <br>• Type hints<br>• <a href='https://markeyser.github.io/cookiecutter-collabora/how-to-guides/jira-story-best-practices/?h=jira' style='text-decoration: underline; color: #ff00ff;'>Config files</a> <br>• <a href='https://markeyser.github.io/cookiecutter-collabora/how-to-guides/git-branch-naming-standards/'>Document</a></div>")
+  B ==> C
+  D("<div style='text-align: left;'><b>4. Quality:</b> <br>• <a href='https://markeyser.github.io/cookiecutter-collabora/how-to-guides/jira-story-best-practices/?h=jira' style='text-decoration: underline; color: #ff00ff;'>Run formatter</a><br>• <a href='https://markeyser.github.io/cookiecutter-collabora/how-to-guides/jira-story-best-practices/?h=jira' style='text-decoration: underline; color: #ff00ff;'>Run linter</a> <br>• <a href='https://markeyser.github.io/cookiecutter-collabora/how-to-guides/git-branch-naming-standards/'>Run Static typing checker</a><br>• <a href='https://markeyser.github.io/cookiecutter-collabora/how-to-guides/git-branch-naming-standards/'>Perform unit tests</a><br>• <a href='https://markeyser.github.io/cookiecutter-collabora/how-to-guides/git-branch-naming-standards/'>Conduct integration testing</a><br>• <a href='https://markeyser.github.io/cookiecutter-collabora/how-to-guides/git-branch-naming-standards/'>Optimize performance</a></div>")
+  C ==> D
+  E("<div style='text-align: left;'><b>4. Comprehensive Testing and Review:</b> <br>• <a href='https://markeyser.github.io/cookiecutter-collabora/how-to-guides/jira-story-best-practices/?h=jira' style='text-decoration: underline; color: #ff00ff;'>Perform end-to-end testing</a><br>• <a href='https://markeyser.github.io/cookiecutter-collabora/how-to-guides/jira-story-best-practices/?h=jira' style='text-decoration: underline; color: #ff00ff;'>Conduct code coverage analysis</a> <br>• <a href='https://markeyser.github.io/cookiecutter-collabora/how-to-guides/git-branch-naming-standards/'>Perform additional unit tests</a><br>• <a href='https://markeyser.github.io/cookiecutter-collabora/how-to-guides/git-branch-naming-standards/'>Perform unit tests</a></div>")
+  D ==> E
+  F("<div style='text-align: left;'><b>5. Quality Assurance and Compliance:</b> <br>• <a href='https://markeyser.github.io/cookiecutter-collabora/how-to-guides/jira-story-best-practices/?h=jira' style='text-decoration: underline; color: #ff00ff;'>Pass pre-commit hooks</a><br>• <a href='https://markeyser.github.io/cookiecutter-collabora/how-to-guides/jira-story-best-practices/?h=jira' style='text-decoration: underline; color: #ff00ff;'>Update documentation</a> <br>• <a href='https://markeyser.github.io/cookiecutter-collabora/how-to-guides/git-branch-naming-standards/'>Perform additional unit tests</a><br>• <a href='https://markeyser.github.io/cookiecutter-collabora/how-to-guides/git-branch-naming-standards/'>Perform unit tests</a><br>• <a href='https://markeyser.github.io/cookiecutter-collabora/how-to-guides/git-branch-naming-standards/'>Prepare deployment procedures and update CI/CD pipelines</a></div>")
+  E ==> F
+  classDef highlighted fill:#d9534f,stroke:#333,stroke-width:2px,color:#fff;
+  classDef blue fill:#5bc0de,stroke:#333,stroke-width:2px,color:#fff;
+  class H,I,J,L,M,N highlighted;
+  class R,S,T,U blue;
+```
+

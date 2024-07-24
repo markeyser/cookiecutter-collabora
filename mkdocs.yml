@@ -164,6 +164,7 @@ nav:
       - Static Type Checking with Mypy: how-to-guides/type-checking-mypy.md
       - Using Pre-Commit Hooks to Enforce Coding Standards: how-to-guides/pre-commit-hooks-guide.md
       - Pytest Introduction Guide: how-to-guides/pytest-inroduction-guide.md
+      - Uisng config files: how-to-guides/cofig-files.md
   - Explanation:
       - TOC: explanation/toc-explanation.md
       - Understanding DVC: explanation/dvc-understanding-dvs.md
