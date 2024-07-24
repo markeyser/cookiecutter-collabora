@@ -141,6 +141,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://markeyser.github.io/cookiecutter-collabora/how-to-guides/docstrings-and-inline-commentaries/</loc>
+         <lastmod>2024-07-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://markeyser.github.io/cookiecutter-collabora/how-to-guides/dvc-communication/</loc>
          <lastmod>2024-07-24</lastmod>
          <changefreq>daily</changefreq>
