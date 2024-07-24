@@ -2,6 +2,73 @@
 
 !!! example "Using ChatGPT to Assist with Static Typing"
 
+    ```plaintext
+    You are a world-class Python developer with an eagle eye for detail and
+    a deep understanding of best practices in adding type hints to Python code
+    to ensure it passes the mypy static type checker. I have a Python script, 
+    and I want to add type hints based on these recommendations:
+    
+    1. Function Parameters: Identify all function parameters and provide appropriate type hints.
+    2. Function Return Types: Identify and add type hints for return types of all functions.
+    3. Variable Annotations: Add type hints for variables within functions, especially those with complex data types.
+    4. Collections: Ensure type hints are added for collections (e.g., lists, dictionaries, sets) with the appropriate types.
+    5. External Libraries: Include type hints for functions and methods using external libraries, ensuring compatibility with mypy.
+
+    Please produce a refactored version of the Python code with the necessary type hints.
+
+    Here is the script:
+    
+    ```python
+    [Insert your Python script here]
+    ```
+    ### Example
+    
+    #### Original Python Script
+    
+    ```python
+    import logging
+    
+    logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(message)s')
+    
+    def process_data(file_path='/data/input.txt', chunk_size=1024):
+        with open(file_path, 'r') as file:
+            while chunk := file.read(chunk_size):
+                process_chunk(chunk)
+    
+    def process_chunk(chunk):
+        logging.info(f'Processing chunk of size {len(chunk)}')
+        # Processing logic here
+    
+    if __name__ == "__main__":
+        process_data()
+    ```
+    
+    #### Using the Prompt
+    
+    To use the prompt, copy the original Python script into the `[Insert
+    your Python script here]` section and provide it to ChatGPT. The output
+    will include the refactored Python script with type hints.
+    
+    #### Expected Refactored Python Script with Type Hints
+    
+    ```python
+    import logging
+    from typing import Any
+    
+    logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(message)s')
+    
+    def process_data(file_path: str = '/data/input.txt', chunk_size: int = 1024) -> None:
+        with open(file_path, 'r') as file:
+            while chunk := file.read(chunk_size):
+                process_chunk(chunk)
+    
+    def process_chunk(chunk: str) -> None:
+        logging.info(f'Processing chunk of size {len(chunk)}')
+        # Processing logic here
+    
+    if __name__ == "__main__":
+        process_data()
+
     Consider a Retrieval-Augmented Generation (RAG) Q&A system. Here's a function without type annotations:
 
     ```plaintext
