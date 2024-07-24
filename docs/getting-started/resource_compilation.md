@@ -59,6 +59,7 @@ framework](../https://diataxis.fr/).
     - :octicons-checklist-16: [Using Pre-Commit Hooks to Enforce Coding Standards](../how-to-guides/pre-commit-hooks-guide.md) - A detailed guide on setting up and using pre-commit hooks to maintain code quality and adherence to coding standards, including descriptions and examples of each hook.
     - :octicons-tools-16: [Using Configuration Files to Avoid Hardcoding Values](../how-to-guides/cofig-files.md) - Guidelines on best practices for creating and managing YAML configuration files to externalize hardcoded values in Python scripts, enhancing maintainability and flexibility.
     - :octicons-tools-16: [Error Handling and Logging](../how-to-guides/error-handling-and-logging.md) - A guide on implementing robust error handling and logging in Python projects to enhance maintainability and debugging.
+    - :octicons-tools-16: [Docstrings and Inline Commentaries](../how-to-guides/docstrings-and-inline-commentaries.md) - A guide on writing Google-style docstrings and adding inline commentaries to your Python code to enhance readability, maintainability, and usability.
 
 ??? custom "Python Code Quality Tools"
     - :octicons-tools-16: [Formatting Your Code with Black](../tutorials/black-formatter.md) - A comprehensive guide on using Black to format Python code, ensuring consistency and readability across your codebase.

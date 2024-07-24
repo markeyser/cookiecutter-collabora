@@ -47,7 +47,7 @@ title: Software Development Cycle
 ---
 flowchart TB
   A("<div style='text-align: left;'><b>1. Initiation and Planning:</b> <br>• Scope and Requirements <br>• <a href='https://markeyser.github.io/cookiecutter-collabora/how-to-guides/jira-story-best-practices/?h=jira' style='text-decoration: underline; color: #ff00ff;'>Open Jira Story</a> <br>• <a href='https://markeyser.github.io/cookiecutter-collabora/how-to-guides/git-branch-naming-standards/'>Create a branch</a></div>")
-  B("<div style='text-align: left;'><b>2. Development:</b> <br>• Develop Python Code<br>• <a href='https://markeyser.github.io/cookiecutter-collabora/how-to-guides/error-handling-and-logging/?h=jira' style='text-decoration: underline; color: #ff00ff;'>Error handling and logging</a> <br>• <a href='https://markeyser.github.io/cookiecutter-collabora/how-to-guides/git-branch-naming-standards/'>Inline comments and docstrings</a></div>")
+  B("<div style='text-align: left;'><b>2. Development:</b> <br>• Develop Python Code<br>• <a href='https://markeyser.github.io/cookiecutter-collabora/how-to-guides/error-handling-and-logging/?h=jira' style='text-decoration: underline; color: #ff00ff;'>Error handling and logging</a> <br>• <a href='https://markeyser.github.io/cookiecutter-collabora/how-to-guides/docstrings-and-inline-commentaries/'>Inline comments and docstrings</a></div>")
   A ==> B
   C("<div style='text-align: left;'><b>3. Refactoring:</b> <br>• <a href='https://markeyser.github.io/cookiecutter-collabora/how-to-guides/type-checking-mypy/' style='text-decoration: underline; color: #ff00ff;'>Type hints</a><br>• <a href='https://markeyser.github.io/cookiecutter-collabora/how-to-guides/cofig-files/' style='text-decoration: underline; color: #ff00ff;'>Config files</a> <br>• <a href='https://markeyser.github.io/cookiecutter-collabora/how-to-guides/cofig-files/'>Document</a></div>")
   B ==> C
@@ -62,4 +62,3 @@ flowchart TB
   class H,I,J,L,M,N highlighted;
   class R,S,T,U blue;
 ```
-

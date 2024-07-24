@@ -44,6 +44,7 @@
 - [Pytest Introduction Guide](./pytest-inroduction-guide.md)
 - [Using Configuration Files to Avoid Hardcoding Values](./cofig-files.md)
 - [Error Handling and Logging](./error-handling-and-logging.md)
+- [Docstrings and Inline Commentaries](./docstrings-and-inline-commentaries.md)
   
 !!! check "Optimizing Your Workflow"
     These guides are intentionally designed to function independently, providing the flexibility to directly engage with topics pertinent to your immediate challenges. As a compendium of efficient, practical solutions, they are an excellent resource for enhancing productivity and mastering various development tasks.
