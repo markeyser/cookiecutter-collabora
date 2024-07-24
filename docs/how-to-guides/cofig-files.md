@@ -3,39 +3,32 @@
 !!! example "ChatGPT Prompt for creating config files"
 
     ```plaintext
-    You are a world-class Python developer with an eagle eye for detail and
-    a deep understanding of best practices in detecting and refactoring
-    hardcoded values in Python code. I have a Python script, and I want to
-    detect and refactor the following issues based on these recommendations:
-    
-    1. **Parameters and Defaults**: Identify function parameter defaults
-       related to configuration settings such as chunk sizes, timeouts, and
-       AWS session durations. These should be externalized to a
-       configuration file or environment variables.
-    2. **File Extensions and Paths**: Detect hardcoded paths and file
-       extensions used frequently or subject to change. These should be
-       placed in configuration files to avoid having to search through code
-       to make changes and to ensure consistency.
-    3. **Environment Variables**: Identify hardcoded environment variable
-       names and their default values. These should be defined in
-       configuration files or environment variables to manage different
-       environments (development, testing, production) more effectively.
-    4. **Model and Service Configurations**: Look for hardcoded model IDs,
-       AWS service regions, and similar configurations. These should be
-       externalized for easier deployments across different regions or when
-       switching between different models.
-    5. **Logger Messages and Formats**: Ensure logger formats are defined in
-       a centralized logging configuration. Detect any repetitive or
-       template-based log messages that can benefit from configuration or
-       templating approaches.
-    
-    Please produce two files: a configuration file using YAML language and
-    the refactored version of the Python code.
-    
+    You are a world-class Python developer with an eagle eye for detail 
+    and a deep understanding of best practices in error handling and logging 
+    in Python code. I have a Python script, and I want to add error handling 
+    and logging based on these recommendations:
+
+    1. **Error Handling**: Identify potential points of failure in the code
+      and add appropriate `try-except` blocks to handle exceptions. Ensure
+      that the error messages provide clear and actionable information.
+    2. **Logging Configuration**: Set up a logging configuration that
+      outputs logs to a `.log` file located in a `log` folder at the root
+      of the project directory. The logging should include error-level and
+      above messages with timestamps and detailed error descriptions.
+    3. **Exception Logging**: Ensure that exceptions are logged with
+      detailed information about the error, including the stack trace.
+    4. **Custom Error Messages**: Provide custom error messages that give a
+      clear explanation of the error and suggest possible fixes.
+    5. **File and Directory Setup**: Create a `log` directory in the root of
+      the project if it does not exist, and configure the logging output to
+      a file within this directory.
+
+    Please produce a refactored version of the Python code with the
+    necessary error handling and logging.
+
     Here is the script:
-    
+
     ```python
-    [Insert your Python script here]
     ```
     
     ### Example
@@ -150,8 +143,11 @@
 This document provides guidelines on how to use configuration files to
 avoid hardcoding values in your codebase. It serves as an introduction
 to best practices for creating and managing YAML configuration files in
-your project. This introduction explains what should be included in
-configuration files and what should be stored in the `.env` file.
+your project.
+
+!!! note
+    This introduction also explains what should be included in
+    configuration files and what should be stored in the `.env` file.
 
 ## Benefits of Using Configuration Files
 
@@ -164,6 +160,7 @@ configuration files and what should be stored in the `.env` file.
 
 ## Directory Structure for Configuration
 
+!!! no
 Place all non-sensitive configuration settings in a dedicated `config`
 directory and use the `.env` file for storing secrets and sensitive
 information.
