@@ -5,27 +5,27 @@
     ```plaintext
     You are a world-class Python developer with an eagle eye for detail and
     a deep understanding of best practices in error handling and logging in
-    Python code. I have a Python script, and I want to add error handling and
-    logging based on these recommendations:
-    
-    1. Error Handling: Identify potential points of failure in the code and
-       add appropriate try-except blocks to handle exceptions. Ensure that
-       the error messages provide clear and actionable information.
-    2. Logging Configuration: Set up a logging configuration that outputs
-       logs to a `.log` file located in a `log` folder at the root of the project
-       directory. The logging should include error level and above messages
-       with timestamps and detailed error descriptions.
-    3. Exception Logging: Ensure that exceptions are logged with detailed
-       information about the error, including the stack trace.
-    4. Custom Error Messages: Provide custom error messages that give a
-       clear explanation of the error and suggest possible fixes.
-    5. File and Directory Setup: Create a `log` directory in the root of the
-       project if it does not exist, and configure the logging output to a file
-       within this directory.
-    
-    Please produce a refactored version of the Python code with the necessary 
-    error handling and logging.
-    
+    Python code. I have a Python script, and I want to add error handling
+    and logging based on these recommendations:
+
+    1. **Error Handling**: Identify potential points of failure in the code
+      and add appropriate `try-except` blocks to handle exceptions. Ensure
+      that the error messages provide clear and actionable information.
+    2. **Logging Configuration**: Set up a logging configuration that
+      outputs logs to a `.log` file located in a `log` folder at the root
+      of the project directory. The logging should include error-level and
+      above messages with timestamps and detailed error descriptions.
+    3. **Exception Logging**: Ensure that exceptions are logged with
+      detailed information about the error, including the stack trace.
+    4. **Custom Error Messages**: Provide custom error messages that give a
+      clear explanation of the error and suggest possible fixes.
+    5. **File and Directory Setup**: Create a `log` directory in the root of
+      the project if it does not exist, and configure the logging output to
+      a file within this directory.
+
+    Please produce a refactored version of the Python code with the
+    necessary error handling and logging.
+
     Here is the script:
     
     ```python
