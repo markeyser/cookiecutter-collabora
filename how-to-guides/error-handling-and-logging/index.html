@@ -1050,26 +1050,26 @@
 <p class="admonition-title">ChatGPT Prompt for adding error handling and logging</p>
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>You are a world-class Python developer with an eagle eye for detail and
 <a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a>a deep understanding of best practices in error handling and logging in
-<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a>Python code. I have a Python script, and I want to add error handling and
-<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a>logging based on these recommendations:
+<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a>Python code. I have a Python script, and I want to add error handling
+<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a>and logging based on these recommendations:
 <a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a>
-<a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a>1. Error Handling: Identify potential points of failure in the code and
-<a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a>   add appropriate try-except blocks to handle exceptions. Ensure that
-<a href="#__codelineno-0-8" id="__codelineno-0-8" name="__codelineno-0-8"></a>   the error messages provide clear and actionable information.
-<a href="#__codelineno-0-9" id="__codelineno-0-9" name="__codelineno-0-9"></a>2. Logging Configuration: Set up a logging configuration that outputs
-<a href="#__codelineno-0-10" id="__codelineno-0-10" name="__codelineno-0-10"></a>   logs to a `.log` file located in a `log` folder at the root of the project
-<a href="#__codelineno-0-11" id="__codelineno-0-11" name="__codelineno-0-11"></a>   directory. The logging should include error level and above messages
-<a href="#__codelineno-0-12" id="__codelineno-0-12" name="__codelineno-0-12"></a>   with timestamps and detailed error descriptions.
-<a href="#__codelineno-0-13" id="__codelineno-0-13" name="__codelineno-0-13"></a>3. Exception Logging: Ensure that exceptions are logged with detailed
-<a href="#__codelineno-0-14" id="__codelineno-0-14" name="__codelineno-0-14"></a>   information about the error, including the stack trace.
-<a href="#__codelineno-0-15" id="__codelineno-0-15" name="__codelineno-0-15"></a>4. Custom Error Messages: Provide custom error messages that give a
-<a href="#__codelineno-0-16" id="__codelineno-0-16" name="__codelineno-0-16"></a>   clear explanation of the error and suggest possible fixes.
-<a href="#__codelineno-0-17" id="__codelineno-0-17" name="__codelineno-0-17"></a>5. File and Directory Setup: Create a `log` directory in the root of the
-<a href="#__codelineno-0-18" id="__codelineno-0-18" name="__codelineno-0-18"></a>   project if it does not exist, and configure the logging output to a file
-<a href="#__codelineno-0-19" id="__codelineno-0-19" name="__codelineno-0-19"></a>   within this directory.
+<a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a>1. **Error Handling**: Identify potential points of failure in the code
+<a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a>  and add appropriate `try-except` blocks to handle exceptions. Ensure
+<a href="#__codelineno-0-8" id="__codelineno-0-8" name="__codelineno-0-8"></a>  that the error messages provide clear and actionable information.
+<a href="#__codelineno-0-9" id="__codelineno-0-9" name="__codelineno-0-9"></a>2. **Logging Configuration**: Set up a logging configuration that
+<a href="#__codelineno-0-10" id="__codelineno-0-10" name="__codelineno-0-10"></a>  outputs logs to a `.log` file located in a `log` folder at the root
+<a href="#__codelineno-0-11" id="__codelineno-0-11" name="__codelineno-0-11"></a>  of the project directory. The logging should include error-level and
+<a href="#__codelineno-0-12" id="__codelineno-0-12" name="__codelineno-0-12"></a>  above messages with timestamps and detailed error descriptions.
+<a href="#__codelineno-0-13" id="__codelineno-0-13" name="__codelineno-0-13"></a>3. **Exception Logging**: Ensure that exceptions are logged with
+<a href="#__codelineno-0-14" id="__codelineno-0-14" name="__codelineno-0-14"></a>  detailed information about the error, including the stack trace.
+<a href="#__codelineno-0-15" id="__codelineno-0-15" name="__codelineno-0-15"></a>4. **Custom Error Messages**: Provide custom error messages that give a
+<a href="#__codelineno-0-16" id="__codelineno-0-16" name="__codelineno-0-16"></a>  clear explanation of the error and suggest possible fixes.
+<a href="#__codelineno-0-17" id="__codelineno-0-17" name="__codelineno-0-17"></a>5. **File and Directory Setup**: Create a `log` directory in the root of
+<a href="#__codelineno-0-18" id="__codelineno-0-18" name="__codelineno-0-18"></a>  the project if it does not exist, and configure the logging output to
+<a href="#__codelineno-0-19" id="__codelineno-0-19" name="__codelineno-0-19"></a>  a file within this directory.
 <a href="#__codelineno-0-20" id="__codelineno-0-20" name="__codelineno-0-20"></a>
-<a href="#__codelineno-0-21" id="__codelineno-0-21" name="__codelineno-0-21"></a>Please produce a refactored version of the Python code with the necessary 
-<a href="#__codelineno-0-22" id="__codelineno-0-22" name="__codelineno-0-22"></a>error handling and logging.
+<a href="#__codelineno-0-21" id="__codelineno-0-21" name="__codelineno-0-21"></a>Please produce a refactored version of the Python code with the
+<a href="#__codelineno-0-22" id="__codelineno-0-22" name="__codelineno-0-22"></a>necessary error handling and logging.
 <a href="#__codelineno-0-23" id="__codelineno-0-23" name="__codelineno-0-23"></a>
 <a href="#__codelineno-0-24" id="__codelineno-0-24" name="__codelineno-0-24"></a>Here is the script:
 <a href="#__codelineno-0-25" id="__codelineno-0-25" name="__codelineno-0-25"></a>
@@ -1302,7 +1302,7 @@ Python script.</p>
 <span class="md-icon" title="Last update">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 24, 2024</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 25, 2024</span>
 </span>
 </aside>
 </article>
