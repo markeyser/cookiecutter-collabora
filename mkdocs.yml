@@ -167,6 +167,7 @@ nav:
       - Uisng config files: how-to-guides/cofig-files.md
       - Error Handling and Logging: how-to-guides/error-handling-and-logging.md
       - Docstrings and Inline Commentaries: how-to-guides/docstrings-and-inline-commentaries.md
+      - Input Validation with Pydantic: how-to-guides/input-validation-with-pydantic.md
   - Explanation:
       - TOC: explanation/toc-explanation.md
       - Understanding DVC: explanation/dvc-understanding-dvs.md
