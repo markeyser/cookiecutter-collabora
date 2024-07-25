@@ -811,6 +811,45 @@
 title: Software Development Cycle
 ---
 flowchart TB
+  A([&lt;a href='https://markeyser.github.io/cookiecutter-collabora/how-to-guides/jira-story-best-practices/?h=jira' style="text-decoration: none;"&gt;&lt;span style="color: inherit;"&gt;➊  Open Jira Story 🔗&lt;/span&gt;&lt;/a&gt;])
+  B([&lt;a href='https://markeyser.github.io/cookiecutter-collabora/how-to-guides/git-branch-naming-standards/' style="text-decoration: none;"&gt;&lt;span style="color: inherit;"&gt;➋ Create a branch from main 🔗&lt;/span&gt;&lt;/a&gt;])
+  C([&lt;span style="color: inherit;"&gt;➌ Develop Python code&lt;/span&gt;])
+  D([&lt;a href='https://markeyser.github.io/cookiecutter-collabora/how-to-guides/cofig-files/' style="text-decoration: none;"&gt;&lt;span style="color: inherit;"&gt;➍ Config files 🔗&lt;/span&gt;&lt;/a&gt;])
+  E([&lt;a href='https://markeyser.github.io/cookiecutter-collabora/how-to-guides/error-handling-and-logging/?h=jira' style='text-decoration: none;'&gt;&lt;span style="color: inherit;"&gt;➎ Error handling and logging 🔗&lt;/span&gt;&lt;/a&gt;])
+  F([&lt;a href='https://markeyser.github.io/cookiecutter-collabora/how-to-guides/type-checking-mypy/' style="text-decoration: none;"&gt;&lt;span style="color: inherit;"&gt;➏ Type hints 🔗&lt;/span&gt;&lt;/a&gt;])
+  G([&lt;a href='https://markeyser.github.io/cookiecutter-collabora/how-to-guides/docstrings-and-inline-commentaries/' style="text-decoration: none;"&gt;&lt;span style="color: inherit;"&gt;➐ Inline comments and docstrings 🔗&lt;/span&gt;&lt;/a&gt;])
+  H([&lt;a href='https://markeyser.github.io/cookiecutter-collabora/how-to-guides/pytest-inroduction-guide/' style="text-decoration: none;"&gt;&lt;span style="color: inherit;"&gt;➑ Unit test with PyTest 🔗&lt;/span&gt;&lt;/a&gt;])
+  I([&lt;a href='https://markeyser.github.io/cookiecutter-collabora/how-to-guides/type-checking-mypy/?h=type+che' style="text-decoration: none;"&gt;&lt;span style="color: inherit;"&gt;➒ Type check with Mypy 🔗&lt;/span&gt;&lt;/a&gt;])
+  J([&lt;a href='https://markeyser.github.io/cookiecutter-collabora/tutorials/black-formatter/?h=black' style="text-decoration: none;"&gt;&lt;span style="color: inherit;"&gt;➓ Format code with Black 🔗&lt;/span&gt;&lt;/a&gt;])
+  K([&lt;a href='https://markeyser.github.io/cookiecutter-collabora/tutorials/ruff-linter/?h=lint' style="text-decoration: none;"&gt;&lt;span style="color: inherit;"&gt;⓫ Lint code with Ruff 🔗&lt;/span&gt;&lt;/a&gt;])
+  L([&lt;a href='https://markeyser.github.io/cookiecutter-collabora/how-to-guides/pre-commit-hooks-guide/' style="text-decoration: none;"&gt;&lt;span style="color: inherit;"&gt;⓬ Pass pre-commit hooks 🔗&lt;/span&gt;&lt;/a&gt;])
+  M([&lt;a href='https://markeyser.github.io/cookiecutter-collabora/tutorials/mkdocs-docs/?h=mkd' style="text-decoration: none;"&gt;&lt;span style="color: inherit;"&gt;⓭ Update documentation 🔗&lt;/span&gt;&lt;/a&gt;])
+  N([&lt;a href='https://markeyser.github.io/cookiecutter-collabora/how-to-guides/commit-message-standards-ml/?h=commit' style="text-decoration: none;"&gt;&lt;span style="color: inherit;"&gt;⓮ Commit changes 🔗&lt;/span&gt;&lt;/a&gt;])
+  O([&lt;span style="color: inherit;"&gt;⓯ Push to remote repo&lt;/span&gt;])
+  P([&lt;a href='https://markeyser.github.io/cookiecutter-collabora/how-to-guides/templates/?h=pull' style="text-decoration: none;"&gt;&lt;span style="color: inherit;"&gt;⓰ Open a Pull Request 🔗&lt;/span&gt;&lt;/a&gt;])
+  Q([&lt;a href='https://markeyser.github.io/cookiecutter-collabora/how-to-guides/code-review-best-practices/?h=review' style="text-decoration: none;"&gt;&lt;span style="color: inherit;"&gt;⓱ Code Review 🔗&lt;/span&gt;&lt;/a&gt;])
+  A ==&gt; B
+  B ==&gt; C
+  C ==&gt; D
+  D ==&gt; E
+  E ==&gt; F
+  F ==&gt; G
+  G ==&gt; H
+  H ==&gt; I
+  I ==&gt; J
+  J ==&gt; K
+  K ==&gt; L
+  L ==&gt; M
+  M ==&gt; N
+  N ==&gt; O
+  O ==&gt; P
+  P ==&gt; Q
+  Q ==&gt; |Start again with a new issue|A</code></pre>
+<!--
+<pre class="mermaid"><code>---
+title: Software Development Cycle
+---
+flowchart TB
   A([1. Open the JIRA story &lt;a href='https://markeyser.github.io/cookiecutter-collabora/how-to-guides/jira-story-best-practices/?h=jira'&gt;link&lt;/a&gt;]) ==&gt; B([2. Create a branch from main 🪝 &lt;a href='https://markeyser.github.io/cookiecutter-collabora/how-to-guides/git-branch-naming-standards/'&gt;link&lt;/a&gt;])
   B ==&gt; C([3. Develop Python code])
   C ==&gt; D([4. Debug Python code])
@@ -823,7 +862,7 @@ flowchart TB
   J ==&gt; K([11. Update documentation &lt;a href='https://markeyser.github.io/cookiecutter-collabora/tutorials/mkdocs-docs/?h=mkd'&gt;link&lt;/a&gt;])
   K ==&gt; L([12. Commit changes 🪝 &lt;a href='https://markeyser.github.io/cookiecutter-collabora/how-to-guides/commit-message-standards-ml/?h=commit'&gt;link&lt;/a&gt;])
   L ==&gt; M([13. Push to remote repo])
-  M --&gt; |Repeat as necessary for multiple commits|C
+  M ==&gt;|Repeat as necessary for multiple commits|C
   M ==&gt; N([14. Open a Pull Request &lt;a href='https://markeyser.github.io/cookiecutter-collabora/how-to-guides/templates/?h=pull'&gt;link&lt;/a&gt;])
   N ==&gt; O([15. Code Review &lt;a href='https://markeyser.github.io/cookiecutter-collabora/how-to-guides/code-review-best-practices/?h=review'&gt;link&lt;/a&gt;])
   O ==&gt; P([16. Address review feedback])
@@ -838,6 +877,8 @@ flowchart TB
   classDef blue fill:#5bc0de,stroke:#333,stroke-width:2px,color:#fff;
   class A,B,C,F,H,I,J,L,M,N highlighted;
   class R,S,T,U blue;</code></pre>
+
+
 <pre class="mermaid"><code>---
 title: Software Development Cycle
 ---
@@ -857,12 +898,13 @@ flowchart TB
   classDef blue fill:#5bc0de,stroke:#333,stroke-width:2px,color:#fff;
   class H,I,J,L,M,N highlighted;
   class R,S,T,U blue;</code></pre>
+-->
 <aside class="md-source-file">
 <span class="md-source-file__fact">
 <span class="md-icon" title="Last update">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 24, 2024</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 25, 2024</span>
 </span>
 </aside>
 </article>
