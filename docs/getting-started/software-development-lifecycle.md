@@ -11,6 +11,48 @@ This flowchart provides a visual representation of the key stages involved in th
 title: Software Development Cycle
 ---
 flowchart TB
+  A([<a href='https://markeyser.github.io/cookiecutter-collabora/how-to-guides/jira-story-best-practices/?h=jira' style="text-decoration: none;"><span style="color: inherit;">➊  Open Jira Story 🔗</span></a>])
+  B([<a href='https://markeyser.github.io/cookiecutter-collabora/how-to-guides/git-branch-naming-standards/' style="text-decoration: none;"><span style="color: inherit;">➋ Create a branch from main 🔗</span></a>])
+  C([<span style="color: inherit;">➌ Develop Python code</span>])
+  D([<a href='https://markeyser.github.io/cookiecutter-collabora/how-to-guides/cofig-files/' style="text-decoration: none;"><span style="color: inherit;">➍ Config files 🔗</span></a>])
+  E([<a href='https://markeyser.github.io/cookiecutter-collabora/how-to-guides/error-handling-and-logging/?h=jira' style='text-decoration: none;'><span style="color: inherit;">➎ Error handling and logging 🔗</span></a>])
+  F([<a href='https://markeyser.github.io/cookiecutter-collabora/how-to-guides/type-checking-mypy/' style="text-decoration: none;"><span style="color: inherit;">➏ Type hints 🔗</span></a>])
+  G([<a href='https://markeyser.github.io/cookiecutter-collabora/how-to-guides/docstrings-and-inline-commentaries/' style="text-decoration: none;"><span style="color: inherit;">➐ Inline comments and docstrings 🔗</span></a>])
+  H([<a href='https://markeyser.github.io/cookiecutter-collabora/how-to-guides/pytest-inroduction-guide/' style="text-decoration: none;"><span style="color: inherit;">➑ Unit test with PyTest 🔗</span></a>])
+  I([<a href='https://markeyser.github.io/cookiecutter-collabora/how-to-guides/type-checking-mypy/?h=type+che' style="text-decoration: none;"><span style="color: inherit;">➒ Type check with Mypy 🔗</span></a>])
+  J([<a href='https://markeyser.github.io/cookiecutter-collabora/tutorials/black-formatter/?h=black' style="text-decoration: none;"><span style="color: inherit;">➓ Format code with Black 🔗</span></a>])
+  K([<a href='https://markeyser.github.io/cookiecutter-collabora/tutorials/ruff-linter/?h=lint' style="text-decoration: none;"><span style="color: inherit;">⓫ Lint code with Ruff 🔗</span></a>])
+  L([<a href='https://markeyser.github.io/cookiecutter-collabora/how-to-guides/pre-commit-hooks-guide/' style="text-decoration: none;"><span style="color: inherit;">⓬ Pass pre-commit hooks 🔗</span></a>])
+  M([<a href='https://markeyser.github.io/cookiecutter-collabora/tutorials/mkdocs-docs/?h=mkd' style="text-decoration: none;"><span style="color: inherit;">⓭ Update documentation 🔗</span></a>])
+  N([<a href='https://markeyser.github.io/cookiecutter-collabora/how-to-guides/commit-message-standards-ml/?h=commit' style="text-decoration: none;"><span style="color: inherit;">⓮ Commit changes 🔗</span></a>])
+  O([<span style="color: inherit;">⓯ Push to remote repo</span>])
+  P([<a href='https://markeyser.github.io/cookiecutter-collabora/how-to-guides/templates/?h=pull' style="text-decoration: none;"><span style="color: inherit;">⓰ Open a Pull Request 🔗</span></a>])
+  Q([<a href='https://markeyser.github.io/cookiecutter-collabora/how-to-guides/code-review-best-practices/?h=review' style="text-decoration: none;"><span style="color: inherit;">⓱ Code Review 🔗</span></a>])
+  A ==> B
+  B ==> C
+  C ==> D
+  D ==> E
+  E ==> F
+  F ==> G
+  G ==> H
+  H ==> I
+  I ==> J
+  J ==> K
+  K ==> L
+  L ==> M
+  M ==> N
+  N ==> O
+  O ==> P
+  P ==> Q
+  Q ==> |Start again with a new issue|A
+```
+
+<!--
+```mermaid
+---
+title: Software Development Cycle
+---
+flowchart TB
   A([1. Open the JIRA story <a href='https://markeyser.github.io/cookiecutter-collabora/how-to-guides/jira-story-best-practices/?h=jira'>link</a>]) ==> B([2. Create a branch from main 🪝 <a href='https://markeyser.github.io/cookiecutter-collabora/how-to-guides/git-branch-naming-standards/'>link</a>])
   B ==> C([3. Develop Python code])
   C ==> D([4. Debug Python code])
@@ -23,7 +65,7 @@ flowchart TB
   J ==> K([11. Update documentation <a href='https://markeyser.github.io/cookiecutter-collabora/tutorials/mkdocs-docs/?h=mkd'>link</a>])
   K ==> L([12. Commit changes 🪝 <a href='https://markeyser.github.io/cookiecutter-collabora/how-to-guides/commit-message-standards-ml/?h=commit'>link</a>])
   L ==> M([13. Push to remote repo])
-  M --> |Repeat as necessary for multiple commits|C
+  M ==>|Repeat as necessary for multiple commits|C
   M ==> N([14. Open a Pull Request <a href='https://markeyser.github.io/cookiecutter-collabora/how-to-guides/templates/?h=pull'>link</a>])
   N ==> O([15. Code Review <a href='https://markeyser.github.io/cookiecutter-collabora/how-to-guides/code-review-best-practices/?h=review'>link</a>])
   O ==> P([16. Address review feedback])
@@ -62,3 +104,4 @@ flowchart TB
   class H,I,J,L,M,N highlighted;
   class R,S,T,U blue;
 ```
+-->
