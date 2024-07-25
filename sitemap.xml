@@ -181,6 +181,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://markeyser.github.io/cookiecutter-collabora/how-to-guides/input-validation-with-pydantic/</loc>
+         <lastmod>2024-07-25</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://markeyser.github.io/cookiecutter-collabora/how-to-guides/introduction-to-doctest/</loc>
          <lastmod>2024-07-25</lastmod>
          <changefreq>daily</changefreq>

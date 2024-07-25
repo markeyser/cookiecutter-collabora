@@ -685,6 +685,13 @@
   </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../how-to-guides/input-validation-with-pydantic/">
+<span class="md-ellipsis">
+    Input Validation with Pydantic
+  </span>
+</a>
+</li>
 </ul>
 </nav>
 </li>
@@ -815,6 +822,47 @@ flowchart TB
   B([&lt;a href='https://markeyser.github.io/cookiecutter-collabora/how-to-guides/git-branch-naming-standards/' style="text-decoration: none;"&gt;&lt;span style="color: inherit;"&gt;➋ Create a branch from main 🔗&lt;/span&gt;&lt;/a&gt;])
   C([&lt;span style="color: inherit;"&gt;➌ Develop Python code&lt;/span&gt;])
   D([&lt;a href='https://markeyser.github.io/cookiecutter-collabora/how-to-guides/cofig-files/' style="text-decoration: none;"&gt;&lt;span style="color: inherit;"&gt;➍ Config files 🔗&lt;/span&gt;&lt;/a&gt;])
+  E([&lt;a href='https://markeyser.github.io/cookiecutter-collabora/how-to-guides/input-validation-with-pydantic/' style="text-decoration: none;"&gt;&lt;span style="color: inherit;"&gt;➎ Input Validation with Pydantic 🔗&lt;/span&gt;&lt;/a&gt;])
+  F([&lt;a href='https://markeyser.github.io/cookiecutter-collabora/how-to-guides/error-handling-and-logging/?h=jira' style='text-decoration: none;'&gt;&lt;span style="color: inherit;"&gt;➏ Error handling and logging 🔗&lt;/span&gt;&lt;/a&gt;])
+  G([&lt;a href='https://markeyser.github.io/cookiecutter-collabora/how-to-guides/type-checking-mypy/' style="text-decoration: none;"&gt;&lt;span style="color: inherit;"&gt;➐ Type hints 🔗&lt;/span&gt;&lt;/a&gt;])
+  H([&lt;a href='https://markeyser.github.io/cookiecutter-collabora/how-to-guides/docstrings-and-inline-commentaries/' style="text-decoration: none;"&gt;&lt;span style="color: inherit;"&gt;➑ Inline comments and docstrings 🔗&lt;/span&gt;&lt;/a&gt;])
+  I([&lt;a href='https://markeyser.github.io/cookiecutter-collabora/how-to-guides/pytest-inroduction-guide/' style="text-decoration: none;"&gt;&lt;span style="color: inherit;"&gt;➒ Unit test with PyTest 🔗&lt;/span&gt;&lt;/a&gt;])
+  J([&lt;a href='https://markeyser.github.io/cookiecutter-collabora/how-to-guides/type-checking-mypy/?h=type+che' style="text-decoration: none;"&gt;&lt;span style="color: inherit;"&gt;➓ Type check with Mypy 🔗&lt;/span&gt;&lt;/a&gt;])
+  K([&lt;a href='https://markeyser.github.io/cookiecutter-collabora/tutorials/black-formatter/?h=black' style="text-decoration: none;"&gt;&lt;span style="color: inherit;"&gt;⓫ Format code with Black 🔗&lt;/span&gt;&lt;/a&gt;])
+  L([&lt;a href='https://markeyser.github.io/cookiecutter-collabora/tutorials/ruff-linter/?h=lint' style="text-decoration: none;"&gt;&lt;span style="color: inherit;"&gt;⓬ Lint code with Ruff 🔗&lt;/span&gt;&lt;/a&gt;])
+  M([&lt;a href='https://markeyser.github.io/cookiecutter-collabora/how-to-guides/pre-commit-hooks-guide/' style="text-decoration: none;"&gt;&lt;span style="color: inherit;"&gt;⓭ Pass pre-commit hooks 🔗&lt;/span&gt;&lt;/a&gt;])
+  N([&lt;a href='https://markeyser.github.io/cookiecutter-collabora/tutorials/mkdocs-docs/?h=mkd' style="text-decoration: none;"&gt;&lt;span style="color: inherit;"&gt;⓮ Update documentation 🔗&lt;/span&gt;&lt;/a&gt;])
+  O([&lt;a href='https://markeyser.github.io/cookiecutter-collabora/how-to-guides/commit-message-standards-ml/?h=commit' style="text-decoration: none;"&gt;&lt;span style="color: inherit;"&gt;⓯ Commit changes 🔗&lt;/span&gt;&lt;/a&gt;])
+  P([&lt;span style="color: inherit;"&gt;⓰ Push to remote repo&lt;/span&gt;])
+  Q([&lt;a href='https://markeyser.github.io/cookiecutter-collabora/how-to-guides/templates/?h=pull' style="text-decoration: none;"&gt;&lt;span style="color: inherit;"&gt;⓱ Open a Pull Request 🔗&lt;/span&gt;&lt;/a&gt;])
+  R([&lt;a href='https://markeyser.github.io/cookiecutter-collabora/how-to-guides/code-review-best-practices/?h=review' style="text-decoration: none;"&gt;&lt;span style="color: inherit;"&gt;⓲ Code Review 🔗&lt;/span&gt;&lt;/a&gt;])
+  A ==&gt; B
+  B ==&gt; C
+  C ==&gt; D
+  D ==&gt; E
+  E ==&gt; F
+  F ==&gt; G
+  G ==&gt; H
+  H ==&gt; I
+  I ==&gt; J
+  J ==&gt; K
+  K ==&gt; L
+  L ==&gt; M
+  M ==&gt; N
+  N ==&gt; O
+  O ==&gt; P
+  P ==&gt; Q
+  Q ==&gt; R
+  R ==&gt; |Start again with a new issue|A</code></pre>
+<!--
+<pre class="mermaid"><code>---
+title: Software Development Cycle
+---
+flowchart TB
+  A([&lt;a href='https://markeyser.github.io/cookiecutter-collabora/how-to-guides/jira-story-best-practices/?h=jira' style="text-decoration: none;"&gt;&lt;span style="color: inherit;"&gt;➊  Open Jira Story 🔗&lt;/span&gt;&lt;/a&gt;])
+  B([&lt;a href='https://markeyser.github.io/cookiecutter-collabora/how-to-guides/git-branch-naming-standards/' style="text-decoration: none;"&gt;&lt;span style="color: inherit;"&gt;➋ Create a branch from main 🔗&lt;/span&gt;&lt;/a&gt;])
+  C([&lt;span style="color: inherit;"&gt;➌ Develop Python code&lt;/span&gt;])
+  D([&lt;a href='https://markeyser.github.io/cookiecutter-collabora/how-to-guides/cofig-files/' style="text-decoration: none;"&gt;&lt;span style="color: inherit;"&gt;➍ Config files 🔗&lt;/span&gt;&lt;/a&gt;])
   E([&lt;a href='https://markeyser.github.io/cookiecutter-collabora/how-to-guides/error-handling-and-logging/?h=jira' style='text-decoration: none;'&gt;&lt;span style="color: inherit;"&gt;➎ Error handling and logging 🔗&lt;/span&gt;&lt;/a&gt;])
   F([&lt;a href='https://markeyser.github.io/cookiecutter-collabora/how-to-guides/type-checking-mypy/' style="text-decoration: none;"&gt;&lt;span style="color: inherit;"&gt;➏ Type hints 🔗&lt;/span&gt;&lt;/a&gt;])
   G([&lt;a href='https://markeyser.github.io/cookiecutter-collabora/how-to-guides/docstrings-and-inline-commentaries/' style="text-decoration: none;"&gt;&lt;span style="color: inherit;"&gt;➐ Inline comments and docstrings 🔗&lt;/span&gt;&lt;/a&gt;])
@@ -845,6 +893,7 @@ flowchart TB
   O ==&gt; P
   P ==&gt; Q
   Q ==&gt; |Start again with a new issue|A</code></pre>
+-->
 <!--
 <pre class="mermaid"><code>---
 title: Software Development Cycle

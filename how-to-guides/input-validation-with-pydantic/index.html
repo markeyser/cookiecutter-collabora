@@ -5,12 +5,12 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="https://markeyser.github.io/cookiecutter-collabora/tutorials/poetry/" rel="canonical"/>
-<link href="../ruff-linter/" rel="prev"/>
-<link href="../mkdocs-docs/" rel="next"/>
+<link href="https://markeyser.github.io/cookiecutter-collabora/how-to-guides/input-validation-with-pydantic/" rel="canonical"/>
+<link href="../docstrings-and-inline-commentaries/" rel="prev"/>
+<link href="../../explanation/toc-explanation/" rel="next"/>
 <link href="../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.5.3, mkdocs-material-9.5.4" name="generator"/>
-<title>Poetry Package Management - Cookiecutter Collabora</title>
+<title>Input Validation with Pydantic - Cookiecutter Collabora</title>
 <link href="../../assets/stylesheets/main.50c56a3b.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
 <style>:root{--md-annotation-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 13h-4v4h-2v-4H7v-2h4V7h2v4h4m-5-9A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2Z"/></svg>');}</style>
@@ -36,7 +36,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#managing-dependencies-with-poetry-in-your-project">
+<a class="md-skip" href="#using-pydantic-for-input-validation-at-runtime">
           Skip to content
         </a>
 </div>
@@ -60,7 +60,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Poetry Package Management
+              Input Validation with Pydantic
             
           </span>
 </div>
@@ -145,16 +145,16 @@
 
         </a>
 </li>
-<li class="md-tabs__item md-tabs__item--active">
-<a class="md-tabs__link" href="../toc-tutorials/">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../tutorials/toc-tutorials/">
           
   
   Tutorials
 
         </a>
 </li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../../how-to-guides/toc-how-to-guides/">
+<li class="md-tabs__item md-tabs__item--active">
+<a class="md-tabs__link" href="../toc-how-to-guides/">
           
   
   How-To Guides
@@ -254,38 +254,405 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
 <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
 <span class="md-ellipsis">
     Tutorials
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="true" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<nav aria-expanded="false" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_3">
 <span class="md-nav__icon md-icon"></span>
             Tutorials
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../toc-tutorials/">
+<a class="md-nav__link" href="../../tutorials/toc-tutorials/">
 <span class="md-ellipsis">
     TOC
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../black-formatter/">
+<a class="md-nav__link" href="../../tutorials/black-formatter/">
 <span class="md-ellipsis">
     Black Formatter
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../ruff-linter/">
+<a class="md-nav__link" href="../../tutorials/ruff-linter/">
 <span class="md-ellipsis">
     Ruff Linter
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tutorials/poetry/">
+<span class="md-ellipsis">
+    Poetry Package Management
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tutorials/mkdocs-docs/">
+<span class="md-ellipsis">
+    MkDocs Documentation
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tutorials/hydra-config/">
+<span class="md-ellipsis">
+    Hydra Configuration
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tutorials/gitignore/">
+<span class="md-ellipsis">
+    Gitignore File Creation
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tutorials/data/">
+<span class="md-ellipsis">
+    Managing Data
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tutorials/data-version-control/">
+<span class="md-ellipsis">
+    Data Version Control
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tutorials/dvc-local/">
+<span class="md-ellipsis">
+    DVC Local Workflow
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tutorials/dvc-cloud/">
+<span class="md-ellipsis">
+    DVC Cloud Storage
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tutorials/dvc-collaboration/">
+<span class="md-ellipsis">
+    DVC for Collaboration
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tutorials/naming-conventions/">
+<span class="md-ellipsis">
+    Naming Conventions Tutorial
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tutorials/windows-os-setup/">
+<span class="md-ellipsis">
+    Windows OS Setup
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tutorials/markdown-ml-model-documentation/">
+<span class="md-ellipsis">
+    Markdown Documentation for ML Models
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tutorials/vscode-settings/">
+<span class="md-ellipsis">
+    Sharing VS Code Settings for Python Projects
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+<span class="md-ellipsis">
+    How-To Guides
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+            How-To Guides
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../toc-how-to-guides/">
+<span class="md-ellipsis">
+    TOC
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../project-scaffolding-standards/">
+<span class="md-ellipsis">
+    Project Scaffolding Standards
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../file-naming-conventions/">
+<span class="md-ellipsis">
+    File Naming Conventions
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../column-naming-conventions/">
+<span class="md-ellipsis">
+    Column Naming Conventions
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../python-docstrings-conventions/">
+<span class="md-ellipsis">
+    Python Docstrings Conventions
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../python-line-length-standards.md">
+<span class="md-ellipsis">
+    Line Length Standards in Python Projects
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../dvc-set-up/">
+<span class="md-ellipsis">
+    DVC Setup
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../dvc-communication/">
+<span class="md-ellipsis">
+    DVC Communication
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../dvc-vscode-extension/">
+<span class="md-ellipsis">
+    DVC VS Code Extension
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../offline-cookiecutter-setup/">
+<span class="md-ellipsis">
+    Offline Cookiecutter Setup
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../git-branch-naming-standards/">
+<span class="md-ellipsis">
+    Git Branch Naming Standards
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../commit-message-standards-ml/">
+<span class="md-ellipsis">
+    Commit Message Standards in ML Projects
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../pushing-to-github-best-practices.md">
+<span class="md-ellipsis">
+    Best Practices for Pushing to GitHub
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ml-data-folder-naming/">
+<span class="md-ellipsis">
+    ML Data Folder Naming Guide
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../machine-learning-metadata-automation/">
+<span class="md-ellipsis">
+    Automating Metadata Creation
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../github-actions-naming-convention/">
+<span class="md-ellipsis">
+    Enforcing Naming Conventions with GitHub Actions
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../wandb-experiment-tracking-rag/">
+<span class="md-ellipsis">
+    ML Experiments Life-Cycle with Weights &amp; Biases
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../templates/">
+<span class="md-ellipsis">
+    Templates for Issues/Stories and PRs
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../branching-strategy/">
+<span class="md-ellipsis">
+    Branching Strategies for ML Projects
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../data-conversion-from-xlsx-to-csv/">
+<span class="md-ellipsis">
+    Python Scripting for Data Conversion
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../automating-wandb-backups/">
+<span class="md-ellipsis">
+    Automating Backups for Weights &amp; Biases
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../jupyter-vscode-directory/">
+<span class="md-ellipsis">
+    Configuring Jupyter Notebook Start-up Directory in VS Code
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../data_management_practices/">
+<span class="md-ellipsis">
+    Project Data Management Practices
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../using-code-tags/">
+<span class="md-ellipsis">
+    Using Code Tags
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../using-todo-tree-with-code-tags/">
+<span class="md-ellipsis">
+    Using TODO Tree with Code Tags
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../lifecycle-git-github/">
+<span class="md-ellipsis">
+    AI/ML Project Lifecycle with Git and GitHub
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../introduction-to-doctest/">
+<span class="md-ellipsis">
+    Introduction to Doctest
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../python-oop-for-ml/">
+<span class="md-ellipsis">
+    Python OOP for Machine Learning Projects
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../code-review-best-practices/">
+<span class="md-ellipsis">
+    Code Review Best Practices
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../jira-story-best-practices/">
+<span class="md-ellipsis">
+    Best Practices for Creating JIRA Stories for ML/AI Projects
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notebook-to-production/">
+<span class="md-ellipsis">
+    Moving from Jupyter Notebooks to Production Python Code
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../type-checking-mypy/">
+<span class="md-ellipsis">
+    Static Type Checking with Mypy
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../pre-commit-hooks-guide/">
+<span class="md-ellipsis">
+    Using Pre-Commit Hooks to Enforce Coding Standards
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../pytest-inroduction-guide/">
+<span class="md-ellipsis">
+    Pytest Introduction Guide
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../cofig-files/">
+<span class="md-ellipsis">
+    Uisng config files
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../error-handling-and-logging/">
+<span class="md-ellipsis">
+    Error Handling and Logging
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../docstrings-and-inline-commentaries/">
+<span class="md-ellipsis">
+    Docstrings and Inline Commentaries
   </span>
 </a>
 </li>
@@ -293,13 +660,13 @@
 <input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
 <label class="md-nav__link md-nav__link--active" for="__toc">
 <span class="md-ellipsis">
-    Poetry Package Management
+    Input Validation with Pydantic
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
 <a class="md-nav__link md-nav__link--active" href="./">
 <span class="md-ellipsis">
-    Poetry Package Management
+    Input Validation with Pydantic
   </span>
 </a>
 <nav aria-label="On this page" class="md-nav md-nav--secondary">
@@ -309,24 +676,31 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#adding-new-dependencies">
+<a class="md-nav__link" href="#example">
 <span class="md-ellipsis">
-      Adding New Dependencies
+      Example
     </span>
 </a>
-<nav aria-label="Adding New Dependencies" class="md-nav">
+<nav aria-label="Example" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#adding-standard-dependencies">
+<a class="md-nav__link" href="#original-python-script">
 <span class="md-ellipsis">
-      Adding Standard Dependencies
+      Original Python Script
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#adding-development-dependencies">
+<a class="md-nav__link" href="#using-the-prompt">
 <span class="md-ellipsis">
-      Adding Development Dependencies
+      Using the Prompt
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#expected-refactored-python-script">
+<span class="md-ellipsis">
+      Expected Refactored Python Script
     </span>
 </a>
 </li>
@@ -334,24 +708,24 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#updating-existing-dependencies">
+<a class="md-nav__link" href="#explanation">
 <span class="md-ellipsis">
-      Updating Existing Dependencies
+      Explanation
     </span>
 </a>
-<nav aria-label="Updating Existing Dependencies" class="md-nav">
+<nav aria-label="Explanation" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#updating-a-specific-dependency">
+<a class="md-nav__link" href="#before-using-pydantic">
 <span class="md-ellipsis">
-      Updating a Specific Dependency
+      Before Using Pydantic
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#updating-all-dependencies">
+<a class="md-nav__link" href="#after-using-pydantic">
 <span class="md-ellipsis">
-      Updating All Dependencies
+      After Using Pydantic
     </span>
 </a>
 </li>
@@ -359,50 +733,93 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#removing-unneeded-dependencies">
+<a class="md-nav__link" href="#overview">
 <span class="md-ellipsis">
-      Removing Unneeded Dependencies
+      Overview
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#listing-project-dependencies">
+<a class="md-nav__link" href="#benefits-of-using-pydantic">
 <span class="md-ellipsis">
-      Listing Project Dependencies
+      Benefits of Using Pydantic
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#locking-dependencies">
+<a class="md-nav__link" href="#best-practices-for-using-pydantic">
 <span class="md-ellipsis">
-      Locking Dependencies
+      Best Practices for Using Pydantic
     </span>
 </a>
-<nav aria-label="Locking Dependencies" class="md-nav">
+<nav aria-label="Best Practices for Using Pydantic" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#why-use-poetrylock">
+<a class="md-nav__link" href="#1-pydantic-models-for-input-validation">
 <span class="md-ellipsis">
-      Why Use poetry.lock?
+      1. Pydantic Models for Input Validation
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#how-to-lock-dependencies">
+<a class="md-nav__link" href="#2-validation-in-methods">
 <span class="md-ellipsis">
-      How to Lock Dependencies
+      2. Validation in Methods
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#committing-to-version-control">
+<a class="md-nav__link" href="#3-error-handling">
 <span class="md-ellipsis">
-      Committing to Version Control
+      3. Error Handling
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#4-documentation">
+<span class="md-ellipsis">
+      4. Documentation
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#5-consistency">
+<span class="md-ellipsis">
+      5. Consistency
     </span>
 </a>
 </li>
 </ul>
 </nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mypy-vs-pydantic">
+<span class="md-ellipsis">
+      MyPy vs. Pydantic
+    </span>
+</a>
+<nav aria-label="MyPy vs. Pydantic" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mypy">
+<span class="md-ellipsis">
+      MyPy
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#pydantic">
+<span class="md-ellipsis">
+      Pydantic
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#key-differences">
+<span class="md-ellipsis">
+      Key Differences
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#conclusion">
@@ -411,414 +828,11 @@
     </span>
 </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#troubleshooting-and-tips">
-<span class="md-ellipsis">
-      Troubleshooting and Tips
-    </span>
-</a>
-<nav aria-label="Troubleshooting and Tips" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#resolving-dependency-conflicts">
-<span class="md-ellipsis">
-      Resolving Dependency Conflicts
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#debugging-environment-issues">
-<span class="md-ellipsis">
-      Debugging Environment Issues
-    </span>
-</a>
-</li>
 </ul>
 </nav>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#conclusion_1">
-<span class="md-ellipsis">
-      Conclusion
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#further-reading-and-resources">
-<span class="md-ellipsis">
-      Further Reading and Resources
-    </span>
-</a>
-</li>
 </ul>
 </nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../mkdocs-docs/">
-<span class="md-ellipsis">
-    MkDocs Documentation
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../hydra-config/">
-<span class="md-ellipsis">
-    Hydra Configuration
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../gitignore/">
-<span class="md-ellipsis">
-    Gitignore File Creation
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../data/">
-<span class="md-ellipsis">
-    Managing Data
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../data-version-control/">
-<span class="md-ellipsis">
-    Data Version Control
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../dvc-local/">
-<span class="md-ellipsis">
-    DVC Local Workflow
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../dvc-cloud/">
-<span class="md-ellipsis">
-    DVC Cloud Storage
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../dvc-collaboration/">
-<span class="md-ellipsis">
-    DVC for Collaboration
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../naming-conventions/">
-<span class="md-ellipsis">
-    Naming Conventions Tutorial
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../windows-os-setup/">
-<span class="md-ellipsis">
-    Windows OS Setup
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../markdown-ml-model-documentation/">
-<span class="md-ellipsis">
-    Markdown Documentation for ML Models
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../vscode-settings/">
-<span class="md-ellipsis">
-    Sharing VS Code Settings for Python Projects
-  </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--section md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
-<span class="md-ellipsis">
-    How-To Guides
-  </span>
-<span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-expanded="false" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_4">
-<span class="md-nav__icon md-icon"></span>
-            How-To Guides
-          </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../how-to-guides/toc-how-to-guides/">
-<span class="md-ellipsis">
-    TOC
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../how-to-guides/project-scaffolding-standards/">
-<span class="md-ellipsis">
-    Project Scaffolding Standards
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../how-to-guides/file-naming-conventions/">
-<span class="md-ellipsis">
-    File Naming Conventions
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../how-to-guides/column-naming-conventions/">
-<span class="md-ellipsis">
-    Column Naming Conventions
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../how-to-guides/python-docstrings-conventions/">
-<span class="md-ellipsis">
-    Python Docstrings Conventions
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../how-to-guides/python-line-length-standards.md">
-<span class="md-ellipsis">
-    Line Length Standards in Python Projects
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../how-to-guides/dvc-set-up/">
-<span class="md-ellipsis">
-    DVC Setup
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../how-to-guides/dvc-communication/">
-<span class="md-ellipsis">
-    DVC Communication
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../how-to-guides/dvc-vscode-extension/">
-<span class="md-ellipsis">
-    DVC VS Code Extension
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../how-to-guides/offline-cookiecutter-setup/">
-<span class="md-ellipsis">
-    Offline Cookiecutter Setup
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../how-to-guides/git-branch-naming-standards/">
-<span class="md-ellipsis">
-    Git Branch Naming Standards
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../how-to-guides/commit-message-standards-ml/">
-<span class="md-ellipsis">
-    Commit Message Standards in ML Projects
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../how-to-guides/pushing-to-github-best-practices.md">
-<span class="md-ellipsis">
-    Best Practices for Pushing to GitHub
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../how-to-guides/ml-data-folder-naming/">
-<span class="md-ellipsis">
-    ML Data Folder Naming Guide
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../how-to-guides/machine-learning-metadata-automation/">
-<span class="md-ellipsis">
-    Automating Metadata Creation
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../how-to-guides/github-actions-naming-convention/">
-<span class="md-ellipsis">
-    Enforcing Naming Conventions with GitHub Actions
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../how-to-guides/wandb-experiment-tracking-rag/">
-<span class="md-ellipsis">
-    ML Experiments Life-Cycle with Weights &amp; Biases
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../how-to-guides/templates/">
-<span class="md-ellipsis">
-    Templates for Issues/Stories and PRs
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../how-to-guides/branching-strategy/">
-<span class="md-ellipsis">
-    Branching Strategies for ML Projects
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../how-to-guides/data-conversion-from-xlsx-to-csv/">
-<span class="md-ellipsis">
-    Python Scripting for Data Conversion
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../how-to-guides/automating-wandb-backups/">
-<span class="md-ellipsis">
-    Automating Backups for Weights &amp; Biases
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../how-to-guides/jupyter-vscode-directory/">
-<span class="md-ellipsis">
-    Configuring Jupyter Notebook Start-up Directory in VS Code
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../how-to-guides/data_management_practices/">
-<span class="md-ellipsis">
-    Project Data Management Practices
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../how-to-guides/using-code-tags/">
-<span class="md-ellipsis">
-    Using Code Tags
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../how-to-guides/using-todo-tree-with-code-tags/">
-<span class="md-ellipsis">
-    Using TODO Tree with Code Tags
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../how-to-guides/lifecycle-git-github/">
-<span class="md-ellipsis">
-    AI/ML Project Lifecycle with Git and GitHub
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../how-to-guides/introduction-to-doctest/">
-<span class="md-ellipsis">
-    Introduction to Doctest
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../how-to-guides/python-oop-for-ml/">
-<span class="md-ellipsis">
-    Python OOP for Machine Learning Projects
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../how-to-guides/code-review-best-practices/">
-<span class="md-ellipsis">
-    Code Review Best Practices
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../how-to-guides/jira-story-best-practices/">
-<span class="md-ellipsis">
-    Best Practices for Creating JIRA Stories for ML/AI Projects
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../how-to-guides/notebook-to-production/">
-<span class="md-ellipsis">
-    Moving from Jupyter Notebooks to Production Python Code
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../how-to-guides/type-checking-mypy/">
-<span class="md-ellipsis">
-    Static Type Checking with Mypy
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../how-to-guides/pre-commit-hooks-guide/">
-<span class="md-ellipsis">
-    Using Pre-Commit Hooks to Enforce Coding Standards
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../how-to-guides/pytest-inroduction-guide/">
-<span class="md-ellipsis">
-    Pytest Introduction Guide
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../how-to-guides/cofig-files/">
-<span class="md-ellipsis">
-    Uisng config files
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../how-to-guides/error-handling-and-logging/">
-<span class="md-ellipsis">
-    Error Handling and Logging
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../how-to-guides/docstrings-and-inline-commentaries/">
-<span class="md-ellipsis">
-    Docstrings and Inline Commentaries
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../how-to-guides/input-validation-with-pydantic/">
-<span class="md-ellipsis">
-    Input Validation with Pydantic
-  </span>
-</a>
 </li>
 </ul>
 </nav>
@@ -918,24 +932,31 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#adding-new-dependencies">
+<a class="md-nav__link" href="#example">
 <span class="md-ellipsis">
-      Adding New Dependencies
+      Example
     </span>
 </a>
-<nav aria-label="Adding New Dependencies" class="md-nav">
+<nav aria-label="Example" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#adding-standard-dependencies">
+<a class="md-nav__link" href="#original-python-script">
 <span class="md-ellipsis">
-      Adding Standard Dependencies
+      Original Python Script
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#adding-development-dependencies">
+<a class="md-nav__link" href="#using-the-prompt">
 <span class="md-ellipsis">
-      Adding Development Dependencies
+      Using the Prompt
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#expected-refactored-python-script">
+<span class="md-ellipsis">
+      Expected Refactored Python Script
     </span>
 </a>
 </li>
@@ -943,24 +964,24 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#updating-existing-dependencies">
+<a class="md-nav__link" href="#explanation">
 <span class="md-ellipsis">
-      Updating Existing Dependencies
+      Explanation
     </span>
 </a>
-<nav aria-label="Updating Existing Dependencies" class="md-nav">
+<nav aria-label="Explanation" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#updating-a-specific-dependency">
+<a class="md-nav__link" href="#before-using-pydantic">
 <span class="md-ellipsis">
-      Updating a Specific Dependency
+      Before Using Pydantic
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#updating-all-dependencies">
+<a class="md-nav__link" href="#after-using-pydantic">
 <span class="md-ellipsis">
-      Updating All Dependencies
+      After Using Pydantic
     </span>
 </a>
 </li>
@@ -968,50 +989,93 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#removing-unneeded-dependencies">
+<a class="md-nav__link" href="#overview">
 <span class="md-ellipsis">
-      Removing Unneeded Dependencies
+      Overview
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#listing-project-dependencies">
+<a class="md-nav__link" href="#benefits-of-using-pydantic">
 <span class="md-ellipsis">
-      Listing Project Dependencies
+      Benefits of Using Pydantic
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#locking-dependencies">
+<a class="md-nav__link" href="#best-practices-for-using-pydantic">
 <span class="md-ellipsis">
-      Locking Dependencies
+      Best Practices for Using Pydantic
     </span>
 </a>
-<nav aria-label="Locking Dependencies" class="md-nav">
+<nav aria-label="Best Practices for Using Pydantic" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#why-use-poetrylock">
+<a class="md-nav__link" href="#1-pydantic-models-for-input-validation">
 <span class="md-ellipsis">
-      Why Use poetry.lock?
+      1. Pydantic Models for Input Validation
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#how-to-lock-dependencies">
+<a class="md-nav__link" href="#2-validation-in-methods">
 <span class="md-ellipsis">
-      How to Lock Dependencies
+      2. Validation in Methods
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#committing-to-version-control">
+<a class="md-nav__link" href="#3-error-handling">
 <span class="md-ellipsis">
-      Committing to Version Control
+      3. Error Handling
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#4-documentation">
+<span class="md-ellipsis">
+      4. Documentation
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#5-consistency">
+<span class="md-ellipsis">
+      5. Consistency
     </span>
 </a>
 </li>
 </ul>
 </nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mypy-vs-pydantic">
+<span class="md-ellipsis">
+      MyPy vs. Pydantic
+    </span>
+</a>
+<nav aria-label="MyPy vs. Pydantic" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mypy">
+<span class="md-ellipsis">
+      MyPy
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#pydantic">
+<span class="md-ellipsis">
+      Pydantic
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#key-differences">
+<span class="md-ellipsis">
+      Key Differences
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#conclusion">
@@ -1020,44 +1084,8 @@
     </span>
 </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#troubleshooting-and-tips">
-<span class="md-ellipsis">
-      Troubleshooting and Tips
-    </span>
-</a>
-<nav aria-label="Troubleshooting and Tips" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#resolving-dependency-conflicts">
-<span class="md-ellipsis">
-      Resolving Dependency Conflicts
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#debugging-environment-issues">
-<span class="md-ellipsis">
-      Debugging Environment Issues
-    </span>
-</a>
-</li>
 </ul>
 </nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#conclusion_1">
-<span class="md-ellipsis">
-      Conclusion
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#further-reading-and-resources">
-<span class="md-ellipsis">
-      Further Reading and Resources
-    </span>
-</a>
 </li>
 </ul>
 </nav>
@@ -1066,162 +1094,187 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="managing-dependencies-with-poetry-in-your-project">Managing Dependencies with Poetry in Your Project<a class="headerlink" href="#managing-dependencies-with-poetry-in-your-project" title="Permanent link">¶</a></h1>
-<p>Poetry is a powerful package management tool that simplifies dependency
-management in Python projects. With the Cookiecutter template, you
-already have a pre-configured setup that makes it easy to manage your
-project's dependencies. This guide will walk you through how to
-effectively use Poetry in various scenarios, such as adding, updating,
-and removing dependencies.</p>
-<h2 id="adding-new-dependencies">Adding New Dependencies<a class="headerlink" href="#adding-new-dependencies" title="Permanent link">¶</a></h2>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The Cookiecutter template comes with a set of pre-configured dependencies specified in the <code>pyproject.toml</code> file. However, you may need to add additional packages as your project grows.</p>
-</div>
-<h3 id="adding-standard-dependencies">Adding Standard Dependencies<a class="headerlink" href="#adding-standard-dependencies" title="Permanent link">¶</a></h3>
-<p>To add a new package to your project, use the <code>poetry add</code> command:</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>poetry<span class="w"> </span>add<span class="w"> </span>&lt;package-name&gt;
-</code></pre></div>
+<h1 id="using-pydantic-for-input-validation-at-runtime">Using Pydantic for Input Validation at Runtime<a class="headerlink" href="#using-pydantic-for-input-validation-at-runtime" title="Permanent link">¶</a></h1>
 <div class="admonition example">
-<p class="admonition-title">Adding NumPy as a Dependency</p>
-<p>To add <code>numpy</code> to your project, run the following command:</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a>poetry<span class="w"> </span>add<span class="w"> </span>numpy
+<p class="admonition-title">ChatGPT Prompt for adding Pydantic-based validation</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>You are a world-class Python developer with an eagle eye for detail and
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a>a deep understanding of best practices in using Pydantic for runtime
+<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a>input validation in Python classes. I have a Python script, and I want
+<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a>to add Pydantic-based input validation to the class methods based on
+<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a>these recommendations:
+<a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a>
+<a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a>1. **Pydantic Models for Input Validation**: Create Pydantic models to
+<a href="#__codelineno-0-8" id="__codelineno-0-8" name="__codelineno-0-8"></a>validate the inputs for each class method that takes parameters.
+<a href="#__codelineno-0-9" id="__codelineno-0-9" name="__codelineno-0-9"></a>2. **Validation in Methods**: Refactor the methods to use these Pydantic
+<a href="#__codelineno-0-10" id="__codelineno-0-10" name="__codelineno-0-10"></a>models for input validation.
+<a href="#__codelineno-0-11" id="__codelineno-0-11" name="__codelineno-0-11"></a>3. **Error Handling**: Ensure that validation errors are appropriately
+<a href="#__codelineno-0-12" id="__codelineno-0-12" name="__codelineno-0-12"></a>handled and logged.
+<a href="#__codelineno-0-13" id="__codelineno-0-13" name="__codelineno-0-13"></a>4. **Documentation**: Document the changes and the purpose of the
+<a href="#__codelineno-0-14" id="__codelineno-0-14" name="__codelineno-0-14"></a>validation for each refactored method.
+<a href="#__codelineno-0-15" id="__codelineno-0-15" name="__codelineno-0-15"></a>5. **Consistency**: Ensure that the validation is consistent across all
+<a href="#__codelineno-0-16" id="__codelineno-0-16" name="__codelineno-0-16"></a>methods, adhering to the principles of clean code and
+<a href="#__codelineno-0-17" id="__codelineno-0-17" name="__codelineno-0-17"></a>maintainability.
+<a href="#__codelineno-0-18" id="__codelineno-0-18" name="__codelineno-0-18"></a>
+<a href="#__codelineno-0-19" id="__codelineno-0-19" name="__codelineno-0-19"></a>Please produce a refactored version of the Python code with the
+<a href="#__codelineno-0-20" id="__codelineno-0-20" name="__codelineno-0-20"></a>necessary Pydantic models and validation.
+<a href="#__codelineno-0-21" id="__codelineno-0-21" name="__codelineno-0-21"></a>
+<a href="#__codelineno-0-22" id="__codelineno-0-22" name="__codelineno-0-22"></a>Here is the script:
+<a href="#__codelineno-0-23" id="__codelineno-0-23" name="__codelineno-0-23"></a>
+<a href="#__codelineno-0-24" id="__codelineno-0-24" name="__codelineno-0-24"></a>```python
+<a href="#__codelineno-0-25" id="__codelineno-0-25" name="__codelineno-0-25"></a>[Insert your Python script here]
 </code></pre></div>
 </div>
-<h3 id="adding-development-dependencies">Adding Development Dependencies<a class="headerlink" href="#adding-development-dependencies" title="Permanent link">¶</a></h3>
-<p>For packages needed only during development, you can add them as
-development dependencies:</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a>poetry<span class="w"> </span>add<span class="w"> </span>--dev<span class="w"> </span>&lt;package-name&gt;
+<h3 id="example">Example<a class="headerlink" href="#example" title="Permanent link">¶</a></h3>
+<h4 id="original-python-script">Original Python Script<a class="headerlink" href="#original-python-script" title="Permanent link">¶</a></h4>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="k">class</span> <span class="nc">SimpleClass</span><span class="p">:</span>
+<a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a>    <span class="k">def</span> <span class="nf">method</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">param1</span><span class="p">,</span> <span class="n">param2</span><span class="p">):</span>
+<a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a>        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">param1</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
+<a href="#__codelineno-1-4" id="__codelineno-1-4" name="__codelineno-1-4"></a>            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">"param1 must be an integer"</span><span class="p">)</span>
+<a href="#__codelineno-1-5" id="__codelineno-1-5" name="__codelineno-1-5"></a>        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">param2</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+<a href="#__codelineno-1-6" id="__codelineno-1-6" name="__codelineno-1-6"></a>            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">"param2 must be a string"</span><span class="p">)</span>
+<a href="#__codelineno-1-7" id="__codelineno-1-7" name="__codelineno-1-7"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"param1: </span><span class="si">{</span><span class="n">param1</span><span class="si">}</span><span class="s2">, param2: </span><span class="si">{</span><span class="n">param2</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<a href="#__codelineno-1-8" id="__codelineno-1-8" name="__codelineno-1-8"></a>
+<a href="#__codelineno-1-9" id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="c1"># Example usage</span>
+<a href="#__codelineno-1-10" id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="n">obj</span> <span class="o">=</span> <span class="n">SimpleClass</span><span class="p">()</span>
+<a href="#__codelineno-1-11" id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="n">obj</span><span class="o">.</span><span class="n">method</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s2">"example"</span><span class="p">)</span>
 </code></pre></div>
-<div class="admonition example">
-<p class="admonition-title">Adding Pytest as a Development Dependency</p>
-<p>To add <code>pytest</code> as a development dependency, run:</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a>poetry<span class="w"> </span>add<span class="w"> </span>--dev<span class="w"> </span>pytest
+<h4 id="using-the-prompt">Using the Prompt<a class="headerlink" href="#using-the-prompt" title="Permanent link">¶</a></h4>
+<p>To use the prompt, copy the original Python script into the <code>[Insert
+your Python script here]</code> section and provide it to ChatGPT. The output
+will include the refactored Python script using Pydantic for input
+validation.</p>
+<h4 id="expected-refactored-python-script">Expected Refactored Python Script<a class="headerlink" href="#expected-refactored-python-script" title="Permanent link">¶</a></h4>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="kn">from</span> <span class="nn">pydantic</span> <span class="kn">import</span> <span class="n">BaseModel</span><span class="p">,</span> <span class="n">ValidationError</span>
+<a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a>
+<a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="k">class</span> <span class="nc">MethodParams</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+<a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a>    <span class="n">param1</span><span class="p">:</span> <span class="nb">int</span>
+<a href="#__codelineno-2-5" id="__codelineno-2-5" name="__codelineno-2-5"></a>    <span class="n">param2</span><span class="p">:</span> <span class="nb">str</span>
+<a href="#__codelineno-2-6" id="__codelineno-2-6" name="__codelineno-2-6"></a>
+<a href="#__codelineno-2-7" id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="k">class</span> <span class="nc">SimpleClass</span><span class="p">:</span>
+<a href="#__codelineno-2-8" id="__codelineno-2-8" name="__codelineno-2-8"></a>    <span class="k">def</span> <span class="nf">method</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">param1</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">param2</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+<a href="#__codelineno-2-9" id="__codelineno-2-9" name="__codelineno-2-9"></a>        <span class="k">try</span><span class="p">:</span>
+<a href="#__codelineno-2-10" id="__codelineno-2-10" name="__codelineno-2-10"></a>            <span class="n">params</span> <span class="o">=</span> <span class="n">MethodParams</span><span class="p">(</span><span class="n">param1</span><span class="o">=</span><span class="n">param1</span><span class="p">,</span> <span class="n">param2</span><span class="o">=</span><span class="n">param2</span><span class="p">)</span>
+<a href="#__codelineno-2-11" id="__codelineno-2-11" name="__codelineno-2-11"></a>        <span class="k">except</span> <span class="n">ValidationError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+<a href="#__codelineno-2-12" id="__codelineno-2-12" name="__codelineno-2-12"></a>            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Validation error: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<a href="#__codelineno-2-13" id="__codelineno-2-13" name="__codelineno-2-13"></a>            <span class="k">return</span>
+<a href="#__codelineno-2-14" id="__codelineno-2-14" name="__codelineno-2-14"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"param1: </span><span class="si">{</span><span class="n">params</span><span class="o">.</span><span class="n">param1</span><span class="si">}</span><span class="s2">, param2: </span><span class="si">{</span><span class="n">params</span><span class="o">.</span><span class="n">param2</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<a href="#__codelineno-2-15" id="__codelineno-2-15" name="__codelineno-2-15"></a>
+<a href="#__codelineno-2-16" id="__codelineno-2-16" name="__codelineno-2-16"></a><span class="c1"># Example usage</span>
+<a href="#__codelineno-2-17" id="__codelineno-2-17" name="__codelineno-2-17"></a><span class="n">obj</span> <span class="o">=</span> <span class="n">SimpleClass</span><span class="p">()</span>
+<a href="#__codelineno-2-18" id="__codelineno-2-18" name="__codelineno-2-18"></a><span class="n">obj</span><span class="o">.</span><span class="n">method</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s2">"example"</span><span class="p">)</span>
 </code></pre></div>
-</div>
-<h2 id="updating-existing-dependencies">Updating Existing Dependencies<a class="headerlink" href="#updating-existing-dependencies" title="Permanent link">¶</a></h2>
-<div class="admonition info">
-<p class="admonition-title">Keeping Dependencies Up-to-date</p>
-<p>It's a good practice to keep your dependencies updated to benefit from bug fixes, performance improvements, and new features.</p>
-</div>
-<h3 id="updating-a-specific-dependency">Updating a Specific Dependency<a class="headerlink" href="#updating-a-specific-dependency" title="Permanent link">¶</a></h3>
-<p>To update a specific package, use the <code>poetry update</code> command:</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a>poetry<span class="w"> </span>update<span class="w"> </span>&lt;package-name&gt;
-</code></pre></div>
-<div class="admonition example">
-<p class="admonition-title">Updating NumPy</p>
-<p>To update <code>numpy</code> to the latest version, run:</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a>poetry<span class="w"> </span>update<span class="w"> </span>numpy
-</code></pre></div>
-</div>
-<h3 id="updating-all-dependencies">Updating All Dependencies<a class="headerlink" href="#updating-all-dependencies" title="Permanent link">¶</a></h3>
-<p>To update all dependencies to their latest versions:</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a>poetry<span class="w"> </span>update
-</code></pre></div>
-<h2 id="removing-unneeded-dependencies">Removing Unneeded Dependencies<a class="headerlink" href="#removing-unneeded-dependencies" title="Permanent link">¶</a></h2>
-<div class="admonition warning">
-<p class="admonition-title">Clean Up Unnecessary Packages</p>
-<p>Removing unused dependencies can help keep your project clean and reduce potential security risks.</p>
-</div>
-<p>To remove a package, use the <code>poetry remove</code> command:</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-7-1" id="__codelineno-7-1" name="__codelineno-7-1"></a>poetry<span class="w"> </span>remove<span class="w"> </span>&lt;package-name&gt;
-</code></pre></div>
-<div class="admonition example">
-<p class="admonition-title">Removing NumPy</p>
-<p>To remove <code>numpy</code> from your project, run:</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-8-1" id="__codelineno-8-1" name="__codelineno-8-1"></a>poetry<span class="w"> </span>remove<span class="w"> </span>numpy
-</code></pre></div>
-</div>
-<h2 id="listing-project-dependencies">Listing Project Dependencies<a class="headerlink" href="#listing-project-dependencies" title="Permanent link">¶</a></h2>
-<div class="admonition info">
-<p class="admonition-title">Know What You're Using</p>
-<p>It's useful to periodically review the list of installed packages and their versions.</p>
-</div>
-<p>To list all installed packages and their versions, run:</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-9-1" id="__codelineno-9-1" name="__codelineno-9-1"></a>poetry<span class="w"> </span>show
-</code></pre></div>
-<h2 id="locking-dependencies">Locking Dependencies<a class="headerlink" href="#locking-dependencies" title="Permanent link">¶</a></h2>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Ensuring that everyone working on the project uses the same versions of dependencies is crucial for maintaining a consistent development environment. This is where the <code>poetry.lock</code> file comes into play.</p>
-</div>
-<h3 id="why-use-poetrylock">Why Use <code>poetry.lock</code>?<a class="headerlink" href="#why-use-poetrylock" title="Permanent link">¶</a></h3>
-<p>The <code>poetry.lock</code> file is generated when you first run <code>poetry install</code>
-or <code>poetry update</code>. It contains the exact versions of each dependency
-that your project relies on. By committing this file to your version
-control system (e.g., GitHub), you ensure that all team members and
-deployment environments use the same versions of dependencies, thereby
-reducing "it works on my machine" issues.</p>
-<h3 id="how-to-lock-dependencies">How to Lock Dependencies<a class="headerlink" href="#how-to-lock-dependencies" title="Permanent link">¶</a></h3>
-<p>To generate or update the <code>poetry.lock</code> file, you can run:</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-10-1" id="__codelineno-10-1" name="__codelineno-10-1"></a>poetry<span class="w"> </span>lock
-</code></pre></div>
-<p>This will read your <code>pyproject.toml</code> file, resolve dependencies, and
-generate a new <code>poetry.lock</code> file with the exact package versions.</p>
-<h3 id="committing-to-version-control">Committing to Version Control<a class="headerlink" href="#committing-to-version-control" title="Permanent link">¶</a></h3>
-<p>To ensure that everyone is on the same page, both <code>pyproject.toml</code> and
-<code>poetry.lock</code> should be committed to your version control system.</p>
-<div class="admonition info">
-<p class="admonition-title">What to Commit?</p>
+<h3 id="explanation">Explanation<a class="headerlink" href="#explanation" title="Permanent link">¶</a></h3>
+<h4 id="before-using-pydantic">Before Using Pydantic<a class="headerlink" href="#before-using-pydantic" title="Permanent link">¶</a></h4>
 <ul>
-<li>
-<p><strong>Commit <code>pyproject.toml</code></strong>: This file contains the list of dependencies your project needs, without specifying the exact versions. It provides the flexibility to update packages within defined version ranges.</p>
-</li>
-<li>
-<p><strong>Commit <code>poetry.lock</code></strong>: This file locks the versions of all dependencies, ensuring that everyone uses the same versions. It should be committed to version control to maintain consistency across all environments.</p>
-</li>
+<li><strong>Manual Validation:</strong> The original method manually checks the types
+  of <code>param1</code> and <code>param2</code> using <code>isinstance</code>.</li>
+<li><strong>Error Handling:</strong> Raises a <code>TypeError</code> if the types are incorrect.</li>
+<li><strong>Readability:</strong> The validation logic is mixed with the method's core
+  functionality, making the code less readable and harder to maintain.</li>
 </ul>
-</div>
-<p>By committing both files, you strike a balance between flexibility and
-consistency. The <code>pyproject.toml</code> allows for updates within specified
-ranges, while the <code>poetry.lock</code> ensures that these updates are
-consistent across all environments.</p>
-<div class="admonition warning">
-<p class="admonition-title">Never Edit <code>poetry.lock</code> Manually</p>
-<p>The <code>poetry.lock</code> file is auto-generated and should never be edited
-manually. Always use Poetry commands to update it.</p>
-</div>
-<h2 id="conclusion">Conclusion<a class="headerlink" href="#conclusion" title="Permanent link">¶</a></h2>
-<p>Locking dependencies is an essential practice in collaborative
-development. It ensures that all contributors and environments are
-aligned, reducing potential bugs and inconsistencies. With Poetry and
-the Cookiecutter template, managing these dependencies becomes a
-straightforward task.</p>
-<h2 id="troubleshooting-and-tips">Troubleshooting and Tips<a class="headerlink" href="#troubleshooting-and-tips" title="Permanent link">¶</a></h2>
-<h3 id="resolving-dependency-conflicts">Resolving Dependency Conflicts<a class="headerlink" href="#resolving-dependency-conflicts" title="Permanent link">¶</a></h3>
-<p>If you encounter dependency conflicts, you can use the <code>poetry update
---dry-run</code> command to simulate the update process:</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-11-1" id="__codelineno-11-1" name="__codelineno-11-1"></a>poetry<span class="w"> </span>update<span class="w"> </span>--dry-run
-</code></pre></div>
-<h3 id="debugging-environment-issues">Debugging Environment Issues<a class="headerlink" href="#debugging-environment-issues" title="Permanent link">¶</a></h3>
-<p>If you suspect environment-related issues, you can check which Python
-interpreter Poetry is using:</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-12-1" id="__codelineno-12-1" name="__codelineno-12-1"></a>poetry<span class="w"> </span>env<span class="w"> </span>info
-</code></pre></div>
-<h2 id="conclusion_1">Conclusion<a class="headerlink" href="#conclusion_1" title="Permanent link">¶</a></h2>
-<p>Poetry simplifies dependency management, making it easier to maintain a
-clean and efficient project. With the Cookiecutter template, you have a
-head start in managing your project's dependencies effectively. Whether
-you're adding new packages, updating existing ones, or cleaning up
-unnecessary dependencies, Poetry has got you covered.</p>
-<h2 id="further-reading-and-resources">Further Reading and Resources<a class="headerlink" href="#further-reading-and-resources" title="Permanent link">¶</a></h2>
-<p>To deepen your understanding of Poetry and its capabilities, you may
-find the following resources helpful:</p>
+<h4 id="after-using-pydantic">After Using Pydantic<a class="headerlink" href="#after-using-pydantic" title="Permanent link">¶</a></h4>
 <ul>
-<li><a href="https://realpython.com/dependency-management-python-poetry/">Real Python's Guide on Dependency Management with Poetry</a></li>
-<li><a href="https://python-poetry.org/docs/">Official Poetry Documentation</a></li>
+<li><strong>Automatic Validation:</strong> The refactored method uses a Pydantic model
+  (<code>MethodParams</code>) to validate the inputs.</li>
+<li><strong>Error Handling:</strong> Catches <code>ValidationError</code> exceptions and logs the
+  validation errors.</li>
+<li><strong>Readability:</strong> The core functionality of the method is separated
+  from the validation logic, making the code cleaner and easier to
+  maintain.</li>
 </ul>
-<p>These references provide comprehensive tutorials and documentation that
-can help you become more proficient in managing Python dependencies with
-Poetry. Whether you're a beginner or an experienced developer, these
-resources offer valuable insights into best practices and advanced
-features.</p>
+<h3 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">¶</a></h3>
+<p>This guide provides a detailed approach to using Pydantic for input
+validation at runtime in Python classes. It covers the benefits of using
+Pydantic, a step-by-step example, and an explanation of the changes
+before and after using Pydantic.</p>
+<h2 id="benefits-of-using-pydantic">Benefits of Using Pydantic<a class="headerlink" href="#benefits-of-using-pydantic" title="Permanent link">¶</a></h2>
+<ul>
+<li><strong>Automatic Data Validation:</strong> Pydantic automatically validates data
+  types and values at runtime.</li>
+<li><strong>Clearer Code:</strong> Reduces boilerplate validation code, making the code
+  cleaner and more readable.</li>
+<li><strong>Error Messages:</strong> Provides detailed error messages, which can be
+  more informative than manually raised exceptions.</li>
+<li><strong>Data Parsing:</strong> Parses and transforms data, ensuring that the inputs
+  conform to the expected types and formats.</li>
+</ul>
+<h2 id="best-practices-for-using-pydantic">Best Practices for Using Pydantic<a class="headerlink" href="#best-practices-for-using-pydantic" title="Permanent link">¶</a></h2>
+<h3 id="1-pydantic-models-for-input-validation">1. Pydantic Models for Input Validation<a class="headerlink" href="#1-pydantic-models-for-input-validation" title="Permanent link">¶</a></h3>
+<ul>
+<li><strong>Define Models:</strong> Create Pydantic models to represent the expected
+  input data structure for each method.</li>
+<li><strong>Reuse Models:</strong> Reuse Pydantic models across different methods if
+  they share similar input structures.</li>
+</ul>
+<h3 id="2-validation-in-methods">2. Validation in Methods<a class="headerlink" href="#2-validation-in-methods" title="Permanent link">¶</a></h3>
+<ul>
+<li><strong>Validate Inputs:</strong> Use Pydantic models to validate inputs at the
+  beginning of each method.</li>
+<li><strong>Refactor Code:</strong> Refactor existing validation code to utilize
+  Pydantic models for cleaner and more maintainable code.</li>
+</ul>
+<h3 id="3-error-handling">3. Error Handling<a class="headerlink" href="#3-error-handling" title="Permanent link">¶</a></h3>
+<ul>
+<li><strong>Catch Validation Errors:</strong> Catch <code>ValidationError</code> exceptions and
+  handle them appropriately.</li>
+<li><strong>Log Errors:</strong> Log validation errors with detailed information to aid
+  in debugging and issue resolution.</li>
+</ul>
+<h3 id="4-documentation">4. Documentation<a class="headerlink" href="#4-documentation" title="Permanent link">¶</a></h3>
+<ul>
+<li><strong>Document Models:</strong> Document the purpose and structure of each
+  Pydantic model.</li>
+<li><strong>Explain Validation:</strong> Explain the validation process in the method
+  docstrings to provide context to future maintainers.</li>
+</ul>
+<h3 id="5-consistency">5. Consistency<a class="headerlink" href="#5-consistency" title="Permanent link">¶</a></h3>
+<ul>
+<li><strong>Consistent Validation:</strong> Ensure that all methods in a class follow a
+  consistent approach to input validation.</li>
+<li><strong>Code Quality:</strong> Adhere to clean code principles and maintain high
+  code quality by using Pydantic.</li>
+</ul>
+<h2 id="mypy-vs-pydantic">MyPy vs. Pydantic<a class="headerlink" href="#mypy-vs-pydantic" title="Permanent link">¶</a></h2>
+<h3 id="mypy">MyPy<a class="headerlink" href="#mypy" title="Permanent link">¶</a></h3>
+<ul>
+<li><strong>Purpose:</strong> MyPy is a static type checker for Python.</li>
+<li><strong>Functionality:</strong> It checks the types in your code without running
+  it. It verifies that the types match the annotations you've provided
+  and that type usage is consistent.</li>
+<li><strong>Usage:</strong> It helps catch type-related errors during development
+  before runtime, ensuring type safety and reducing bugs.</li>
+</ul>
+<h3 id="pydantic">Pydantic<a class="headerlink" href="#pydantic" title="Permanent link">¶</a></h3>
+<ul>
+<li><strong>Purpose:</strong> Pydantic is used for runtime data validation and settings
+  management using Python type annotations.</li>
+<li><strong>Functionality:</strong> It validates data at runtime, ensuring that the
+  data conforms to the specified types and constraints.</li>
+<li><strong>Usage:</strong> It is often used in web frameworks like FastAPI to validate
+  request data or in applications that require robust data validation
+  and settings management.</li>
+</ul>
+<h3 id="key-differences">Key Differences<a class="headerlink" href="#key-differences" title="Permanent link">¶</a></h3>
+<ul>
+<li><strong>MyPy:</strong> Checks types statically during development. It doesn't
+  affect the runtime performance or the running of the code.</li>
+<li><strong>Pydantic:</strong> Validates types and data at runtime, raising errors if
+  the data does not conform to the expected types.</li>
+</ul>
+<h3 id="conclusion">Conclusion<a class="headerlink" href="#conclusion" title="Permanent link">¶</a></h3>
+<p>Using Pydantic for input validation at runtime simplifies the validation
+process, makes the code cleaner, and provides robust error handling. By
+following best practices, you can ensure that your methods receive
+correctly typed and valid data, reducing potential runtime errors and
+improving code maintainability. This approach, combined with static type
+checking using MyPy, can significantly enhance the robustness and
+reliability of your Python applications.</p>
 <aside class="md-source-file">
 <span class="md-source-file__fact">
 <span class="md-icon" title="Last update">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 22, 2023</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 25, 2024</span>
 </span>
 </aside>
 </article>
