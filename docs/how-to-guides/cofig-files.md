@@ -31,6 +31,10 @@
        template-based log messages that can benefit from configuration or
        templating approaches.
     
+    If any hardcoded values in the script do not fall within these five 
+    categories, do not move them to a configuration file. Only externalize 
+    those values that match these specific recommendations.
+
     Please produce two files: a configuration file using YAML language and
     the refactored version of the Python code.
     
