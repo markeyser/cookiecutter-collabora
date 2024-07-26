@@ -698,6 +698,13 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#expected-helper-module">
+<span class="md-ellipsis">
+      Expected Helper Module
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#expected-refactored-python-script">
 <span class="md-ellipsis">
       Expected Refactored Python Script
@@ -723,9 +730,9 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#after-using-pydantic">
+<a class="md-nav__link" href="#after-using-pydantic-with-a-helper-module">
 <span class="md-ellipsis">
-      After Using Pydantic
+      After Using Pydantic with a Helper Module
     </span>
 </a>
 </li>
@@ -755,9 +762,9 @@
 <nav aria-label="Best Practices for Using Pydantic" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#1-pydantic-models-for-input-validation">
+<a class="md-nav__link" href="#1-helper-module-for-pydantic-validation">
 <span class="md-ellipsis">
-      1. Pydantic Models for Input Validation
+      1. Helper Module for Pydantic Validation
     </span>
 </a>
 </li>
@@ -954,6 +961,13 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#expected-helper-module">
+<span class="md-ellipsis">
+      Expected Helper Module
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#expected-refactored-python-script">
 <span class="md-ellipsis">
       Expected Refactored Python Script
@@ -979,9 +993,9 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#after-using-pydantic">
+<a class="md-nav__link" href="#after-using-pydantic-with-a-helper-module">
 <span class="md-ellipsis">
-      After Using Pydantic
+      After Using Pydantic with a Helper Module
     </span>
 </a>
 </li>
@@ -1011,9 +1025,9 @@
 <nav aria-label="Best Practices for Using Pydantic" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#1-pydantic-models-for-input-validation">
+<a class="md-nav__link" href="#1-helper-module-for-pydantic-validation">
 <span class="md-ellipsis">
-      1. Pydantic Models for Input Validation
+      1. Helper Module for Pydantic Validation
     </span>
 </a>
 </li>
@@ -1094,34 +1108,36 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
+<p>Sure! Here is the updated document with the approach of using a helper module for Pydantic validation.</p>
 <h1 id="using-pydantic-for-input-validation-at-runtime">Using Pydantic for Input Validation at Runtime<a class="headerlink" href="#using-pydantic-for-input-validation-at-runtime" title="Permanent link">¶</a></h1>
 <div class="admonition example">
-<p class="admonition-title">ChatGPT Prompt for adding Pydantic-based validation</p>
+<p class="admonition-title">ChatGPT Prompt for adding Pydantic-based validation with a helper module</p>
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>You are a world-class Python developer with an eagle eye for detail and
 <a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a>a deep understanding of best practices in using Pydantic for runtime
 <a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a>input validation in Python classes. I have a Python script, and I want
 <a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a>to add Pydantic-based input validation to the class methods based on
 <a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a>these recommendations:
 <a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a>
-<a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a>1. **Pydantic Models for Input Validation**: Create Pydantic models to
-<a href="#__codelineno-0-8" id="__codelineno-0-8" name="__codelineno-0-8"></a>validate the inputs for each class method that takes parameters.
-<a href="#__codelineno-0-9" id="__codelineno-0-9" name="__codelineno-0-9"></a>2. **Validation in Methods**: Refactor the methods to use these Pydantic
-<a href="#__codelineno-0-10" id="__codelineno-0-10" name="__codelineno-0-10"></a>models for input validation.
-<a href="#__codelineno-0-11" id="__codelineno-0-11" name="__codelineno-0-11"></a>3. **Error Handling**: Ensure that validation errors are appropriately
-<a href="#__codelineno-0-12" id="__codelineno-0-12" name="__codelineno-0-12"></a>handled and logged.
-<a href="#__codelineno-0-13" id="__codelineno-0-13" name="__codelineno-0-13"></a>4. **Documentation**: Document the changes and the purpose of the
-<a href="#__codelineno-0-14" id="__codelineno-0-14" name="__codelineno-0-14"></a>validation for each refactored method.
-<a href="#__codelineno-0-15" id="__codelineno-0-15" name="__codelineno-0-15"></a>5. **Consistency**: Ensure that the validation is consistent across all
-<a href="#__codelineno-0-16" id="__codelineno-0-16" name="__codelineno-0-16"></a>methods, adhering to the principles of clean code and
-<a href="#__codelineno-0-17" id="__codelineno-0-17" name="__codelineno-0-17"></a>maintainability.
-<a href="#__codelineno-0-18" id="__codelineno-0-18" name="__codelineno-0-18"></a>
-<a href="#__codelineno-0-19" id="__codelineno-0-19" name="__codelineno-0-19"></a>Please produce a refactored version of the Python code with the
-<a href="#__codelineno-0-20" id="__codelineno-0-20" name="__codelineno-0-20"></a>necessary Pydantic models and validation.
-<a href="#__codelineno-0-21" id="__codelineno-0-21" name="__codelineno-0-21"></a>
-<a href="#__codelineno-0-22" id="__codelineno-0-22" name="__codelineno-0-22"></a>Here is the script:
-<a href="#__codelineno-0-23" id="__codelineno-0-23" name="__codelineno-0-23"></a>
-<a href="#__codelineno-0-24" id="__codelineno-0-24" name="__codelineno-0-24"></a>```python
-<a href="#__codelineno-0-25" id="__codelineno-0-25" name="__codelineno-0-25"></a>[Insert your Python script here]
+<a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a>1. Helper Module for Pydantic Validation: Create a helper module to
+<a href="#__codelineno-0-8" id="__codelineno-0-8" name="__codelineno-0-8"></a>define Pydantic models and perform input validation separately from the
+<a href="#__codelineno-0-9" id="__codelineno-0-9" name="__codelineno-0-9"></a>original class.
+<a href="#__codelineno-0-10" id="__codelineno-0-10" name="__codelineno-0-10"></a>2. Validation in Methods: Refactor the methods to use these Pydantic
+<a href="#__codelineno-0-11" id="__codelineno-0-11" name="__codelineno-0-11"></a>models for input validation.
+<a href="#__codelineno-0-12" id="__codelineno-0-12" name="__codelineno-0-12"></a>3. Error Handling: Ensure that validation errors are appropriately
+<a href="#__codelineno-0-13" id="__codelineno-0-13" name="__codelineno-0-13"></a>handled and logged.
+<a href="#__codelineno-0-14" id="__codelineno-0-14" name="__codelineno-0-14"></a>4. Documentation: Document the changes and the purpose of the
+<a href="#__codelineno-0-15" id="__codelineno-0-15" name="__codelineno-0-15"></a>validation for each refactored method.
+<a href="#__codelineno-0-16" id="__codelineno-0-16" name="__codelineno-0-16"></a>5. Consistency: Ensure that the validation is consistent across all
+<a href="#__codelineno-0-17" id="__codelineno-0-17" name="__codelineno-0-17"></a>methods, adhering to the principles of clean code and
+<a href="#__codelineno-0-18" id="__codelineno-0-18" name="__codelineno-0-18"></a>maintainability.
+<a href="#__codelineno-0-19" id="__codelineno-0-19" name="__codelineno-0-19"></a>
+<a href="#__codelineno-0-20" id="__codelineno-0-20" name="__codelineno-0-20"></a>Please produce a helper module with the Pydantic models and validation 
+<a href="#__codelineno-0-21" id="__codelineno-0-21" name="__codelineno-0-21"></a>logic, and refactor the original Python class to use this helper module.
+<a href="#__codelineno-0-22" id="__codelineno-0-22" name="__codelineno-0-22"></a>
+<a href="#__codelineno-0-23" id="__codelineno-0-23" name="__codelineno-0-23"></a>Here is the script:
+<a href="#__codelineno-0-24" id="__codelineno-0-24" name="__codelineno-0-24"></a>
+<a href="#__codelineno-0-25" id="__codelineno-0-25" name="__codelineno-0-25"></a>```python
+<a href="#__codelineno-0-26" id="__codelineno-0-26" name="__codelineno-0-26"></a>[Insert your Python script here]
 </code></pre></div>
 </div>
 <h3 id="example">Example<a class="headerlink" href="#example" title="Permanent link">¶</a></h3>
@@ -1141,27 +1157,39 @@
 <h4 id="using-the-prompt">Using the Prompt<a class="headerlink" href="#using-the-prompt" title="Permanent link">¶</a></h4>
 <p>To use the prompt, copy the original Python script into the <code>[Insert
 your Python script here]</code> section and provide it to ChatGPT. The output
-will include the refactored Python script using Pydantic for input
+will include the helper module and the refactored Python script using Pydantic for input
 validation.</p>
+<h4 id="expected-helper-module">Expected Helper Module<a class="headerlink" href="#expected-helper-module" title="Permanent link">¶</a></h4>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="c1"># validation_helper.py</span>
+<a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="kn">from</span> <span class="nn">pydantic</span> <span class="kn">import</span> <span class="n">BaseModel</span><span class="p">,</span> <span class="n">ValidationError</span>
+<a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a>
+<a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="k">class</span> <span class="nc">MethodParams</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+<a href="#__codelineno-2-5" id="__codelineno-2-5" name="__codelineno-2-5"></a>    <span class="n">param1</span><span class="p">:</span> <span class="nb">int</span>
+<a href="#__codelineno-2-6" id="__codelineno-2-6" name="__codelineno-2-6"></a>    <span class="n">param2</span><span class="p">:</span> <span class="nb">str</span>
+<a href="#__codelineno-2-7" id="__codelineno-2-7" name="__codelineno-2-7"></a>
+<a href="#__codelineno-2-8" id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="k">def</span> <span class="nf">validate_method_params</span><span class="p">(</span><span class="n">params</span><span class="p">):</span>
+<a href="#__codelineno-2-9" id="__codelineno-2-9" name="__codelineno-2-9"></a>    <span class="k">try</span><span class="p">:</span>
+<a href="#__codelineno-2-10" id="__codelineno-2-10" name="__codelineno-2-10"></a>        <span class="n">validated_params</span> <span class="o">=</span> <span class="n">MethodParams</span><span class="p">(</span><span class="o">**</span><span class="n">params</span><span class="p">)</span>
+<a href="#__codelineno-2-11" id="__codelineno-2-11" name="__codelineno-2-11"></a>        <span class="k">return</span> <span class="n">validated_params</span>
+<a href="#__codelineno-2-12" id="__codelineno-2-12" name="__codelineno-2-12"></a>    <span class="k">except</span> <span class="n">ValidationError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+<a href="#__codelineno-2-13" id="__codelineno-2-13" name="__codelineno-2-13"></a>        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Validation error: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+</code></pre></div>
 <h4 id="expected-refactored-python-script">Expected Refactored Python Script<a class="headerlink" href="#expected-refactored-python-script" title="Permanent link">¶</a></h4>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="kn">from</span> <span class="nn">pydantic</span> <span class="kn">import</span> <span class="n">BaseModel</span><span class="p">,</span> <span class="n">ValidationError</span>
-<a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a>
-<a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="k">class</span> <span class="nc">MethodParams</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
-<a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a>    <span class="n">param1</span><span class="p">:</span> <span class="nb">int</span>
-<a href="#__codelineno-2-5" id="__codelineno-2-5" name="__codelineno-2-5"></a>    <span class="n">param2</span><span class="p">:</span> <span class="nb">str</span>
-<a href="#__codelineno-2-6" id="__codelineno-2-6" name="__codelineno-2-6"></a>
-<a href="#__codelineno-2-7" id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="k">class</span> <span class="nc">SimpleClass</span><span class="p">:</span>
-<a href="#__codelineno-2-8" id="__codelineno-2-8" name="__codelineno-2-8"></a>    <span class="k">def</span> <span class="nf">method</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">param1</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">param2</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
-<a href="#__codelineno-2-9" id="__codelineno-2-9" name="__codelineno-2-9"></a>        <span class="k">try</span><span class="p">:</span>
-<a href="#__codelineno-2-10" id="__codelineno-2-10" name="__codelineno-2-10"></a>            <span class="n">params</span> <span class="o">=</span> <span class="n">MethodParams</span><span class="p">(</span><span class="n">param1</span><span class="o">=</span><span class="n">param1</span><span class="p">,</span> <span class="n">param2</span><span class="o">=</span><span class="n">param2</span><span class="p">)</span>
-<a href="#__codelineno-2-11" id="__codelineno-2-11" name="__codelineno-2-11"></a>        <span class="k">except</span> <span class="n">ValidationError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
-<a href="#__codelineno-2-12" id="__codelineno-2-12" name="__codelineno-2-12"></a>            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Validation error: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
-<a href="#__codelineno-2-13" id="__codelineno-2-13" name="__codelineno-2-13"></a>            <span class="k">return</span>
-<a href="#__codelineno-2-14" id="__codelineno-2-14" name="__codelineno-2-14"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"param1: </span><span class="si">{</span><span class="n">params</span><span class="o">.</span><span class="n">param1</span><span class="si">}</span><span class="s2">, param2: </span><span class="si">{</span><span class="n">params</span><span class="o">.</span><span class="n">param2</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
-<a href="#__codelineno-2-15" id="__codelineno-2-15" name="__codelineno-2-15"></a>
-<a href="#__codelineno-2-16" id="__codelineno-2-16" name="__codelineno-2-16"></a><span class="c1"># Example usage</span>
-<a href="#__codelineno-2-17" id="__codelineno-2-17" name="__codelineno-2-17"></a><span class="n">obj</span> <span class="o">=</span> <span class="n">SimpleClass</span><span class="p">()</span>
-<a href="#__codelineno-2-18" id="__codelineno-2-18" name="__codelineno-2-18"></a><span class="n">obj</span><span class="o">.</span><span class="n">method</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s2">"example"</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="kn">from</span> <span class="nn">validation_helper</span> <span class="kn">import</span> <span class="n">validate_method_params</span>
+<a href="#__codelineno-3-2" id="__codelineno-3-2" name="__codelineno-3-2"></a>
+<a href="#__codelineno-3-3" id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="k">class</span> <span class="nc">SimpleClass</span><span class="p">:</span>
+<a href="#__codelineno-3-4" id="__codelineno-3-4" name="__codelineno-3-4"></a>    <span class="k">def</span> <span class="nf">method</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">param1</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">param2</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+<a href="#__codelineno-3-5" id="__codelineno-3-5" name="__codelineno-3-5"></a>        <span class="n">params</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'param1'</span><span class="p">:</span> <span class="n">param1</span><span class="p">,</span> <span class="s1">'param2'</span><span class="p">:</span> <span class="n">param2</span><span class="p">}</span>
+<a href="#__codelineno-3-6" id="__codelineno-3-6" name="__codelineno-3-6"></a>        <span class="k">try</span><span class="p">:</span>
+<a href="#__codelineno-3-7" id="__codelineno-3-7" name="__codelineno-3-7"></a>            <span class="n">validated_params</span> <span class="o">=</span> <span class="n">validate_method_params</span><span class="p">(</span><span class="n">params</span><span class="p">)</span>
+<a href="#__codelineno-3-8" id="__codelineno-3-8" name="__codelineno-3-8"></a>        <span class="k">except</span> <span class="ne">ValueError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+<a href="#__codelineno-3-9" id="__codelineno-3-9" name="__codelineno-3-9"></a>            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Validation error: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<a href="#__codelineno-3-10" id="__codelineno-3-10" name="__codelineno-3-10"></a>            <span class="k">return</span>
+<a href="#__codelineno-3-11" id="__codelineno-3-11" name="__codelineno-3-11"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"param1: </span><span class="si">{</span><span class="n">validated_params</span><span class="o">.</span><span class="n">param1</span><span class="si">}</span><span class="s2">, param2: </span><span class="si">{</span><span class="n">validated_params</span><span class="o">.</span><span class="n">param2</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<a href="#__codelineno-3-12" id="__codelineno-3-12" name="__codelineno-3-12"></a>
+<a href="#__codelineno-3-13" id="__codelineno-3-13" name="__codelineno-3-13"></a><span class="c1"># Example usage</span>
+<a href="#__codelineno-3-14" id="__codelineno-3-14" name="__codelineno-3-14"></a><span class="n">obj</span> <span class="o">=</span> <span class="n">SimpleClass</span><span class="p">()</span>
+<a href="#__codelineno-3-15" id="__codelineno-3-15" name="__codelineno-3-15"></a><span class="n">obj</span><span class="o">.</span><span class="n">method</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s2">"example"</span><span class="p">)</span>
 </code></pre></div>
 <h3 id="explanation">Explanation<a class="headerlink" href="#explanation" title="Permanent link">¶</a></h3>
 <h4 id="before-using-pydantic">Before Using Pydantic<a class="headerlink" href="#before-using-pydantic" title="Permanent link">¶</a></h4>
@@ -1172,10 +1200,12 @@ validation.</p>
 <li><strong>Readability:</strong> The validation logic is mixed with the method's core
   functionality, making the code less readable and harder to maintain.</li>
 </ul>
-<h4 id="after-using-pydantic">After Using Pydantic<a class="headerlink" href="#after-using-pydantic" title="Permanent link">¶</a></h4>
+<h4 id="after-using-pydantic-with-a-helper-module">After Using Pydantic with a Helper Module<a class="headerlink" href="#after-using-pydantic-with-a-helper-module" title="Permanent link">¶</a></h4>
 <ul>
-<li><strong>Automatic Validation:</strong> The refactored method uses a Pydantic model
-  (<code>MethodParams</code>) to validate the inputs.</li>
+<li><strong>Helper Module:</strong> The validation logic is moved to a separate helper
+  module (<code>validation_helper.py</code>).</li>
+<li><strong>Automatic Validation:</strong> The refactored method uses the helper module
+  to validate the inputs using Pydantic.</li>
 <li><strong>Error Handling:</strong> Catches <code>ValidationError</code> exceptions and logs the
   validation errors.</li>
 <li><strong>Readability:</strong> The core functionality of the method is separated
@@ -1184,9 +1214,9 @@ validation.</p>
 </ul>
 <h3 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">¶</a></h3>
 <p>This guide provides a detailed approach to using Pydantic for input
-validation at runtime in Python classes. It covers the benefits of using
-Pydantic, a step-by-step example, and an explanation of the changes
-before and after using Pydantic.</p>
+validation at runtime in Python classes by leveraging a helper module.
+It covers the benefits of using Pydantic, a step-by-step example, and an
+explanation of the changes before and after using Pydantic.</p>
 <h2 id="benefits-of-using-pydantic">Benefits of Using Pydantic<a class="headerlink" href="#benefits-of-using-pydantic" title="Permanent link">¶</a></h2>
 <ul>
 <li><strong>Automatic Data Validation:</strong> Pydantic automatically validates data
@@ -1199,16 +1229,16 @@ before and after using Pydantic.</p>
   conform to the expected types and formats.</li>
 </ul>
 <h2 id="best-practices-for-using-pydantic">Best Practices for Using Pydantic<a class="headerlink" href="#best-practices-for-using-pydantic" title="Permanent link">¶</a></h2>
-<h3 id="1-pydantic-models-for-input-validation">1. Pydantic Models for Input Validation<a class="headerlink" href="#1-pydantic-models-for-input-validation" title="Permanent link">¶</a></h3>
+<h3 id="1-helper-module-for-pydantic-validation">1. Helper Module for Pydantic Validation<a class="headerlink" href="#1-helper-module-for-pydantic-validation" title="Permanent link">¶</a></h3>
 <ul>
-<li><strong>Define Models:</strong> Create Pydantic models to represent the expected
-  input data structure for each method.</li>
+<li><strong>Define Models:</strong> Create Pydantic models in a helper module to
+  represent the expected input data structure for each method.</li>
 <li><strong>Reuse Models:</strong> Reuse Pydantic models across different methods if
   they share similar input structures.</li>
 </ul>
 <h3 id="2-validation-in-methods">2. Validation in Methods<a class="headerlink" href="#2-validation-in-methods" title="Permanent link">¶</a></h3>
 <ul>
-<li><strong>Validate Inputs:</strong> Use Pydantic models to validate inputs at the
+<li><strong>Validate Inputs:</strong> Use the helper module to validate inputs at the
   beginning of each method.</li>
 <li><strong>Refactor Code:</strong> Refactor existing validation code to utilize
   Pydantic models for cleaner and more maintainable code.</li>
@@ -1223,14 +1253,14 @@ before and after using Pydantic.</p>
 <h3 id="4-documentation">4. Documentation<a class="headerlink" href="#4-documentation" title="Permanent link">¶</a></h3>
 <ul>
 <li><strong>Document Models:</strong> Document the purpose and structure of each
-  Pydantic model.</li>
+  Pydantic model in the helper module.</li>
 <li><strong>Explain Validation:</strong> Explain the validation process in the method
   docstrings to provide context to future maintainers.</li>
 </ul>
 <h3 id="5-consistency">5. Consistency<a class="headerlink" href="#5-consistency" title="Permanent link">¶</a></h3>
 <ul>
 <li><strong>Consistent Validation:</strong> Ensure that all methods in a class follow a
-  consistent approach to input validation.</li>
+  consistent approach to input validation by using the helper module.</li>
 <li><strong>Code Quality:</strong> Adhere to clean code principles and maintain high
   code quality by using Pydantic.</li>
 </ul>
@@ -1264,17 +1294,18 @@ before and after using Pydantic.</p>
 <h3 id="conclusion">Conclusion<a class="headerlink" href="#conclusion" title="Permanent link">¶</a></h3>
 <p>Using Pydantic for input validation at runtime simplifies the validation
 process, makes the code cleaner, and provides robust error handling. By
-following best practices, you can ensure that your methods receive
-correctly typed and valid data, reducing potential runtime errors and
-improving code maintainability. This approach, combined with static type
-checking using MyPy, can significantly enhance the robustness and
-reliability of your Python applications.</p>
+following best practices and leveraging a helper module, you can ensure
+that your methods receive correctly typed and valid data, reducing
+potential runtime errors and improving code maintainability. This
+approach, combined with static type checking using MyPy, can
+significantly enhance the robustness and reliability of your Python
+applications.</p>
 <aside class="md-source-file">
 <span class="md-source-file__fact">
 <span class="md-icon" title="Last update">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 25, 2024</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 26, 2024</span>
 </span>
 </aside>
 </article>
