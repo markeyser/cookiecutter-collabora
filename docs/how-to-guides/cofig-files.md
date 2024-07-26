@@ -8,10 +8,12 @@
     hardcoded values in Python code. I have a Python script, and I want to
     detect and refactor the following issues based on these recommendations:
     
-    1. Parameters and Defaults: Identify function parameter defaults
-       related to configuration settings such as chunk sizes, timeouts, and
-       AWS session durations. These should be externalized to a
-       configuration file or environment variables.
+    1. Parameters and Defaults: Identify function parameter defaults related 
+       to configuration settings such as chunk sizes, timeouts, and AWS session 
+       durations. These should be externalized to a configuration file or 
+       environment variables where appropriate. If the script contains abstract
+       classes or methods, consider if externalizing these parameters is 
+       necessary or if they should be left to the concrete implementations.
     2. File Extensions and Paths: Detect hardcoded paths and file
        extensions used frequently or subject to change. These should be
        placed in configuration files to avoid having to search through code
