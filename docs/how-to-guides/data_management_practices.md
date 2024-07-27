@@ -119,6 +119,17 @@ the data.
     !data/raw/.gitkeep
     ```
 
+    Additionally, to prevent committing files larger than 50 MB, we use a pre-commit hook. Note that GitHub has a 100 MB limit for individual files unless you use Git LFS. Here’s the configuration to set up the pre-commit hook:
+
+    ```yaml
+    repos:
+      - repo: https://github.com/pre-commit/pre-commit-hooks
+        rev: v4.3.0  # Use the latest stable version
+        hooks:
+          - id: check-added-large-files
+            args: ['--maxkb=51200']  # 50 MB limit
+    ```
+
     ### Explanation of the `.gitignore` Configuration
 
     - **Global Ignore Rules**: The lines `*.csv`, `**/*.csv`, `*.json`, and `**/*.json` ensure that any file with a `.csv` or `.json` extension is ignored globally across the entire repository.
@@ -126,7 +137,6 @@ the data.
     - **Tracking Specific Files**: The lines `!data/processed/.gitkeep` and `!data/raw/.gitkeep` ensure that the `.gitkeep` files in these directories are tracked, allowing the directories themselves to be included in the repository structure.
 
     By following these practices, we can maintain a clean and efficient repository while ensuring that data files are managed securely and appropriately.
-
 
 
 ### Using VS Code on a project with a centralized shared data folder
