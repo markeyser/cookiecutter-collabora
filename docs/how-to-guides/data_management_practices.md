@@ -1,12 +1,13 @@
 # How to organize project's data
 
+<!--
 !!! warning
 
     It is not a best practice to save sensitive or large project data on
     GitHub. GitHub is designed for source code management and version
     control, and while it does allow for limited file storage, it's not
     designed for storing large binary files or sensitive information.
-
+-->
 ## Data files
 
 !!! tip "Best Practice"
@@ -65,18 +66,8 @@ necessary modifications or transformations can be easily traced and
 recorded. Additionally, it can also make it easier for other team
 members or stakeholders to understand and access the data as needed.
 
-## Centralized data repository
-
-In most cases, it is a best practice to use a centralized
-shared data folder that is stored on a networked storage system or a
-cloud-based data storage service. This allows all team members to access
-the data, and ensures that the data is stored in a secure and organized
-manner. Additionally, using a centralized data folder can help to avoid
-duplication and ensure that everyone is working with the same version of
-the data.
-
 !!! tip "Best Practices for Handling Data Files in Your GitHub Repository"
-   
+
     #### 1. Avoid Including Data Files in Your GitHub Repository
 
     Including data files such as CSV or JSON files directly in your GitHub repository is not a best practice. There are several reasons for this:
@@ -92,8 +83,17 @@ the data.
     - **Scalability**: S3 provides scalable storage, allowing you to store large amounts of data without worrying about capacity.
     - **Accessibility**: Data stored in S3 can be accessed from anywhere, making it easier for team members to access and use the data as needed.
     - **Security**: S3 offers robust security features, including encryption and access controls, ensuring your data is secure.
+    - **Version Control**: S3 also comes with version control capabilities, allowing you to keep track of changes and maintain historical versions of your data.
 
-    #### 3. Local Development with a `data/` Directory
+    #### 3. Implement Role-Based Access Control (RBAC)
+
+    To enhance the integrity and management of project data, it is crucial to implement Role-Based Access Control (RBAC) alongside establishing a centralized data repository.
+    
+    - By defining clear roles within the project team, you can specify who has read-only access and who has the authority to modify the data.
+    - Furthermore, the creation of a centralized data repository serves as a single source of truth for all project data, facilitating better organization, access control, and data integrity.
+    - To perform data version control with libraries like DVC, it is necessary to have a centralized data repository in a remote location, ideally the cloud.
+
+    #### 4. Local Development with a `data/` Directory
 
     For development purposes, it is often necessary to have data available locally. To facilitate this, we have created a `data/` directory at the root of the project’s directory and folder structure (scaffolding). This directory allows you to store data files like CSV and JSON files locally without pushing them to the GitHub repository.
 
@@ -137,8 +137,7 @@ the data.
     - **Tracking Specific Files**: The lines `!data/processed/.gitkeep` and `!data/raw/.gitkeep` ensure that the `.gitkeep` files in these directories are tracked, allowing the directories themselves to be included in the repository structure.
 
     By following these practices, we can maintain a clean and efficient repository while ensuring that data files are managed securely and appropriately.
-
-
+<!--
 ### Using VS Code on a project with a centralized shared data folder
 
 Step 4 of the [Getting Started](getting-started.md) guide involves
@@ -193,7 +192,7 @@ done
 
 Now all shared data in each sub-directory of the `data` shared folder
 must be visible from the VS Code Explorer pane.
-
+-->
 <!--
 TODO: Tasks pending completion -@t93kqi0 at 12/28/2022, 4:45:20 PM
 Review this document for a non-shared folder approach
