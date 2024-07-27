@@ -591,17 +591,7 @@
       Explanation of Categories
     </span>
 </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#centralized-data-repository">
-<span class="md-ellipsis">
-      Centralized data repository
-    </span>
-</a>
-<nav aria-label="Centralized data repository" class="md-nav">
+<nav aria-label="Explanation of Categories" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#1-avoid-including-data-files-in-your-github-repository">
@@ -618,23 +608,26 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#3-local-development-with-a-data-directory">
+<a class="md-nav__link" href="#3-implement-role-based-access-control-rbac">
 <span class="md-ellipsis">
-      3. Local Development with a data/ Directory
+      3. Implement Role-Based Access Control (RBAC)
     </span>
 </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#4-local-development-with-a-data-directory">
+<span class="md-ellipsis">
+      4. Local Development with a data/ Directory
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#explanation-of-the-gitignore-configuration">
 <span class="md-ellipsis">
       Explanation of the .gitignore Configuration
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#using-vs-code-on-a-project-with-a-centralized-shared-data-folder">
-<span class="md-ellipsis">
-      Using VS Code on a project with a centralized shared data folder
     </span>
 </a>
 </li>
@@ -977,17 +970,7 @@
       Explanation of Categories
     </span>
 </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#centralized-data-repository">
-<span class="md-ellipsis">
-      Centralized data repository
-    </span>
-</a>
-<nav aria-label="Centralized data repository" class="md-nav">
+<nav aria-label="Explanation of Categories" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#1-avoid-including-data-files-in-your-github-repository">
@@ -1004,23 +987,26 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#3-local-development-with-a-data-directory">
+<a class="md-nav__link" href="#3-implement-role-based-access-control-rbac">
 <span class="md-ellipsis">
-      3. Local Development with a data/ Directory
+      3. Implement Role-Based Access Control (RBAC)
     </span>
 </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#4-local-development-with-a-data-directory">
+<span class="md-ellipsis">
+      4. Local Development with a data/ Directory
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#explanation-of-the-gitignore-configuration">
 <span class="md-ellipsis">
       Explanation of the .gitignore Configuration
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#using-vs-code-on-a-project-with-a-centralized-shared-data-folder">
-<span class="md-ellipsis">
-      Using VS Code on a project with a centralized shared data folder
     </span>
 </a>
 </li>
@@ -1145,13 +1131,14 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="how-to-organize-projects-data">How to organize project's data<a class="headerlink" href="#how-to-organize-projects-data" title="Permanent link">¶</a></h1>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>It is not a best practice to save sensitive or large project data on
-GitHub. GitHub is designed for source code management and version
-control, and while it does allow for limited file storage, it's not
-designed for storing large binary files or sensitive information.</p>
-</div>
+<!--
+!!! warning
+
+    It is not a best practice to save sensitive or large project data on
+    GitHub. GitHub is designed for source code management and version
+    control, and while it does allow for limited file storage, it's not
+    designed for storing large binary files or sensitive information.
+-->
 <h2 id="data-files">Data files<a class="headerlink" href="#data-files" title="Permanent link">¶</a></h2>
 <div class="admonition tip">
 <p class="admonition-title">Best Practice</p>
@@ -1215,14 +1202,6 @@ that it is properly managed throughout the project and that any
 necessary modifications or transformations can be easily traced and
 recorded. Additionally, it can also make it easier for other team
 members or stakeholders to understand and access the data as needed.</p>
-<h2 id="centralized-data-repository">Centralized data repository<a class="headerlink" href="#centralized-data-repository" title="Permanent link">¶</a></h2>
-<p>In most cases, it is a best practice to use a centralized
-shared data folder that is stored on a networked storage system or a
-cloud-based data storage service. This allows all team members to access
-the data, and ensures that the data is stored in a secure and organized
-manner. Additionally, using a centralized data folder can help to avoid
-duplication and ensure that everyone is working with the same version of
-the data.</p>
 <div class="admonition tip">
 <p class="admonition-title">Best Practices for Handling Data Files in Your GitHub Repository</p>
 <h4 id="1-avoid-including-data-files-in-your-github-repository">1. Avoid Including Data Files in Your GitHub Repository<a class="headerlink" href="#1-avoid-including-data-files-in-your-github-repository" title="Permanent link">¶</a></h4>
@@ -1238,8 +1217,16 @@ the data.</p>
 <li><strong>Scalability</strong>: S3 provides scalable storage, allowing you to store large amounts of data without worrying about capacity.</li>
 <li><strong>Accessibility</strong>: Data stored in S3 can be accessed from anywhere, making it easier for team members to access and use the data as needed.</li>
 <li><strong>Security</strong>: S3 offers robust security features, including encryption and access controls, ensuring your data is secure.</li>
+<li><strong>Version Control</strong>: S3 also comes with version control capabilities, allowing you to keep track of changes and maintain historical versions of your data.</li>
 </ul>
-<h4 id="3-local-development-with-a-data-directory">3. Local Development with a <code>data/</code> Directory<a class="headerlink" href="#3-local-development-with-a-data-directory" title="Permanent link">¶</a></h4>
+<h4 id="3-implement-role-based-access-control-rbac">3. Implement Role-Based Access Control (RBAC)<a class="headerlink" href="#3-implement-role-based-access-control-rbac" title="Permanent link">¶</a></h4>
+<p>To enhance the integrity and management of project data, it is crucial to implement Role-Based Access Control (RBAC) alongside establishing a centralized data repository.</p>
+<ul>
+<li>By defining clear roles within the project team, you can specify who has read-only access and who has the authority to modify the data.</li>
+<li>Furthermore, the creation of a centralized data repository serves as a single source of truth for all project data, facilitating better organization, access control, and data integrity.</li>
+<li>To perform data version control with libraries like DVC, it is necessary to have a centralized data repository in a remote location, ideally the cloud.</li>
+</ul>
+<h4 id="4-local-development-with-a-data-directory">4. Local Development with a <code>data/</code> Directory<a class="headerlink" href="#4-local-development-with-a-data-directory" title="Permanent link">¶</a></h4>
 <p>For development purposes, it is often necessary to have data available locally. To facilitate this, we have created a <code>data/</code> directory at the root of the project’s directory and folder structure (scaffolding). This directory allows you to store data files like CSV and JSON files locally without pushing them to the GitHub repository.</p>
 <p>To ensure that the <code>data/</code> directory exists in everyone's local environment, we include a <code>.gitkeep</code> file in this directory. The <code>.gitkeep</code> file is a placeholder to make sure the directory is tracked by Git without tracking its contents.</p>
 <p>To prevent accidental inclusion of data files in the GitHub repository, we have configured the <code>.gitignore</code> file as follows:</p>
@@ -1275,49 +1262,58 @@ the data.</p>
 </ul>
 <p>By following these practices, we can maintain a clean and efficient repository while ensuring that data files are managed securely and appropriately.</p>
 </div>
-<h3 id="using-vs-code-on-a-project-with-a-centralized-shared-data-folder">Using VS Code on a project with a centralized shared data folder<a class="headerlink" href="#using-vs-code-on-a-project-with-a-centralized-shared-data-folder" title="Permanent link">¶</a></h3>
-<p>Step 4 of the <a href="getting-started.md">Getting Started</a> guide involves
+<!--
+### Using VS Code on a project with a centralized shared data folder
+
+Step 4 of the [Getting Started](getting-started.md) guide involves
 creating a shared data directory for the project. To make the data
-accessible and visible in VS Code, symbolic links need to be created.</p>
-<div class="admonition info">
-<p class="admonition-title">What is a symbolic link?</p>
-<p>The purpose of a symbolic link (symlink) in Linux is to create a
-shortcut or alias to a file or directory. A symlink acts as a reference
-to the original file, allowing multiple paths to access the same data.
-This can be useful for creating shortcuts to frequently used files,
-linking to files in different directories, and creating backups of
-important files.</p>
-</div>
-<p>Here's a shell script that creates symbolic links for the specified
-folders:</p>
-<div class="highlight"><span class="filename">symlink_data_folders.sh</span><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="nv">folders</span><span class="o">=(</span>raw<span class="w"> </span>external<span class="w"> </span>interim<span class="w"> </span>processed<span class="w"> </span>model_output<span class="o">)</span>
-<a href="#__codelineno-3-2" id="__codelineno-3-2" name="__codelineno-3-2"></a>
-<a href="#__codelineno-3-3" id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="k">for</span><span class="w"> </span>folder<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="s2">"</span><span class="si">${</span><span class="nv">folders</span><span class="p">[@]</span><span class="si">}</span><span class="s2">"</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
-<a href="#__codelineno-3-4" id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="w">  </span>ln<span class="w"> </span>-s<span class="w"> </span>/path/to/original/<span class="s2">"</span><span class="nv">$folder</span><span class="s2">"</span><span class="w"> </span>/path/to/link/<span class="s2">"</span><span class="nv">$folder</span><span class="s2">"</span>
-<a href="#__codelineno-3-5" id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="k">done</span>
+accessible and visible in VS Code, symbolic links need to be created.
+
+!!! info "What is a symbolic link?"
+    The purpose of a symbolic link (symlink) in Linux is to create a
+    shortcut or alias to a file or directory. A symlink acts as a reference
+    to the original file, allowing multiple paths to access the same data.
+    This can be useful for creating shortcuts to frequently used files,
+    linking to files in different directories, and creating backups of
+    important files.
+
+Here's a shell script that creates symbolic links for the specified
+folders:
+
+<div class="highlight"><span class="filename">symlink_data_folders.sh</span><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nv">folders</span><span class="o">=(</span>raw<span class="w"> </span>external<span class="w"> </span>interim<span class="w"> </span>processed<span class="w"> </span>model_output<span class="o">)</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="k">for</span><span class="w"> </span>folder<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">folders</span><span class="p">[@]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">  </span>ln<span class="w"> </span>-s<span class="w"> </span>/path/to/original/<span class="s2">&quot;</span><span class="nv">$folder</span><span class="s2">&quot;</span><span class="w"> </span>/path/to/link/<span class="s2">&quot;</span><span class="nv">$folder</span><span class="s2">&quot;</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="k">done</span>
 </code></pre></div>
-<p>Where the path to the original folder corresponds to the project's
-shared data folder:</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a>/nyl/data/tenants/insurance/cdsamktg/mediamix/data
+
+Where the path to the original folder corresponds to the project's
+shared data folder:
+
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>/nyl/data/tenants/insurance/cdsamktg/mediamix/data
 </code></pre></div>
-<p>And the link folder corresponds to the location of the project's data
-folder on the cloned Git repository on server user space:</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a>/nyl/data/home/t93kqi0/projects/Media-Mix/data/"$folder"
+
+And the link folder corresponds to the location of the project's data
+folder on the cloned Git repository on server user space:
+
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>/nyl/data/home/t93kqi0/projects/Media-Mix/data/&quot;$folder&quot;
 </code></pre></div>
-<div class="highlight"><span class="filename">symlink_data_folders.sh</span><pre><span></span><code><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="nv">folders</span><span class="o">=(</span>raw<span class="w"> </span>external<span class="w"> </span>interim<span class="w"> </span>processed<span class="w"> </span>model_output<span class="o">)</span>
-<a href="#__codelineno-6-2" id="__codelineno-6-2" name="__codelineno-6-2"></a>
-<a href="#__codelineno-6-3" id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="k">for</span><span class="w"> </span>folder<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="s2">"</span><span class="si">${</span><span class="nv">folders</span><span class="p">[@]</span><span class="si">}</span><span class="s2">"</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
-<a href="#__codelineno-6-4" id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="w">  </span>ln<span class="w"> </span>-s<span class="w"> </span>/nyl/data/tenants/insurance/cdsamktg/mediamix/data/<span class="s2">"</span><span class="nv">$folder</span><span class="s2">"</span><span class="w"> </span><span class="se">\</span>
-<a href="#__codelineno-6-5" id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="w">  </span>/nyl/data/home/t93kqi0/projects/Media-Mix/data/<span class="s2">"</span><span class="nv">$folder</span><span class="s2">"</span>
-<a href="#__codelineno-6-6" id="__codelineno-6-6" name="__codelineno-6-6"></a><span class="k">done</span>
+
+<div class="highlight"><span class="filename">symlink_data_folders.sh</span><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nv">folders</span><span class="o">=(</span>raw<span class="w"> </span>external<span class="w"> </span>interim<span class="w"> </span>processed<span class="w"> </span>model_output<span class="o">)</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="k">for</span><span class="w"> </span>folder<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">folders</span><span class="p">[@]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">  </span>ln<span class="w"> </span>-s<span class="w"> </span>/nyl/data/tenants/insurance/cdsamktg/mediamix/data/<span class="s2">&quot;</span><span class="nv">$folder</span><span class="s2">&quot;</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">  </span>/nyl/data/home/t93kqi0/projects/Media-Mix/data/<span class="s2">&quot;</span><span class="nv">$folder</span><span class="s2">&quot;</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="k">done</span>
 </code></pre></div>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>The link <code>data</code> folder must be empty before running the
-<code>symlink_data_folders.sh</code> script.</p>
-</div>
-<p>Now all shared data in each sub-directory of the <code>data</code> shared folder
-must be visible from the VS Code Explorer pane.</p>
+
+!!! warning
+    The link `data` folder must be empty before running the
+    `symlink_data_folders.sh` script.
+
+Now all shared data in each sub-directory of the `data` shared folder
+must be visible from the VS Code Explorer pane.
+-->
 <!--
 TODO: Tasks pending completion -@t93kqi0 at 12/28/2022, 4:45:20 PM
 Review this document for a non-shared folder approach
