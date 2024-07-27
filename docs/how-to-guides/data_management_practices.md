@@ -75,6 +75,60 @@ manner. Additionally, using a centralized data folder can help to avoid
 duplication and ensure that everyone is working with the same version of
 the data.
 
+!!! tip "Best Practices for Handling Data Files in Your GitHub Repository"
+   
+    #### 1. Avoid Including Data Files in Your GitHub Repository
+
+    Including data files such as CSV or JSON files directly in your GitHub repository is not a best practice. There are several reasons for this:
+    
+    - **Size Limitations**: GitHub repositories have size limitations which can be quickly exceeded by large datasets.
+    - **Version Control Issues**: Binary files such as CSVs and JSONs do not benefit from Git's diff and merge capabilities, making version control ineffective and storage inefficient.
+    - **Security Risks**: Sensitive data can accidentally be exposed publicly, leading to potential security and privacy breaches.
+
+    #### 2. Use a Centralized Data Repository
+
+    The best practice is to store your data in a centralized data repository, such as an AWS S3 bucket. This approach offers several advantages:
+    
+    - **Scalability**: S3 provides scalable storage, allowing you to store large amounts of data without worrying about capacity.
+    - **Accessibility**: Data stored in S3 can be accessed from anywhere, making it easier for team members to access and use the data as needed.
+    - **Security**: S3 offers robust security features, including encryption and access controls, ensuring your data is secure.
+
+    #### 3. Local Development with a `data/` Directory
+
+    For development purposes, it is often necessary to have data available locally. To facilitate this, we have created a `data/` directory at the root of the project’s directory and folder structure (scaffolding). This directory allows you to store data files like CSV and JSON files locally without pushing them to the GitHub repository.
+
+    To ensure that the `data/` directory exists in everyone's local environment, we include a `.gitkeep` file in this directory. The `.gitkeep` file is a placeholder to make sure the directory is tracked by Git without tracking its contents.
+
+    To prevent accidental inclusion of data files in the GitHub repository, we have configured the `.gitignore` file as follows:
+
+    ```plaintext
+    ## Ignore all CSV and JSON files globally ##
+    *.csv
+    **/*.csv
+    *.json
+    **/*.json
+
+    ## Data ##
+
+    # Ignore any data in the following directories
+    data/processed/*
+    data/raw/*
+
+    # But keep tracking these specific files (if needed)
+    !data/processed/.gitkeep
+    !data/raw/.gitkeep
+    ```
+
+    ### Explanation of the `.gitignore` Configuration
+
+    - **Global Ignore Rules**: The lines `*.csv`, `**/*.csv`, `*.json`, and `**/*.json` ensure that any file with a `.csv` or `.json` extension is ignored globally across the entire repository.
+    - **Data Directory**: The `data/processed/*` and `data/raw/*` lines ensure that any files within these specific directories are ignored.
+    - **Tracking Specific Files**: The lines `!data/processed/.gitkeep` and `!data/raw/.gitkeep` ensure that the `.gitkeep` files in these directories are tracked, allowing the directories themselves to be included in the repository structure.
+
+    By following these practices, we can maintain a clean and efficient repository while ensuring that data files are managed securely and appropriately.
+
+
+
 ### Using VS Code on a project with a centralized shared data folder
 
 Step 4 of the [Getting Started](getting-started.md) guide involves
