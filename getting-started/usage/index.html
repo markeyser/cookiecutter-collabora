@@ -282,6 +282,17 @@
     </span>
 </a>
 </li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#resulting-directory-structure">
+<span class="md-ellipsis">
+      Resulting Directory Structure
+    </span>
+</a>
+<nav aria-label="Resulting Directory Structure" class="md-nav">
+<ul class="md-nav__list">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#generate-a-project-from-a-downloaded-template">
 <span class="md-ellipsis">
@@ -316,13 +327,6 @@
 </li>
 </ul>
 </nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#resulting-directory-structure">
-<span class="md-ellipsis">
-      Resulting Directory Structure
-    </span>
-</a>
 </li>
 </ul>
 </nav>
@@ -911,6 +915,17 @@
     </span>
 </a>
 </li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#resulting-directory-structure">
+<span class="md-ellipsis">
+      Resulting Directory Structure
+    </span>
+</a>
+<nav aria-label="Resulting Directory Structure" class="md-nav">
+<ul class="md-nav__list">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#generate-a-project-from-a-downloaded-template">
 <span class="md-ellipsis">
@@ -945,13 +960,6 @@
 </li>
 </ul>
 </nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#resulting-directory-structure">
-<span class="md-ellipsis">
-      Resulting Directory Structure
-    </span>
-</a>
 </li>
 </ul>
 </nav>
@@ -1013,13 +1021,68 @@ with your specified details.</p>
 directory in Visual Studio Code:</p>
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a>code<span class="w"> </span>.
 </code></pre></div>
+<h2 id="resulting-directory-structure">Resulting Directory Structure<a class="headerlink" href="#resulting-directory-structure" title="Permanent link">¶</a></h2>
+<p>The directory structure of your new project looks like this:</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a>├── .devcontainer                  &lt;- Directory for Visual Studio Code Dev Container configuration.
+<a href="#__codelineno-5-2" id="__codelineno-5-2" name="__codelineno-5-2"></a>│   └── devcontainer.json          &lt;- Configuration file for defining the development container.
+<a href="#__codelineno-5-3" id="__codelineno-5-3" name="__codelineno-5-3"></a>├── .github                        &lt;- Directory for GitHub-specific configuration and metadata.
+<a href="#__codelineno-5-4" id="__codelineno-5-4" name="__codelineno-5-4"></a>│   ├── CODEOWNERS                 &lt;- File to define code owners for the repository.
+<a href="#__codelineno-5-5" id="__codelineno-5-5" name="__codelineno-5-5"></a>│   ├── CONTRIBUTING.md            &lt;- Guidelines for contributing to the project.
+<a href="#__codelineno-5-6" id="__codelineno-5-6" name="__codelineno-5-6"></a>│   └── pull_request_template.md.  &lt;- Template for pull requests to standardize and improve PR quality.
+<a href="#__codelineno-5-7" id="__codelineno-5-7" name="__codelineno-5-7"></a>├── .vscode                        &lt;- Directory for Visual Studio Code-specific configuration files.
+<a href="#__codelineno-5-8" id="__codelineno-5-8" name="__codelineno-5-8"></a>│   ├── cspell.json                &lt;- Configuration file for the Code Spell Checker extension.
+<a href="#__codelineno-5-9" id="__codelineno-5-9" name="__codelineno-5-9"></a>│   ├── dictionaries               &lt;- Directory for custom dictionary files.
+<a href="#__codelineno-5-10" id="__codelineno-5-10" name="__codelineno-5-10"></a>│   │   └── data-science-en.txt    &lt;- Custom dictionary for data science terminology.
+<a href="#__codelineno-5-11" id="__codelineno-5-11" name="__codelineno-5-11"></a>│   ├── extensions.json            &lt;- Recommended extensions for the project.
+<a href="#__codelineno-5-12" id="__codelineno-5-12" name="__codelineno-5-12"></a>│   └── settings.json              &lt;- Workspace-specific settings for Visual Studio Code.
+<a href="#__codelineno-5-13" id="__codelineno-5-13" name="__codelineno-5-13"></a>├── config                         &lt;- Configuration files for the project.
+<a href="#__codelineno-5-14" id="__codelineno-5-14" name="__codelineno-5-14"></a>├── data                           &lt;- Data for the project, divided into different stages of data processing.
+<a href="#__codelineno-5-15" id="__codelineno-5-15" name="__codelineno-5-15"></a>│   ├── raw                        &lt;- Original, immutable data dump.
+<a href="#__codelineno-5-16" id="__codelineno-5-16" name="__codelineno-5-16"></a>│   ├── external                   &lt;- Data from third-party sources.
+<a href="#__codelineno-5-17" id="__codelineno-5-17" name="__codelineno-5-17"></a>│   ├── interim                    &lt;- Intermediate data, partially processed.
+<a href="#__codelineno-5-18" id="__codelineno-5-18" name="__codelineno-5-18"></a>│   ├── processed                  &lt;- Fully processed data, ready for analysis.
+<a href="#__codelineno-5-19" id="__codelineno-5-19" name="__codelineno-5-19"></a>│   └── features                   &lt;- Engineered features ready for model training.
+<a href="#__codelineno-5-20" id="__codelineno-5-20" name="__codelineno-5-20"></a>├── docs                           &lt;- Documentation for the project.
+<a href="#__codelineno-5-21" id="__codelineno-5-21" name="__codelineno-5-21"></a>│   ├── api-reference.md           &lt;- API reference documentation.
+<a href="#__codelineno-5-22" id="__codelineno-5-22" name="__codelineno-5-22"></a>│   ├── explanation.md             &lt;- Detailed explanations and conceptual documentation.
+<a href="#__codelineno-5-23" id="__codelineno-5-23" name="__codelineno-5-23"></a>│   ├── how-to-guides.md           &lt;- Step-by-step guides on performing common tasks.
+<a href="#__codelineno-5-24" id="__codelineno-5-24" name="__codelineno-5-24"></a>│   ├── index.md                   &lt;- The main documentation index page.
+<a href="#__codelineno-5-25" id="__codelineno-5-25" name="__codelineno-5-25"></a>│   └── tutorials.md               &lt;- Tutorials related to the project.
+<a href="#__codelineno-5-26" id="__codelineno-5-26" name="__codelineno-5-26"></a>├── log                            &lt;- Logs generated by the project.
+<a href="#__codelineno-5-27" id="__codelineno-5-27" name="__codelineno-5-27"></a>├── models                         &lt;- Machine learning models, scripts, and other related artifacts.
+<a href="#__codelineno-5-28" id="__codelineno-5-28" name="__codelineno-5-28"></a>├── notebooks                      &lt;- Jupyter notebooks for experiments, examples, or data analysis.
+<a href="#__codelineno-5-29" id="__codelineno-5-29" name="__codelineno-5-29"></a>├── scripts                        &lt;- Directory for project-specific scripts and utilities.
+<a href="#__codelineno-5-30" id="__codelineno-5-30" name="__codelineno-5-30"></a>│   └── hooks                      &lt;- Directory for custom git hooks and other automation scripts.
+<a href="#__codelineno-5-31" id="__codelineno-5-31" name="__codelineno-5-31"></a>│       ├── branch-name-check.sh   &lt;- Hook script for checking branch names.
+<a href="#__codelineno-5-32" id="__codelineno-5-32" name="__codelineno-5-32"></a>│       ├── commit-msg-check.sh    &lt;- Hook script for checking commit messages.
+<a href="#__codelineno-5-33" id="__codelineno-5-33" name="__codelineno-5-33"></a>│       ├── filename-check.sh      &lt;- Hook script for checking file names.
+<a href="#__codelineno-5-34" id="__codelineno-5-34" name="__codelineno-5-34"></a>│       ├── generate_docs.sh       &lt;- Script for generating documentation.
+<a href="#__codelineno-5-35" id="__codelineno-5-35" name="__codelineno-5-35"></a>│       └── restricted-file-check.sh   &lt;- Hook script for checking restricted files.
+<a href="#__codelineno-5-36" id="__codelineno-5-36" name="__codelineno-5-36"></a>├── src                            &lt;- Source code for the project.
+<a href="#__codelineno-5-37" id="__codelineno-5-37" name="__codelineno-5-37"></a>│   └── {{cookiecutter.package_name}}  &lt;- Main project module.
+<a href="#__codelineno-5-38" id="__codelineno-5-38" name="__codelineno-5-38"></a>│       ├── __init__.py            &lt;- Initializes the Python package.
+<a href="#__codelineno-5-39" id="__codelineno-5-39" name="__codelineno-5-39"></a>│       ├── main.py                &lt;- Entry point for the application.
+<a href="#__codelineno-5-40" id="__codelineno-5-40" name="__codelineno-5-40"></a>│       ├── app.py                 &lt;- Main application logic.
+<a href="#__codelineno-5-41" id="__codelineno-5-41" name="__codelineno-5-41"></a>│       └── utils.py               &lt;- Utility functions.
+<a href="#__codelineno-5-42" id="__codelineno-5-42" name="__codelineno-5-42"></a>├── tests                          &lt;- Directory for all project tests.
+<a href="#__codelineno-5-43" id="__codelineno-5-43" name="__codelineno-5-43"></a>│   ├── integration                &lt;- Integration tests.
+<a href="#__codelineno-5-44" id="__codelineno-5-44" name="__codelineno-5-44"></a>│   └── spec                       &lt;- Specification tests (unit tests).
+<a href="#__codelineno-5-45" id="__codelineno-5-45" name="__codelineno-5-45"></a>├── .gitignore                     &lt;- Specifies intentionally untracked files to ignore.
+<a href="#__codelineno-5-46" id="__codelineno-5-46" name="__codelineno-5-46"></a>├── .pre-commit-config.yaml        &lt;- Configuration for pre-commit hooks.
+<a href="#__codelineno-5-47" id="__codelineno-5-47" name="__codelineno-5-47"></a>├── Dockerfile                     &lt;- Dockerfile for containerizing the application.
+<a href="#__codelineno-5-48" id="__codelineno-5-48" name="__codelineno-5-48"></a>├── Makefile                       &lt;- Makefile with commands like `make data` or `make train`.
+<a href="#__codelineno-5-49" id="__codelineno-5-49" name="__codelineno-5-49"></a>├── mkdocs.yml                     &lt;- Configuration file for MkDocs, a static site generator for project documentation.
+<a href="#__codelineno-5-50" id="__codelineno-5-50" name="__codelineno-5-50"></a>├── pyproject.toml                 &lt;- Configuration file for Python projects which includes dependencies and package information.
+<a href="#__codelineno-5-51" id="__codelineno-5-51" name="__codelineno-5-51"></a>├── README.md                      &lt;- The top-level README for developers using this project.
+<a href="#__codelineno-5-52" id="__codelineno-5-52" name="__codelineno-5-52"></a>└── .env                           &lt;- Environment variables configuration file (not visible).
+</code></pre></div>
 <h3 id="generate-a-project-from-a-downloaded-template">Generate a Project from a Downloaded Template<a class="headerlink" href="#generate-a-project-from-a-downloaded-template" title="Permanent link">¶</a></h3>
 <p>If you have already downloaded the Cookiecutter template:</p>
 <h4 id="listing-installed-cookiecutter-templates">Listing Installed Cookiecutter Templates<a class="headerlink" href="#listing-installed-cookiecutter-templates" title="Permanent link">¶</a></h4>
 <p>To see installed Cookiecutter templates, use:</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a>cookiecutter<span class="w"> </span>--list-installed
-<a href="#__codelineno-5-2" id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="m">1</span><span class="w"> </span>installed<span class="w"> </span>templates:
-<a href="#__codelineno-5-3" id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="w"> </span>*<span class="w"> </span>cookiecutter-collabora
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a>cookiecutter<span class="w"> </span>--list-installed
+<a href="#__codelineno-6-2" id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="m">1</span><span class="w"> </span>installed<span class="w"> </span>templates:
+<a href="#__codelineno-6-3" id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="w"> </span>*<span class="w"> </span>cookiecutter-collabora
 </code></pre></div>
 <h4 id="locating-the-cookiecutters-directory-on-a-mac">Locating the <code>.cookiecutters</code> Directory on a Mac<a class="headerlink" href="#locating-the-cookiecutters-directory-on-a-mac" title="Permanent link">¶</a></h4>
 <p>Your cloned cookiecutters are usually stored in <code>~/.cookiecutters/</code>.</p>
@@ -1043,87 +1106,32 @@ directory in Visual Studio Code:</p>
    in the <code>.cookiecutters</code> directory.</p>
 </li>
 </ol>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="nb">pwd</span>
-<a href="#__codelineno-6-2" id="__codelineno-6-2" name="__codelineno-6-2"></a>/Users/username/.cookiecutters/cookiecutter-collabora
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-7-1" id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="nb">pwd</span>
+<a href="#__codelineno-7-2" id="__codelineno-7-2" name="__codelineno-7-2"></a>/Users/username/.cookiecutters/cookiecutter-collabora
 </code></pre></div>
 <h4 id="creating-a-new-project-with-a-template">Creating a New Project with a Template<a class="headerlink" href="#creating-a-new-project-with-a-template" title="Permanent link">¶</a></h4>
 <p>To create a project using the <code>cookiecutter-collabora</code> template:</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-7-1" id="__codelineno-7-1" name="__codelineno-7-1"></a>cookiecutter<span class="w"> </span>/Users/username/.cookiecutters/cookiecutter-collabora
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-8-1" id="__codelineno-8-1" name="__codelineno-8-1"></a>cookiecutter<span class="w"> </span>/Users/username/.cookiecutters/cookiecutter-collabora
 </code></pre></div>
 <p>Enter the details for your project when prompted. For instance:</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-8-1" id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="w">  </span><span class="o">[</span><span class="m">1</span>/9<span class="o">]</span><span class="w"> </span>project_name<span class="w"> </span><span class="o">(</span>Project<span class="w"> </span>Name<span class="o">)</span>:<span class="w"> </span>My<span class="w"> </span>AI<span class="w"> </span>Project
-<a href="#__codelineno-8-2" id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="w">  </span><span class="o">[</span><span class="m">2</span>/9<span class="o">]</span><span class="w"> </span>project_slug<span class="w"> </span><span class="o">(</span>my-ai-project<span class="o">)</span>:
-<a href="#__codelineno-8-3" id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="w">  </span><span class="o">[</span><span class="m">3</span>/9<span class="o">]</span><span class="w"> </span>package_name<span class="w"> </span><span class="o">(</span>myaiproject<span class="o">)</span>:
-<a href="#__codelineno-8-4" id="__codelineno-8-4" name="__codelineno-8-4"></a><span class="w">  </span><span class="o">[</span><span class="m">4</span>/9<span class="o">]</span><span class="w"> </span>environment_name<span class="w"> </span><span class="o">(</span>my-ai-project-env<span class="o">)</span>:
-<a href="#__codelineno-8-5" id="__codelineno-8-5" name="__codelineno-8-5"></a><span class="w">  </span><span class="o">[</span><span class="m">5</span>/9<span class="o">]</span><span class="w"> </span>author_name<span class="w"> </span><span class="o">(</span>Your<span class="w"> </span>name<span class="w"> </span>or<span class="w"> </span>your<span class="w"> </span>organization/company/team<span class="o">)</span>:<span class="w"> </span>Jane<span class="w"> </span>Doe
-<a href="#__codelineno-8-6" id="__codelineno-8-6" name="__codelineno-8-6"></a><span class="w">  </span><span class="o">[</span><span class="m">6</span>/9<span class="o">]</span><span class="w"> </span>author_email<span class="w"> </span><span class="o">(</span>youremail@example.com<span class="o">)</span>:<span class="w"> </span>jane.doe@example.com
-<a href="#__codelineno-8-7" id="__codelineno-8-7" name="__codelineno-8-7"></a><span class="w">  </span><span class="o">[</span><span class="m">7</span>/9<span class="o">]</span><span class="w"> </span>description<span class="w"> </span><span class="o">(</span>A<span class="w"> </span>short<span class="w"> </span>description<span class="w"> </span>of<span class="w"> </span>the<span class="w"> </span>project.<span class="o">)</span>:<span class="w"> </span>AI<span class="w"> </span>project<span class="w"> </span>development
-<a href="#__codelineno-8-8" id="__codelineno-8-8" name="__codelineno-8-8"></a><span class="w">  </span><span class="o">[</span><span class="m">8</span>/9<span class="o">]</span><span class="w"> </span>independent_reviewer<span class="w"> </span><span class="o">(</span>github_username_of_independent_reviewer<span class="o">)</span>:
-<a href="#__codelineno-8-9" id="__codelineno-8-9" name="__codelineno-8-9"></a><span class="w">  </span><span class="o">[</span><span class="m">9</span>/9<span class="o">]</span><span class="w"> </span>site_name<span class="w"> </span><span class="o">(</span>My<span class="w"> </span>AI<span class="w"> </span>Project<span class="w"> </span>Docs<span class="o">)</span>:
-<a href="#__codelineno-8-10" id="__codelineno-8-10" name="__codelineno-8-10"></a>INFO:root:Current<span class="w"> </span>working<span class="w"> </span>directory:<span class="w"> </span>/Users/username/Projects/my-ai-project
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-9-1" id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="w">  </span><span class="o">[</span><span class="m">1</span>/9<span class="o">]</span><span class="w"> </span>project_name<span class="w"> </span><span class="o">(</span>Project<span class="w"> </span>Name<span class="o">)</span>:<span class="w"> </span>My<span class="w"> </span>AI<span class="w"> </span>Project
+<a href="#__codelineno-9-2" id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="w">  </span><span class="o">[</span><span class="m">2</span>/9<span class="o">]</span><span class="w"> </span>project_slug<span class="w"> </span><span class="o">(</span>my-ai-project<span class="o">)</span>:
+<a href="#__codelineno-9-3" id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="w">  </span><span class="o">[</span><span class="m">3</span>/9<span class="o">]</span><span class="w"> </span>package_name<span class="w"> </span><span class="o">(</span>myaiproject<span class="o">)</span>:
+<a href="#__codelineno-9-4" id="__codelineno-9-4" name="__codelineno-9-4"></a><span class="w">  </span><span class="o">[</span><span class="m">4</span>/9<span class="o">]</span><span class="w"> </span>environment_name<span class="w"> </span><span class="o">(</span>my-ai-project-env<span class="o">)</span>:
+<a href="#__codelineno-9-5" id="__codelineno-9-5" name="__codelineno-9-5"></a><span class="w">  </span><span class="o">[</span><span class="m">5</span>/9<span class="o">]</span><span class="w"> </span>author_name<span class="w"> </span><span class="o">(</span>Your<span class="w"> </span>name<span class="w"> </span>or<span class="w"> </span>your<span class="w"> </span>organization/company/team<span class="o">)</span>:<span class="w"> </span>Jane<span class="w"> </span>Doe
+<a href="#__codelineno-9-6" id="__codelineno-9-6" name="__codelineno-9-6"></a><span class="w">  </span><span class="o">[</span><span class="m">6</span>/9<span class="o">]</span><span class="w"> </span>author_email<span class="w"> </span><span class="o">(</span>youremail@example.com<span class="o">)</span>:<span class="w"> </span>jane.doe@example.com
+<a href="#__codelineno-9-7" id="__codelineno-9-7" name="__codelineno-9-7"></a><span class="w">  </span><span class="o">[</span><span class="m">7</span>/9<span class="o">]</span><span class="w"> </span>description<span class="w"> </span><span class="o">(</span>A<span class="w"> </span>short<span class="w"> </span>description<span class="w"> </span>of<span class="w"> </span>the<span class="w"> </span>project.<span class="o">)</span>:<span class="w"> </span>AI<span class="w"> </span>project<span class="w"> </span>development
+<a href="#__codelineno-9-8" id="__codelineno-9-8" name="__codelineno-9-8"></a><span class="w">  </span><span class="o">[</span><span class="m">8</span>/9<span class="o">]</span><span class="w"> </span>independent_reviewer<span class="w"> </span><span class="o">(</span>github_username_of_independent_reviewer<span class="o">)</span>:
+<a href="#__codelineno-9-9" id="__codelineno-9-9" name="__codelineno-9-9"></a><span class="w">  </span><span class="o">[</span><span class="m">9</span>/9<span class="o">]</span><span class="w"> </span>site_name<span class="w"> </span><span class="o">(</span>My<span class="w"> </span>AI<span class="w"> </span>Project<span class="w"> </span>Docs<span class="o">)</span>:
+<a href="#__codelineno-9-10" id="__codelineno-9-10" name="__codelineno-9-10"></a>INFO:root:Current<span class="w"> </span>working<span class="w"> </span>directory:<span class="w"> </span>/Users/username/Projects/my-ai-project
 </code></pre></div>
 <p>This will create a new project based on the <code>cookiecutter-collabora</code> template
 with your specified details.</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-9-1" id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="nb">cd</span><span class="w"> </span>my-ai-project
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-10-1" id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="nb">cd</span><span class="w"> </span>my-ai-project
 </code></pre></div>
 <p>Once you're in your project's directory, you can open the entire
 directory in Visual Studio Code:</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-10-1" id="__codelineno-10-1" name="__codelineno-10-1"></a>code<span class="w"> </span>.
-</code></pre></div>
-<h2 id="resulting-directory-structure">Resulting Directory Structure<a class="headerlink" href="#resulting-directory-structure" title="Permanent link">¶</a></h2>
-<p>The directory structure of your new project looks like this:</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-11-1" id="__codelineno-11-1" name="__codelineno-11-1"></a>├── .devcontainer                  &lt;- Directory for Visual Studio Code Dev Container configuration.
-<a href="#__codelineno-11-2" id="__codelineno-11-2" name="__codelineno-11-2"></a>│   └── devcontainer.json          &lt;- Configuration file for defining the development container.
-<a href="#__codelineno-11-3" id="__codelineno-11-3" name="__codelineno-11-3"></a>├── .github                        &lt;- Directory for GitHub-specific configuration and metadata.
-<a href="#__codelineno-11-4" id="__codelineno-11-4" name="__codelineno-11-4"></a>│   ├── CODEOWNERS                 &lt;- File to define code owners for the repository.
-<a href="#__codelineno-11-5" id="__codelineno-11-5" name="__codelineno-11-5"></a>│   ├── CONTRIBUTING.md            &lt;- Guidelines for contributing to the project.
-<a href="#__codelineno-11-6" id="__codelineno-11-6" name="__codelineno-11-6"></a>│   └── pull_request_template.md.  &lt;- Template for pull requests to standardize and improve PR quality.
-<a href="#__codelineno-11-7" id="__codelineno-11-7" name="__codelineno-11-7"></a>├── .vscode                        &lt;- Directory for Visual Studio Code-specific configuration files.
-<a href="#__codelineno-11-8" id="__codelineno-11-8" name="__codelineno-11-8"></a>│   ├── cspell.json                &lt;- Configuration file for the Code Spell Checker extension.
-<a href="#__codelineno-11-9" id="__codelineno-11-9" name="__codelineno-11-9"></a>│   ├── dictionaries               &lt;- Directory for custom dictionary files.
-<a href="#__codelineno-11-10" id="__codelineno-11-10" name="__codelineno-11-10"></a>│   │   └── data-science-en.txt    &lt;- Custom dictionary for data science terminology.
-<a href="#__codelineno-11-11" id="__codelineno-11-11" name="__codelineno-11-11"></a>│   ├── extensions.json            &lt;- Recommended extensions for the project.
-<a href="#__codelineno-11-12" id="__codelineno-11-12" name="__codelineno-11-12"></a>│   └── settings.json              &lt;- Workspace-specific settings for Visual Studio Code.
-<a href="#__codelineno-11-13" id="__codelineno-11-13" name="__codelineno-11-13"></a>├── config                         &lt;- Configuration files for the project.
-<a href="#__codelineno-11-14" id="__codelineno-11-14" name="__codelineno-11-14"></a>├── data                           &lt;- Data for the project, divided into different stages of data processing.
-<a href="#__codelineno-11-15" id="__codelineno-11-15" name="__codelineno-11-15"></a>│   ├── raw                        &lt;- Original, immutable data dump.
-<a href="#__codelineno-11-16" id="__codelineno-11-16" name="__codelineno-11-16"></a>│   ├── external                   &lt;- Data from third-party sources.
-<a href="#__codelineno-11-17" id="__codelineno-11-17" name="__codelineno-11-17"></a>│   ├── interim                    &lt;- Intermediate data, partially processed.
-<a href="#__codelineno-11-18" id="__codelineno-11-18" name="__codelineno-11-18"></a>│   ├── processed                  &lt;- Fully processed data, ready for analysis.
-<a href="#__codelineno-11-19" id="__codelineno-11-19" name="__codelineno-11-19"></a>│   └── features                   &lt;- Engineered features ready for model training.
-<a href="#__codelineno-11-20" id="__codelineno-11-20" name="__codelineno-11-20"></a>├── docs                           &lt;- Documentation for the project.
-<a href="#__codelineno-11-21" id="__codelineno-11-21" name="__codelineno-11-21"></a>│   ├── api-reference.md           &lt;- API reference documentation.
-<a href="#__codelineno-11-22" id="__codelineno-11-22" name="__codelineno-11-22"></a>│   ├── explanation.md             &lt;- Detailed explanations and conceptual documentation.
-<a href="#__codelineno-11-23" id="__codelineno-11-23" name="__codelineno-11-23"></a>│   ├── how-to-guides.md           &lt;- Step-by-step guides on performing common tasks.
-<a href="#__codelineno-11-24" id="__codelineno-11-24" name="__codelineno-11-24"></a>│   ├── index.md                   &lt;- The main documentation index page.
-<a href="#__codelineno-11-25" id="__codelineno-11-25" name="__codelineno-11-25"></a>│   └── tutorials.md               &lt;- Tutorials related to the project.
-<a href="#__codelineno-11-26" id="__codelineno-11-26" name="__codelineno-11-26"></a>├── log                            &lt;- Logs generated by the project.
-<a href="#__codelineno-11-27" id="__codelineno-11-27" name="__codelineno-11-27"></a>├── models                         &lt;- Machine learning models, scripts, and other related artifacts.
-<a href="#__codelineno-11-28" id="__codelineno-11-28" name="__codelineno-11-28"></a>├── notebooks                      &lt;- Jupyter notebooks for experiments, examples, or data analysis.
-<a href="#__codelineno-11-29" id="__codelineno-11-29" name="__codelineno-11-29"></a>├── scripts                        &lt;- Directory for project-specific scripts and utilities.
-<a href="#__codelineno-11-30" id="__codelineno-11-30" name="__codelineno-11-30"></a>│   └── hooks                      &lt;- Directory for custom git hooks and other automation scripts.
-<a href="#__codelineno-11-31" id="__codelineno-11-31" name="__codelineno-11-31"></a>│       ├── branch-name-check.sh   &lt;- Hook script for checking branch names.
-<a href="#__codelineno-11-32" id="__codelineno-11-32" name="__codelineno-11-32"></a>│       ├── commit-msg-check.sh    &lt;- Hook script for checking commit messages.
-<a href="#__codelineno-11-33" id="__codelineno-11-33" name="__codelineno-11-33"></a>│       ├── filename-check.sh      &lt;- Hook script for checking file names.
-<a href="#__codelineno-11-34" id="__codelineno-11-34" name="__codelineno-11-34"></a>│       ├── generate_docs.sh       &lt;- Script for generating documentation.
-<a href="#__codelineno-11-35" id="__codelineno-11-35" name="__codelineno-11-35"></a>│       └── restricted-file-check.sh   &lt;- Hook script for checking restricted files.
-<a href="#__codelineno-11-36" id="__codelineno-11-36" name="__codelineno-11-36"></a>├── src                            &lt;- Source code for the project.
-<a href="#__codelineno-11-37" id="__codelineno-11-37" name="__codelineno-11-37"></a>│   └── {{cookiecutter.package_name}}  &lt;- Main project module.
-<a href="#__codelineno-11-38" id="__codelineno-11-38" name="__codelineno-11-38"></a>│       ├── __init__.py            &lt;- Initializes the Python package.
-<a href="#__codelineno-11-39" id="__codelineno-11-39" name="__codelineno-11-39"></a>│       ├── main.py                &lt;- Entry point for the application.
-<a href="#__codelineno-11-40" id="__codelineno-11-40" name="__codelineno-11-40"></a>│       ├── app.py                 &lt;- Main application logic.
-<a href="#__codelineno-11-41" id="__codelineno-11-41" name="__codelineno-11-41"></a>│       └── utils.py               &lt;- Utility functions.
-<a href="#__codelineno-11-42" id="__codelineno-11-42" name="__codelineno-11-42"></a>├── tests                          &lt;- Directory for all project tests.
-<a href="#__codelineno-11-43" id="__codelineno-11-43" name="__codelineno-11-43"></a>│   ├── integration                &lt;- Integration tests.
-<a href="#__codelineno-11-44" id="__codelineno-11-44" name="__codelineno-11-44"></a>│   └── spec                       &lt;- Specification tests (unit tests).
-<a href="#__codelineno-11-45" id="__codelineno-11-45" name="__codelineno-11-45"></a>├── .gitignore                     &lt;- Specifies intentionally untracked files to ignore.
-<a href="#__codelineno-11-46" id="__codelineno-11-46" name="__codelineno-11-46"></a>├── .pre-commit-config.yaml        &lt;- Configuration for pre-commit hooks.
-<a href="#__codelineno-11-47" id="__codelineno-11-47" name="__codelineno-11-47"></a>├── Dockerfile                     &lt;- Dockerfile for containerizing the application.
-<a href="#__codelineno-11-48" id="__codelineno-11-48" name="__codelineno-11-48"></a>├── Makefile                       &lt;- Makefile with commands like `make data` or `make train`.
-<a href="#__codelineno-11-49" id="__codelineno-11-49" name="__codelineno-11-49"></a>├── mkdocs.yml                     &lt;- Configuration file for MkDocs, a static site generator for project documentation.
-<a href="#__codelineno-11-50" id="__codelineno-11-50" name="__codelineno-11-50"></a>├── pyproject.toml                 &lt;- Configuration file for Python projects which includes dependencies and package information.
-<a href="#__codelineno-11-51" id="__codelineno-11-51" name="__codelineno-11-51"></a>├── README.md                      &lt;- The top-level README for developers using this project.
-<a href="#__codelineno-11-52" id="__codelineno-11-52" name="__codelineno-11-52"></a>└── .env                           &lt;- Environment variables configuration file (not visible).
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-11-1" id="__codelineno-11-1" name="__codelineno-11-1"></a>code<span class="w"> </span>.
 </code></pre></div>
 <aside class="md-source-file">
 <span class="md-source-file__fact">
