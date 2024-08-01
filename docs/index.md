@@ -12,6 +12,13 @@
       <a href="getting-started/usage/" style="background-color: #d73a49; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px;">Get started</a>
       <a href="#learn-more-section" style="margin-left: 20px; color: #0366d6; padding: 10px 20px; text-decoration: none;">Learn more</a>
     </div>
+    <div style="margin-top: 50px;">
+      <img src="assets/pydantic_logo.svg" alt="Logo" width="150">
+      <img src="assets/ruff_logo.svg" alt="Logo" width="150">
+      <img src="assets/pytest_logo.svg" alt="Logo" width="150">
+      <img src="assets/mypy_logo.svg" alt="Logo" width="150">
+      <img src="assets/black_logo.svg" alt="Logo" width="120">
+    </div>
   </div>
 </div>
 
@@ -47,3 +54,5 @@
     </div>
   </div>
 </div>
+
+
