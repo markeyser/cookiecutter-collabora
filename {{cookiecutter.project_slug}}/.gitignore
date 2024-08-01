@@ -1,5 +1,84 @@
-# Created by https://www.toptal.com/developers/gitignore/api/python
-# Edit at https://www.toptal.com/developers/gitignore?templates=python
+## Ignore Data Files ##
+
+## Ignore data files globally ##
+*.csv
+**/*.csv
+*.json
+**/*.json
+*.xls
+**/*.xls
+*.xlsx
+**/*.xlsx
+*.parquet
+**/*.parquet
+*.hdf5
+**/*.hdf5
+*.h5
+**/*.h5
+*.feather
+**/*.feather
+*.pickle
+**/*.pickle
+*.pkl
+**/*.pkl
+*.xml
+**/*.xml
+*.xml
+**/*.xml
+
+## Ignore image files globally ##
+*.png
+**/*.png
+*.jpg
+**/*.jpg
+*.jpeg
+**/*.jpeg
+*.bmp
+**/*.bmp
+*.gif
+**/*.gif
+*.tiff
+**/*.tiff
+
+## Ignore video files globally ##
+*.mp4
+**/*.mp4
+*.avi
+**/*.avi
+*.mov
+**/*.mov
+*.mkv
+**/*.mkv
+*.flv
+**/*.flv
+*.wmv
+**/*.wmv
+
+## Ignore audio files globally ##
+*.wav
+**/*.wav
+*.mp3
+**/*.mp3
+*.flac
+**/*.flac
+*.aac
+**/*.aac
+
+## Data Directories ##
+
+# Ignore any data in the following directories
+data/processed/*
+data/raw/*
+data/external/*
+data/interim/*
+data/features/*
+
+# But keep tracking these specific files (if needed)
+!data/processed/.gitkeep
+!data/raw/.gitkeep
+!data/external/.gitkeep
+!data/interim/.gitkeep
+!data/features/.gitkeep
 
 ## macOS ##
 
@@ -10,10 +89,6 @@
 
 *.amltmp
 .amlignore
-
-## Data ##
-
-data/
 
 ### Python ###
 

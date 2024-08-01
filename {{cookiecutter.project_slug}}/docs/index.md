@@ -1,4 +1,4 @@
-# Acro Expand Package Docs
+# {{cookiecutter.project_name}} Docs
 
 This site contains the project documentation for the
 {{cookiecutter.project_name}} project.

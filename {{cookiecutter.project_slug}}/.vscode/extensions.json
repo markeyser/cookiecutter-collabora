@@ -50,6 +50,7 @@
         "ms-python.black-formatter",
         "github.vscode-github-actions",
         "adam-bender.commit-message-editor",
-        "johnpapa.vscode-peacoc"
+        "johnpapa.vscode-peacoc",
+        "eamodio.gitlens"
     ]
 }

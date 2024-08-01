@@ -1,6 +1,16 @@
 {
     "python.terminal.activateEnvInCurrentTerminal": true,
     "python.defaultInterpreterPath": "",
+    "ruff.args": [
+        "--config=pyproject.toml",
+        "--preview"
+    ],
+    "ruff.path": [
+        "/bin/ruff"
+    ],
+    "ruff.interpreter": [
+        "/bin/python"
+    ],
     "terminal.integrated.profiles.windows": {
         "PowerShell": {
             "source": "PowerShell",
@@ -31,7 +41,6 @@
             "args": [],
             "icon": "terminal-zsh"
         }
-
     },
     "terminal.integrated.profiles.osx": {
         "Bash": {
@@ -48,10 +57,10 @@
     "terminal.integrated.defaultProfile.windows": "Git Bash",
     "terminal.integrated.defaultProfile.linux": "Bash",
     "terminal.integrated.defaultProfile.osx": "Zsh",
-    "workbench.colorTheme": "Dracula",
+    "workbench.colorTheme": "Dracula Soft",
     "workbench.iconTheme": "vscode-icons",
     "workbench.productIconTheme": "Default",
-    "autoDocstring.docstringFormat": "numpy",
+    "autoDocstring.docstringFormat": "google",
     "autoDocstring.includeExtendedSummary": true,
     "autoDocstring.includeName": false,
     "editor.fontSize": 15,
@@ -74,16 +83,6 @@
         "editor.formatOnSave": false,
     },
     "black-formatter.importStrategy": "fromEnvironment",
-    "ruff.args": [
-        "--config=pyproject.toml"
-    ],
-    "ruff.path": [
-        "/bin/python/ruff",
-        "--preview"
-    ],
-    "ruff.interpreter": [
-        "/bin/python"
-    ],
     "editor.bracketPairColorization.enabled": true,
     "editor.guides.bracketPairs": false,
     "todohighlight.keywords": [
@@ -350,7 +349,7 @@
         "xgboost"
     ],
     "cSpell.ignorePaths": [
-        "node_modules", 
+        "node_modules",
         "**/node_modules",
         "**/node_modules/**",
         "node_modules/**",
@@ -380,7 +379,8 @@
     "notebook.formatOnCellExecution": false,
     "notebook.formatOnSave.enabled": false,
     "workbench.editorAssociations": {
-        "*.m4a": "wavPreview.audioPreview"
+        "*.m4a": "wavPreview.audioPreview",
+        "*.md": "default"
     },
     "code-runner.executorMap": {
         "javascript": "node",
@@ -389,18 +389,38 @@
         "cpp": "cd $dir && g++ $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
         "objective-c": "cd $dir && gcc -framework Cocoa $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
         "php": "php",
-        "python": "\"$pythonPath\" $fullFileName",
-    "python.testing.pytestArgs": [
-        "tests",
-        "--cov=src",
-        "--cov-report=term-missing",
-        "-v",
-        "-n",
-        "2",
-        "--timeout=5"
-        ],
-    "python.testing.unittestEnabled": false,
-    "python.testing.pytestEnabled": true
+        "python": "\"$pythonPath\" $fullFileName"
+    },
+    "peacock.remoteColor": "#215732",
+    "workbench.colorCustomizations": {
+        "activityBar.activeBackground": "#2f7c47",
+        "activityBar.background": "#2f7c47",
+        "activityBar.foreground": "#e7e7e7",
+        "activityBar.inactiveForeground": "#e7e7e799",
+        "activityBarBadge.background": "#422c74",
+        "activityBarBadge.foreground": "#e7e7e7",
+        "commandCenter.border": "#e7e7e799",
+        "sash.hoverBorder": "#2f7c47",
+        "statusBar.background": "#215732",
+        "statusBar.foreground": "#e7e7e7",
+        "statusBarItem.hoverBackground": "#2f7c47",
+        "statusBarItem.remoteBackground": "#215732",
+        "statusBarItem.remoteForeground": "#e7e7e7",
+        "titleBar.activeBackground": "#215732",
+        "titleBar.activeForeground": "#e7e7e7",
+        "titleBar.inactiveBackground": "#21573299",
+        "titleBar.inactiveForeground": "#e7e7e799"
+    },
+    "peacock.color": "#ff3d00",
+    "CodeGPT.apiKey": "OpenAI",
+    "files.exclude": {
+        "**/.git": false,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true,
+        "**/*.crswap": true
     },
     "mypy-type-checker.args": [
         "--config-file=pyproject.toml"

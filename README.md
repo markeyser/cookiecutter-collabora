@@ -9,48 +9,16 @@ development.  It combines best practices, industry standards, and a
 suite of tools that aligns with the dynamic needs of modern AI
 development.
 
-## 🌟 Features
+## 🛠 Prerequisites
 
-- **VS Code Dev Container Extension**: Fully integrated with Visual
-  Studio Code Development Containers, providing a consistent and
-  isolated development environment irrespective of your local setup.
-- **Poetry and pyenv Integration**: Streamlined Python dependency
-  management and version control with Poetry and pyenv, ensuring
-  consistent and isolated environments for your projects.
-- **Weight & Bias Ready**: The template is pre-configured to work
-  seamlessly with Weight & Bias, a leading tool for machine learning
-  experiment tracking, allowing you to monitor and compare your ML
-  models effectively.
-- **Black & Ruff**: Elegant code formatting with Black, augmented by the
-  comprehensive linting capabilities of Ruff.
-- **Automated Workflows**: Pre-configured pre-commit hooks and GitHub
-  Actions automate code quality checks and standards enforcement.
-- **VS Code Optimized**: A carefully selected collection of VS Code
-  extensions and settings, optimized for AI development, ensures you can
-  start coding right away.
-- **Intelligent Spell Checking**: Tailored code spell checker with a
-  custom dictionary generated from your project's Python dependencies.
-- **Hydra Configuration Management**: Simplify and manage your
-  configuration files efficiently with Hydra.
-- **Professional Documentation**: MkDocs combined with the Material
-  theme, ready to create a responsive documentation site with a curated
-  initial setup.
-- **Git-Ready**: A meticulously crafted `.gitignore` file tailored for
-  AI projects ensures a clean and organized repository.
+- **Development Environment**:
+  - Visual Studio Code (VS Code) desktop
+  - AWS Cloud Code Editor
+  - GitHub Codespaces
+  - Any other cloud-powered development environment compatible with VS Code or VS Code Open Source
 
-## 🛠 Requirements to Use the Cookiecutter Template
-
-- **Editor**: Visual Studio Code, a modern, versatile, and extensible
-  editor, ideal for Python and AI development.
-- **Version Control**: GitHub, the cornerstone of collaborative
-  open-source and private development projects.
-- **Language**: Python 3, the go-to language for data science, machine
-  learning, and AI applications.
-- **Docker Desktop**: Required for managing and running your Docker
-  containers, providing a consistent development environment across
-  various platforms.
-- **Weight & Bias**: Ready for integration with Weight & Bias for
-  advanced machine learning experiment tracking and model management.
+- **Python**:
+  - Ensure Python is installed on your system. This project is compatible with Python 3.x.
 
 ## 📖 Usage
 
@@ -69,13 +37,6 @@ Create a new project by running:
 ```shell
 cookiecutter gh:markeyser/cookiecutter-collabora.git
 ```
-
-<!-- NOTE: Needs discussion or investigation -@marcos_aguilerakeyser at 12/22/2023, 11:12:51 AM -->
-Other appraoches such as for example:
-
-`cookiecutter git@github.com-personal:markeyser/cookiecutter-collabora.git`
-<!--  -->
-
 
 You will be prompted to enter details for your project, such as project
 name, OS type, author name, and more. For example:
@@ -187,32 +148,57 @@ code .
 
 The directory structure of your new project looks like this:
 
-```text
-├── README.md                      <- The top-level README for developers using this project.
-├── Makefile                       <- Makefile with commands like `make data` or `make train`.
+```plaintext
+├── .devcontainer                  <- Directory for Visual Studio Code Dev Container configuration.
+│   └── devcontainer.json          <- Configuration file for defining the development container.
+├── .github                        <- Directory for GitHub-specific configuration and metadata.
+│   ├── CODEOWNERS                 <- File to define code owners for the repository.
+│   ├── CONTRIBUTING.md            <- Guidelines for contributing to the project.
+│   └── pull_request_template.md.  <- Template for pull requests to standardize and improve PR quality.
+├── .vscode                        <- Directory for Visual Studio Code-specific configuration files.
+│   ├── cspell.json                <- Configuration file for the Code Spell Checker extension.
+│   ├── dictionaries               <- Directory for custom dictionary files.
+│   │   └── data-science-en.txt    <- Custom dictionary for data science terminology.
+│   ├── extensions.json            <- Recommended extensions for the project.
+│   └── settings.json              <- Workspace-specific settings for Visual Studio Code.
 ├── config                         <- Configuration files for the project.
+├── data                           <- Data for the project, divided into different stages of data processing.
+│   ├── raw                        <- Original, immutable data dump.
+│   ├── external                   <- Data from third-party sources.
+│   ├── interim                    <- Intermediate data, partially processed.
+│   ├── processed                  <- Fully processed data, ready for analysis.
+│   └── features                   <- Engineered features ready for model training.
 ├── docs                           <- Documentation for the project.
 │   ├── api-reference.md           <- API reference documentation.
 │   ├── explanation.md             <- Detailed explanations and conceptual documentation.
 │   ├── how-to-guides.md           <- Step-by-step guides on performing common tasks.
 │   ├── index.md                   <- The main documentation index page.
 │   └── tutorials.md               <- Tutorials related to the project.
-├── mkdocs.yml                     <- Configuration file for MkDocs, a static site generator for project documentation.
+├── log                            <- Logs generated by the project.
+├── models                         <- Machine learning models, scripts, and other related artifacts.
 ├── notebooks                      <- Jupyter notebooks for experiments, examples, or data analysis.
-├── pyproject.toml                 <- Configuration file for Python projects which includes dependencies and package information.
+├── scripts                        <- Directory for project-specific scripts and utilities.
+│   └── hooks                      <- Directory for custom git hooks and other automation scripts.
+│       ├── branch-name-check.sh   <- Hook script for checking branch names.
+│       ├── commit-msg-check.sh    <- Hook script for checking commit messages.
+│       ├── filename-check.sh      <- Hook script for checking file names.
+│       ├── generate_docs.sh       <- Script for generating documentation.
+│       └── restricted-file-check.sh   <- Hook script for checking restricted files.
 ├── src                            <- Source code for the project.
-│   ├── common                     <- Common utilities and functions used across the project.
-│   │   └── utils.py               <- Utility functions.
 │   └── {{cookiecutter.package_name}}  <- Main project module.
 │       ├── __init__.py            <- Initializes the Python package.
-│       ├── app.py                 <- Main application script.
-│       ├── data                   <- Data module for handling data operations.
-│       │   ├── external           <- Data from third-party sources.
-│       │   ├── features           <- Processed datasets used for feature engineering.
-│       │   ├── interim            <- Intermediate data that has been transformed but not finalized.
-│       │   ├── processed          <- The final, canonical datasets used for modeling.
-│       │   └── raw                <- The original, immutable data dump.
-│       └── models                 <- Machine learning models, scripts, and other related artifacts.
-└── tests                          <- Automated tests for the project, typically using a framework like pytest.
+│       ├── main.py                <- Entry point for the application.
+│       ├── app.py                 <- Main application logic.
+│       └── utils.py               <- Utility functions.
+├── tests                          <- Directory for all project tests.
+│   ├── integration                <- Integration tests.
+│   └── spec                       <- Specification tests (unit tests).
+├── .gitignore                     <- Specifies intentionally untracked files to ignore.
+├── .pre-commit-config.yaml        <- Configuration for pre-commit hooks.
+├── Dockerfile                     <- Dockerfile for containerizing the application.
+├── Makefile                       <- Makefile with commands like `make data` or `make train`.
+├── mkdocs.yml                     <- Configuration file for MkDocs, a static site generator for project documentation.
+├── pyproject.toml                 <- Configuration file for Python projects which includes dependencies and package information.
+├── README.md                      <- The top-level README for developers using this project.
+└── .env                           <- Environment variables configuration file (not visible).
 ```
-

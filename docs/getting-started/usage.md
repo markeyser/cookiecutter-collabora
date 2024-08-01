@@ -1,6 +1,28 @@
-# Usage
+# Cookiecutter Collabora
 
-## Installing Cookiecutter
+Welcome to Cookiecutter Collabora, a
+[Cookiecutter](https://www.cookiecutter.io/) template engineered for
+artificial intelligence, machine learning, and generative AI projects.
+This template isn't just a starting point; it's a comprehensive
+framework designed to guide you through the intricacies of AI project
+development.  It combines best practices, industry standards, and a
+suite of tools that aligns with the dynamic needs of modern AI
+development.
+
+## 🛠 Prerequisites
+
+- **Development Environment**:
+  - Visual Studio Code (VS Code) desktop
+  - AWS Cloud Code Editor
+  - GitHub Codespaces
+  - Any other cloud-powered development environment compatible with VS Code or VS Code Open Source
+
+- **Python**:
+  - Ensure Python is installed on your system. This project is compatible with Python 3.x.
+
+## 📖 Usage
+
+### Installing Cookiecutter
 
 Before starting, ensure Cookiecutter is installed on your system:
 
@@ -8,7 +30,7 @@ Before starting, ensure Cookiecutter is installed on your system:
 pip install cookiecutter
 ```
 
-## Generate a New Project
+### Generate a New Project
 
 Create a new project by running:
 
@@ -20,23 +42,15 @@ You will be prompted to enter details for your project, such as project
 name, OS type, author name, and more. For example:
 
 ```bash
-[1/17] project_name (Project Name): My AI Project
-[2/17] project_slug (Project Slug): my-ai-project
-[3/17] package_name (Package Name): myaiproject
-[4/17] env_name (Environment Name): my-ai-project-env
-[5/17] author (Author Name): Jane Doe
-[6/17] email (Author Email): jane.doe@example.com
-[7/17] description (Project Description): AI project development
-[8/17] reviewer (Independent Reviewer GitHub): 
-[9/17] site_name (Documentation Site Name): My AI Project Docs
-[10/17] os (Operating System) [Linux, Windows, Mac]: Linux
-[11/17] cloud (Cloud Provider) [Google Cloud, AWS, Azure]: AWS
-[12/17] ml_type (ML Project Type) [Package, Supervised, Unsupervised, Generative AI]: Generative AI
-[13/17] data_type (Data Type) [Structured, Unstructured, Semi-structured]: Unstructured
-[14/17] packaging (Packaging Tool) [Poetry, Conda]: Poetry
-[15/17] venv (Create Virtual Environment) [Yes, No]: Yes
-[16/17] formatter (Code Formatter) [Black, Ruff]: Black
-[17/17] docker (Use Docker with VS Code Dev Containers) [Yes, No]: Yes
+  [1/9] project_name (Project Name): My AI Project
+  [2/9] project_slug (my-ai-project):
+  [3/9] package_name (myaiproject):
+  [4/9] environment_name (my-ai-project-env):
+  [5/9] author_name (Your name or your organization/company/team): Jane Doe
+  [6/9] author_email (youremail@example.com): jane.doe@example.com
+  [7/9] description (A short description of the project.): AI project development
+  [8/9] independent_reviewer (github_username_of_independent_reviewer):
+  [9/9] site_name (My AI Project Docs):
 INFO:root:Current working directory: /Users/username/Projects/my-ai-project
 ```
 
@@ -57,11 +71,11 @@ directory in Visual Studio Code:
 code .
 ```
 
-## Generate a Project from a Downloaded Template
+### Generate a Project from a Downloaded Template
 
 If you have already downloaded the Cookiecutter template:
 
-### Listing Installed Cookiecutter Templates
+#### Listing Installed Cookiecutter Templates
 
 To see installed Cookiecutter templates, use:
 
@@ -71,7 +85,7 @@ cookiecutter --list-installed
  * cookiecutter-collabora
 ```
 
-### Locating the `.cookiecutters` Directory on a Mac
+#### Locating the `.cookiecutters` Directory on a Mac
 
 Your cloned cookiecutters are usually stored in `~/.cookiecutters/`.
 
@@ -89,10 +103,11 @@ Your cloned cookiecutters are usually stored in `~/.cookiecutters/`.
    in the `.cookiecutters` directory.
 
    ```bash
+   pwd
    /Users/username/.cookiecutters/cookiecutter-collabora
    ```
 
-### Creating a New Project with a Template
+#### Creating a New Project with a Template
 
 To create a project using the `cookiecutter-collabora` template:
 
@@ -103,23 +118,15 @@ cookiecutter /Users/username/.cookiecutters/cookiecutter-collabora
 Enter the details for your project when prompted. For instance:
 
 ```bash
-[1/17] project_name (Project Name): My AI Project
-[2/17] project_slug (Project Slug): my-ai-project
-[3/17] package_name (Package Name): myaiproject
-[4/17] env_name (Environment Name): my-ai-project-env
-[5/17] author (Author Name): Jane Doe
-[6/17] email (Author Email): jane.doe@example.com
-[7/17] description (Project Description): AI project development
-[8/17] reviewer (Independent Reviewer GitHub): 
-[9/17] site_name (Documentation Site Name): My AI Project Docs
-[10/17] os (Operating System) [Linux, Windows, Mac]: Linux
-[11/17] cloud (Cloud Provider) [Google Cloud, AWS, Azure]: AWS
-[12/17] ml_type (ML Project Type) [Package, Supervised, Unsupervised, Generative AI]: Generative AI
-[13/17] data_type (Data Type) [Structured, Unstructured, Semi-structured]: Unstructured
-[14/17] packaging (Packaging Tool) [Poetry, Conda]: Poetry
-[15/17] venv (Create Virtual Environment) [Yes, No]: Yes
-[16/17] formatter (Code Formatter) [Black, Ruff]: Black
-[17/17] docker (Use Docker with VS Code Dev Containers) [Yes, No]: Yes
+  [1/9] project_name (Project Name): My AI Project
+  [2/9] project_slug (my-ai-project):
+  [3/9] package_name (myaiproject):
+  [4/9] environment_name (my-ai-project-env):
+  [5/9] author_name (Your name or your organization/company/team): Jane Doe
+  [6/9] author_email (youremail@example.com): jane.doe@example.com
+  [7/9] description (A short description of the project.): AI project development
+  [8/9] independent_reviewer (github_username_of_independent_reviewer):
+  [9/9] site_name (My AI Project Docs):
 INFO:root:Current working directory: /Users/username/Projects/my-ai-project
 ```
 
@@ -137,71 +144,61 @@ directory in Visual Studio Code:
 code .
 ```
 
-## Resulting Directory Structure
+## 📁 Resulting Directory Structure
 
-Below is an example directory structure for a Generative AI project that
-fine-tunes a Named Entity Recognition (NER) model using SpaCy
-Transformers to create a Python package:
+The directory structure of your new project looks like this:
 
-```text
-.
-├── .benchmarks                     # Benchmark files for performance testing.
-├── .devcontainer                   # Configuration files for development containers.
-├── .github                         # GitHub-specific files.
-│   ├── CONTRIBUTING.md             # Guidelines for contributing to the project.
-│   ├── PULL_REQUEST_TEMPLATE       # Template for pull request descriptions.
-│   └── workflows                   # GitHub Actions workflows.
-│       ├── black.yaml              # Workflow for Black formatter.
-│       └── ruff.yaml               # Workflow for Ruff linter.
-├── .vscode                         # VS Code configuration.
-│   ├── cspell.json                 # Spell checker configuration.
-│   ├── dictionaries                # Custom dictionaries for spell checker.
-│   │   └── data-science-en.txt
-│   ├── extensions.json             # Recommended VS Code extensions.
-│   └── settings.json               # VS Code workspace settings.
-├── .env                            # Environment variables configuration file.
-├── .gitignore                      # Specifies intentionally untracked files to ignore.
-├── .coverage                       # Code coverage report.
-├── CHANGELOG.md                    # Changelog for the project.
-├── Makefile                        # Makefile with commands like `make data` or `make train`.
-├── README.md                       # The top-level README for developers using this project.
-├── config                          # Configuration files for the project.
-│   ├── base_config.yaml
-├── dist                            # Distribution files
-├── docs                            # Project documentation.
-│   ├── api-reference.md
-│   ├── assets
-│   │   ├── css
-│   │   │   └── custom.css
-│   │   └── logo.png
-│   ├── explanation.md
-│   ├── how-to-guides.md
-│   ├── index.md
-│   └── tutorials.md
-├── mkdocs.yml                      # MkDocs configuration for generating documentation.
-├── notebooks                       # Jupyter notebooks for exploration and analysis.
-├── poetry.lock                     # Poetry lock file for dependencies.
-├── pyproject.toml                  # Project configuration file for dependencies and tools.
-├── src                             # Source code for the project.
-│   ├── package_name                # Main package directory.
-│   │   ├── __init__.py             # Initialization file for the package.
-│   │   ├── module1.py              # Generic module 1.
-│   │   ├── module2.py              # Generic module 2.
-│   │   ├── module3.py              # Generic module 3.
-│   │   ├── data                    # Data handling modules.
-│   │   │   ├── __init__.py
-│   │   │   ├── external
-│   │   │   ├── features
-│   │   │   ├── interim
-│   │   │   ├── processed
-│   │   │   └── raw
-│   │   ├── logs
-│   │   │   └── application.log
-│   │   └── models                  # Model files
-│   ├── common
-│   │   └── utils.py                # Common utility functions.
-└── tests                           # Unit and integration tests.
-    └── __pycache__
-        ├── test_module1.py
-        └── test_module2.py
+```plaintext
+├── .devcontainer                  <- Directory for Visual Studio Code Dev Container configuration.
+│   └── devcontainer.json          <- Configuration file for defining the development container.
+├── .github                        <- Directory for GitHub-specific configuration and metadata.
+│   ├── CODEOWNERS                 <- File to define code owners for the repository.
+│   ├── CONTRIBUTING.md            <- Guidelines for contributing to the project.
+│   └── pull_request_template.md.  <- Template for pull requests to standardize and improve PR quality.
+├── .vscode                        <- Directory for Visual Studio Code-specific configuration files.
+│   ├── cspell.json                <- Configuration file for the Code Spell Checker extension.
+│   ├── dictionaries               <- Directory for custom dictionary files.
+│   │   └── data-science-en.txt    <- Custom dictionary for data science terminology.
+│   ├── extensions.json            <- Recommended extensions for the project.
+│   └── settings.json              <- Workspace-specific settings for Visual Studio Code.
+├── config                         <- Configuration files for the project.
+├── data                           <- Data for the project, divided into different stages of data processing.
+│   ├── raw                        <- Original, immutable data dump.
+│   ├── external                   <- Data from third-party sources.
+│   ├── interim                    <- Intermediate data, partially processed.
+│   ├── processed                  <- Fully processed data, ready for analysis.
+│   └── features                   <- Engineered features ready for model training.
+├── docs                           <- Documentation for the project.
+│   ├── api-reference.md           <- API reference documentation.
+│   ├── explanation.md             <- Detailed explanations and conceptual documentation.
+│   ├── how-to-guides.md           <- Step-by-step guides on performing common tasks.
+│   ├── index.md                   <- The main documentation index page.
+│   └── tutorials.md               <- Tutorials related to the project.
+├── log                            <- Logs generated by the project.
+├── models                         <- Machine learning models, scripts, and other related artifacts.
+├── notebooks                      <- Jupyter notebooks for experiments, examples, or data analysis.
+├── scripts                        <- Directory for project-specific scripts and utilities.
+│   └── hooks                      <- Directory for custom git hooks and other automation scripts.
+│       ├── branch-name-check.sh   <- Hook script for checking branch names.
+│       ├── commit-msg-check.sh    <- Hook script for checking commit messages.
+│       ├── filename-check.sh      <- Hook script for checking file names.
+│       ├── generate_docs.sh       <- Script for generating documentation.
+│       └── restricted-file-check.sh   <- Hook script for checking restricted files.
+├── src                            <- Source code for the project.
+│   └── {{cookiecutter.package_name}}  <- Main project module.
+│       ├── __init__.py            <- Initializes the Python package.
+│       ├── main.py                <- Entry point for the application.
+│       ├── app.py                 <- Main application logic.
+│       └── utils.py               <- Utility functions.
+├── tests                          <- Directory for all project tests.
+│   ├── integration                <- Integration tests.
+│   └── spec                       <- Specification tests (unit tests).
+├── .gitignore                     <- Specifies intentionally untracked files to ignore.
+├── .pre-commit-config.yaml        <- Configuration for pre-commit hooks.
+├── Dockerfile                     <- Dockerfile for containerizing the application.
+├── Makefile                       <- Makefile with commands like `make data` or `make train`.
+├── mkdocs.yml                     <- Configuration file for MkDocs, a static site generator for project documentation.
+├── pyproject.toml                 <- Configuration file for Python projects which includes dependencies and package information.
+├── README.md                      <- The top-level README for developers using this project.
+└── .env                           <- Environment variables configuration file (not visible).
 ```
