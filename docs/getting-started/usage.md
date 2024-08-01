@@ -9,7 +9,7 @@ development.  It combines best practices, industry standards, and a
 suite of tools that aligns with the dynamic needs of modern AI
 development.
 
-## 🛠 Prerequisites
+## Prerequisites
 
 - **Development Environment**:
   - Visual Studio Code (VS Code) desktop
@@ -20,7 +20,7 @@ development.
 - **Python**:
   - Ensure Python is installed on your system. This project is compatible with Python 3.x.
 
-## 📖 Usage
+## Usage
 
 ### Installing Cookiecutter
 
@@ -144,7 +144,7 @@ directory in Visual Studio Code:
 code .
 ```
 
-## 📁 Resulting Directory Structure
+## Resulting Directory Structure
 
 The directory structure of your new project looks like this:
 
