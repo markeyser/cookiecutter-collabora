@@ -11,13 +11,14 @@ development.
 
 ## Prerequisites
 
-- **Development Environment**:
+### Development Environment:
+
   - Visual Studio Code (VS Code) desktop
   - AWS Cloud Code Editor
   - GitHub Codespaces
   - Any other cloud-powered development environment compatible with VS Code or VS Code Open Source
-
-- **Python**:
+### Python:
+  
   - Ensure Python is installed on your system. This project is compatible with Python 3.x.
 
 ## Usage
