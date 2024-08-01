@@ -36,7 +36,7 @@ pip install cookiecutter
 Create a new project by running:
 
 ```shell
-cookiecutter gh:markeyser/cookiecutter-collabora.git
+cookiecutter git@github.com:markeyser/cookiecutter-collabora.git
 ```
 
 You will be prompted to enter details for your project, such as project
